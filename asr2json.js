@@ -5,7 +5,6 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
         throw err;
     }
     var json = JSON.parse(data);
-//    for( var i = 0; i<json.formImage["Pages"].length; i++) {
 
     var flag = 0;
     var sectionFlag = 0;
@@ -17,6 +16,8 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
             for( var k = 0; k<R.length; k++) {  // For each line
                 var T = R[k]["T"];
                 var TS = R[k]["TS"][2];
+
+//                console.log("\nText= " + T + " \n");
 
                 // STORING FORM NAME
                 if ( T == "3." && TS == "1") {
@@ -35,6 +36,8 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
                     }
                 }
 
+//                console.log("After form filter Text= " + T );
+
                 // STORING SECTION NAME
                 var sectionNumber = T.split(".");
                 if ( sectionFlag == 1 ) {
@@ -47,10 +50,15 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
                     }
                     sectionFlag = 0;
                 }
-                else if ( (!isNaN(sectionNumber[0]) || !isNaN(sectionNumber[1])) && TS == "1") {
+                else if ( !isNaN(sectionNumber[0]) && !isNaN(sectionNumber[1]) && sectionNumber[1].length>0 && TS == "1") {
+//                    console.log("sectionNumber[1].length= " + sectionNumber[1].length );
+//                    console.log("sectionNumber[1]= " + sectionNumber[1] );
+//                    console.log("Section filter Text= " + T );
                     sectionFlag = 1;
                     continue;
                 }
+
+//                console.log("After section filter Text= " + T + " \n");
 
                 // STORING FIELD DETAILS
                 var fieldNumber = T.split(".");
@@ -119,7 +127,6 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
                     console.log("\nvalidEntries= " + validEntries);
 
                     // Valid Entry Notes
-
                     R = texts[++j]["R"];
                     var usage = R[k]["T"].split("%3A");
                     var validEntryNotes = "";
@@ -141,6 +148,36 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
                     }
                     console.log("\nvalidEntryNotes= " + validEntryNotes);
 
+                    // Usage
+                    R = texts[++j]["R"];
+                    var dataCharacteristics = R[k]["T"].split("%3A");
+                    dataCharacteristics = dataCharacteristics[0].split("%20");
+                    dataCharacteristics = dataCharacteristics.join(" ");
+                    var usage = "";
+                    while ( dataCharacteristics!= "DATA CHARACTERISTICS" ) {
+                        usage = usage + " " + R[k]["T"];
+                        usage = usage.split("%20");
+                        usage = usage.join(" ");
+                        R = texts[++j]["R"];
+                        dataCharacteristics = R[k]["T"].split("%3A");
+                        dataCharacteristics = dataCharacteristics[0].split("%20");
+                        dataCharacteristics = dataCharacteristics.join(" ");
+                    }
+                    console.log("usage= " + usage);
+
+                    // Data Characteristics
+                    R = texts[++j]["R"];
+                    dataCharacteristics = R[k]["T"].split("%20");
+                    console.log("fieldLength = " + dataCharacteristics[0]);
+                    if ( dataCharacteristics[1].indexOf("alpha") > -1 && dataCharacteristics[1].indexOf("numeric") > -1) {
+                        console.log("characteristics = Alpha");
+                    }
+                    else if ( dataCharacteristics[1].indexOf("alpha") > -1 ) {
+                        console.log("characteristics = Alpha");
+                    }
+                    else if ( dataCharacteristics[1].indexOf("numeric") > -1) {
+                        console.log("characteristics = Numeric");
+                    }
                 }
             }
         }
