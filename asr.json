@@ -43,6 +43,381 @@
             "A": "left",
             "R": [
               {
+                "T": "3-1",
+                "S": -1,
+                "TS": [
+                  0,
+                  13.02,
+                  0,
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "x": 15.219,
+            "y": 3,
+            "w": 10.2796,
+            "clr": 0,
+            "A": "left",
+            "R": [
+              {
+                "T": "ATIS-0404001-0050%20",
+                "S": -1,
+                "TS": [
+                  0,
+                  13.02,
+                  0,
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "x": 68.379,
+            "y": 3,
+            "w": 12.615,
+            "clr": 0,
+            "A": "left",
+            "R": [
+              {
+                "T": "Effective%20March%2019%2C%202011%20",
+                "S": -1,
+                "TS": [
+                  0,
+                  13.02,
+                  0,
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "x": 15.219,
+            "y": 3.75,
+            "w": 13.8102,
+            "clr": 0,
+            "A": "left",
+            "R": [
+              {
+                "T": "Issued%20September%2024%2C%202010%20",
+                "S": -1,
+                "TS": [
+                  0,
+                  13.02,
+                  0,
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "x": 64.48,
+            "y": 3.75,
+            "w": 14.8729,
+            "clr": 0,
+            "A": "left",
+            "R": [
+              {
+                "T": "Implemented%20March%2019%2C%202011%20",
+                "S": -1,
+                "TS": [
+                  0,
+                  13.02,
+                  0,
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "x": 15.219,
+            "y": 6.319,
+            "w": 0.9996,
+            "clr": 0,
+            "A": "left",
+            "R": [
+              {
+                "T": "3.",
+                "S": -1,
+                "TS": [
+                  0,
+                  16,
+                  1,
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "x": 18.313,
+            "y": 6.319,
+            "w": 26.86,
+            "clr": 0,
+            "A": "left",
+            "R": [
+              {
+                "T": "ACCESS%20SERVICE%20REQUEST%20(ASR)%20FORM%20ENTRIES%20",
+                "S": -1,
+                "TS": [
+                  0,
+                  16,
+                  1,
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "x": 15.219,
+            "y": 8.111,
+            "w": 33.4333,
+            "clr": 0,
+            "A": "left",
+            "R": [
+              {
+                "T": "The%20ASR%20Form%20with%20each%20of%20the%20entry%20fields%20numbered%20is%20depicted%20in%20",
+                "S": -1,
+                "TS": [
+                  0,
+                  15,
+                  0,
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "x": 15.219,
+            "y": 9.008,
+            "w": 31.92,
+            "clr": 0,
+            "A": "left",
+            "R": [
+              {
+                "T": "Section%204%20of%20this%20practice.%20These%20numbers%20correspond%20to%20the%20field%20",
+                "S": -1,
+                "TS": [
+                  0,
+                  15,
+                  0,
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "x": 15.219,
+            "y": 9.904,
+            "w": 36.24,
+            "clr": 0,
+            "A": "left",
+            "R": [
+              {
+                "T": "definitions%20in%20Sections%203.1%20%E2%80%93%203.3.%20Section%203.4%20addresses%20the%20minimal%20input%20",
+                "S": -1,
+                "TS": [
+                  0,
+                  15,
+                  0,
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "x": 15.219,
+            "y": 10.8,
+            "w": 32.5,
+            "clr": 0,
+            "A": "left",
+            "R": [
+              {
+                "T": "requirements%20for%20disconnect%20and%20record%20order%20activity.%20Section%203.5%20",
+                "S": -1,
+                "TS": [
+                  0,
+                  15,
+                  0,
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "x": 15.219,
+            "y": 11.696,
+            "w": 35.58,
+            "clr": 0,
+            "A": "left",
+            "R": [
+              {
+                "T": "contains%20an%20alphabetic%20listing%20of%20the%20ASR%20Form%20fields%20cross%20referenced%20to%20",
+                "S": -1,
+                "TS": [
+                  0,
+                  15,
+                  0,
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "x": 15.219,
+            "y": 12.593,
+            "w": 24.76,
+            "clr": 0,
+            "A": "left",
+            "R": [
+              {
+                "T": "the%20field%20numbers%20depicted%20in%20the%20numbered%20form.%20",
+                "S": -1,
+                "TS": [
+                  0,
+                  15,
+                  0,
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "x": 15.219,
+            "y": 14.385,
+            "w": 35.2329,
+            "clr": 0,
+            "A": "left",
+            "R": [
+              {
+                "T": "This%20form%20is%20prepared%20by%20the%20customer%20and%20is%20submitted%20to%20the%20ICSC%20for%20",
+                "S": -1,
+                "TS": [
+                  0,
+                  15,
+                  0,
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "x": 15.219,
+            "y": 15.281,
+            "w": 32.72,
+            "clr": 0,
+            "A": "left",
+            "R": [
+              {
+                "T": "the%20ordering%20of%20service.%20The%20term%20%E2%80%9CICSC%E2%80%9D%2C%20(Interexchange%20Customer%20",
+                "S": -1,
+                "TS": [
+                  0,
+                  15,
+                  0,
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "x": 15.219,
+            "y": 16.177,
+            "w": 32.98,
+            "clr": 0,
+            "A": "left",
+            "R": [
+              {
+                "T": "Service%20Center)%20referenced%20throughout%20the%20ASR%20practices%20is%20used%20to%20",
+                "S": -1,
+                "TS": [
+                  0,
+                  15,
+                  0,
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "x": 15.219,
+            "y": 17.074,
+            "w": 33.6,
+            "clr": 0,
+            "A": "left",
+            "R": [
+              {
+                "T": "represent%20the%20organization%20which%20processes%20a%20customer's%20request%20for%20",
+                "S": -1,
+                "TS": [
+                  0,
+                  15,
+                  0,
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "x": 15.219,
+            "y": 17.97,
+            "w": 32.92,
+            "clr": 0,
+            "A": "left",
+            "R": [
+              {
+                "T": "service%20in%20an%20access%20or%20local%20provider%20offering%20such%20access%20services.%20",
+                "S": -1,
+                "TS": [
+                  0,
+                  15,
+                  0,
+                  0
+                ]
+              }
+            ]
+          }
+        ],
+        "Fields": [
+          
+        ],
+        "Boxsets": [
+          
+        ]
+      },
+      {
+        "Height": 49.5,
+        "HLines": [
+          
+        ],
+        "VLines": [
+          
+        ],
+        "Fills": [
+          {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "clr": 1
+          },
+          {
+            "x": 15.211,
+            "y": 4.834,
+            "w": 74.766,
+            "h": 0.03,
+            "clr": 0
+          }
+        ],
+        "Texts": [
+          {
+            "x": 50.921,
+            "y": 45.457,
+            "w": 1.646,
+            "clr": 0,
+            "A": "left",
+            "R": [
+              {
                 "T": "3-2",
                 "S": -1,
                 "TS": [
