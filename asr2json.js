@@ -8,8 +8,8 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
 
     var flag = 0;
     var sectionFlag = 0;
-    for( var i = 0; i<json.formImage["Pages"].length; i++) {
-//    for( var i = 0; i<2; i++) { // For each page
+//    for( var i = 0; i<json.formImage["Pages"].length; i++) {
+    for( var i = 0; i<5; i++) { // For each page
         var texts = json.formImage["Pages"][i]["Texts"];
         for( j = 0; j<texts.length; j++) {  // For text in the page
             var R = texts[j]["R"];
@@ -17,12 +17,9 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
                 var T = R[k]["T"];
                 var TS = R[k]["TS"][2];
 
-//                console.log("\nText= " + T + " \n");
-
                 // STORING FORM NAME
                 if ( T == "3." && TS == "1") {
                     flag = 1;
-//                    console.log(T);
                     continue;
                 }
                 if ( flag == 1 ) {
@@ -30,13 +27,11 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
                     if ( checkIfForm.length>1) {
                         var formName = T.split("(");
                         var formName = formName[1].split(")");
-//                        console.log(formName[0]);
+                        console.log(formName[0]);
                         flag = 0;
                         continue;
                     }
                 }
-
-//                console.log("After form filter Text= " + T );
 
                 // STORING SECTION NAME
                 var sectionNumber = T.split(".");
@@ -51,14 +46,9 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
                     sectionFlag = 0;
                 }
                 else if ( !isNaN(sectionNumber[0]) && !isNaN(sectionNumber[1]) && sectionNumber[1].length>0 && TS == "1") {
-//                    console.log("sectionNumber[1].length= " + sectionNumber[1].length );
-//                    console.log("sectionNumber[1]= " + sectionNumber[1] );
-//                    console.log("Section filter Text= " + T );
                     sectionFlag = 1;
                     continue;
                 }
-
-//                console.log("After section filter Text= " + T + " \n");
 
                 // STORING FIELD DETAILS
                 var fieldNumber = T.split(".");
@@ -82,9 +72,8 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
                     name = name.split("%20");
                     console.log("Name= " + name.join(" "));
 
-                    // Description
+                    // Definition
                     texts = json.formImage["Pages"][i]["Texts"];
-                    console.log("text= " + texts[j]["R"][0]["T"]);
                     R = texts[++j]["R"];
                     var breakString = [ "NOTE", "VALID ENTRIES", "USAGE", "DATA CHARACTERISTICS", "EXAMPLE", "EXAMPLES" ];
                     var breakValue = "";
@@ -94,8 +83,9 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
                     j = returnValue[1];
                     k = returnValue[2];
                     breakValue = returnValue[3];
-                    var description = returnValue[4];
-                    console.log("Description= " + description);
+                    var definition = returnValue[4];
+                    definition = filter(definition);
+                    console.log("Definition= " + definition);
 
                     // Field Notes
                     if ( breakValue == "NOTE") {
@@ -109,6 +99,7 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
                         k = returnValue[2];
                         breakValue = returnValue[3];
                         var fieldNotes = returnValue[4];
+                        fieldNotes = filter(fieldNotes);
                         console.log("\nField Notes= " + fieldNotes);
                     }
 
@@ -143,7 +134,6 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
                     }
 
                     // Usage
-                    console.log("BreakValue= " + breakValue);
                     if ( breakValue == "USAGE") {
                         texts = json.formImage["Pages"][i]["Texts"];
                         R = texts[++j]["R"];
@@ -205,19 +195,16 @@ function getFieldInfo(R, texts, json, i, j, k, breakString, breakValue, fieldNum
     var fieldInfo = "";
     var fieldFlag = 0;
     while (true) {
-        fieldInfo = fieldInfo + " " + R[k]["T"];
-        fieldInfo = fieldInfo.split("%20");
-        fieldInfo = fieldInfo.join(" ");
+        fieldInfo = fieldInfo + "\n" + R[k]["T"];
+//        fieldInfo = fieldInfo.split("%20");
+//        fieldInfo = fieldInfo.join(" ");
         // Move to next page if last line
         if ( j + 1 == texts.length ) {
-            console.log("\nEND OF PAGE\n" + fieldInfo);
             i++;
             texts = json.formImage["Pages"][i]["Texts"];
             var checkField = texts[5]["R"][0]["T"].split(".");
 
-
             if ( checkField[0] == fieldNumber ) {
-                console.log("FIELD NUMBER SAME " + checkField + "         " + fieldNumber);
                 j = 6;
             }
             else {
@@ -228,15 +215,9 @@ function getFieldInfo(R, texts, json, i, j, k, breakString, breakValue, fieldNum
         line = R[k]["T"].split("%20");
         line = line.join(" ");
 
-//        console.log("FieldInfo= " + fieldInfo);
-//        console.log("Line= " + line);
-
         for ( var index=0; index<breakString.length; index++ ) {
-//            console.log("In loop");
-//            console.log("Line= " + line);
             if ( line.indexOf( breakString[index] ) > -1 ) {
                 breakValue = breakString[index];
-                console.log("BreakValue= " + breakValue);
                 fieldFlag = 1;
                 break;
             }
@@ -246,4 +227,37 @@ function getFieldInfo(R, texts, json, i, j, k, breakString, breakValue, fieldNum
         }
     }
     return([ i, j, k, breakValue, fieldInfo ]);
+}
+
+function filter(definition) {
+    var splitValues = [ "T\n", "\n", "%20", " b y ", " o f ", " NOTE ", "%2C", "%E2%80%9C", "%E2%80%9D", "%E2%80%99", "%2F", "1%3A ", "2%3A ", "3%3A ", "4%3A ", "5%3A ", "6%3A ", "7%3A " ];
+    var joinValues = [ "T", " ", " ", " by ", " of ", "", ",", "\"", "\"", "\'", "/", "\n", "\n", "\n", "\n", "\n", "\n", "\n" ];
+
+//    definition = definition.split("T\n");
+//    definition = definition.join("T");
+//    definition = definition.split("\n");
+//    definition = definition.join(" ");
+//    definition = definition.split("%20");
+//    definition = definition.join(" ");
+//    definition = definition.split(" b y ");
+//    definition = definition.join(" by ");
+//    definition = definition.split(" o f ");
+//    definition = definition.join(" of ");
+//    definition = definition.split("%2C");
+//    definition = definition.join(",");
+//    definition = definition.split("%E2%80%9C");
+//    definition = definition.join("\"");
+//    definition = definition.split("%E2%80%9D");
+//    definition = definition.join("\"");
+//    definition = definition.split("%E2%80%99");
+//    definition = definition.join("\'");
+//    definition = definition.split("%2F");
+//    definition = definition.join("/");
+//
+//    var splitValues = [ "1%3A ", "2%3A ", "3%3A ", "4%3A ", "5%3A ", "6%3A ", "7%3A " ];
+    for( var i = 0; i < splitValues.length; i++ ) {
+        definition = definition.split(splitValues[i]);
+        definition = definition.join(joinValues[i]);
+    }
+    return definition;
 }
