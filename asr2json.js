@@ -1,4 +1,5 @@
 var fs = require('fs');
+var ofs = require('fs');
 
 fs.readFile('asr.json', 'utf8', function(err, data) {
     if (err) {
@@ -8,8 +9,10 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
 
     var flag = 0;
     var sectionFlag = 0;
-    for( var i = 0; i<json.formImage["Pages"].length; i++) {
-//    for( var i = 0; i<5; i++) { // For each page
+    var fieldNumber = 0;
+    var jsonOutput = {};
+//    for( var i = 0; i<json.formImage["Pages"].length; i++) {
+    for( var i = 0; i<4; i++) { // For each page
         var texts = json.formImage["Pages"][i]["Texts"];
         for( j = 0; j<texts.length; j++) {  // For text in the page
             var R = texts[j]["R"];
@@ -52,12 +55,25 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
                 }
 
                 // STORING FIELD DETAILS
+
                 var fieldNumber = T.split(".");
                 if(isNaN(fieldNumber[0])) {
                     continue;
                 }
                 else {
+                    var prevFieldNumber = fieldNumber;
+                    if ( prevFieldNumber!=0 && prevFieldNumber!=fieldNumber[0] ) {
+                        writeOutput(prevFieldNumber, );
+                        outputFileName = jsonOutput.title + ".json";
+                        ofs.writeFile(outputFileName, JSON.stringify(jsonOutput, null, 4), function(err) {
+                            if (err) {
+                                return console.log(err);
+                            }
+                        })
+                    }
+
                     console.log("\nField Number= " + fieldNumber[0]);
+                    jsonOutput.fieldNumber = fieldNumber[0];
 
                     // Title
                     texts = json.formImage["Pages"][i]["Texts"];
@@ -65,6 +81,7 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
                     var title = R[0]["T"];
                     title = title.split("%20");
                     console.log("Title= " + title[0]);
+                    jsonOutput.title = title[0];
 
                     // Name
                     texts = json.formImage["Pages"][i]["Texts"];
@@ -72,6 +89,7 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
                     var name = R[k]["T"];
                     name = name.split("%20");
                     console.log("Name= " + name.join(" "));
+                    jsonOutput.name = name.join(" ");
 
                     // Definition
                     texts = json.formImage["Pages"][i]["Texts"];
@@ -87,6 +105,7 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
                     var definition = returnValue[4];
                     definition = filter(definition);
                     console.log("Definition= " + definition);
+                    jsonOutput.definition = definition;
 
                     // Field Notes
                     if ( breakValue == "NOTE") {
@@ -102,6 +121,8 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
                         var fieldNotes = returnValue[4];
                         fieldNotes = filter(fieldNotes);
                         console.log("\nField Notes= " + fieldNotes);
+                        fieldNotes = fieldNotes.split("\n");
+                        jsonOutput.fieldNotes = fieldNotes;
                     }
 
                     // Valid Entries
@@ -118,6 +139,8 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
                         var validEntries = returnValue[4];
                         validEntries = validEntriesFilter(validEntries);
                         console.log("\nvalidEntries= " + validEntries);
+                        validEntries.split("\n");
+                        jsonOutput.validEntries = validEntries;
                     }
 
                     // Valid Entry Notes
@@ -134,6 +157,7 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
                         var validEntryNotes = returnValue[4];
                         validEntryNotes = filter(validEntryNotes);
                         console.log("\nvalidEntryNotes= " + validEntryNotes);
+                        jsonOutput.validEntryNotes = validEntryNotes;
                     }
 
                     // Usage
@@ -155,6 +179,7 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
                         else if ( usage.indexOf("conditional") > -1 ) {
                             console.log("\nusage= Conditional");
                         }
+                        jsonOutput.usage = usage;
                     }
 
                     // Usage Notes
@@ -171,6 +196,7 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
                         var usageNotes = returnValue[4];
                         usageNotes = filter(usageNotes);
                         console.log("\nusageNotes= " + usageNotes);
+                        jsonOutput.usageNotes = usageNotes;
                     }
 
 
@@ -189,17 +215,19 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
                         dataCharacteristics = dataCharacteristics.split("\n");
                         dataCharacteristics = dataCharacteristics.join("");
                         dataCharacteristics = dataCharacteristics.split("%20");
-
                         console.log("fieldLength = " + dataCharacteristics[0]);
+                        jsonOutput.fieldLength = dataCharacteristics[0];
+                        var characteristics = "";
                         if ( dataCharacteristics[1].indexOf("alpha") > -1 && dataCharacteristics[1].indexOf("numeric") > -1) {
-                            console.log("characteristics = Alphanumeric");
+                            characteristics = "Alphanumeric";
                         }
                         else if ( dataCharacteristics[1].indexOf("alpha") > -1 ) {
-                           console.log("characteristics = Alpha");
+                           characteristics = "Alpha";
                         }
                         else if ( dataCharacteristics[1].indexOf("numeric") > -1) {
-                            console.log("characteristics = Numeric");
+                            characteristics = "Numeric";
                         }
+                        jsonOutput.dataCharacteristics = characteristics;
                     }
 
                     // EXAMPLE OR EXAMPLES
@@ -268,4 +296,8 @@ function validEntriesFilter(definition) {
         definition = definition.join(joinValues[i]);
     }
     return definition;
+}
+
+function writeOutput() {
+
 }
