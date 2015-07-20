@@ -18,18 +18,21 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
                 var TS = R[k]["TS"][2];
 
                 // STORING FORM NAME
-                if ( T == "3." && TS == "1") {
+                if ( T == "3." && TS == "1" ) {
                     flag = 1;
                     continue;
                 }
                 if ( flag == 1 ) {
                     var checkIfForm = T.split("FORM");
-                    if ( checkIfForm.length>1) {
+                    if ( checkIfForm.length>1 ) {
                         var formName = T.split("(");
                         var formName = formName[1].split(")");
                         console.log(formName[0]);
                         flag = 0;
                         continue;
+                    }
+                    else {
+                        console.log("T= " + T);
                     }
                 }
 
@@ -50,13 +53,14 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
                     continue;
                 }
 
+                console.log("Text= " + T);
                 // STORING FIELD DETAILS
                 var fieldNumber = T.split(".");
                 if(isNaN(fieldNumber[0])) {
                     continue;
                 }
                 else {
-                    console.log("Field Number= " + fieldNumber[0]);
+                    console.log("\nField Number= " + fieldNumber[0]);
 
                     // Title
                     texts = json.formImage["Pages"][i]["Texts"];
@@ -115,6 +119,7 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
                         k = returnValue[2];
                         breakValue = returnValue[3];
                         var validEntries = returnValue[4];
+                        validEntries = validEntriesFilter(validEntries);
                         console.log("\nvalidEntries= " + validEntries);
                     }
 
@@ -130,6 +135,7 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
                         k = returnValue[2];
                         breakValue = returnValue[3];
                         var validEntryNotes = returnValue[4];
+                        validEntryNotes = filter(validEntryNotes);
                         console.log("\nvalidEntryNotes= " + validEntryNotes);
                     }
 
@@ -145,7 +151,13 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
                         k = returnValue[2];
                         breakValue = returnValue[3];
                         var usage = returnValue[4];
-                        console.log("\nusage= " + usage);
+                        usage = filter(usage);
+                        if (usage.indexOf("required") > -1 ) {
+                            console.log("\nusage= Required");
+                        }
+                        else if ( usage.indexOf("conditional") > -1 ) {
+                            console.log("\nusage= Conditional");
+                        }
                     }
 
                     // Usage Notes
@@ -160,6 +172,7 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
                         k = returnValue[2];
                         breakValue = returnValue[3];
                         var usageNotes = returnValue[4];
+                        usageNotes = filter(usageNotes);
                         console.log("\nusageNotes= " + usageNotes);
                     }
 
@@ -176,7 +189,20 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
                         k = returnValue[2];
                         breakValue = returnValue[3];
                         var dataCharacteristics = returnValue[4];
-                        console.log("\nDataCharacteristics= " + dataCharacteristics);
+                        dataCharacteristics = dataCharacteristics.split("\n");
+                        dataCharacteristics = dataCharacteristics.join("");
+                        dataCharacteristics = dataCharacteristics.split("%20");
+
+                        console.log("fieldLength = " + dataCharacteristics[0]);
+                        if ( dataCharacteristics[1].indexOf("alpha") > -1 && dataCharacteristics[1].indexOf("numeric") > -1) {
+                            console.log("characteristics = Alphanumeric");
+                        }
+                        else if ( dataCharacteristics[1].indexOf("alpha") > -1 ) {
+                           console.log("characteristics = Alpha");
+                        }
+                        else if ( dataCharacteristics[1].indexOf("numeric") > -1) {
+                            console.log("characteristics = Numeric");
+                        }
                     }
 
                     // EXAMPLE OR EXAMPLES
@@ -196,8 +222,6 @@ function getFieldInfo(R, texts, json, i, j, k, breakString, breakValue, fieldNum
     var fieldFlag = 0;
     while (true) {
         fieldInfo = fieldInfo + "\n" + R[k]["T"];
-//        fieldInfo = fieldInfo.split("%20");
-//        fieldInfo = fieldInfo.join(" ");
         // Move to next page if last line
         if ( j + 1 == texts.length ) {
             i++;
@@ -230,34 +254,32 @@ function getFieldInfo(R, texts, json, i, j, k, breakString, breakValue, fieldNum
 }
 
 function filter(definition) {
-    var splitValues = [ "T\n", "\n", "%20", " b y ", " o f ", " NOTE ", "%2C", "%E2%80%9C", "%E2%80%9D", "%E2%80%99", "%2F", "1%3A ", "2%3A ", "3%3A ", "4%3A ", "5%3A ", "6%3A ", "7%3A " ];
-    var joinValues = [ "T", " ", " ", " by ", " of ", "", ",", "\"", "\"", "\'", "/", "\n", "\n", "\n", "\n", "\n", "\n", "\n" ];
-
-//    definition = definition.split("T\n");
-//    definition = definition.join("T");
-//    definition = definition.split("\n");
-//    definition = definition.join(" ");
-//    definition = definition.split("%20");
-//    definition = definition.join(" ");
-//    definition = definition.split(" b y ");
-//    definition = definition.join(" by ");
-//    definition = definition.split(" o f ");
-//    definition = definition.join(" of ");
-//    definition = definition.split("%2C");
-//    definition = definition.join(",");
-//    definition = definition.split("%E2%80%9C");
-//    definition = definition.join("\"");
-//    definition = definition.split("%E2%80%9D");
-//    definition = definition.join("\"");
-//    definition = definition.split("%E2%80%99");
-//    definition = definition.join("\'");
-//    definition = definition.split("%2F");
-//    definition = definition.join("/");
-//
-//    var splitValues = [ "1%3A ", "2%3A ", "3%3A ", "4%3A ", "5%3A ", "6%3A ", "7%3A " ];
+    var splitValues = [ "T\n", "\n", "%20", " b y ", " o f ", " w ithin ", " NOTE ", "%2C", "%E2%80%9C", "%E2%80%9D", "%E2%80%99", "%2F", "1%3A ", "2%3A ", "3%3A ", "4%3A ", "5%3A ", "6%3A ", "7%3A " ];
+    var joinValues = [ "T", " ", " ", " by ", " of ", " within ", "", ",", "\"", "\"", "\'", "/", "\n", "\n", "\n", "\n", "\n", "\n", "\n" ];
     for( var i = 0; i < splitValues.length; i++ ) {
         definition = definition.split(splitValues[i]);
         definition = definition.join(joinValues[i]);
     }
+    return definition;
+}
+
+function validEntriesFilter(definition) {
+    var splitValues = [ "%20", "%2F", "%3D", "= \n", "\n" ];
+    var joinValues = [ " ", "/", "=", "= ", " " ];
+    for( var i = 0; i < splitValues.length; i++ ) {
+        definition = definition.split(splitValues[i]);
+        definition = definition.join(joinValues[i]);
+    }
+
+//    definition = definition.split("%20");
+//    definition = definition.join(" ");
+//    definition = definition.split("%2F");
+//    definition = definition.join("/");
+//    definition = definition.split("%3D");
+//    definition = definition.join("=");
+//    definition = definition.split("= \n");
+//    definition = definition.join("= ");
+//    definition = definition.split("\n");
+//    definition = definition.join(" ");
     return definition;
 }
