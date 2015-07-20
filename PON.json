@@ -1,0 +1,14 @@
+{
+    "fieldNumber": "2",
+    "title": "PON",
+    "name": "Purchase Order Number",
+    "definition": " Identifies the customer's unique purchase order or requisition number that authorizes the issuance of this request or supplement. ",
+    "fieldNotes": [
+        " The Purchase Order Number may be reused after two years from the due date of the original request."
+    ],
+    "validEntries": " IAC Code  CUS = Casual customer ",
+    "validEntryNotes": " Valid IAC codes are maintained by  Telcordi a  Technologies. ",
+    "usage": " This field is required. ",
+    "fieldLength": "16",
+    "dataCharacteristics": "Alphanumeric"
+}

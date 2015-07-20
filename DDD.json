@@ -1,0 +1,18 @@
+{
+    "fieldNumber": "12",
+    "title": "DDD",
+    "name": "Desired Due Date",
+    "definition": " Identifies the customer's desired due date. ",
+    "fieldNotes": [
+        " The actual due date may be different from that desired because of factors such as the availabilit y of facilities and the quantity, complexity, and impact on local service of the circuit(s) involved. ",
+        "On disconnect requests, this date represents the date billing is to stop on the involved circuit ( s )  and can be no earlier than the date the request is received by the provider. ",
+        "When different due dates are required, these dates are stipulated using a separate request for each desired due date.  For example, a total of 50 circuits are desired and the customer wants them at a rate of 10 per day.  Therefore, five ASR forms may be submitted stipulating this requirement. ",
+        "When multiple ASRs are associated  w ith one Translation Questionnaire, all DDDs must be identical. "
+    ],
+    "validEntries": " U.S. Standard  Metric Format  T wo Digit Month  ( 01-12)  T wo Digit Century  ( 00-99)  T wo Digit Day  ( 01-31)  T wo Digit Year  ( 00-99)  T wo Digit Century  ( 00-99)  T wo Digit Month  ( 01-12)  T wo Digit Year  ( 00-99)  T wo Digit Day  ( 01-31) ",
+    "validEntryNotes": " Defines the service delivery location as \"Unstaffed\" requiring coordination with LCON prior to technician dispatch.  2 nd  and 3 rd  Character 01- 99  %3D Hours \nThe desired number of hours prior to dispatch to facilitate access for the service technician.  ",
+    "usage": " This field is required. ",
+    "fieldLength": "10",
+    "dataCharacteristics": "Alphanumeric",
+    "usageNotes": " Optional when ACT field is \"N\", \"C\" or \"T\", otherwise prohibited. "
+}

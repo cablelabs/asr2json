@@ -1,0 +1,15 @@
+{
+    "fieldNumber": "30",
+    "title": "RTR",
+    "name": "Response Type Requested",
+    "definition": " Identifies the type of confirmation response requested by the customer.  ",
+    "fieldNotes": [
+        " Changes to this field are only permitted prior to confirmation.  "
+    ],
+    "validEntries": " F  = Send FOC only  N  = No response required  S  = Send FOC and DLR%3B CDLRD waived ",
+    "validEntryNotes": " \"S\" is prohibited when the ACT field is \"D\", \"M\" or \"R\" or the EVCI field is \"A\".  1-10  %3D  Send FOC and DLR%3B CDLRD required \nA numeric entry indicates the number of workin g days that the customer requires to confirm the Design Layout Report  ( DLR )  and will be added to the overall interval. \n\"1-10\" prohibited when the ACT field is \"D\", \"M\" or \"R\" or the EVCI field is \"A\". ",
+    "usage": " This field is required. ",
+    "fieldLength": "2",
+    "dataCharacteristics": "Alphanumeric",
+    "usageNotes": " Required when the first position of the REQTYP field is \"E\" or \"S\" and Switched Ethernet services are being requested, otherwise prohibited. "
+}

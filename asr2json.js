@@ -1,7 +1,8 @@
 var fs = require('fs');
 var ofs = require('fs');
+var field = {};
 
-fs.readFile('asr.json', 'utf8', function(err, data) {
+fs.readFile('asrpdf.json', 'utf8', function(err, data) {
     if (err) {
         throw err;
     }
@@ -11,19 +12,21 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
     var sectionFlag = 0;
     var fieldNumber = 0;
     var jsonOutput = {};
-//    for( var i = 0; i<json.formImage["Pages"].length; i++) {
-    for( var i = 0; i<4; i++) { // For each page
-        var texts = json.formImage["Pages"][i]["Texts"];
-        for( j = 0; j<texts.length; j++) {  // For text in the page
-            var R = texts[j]["R"];
-            for( var k = 0; k<R.length; k++) {  // For each line
-                var T = R[k]["T"];
-                var TS = R[k]["TS"][2];
+    for( field.i = 0; field.i<json.formImage["Pages"].length; field.i++) {
+//    for( field.i = 0; field.i<4; field.i++) { // For each page
+        texts = json.formImage["Pages"][field.i]["Texts"];
+        for( field.j = 0; field.j<texts.length; field.j++) {  // For text in the page
+            R = texts[field.j]["R"];
+            for( field.k = 0; field.k<R.length; field.k++) {  // For each line
+                T = R[field.k]["T"];
+                TS = R[field.k]["TS"][2];
+
+                console.log("T= " + T);
 
                 // STORING FORM NAME
-                if ( T == "3." && TS == "1" && texts[j+1]["R"][k]["T"].indexOf("FORM")>-1) {
-                    R = texts[++j]["R"];
-                    T = R[k]["T"];
+                if ( T == "3." && TS == "1" && texts[field.j+1]["R"][field.k]["T"].indexOf("FORM")>-1) {
+                    R = texts[++field.j]["R"];
+                    T = R[field.k]["T"];
                     var checkIfForm = T.split("FORM");
                     if ( checkIfForm.length>1 ) {
                         var formName = T.split("(");
@@ -63,7 +66,7 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
                 else {
                     var prevFieldNumber = fieldNumber;
                     if ( prevFieldNumber!=0 && prevFieldNumber!=fieldNumber[0] ) {
-                        writeOutput(prevFieldNumber, );
+//                        writeOutput(prevFieldNumber, );
                         outputFileName = jsonOutput.title + ".json";
                         ofs.writeFile(outputFileName, JSON.stringify(jsonOutput, null, 4), function(err) {
                             if (err) {
@@ -76,49 +79,39 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
                     jsonOutput.fieldNumber = fieldNumber[0];
 
                     // Title
-                    texts = json.formImage["Pages"][i]["Texts"];
-                    R = texts[++j]["R"];
+                    texts = json.formImage["Pages"][field.i]["Texts"];
+                    R = texts[++field.j]["R"];
                     var title = R[0]["T"];
                     title = title.split("%20");
                     console.log("Title= " + title[0]);
                     jsonOutput.title = title[0];
 
                     // Name
-                    texts = json.formImage["Pages"][i]["Texts"];
-                    R = texts[++j]["R"];
-                    var name = R[k]["T"];
+                    texts = json.formImage["Pages"][field.i]["Texts"];
+                    R = texts[++field.j]["R"];
+                    var name = R[field.k]["T"];
                     name = name.split("%20");
                     console.log("Name= " + name.join(" "));
                     jsonOutput.name = name.join(" ");
 
                     // Definition
-                    texts = json.formImage["Pages"][i]["Texts"];
-                    R = texts[++j]["R"];
-                    var breakString = [ "NOTE", "VALID ENTRIES", "USAGE", "DATA CHARACTERISTICS", "EXAMPLE", "EXAMPLES" ];
-                    var breakValue = "";
-                    var returnValue = getFieldInfo(R, texts, json, i, j, k, breakString, breakValue, fieldNumber[0]);
-                    // Copy back returned values
-                    i = returnValue[0];
-                    j = returnValue[1];
-                    k = returnValue[2];
-                    breakValue = returnValue[3];
-                    var definition = returnValue[4];
+                    texts = json.formImage["Pages"][field.i]["Texts"];
+                    R = texts[++field.j]["R"];
+                    field.breakString = [ "NOTE", "VALID ENTRIES", "USAGE", "DATA CHARACTERISTICS", "EXAMPLE", "EXAMPLES" ];
+                    field.breakValue = "";
+                    var returnValue = getFieldInfo(R, texts, json, fieldNumber[0]);
+                    var definition = returnValue;
                     definition = filter(definition);
                     console.log("Definition= " + definition);
                     jsonOutput.definition = definition;
 
                     // Field Notes
-                    if ( breakValue == "NOTE") {
-                        texts = json.formImage["Pages"][i]["Texts"];
-                        R = texts[++j]["R"];
-                        breakString = [ "VALID ENTRIES", "USAGE", "DATA CHARACTERISTICS", "EXAMPLE", "EXAMPLES" ];
-                        returnValue = getFieldInfo(R, texts, json, i, j, k, breakString, breakValue, fieldNumber[0]);
-                        // Copy back returned values
-                        i = returnValue[0];
-                        j = returnValue[1];
-                        k = returnValue[2];
-                        breakValue = returnValue[3];
-                        var fieldNotes = returnValue[4];
+                    if ( field.breakValue == "NOTE") {
+                        texts = json.formImage["Pages"][field.i]["Texts"];
+                        R = texts[++field.j]["R"];
+                        field.breakString = [ "VALID ENTRIES", "USAGE", "DATA CHARACTERISTICS", "EXAMPLE", "EXAMPLES" ];
+                        returnValue = getFieldInfo(R, texts, json, fieldNumber[0]);
+                        var fieldNotes = returnValue;
                         fieldNotes = filter(fieldNotes);
                         console.log("\nField Notes= " + fieldNotes);
                         fieldNotes = fieldNotes.split("\n");
@@ -126,17 +119,12 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
                     }
 
                     // Valid Entries
-                    if ( breakValue == "VALID ENTRIES") {
-                        texts = json.formImage["Pages"][i]["Texts"];
-                        R = texts[++j]["R"];
-                        breakString = [ "NOTE", "USAGE", "DATA CHARACTERISTICS", "EXAMPLE", "EXAMPLES" ];
-                        returnValue = getFieldInfo(R, texts, json, i, j, k, breakString, breakValue, fieldNumber[0]);
-                        // Copy back returned values
-                        i = returnValue[0];
-                        j = returnValue[1];
-                        k = returnValue[2];
-                        breakValue = returnValue[3];
-                        var validEntries = returnValue[4];
+                    if ( field.breakValue == "VALID ENTRIES") {
+                        texts = json.formImage["Pages"][field.i]["Texts"];
+                        R = texts[++field.j]["R"];
+                        field.breakString = [ "NOTE", "USAGE", "DATA CHARACTERISTICS", "EXAMPLE", "EXAMPLES" ];
+                        returnValue = getFieldInfo(R, texts, json, fieldNumber[0]);
+                        var validEntries = returnValue;
                         validEntries = validEntriesFilter(validEntries);
                         console.log("\nvalidEntries= " + validEntries);
                         validEntries.split("\n");
@@ -144,34 +132,24 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
                     }
 
                     // Valid Entry Notes
-                    if ( breakValue == "NOTE") {
-                        texts = json.formImage["Pages"][i]["Texts"];
-                        R = texts[++j]["R"];
-                        breakString = [ "USAGE", "DATA CHARACTERISTICS", "EXAMPLE", "EXAMPLES" ];
-                        returnValue = getFieldInfo(R, texts, json, i, j, k, breakString, breakValue, fieldNumber[0]);
-                        // Copy back returned values
-                        i = returnValue[0];
-                        j = returnValue[1];
-                        k = returnValue[2];
-                        breakValue = returnValue[3];
-                        var validEntryNotes = returnValue[4];
+                    if ( field.breakValue == "NOTE") {
+                        texts = json.formImage["Pages"][field.i]["Texts"];
+                        R = texts[++field.j]["R"];
+                        field.breakString = [ "USAGE", "DATA CHARACTERISTICS", "EXAMPLE", "EXAMPLES" ];
+                        returnValue = getFieldInfo(R, texts, json, fieldNumber[0]);
+                        var validEntryNotes = returnValue;
                         validEntryNotes = filter(validEntryNotes);
                         console.log("\nvalidEntryNotes= " + validEntryNotes);
                         jsonOutput.validEntryNotes = validEntryNotes;
                     }
 
                     // Usage
-                    if ( breakValue == "USAGE") {
-                        texts = json.formImage["Pages"][i]["Texts"];
-                        R = texts[++j]["R"];
-                        breakString = [ "NOTE", "DATA CHARACTERISTICS", "EXAMPLE", "EXAMPLES" ];
-                        returnValue = getFieldInfo(R, texts, json, i, j, k, breakString, breakValue, fieldNumber[0]);
-                        // Copy back returned values
-                        i = returnValue[0];
-                        j = returnValue[1];
-                        k = returnValue[2];
-                        breakValue = returnValue[3];
-                        var usage = returnValue[4];
+                    if ( field.breakValue == "USAGE") {
+                        texts = json.formImage["Pages"][field.i]["Texts"];
+                        R = texts[++field.j]["R"];
+                        field.breakString = [ "NOTE", "DATA CHARACTERISTICS", "EXAMPLE", "EXAMPLES" ];
+                        returnValue = getFieldInfo(R, texts, json, fieldNumber[0]);
+                        var usage = returnValue;
                         usage = filter(usage);
                         if (usage.indexOf("required") > -1 ) {
                             console.log("\nusage= Required");
@@ -183,17 +161,12 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
                     }
 
                     // Usage Notes
-                    if ( breakValue == "NOTE") {
-                        texts = json.formImage["Pages"][i]["Texts"];
-                        R = texts[++j]["R"];
-                        breakString = [ "DATA CHARACTERISTICS", "EXAMPLE", "EXAMPLES" ];
-                        returnValue = getFieldInfo(R, texts, json, i, j, k, breakString, breakValue, fieldNumber[0]);
-                        // Copy back returned values
-                        i = returnValue[0];
-                        j = returnValue[1];
-                        k = returnValue[2];
-                        breakValue = returnValue[3];
-                        var usageNotes = returnValue[4];
+                    if ( field.breakValue == "NOTE") {
+                        texts = json.formImage["Pages"][field.i]["Texts"];
+                        R = texts[++field.j]["R"];
+                        field.breakString = [ "DATA CHARACTERISTICS", "EXAMPLE", "EXAMPLES" ];
+                        returnValue = getFieldInfo(R, texts, json, fieldNumber[0]);
+                        var usageNotes = returnValue;
                         usageNotes = filter(usageNotes);
                         console.log("\nusageNotes= " + usageNotes);
                         jsonOutput.usageNotes = usageNotes;
@@ -201,17 +174,12 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
 
 
                     // Data Characteristics
-                    if ( breakValue == "DATA CHARACTERISTICS") {
-                        texts = json.formImage["Pages"][i]["Texts"];
-                        R = texts[++j]["R"];
-                        breakString = [ "EXAMPLE" ];
-                        returnValue = getFieldInfo(R, texts, json, i, j, k, breakString, breakValue, fieldNumber[0]);
-                        // Copy back returned values
-                        i = returnValue[0];
-                        j = returnValue[1];
-                        k = returnValue[2];
-                        breakValue = returnValue[3];
-                        var dataCharacteristics = returnValue[4];
+                    if ( field.breakValue == "DATA CHARACTERISTICS") {
+                        texts = json.formImage["Pages"][field.i]["Texts"];
+                        R = texts[++field.j]["R"];
+                        field.breakString = [ "EXAMPLE" ];
+                        returnValue = getFieldInfo(R, texts, json, fieldNumber[0]);
+                        var dataCharacteristics = returnValue;
                         dataCharacteristics = dataCharacteristics.split("\n");
                         dataCharacteristics = dataCharacteristics.join("");
                         dataCharacteristics = dataCharacteristics.split("%20");
@@ -231,8 +199,8 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
                     }
 
                     // EXAMPLE OR EXAMPLES
-                    if ( breakValue == "EXAMPLE" || breakValue == "EXAMPLES") {
-                        j = texts.length;
+                    if ( field.breakValue == "EXAMPLE" || field.breakValue == "EXAMPLES") {
+                        field.j = texts.length;
                         break;
                     }
                 }
@@ -241,32 +209,32 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
     }
 });
 
-function getFieldInfo(R, texts, json, i, j, k, breakString, breakValue, fieldNumber) {
-    var line = R[k]["T"].split("%20");
+function getFieldInfo(R, texts, json, fieldNumber) {
+    var line = R[field.k]["T"].split("%20");
     var fieldInfo = "";
     var fieldFlag = 0;
     while (true) {
-        fieldInfo = fieldInfo + "\n" + R[k]["T"];
+        fieldInfo = fieldInfo + "\n" + R[field.k]["T"];
         // Move to next page if last line
-        if ( j + 1 == texts.length ) {
-            i++;
-            texts = json.formImage["Pages"][i]["Texts"];
+        if ( field.j + 1 == texts.length ) {
+            field.i++;
+            texts = json.formImage["Pages"][field.i]["Texts"];
             var checkField = texts[5]["R"][0]["T"].split(".");
 
             if ( checkField[0] == fieldNumber ) {
-                j = 6;
+                field.j = 6;
             }
             else {
                 break;
             }
         }
-        R = texts[++j]["R"];
-        line = R[k]["T"].split("%20");
+        R = texts[++field.j]["R"];
+        line = R[field.k]["T"].split("%20");
         line = line.join(" ");
 
-        for ( var index=0; index<breakString.length; index++ ) {
-            if ( line.indexOf( breakString[index] ) > -1 ) {
-                breakValue = breakString[index];
+        for ( var index=0; index<field.breakString.length; index++ ) {
+            if ( line.indexOf( field.breakString[index] ) > -1 ) {
+                field.breakValue = field.breakString[index];
                 fieldFlag = 1;
                 break;
             }
@@ -275,15 +243,15 @@ function getFieldInfo(R, texts, json, i, j, k, breakString, breakValue, fieldNum
             break;
         }
     }
-    return([ i, j, k, breakValue, fieldInfo ]);
+    return(fieldInfo);
 }
 
 function filter(definition) {
     var splitValues = [ "T\n", "\n", "%20", " b y ", " o f ", " w ithin ", " NOTE ", "%2C", "%E2%80%9C", "%E2%80%9D", "%E2%80%99", "%2F", "1%3A ", "2%3A ", "3%3A ", "4%3A ", "5%3A ", "6%3A ", "7%3A " ];
     var joinValues = [ "T", " ", " ", " by ", " of ", " within ", "", ",", "\"", "\"", "\'", "/", "\n", "\n", "\n", "\n", "\n", "\n", "\n" ];
-    for( var i = 0; i < splitValues.length; i++ ) {
-        definition = definition.split(splitValues[i]);
-        definition = definition.join(joinValues[i]);
+    for( var index = 0; index < splitValues.length; index++ ) {
+        definition = definition.split(splitValues[index]);
+        definition = definition.join(joinValues[index]);
     }
     return definition;
 }
@@ -291,9 +259,9 @@ function filter(definition) {
 function validEntriesFilter(definition) {
     var splitValues = [ "%20", "%2F", "%3D", "= \n", "\n" ];
     var joinValues = [ " ", "/", "=", "= ", " " ];
-    for( var i = 0; i < splitValues.length; i++ ) {
-        definition = definition.split(splitValues[i]);
-        definition = definition.join(joinValues[i]);
+    for( var index = 0; index < splitValues.length; index++ ) {
+        definition = definition.split(splitValues[index]);
+        definition = definition.join(joinValues[index]);
     }
     return definition;
 }

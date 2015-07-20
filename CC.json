@@ -1,0 +1,15 @@
+{
+    "fieldNumber": "7",
+    "title": "CC",
+    "name": "Company Code",
+    "definition": " Identifies the Exchange Carrier requesting local services. ",
+    "fieldNotes": [
+        " The format and structure of this field is defined by ANSI in document T1.251, Identification of Telecommunications Service Provider Codes for the North American Telecommunications System. "
+    ],
+    "validEntries": " A four alpha/numeric character code structure for all Exchange Carriers in North America and certain U.S. territories maintained by NECA. ",
+    "validEntryNotes": " When the ASC-EC field is populated, this field must be identical to the ASC-EC entry. ",
+    "usage": " This field is conditional. ",
+    "fieldLength": "4",
+    "dataCharacteristics": "Alphanumeric",
+    "usageNotes": " Required when ordering local interconnection services or unbundled network elements, otherwise prohibited. "
+}

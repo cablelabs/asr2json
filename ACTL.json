@@ -1,0 +1,21 @@
+{
+    "fieldNumber": "69",
+    "title": "ACTL",
+    "name": "Access Customer Terminal Location",
+    "definition": " Identifies the CLLI Code of the customer facility terminal location. The CLLI Code will have been previously assigned. ",
+    "fieldNotes": [
+        " The format and structure of this field is defined by ANSI in document T1.253, Identification of Location Entities for the North American Telecommunications System.  The CLLI Code consists of the following elements%3A  1.  Geographical Code  %E2%80%93 Positions 1 through 4 describe the designation for a single geographical locality within a state, province, territory, country, or distinct region of the world (e.g., municipality) (4 alpha characters).  2.  Geopolitical Code  %E2%80%93 Positions 5 and 6 describe the designation of a state or territory of the United States,  a province or territory of Canada, another country havin g a national federal government, or a unique designation (2 alpha characters).  3.  Network Site Code  %E2%80%93 Positions 7 and 8 describe the designation of a site of an existing or proposed structure within a geographical location where there is a need to identify one or more telecommunications equipment entities, facility terminations, nodal locations, or administrative operations (2 alpha or 2 numeric characters).  4.  Network Entity Code  %E2%80%93 Positions 9 through 11 describe the functional category of equipment or wor k center that is contained in a structure. Equipment categories, including central office s w itching and ancillary equipment or non-switching or access terminations, are associated with a building or networ k site for purposes of maintaining equipment inventories and for identifying facility and circuit terminations and nodal locations  (3 alpha/numeric characters). ",
+        "Valid CLLI Codes are outlined in Telcordi a Technologies practice BR 795-(100-186)-100. ",
+        "Use of assigned CLLI Codes may be negotiated. ",
+        "This field will carry the CLLI Code assigned for the location. The precise usage of the field by  a provider will result from negotiation between the provider and the customer. ",
+        "On an Access Service Request for a WAL, the customer may indicate the ACTL from which or to which the WAL traffic originates or terminates. ",
+        "The ACTL code is an 11 character CLLI Code designed for the identification of location entities for all services.  The first 8 characters ma y represent a building location.  The 9 th , 10 th  and 11 th  characters identify a specific customer, and, in addition, may also represent a specific type of service. ",
+        "The APOT field is required if the ACTL does not identify the specific physical termination point of the access service. 8%3A In a customer leasing arrangement, this field will be populated with the facility ACTL (e.g., 9 th,  10 th 11 th  characters are \"WXX\" or \"HXX\" of the facilit y owner's point of presence %5BPOP%5D). 9%3A Multiple customers may utilize the same ACTL.  In some cases, providers maintain the same ACTL CLLI Code in this situation, and in other cases, providers may assign different CLLI Codes  ( 9, 10 and 11 th  characters) for each customer.  This would include access service requested between the terminals of two different customers. 10%3A For those companies that do not rebundle unbundled trunking and transport, the ACTL and SECLOC must represent the same physical location. "
+    ],
+    "validEntries": " T elephone number format  NPA-NXX-XXXX ",
+    "validEntryNotes": " This telephone number would be customer owned and identified during customer/provider pre- negotiations. ",
+    "usage": " This field is conditional. ",
+    "fieldLength": "11",
+    "dataCharacteristics": "Alphanumeric",
+    "usageNotes": " Prohibited when the EVCI field is \"A\". \nProhibited when the first position of the REQTYP field is \"E\" or \"X\". \nProhibited when the PRILOC field on the RING Form is populated. \nProhibited when the PSLI field is \"A\". \nOptional when the second position of the TQ field is \"N\" or \"X\". \nOptional when the first position of the REQTYP field is \"W\" and the BAN field is not \"N\". \nOtherwise required. "
+}

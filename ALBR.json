@@ -1,0 +1,17 @@
+{
+    "fieldNumber": "38",
+    "title": "ALBR",
+    "name": "Additional Labor",
+    "definition": " Indicates that additional labor is requested and charges will be accepted in conjunction with this Access Service Request, (e.g., Sunday or out of normal business hour installation is bein g requested).  ",
+    "fieldNotes": [
+        " If other labor is requested, the specific labor will be determined in verbal contact between the provider installation-control office and the customer implementation contact.  ",
+        "It is assumed the initiator has the authority to authorize these requests.  ",
+        "Entry in this field is not required if a \"Y\" has been entered in the Expedite (EXP) field.  "
+    ],
+    "validEntries": " 1 = Overtime installation  2 = T esting with other providers  3 = Other labor  4  = Overtime installation and testing with other providers  5  = Overtime and other labor  6 = T esting with other providers and other labor  7  = Overtime installation%2C testing with other providers and other labor ",
+    "validEntryNotes": " When the first position of TQ is \"A\", the ASR which has the TQ Form attached will be identified in the RPON field. \nWhen the first position of TQ is \"L\", \"M\", \"W\", \"X\" or \"C\", entries in the CC or WST, or the CC and the WST fields are required. \nWhen the first position of TQ is \"A\", \"B\", \"D\", \"S\", \"T\", \"U\", or \"1-9\", entries in the CC or WST, or the CC and the WST fields are prohibited. \nThe second position of \"X\" indicates a Trunkin g Form is provided for system requirements rather than provisioning purposes. \nWhen the ACT field is \"N\", a second position of \"N\" or \"X\" is prohibited. \n When the first position of the TQ field is \"E\", the second position of the TQ field must be an \"X\". \n When the first position of the TQ field is \"E\", the first position of the REQTYP field must be an \"L\" and the ACT field must be a \"C\". 8%3A  When the first position of the TQ field is \"C\", the first position of the REQTYP field must be an \"M\" and the ACT field must be a \"C\". ",
+    "usage": " This field is conditional. ",
+    "fieldLength": "1",
+    "dataCharacteristics": "Numeric",
+    "usageNotes": " Optional when the ACT field is \"N\", \"C\", \"M\" or \"T\", otherwise prohibited.  "
+}

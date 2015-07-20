@@ -1,0 +1,15 @@
+{
+    "fieldNumber": "19",
+    "title": "LUP",
+    "name": "Intrastate IntraLATA Usage Percentage",
+    "definition": " Identifies the percent Intrastate IntraLATA usage for use with IntraLATA competition.  ",
+    "fieldNotes": [
+        " This field may apply whenever PIU is less than 100."
+    ],
+    "validEntries": " 1 to 100  LOF = Letter on File ",
+    "validEntryNotes": " Indicates the time zone and time or time zone and w indow of time when the service should be connected, disconnected or coordinated. \nWhen this field is populated in con j unction with the CB TEL NO field, a specific time of day including the hour or hour and minute is required. ",
+    "usage": " This field is conditional. ",
+    "fieldLength": "3",
+    "dataCharacteristics": "Alphanumeric",
+    "usageNotes": " Prohibited when the PIU field is not populated or is \"100\". \nProhibited when the first position of the REQTYP field is \"R\". \nProhibited when the ACT field is \"D\". \nOtherwise optional. "
+}

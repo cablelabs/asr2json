@@ -1,0 +1,15 @@
+{
+    "fieldNumber": "35",
+    "title": "EXP",
+    "name": "Expedite",
+    "definition": " Indicates that expedited treatment is requested and any charges generated in provisioning this request  ( e.g., additional engineering charges or labor charges if applicable )  will be accepted.  ",
+    "fieldNotes": [
+        " The customer should populate the appropriate character position ( s )  to indicate which additional form(s) is attached.  "
+    ],
+    "validEntries": " Y  = Expedite Charges Authorized ",
+    "validEntryNotes": " When the first position of TQ is \"A\", the ASR which has the TQ Form attached will be identified in the RPON field. \nWhen the first position of TQ is \"L\", \"M\", \"W\", \"X\" or \"C\", entries in the CC or WST, or the CC and the WST fields are required. \nWhen the first position of TQ is \"A\", \"B\", \"D\", \"S\", \"T\", \"U\", or \"1-9\", entries in the CC or WST, or the CC and the WST fields are prohibited. \nThe second position of \"X\" indicates a Trunkin g Form is provided for system requirements rather than provisioning purposes. \nWhen the ACT field is \"N\", a second position of \"N\" or \"X\" is prohibited. \n When the first position of the TQ field is \"E\", the second position of the TQ field must be an \"X\". \n When the first position of the TQ field is \"E\", the first position of the REQTYP field must be an \"L\" and the ACT field must be a \"C\". 8%3A  When the first position of the TQ field is \"C\", the first position of the REQTYP field must be an \"M\" and the ACT field must be a \"C\". ",
+    "usage": " This field is conditional. ",
+    "fieldLength": "1",
+    "dataCharacteristics": "Alpha",
+    "usageNotes": " Required when desired due date is less than the standard interval for the provisioning of the service and the ACT field is not \"D\". \nProhibited when the ACT field is \"D\", except outward WATS service. \nOtherwise optional. "
+}

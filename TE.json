@@ -1,0 +1,17 @@
+{
+    "fieldNumber": "84",
+    "title": "TE",
+    "name": "Tax Exemption",
+    "definition": " Indicates that the customer has submitted a tax exemption form to the provider. ",
+    "fieldNotes": [
+        " The format and structure of this field is defined by  ANSI in document ATIS-0300251 Codes for Identification of Service Providers for Information Exchange. ",
+        "This code is established prior to the submission of the ASR.  ",
+        "Billing to an end user who does not have an IAC code is specified with an entry of \"ZZZ\".  When utilizing \"ZZZ\", the Bill Section of the ASR Form should be completed with the end user billin g information. "
+    ],
+    "validEntries": " Entry = Exempt From  A  = F %26 S  B  = F %26 C  C  = County or Local  D  = F %26 S %26 C  E  = F %26 S %26 M  F = Federal  G  = F %26 S %26 C %26 M  H  = S %26 C  I  = S %26 M  J  = C %26 M  K  = F %26 M  L  = Letter on File  M = Municipal  N = Non Exempt  P  = S %26 C %26 M  S = State/Province ",
+    "validEntryNotes": " Valid IAC codes are maintained by  Telcordi a  Technologies. ",
+    "usage": " This field is conditional. ",
+    "fieldLength": "1",
+    "dataCharacteristics": "Alpha",
+    "usageNotes": " Required when the ACT field is \"N\" and the BAN field is \"N\", otherwise optional. "
+}

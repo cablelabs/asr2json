@@ -1,0 +1,16 @@
+{
+    "fieldNumber": "39",
+    "title": "AGAUTH",
+    "name": "Agency Authorization Status",
+    "definition": " Indicates that a customer is acting as another customer's agent.",
+    "fieldNotes": [
+        " If this is a new authorization, the customer must provide a copy of the written authorization to the provider. ",
+        "Consult with the provider to determine local polic y of agency authorization requirements for the billin g of end users when ordered by the customer. "
+    ],
+    "validEntries": " B  = Blanket authorization was previously provided  E  = Authorization was previously provided   N  = New authorization is submitted ",
+    "validEntryNotes": " When the first position of TQ is \"A\", the ASR which has the TQ Form attached will be identified in the RPON field. \nWhen the first position of TQ is \"L\", \"M\", \"W\", \"X\" or \"C\", entries in the CC or WST, or the CC and the WST fields are required. \nWhen the first position of TQ is \"A\", \"B\", \"D\", \"S\", \"T\", \"U\", or \"1-9\", entries in the CC or WST, or the CC and the WST fields are prohibited. \nThe second position of \"X\" indicates a Trunkin g Form is provided for system requirements rather than provisioning purposes. \nWhen the ACT field is \"N\", a second position of \"N\" or \"X\" is prohibited. \n When the first position of the TQ field is \"E\", the second position of the TQ field must be an \"X\". \n When the first position of the TQ field is \"E\", the first position of the REQTYP field must be an \"L\" and the ACT field must be a \"C\". 8%3A  When the first position of the TQ field is \"C\", the first position of the REQTYP field must be an \"M\" and the ACT field must be a \"C\". ",
+    "usage": " This field is conditional. ",
+    "fieldLength": "1",
+    "dataCharacteristics": "Alpha",
+    "usageNotes": " Required when the customer is acting as  a customer agent, otherwise optional. "
+}

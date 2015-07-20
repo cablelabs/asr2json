@@ -1,0 +1,17 @@
+{
+    "fieldNumber": "14",
+    "title": "PROJECT",
+    "name": "Project Identification",
+    "definition": " Identifies the project with which the request is to be associated.",
+    "fieldNotes": [
+        " Examples of the use of this field would be relatin g multiple Access Service Requests, previousl y  negotiated orders, etc. ",
+        "The provider may initiate the pro j ect identification and provide this to the customer who will populate the field when submitting an ASR. ",
+        "The Pro j ect Number must be entered by the ne w and the former customers on \"N\" and \"D\" coordinated conversion orders. "
+    ],
+    "validEntries": " Time Zone (Position 1)  Central = C  Eastern = E  Mountain = M  Pacific = P  Time of Day (Positions 2-7)  T wo Digit Hour  ( 01-12)/Two Digit Minute (00-59)/AM or PM  T wo Digit Hour  ( 01-12)/A or P/Two Digit Hour (01-12)/A or P  AM or PM  T wo Digit Hour  ( 01-12)/A or P ",
+    "validEntryNotes": " Indicates the time zone and time or time zone and w indow of time when the service should be connected, disconnected or coordinated. \nWhen this field is populated in con j unction with the CB TEL NO field, a specific time of day including the hour or hour and minute is required. ",
+    "usage": " This field is conditional. ",
+    "fieldLength": "16",
+    "dataCharacteristics": "Alphanumeric",
+    "usageNotes": " Required when the ACT field is \"N\" or \"D\", and the CCVN field is populated, otherwise optional.  "
+}

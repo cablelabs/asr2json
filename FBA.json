@@ -1,0 +1,16 @@
+{
+    "fieldNumber": "47",
+    "title": "FBA",
+    "name": "Facility Billing Arrangement",
+    "definition": " Indicates a special arrangement has been negotiated between the host customer of a higher level service and the subsequent customer of the lower level service.  ",
+    "fieldNotes": [
+        " This field applies only when the Primary, Secondary, Intermediary CFA or CCEA is changin g  and the end user terminating location is not changing. ",
+        " Population of this field indicates that the provider will use existing end user location information on record for the circuit(s) being groomed. "
+    ],
+    "validEntries": " 1 st  Position  A = Shared network  B = Lease Back  C  = Split Billing - All Elements  D = Split Billing  2 nd  through 4 th  Positions  Y = Indicates the requirement of split billing on the respective element. ",
+    "validEntryNotes": " An entry in one or more of positions 2 through 4 is required when position 1 is \"D\". \nThe following define element labels%3A   EF %3D Entrance Facility  DT %3D Direct Transport  MUX %3D Multiplexing ",
+    "usage": " This field is conditional. ",
+    "fieldLength": "4",
+    "dataCharacteristics": "Alpha",
+    "usageNotes": " Required when the ACT field is \"N\", \"C\" or \"T\" and the ACNA field is different from the ACNA associated with the facility  ( CFA and/or SCFA )  and the UNE and CC fields are not populated. \nOptional  w hen the ACT field is \"R\" and the ACNA field is different from the ACNA associated with the facility  ( CFA and/or SCFA )  and the UNE and CC fields are not populated. \nOtherwise prohibited. "
+}

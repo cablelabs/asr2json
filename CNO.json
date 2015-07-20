@@ -1,0 +1,17 @@
+{
+    "fieldNumber": "16",
+    "title": "CNO",
+    "name": "Case Number",
+    "definition": " Identifies the quotation tracking number assigned by the provider in response to a provisioning arrangement inquiry, e.g., diversity. ",
+    "fieldNotes": [
+        " Examples of the use of this field would be relatin g multiple Access Service Requests, previousl y  negotiated orders, etc. ",
+        "The provider may initiate the pro j ect identification and provide this to the customer who will populate the field when submitting an ASR. ",
+        "The Pro j ect Number must be entered by the ne w and the former customers on \"N\" and \"D\" coordinated conversion orders. "
+    ],
+    "validEntries": " Y  = Coordinated Change Activity ",
+    "validEntryNotes": " Indicates the time zone and time or time zone and w indow of time when the service should be connected, disconnected or coordinated. \nWhen this field is populated in con j unction with the CB TEL NO field, a specific time of day including the hour or hour and minute is required. ",
+    "usage": " This field is optional. ",
+    "fieldLength": "12",
+    "dataCharacteristics": "Alphanumeric",
+    "usageNotes": " Optional when the first position of the REQTYP field is \"E'', \"L\", \"M\", \"S'', \"V\" or \"X\",  and the AC Tfield is  \"N\", \"C\", \"D\", \"T\" or \"M\", otherwise prohibited. "
+}

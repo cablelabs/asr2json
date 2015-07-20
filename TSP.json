@@ -1,0 +1,15 @@
+{
+    "fieldNumber": "76",
+    "title": "TSP",
+    "name": "Telecommunications Service Priority",
+    "definition": " Indicates the provisioning and restoration priority as defined under the TSP Service Vendor Handbook.  ",
+    "fieldNotes": [
+        " These codes are assigned by the TSP Program Office. "
+    ],
+    "validEntries": " Nine Character TSP Control Identifier  One Character Provisioning Priority Level (E%2C 0-5)  One Digit Restoration Priority Level (0-5) ",
+    "validEntryNotes": " A TSP code ending in \"00\" indicates \"revocation\", the removal of a previously assigned TSP code.  ",
+    "usage": " This field is optional. ",
+    "fieldLength": "12",
+    "dataCharacteristics": "Alphanumeric",
+    "usageNotes": " Required when multiple providers are involved in providing access service and the EVCI field is not equal to \"B\".  \nRequired when the JPR field is populated. \nOtherwise prohibited. "
+}

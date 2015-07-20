@@ -1,0 +1,15 @@
+{
+    "fieldNumber": "48",
+    "title": "FNI",
+    "name": "Fiber Network Identification",
+    "definition": " Identifies all services associated with a particular fiber based network. Also may identify customer ring and associated rin g  services.  ",
+    "fieldNotes": [
+        " The Fiber Network Identification data will be assigned by the provider.  "
+    ],
+    "validEntries": " Valid Fiber Network Identification  N = New ",
+    "validEntryNotes": " A valid entry of \"N\" is used when an FNI has not previously been assigned. ",
+    "usage": " This field is conditional. ",
+    "fieldLength": "13",
+    "dataCharacteristics": "Alphanumeric",
+    "usageNotes": " Required when the first position of the REQTYP field is \"R\" and the UNE field is not populated. \nRequired for DS1/DS3 within a fiber network  w hen the ACT field is \"N\", \"C\", \"M\", \"T\" or \"R\" and the UNE field is not populated. \nRequired for services riding a dedicated ring  w hen the ACT field is \"N\", \"C\", \"M\", \"T\" or \"R\" and the UNE field is not populated. \nOtherwise prohibited. "
+}

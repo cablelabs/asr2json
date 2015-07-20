@@ -1,0 +1,15 @@
+{
+    "fieldNumber": "68",
+    "title": "ISTN",
+    "name": "Interconnection Screening Telephone Number",
+    "definition": " Identifies the telephone number used for billing or translation purposes. ",
+    "fieldNotes": [
+        " The code set is unique to each established trun k group or CCS Link Set and is provided to the customer on the Firm Order Confirmation.  The TSC entry may then be populated by the customer w hen ordering changes, additions or deletions to an existing trunk group or CCS Link Set. "
+    ],
+    "validEntries": " T elephone number format  NPA-NXX-XXXX ",
+    "validEntryNotes": " This telephone number would be customer owned and identified during customer/provider pre- negotiations. ",
+    "usage": " This field is conditional. ",
+    "fieldLength": "10",
+    "dataCharacteristics": "Numeric",
+    "usageNotes": " Prohibited when the ACT field is \"D\", otherwise optional. "
+}

@@ -1,0 +1,16 @@
+{
+    "fieldNumber": "79",
+    "title": "SPEC",
+    "name": "Service and Product Enhancement Code",
+    "definition": " Identifies a specific product or service offering. ",
+    "fieldNotes": [
+        " SPEC may be applicable for circuit level features and options other than those already identified by the Network Channel  ( NC )  and Network Channel Interface (NCI) codes. ",
+        " Telcordia Technologies, Inc. is the intellectual property owner and administrator of SPEC. The SPEC code structure and use are outlined in Telcordia Technologies special report SR-2491. "
+    ],
+    "validEntries": " Positions 1-7 = Any alpha character except %E2%80%9CI%E2%80%9D or an y numeric character except %E2%80%9C0%E2%80%9D. ",
+    "validEntryNotes": " A TSP code ending in \"00\" indicates \"revocation\", the removal of a previously assigned TSP code.  ",
+    "usage": " This field is conditional. ",
+    "fieldLength": "5",
+    "dataCharacteristics": "Alphanumeric",
+    "usageNotes": " Prohibited when the EVCI field is \"A\", otherwise optional. "
+}

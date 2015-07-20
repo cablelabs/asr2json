@@ -1,0 +1,21 @@
+{
+    "fieldNumber": "60",
+    "title": "ECCKT",
+    "name": "Exchange Company Circuit ID",
+    "definition": " Identifies the provider circuit ID or multiple circuit IDs.  ",
+    "fieldNotes": [
+        " The provider assigning this circuit identifier determines the content of this field in accordance w ith COMMON LANGUAGE standards maintained by Telcordia Technologies. ",
+        "When a component within the format is purposel y omitted, the component should still be delimited and compressed to eliminate any spaces.   ",
+        "All components within the ECCKT should be delimited by either virgules or periods. ",
+        "If all positions in a component within the ECCK Tare not populated, the component should be compressed to eliminate any spaces.   ",
+        "Use of ranging is based on customer/provider negotiations. Ranges should be shown within the appropriate component of the ID by specifying the lowest value of the component, hyphen, highest value of the component, e.g., trunk numbers 3500 through 3512 would be shown as 3500-3512. ",
+        "When disconnecting all circuits in a given account, \"ALL\" should be entered in this field, the BAN field populated, and the ACT field should contain a \"D\". ",
+        "The COMMON LANGUAGE Special Service Circuit  Code in this field should not reflect a value that  equates to the EVC circuit identification.  8%3A The format and structure of the field is defined by ANSI standards. "
+    ],
+    "validEntries": " 1.  COMMON LANGUAGE Special Service Circuit Codes (CLCI S/S Codes) as defined by ANSI in ATIS-0300097%3A Structure for the Identification of Telecommunications Connections for the North American Telecommunications Systems or by COMMON LANGUAGE in BR-795-402- 100. A brief summary of the format can be found in ASOG Practice 000%2C Section 2.14.3 and 2.14.4. ",
+    "validEntryNotes": " When ordering local transport to an access tandem, the direct-trunked transport valid entries should be used for flat-rated service. Tandem-switched transport valid entries should be used for usage- rated service. \nWhen the first position is \"A\", the fourth position is prohibited.  \nWhen the first position is \"C\" or \"E\" and EF is bein g ordered separately, RPON is required. \nWhen the first position is \"N\", the second, third and fourth positions are prohibited. \nWhen the first position is \"B\" or \"C\", the use of the fourth position may be prohibited based on provider tariffs/practices.  \nUse of the third and fourth positions of this field is based on customer practices.  \nWhen the first position of the REQTYP field is \"L\", use of \"B\", \"C\", \"D\" or \"E\" in the second position is prohibited. ",
+    "usage": " This field is conditional. ",
+    "fieldLength": "4",
+    "dataCharacteristics": "Alphanumeric",
+    "usageNotes": " Required when the first position of the REQTYP field is \"M\" or \"A\" and the ACT field is \"N\", \"C\" or \"D\". \nRequired for switched access facilities when the ACT field is \"N\", \"C\" or \"D\". \n Optional when the first position of the REQTYP field is \"L\" and the ACT field is \"N\", \"C\" or \"D\". \nOtherwise prohibited. "
+}

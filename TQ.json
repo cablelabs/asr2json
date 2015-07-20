@@ -1,0 +1,15 @@
+{
+    "fieldNumber": "34",
+    "title": "TQ",
+    "name": "Translation Questionnaire Request",
+    "definition": " Indicates that a translation questionnaire is being submitted. ",
+    "fieldNotes": [
+        " The customer should populate the appropriate character position ( s )  to indicate which additional form(s) is attached.  "
+    ],
+    "validEntries": " 1 st  Position  A  = No TQ attached  B = FGB translations  C  = Code (NPA/NXX) Translation Routing Only  D = FGD translations  E  = STP Translation Changes  L = Local translations  M  = Local translations and Code Translation Routing  S = SAC only  T = FGD translations and SAC  U  = FGB translations and SAC  W = Wireless translations  X  = Wireless translations and Code Translation Routing  1-9 = T Q on file  2 nd  Position  N  = No Trunking Form  X = T runking Form  ( no trunk activity ) Y = T runking Form  ( trunk activity )",
+    "validEntryNotes": " When the first position of TQ is \"A\", the ASR which has the TQ Form attached will be identified in the RPON field. \nWhen the first position of TQ is \"L\", \"M\", \"W\", \"X\" or \"C\", entries in the CC or WST, or the CC and the WST fields are required. \nWhen the first position of TQ is \"A\", \"B\", \"D\", \"S\", \"T\", \"U\", or \"1-9\", entries in the CC or WST, or the CC and the WST fields are prohibited. \nThe second position of \"X\" indicates a Trunkin g Form is provided for system requirements rather than provisioning purposes. \nWhen the ACT field is \"N\", a second position of \"N\" or \"X\" is prohibited. \n When the first position of the TQ field is \"E\", the second position of the TQ field must be an \"X\". \n When the first position of the TQ field is \"E\", the first position of the REQTYP field must be an \"L\" and the ACT field must be a \"C\". 8%3A  When the first position of the TQ field is \"C\", the first position of the REQTYP field must be an \"M\" and the ACT field must be a \"C\". ",
+    "usage": " This field is conditional ",
+    "fieldLength": "2",
+    "dataCharacteristics": "Alphanumeric",
+    "usageNotes": " Required when the first position of the REQTYP field is \"M\", the ACT field is \"N\" and the AC TI field is \"B\" or \"C\". \nOptional when the first position of the REQTYP field is \"L\" or \"M\" and the ACT field is \"C\". \nRequired when the first position of the REQTYP field is \"M\", the ACT field is \"D\" and the ACTI field is \"E\". \nOtherwise prohibited. "
+}
