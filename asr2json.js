@@ -8,8 +8,8 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
 
     var flag = 0;
     var sectionFlag = 0;
-//    for( var i = 0; i<json.formImage["Pages"].length; i++) {
-    for( var i = 0; i<5; i++) { // For each page
+    for( var i = 0; i<json.formImage["Pages"].length; i++) {
+//    for( var i = 0; i<5; i++) { // For each page
         var texts = json.formImage["Pages"][i]["Texts"];
         for( j = 0; j<texts.length; j++) {  // For text in the page
             var R = texts[j]["R"];
@@ -18,11 +18,9 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
                 var TS = R[k]["TS"][2];
 
                 // STORING FORM NAME
-                if ( T == "3." && TS == "1" ) {
-                    flag = 1;
-                    continue;
-                }
-                if ( flag == 1 ) {
+                if ( T == "3." && TS == "1" && texts[j+1]["R"][k]["T"].indexOf("FORM")>-1) {
+                    R = texts[++j]["R"];
+                    T = R[k]["T"];
                     var checkIfForm = T.split("FORM");
                     if ( checkIfForm.length>1 ) {
                         var formName = T.split("(");
@@ -53,7 +51,6 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
                     continue;
                 }
 
-                console.log("Text= " + T);
                 // STORING FIELD DETAILS
                 var fieldNumber = T.split(".");
                 if(isNaN(fieldNumber[0])) {
@@ -270,16 +267,5 @@ function validEntriesFilter(definition) {
         definition = definition.split(splitValues[i]);
         definition = definition.join(joinValues[i]);
     }
-
-//    definition = definition.split("%20");
-//    definition = definition.join(" ");
-//    definition = definition.split("%2F");
-//    definition = definition.join("/");
-//    definition = definition.split("%3D");
-//    definition = definition.join("=");
-//    definition = definition.split("= \n");
-//    definition = definition.join("= ");
-//    definition = definition.split("\n");
-//    definition = definition.join(" ");
     return definition;
 }
