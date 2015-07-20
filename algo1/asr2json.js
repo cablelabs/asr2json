@@ -99,10 +99,27 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
                  }
             }
         }
+        content = " ";
         previous = "none";
     }
 });
+//});
 
+
+//function convertasr(bold,value,callback){
+//    //some work
+////    getval(function (err, results){
+//       if(err){
+//        return callback(new Error("error"));
+//       }else{
+//        callback(5);
+//       }
+//    }
+//}
+//
+//convertasr(1,3,function(err,va){
+//   console.log(va);
+//});
 
 
 //fs.writeFile('myfile.json', 'Hey there!', 'utf8', function(err){
