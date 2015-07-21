@@ -3,16 +3,9 @@
     "title": "BILLNM",
     "name": "Billing Name",
     "definition": " Identifies the name of the person, office, or company to whom the customer has designated that the bill be sent.  ",
-    "fieldNotes": [
-        " SPEC may be applicable for circuit level features and options other than those already identified by the Network Channel  ( NC )  and Network Channel Interface (NCI) codes. ",
-        " Telcordia Technologies, Inc. is the intellectual property owner and administrator of SPEC. The SPEC code structure and use are outlined in Telcordia Technologies special report SR-2491. "
-    ],
-    "validEntries": [
-        " Positions 1-7 = Any alpha character except %E2%80%9CI%E2%80%9D or an y numeric character except %E2%80%9C0%E2%80%9D. "
-    ],
-    "validEntryNotes": " A TSP code ending in \"00\" indicates \"revocation\", the removal of a previously assigned TSP code.  ",
     "usage": "Conditional",
+    "usageNotes": " Required when the BAN field is \"N\". \nRequired when the CCNA field is \"CUS\". \nRequired when the ACNA field is \"ZZZ\". \nOtherwise optional. ",
     "dataCharacteristics": "Alphanumeric",
     "fieldLength": "25",
-    "usageNotes": " Required when the BAN field is \"N\". \nRequired when the CCNA field is \"CUS\". \nRequired when the ACNA field is \"ZZZ\". \nOtherwise optional. "
+    "examples": "\nX%20Y\nZ\n%20C%20\nO\nR\nP\nO\nR\nA\nT\nI\nO\nN"
 }

@@ -16,5 +16,6 @@
     "validEntryNotes": " Valid IAC codes are maintained by  Telcordi a  Technologies. ",
     "usage": "Required",
     "dataCharacteristics": "Alpha",
-    "fieldLength": "3"
+    "fieldLength": "3",
+    "examples": "\nU\nT\n%20C%20"
 }

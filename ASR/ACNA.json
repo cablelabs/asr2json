@@ -15,5 +15,5 @@
     "usage": "Required",
     "dataCharacteristics": "Alpha",
     "fieldLength": "3",
-    "usageNotes": " Required when the BAN field is \"N\". \nRequired when the CCNA field is \"CUS\". \nRequired when the ACNA field is \"ZZZ\". \nOtherwise optional. "
+    "examples": "\nU\nT\n%20C%20"
 }

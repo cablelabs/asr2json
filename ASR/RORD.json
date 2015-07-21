@@ -2,16 +2,10 @@
     "fieldNumber": "71",
     "title": "RORD",
     "name": "Related Order Number",
-    "definition": " Identifies a provider's related order number. ",
-    "fieldNotes": [
-        " This field may be used to convey a CENTREX order number obtained from the provider representative handling the CENTREX account. "
-    ],
-    "validEntries": [
-        " T elephone number format  NPA-NXX-XXXX "
-    ],
-    "validEntryNotes": " This telephone number would be customer owned and identified during customer/provider pre- negotiations. ",
+    "definition": " Identifies a provider's related order number. \nThis field may be used to convey a CENTREX order number obtained from the provider representative handling the CENTREX account. ",
     "usage": "Conditional",
+    "usageNotes": " Required when the provider has pre-assigned  a  related order number, otherwise prohibited. ",
     "dataCharacteristics": "Alphanumeric",
     "fieldLength": "17",
-    "usageNotes": " Required when the provider has pre-assigned  a  related order number, otherwise prohibited. "
+    "examples": "\n%20C%20\n4\n5\n6\n8\n9\n5"
 }

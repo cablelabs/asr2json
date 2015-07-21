@@ -1,6 +1,8 @@
 var fs = require('fs');
 var ofs = require('fs');
 var field = {};
+field.breakString = [ "NOTE", "VALID ENTRIES", "USAGE", "DATA CHARACTERISTICS", "EXAMPLE", "EXAMPLES" ];
+field.breakValue = "EXAMPLE";
 
 fs.readFile('asrpdf.json', 'utf8', function(err, data) {
     if (err) {
@@ -61,129 +63,136 @@ fs.readFile('asrpdf.json', 'utf8', function(err, data) {
                     continue;
                 }
                 else {
-                    var prevFieldNumber = field.fieldNumber;
-                    if ( prevFieldNumber!=0 && field.fieldNumber!=currentFieldNumber[0] ) {
-                        writeOutput(prevFieldNumber, formName[0], field);
-                        cleanFieldProperties();
-                        field.fieldNumber = currentFieldNumber[0];
-                    }
-                    else {
-                        field.fieldNumber = currentFieldNumber[0];
-                    }
-
-                    console.log("\nField Number= " + field.fieldNumber);
-
-                    // Title
-                    texts = json.formImage["Pages"][field.i]["Texts"];
-                    R = texts[++field.j]["R"];
-                    field.title = R[0]["T"].split("%20");
-                    field.title = field.title[0];
-                    console.log("Title= " + field.title);
-
-                    // Name
-                    texts = json.formImage["Pages"][field.i]["Texts"];
-                    R = texts[++field.j]["R"];
-                    field.name = R[field.k]["T"].split("%20");
-                    field.name = field.name.join(" ");
-                    console.log("Name= " + field.name);
-
-                    // Definition
-                    texts = json.formImage["Pages"][field.i]["Texts"];
-                    R = texts[++field.j]["R"];
-                    field.breakString = [ "NOTE", "VALID ENTRIES", "USAGE", "DATA CHARACTERISTICS", "EXAMPLE", "EXAMPLES" ];
-                    field.breakValue = "";
-                    field.definition = getFieldInfo(R, texts, json);
-                    field.definition = filter(field.definition);
-                    console.log("Definition= " + field.definition);
-
-                    // Field Notes
-                    if ( field.breakValue == "NOTE") {
-                        texts = json.formImage["Pages"][field.i]["Texts"];
-                        R = texts[++field.j]["R"];
-                        field.breakString = [ "VALID ENTRIES", "USAGE", "DATA CHARACTERISTICS", "EXAMPLE", "EXAMPLES" ];
-                        field.fieldNotes = getFieldInfo(R, texts, json);
-                        field.fieldNotes = filter(field.fieldNotes);
-                        console.log("\nField Notes= " + field.fieldNotes);
-                        field.fieldNotes = field.fieldNotes.split("\n");
-                    }
-
-                    // Valid Entries
-                    if ( field.breakValue == "VALID ENTRIES") {
-                        texts = json.formImage["Pages"][field.i]["Texts"];
-                        R = texts[++field.j]["R"];
-                        field.breakString = [ "NOTE", "USAGE", "DATA CHARACTERISTICS", "EXAMPLE", "EXAMPLES" ];
-                        field.validEntries = getFieldInfo(R, texts, json);
-                        field.validEntries = validEntriesFilter(field.validEntries);
-                        field.validEntries = field.validEntries.split("\n");
-                        console.log("\nvalidEntries= " + field.validEntries);
-                    }
-
-                    // Valid Entry Notes
-                    if ( field.breakValue == "NOTE") {
-                        texts = json.formImage["Pages"][field.i]["Texts"];
-                        R = texts[++field.j]["R"];
-                        field.breakString = [ "USAGE", "DATA CHARACTERISTICS", "EXAMPLE", "EXAMPLES" ];
-                        field.validEntryNotes = getFieldInfo(R, texts, json);
-                        field.validEntryNotes = filter(field.validEntryNotes);
-                        console.log("\nvalidEntryNotes= " + field.validEntryNotes);
-                    }
-
-                    // Usage
-                    if ( field.breakValue == "USAGE") {
-                        texts = json.formImage["Pages"][field.i]["Texts"];
-                        R = texts[++field.j]["R"];
-                        field.breakString = [ "NOTE", "DATA CHARACTERISTICS", "EXAMPLE", "EXAMPLES" ];
-                        field.usage = getFieldInfo(R, texts, json);
-                        field.usage = filter(field.usage);
-                        if (field.usage.indexOf("required") > -1 ) {
-                            field.usage = "Required";
-                            console.log("\nusage= Required");
+                        var prevFieldNumber = field.fieldNumber;
+                        if ( prevFieldNumber!=0 && field.fieldNumber!=currentFieldNumber[0] ) {
+                            console.log("\nWriting Output");
+                            writeOutput(prevFieldNumber, formName[0], field);
+                            cleanFieldProperties();
+                            field.fieldNumber = currentFieldNumber[0];
                         }
-                        else if ( field.usage.indexOf("conditional") > -1 ) {
-                            field.usage = "Conditional";
-                            console.log("\nusage= Conditional");
+                        else {
+                            field.fieldNumber = currentFieldNumber[0];
                         }
-                    }
 
-                    // Usage Notes
-                    if ( field.breakValue == "NOTE") {
+                        console.log("\nField Number= " + field.fieldNumber);
+
+                        // Title
                         texts = json.formImage["Pages"][field.i]["Texts"];
                         R = texts[++field.j]["R"];
-                        field.breakString = [ "DATA CHARACTERISTICS", "EXAMPLE", "EXAMPLES" ];
-                        field.usageNotes = getFieldInfo(R, texts, json);
-                        field.usageNotes = filter(field.usageNotes);
-                        console.log("\nusageNotes= " + field.usageNotes);
-                    }
+                        field.title = R[0]["T"].split("%20");
+                        field.title = field.title[0];
+                        console.log("Title= " + field.title);
 
-                    // Data Characteristics
-                    if ( field.breakValue == "DATA CHARACTERISTICS") {
+                        // Name
                         texts = json.formImage["Pages"][field.i]["Texts"];
                         R = texts[++field.j]["R"];
-                        field.breakString = [ "EXAMPLE" ];
-                        field.dataCharacteristics = getFieldInfo(R, texts, json);
-                        field.dataCharacteristics = field.dataCharacteristics.split("\n");
-                        field.dataCharacteristics = field.dataCharacteristics.join("");
-                        field.dataCharacteristics = field.dataCharacteristics.split("%20");
-                        console.log("fieldLength = " + field.dataCharacteristics[0]);
-                        field.fieldLength = field.dataCharacteristics[0];
-                        var characteristics = "";
-                        if ( field.dataCharacteristics[1].indexOf("alpha") > -1 && field.dataCharacteristics[1].indexOf("numeric") > -1) {
-                            characteristics = "Alphanumeric";
-                        }
-                        else if ( field.dataCharacteristics[1].indexOf("alpha") > -1 ) {
-                           characteristics = "Alpha";
-                        }
-                        else if ( field.dataCharacteristics[1].indexOf("numeric") > -1) {
-                            characteristics = "Numeric";
-                        }
-                        field.dataCharacteristics = characteristics;
-                    }
+                        field.name = R[field.k]["T"].split("%20");
+                        field.name = field.name.join(" ");
+                        console.log("Name= " + field.name);
 
-                    // EXAMPLE OR EXAMPLES
-                    if ( field.breakValue == "EXAMPLE" || field.breakValue == "EXAMPLES") {
-                        field.j = texts.length;
-                        break;
-                    }
+                        // Definition
+                        texts = json.formImage["Pages"][field.i]["Texts"];
+                        R = texts[++field.j]["R"];
+                        field.definition = getFieldInfo(R, texts, json);
+                        field.definition = filter(field.definition);
+                        console.log("Definition= " + field.definition);
+
+                    do {
+                        // Field Notes
+                        if ( field.breakValue == "FIELD NOTES") {
+                            texts = json.formImage["Pages"][field.i]["Texts"];
+                            R = texts[++field.j]["R"];
+                            field.fieldNotes = getFieldInfo(R, texts, json);
+                            field.fieldNotes = filter(field.fieldNotes);
+                            console.log("\nField Notes= " + field.fieldNotes);
+                            field.fieldNotes = field.fieldNotes.split("\n");
+                        }
+
+                        // Valid Entries
+                        if ( field.breakValue == "VALID ENTRIES") {
+                            texts = json.formImage["Pages"][field.i]["Texts"];
+                            R = texts[++field.j]["R"];
+                            if ( 'validEntries' in field ) {
+                                field.validEntries = field.validEntries + "\n" + getFieldInfo(R, texts, json);
+                            }
+                            else {
+                                field.validEntries = getFieldInfo(R, texts, json);
+                            }
+                            field.validEntries = validEntriesFilter(field.validEntries);
+                            field.validEntries = field.validEntries.split("\n");
+                            console.log("\nvalidEntries= " + field.validEntries);
+                        }
+
+                        // Valid Entry Notes
+                        if ( field.breakValue == "VALID ENTRY NOTES") {
+                            texts = json.formImage["Pages"][field.i]["Texts"];
+                            R = texts[++field.j]["R"];
+                            field.validEntryNotes = getFieldInfo(R, texts, json);
+                            field.validEntryNotes = filter(field.validEntryNotes);
+                            console.log("\nvalidEntryNotes= " + field.validEntryNotes);
+                        }
+
+                        // Usage
+                        if ( field.breakValue == "USAGE") {
+                            texts = json.formImage["Pages"][field.i]["Texts"];
+                            R = texts[++field.j]["R"];
+                            field.usage = getFieldInfo(R, texts, json);
+                            field.usage = filter(field.usage);
+                            if (field.usage.indexOf("required") > -1 ) {
+                                field.usage = "Required";
+                                console.log("\nusage= Required");
+                            }
+                            else if ( field.usage.indexOf("conditional") > -1 ) {
+                                field.usage = "Conditional";
+                                console.log("\nusage= Conditional");
+                            }
+                        }
+
+
+                        // Usage Notes
+                        if ( field.breakValue == "USAGE NOTES") {
+                            texts = json.formImage["Pages"][field.i]["Texts"];
+                            R = texts[++field.j]["R"];
+                            field.usageNotes = getFieldInfo(R, texts, json);
+                            field.usageNotes = filter(field.usageNotes);
+                            console.log("\nusageNotes= " + field.usageNotes);
+                        }
+
+                        console.log("Text before data char= " + R[0]["T"]);
+                        console.log("Break Value= " + field.breakValue);
+                        // Data Characteristics
+                        if ( field.breakValue == "DATA CHARACTERISTICS") {
+                            texts = json.formImage["Pages"][field.i]["Texts"];
+                            R = texts[++field.j]["R"];
+                            field.dataCharacteristics = getFieldInfo(R, texts, json);
+                            field.dataCharacteristics = field.dataCharacteristics.split("\n");
+                            field.dataCharacteristics = field.dataCharacteristics.join("");
+                            field.dataCharacteristics = field.dataCharacteristics.split("%20");
+                            console.log("fieldLength = " + field.dataCharacteristics[0]);
+                            field.fieldLength = field.dataCharacteristics[0];
+                            var characteristics = "";
+                            if ( field.dataCharacteristics[1].indexOf("alpha") > -1 && field.dataCharacteristics[1].indexOf("numeric") > -1) {
+                                characteristics = "Alphanumeric";
+                            }
+                            else if ( field.dataCharacteristics[1].indexOf("alpha") > -1 ) {
+                               characteristics = "Alpha";
+                            }
+                            else if ( field.dataCharacteristics[1].indexOf("numeric") > -1) {
+                                characteristics = "Numeric";
+                            }
+                            field.dataCharacteristics = characteristics;
+                        }
+
+                        // EXAMPLE OR EXAMPLES
+                        if ( field.breakValue == "EXAMPLE" || field.breakValue == "EXAMPLES") {
+                            texts = json.formImage["Pages"][field.i]["Texts"];
+                            R = texts[++field.j]["R"];
+                            field.examples = getFieldInfo(R, texts, json);
+                            console.log("examples = " + field.examples);
+                            field.j = texts.length;
+                            break;
+                        }
+                    } while ( field.breakValue!="EXAMPLE" && field.breakValue!="EXAMPLES" );
                 }
             }
         }
@@ -191,6 +200,8 @@ fs.readFile('asrpdf.json', 'utf8', function(err, data) {
 });
 
 function getFieldInfo(R, texts, json) {
+    console.log("Text= " + R[0]["T"]);
+
     var line = R[field.k]["T"].split("%20");
     var fieldInfo = "";
     var fieldFlag = 0;
@@ -215,7 +226,23 @@ function getFieldInfo(R, texts, json) {
 
         for ( var index=0; index<field.breakString.length; index++ ) {
             if ( line.indexOf( field.breakString[index] ) > -1 ) {
-                field.breakValue = field.breakString[index];
+                if ( field.breakString[index]=="NOTE" ) {
+                    if ( field.breakValue == "FIELD NOTES" || field.breakValue == "VALID ENTRY NOTES" || field.breakValue == "USAGE NOTES" ) {
+                        break;
+                    }
+                    else if ( field.breakValue == "EXAMPLE" || field.breakValue == "EXAMPLES" ) {
+                        field.breakValue = "FIELD NOTES";
+                    }
+                    else if ( field.breakValue == "VALID ENTRIES" ) {
+                        field.breakValue = "VALID ENTRY NOTES";
+                    }
+                    else if ( field.breakValue == "USAGE" ) {
+                        field.breakValue = "USAGE NOTES";
+                    }
+                }
+                else {
+                    field.breakValue = field.breakString[index];
+                }
                 fieldFlag = 1;
                 break;
             }
@@ -268,8 +295,10 @@ function replacer(key, value) {
 }
 function cleanFieldProperties() {
     for ( var key in field ) {
+//        console.log("key= " + key);
         if ( key!="i" && key!="j" && key!="k" && key!="breakString" && key!="breakValue" ) {
-            delete field.key;
+//            console.log("Key deleted= " + key);
+            delete field[key];
         }
     }
 }

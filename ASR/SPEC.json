@@ -10,9 +10,9 @@
     "validEntries": [
         " Positions 1-7 = Any alpha character except %E2%80%9CI%E2%80%9D or an y numeric character except %E2%80%9C0%E2%80%9D. "
     ],
-    "validEntryNotes": " A TSP code ending in \"00\" indicates \"revocation\", the removal of a previously assigned TSP code.  ",
     "usage": "Conditional",
+    "usageNotes": " Prohibited when the EVCI field is \"A\", otherwise optional. ",
     "dataCharacteristics": "Alphanumeric",
     "fieldLength": "5",
-    "usageNotes": " Prohibited when the EVCI field is \"A\", otherwise optional. "
+    "examples": "\nF%20R\nD\nS\n3\n2\n2"
 }

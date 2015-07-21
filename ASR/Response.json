@@ -1,0 +1,9 @@
+{
+    "fieldNumber": "30",
+    "title": "Response",
+    "name": "USAGE%3A",
+    "definition": " This field is required. ",
+    "dataCharacteristics": "Alphanumeric",
+    "fieldLength": "2",
+    "examples": "\n2%20"
+}

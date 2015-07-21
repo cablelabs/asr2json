@@ -1,0 +1,13 @@
+{
+    "fieldNumber": "9",
+    "title": "T",
+    "name": "he CCNA is not intended to indicate the customer",
+    "definition": " being billed for the access service.  This is reflected in the ACNA field on the ASR. ",
+    "validEntries": [
+        " IAC Code  CUS = Casual customer "
+    ],
+    "validEntryNotes": " Valid IAC codes are maintained by  Telcordi a  Technologies. ",
+    "usage": "Required",
+    "dataCharacteristics": "Alpha",
+    "fieldLength": "3"
+}}

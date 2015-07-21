@@ -3,15 +3,13 @@
     "title": "UNIT",
     "name": "Unit Identification",
     "definition": " Identifies whether the Quantity  ( QTY )  field contains number of circuits, ring segments, Busy Hour Minutes of Capacity  ( BHMC ) for switched access service or percent of market share. ",
-    "fieldNotes": [
-        " CKR is used by the customer as a cross reference to the provider circuit ID ( s )  and in many cases to identify the customer's end-to-end service.  "
-    ],
     "validEntries": [
         " B  = Number of BHMC  C  = Number of lines%2C trunks%2C facilities%2C circuits%2C CCS links%2C ring segments or unbundled elements.  P  = Percent market share "
     ],
     "validEntryNotes": " Percent of market share is an option for the orderin g of initial Feature Group D.   The percent of market share figure is specified by the customer.  The provider converts this figure into the number of trunks required for ser v ice.  The customer ma y  specify this figure only when an end office is scheduled for equal access conversion. ",
     "usage": "Conditional",
+    "usageNotes": " Required when the first position of the REQTYP field is \"M\", the ACT field is \"N\", \"C\" or \"D\", the second position of the TQ field is not \"N\" or \"X\" and the EOD USE field on the EOD Form is not \"A\". \nRequired when the first position of the REQTYP field is \"A\" or \"L\" and the ACT field is \"N\", \"C\" or \"D\". \nProhibited when the second position of the TQ field is \"N\" or \"X\" or the EOD USE field on the EOD Form is \"A\". \nOtherwise optional. ",
     "dataCharacteristics": "Alpha",
     "fieldLength": "1",
-    "usageNotes": " Required when the first position of the REQTYP field is \"M\", the ACT field is \"N\", \"C\" or \"D\", the second position of the TQ field is not \"N\" or \"X\" and the EOD USE field on the EOD Form is not \"A\". \nRequired when the first position of the REQTYP field is \"A\" or \"L\" and the ACT field is \"N\", \"C\" or \"D\". \nProhibited when the second position of the TQ field is \"N\" or \"X\" or the EOD USE field on the EOD Form is \"A\". \nOtherwise optional. "
+    "examples": "\nB%20"
 }

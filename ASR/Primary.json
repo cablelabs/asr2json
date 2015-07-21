@@ -1,0 +1,12 @@
+{
+    "fieldNumber": "53",
+    "title": "Primary",
+    "name": "NOTE 3%3A",
+    "definition": " Prohibited when the ACT field is \"D\". ",
+    "fieldNotes": [
+        " Otherwise optional. "
+    ],
+    "dataCharacteristics": "Alpha",
+    "fieldLength": "1",
+    "examples": "\nA%20"
+}

@@ -1,0 +1,14 @@
+{
+    "fieldNumber": "70",
+    "title": "Additional",
+    "name": "4. ",
+    "definition": " Network Entity Code  %E2%80%93 Positions 9 through 11 describe the functional category of equipment or wor k center that is contained in a structure. Equipment categories, including central office switching and ancillary equipment or non-switching or access terminations, are associated with a building or networ k site for purposes of maintaining equipment inventories and for identifying facility and circuit terminations and nodal locations  (3 alpha/numeric characters). ",
+    "fieldNotes": [
+        " Valid CLLI Codes are outlined in Telcordi a Technologies practice BR 795-(100-186)-100. "
+    ],
+    "usage": "Conditional",
+    "usageNotes": " Required when the ACTL field does not identify the specific physical termination point of the access service. \nProhibited when the ACT field is \"D\". \nOtherwise optional. ",
+    "dataCharacteristics": "Alphanumeric",
+    "fieldLength": "11",
+    "examples": "\nM\nI\nL\nN\nT\nN\nM\nA\nF\nX\nX\nB\n1\n7\n-\nP\n5\n-\nJ\nK\n2\n4"
+}

@@ -1,0 +1,17 @@
+{
+    "fieldNumber": "1",
+    "title": "%3D",
+    "name": "EF rides special access facility ",
+    "definition": " B  %3D  Direct-Trunked Transport rides special access facility  C %3D Direct- Trunked Transport and EF ride special access facility  D %3D  Tandem-Switched Transport rides special access facility E %3D  Tandem-Switched Transport and EF ride special access facility  F  %3D  No special access  3 rd  Position (Level of EF)  0  %3D  Voice grade capacity for the EF  1  %3D  DS1 capacity for the EF  3  %3D  DS3 capacity for the EF  4 th  Position (Level of Transport)  0  %3D  Voice grade capacity for transport  1  %3D  DS1 capacity for transport  3  %3D  DS3 capacity for transport ",
+    "dataCharacteristics": "Alpha",
+    "fieldLength": "1",
+    "fieldNotes": [
+        " CKR is used by the customer as a cross reference to the provider circuit ID ( s )  and in many cases to identify the customer's end-to-end service.  "
+    ],
+    "usage": "Conditional",
+    "usageNotes": " Required when the ACT field is \"N\" and the first position of the REQTYP is \"S\" or \"E\" and the SECLOC field on the Transport or EUSA Form is  a wireless site, otherwise prohibited. ",
+    "validEntries": [
+        " 1 st  Position (Elements to be ordered by this request)  A  = Entrance Facility (EF)  B = T runks%2C Tandem-Switched Transport and EF  C = T runks and Tandem-Switched Transport  D = Lines/Trunks%2C Direct- T runked Transport and EF to End Office  E  = Lines/Trunks and Direct- T runked Transport to End Office  F = Lines/Trunks  G  = Direct-Trunked Transport and EF to End Office or Hub H  = Direct-Trunked Transport to End Office or Hub  I = T andem-Switched Transport and EF  J  = Direct-Trunked Transport to Access Tandem  K  = Direct-Trunked Transport and EF to Access Tandem  L = T runks and Direct- T runked Transport to Access T andem  M = T runks%2C Direct- T runked Transport and EF to Access T andem  N  = LTP not applicable  P  = Links%2C Direct-Link Transport and EF to STP  Q  = Direct-Link Transport and Links to STP  R = Links "
+    ],
+    "validEntryNotes": " When ordering local transport to an access tandem, the direct-trunked transport valid entries should be used for flat-rated service. Tandem-switched transport valid entries should be used for usage- rated service. \nWhen the first position is \"A\", the fourth position is prohibited.  \nWhen the first position is \"C\" or \"E\" and EF is bein g ordered separately, RPON is required. "
+}

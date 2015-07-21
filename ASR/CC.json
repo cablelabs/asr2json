@@ -9,9 +9,9 @@
     "validEntries": [
         " A four alpha/numeric character code structure for all Exchange Carriers in North America and certain U.S. territories maintained by NECA. "
     ],
-    "validEntryNotes": " When the ASC-EC field is populated, this field must be identical to the ASC-EC entry. ",
     "usage": "Conditional",
+    "usageNotes": " Required when ordering local interconnection services or unbundled network elements, otherwise prohibited. ",
     "dataCharacteristics": "Alphanumeric",
     "fieldLength": "4",
-    "usageNotes": " Required when ordering local interconnection services or unbundled network elements, otherwise prohibited. "
+    "examples": "\n8%207\n1\n2\n1%202\nA\n3"
 }

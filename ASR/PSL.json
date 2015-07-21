@@ -11,7 +11,8 @@
     ],
     "validEntryNotes": " Valid entries (CLLI Codes) are maintained by Telcordia Technologies.  ",
     "usage": "Conditional",
+    "usageNotes": " Prohibited when the PSLI is \"G\". \nRequired when the PSLI is \"A\", \"B\", \"C\", \"D\", \"E\" or \"F\". \nProhibited when the ACT field is \"D\". \nOtherwise optional. ",
     "dataCharacteristics": "Alphanumeric",
     "fieldLength": "11",
-    "usageNotes": " Prohibited when the PSLI is \"G\". \nRequired when the PSLI is \"A\", \"B\", \"C\", \"D\", \"E\" or \"F\". \nProhibited when the ACT field is \"D\". \nOtherwise optional. "
+    "examples": "\nW\nA\nS\nH\nD\n%20C%20\nS\nW\nD\nS\n1"
 }

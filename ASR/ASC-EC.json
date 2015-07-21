@@ -2,16 +2,10 @@
     "fieldNumber": "75",
     "title": "ASC-EC",
     "name": "-",
-    "definition": " Access Service Coordination - Exchange Company Identifies the ICSC code of the Access Service Coordination - Exchange Company (ASC-EC )  whenever an access service passes through more than one provider territory. ",
-    "fieldNotes": [
-        " An entry in this field indicates that a Multi-EC Form must be associated with this access service request.  "
-    ],
-    "validEntries": [
-        " IAC Code(s) "
-    ],
-    "validEntryNotes": " A valid entry of \"E\" is applicable when the ACT field is \"N\", \"C\" or \"D\". \nA valid entry of \"N\" is only applicable when the AC T  field is \"N\".  \nA valid entry of \"D\" is only applicable when the AC T  field is \"D\".  ",
+    "definition": " Access Service Coordination - Exchange Company Identifies the ICSC code of the Access Service Coordination - Exchange Company (ASC-EC )  whenever an access service passes through more than one provider territory. \nAn entry in this field indicates that a Multi-EC Form must be associated with this access service request.  ",
     "usage": "Conditional",
+    "usageNotes": " Required when multiple providers are involved in providing access service and the EVCI field is not equal to \"B\".  \nRequired when the JPR field is populated. \nOtherwise prohibited. ",
     "dataCharacteristics": "Alphanumeric",
     "fieldLength": "4",
-    "usageNotes": " Required when multiple providers are involved in providing access service and the EVCI field is not equal to \"B\".  \nRequired when the JPR field is populated. \nOtherwise prohibited. "
+    "examples": "\nN\nJ\n9\n0"
 }

@@ -3,15 +3,11 @@
     "title": "D%2FTSENT",
     "name": "Date and Time Sent",
     "definition": " Identifies the date and time that the Access Service Request is sent by the customer. ",
-    "fieldNotes": [
-        " The format and structure of this field is defined by ANSI in document T1.251, Identification of Telecommunications Service Provider Codes for the North American Telecommunications System. "
-    ],
     "validEntries": [
         " U.S. Standard  Metric Format  T wo Digit Month  ( 01-12)  T wo Digit Century  ( 00-99)  T wo Digit Day  ( 01-31)  T wo Digit Year  ( 00-99)  T wo Digit Century  ( 00-99)  T wo Digit Month  ( 01-12)  T wo Digit Year  ( 00-99)  T wo Digit Day  ( 01-31)  T wo Digit Hour  ( 01-12)  T wo Digit Hour  ( 01-12)  Tw o Digit Minute (00-59)  T wo Digit Minute  ( 00-59)  AM or PM  AM or PM "
     ],
-    "validEntryNotes": " When the ASC-EC field is populated, this field must be identical to the ASC-EC entry. ",
     "usage": "Required",
     "dataCharacteristics": "Alphanumeric",
     "fieldLength": "17",
-    "usageNotes": " Optional when the CC field is populated and the first position of the REQTYP field is \"M\", \"S\" or   \"L\", otherwise prohibited. "
+    "examples": "\n0%205\n-\n2\n2\n-\n1\n9\n8\n5\n-\n1\n1\n1\n5%20A%20M\n1%209\n8\n5\n-\n0\n5\n-\n2\n2\n-\n1\n1\n1\n5%20A%20M"
 }
