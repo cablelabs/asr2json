@@ -1,5 +1,5 @@
 {
-    "fieldNumber": "2",
+    "fieldNumber": "25",
     "title": "WST",
     "name": "Wireless Service Type",
     "definition": " Identifies the type of wireless service being requested. ",

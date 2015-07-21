@@ -1,5 +1,5 @@
 {
-    "fieldNumber": "5",
+    "fieldNumber": "57",
     "title": "PLU",
     "name": "Percentage of Local Usage",
     "definition": " Identifies the percent of local usage associated with trun k groups carrying local traffic between a LEC and a CLEC. ",

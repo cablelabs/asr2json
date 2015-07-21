@@ -1,5 +1,5 @@
 {
-    "fieldNumber": "3",
+    "fieldNumber": "31",
     "title": "SUP",
     "name": "Supplement Type",
     "definition": " A supplement is any new iteration of an Access Service Request (ASR). The entry in the SUP field identifies the reason for which the supplement is being issued.  ",

@@ -1,5 +1,5 @@
 {
-    "fieldNumber": "5",
+    "fieldNumber": "50",
     "title": "RFNI",
     "name": "Related Fiber Network Identification",
     "definition": " Identifies the associated fiber based network information for this request. ",

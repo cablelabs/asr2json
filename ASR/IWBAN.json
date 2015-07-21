@@ -1,5 +1,5 @@
 {
-    "fieldNumber": "9",
+    "fieldNumber": "98",
     "title": "IWBAN",
     "name": "Inside Wire Billing Account Number",
     "definition": " Identifies the previously assigned Billing Account Number for charges associated with inside wire. ",

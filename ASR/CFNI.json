@@ -1,5 +1,5 @@
 {
-    "fieldNumber": "5",
+    "fieldNumber": "51",
     "title": "CFNI",
     "name": "Customer Fiber Network ID",
     "definition": " Identifies the customer's circuit identification code for the rin g being requested.  ",

@@ -1,5 +1,5 @@
 {
-    "fieldNumber": "4",
+    "fieldNumber": "48",
     "title": "FNI",
     "name": "Fiber Network Identification",
     "definition": " Identifies all services associated with a particular fiber based network. Also may identify customer ring and associated rin g  services.  ",

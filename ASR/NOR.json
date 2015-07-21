@@ -1,5 +1,5 @@
 {
-    "fieldNumber": "1",
+    "fieldNumber": "18",
     "title": "NOR",
     "name": "Number of Requests",
     "definition": " Identifies both specific ASR and total quantity of Access Service Requests within a group of ASRs being ordered. ",
