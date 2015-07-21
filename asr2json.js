@@ -21,8 +21,6 @@ fs.readFile('asrpdf.json', 'utf8', function(err, data) {
                 T = R[field.k]["T"];
                 TS = R[field.k]["TS"][2];
 
-                console.log("T= " + T);
-
                 // STORING FORM NAME
                 if ( T == "3." && TS == "1" && texts[field.j+1]["R"][field.k]["T"].indexOf("FORM")>-1) {
                     R = texts[++field.j]["R"];
@@ -67,7 +65,11 @@ fs.readFile('asrpdf.json', 'utf8', function(err, data) {
                     var prevFieldNumber = fieldNumber;
                     if ( prevFieldNumber!=0 && prevFieldNumber!=fieldNumber[0] ) {
 //                        writeOutput(prevFieldNumber, );
-                        outputFileName = jsonOutput.title + ".json";
+                        var dir = "./" + formName[0];
+                        if (!ofs.existsSync(dir)) {
+                            ofs.mkdirSync(dir);
+                        }
+                        outputFileName =  formName[0] + "/" + jsonOutput.title + ".json";
                         ofs.writeFile(outputFileName, JSON.stringify(jsonOutput, null, 4), function(err) {
                             if (err) {
                                 return console.log(err);
@@ -99,8 +101,7 @@ fs.readFile('asrpdf.json', 'utf8', function(err, data) {
                     R = texts[++field.j]["R"];
                     field.breakString = [ "NOTE", "VALID ENTRIES", "USAGE", "DATA CHARACTERISTICS", "EXAMPLE", "EXAMPLES" ];
                     field.breakValue = "";
-                    var returnValue = getFieldInfo(R, texts, json, fieldNumber[0]);
-                    var definition = returnValue;
+                    var definition = getFieldInfo(R, texts, json, fieldNumber[0]);
                     definition = filter(definition);
                     console.log("Definition= " + definition);
                     jsonOutput.definition = definition;
@@ -110,8 +111,7 @@ fs.readFile('asrpdf.json', 'utf8', function(err, data) {
                         texts = json.formImage["Pages"][field.i]["Texts"];
                         R = texts[++field.j]["R"];
                         field.breakString = [ "VALID ENTRIES", "USAGE", "DATA CHARACTERISTICS", "EXAMPLE", "EXAMPLES" ];
-                        returnValue = getFieldInfo(R, texts, json, fieldNumber[0]);
-                        var fieldNotes = returnValue;
+                        var fieldNotes = getFieldInfo(R, texts, json, fieldNumber[0]);
                         fieldNotes = filter(fieldNotes);
                         console.log("\nField Notes= " + fieldNotes);
                         fieldNotes = fieldNotes.split("\n");
@@ -123,8 +123,7 @@ fs.readFile('asrpdf.json', 'utf8', function(err, data) {
                         texts = json.formImage["Pages"][field.i]["Texts"];
                         R = texts[++field.j]["R"];
                         field.breakString = [ "NOTE", "USAGE", "DATA CHARACTERISTICS", "EXAMPLE", "EXAMPLES" ];
-                        returnValue = getFieldInfo(R, texts, json, fieldNumber[0]);
-                        var validEntries = returnValue;
+                        var validEntries = getFieldInfo(R, texts, json, fieldNumber[0]);
                         validEntries = validEntriesFilter(validEntries);
                         console.log("\nvalidEntries= " + validEntries);
                         validEntries.split("\n");
@@ -136,8 +135,7 @@ fs.readFile('asrpdf.json', 'utf8', function(err, data) {
                         texts = json.formImage["Pages"][field.i]["Texts"];
                         R = texts[++field.j]["R"];
                         field.breakString = [ "USAGE", "DATA CHARACTERISTICS", "EXAMPLE", "EXAMPLES" ];
-                        returnValue = getFieldInfo(R, texts, json, fieldNumber[0]);
-                        var validEntryNotes = returnValue;
+                        var validEntryNotes = getFieldInfo(R, texts, json, fieldNumber[0]);
                         validEntryNotes = filter(validEntryNotes);
                         console.log("\nvalidEntryNotes= " + validEntryNotes);
                         jsonOutput.validEntryNotes = validEntryNotes;
@@ -148,8 +146,7 @@ fs.readFile('asrpdf.json', 'utf8', function(err, data) {
                         texts = json.formImage["Pages"][field.i]["Texts"];
                         R = texts[++field.j]["R"];
                         field.breakString = [ "NOTE", "DATA CHARACTERISTICS", "EXAMPLE", "EXAMPLES" ];
-                        returnValue = getFieldInfo(R, texts, json, fieldNumber[0]);
-                        var usage = returnValue;
+                        var usage = getFieldInfo(R, texts, json, fieldNumber[0]);
                         usage = filter(usage);
                         if (usage.indexOf("required") > -1 ) {
                             console.log("\nusage= Required");
@@ -165,8 +162,7 @@ fs.readFile('asrpdf.json', 'utf8', function(err, data) {
                         texts = json.formImage["Pages"][field.i]["Texts"];
                         R = texts[++field.j]["R"];
                         field.breakString = [ "DATA CHARACTERISTICS", "EXAMPLE", "EXAMPLES" ];
-                        returnValue = getFieldInfo(R, texts, json, fieldNumber[0]);
-                        var usageNotes = returnValue;
+                        var usageNotes = getFieldInfo(R, texts, json, fieldNumber[0]);
                         usageNotes = filter(usageNotes);
                         console.log("\nusageNotes= " + usageNotes);
                         jsonOutput.usageNotes = usageNotes;
@@ -178,8 +174,7 @@ fs.readFile('asrpdf.json', 'utf8', function(err, data) {
                         texts = json.formImage["Pages"][field.i]["Texts"];
                         R = texts[++field.j]["R"];
                         field.breakString = [ "EXAMPLE" ];
-                        returnValue = getFieldInfo(R, texts, json, fieldNumber[0]);
-                        var dataCharacteristics = returnValue;
+                        var dataCharacteristics = getFieldInfo(R, texts, json, fieldNumber[0]);
                         dataCharacteristics = dataCharacteristics.split("\n");
                         dataCharacteristics = dataCharacteristics.join("");
                         dataCharacteristics = dataCharacteristics.split("%20");
