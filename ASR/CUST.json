@@ -1,5 +1,5 @@
 {
-    "fieldNumber": "41",
+    "fieldNumber": "4",
     "title": "CUST",
     "name": "Customer Name",
     "definition": " Identifies the name of the customer who originated this request w hen that customer will only have a limited amount of exchange access and has not been assigned a CCNA  ( Customer Carrier Name Abbreviation).  ",

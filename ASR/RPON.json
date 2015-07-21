@@ -1,5 +1,5 @@
 {
-    "fieldNumber": "72",
+    "fieldNumber": "7",
     "title": "RPON",
     "name": "Related Purchase Order Number",
     "definition": " Identifies the PON of a related Access Service Request. ",

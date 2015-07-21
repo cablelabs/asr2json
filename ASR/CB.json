@@ -1,5 +1,5 @@
 {
-    "fieldNumber": "117",
+    "fieldNumber": "1",
     "title": "CB",
     "name": "Conference Bridge",
     "definition": " Telephone Number Identifies the Conference Bridge Telephone number to be used at the time of implementation or cut over. ",

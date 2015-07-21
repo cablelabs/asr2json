@@ -1,5 +1,5 @@
 {
-    "fieldNumber": "74",
+    "fieldNumber": "7",
     "title": "CCVN",
     "name": "-",
     "definition": " Coordinated Conversion Identifies the request as being a coordinated conversion reusin g a portion of an existing access service configuration for the provisioning of a new access service. ",

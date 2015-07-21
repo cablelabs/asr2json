@@ -10,10 +10,10 @@ fs.readFile('asrpdf.json', 'utf8', function(err, data) {
 
     var flag = 0;
     var sectionFlag = 0;
-    var fieldNumber = 0;
+    field.fieldNumber = 0;
     var jsonOutput = {};
-    for( field.i = 0; field.i<json.formImage["Pages"].length; field.i++) {
-//    for( field.i = 0; field.i<4; field.i++) { // For each page
+//    for( field.i = 0; field.i<json.formImage["Pages"].length; field.i++) {
+    for( field.i = 0; field.i<4; field.i++) { // For each page
         texts = json.formImage["Pages"][field.i]["Texts"];
         for( field.j = 0; field.j<texts.length; field.j++) {  // For text in the page
             R = texts[field.j]["R"];
@@ -57,13 +57,13 @@ fs.readFile('asrpdf.json', 'utf8', function(err, data) {
 
                 // STORING FIELD DETAILS
 
-                var fieldNumber = T.split(".");
-                if(isNaN(fieldNumber[0])) {
+                var currentFieldNumber = T.split(".");
+                if(isNaN(currentFieldNumber[0])) {
                     continue;
                 }
                 else {
-                    var prevFieldNumber = fieldNumber;
-                    if ( prevFieldNumber!=0 && prevFieldNumber!=fieldNumber[0] ) {
+                    var prevFieldNumber = field.fieldNumber;
+                    if ( prevFieldNumber!=0 && field.fieldNumber!=currentFieldNumber[0] ) {
 //                        writeOutput(prevFieldNumber, );
                         var dir = "./" + formName[0];
                         if (!ofs.existsSync(dir)) {
@@ -75,10 +75,15 @@ fs.readFile('asrpdf.json', 'utf8', function(err, data) {
                                 return console.log(err);
                             }
                         })
+                        cleanFieldProperties();
+                        field.fieldNumber = currentFieldNumber[0];
+                    }
+                    else {
+                        field.fieldNumber = currentFieldNumber[0];
                     }
 
-                    console.log("\nField Number= " + fieldNumber[0]);
-                    jsonOutput.fieldNumber = fieldNumber[0];
+                    console.log("\nField Number= " + field.fieldNumber[0]);
+                    jsonOutput.fieldNumber = field.fieldNumber[0];
 
                     // Title
                     texts = json.formImage["Pages"][field.i]["Texts"];
@@ -101,7 +106,7 @@ fs.readFile('asrpdf.json', 'utf8', function(err, data) {
                     R = texts[++field.j]["R"];
                     field.breakString = [ "NOTE", "VALID ENTRIES", "USAGE", "DATA CHARACTERISTICS", "EXAMPLE", "EXAMPLES" ];
                     field.breakValue = "";
-                    var definition = getFieldInfo(R, texts, json, fieldNumber[0]);
+                    var definition = getFieldInfo(R, texts, json);
                     definition = filter(definition);
                     console.log("Definition= " + definition);
                     jsonOutput.definition = definition;
@@ -111,7 +116,7 @@ fs.readFile('asrpdf.json', 'utf8', function(err, data) {
                         texts = json.formImage["Pages"][field.i]["Texts"];
                         R = texts[++field.j]["R"];
                         field.breakString = [ "VALID ENTRIES", "USAGE", "DATA CHARACTERISTICS", "EXAMPLE", "EXAMPLES" ];
-                        var fieldNotes = getFieldInfo(R, texts, json, fieldNumber[0]);
+                        var fieldNotes = getFieldInfo(R, texts, json);
                         fieldNotes = filter(fieldNotes);
                         console.log("\nField Notes= " + fieldNotes);
                         fieldNotes = fieldNotes.split("\n");
@@ -123,7 +128,7 @@ fs.readFile('asrpdf.json', 'utf8', function(err, data) {
                         texts = json.formImage["Pages"][field.i]["Texts"];
                         R = texts[++field.j]["R"];
                         field.breakString = [ "NOTE", "USAGE", "DATA CHARACTERISTICS", "EXAMPLE", "EXAMPLES" ];
-                        var validEntries = getFieldInfo(R, texts, json, fieldNumber[0]);
+                        var validEntries = getFieldInfo(R, texts, json);
                         validEntries = validEntriesFilter(validEntries);
                         console.log("\nvalidEntries= " + validEntries);
                         validEntries.split("\n");
@@ -135,7 +140,7 @@ fs.readFile('asrpdf.json', 'utf8', function(err, data) {
                         texts = json.formImage["Pages"][field.i]["Texts"];
                         R = texts[++field.j]["R"];
                         field.breakString = [ "USAGE", "DATA CHARACTERISTICS", "EXAMPLE", "EXAMPLES" ];
-                        var validEntryNotes = getFieldInfo(R, texts, json, fieldNumber[0]);
+                        var validEntryNotes = getFieldInfo(R, texts, json);
                         validEntryNotes = filter(validEntryNotes);
                         console.log("\nvalidEntryNotes= " + validEntryNotes);
                         jsonOutput.validEntryNotes = validEntryNotes;
@@ -146,7 +151,7 @@ fs.readFile('asrpdf.json', 'utf8', function(err, data) {
                         texts = json.formImage["Pages"][field.i]["Texts"];
                         R = texts[++field.j]["R"];
                         field.breakString = [ "NOTE", "DATA CHARACTERISTICS", "EXAMPLE", "EXAMPLES" ];
-                        var usage = getFieldInfo(R, texts, json, fieldNumber[0]);
+                        var usage = getFieldInfo(R, texts, json);
                         usage = filter(usage);
                         if (usage.indexOf("required") > -1 ) {
                             console.log("\nusage= Required");
@@ -162,7 +167,7 @@ fs.readFile('asrpdf.json', 'utf8', function(err, data) {
                         texts = json.formImage["Pages"][field.i]["Texts"];
                         R = texts[++field.j]["R"];
                         field.breakString = [ "DATA CHARACTERISTICS", "EXAMPLE", "EXAMPLES" ];
-                        var usageNotes = getFieldInfo(R, texts, json, fieldNumber[0]);
+                        var usageNotes = getFieldInfo(R, texts, json);
                         usageNotes = filter(usageNotes);
                         console.log("\nusageNotes= " + usageNotes);
                         jsonOutput.usageNotes = usageNotes;
@@ -174,7 +179,7 @@ fs.readFile('asrpdf.json', 'utf8', function(err, data) {
                         texts = json.formImage["Pages"][field.i]["Texts"];
                         R = texts[++field.j]["R"];
                         field.breakString = [ "EXAMPLE" ];
-                        var dataCharacteristics = getFieldInfo(R, texts, json, fieldNumber[0]);
+                        var dataCharacteristics = getFieldInfo(R, texts, json);
                         dataCharacteristics = dataCharacteristics.split("\n");
                         dataCharacteristics = dataCharacteristics.join("");
                         dataCharacteristics = dataCharacteristics.split("%20");
@@ -204,7 +209,7 @@ fs.readFile('asrpdf.json', 'utf8', function(err, data) {
     }
 });
 
-function getFieldInfo(R, texts, json, fieldNumber) {
+function getFieldInfo(R, texts, json) {
     var line = R[field.k]["T"].split("%20");
     var fieldInfo = "";
     var fieldFlag = 0;
@@ -216,7 +221,7 @@ function getFieldInfo(R, texts, json, fieldNumber) {
             texts = json.formImage["Pages"][field.i]["Texts"];
             var checkField = texts[5]["R"][0]["T"].split(".");
 
-            if ( checkField[0] == fieldNumber ) {
+            if ( checkField[0] == field.fieldNumber ) {
                 field.j = 6;
             }
             else {
@@ -263,4 +268,12 @@ function validEntriesFilter(definition) {
 
 function writeOutput() {
 
+}
+
+function cleanFieldProperties() {
+    for ( var key in field ) {
+        if ( key!="i" && key!="j" && key!="k" && key!="breakString" && key!="breakValue" ) {
+            delete field.key;
+        }
+    }
 }

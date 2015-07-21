@@ -1,5 +1,5 @@
 {
-    "fieldNumber": "62",
+    "fieldNumber": "6",
     "title": "BAN",
     "name": "Billing Account Number",
     "definition": " Identifies the billing account to which the recurring and non- recurring charges for this request will be billed. ",

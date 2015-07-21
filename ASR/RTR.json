@@ -1,5 +1,5 @@
 {
-    "fieldNumber": "30",
+    "fieldNumber": "3",
     "title": "RTR",
     "name": "Response Type Requested",
     "definition": " Identifies the type of confirmation response requested by the customer.  ",

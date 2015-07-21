@@ -1,5 +1,5 @@
 {
-    "fieldNumber": "33",
+    "fieldNumber": "3",
     "title": "QNAI",
     "name": "Quantity Network Assignment Information",
     "definition": " Identifies the total number of NAI Circuit Detail Sections sent by the customer. ",

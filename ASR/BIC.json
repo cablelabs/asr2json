@@ -1,5 +1,5 @@
 {
-    "fieldNumber": "66",
+    "fieldNumber": "6",
     "title": "BIC",
     "name": "BIC Identifier",
     "definition": " Identifies the provider contact, work group or a serial type log, etc., associated with the BIC.  ",

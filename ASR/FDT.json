@@ -1,5 +1,5 @@
 {
-    "fieldNumber": "13",
+    "fieldNumber": "1",
     "title": "FDT",
     "name": "Frame Due Time",
     "definition": " Provides special handling instructions for the connection, disconnection or coordination of changes for this request. ",

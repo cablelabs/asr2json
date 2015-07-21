@@ -1,5 +1,5 @@
 {
-    "fieldNumber": "52",
+    "fieldNumber": "5",
     "title": "PSL",
     "name": "Primary Service Location",
     "definition": " Identifies the primary service location when the terminating and the originating points are not the ACTL. ",

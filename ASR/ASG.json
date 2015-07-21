@@ -1,5 +1,5 @@
 {
-    "fieldNumber": "63",
+    "fieldNumber": "6",
     "title": "ASG",
     "name": "Access Service Group",
     "definition": " Identifies the access service group assigned to a particular circuit or group of circuits.  ",

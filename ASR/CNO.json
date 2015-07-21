@@ -1,5 +1,5 @@
 {
-    "fieldNumber": "16",
+    "fieldNumber": "1",
     "title": "CNO",
     "name": "Case Number",
     "definition": " Identifies the quotation tracking number assigned by the provider in response to a provisioning arrangement inquiry, e.g., diversity. ",

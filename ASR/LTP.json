@@ -1,5 +1,5 @@
 {
-    "fieldNumber": "59",
+    "fieldNumber": "5",
     "title": "LTP",
     "name": "Local Transport",
     "definition": " Identifies the switched access local transport elements affected by this request.  ",

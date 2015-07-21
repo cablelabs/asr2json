@@ -1,5 +1,5 @@
 {
-    "fieldNumber": "69",
+    "fieldNumber": "6",
     "title": "ACTL",
     "name": "Access Customer Terminal Location",
     "definition": " Identifies the CLLI Code of the customer facility terminal location. The CLLI Code will have been previously assigned. ",

@@ -1,5 +1,5 @@
 {
-    "fieldNumber": "21",
+    "fieldNumber": "2",
     "title": "REQTYP",
     "name": "Requisition Type and Status",
     "definition": " Identifies the type of service being requested and the status of the request. ",

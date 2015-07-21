@@ -1,5 +1,5 @@
 {
-    "fieldNumber": "23",
+    "fieldNumber": "2",
     "title": "ACTI",
     "name": " - Activity Indicator",
     "definition": " Identifies whether an order is an augment or a new trunk group and a partial or full disconnect. ",

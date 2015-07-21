@@ -1,5 +1,5 @@
 {
-    "fieldNumber": "32",
+    "fieldNumber": "3",
     "title": "AFO",
     "name": "Indicates which additional forms are being submitted with this",
     "definition": " request.   Character Position 1 %3D Additional Circuit Information  ( ACI )  Form  Character Position 2 %3D  Reserved for future use  Character Position 3 %3D  Network Assignment Information (NAI)  Character Position 4 %3D  End Office Detail (EOD) Form  Character Position 5 %3D  Virtual Concatenation (VCAT) Form ",

@@ -1,5 +1,5 @@
 {
-    "fieldNumber": "55",
+    "fieldNumber": "5",
     "title": "UNIT",
     "name": "Unit Identification",
     "definition": " Identifies whether the Quantity  ( QTY )  field contains number of circuits, ring segments, Busy Hour Minutes of Capacity  ( BHMC ) for switched access service or percent of market share. ",

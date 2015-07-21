@@ -1,5 +1,5 @@
 {
-    "fieldNumber": "83",
+    "fieldNumber": "8",
     "title": "ACNA",
     "name": "Access Customer Name Abbreviation",
     "definition": " Identifies the COMMON LANGUAGE IAC code for the customer who should receive the bill for the ordered service. ",

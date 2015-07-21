@@ -1,5 +1,5 @@
 {
-    "fieldNumber": "95",
+    "fieldNumber": "9",
     "title": "BILLCON",
     "name": "Billing Contact Electronic Mail Address",
     "definition": " Identifies the electronic mail address of the Billing Contact when a customer profile does not already exist. ",

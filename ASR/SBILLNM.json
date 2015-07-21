@@ -1,5 +1,5 @@
 {
-    "fieldNumber": "82",
+    "fieldNumber": "8",
     "title": "SBILLNM",
     "name": "Secondary Billing Name",
     "definition": " Identifies the name of a department or group within the designated BILLNM entry. May also be used to specify the end user customer as identified in field entry \"SAN\", Subscriber Authorization Number used by the customer in con j unction with billing its customer. ",
