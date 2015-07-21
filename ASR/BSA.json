@@ -6,10 +6,12 @@
     "fieldNotes": [
         " In a Multi-EC situation, this field should be populated when at least one provider is bein g requested to provide a BSA or BSE.  "
     ],
-    "validEntries": " Y = Unbundled Ordering ",
+    "validEntries": [
+        " Y = Unbundled Ordering "
+    ],
     "validEntryNotes": " Indicates the time zone and time or time zone and w indow of time when the service should be connected, disconnected or coordinated. \nWhen this field is populated in con j unction with the CB TEL NO field, a specific time of day including the hour or hour and minute is required. ",
-    "usage": " This field is conditional. ",
-    "fieldLength": "1",
+    "usage": "Conditional",
     "dataCharacteristics": "Alpha",
+    "fieldLength": "1",
     "usageNotes": " Prohibited when the CC or WST field is populated, otherwise optional. "
 }

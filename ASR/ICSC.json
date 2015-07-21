@@ -8,10 +8,12 @@
         "The first two characters identify the provider.  The third and fourth characters are a unique number within the region identifying the specific ICSC.  The allowable range is 00 to 99.  The provider will supply and periodically update the ICSC codes listing to the customer.  The provider will also supply guidelines for choosing the appropriate ICSC. ",
         " The format and structure of this field is defined by Telcordia in BR-751-100-801 Interexchange Customer Service Center/Service Center (ICSC/SC). "
     ],
-    "validEntries": " Valid ICSC Code ",
+    "validEntries": [
+        " Valid ICSC Code "
+    ],
     "validEntryNotes": " When the ASC-EC field is populated, this field must be identical to the ASC-EC entry. ",
-    "usage": " This field is required. ",
-    "fieldLength": "4",
+    "usage": "Required",
     "dataCharacteristics": "Alphanumeric",
+    "fieldLength": "4",
     "usageNotes": " Required when ASR NO is pre-assigned. \nRequired on all supplements when PON is not unique. \nOtherwise optional. "
 }

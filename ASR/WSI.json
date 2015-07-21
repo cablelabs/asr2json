@@ -6,10 +6,12 @@
     "fieldNotes": [
         " CKR is used by the customer as a cross reference to the provider circuit ID ( s )  and in many cases to identify the customer's end-to-end service.  "
     ],
-    "validEntries": " N = New  E = Existing ",
+    "validEntries": [
+        " N = New  E = Existing "
+    ],
     "validEntryNotes": " A valid entry of \"New\" indicates that this is the customer's initial order to this wireless site. \nA valid entry of \"Existing\" indicates that the customer has previously ordered to this wireless site. ",
-    "usage": " This field is conditional. ",
-    "fieldLength": "1",
+    "usage": "Conditional",
     "dataCharacteristics": "Alpha",
+    "fieldLength": "1",
     "usageNotes": " Required when the ACT field is \"N\" and the first position of the REQTYP is \"S\" or \"E\" and the SECLOC field on the Transport or EUSA Form is  a wireless site, otherwise prohibited. "
 }

@@ -8,10 +8,12 @@
         "This code is established prior to the submission of the ASR.  ",
         "Billing to an end user who does not have an IAC code is specified with an entry of \"ZZZ\".  When utilizing \"ZZZ\", the Bill Section of the ASR Form should be completed with the end user billin g information. "
     ],
-    "validEntries": " IAC Code  ZZZ  = Casual customer or end user billing ",
+    "validEntries": [
+        " IAC Code  ZZZ  = Casual customer or end user billing "
+    ],
     "validEntryNotes": " Valid IAC codes are maintained by  Telcordi a  Technologies. ",
-    "usage": " This field is required. ",
-    "fieldLength": "3",
+    "usage": "Required",
     "dataCharacteristics": "Alpha",
+    "fieldLength": "3",
     "usageNotes": " Required when the BAN field is \"N\". \nRequired when the CCNA field is \"CUS\". \nRequired when the ACNA field is \"ZZZ\". \nOtherwise optional. "
 }

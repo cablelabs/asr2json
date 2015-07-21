@@ -7,10 +7,12 @@
         " This may, at the option of the customer, be  a requirement when providing service to some governmental agencies. ",
         "This field may be used in con j unction with the SBILLNM field.  "
     ],
-    "validEntries": " Y = Yes ",
+    "validEntries": [
+        " Y = Yes "
+    ],
     "validEntryNotes": " A TSP code ending in \"00\" indicates \"revocation\", the removal of a previously assigned TSP code.  ",
     "usage": " This field is optional. ",
-    "fieldLength": "1",
     "dataCharacteristics": "Alpha",
+    "fieldLength": "1",
     "usageNotes": " Required when multiple providers are involved in providing access service and the EVCI field is not equal to \"B\".  \nRequired when the JPR field is populated. \nOtherwise prohibited. "
 }

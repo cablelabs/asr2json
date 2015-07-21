@@ -7,10 +7,12 @@
         " A ring can consist of multiple node locations that are not included in the ring CFA of a riding circuit, but are pass-through locations with another provider on the ring who requires a copy of the ASR for cross connection. ",
         "All services riding a Jointly Provided Ring require all providers on the ring to receive a copy of the ASR, even if the locations on the Ring CFA of the riding circuit do not indicate another provider. "
     ],
-    "validEntries": " Central Office CLLI Code of the other provider on the ring ",
+    "validEntries": [
+        " Central Office CLLI Code of the other provider on the ring "
+    ],
     "validEntryNotes": " When the first position of TQ is \"A\", the ASR which has the TQ Form attached will be identified in the RPON field. \nWhen the first position of TQ is \"L\", \"M\", \"W\", \"X\" or \"C\", entries in the CC or WST, or the CC and the WST fields are required. \nWhen the first position of TQ is \"A\", \"B\", \"D\", \"S\", \"T\", \"U\", or \"1-9\", entries in the CC or WST, or the CC and the WST fields are prohibited. \nThe second position of \"X\" indicates a Trunkin g Form is provided for system requirements rather than provisioning purposes. \nWhen the ACT field is \"N\", a second position of \"N\" or \"X\" is prohibited. \n When the first position of the TQ field is \"E\", the second position of the TQ field must be an \"X\". \n When the first position of the TQ field is \"E\", the first position of the REQTYP field must be an \"L\" and the ACT field must be a \"C\". 8%3A  When the first position of the TQ field is \"C\", the first position of the REQTYP field must be an \"M\" and the ACT field must be a \"C\". ",
-    "usage": " This field is conditional. ",
-    "fieldLength": "8",
+    "usage": "Conditional",
     "dataCharacteristics": "",
+    "fieldLength": "8",
     "usageNotes": " Optional when the first position of the REQTYP field is \"S\", and the CFA or SCFA field on the Transport form or ACI form, or any of the ICFA  ( n ) fields on the NAI form contains a CFA of a  j ointl y provided ring.  \nOptional when the first position of the REQTYP field is \"E\", and the CFA  ( PRILOC )  or CFA ( SECLOC )  field on the EUSA Form, or the CFA or SCFA on the ACI form, or any of the ICFA ( n )  fields on the NAI form contains a CFA of a  j ointl y provided ring.  \nOtherwise prohibited.  "
 }

@@ -8,10 +8,12 @@
         "The provider may initiate the pro j ect identification and provide this to the customer who will populate the field when submitting an ASR. ",
         "The Pro j ect Number must be entered by the ne w and the former customers on \"N\" and \"D\" coordinated conversion orders. "
     ],
-    "validEntries": " Y  = Coordinated Change Activity ",
+    "validEntries": [
+        " Y  = Coordinated Change Activity "
+    ],
     "validEntryNotes": " Indicates the time zone and time or time zone and w indow of time when the service should be connected, disconnected or coordinated. \nWhen this field is populated in con j unction with the CB TEL NO field, a specific time of day including the hour or hour and minute is required. ",
-    "usage": " This field is conditional. ",
-    "fieldLength": "1",
+    "usage": "Conditional",
     "dataCharacteristics": "Alpha",
+    "fieldLength": "1",
     "usageNotes": " Optional when the first position of the REQTYP field is \"E'', \"L\", \"M\", \"S'', \"V\" or \"X\",  and the AC Tfield is  \"N\", \"C\", \"D\", \"T\" or \"M\", otherwise prohibited. "
 }

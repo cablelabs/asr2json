@@ -6,10 +6,12 @@
     "fieldNotes": [
         " CKR is used by the customer as a cross reference to the provider circuit ID ( s )  and in many cases to identify the customer's end-to-end service.  "
     ],
-    "validEntries": " A = Provider Switch  B  = Provider Central Office  C  = Customer Physical Collocation  D  = Customer Virtual Collocation  E  = LERG Switch CLLI (CSL Out of LATA Scenario)  F  = LERG Switch CLLI (CSL In LATA Scenario)  G = Wireless Terminating Service  ( Out of LATA Scenario no NPA/NXX%E2%80%99s assigned) ",
+    "validEntries": [
+        " A = Provider Switch  B  = Provider Central Office  C  = Customer Physical Collocation  D  = Customer Virtual Collocation  E  = LERG Switch CLLI (CSL Out of LATA Scenario)  F  = LERG Switch CLLI (CSL In LATA Scenario)  G = Wireless Terminating Service  ( Out of LATA Scenario no NPA/NXX%E2%80%99s assigned) "
+    ],
     "validEntryNotes": " Valid entry of \"E\" is to be used to identify the customer's Telcordia%E2%84%A2 LERG%E2%84%A2 Routing Guide based switch for Local Interconnection or Wireless Trunks w hen the actual switch is outside the LATA of services for the assigned NPA/NXX's.  \n Valid entry of \"F\" is to be used to identify the customer's LERG%E2%84%A2 based switch for Local Interconnection or Wireless Trunks when the actual switch is inside the LATA of services for the assigned NPA/NXX's. ",
-    "usage": " This field is conditional. ",
-    "fieldLength": "53",
+    "usage": "Conditional",
     "dataCharacteristics": "Alphanumeric",
+    "fieldLength": "53",
     "usageNotes": " Prohibited when EVCI field is \"A\", otherwise optional. "
 }

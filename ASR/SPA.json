@@ -7,10 +7,12 @@
         " Any reissuance can use this entry to uniquel y identify the form from any other version. ",
         "The version identification does not have to agree w ith the provider order supplement identification. The customer's order may have been supplemented internally many times after the ASR has been issued. "
     ],
-    "validEntries": " IAC Code  CUS = Casual customer ",
+    "validEntries": [
+        " IAC Code  CUS = Casual customer "
+    ],
     "validEntryNotes": " Valid IAC codes are maintained by  Telcordi a  Technologies. ",
     "usage": " This field is optional. ",
-    "fieldLength": "1",
     "dataCharacteristics": "Alphanumeric",
+    "fieldLength": "1",
     "usageNotes": " Required when ASR NO is pre-assigned. \nRequired on all supplements when PON is not unique. \nOtherwise optional. "
 }

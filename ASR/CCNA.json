@@ -10,9 +10,11 @@
         "The IAC designated in the CCNA field is the provider's contact for management of the access ordering/negotiation process for the life of the order.  When using \"CUS\", management of this process may be determined on an individual provider basis. ",
         "The CCNA is not intended to indicate the customer being billed for the access service.  This is reflected in the ACNA field on the ASR. "
     ],
-    "validEntries": " IAC Code  CUS = Casual customer ",
+    "validEntries": [
+        " IAC Code  CUS = Casual customer "
+    ],
     "validEntryNotes": " Valid IAC codes are maintained by  Telcordi a  Technologies. ",
-    "usage": " This field is required. ",
-    "fieldLength": "3",
-    "dataCharacteristics": "Alpha"
+    "usage": "Required",
+    "dataCharacteristics": "Alpha",
+    "fieldLength": "3"
 }

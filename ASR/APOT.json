@@ -8,10 +8,12 @@
         "When the entry in this field contains a CLLI Code, the format and structure of this field is defined by  ANSI in document T1.253, Identification of Location Entities for the North American Telecommunications System.  The CLLI Code consists of the following elements%3A  1.  Geographical Code  %E2%80%93 Positions 1 through 4 describe the designation for a single geographical locality within a state, province, territory, country, or distinct region of the world (e.g., municipality) (4 alpha characters).  2.  Geopolitical Code  %E2%80%93 Positions 5 and 6 describe the designation of a state or territory of the United States,  a  province or territory of Canada, another country havin g a national federal government, or a unique designation (2 alpha characters).  3.  Network Site Code  %E2%80%93 Positions 7 and 8 describe the designation of a site of an existing or proposed structure within a geographical location where there is a need to identify one or more telecommunications equipment entities, facility terminations, nodal locations, or administrative operations (2 alpha or 2 numeric characters.  4.  Network Entity Code  %E2%80%93 Positions 9 through 11 describe the functional category of equipment or wor k center that is contained in a structure. Equipment categories, including central office switching and ancillary equipment or non-switching or access terminations, are associated with a building or networ k site for purposes of maintaining equipment inventories and for identifying facility and circuit terminations and nodal locations  (3 alpha/numeric characters). ",
         "Valid CLLI Codes are outlined in Telcordi a Technologies practice BR 795-(100-186)-100. "
     ],
-    "validEntries": " T elephone number format  NPA-NXX-XXXX ",
+    "validEntries": [
+        " T elephone number format  NPA-NXX-XXXX "
+    ],
     "validEntryNotes": " This telephone number would be customer owned and identified during customer/provider pre- negotiations. ",
-    "usage": " This field is conditional. ",
-    "fieldLength": "11",
+    "usage": "Conditional",
     "dataCharacteristics": "Alphanumeric",
+    "fieldLength": "11",
     "usageNotes": " Required when the ACTL field does not identify the specific physical termination point of the access service. \nProhibited when the ACT field is \"D\". \nOtherwise optional. "
 }

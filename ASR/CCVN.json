@@ -9,10 +9,12 @@
         "When this field is populated on an ASR with \"N\" activity, the ECCKT field must be populated with the circuit identification(s) of the former customer's access service. ",
         "When a Coordinated Conversion is applicable, it is strongly recommended that both requests  ( N and D) are fully cross- referenced using CCVN, PON and RPON fields, which will allow for a more efficient transition of the services. "
     ],
-    "validEntries": " IAC Code(s) ",
+    "validEntries": [
+        " IAC Code(s) "
+    ],
     "validEntryNotes": " A valid entry of \"E\" is applicable when the ACT field is \"N\", \"C\" or \"D\". \nA valid entry of \"N\" is only applicable when the AC T  field is \"N\".  \nA valid entry of \"D\" is only applicable when the AC T  field is \"D\".  ",
-    "usage": " This field is conditional. ",
-    "fieldLength": "6",
+    "usage": "Conditional",
     "dataCharacteristics": "Alpha",
+    "fieldLength": "6",
     "usageNotes": " Optional when the ACT field is \"N\" or \"D\", otherwise prohibited. "
 }

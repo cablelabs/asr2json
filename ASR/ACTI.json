@@ -7,10 +7,12 @@
         " The activity defined in this field is circuit activit y from the customer perspective and does not necessarily reflect the type of provider order activit y that would result. ",
         "On a supplement to a request this field carries the original activity type. "
     ],
-    "validEntries": " A = T runk Group Augment without translation changes  B = T runk Group Augment with translation changes  C  = New Trunk Group  D  = Partial Trunk Group Disconnect  E  = Full Trunk Group Disconnect and Traffic Re-route (Single service request process)  F  = Full Trunk Group Disconnect and No Traffic to be Re- routed ",
+    "validEntries": [
+        " A = T runk Group Augment without translation changes  B = T runk Group Augment with translation changes  C  = New Trunk Group  D  = Partial Trunk Group Disconnect  E  = Full Trunk Group Disconnect and Traffic Re-route (Single service request process)  F  = Full Trunk Group Disconnect and No Traffic to be Re- routed "
+    ],
     "validEntryNotes": " An entry of \"A\" is valid for an increase in the number of trunks within an existing trunk group, w ith no changes made to the features or translations. \n An entry of \"B\" is valid for an increase in the number of trunks within an existing trunk group, with changes made to the features or translations. \n An entry of \"C\" is valid when ordering a new trun k group. \n An entry of \"D\" is valid for a decrease in the number of trunks within an existing trunk group, with no changes made to the features or translations.   \n An entry of \"E\" is valid for the complete disconnect of a trunk group, and the re-route of traffic as defined in the attached TQ. \n An entry of \"F\" is valid for the complete disconnect of a trunk group  ( no TQ will accompany this service request). ",
-    "usage": " This field is conditional. ",
-    "fieldLength": "1",
+    "usage": "Conditional",
     "dataCharacteristics": "Alpha",
+    "fieldLength": "1",
     "usageNotes": " Required when the first position of the REQTYP field is \"M\" and ACT field is \"N\".  Valid ACTI values must be \"A\", \"B\" or \"C\". \n Required when the first position of the REQTYP field is \"M\" and the ACT field is \"D\".  Valid ACTI values must be \"D\", \"E\" or \"F\". \n Otherwise prohibited. "
 }

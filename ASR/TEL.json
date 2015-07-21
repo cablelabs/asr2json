@@ -7,12 +7,14 @@
         " During installation, the provider will notify this person when the end user requests activity in addition to the activity specified on the ASR. ",
         "This is the contact to be used for completions, acceptance testing and other such related installation activity. "
     ],
-    "validEntries": " U.S. Standard  Metric Format  T wo Digit Month  ( 01-12)  T wo Digit Century  ( 00-99)  T wo Digit Day  ( 01-31)  T wo Digit Year  ( 00-99)  T wo Digit Century  ( 00-99)  T wo Digit Month  ( 01-12)  T wo Digit Year  ( 00-99)  T wo Digit Day  ( 01-31) ",
+    "validEntries": [
+        " U.S. Standard  Metric Format  T wo Digit Month  ( 01-12)  T wo Digit Century  ( 00-99)  T wo Digit Day  ( 01-31)  T wo Digit Year  ( 00-99)  T wo Digit Century  ( 00-99)  T wo Digit Month  ( 01-12)  T wo Digit Year  ( 00-99)  T wo Digit Day  ( 01-31) "
+    ],
     "validEntryNotes": " Exempt indicates the customer is both  ( a )  resellin g  the Special Access as a telecommunications service and (b) contributing directly into the Federal Universal Service Fund for the service bein g  ordered. For a valid entry of \"E\" both conditions must be met. \nNon-Exempt  ( Assess )  indicates the customer is  ( a ) not reselling the Special Access as  a telecommunications service and/or (b) not contributing directly into the Federal Universal Service Fund for the service being ordered. \nAn entry in this field applies to all the circuits being ordered on this service request. ",
-    "usage": " This field is conditional. ",
-    "fieldLength": "14",
+    "usage": "Conditional",
     "dataCharacteristics": "Numeric",
+    "fieldLength": "14",
     "usageNotes": " Required when the IMPCON field is populated, otherwise prohibited. "
-}ristics": "Numeric",
+}"fieldLength": "17",
     "usageNotes": " Required  w hen the DSGCON field is populated, otherwise prohibited. "
 }

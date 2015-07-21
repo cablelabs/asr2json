@@ -6,10 +6,12 @@
     "fieldNotes": [
         " The format and structure of this field is defined by ANSI in document T1.251, Identification of Telecommunications Service Provider Codes for the North American Telecommunications System. "
     ],
-    "validEntries": " Y = Quotation Authorized ",
+    "validEntries": [
+        " Y = Quotation Authorized "
+    ],
     "validEntryNotes": " When the ASC-EC field is populated, this field must be identical to the ASC-EC entry. ",
-    "usage": " This field is conditional. ",
-    "fieldLength": "1",
+    "usage": "Conditional",
     "dataCharacteristics": "Alpha",
+    "fieldLength": "1",
     "usageNotes": " Optional when ACT field is \"N\", \"C\" or \"T\", otherwise prohibited. "
 }

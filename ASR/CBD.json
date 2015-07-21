@@ -6,10 +6,12 @@
     "fieldNotes": [
         " The format and structure of this field is defined by ANSI in document T1.251, Identification of Telecommunications Service Provider Codes for the North American Telecommunications System. "
     ],
-    "validEntries": " 1 st  Character  A  = Unstaffed Service Delivery Location ",
+    "validEntries": [
+        " 1 st  Character  A  = Unstaffed Service Delivery Location "
+    ],
     "validEntryNotes": " Defines the service delivery location as \"Unstaffed\" requiring coordination with LCON prior to technician dispatch.  2 nd  and 3 rd  Character 01- 99  %3D Hours \nThe desired number of hours prior to dispatch to facilitate access for the service technician.  ",
     "usage": " This field is optional. ",
-    "fieldLength": "",
     "dataCharacteristics": "",
+    "fieldLength": "",
     "usageNotes": " Optional when ACT field is \"N\", \"C\" or \"T\", otherwise prohibited. "
 }

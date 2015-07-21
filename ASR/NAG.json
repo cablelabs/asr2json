@@ -7,10 +7,12 @@
         " This field applies only when the Primary, Secondary, Intermediary CFA or CCEA is changin g  and the end user terminating location is not changing. ",
         " Population of this field indicates that the provider will use existing end user location information on record for the circuit(s) being groomed. "
     ],
-    "validEntries": " Y = Yes ",
+    "validEntries": [
+        " Y = Yes "
+    ],
     "validEntryNotes": " When the first position of TQ is \"A\", the ASR which has the TQ Form attached will be identified in the RPON field. \nWhen the first position of TQ is \"L\", \"M\", \"W\", \"X\" or \"C\", entries in the CC or WST, or the CC and the WST fields are required. \nWhen the first position of TQ is \"A\", \"B\", \"D\", \"S\", \"T\", \"U\", or \"1-9\", entries in the CC or WST, or the CC and the WST fields are prohibited. \nThe second position of \"X\" indicates a Trunkin g Form is provided for system requirements rather than provisioning purposes. \nWhen the ACT field is \"N\", a second position of \"N\" or \"X\" is prohibited. \n When the first position of the TQ field is \"E\", the second position of the TQ field must be an \"X\". \n When the first position of the TQ field is \"E\", the first position of the REQTYP field must be an \"L\" and the ACT field must be a \"C\". 8%3A  When the first position of the TQ field is \"C\", the first position of the REQTYP field must be an \"M\" and the ACT field must be a \"C\". ",
-    "usage": " This field is conditional. ",
-    "fieldLength": "1",
+    "usage": "Conditional",
     "dataCharacteristics": "Alpha",
+    "fieldLength": "1",
     "usageNotes": " Optional when the first position of the REQTYP field is \"S\", the ACT field is \"N\" or \"D\", the RPON field is populated, the NSL field on the Transport Form is not populated and a Network Access Groom is being requested. \n Optional when the first position of the REQTYP field is \"S\", the ACT field is \"C\", the NSL field on the Transport Form is not populated and a Networ k  Access Groom is being requested. \n Otherwise prohibited. "
 }

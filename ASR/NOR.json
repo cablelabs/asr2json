@@ -7,10 +7,12 @@
         " In order to facilitate the process, at least the first related ASR should describe or list the total RPONs used when RPON is not the same for all such requests. For example, six ASRs are to be associated and individual PONs and RPONs are being used. ",
         "All service types must be identical for such grouping of like orders.  "
     ],
-    "validEntries": " U.S. Standard  Metric Format  T wo Digit Month  ( 01-12)  T wo Digit Century  ( 00-99)  T wo Digit Day  ( 01-31)  T wo Digit Year  ( 00-99)  T wo Digit Century  ( 00-99)  T wo Digit Month  ( 01-12)  T wo Digit Year  ( 00-99)  T wo Digit Day  ( 01-31) ",
+    "validEntries": [
+        " U.S. Standard  Metric Format  T wo Digit Month  ( 01-12)  T wo Digit Century  ( 00-99)  T wo Digit Day  ( 01-31)  T wo Digit Year  ( 00-99)  T wo Digit Century  ( 00-99)  T wo Digit Month  ( 01-12)  T wo Digit Year  ( 00-99)  T wo Digit Day  ( 01-31) "
+    ],
     "validEntryNotes": " Indicates the time zone and time or time zone and w indow of time when the service should be connected, disconnected or coordinated. \nWhen this field is populated in con j unction with the CB TEL NO field, a specific time of day including the hour or hour and minute is required. ",
-    "usage": " This field is conditional. ",
-    "fieldLength": "4",
+    "usage": "Conditional",
     "dataCharacteristics": "Numeric",
+    "fieldLength": "4",
     "usageNotes": " Required when the TQ field is populated and a total of two or more ASRs are associated with the translation questionnaire, otherwise optional. "
 }

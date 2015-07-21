@@ -7,10 +7,12 @@
         " This may, at the option of the customer, be  a requirement when providing service to some governmental agencies. ",
         "This field may be used in con j unction with the SBILLNM field.  "
     ],
-    "validEntries": " Nine Character TSP Control Identifier  One Character Provisioning Priority Level (E%2C 0-5)  One Digit Restoration Priority Level (0-5) ",
+    "validEntries": [
+        " Nine Character TSP Control Identifier  One Character Provisioning Priority Level (E%2C 0-5)  One Digit Restoration Priority Level (0-5) "
+    ],
     "validEntryNotes": " A TSP code ending in \"00\" indicates \"revocation\", the removal of a previously assigned TSP code.  ",
     "usage": " This field is optional. ",
-    "fieldLength": "30",
     "dataCharacteristics": "Alphanumeric",
+    "fieldLength": "30",
     "usageNotes": " Required when multiple providers are involved in providing access service and the EVCI field is not equal to \"B\".  \nRequired when the JPR field is populated. \nOtherwise prohibited. "
 }

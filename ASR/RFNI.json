@@ -6,10 +6,12 @@
     "fieldNotes": [
         " The Related Fiber Net w ork Identification data will have been previously assigned by the provider. "
     ],
-    "validEntries": " Valid Fiber Network Identification ",
+    "validEntries": [
+        " Valid Fiber Network Identification "
+    ],
     "validEntryNotes": " A valid entry of \"N\" is used when an FNI has not previously been assigned. ",
-    "usage": " This field is conditional. ",
-    "fieldLength": "13",
+    "usage": "Conditional",
     "dataCharacteristics": "Alphanumeric",
+    "fieldLength": "13",
     "usageNotes": " Optional when the first position of the REQTYP field is \"R\", \"S\" or \"E\" and the ACT field is not \"D\", otherwise prohibited. "
 }

@@ -6,10 +6,12 @@
     "fieldNotes": [
         " It is anticipated that the termination point for this service is a point of presence  ( POP ) , a point of interconnection  ( POI )  or end user premises within this LATA. "
     ],
-    "validEntries": " A  = Stand Alone EVC   B = Combination EVC ",
+    "validEntries": [
+        " A  = Stand Alone EVC   B = Combination EVC "
+    ],
     "validEntryNotes": " An entry of \"A\" indicates that the request is a Stand Alone EVC.  The Transport, End User Special Access,  and Switched Ethernet Services forms are prohibited. \nAn Entry of \"A\" is applicable only when the first position of the REQTYP is \"S\". \nAn Entry of \"B\" indicates that the request is  a Combination EVC or OVC which includes one UNI or ENNI physical port and the EVC or OVC.  An EVC Form must be accompanied by a Transport, End User Special Access, or Switched Ethernet Services form. \nChanges to this field that are prohibited on Firm Orders and require a cancellation of the original request and a new request to be submitted are as follows%3A  %EF%82%B7 Changing from a stand alone EVC/OVC to  a  combination   %EF%82%B7 Changing from a combination to a stand alone EVC/OVC  %EF%82%B7 Changing from a UNI/ENNI to a stand alone EVC/OVC   %EF%82%B7 Changing from a UNI/ENNI to a combination %EF%82%B7 Changing from a stand alone EVC/OVC to  a  UNI/ENNI  \nA change to this field that is allowed on Firm Orders and does not require a cancellation of the original request is as follows%3A  %EF%82%B7 Changing from a combination to a UNI/ENNI \nA change to this field that is allowed at the time of submission from Service Request Confirmation ( REQTYP \"EB\" or \"SB\" )  to Firm Order  ( REQTYP \"EC\" or \"SC\") and does not require a cancellation of  the original request is as follows%3A  %EF%82%B7 Changing from a UNI/ENNI to a combination ",
-    "usage": " This field is conditional. ",
-    "fieldLength": "1",
+    "usage": "Conditional",
     "dataCharacteristics": "Alpha",
+    "fieldLength": "1",
     "usageNotes": " Optional when the first position of the REQTYP field is \"S\" or \"E\" otherwise prohibited.  "
 }

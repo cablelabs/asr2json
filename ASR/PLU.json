@@ -6,10 +6,12 @@
     "fieldNotes": [
         " CKR is used by the customer as a cross reference to the provider circuit ID ( s )  and in many cases to identify the customer's end-to-end service.  "
     ],
-    "validEntries": " 000 to 100  LOF = Letter on File ",
+    "validEntries": [
+        " 000 to 100  LOF = Letter on File "
+    ],
     "validEntryNotes": " Special access must be ordered as 0 or 100. \nWATS access must be ordered as 0 or 100. \nFGC or FGD may be ordered with PIU field left blan k where specified by tariff. The PIU is determined from measurements. \nFGA or FGB may be ordered as 0 to 100 for the line/trunk group. \nDNAL or switched access facilities may be ordered as 0 to 100. \nWhen the UNE field is populated the PIU must be 0 or LOF. ",
-    "usage": " This field is conditional. ",
-    "fieldLength": "3",
+    "usage": "Conditional",
     "dataCharacteristics": "Alphanumeric",
+    "fieldLength": "3",
     "usageNotes": " Required when the CC field is populated and the first position of the REQTYP field is \"M\" and the ACT field is \"N\", \"C\" or \"R\". \nOptional when the CC field is populated and the first position of the REQTYP field is \"S\" or \"L\" and the ACT field is \"N\", \"C\", \"M\", \"T\" or \"R\". \nOtherwise prohibited. "
 }

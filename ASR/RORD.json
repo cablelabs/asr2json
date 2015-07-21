@@ -6,10 +6,12 @@
     "fieldNotes": [
         " This field may be used to convey a CENTREX order number obtained from the provider representative handling the CENTREX account. "
     ],
-    "validEntries": " T elephone number format  NPA-NXX-XXXX ",
+    "validEntries": [
+        " T elephone number format  NPA-NXX-XXXX "
+    ],
     "validEntryNotes": " This telephone number would be customer owned and identified during customer/provider pre- negotiations. ",
-    "usage": " This field is conditional. ",
-    "fieldLength": "17",
+    "usage": "Conditional",
     "dataCharacteristics": "Alphanumeric",
+    "fieldLength": "17",
     "usageNotes": " Required when the provider has pre-assigned  a  related order number, otherwise prohibited. "
 }

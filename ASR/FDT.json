@@ -6,10 +6,12 @@
     "fieldNotes": [
         " Types of changes that require coordination are CIC redirects, switch conversions, mutual trunkin g arrangement, point code changes, traffic rehome/reroutes, call through testing requests, cut over, etc.  "
     ],
-    "validEntries": " Time Zone (Position 1)  Central = C  Eastern = E  Mountain = M  Pacific = P  Time of Day (Positions 2-7)  T wo Digit Hour  ( 01-12)/Two Digit Minute (00-59)/AM or PM  T wo Digit Hour  ( 01-12)/A or P/Two Digit Hour (01-12)/A or P  AM or PM  T wo Digit Hour  ( 01-12)/A or P ",
+    "validEntries": [
+        " Time Zone (Position 1)  Central = C  Eastern = E  Mountain = M  Pacific = P  Time of Day (Positions 2-7)  T wo Digit Hour  ( 01-12)/Two Digit Minute (00-59)/AM or PM  T wo Digit Hour  ( 01-12)/A or P/Two Digit Hour (01-12)/A or P  AM or PM  T wo Digit Hour  ( 01-12)/A or P "
+    ],
     "validEntryNotes": " Indicates the time zone and time or time zone and w indow of time when the service should be connected, disconnected or coordinated. \nWhen this field is populated in con j unction with the CB TEL NO field, a specific time of day including the hour or hour and minute is required. ",
-    "usage": " This field is conditional. ",
-    "fieldLength": "7",
+    "usage": "Conditional",
     "dataCharacteristics": "Alphanumeric",
+    "fieldLength": "7",
     "usageNotes": " Required when the first position of the REQTYP type is \"M\" or \"L\", the ACT field is \"N\", \"C\", or \"D\", and routing and/or translation change requires coordination. \nProhibited when ACT field is \"R\". \nRequired when the CB TEL NO is populated. \nOtherwise optional. "
 }

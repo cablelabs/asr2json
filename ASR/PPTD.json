@@ -8,10 +8,12 @@
         "The provider may initiate the pro j ect identification and provide this to the customer who will populate the field when submitting an ASR. ",
         "The Pro j ect Number must be entered by the ne w and the former customers on \"N\" and \"D\" coordinated conversion orders. "
     ],
-    "validEntries": " U.S. Standard  Metric Format  T wo Digit Month  ( 01-12)  T wo Digit Century  ( 00-99)  T wo Digit Day  ( 01-31)  T wo Digit Year  ( 00-99)  T wo Digit Century  ( 00-99)  T wo Digit Month  ( 01-12)  T wo Digit Year  ( 00-99)  T wo Digit Day  ( 01-31) ",
+    "validEntries": [
+        " U.S. Standard  Metric Format  T wo Digit Month  ( 01-12)  T wo Digit Century  ( 00-99)  T wo Digit Day  ( 01-31)  T wo Digit Year  ( 00-99)  T wo Digit Century  ( 00-99)  T wo Digit Month  ( 01-12)  T wo Digit Year  ( 00-99)  T wo Digit Day  ( 01-31) "
+    ],
     "validEntryNotes": " Indicates the time zone and time or time zone and w indow of time when the service should be connected, disconnected or coordinated. \nWhen this field is populated in con j unction with the CB TEL NO field, a specific time of day including the hour or hour and minute is required. ",
-    "usage": " This field is conditional. ",
-    "fieldLength": "10",
+    "usage": "Conditional",
     "dataCharacteristics": "Alphanumeric",
+    "fieldLength": "10",
     "usageNotes": " Optional when the PROJECT field is populated, otherwise prohibited. "
 }
