@@ -4,14 +4,15 @@
     "name": "Response Type Requested",
     "definition": " Identifies the type of confirmation response requested by the customer.  ",
     "fieldNotes": [
-        " Changes to this field are only permitted prior to confirmation.  "
+        " Implemented March 15, 2014  31. SUP -  Supplement Type A supplement is any new iteration of an Access Service Request (ASR). The entry in the SUP field identifies the reason for which the supplement is being issued.  ",
+        "An entry in the REMARKS field can be used to clarify the request. "
     ],
-    "validEntries": [
-        " F  = Send FOC only  N  = No response required  S  = Send FOC and DLR%3B CDLRD waived "
-    ],
-    "validEntryNotes": " \"S\" is prohibited when the ACT field is \"D\", \"M\" or \"R\" or the EVCI field is \"A\".  1-10  %3D  Send FOC and DLR%3B CDLRD required \nA numeric entry indicates the number of workin g days that the customer requires to confirm the Design Layout Report  ( DLR )  and will be added to the overall interval. \n\"1-10\" prohibited when the ACT field is \"D\", \"M\" or \"R\" or the EVCI field is \"A\". ",
-    "usage": "Required",
-    "dataCharacteristics": "Alphanumeric",
-    "fieldLength": "2",
-    "usageNotes": " Required when the first position of the REQTYP field is \"E\" or \"S\" and Switched Ethernet services are being requested, otherwise prohibited. "
+    "validEntries": "\nF%20\n%3D%20\nSend%20FOC%20only%20\nN%20\n%3D%20\nNo%20response%20required%20\nS%20\n%3D%20\nSend%20FOC%20and%20DLR%3B%20CDLRD%20waived%20\n\n1%20\n%3D%20Cancel%20-%20Indicates%20that%20the%20pending%20order%20is%20to%20be\ncanceled%20in%20its%20entirety.%20",
+    "count": 1,
+    "validEntryNotes": " Implemented March 15, 2014  31.      SUP -  Supplement Type (continued) \nValid for Firm Orders when the ASR has not been confirmed by the provider. \nValid for Service Requests  ( Inquiry )  whether or not the ASR has been confirmed by the provider.  \nIn a Multi-EC environment, the use of a SUP type \"4\" is to be based on the status of the ASC-EC FOC. Since an OEC FOC status may not necessaril y match the ASC-EC FOC status, OECs must be able to accept SUP type \"4\" regardless of FOC status when the ASC-EC field is populated. \nUsed when an OEC is added to or deleted from the Multi-EC Form. When the ASC-EC field is populated w ith an ICSC code other than that of the receivin g provider, the receipt of a SUP \"4\" must be acceptable as the initial ASR to the added OEC. ",
+    "usage": "Conditional",
+    "dataCharacteristics": "Numeric",
+    "fieldLength": "1",
+    "examples": "\n4%20",
+    "usageNotes": " Prohibited on initial requests. \nProhibited when changing a Service Request to  a  Firm Order.  \nProhibited when changing service type, which results in a change to the first character of the REQTYP field.  \n Prohibited if the pending order was alread y  completed as ordered or canceled.  \nOtherwise required.   "
 }

@@ -6,12 +6,12 @@
     "fieldNotes": [
         " More information relative to link aggregation can be found in IEEE 802.1AX. When link aggregation pertains to ENNI usage, more information can also be found in MEF 26.1. "
     ],
-    "validEntries": [
-        " E  = Existing Link Aggregation group. Activity impacting an existing Link Aggregation group  ( add or remove members)  N  = New Link Aggregation group created on this request (The provider will assign a LAG-ID and provide it on the Confirmation Notice)  D  = Disconnect of entire existing Link Aggregation group. "
-    ],
+    "validEntries": "\nE%20\n%3D%20\nExisting%20Link%20Aggregation%20group.%20Activity%20impacting%20an\nexisting%20Link%20Aggregation%20group%20\n(\nadd%20or%20remove\nmembers)%20\nN%20\n%3D%20New%20Link%20Aggregation%20group%20created%20on%20this%20request\n(The%20provider%20will%20assign%20a%20LAG-ID%20and%20provide%20it%20on%20the\nConfirmation%20Notice)%20\nD%20\n%3D%20\nDisconnect%20of%20entire%20existing%20Link%20Aggregation%20group.%20",
+    "count": 0,
     "validEntryNotes": " A valid entry of \"E\" is applicable when the ACT field is \"N\", \"C\" or \"D\". \nA valid entry of \"N\" is only applicable when the AC T  field is \"N\".  \nA valid entry of \"D\" is only applicable when the AC T  field is \"D\".  ",
     "usage": "Conditional",
+    "usageNotes": " Optional when the first position of the REQTYP field is \"E'' or \"S\" and the ACT field is \"N\", \"C\" or \"D\", otherwise prohibited. ",
     "dataCharacteristics": "Alpha",
     "fieldLength": "1",
-    "usageNotes": " Optional when the first position of the REQTYP field is \"E'' or \"S\" and the ACT field is \"N\", \"C\" or \"D\", otherwise prohibited. "
+    "examples": "\nE%20"
 }

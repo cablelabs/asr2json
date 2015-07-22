@@ -3,15 +3,11 @@
     "title": "QA",
     "name": "Quote Authorized",
     "definition": " Indicates that a quotation charge for special construction is authorized. ",
-    "fieldNotes": [
-        " The format and structure of this field is defined by ANSI in document T1.251, Identification of Telecommunications Service Provider Codes for the North American Telecommunications System. "
-    ],
-    "validEntries": [
-        " Y = Quotation Authorized "
-    ],
-    "validEntryNotes": " When the ASC-EC field is populated, this field must be identical to the ASC-EC entry. ",
+    "validEntries": "\nY%20%3D%20Quotation%20Authorized%20",
+    "count": 0,
     "usage": "Conditional",
+    "usageNotes": " Optional when ACT field is \"N\", \"C\" or \"T\", otherwise prohibited. ",
     "dataCharacteristics": "Alpha",
     "fieldLength": "1",
-    "usageNotes": " Optional when ACT field is \"N\", \"C\" or \"T\", otherwise prohibited. "
+    "examples": "\nY%20"
 }

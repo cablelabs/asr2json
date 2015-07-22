@@ -6,11 +6,8 @@
     "fieldNotes": [
         " The Purchase Order Number may be reused after two years from the due date of the original request."
     ],
-    "validEntries": [
-        " IAC Code  CUS = Casual customer "
-    ],
-    "validEntryNotes": " Valid IAC codes are maintained by  Telcordi a  Technologies. ",
     "usage": "Required",
     "dataCharacteristics": "Alphanumeric",
-    "fieldLength": "16"
+    "fieldLength": "16",
+    "examples": "\n8%202\n4\nZ\n9"
 }

@@ -3,15 +3,11 @@
     "title": "PLU",
     "name": "Percentage of Local Usage",
     "definition": " Identifies the percent of local usage associated with trun k groups carrying local traffic between a LEC and a CLEC. ",
-    "fieldNotes": [
-        " CKR is used by the customer as a cross reference to the provider circuit ID ( s )  and in many cases to identify the customer's end-to-end service.  "
-    ],
-    "validEntries": [
-        " 000 to 100  LOF = Letter on File "
-    ],
-    "validEntryNotes": " Special access must be ordered as 0 or 100. \nWATS access must be ordered as 0 or 100. \nFGC or FGD may be ordered with PIU field left blan k where specified by tariff. The PIU is determined from measurements. \nFGA or FGB may be ordered as 0 to 100 for the line/trunk group. \nDNAL or switched access facilities may be ordered as 0 to 100. \nWhen the UNE field is populated the PIU must be 0 or LOF. ",
+    "validEntries": "\n000%20to%20100%20\nLOF%20%3D%20Letter%20on%20File%20",
+    "count": 0,
     "usage": "Conditional",
+    "usageNotes": " Required when the CC field is populated and the first position of the REQTYP field is \"M\" and the ACT field is \"N\", \"C\" or \"R\". \nOptional when the CC field is populated and the first position of the REQTYP field is \"S\" or \"L\" and the ACT field is \"N\", \"C\", \"M\", \"T\" or \"R\". \nOtherwise prohibited. ",
     "dataCharacteristics": "Alphanumeric",
     "fieldLength": "3",
-    "usageNotes": " Required when the CC field is populated and the first position of the REQTYP field is \"M\" and the ACT field is \"N\", \"C\" or \"R\". \nOptional when the CC field is populated and the first position of the REQTYP field is \"S\" or \"L\" and the ACT field is \"N\", \"C\", \"M\", \"T\" or \"R\". \nOtherwise prohibited. "
+    "examples": "\n0%203\n0"
 }

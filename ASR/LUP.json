@@ -6,9 +6,8 @@
     "fieldNotes": [
         " This field may apply whenever PIU is less than 100."
     ],
-    "validEntries": [
-        " 1 to 100  LOF = Letter on File "
-    ],
+    "validEntries": "\n1%20to%20100%20\nLOF%20%3D%20Letter%20on%20File%20",
+    "count": 0,
     "usage": "Conditional",
     "usageNotes": " Prohibited when the PIU field is not populated or is \"100\". \nProhibited when the first position of the REQTYP field is \"R\". \nProhibited when the ACT field is \"D\". \nOtherwise optional. ",
     "dataCharacteristics": "Alphanumeric",

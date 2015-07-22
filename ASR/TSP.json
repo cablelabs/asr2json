@@ -6,12 +6,11 @@
     "fieldNotes": [
         " These codes are assigned by the TSP Program Office. "
     ],
-    "validEntries": [
-        " Nine Character TSP Control Identifier  One Character Provisioning Priority Level (E%2C 0-5)  One Digit Restoration Priority Level (0-5) "
-    ],
+    "validEntries": "\nNine%20Character%20TSP%20Control%20Identifier%20\nOne%20Character%20Provisioning%20Priority%20Level%20(E%2C%200-5)%20\nOne%20Digit%20Restoration%20Priority%20Level%20(0-5)%20",
+    "count": 0,
     "validEntryNotes": " A TSP code ending in \"00\" indicates \"revocation\", the removal of a previously assigned TSP code.  ",
     "usage": " This field is optional. ",
     "dataCharacteristics": "Alphanumeric",
     "fieldLength": "12",
-    "usageNotes": " Required when multiple providers are involved in providing access service and the EVCI field is not equal to \"B\".  \nRequired when the JPR field is populated. \nOtherwise prohibited. "
+    "examples": "\nT%20S\nP\n1\n2\n3\n4\n5\n%20C%20\n-\nE\n1"
 }

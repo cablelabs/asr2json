@@ -3,15 +3,11 @@
     "title": "WST",
     "name": "Wireless Service Type",
     "definition": " Identifies the type of wireless service being requested. ",
-    "fieldNotes": [
-        " QSA cannot be greater than \"01\" when the REQTYP field is \"E\" and the SEI field is populated. "
-    ],
-    "validEntries": [
-        " A  = Dial Mobile or Paging  B  = Manual Mobile with DA allowance  C = Manual Paging  D = T ype Dial Live Line  E = T ype 1 Direct Inward Dial Trun k F = T ype 2A Tandem Interconnection  G = T ype 2B End Office Interconnection  H = T ype 1 Trunk Side Message Toll  J = T ype 2D Direct connection to a DA Tandem  K  = 2T Equal Access Tandem trunks  L  = 2C E911 to a selector router  M  = EO 251/252  End Office trunks (with full NXX)  N  = AX 251/252 Auxiliary trunk with basic 911%2C DA%2C OS and IC PIC  P  = ME 251/252 Modified End Office  ( Land to Mobile blocks of 100%E2%80%99s or 1000%E2%80%99s)  R = T D 251/252 Tandem trun k S = T T 251/252 Transit trunk (for IC traffic)  T = Direct connection to an operator tandem "
-    ],
-    "validEntryNotes": " An entry of \"A\" is valid for an increase in the number of trunks within an existing trunk group, w ith no changes made to the features or translations. \n An entry of \"B\" is valid for an increase in the number of trunks within an existing trunk group, with changes made to the features or translations. \n An entry of \"C\" is valid when ordering a new trun k group. \n An entry of \"D\" is valid for a decrease in the number of trunks within an existing trunk group, with no changes made to the features or translations.   \n An entry of \"E\" is valid for the complete disconnect of a trunk group, and the re-route of traffic as defined in the attached TQ. \n An entry of \"F\" is valid for the complete disconnect of a trunk group  ( no TQ will accompany this service request). ",
+    "validEntries": "\nA%20\n%3D%20\nDial%20Mobile%20or%20Paging%20\nB%20\n%3D%20\nManual%20Mobile%20with%20DA%20allowance%20\nC%20%3D%20Manual%20Paging%20\nD%20%3D%20\nT\nype%20Dial%20Live%20Line%20\nE%20%3D%20\nT\nype%201%20Direct%20Inward%20Dial%20Trun\nk\nF%20%3D%20\nT\nype%202A%20Tandem%20Interconnection%20\nG%20%3D%20\nT\nype%202B%20End%20Office%20Interconnection%20\nH%20%3D%20\nT\nype%201%20Trunk%20Side%20Message%20Toll%20\nJ%20%3D%20\nT\nype%202D%20Direct%20connection%20to%20a%20DA%20Tandem%20\nK%20\n%3D%20\n2T%20Equal%20Access%20Tandem%20trunks%20\nL%20\n%3D%20\n2C%20E911%20to%20a%20selector%20router%20\nM%20\n%3D%20\nEO%20251%2F252%20%20End%20Office%20trunks%20(with%20full%20NXX)%20\nN%20\n%3D%20\nAX%20251%2F252%20Auxiliary%20trunk%20with%20basic%20911%2C%20DA%2C%20OS\nand%20IC%20PIC%20\nP%20\n%3D%20ME%20251%2F252%20Modified%20End%20Office%20\n(\nLand%20to%20Mobile\nblocks%20of%20100%E2%80%99s%20or%201000%E2%80%99s)%20\nR%20%3D%20\nT\nD%20251%2F252%20Tandem%20trun\nk\nS%20%3D%20\nT\nT%20251%2F252%20Transit%20trunk%20(for%20IC%20traffic)%20\nT\n%3D%20\nDirect%20connection%20to%20an%20operator%20tandem%20",
+    "count": 0,
     "usage": "Conditional",
+    "usageNotes": " Prohibited when the first position of the REQTYP field is \"S\", \"W\", \"L\", \"R\", \"V\" or \"X\". \nProhibited when the ACT field is \"D\" and the ACTI field is \"D\" or \"F\". \nOtherwise optional. ",
     "dataCharacteristics": "Alpha",
     "fieldLength": "1",
-    "usageNotes": " Prohibited when the first position of the REQTYP field is \"S\", \"W\", \"L\", \"R\", \"V\" or \"X\". \nProhibited when the ACT field is \"D\" and the ACTI field is \"D\" or \"F\". \nOtherwise optional. "
+    "examples": "\nD"
 }

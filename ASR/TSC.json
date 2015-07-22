@@ -6,12 +6,9 @@
     "fieldNotes": [
         " The code set is unique to each established trun k group or CCS Link Set and is provided to the customer on the Firm Order Confirmation.  The TSC entry may then be populated by the customer w hen ordering changes, additions or deletions to an existing trunk group or CCS Link Set. "
     ],
-    "validEntries": [
-        " 1 = T runk Group Service Request  ( TGSR ) 2 = Engineering Change  3  = ICSC Record Change  4 = Facility Transfer  5 = Network Reconfiguration  6 = Maintenance Consideration  7 = Other "
-    ],
-    "validEntryNotes": " If the customer wishes to have a new billing account number for this order, enter \"N\" in this field.  The new billing account number will appear on the bill and the Confirmation Notice Form (CN). \n\"NB\" represents a non-billing provider that is involved in providing this access service, when the ASC-EC field is populated. \nIf an existing service BAN is invalid, the provider will determine the appropriate BAN and return it on the Confirmation Notice Form (CN). \nUse of valid entry of \"E\" is based on  customer/provider negotiations. ",
     "usage": "Conditional",
+    "usageNotes": " Required when the LA field is \"Y\" for established trunk side service or CCS Link Set. \nOptional when the LA field is not populated for established trunk side service or CCS Link Set. \nOtherwise prohibited. ",
     "dataCharacteristics": "Alphanumeric",
     "fieldLength": "8",
-    "usageNotes": " Required when the LA field is \"Y\" for established trunk side service or CCS Link Set. \nOptional when the LA field is not populated for established trunk side service or CCS Link Set. \nOtherwise prohibited. "
+    "examples": "\nA%20Q\n2\n3\n4\n5\n6\n7"
 }

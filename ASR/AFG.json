@@ -3,16 +3,10 @@
     "title": "AFG",
     "name": "Agency of the Federal Government",
     "definition": " Identifies that this service is provided to an agency of the Federal Government. ",
-    "fieldNotes": [
-        " This may, at the option of the customer, be  a requirement when providing service to some governmental agencies. ",
-        "This field may be used in con j unction with the SBILLNM field.  "
-    ],
-    "validEntries": [
-        " Y = Yes "
-    ],
-    "validEntryNotes": " A TSP code ending in \"00\" indicates \"revocation\", the removal of a previously assigned TSP code.  ",
+    "validEntries": "\nY%20%3D%20Yes%20",
+    "count": 0,
     "usage": " This field is optional. ",
     "dataCharacteristics": "Alpha",
     "fieldLength": "1",
-    "usageNotes": " Required when multiple providers are involved in providing access service and the EVCI field is not equal to \"B\".  \nRequired when the JPR field is populated. \nOtherwise prohibited. "
+    "examples": "\nY%20"
 }

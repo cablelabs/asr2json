@@ -3,15 +3,12 @@
     "title": "PIU",
     "name": "Percentage of Interstate Usage",
     "definition": " Identifies the expected Interstate Usage for the access service on this request.  Both Interstate and Intrastate may be ordered on a single Access Service Request by specifying the applicable percent of Interstate usage.  However, two Access Service Requests may be related to one another through the entr y RPON (Related Purchase Order Number). ",
-    "fieldNotes": [
-        " CKR is used by the customer as a cross reference to the provider circuit ID ( s )  and in many cases to identify the customer's end-to-end service.  "
-    ],
-    "validEntries": [
-        " 0 to 100  LOF = Letter on File "
-    ],
+    "validEntries": "\n0%20to%20100%20\nLOF%20%3D%20\nLetter%20on%20File%20",
+    "count": 0,
     "validEntryNotes": " Special access must be ordered as 0 or 100. \nWATS access must be ordered as 0 or 100. \nFGC or FGD may be ordered with PIU field left blan k where specified by tariff. The PIU is determined from measurements. \nFGA or FGB may be ordered as 0 to 100 for the line/trunk group. \nDNAL or switched access facilities may be ordered as 0 to 100. \nWhen the UNE field is populated the PIU must be 0 or LOF. ",
     "usage": "Conditional",
+    "usageNotes": " Required for services other than FGC and FGD w hen the ACT field is \"N\" and the WST field is not populated. \nRequired when the first position of the REQTYP field is \"S\", \"E\", \"V\", \"X\" or \"W\" and the ACT field is \"C\", \"M\", \"T\" or \"R\". \nProhibited when the ACT field is \"D\". \nOtherwise optional. ",
     "dataCharacteristics": "Alphanumeric",
     "fieldLength": "3",
-    "usageNotes": " Required for services other than FGC and FGD w hen the ACT field is \"N\" and the WST field is not populated. \nRequired when the first position of the REQTYP field is \"S\", \"E\", \"V\", \"X\" or \"W\" and the ACT field is \"C\", \"M\", \"T\" or \"R\". \nProhibited when the ACT field is \"D\". \nOtherwise optional. "
+    "examples": "\n1%200\n0\nL%20O\nF"
 }

@@ -3,12 +3,18 @@
     "title": "CBD",
     "name": "Call Before Dispatch",
     "definition": " May identify a customer location as \"Unstaffed\" and request the provider call the LCON at a desired time prior to %E2%80%98dispatch out' of a service technician, or a coordination call based on  a  provider's existing process for service installation or disconnect.",
-    "validEntries": [
-        " 1 st  Character  A  = Unstaffed Service Delivery Location "
-    ],
+    "validEntries": "\n1\nst\n%20Character%20\nA%20\n%3D%20\nUnstaffed%20Service%20Delivery%20Location%20\n\nU.S.%20Standard%20\nMetric%20Format%20\nT\nwo%20Digit%20Month%20\n(\n01-12)%20\nT\nwo%20Digit%20Century%20\n(\n00-99)%20\nT\nwo%20Digit%20Day%20\n(\n01-31)%20\nT\nwo%20Digit%20Year%20\n(\n00-99)%20\nT\nwo%20Digit%20Century%20\n(\n00-99)%20\nT\nwo%20Digit%20Month%20\n(\n01-12)%20\nT\nwo%20Digit%20Year%20\n(\n00-99)%20\nT\nwo%20Digit%20Day%20\n(\n01-31)%20\n\nImplemented%20September%2025%2C%201999%20\n12.%20%20%20%20%20%20DDD%20-\n%20Desired%20Due%20Date%20(continued)%20",
+    "count": 2,
     "validEntryNotes": " Defines the service delivery location as \"Unstaffed\" requiring coordination with LCON prior to technician dispatch.  2 nd  and 3 rd  Character 01- 99  %3D Hours \nThe desired number of hours prior to dispatch to facilitate access for the service technician.  ",
-    "usage": " This field is optional. ",
-    "dataCharacteristics": "",
-    "fieldLength": "",
-    "examples": "\n%200\n4\nA%201\n2\nA%20%20"
+    "usage": "Required",
+    "dataCharacteristics": "Alphanumeric",
+    "fieldLength": "10",
+    "examples": "\n0%203\n-\n0\n2\n-\n1\n9\n9\n9\n1%209\n9\n9\n-\n0\n3\n-\n0\n2",
+    "fieldNotes": [
+        " Implemented September 23, 2000  12. DDD -  Desired Due Date Identifies the customer's desired due date. ",
+        "The actual due date may be different from that desired because of factors such as the availabilit y of facilities and the quantity, complexity, and impact on local service of the circuit(s) involved. ",
+        "On disconnect requests, this date represents the date billing is to stop on the involved circuit ( s )  and can be no earlier than the date the request is received by the provider. ",
+        "When different due dates are required, these dates are stipulated using a separate request for each desired due date.  For example, a total of 50 circuits are desired and the customer wants them at a rate of 10 per day.  Therefore, five ASR forms may be submitted stipulating this requirement. ",
+        "When multiple ASRs are associated  w ith one Translation Questionnaire, all DDDs must be identical. "
+    ]
 }

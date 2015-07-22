@@ -3,9 +3,8 @@
     "title": "ISTN",
     "name": "Interconnection Screening Telephone Number",
     "definition": " Identifies the telephone number used for billing or translation purposes. ",
-    "validEntries": [
-        " T elephone number format  NPA-NXX-XXXX "
-    ],
+    "validEntries": "\nT\nelephone%20number%20format%20\nNPA-NXX-XXXX%20",
+    "count": 0,
     "validEntryNotes": " This telephone number would be customer owned and identified during customer/provider pre- negotiations. ",
     "usage": "Conditional",
     "usageNotes": " Prohibited when the ACT field is \"D\", otherwise optional. ",

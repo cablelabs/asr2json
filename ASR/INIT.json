@@ -1,13 +1,13 @@
 {
-    "fieldNumber": "103",
+    "fieldNumber": "104",
     "title": "INIT",
-    "name": "Initiator Facsimile Number",
-    "definition": " Identifies the fax number of the initiator. ",
+    "name": "Initiator Electronic Mail Address",
+    "definition": " Identifies the electronic mail address of the initiator. ",
     "usage": " This field is optional. ",
-    "dataCharacteristics": "Numeric",
-    "fieldLength": "10",
-    "examples": "\n9%200\n8\n-\n3\n3\n6\n-\n2\n9\n8\n0"
-}es or waiving the Confirming Design Layout Report  ( CDLR )  are the responsibility of this person. "
+    "dataCharacteristics": "Alphanumeric",
+    "fieldLength": "60",
+    "examples": "\nZ%20J\nO\nN\nE\nS\n%40\nN\nO\nT\nE\nS\n.\nB\nE%20L%20L%20C\nO\nM\nP%20A\nN\nY\n.\n%20C%20\nO\nM"
+}f this person. "
     ],
     "usage": "Required",
     "dataCharacteristics": "Alphanumeric",

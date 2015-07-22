@@ -7,9 +7,8 @@
         " Population of this field specifies that the customer agrees to accept billing based on the provider due date returned on the confirmation notice. ",
         "Population of this field will not result in expedite charges being billed. "
     ],
-    "validEntries": [
-        " Y  = Early Acceptance Authorized "
-    ],
+    "validEntries": "\nY%20\n%3D%20\nEarly%20Acceptance%20Authorized%20",
+    "count": 0,
     "usage": "Conditional",
     "usageNotes": " Prohibited when the EXP field is populated. \nProhibited when the ASC-EC field is populated. \nOtherwise optional. ",
     "dataCharacteristics": "Alpha",

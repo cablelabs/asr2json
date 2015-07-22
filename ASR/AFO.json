@@ -6,12 +6,12 @@
     "fieldNotes": [
         " The customer should populate the appropriate character position ( s )  to indicate which additional form(s) is attached.  "
     ],
-    "validEntries": [
-        " Character Position  Valid Entry  Attached Form(s)  1 Y ACI Form  2  Reserved for future  use  3 Y NAI Form  4 Y EOD Form  5 Y VCAT Form "
-    ],
+    "validEntries": "\nCharacter%20Position%20\nValid%20Entry%20\nAttached%20Form(s)%20\n1%20Y%20ACI%20Form%20\n2%20%20Reserved%20for%20future%20\nuse%20\n3%20Y%20NAI%20Form%20\n4%20Y%20EOD%20Form%20\n5%20Y%20VCAT%20Form%20",
+    "count": 0,
     "validEntryNotes": " Position 1 entry must be populated for  a  supplement canceling all circuits contained on the initial ACI records%3B each individual circuit record on the supplement would carry a CKTACT %3D \"K\". \nAn entry in position 1 is not applicable when the first position of the REQTYP field is \"R\".   \nAn entry in position 1 must be used when position 3 is populated and the first position of the REQTYP field is \"M\", the entry in the QTY field is greater than one (1 )  and the QACI field on the Trunkin g  Form is populated. \nWhen position 3 is populated and the first position of the REQTYP field is \"A\", \"E\" or \"S\" and the entr y  in the QTY field is greater than one  ( 1 ) , character position 1 must be populated.  \nAn entry in position 5 is only applicable when the first position of the REQTYP field is \"E\", \"R\", \"S\", \"V\" or \"X\".   ",
     "usage": "Conditional",
+    "usageNotes": " Required when the associated request form ( s )  is applicable and sent, otherwise prohibited.  ",
     "dataCharacteristics": "Alpha",
     "fieldLength": "5",
-    "usageNotes": " Required when the associated request form ( s )  is applicable and sent, otherwise prohibited.  "
+    "examples": "\nY%20"
 }

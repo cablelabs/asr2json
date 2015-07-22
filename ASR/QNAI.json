@@ -3,15 +3,9 @@
     "title": "QNAI",
     "name": "Quantity Network Assignment Information",
     "definition": " Identifies the total number of NAI Circuit Detail Sections sent by the customer. ",
-    "fieldNotes": [
-        " The customer should populate the appropriate character position ( s )  to indicate which additional form(s) is attached.  "
-    ],
-    "validEntries": [
-        " Character Position  Valid Entry  Attached Form(s)  1 Y ACI Form  2  Reserved for future  use  3 Y NAI Form  4 Y EOD Form  5 Y VCAT Form "
-    ],
-    "validEntryNotes": " Position 1 entry must be populated for  a  supplement canceling all circuits contained on the initial ACI records%3B each individual circuit record on the supplement would carry a CKTACT %3D \"K\". \nAn entry in position 1 is not applicable when the first position of the REQTYP field is \"R\".   \nAn entry in position 1 must be used when position 3 is populated and the first position of the REQTYP field is \"M\", the entry in the QTY field is greater than one (1 )  and the QACI field on the Trunkin g  Form is populated. \nWhen position 3 is populated and the first position of the REQTYP field is \"A\", \"E\" or \"S\" and the entr y  in the QTY field is greater than one  ( 1 ) , character position 1 must be populated.  \nAn entry in position 5 is only applicable when the first position of the REQTYP field is \"E\", \"R\", \"S\", \"V\" or \"X\".   ",
     "usage": "Conditional",
+    "usageNotes": " Required when the third position of the AFO field is \"Y\", otherwise prohibited. ",
     "dataCharacteristics": "Numeric",
     "fieldLength": "2",
-    "usageNotes": " Required when the third position of the AFO field is \"Y\", otherwise prohibited. "
+    "examples": "\n0%206"
 }

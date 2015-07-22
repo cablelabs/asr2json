@@ -3,15 +3,11 @@
     "title": "FNT",
     "name": "Fiber Network Type",
     "definition": " Identifies the type of network to which the fiber based service is being assigned. ",
-    "fieldNotes": [
-        " The Fiber Network Identification data will be assigned by the provider.  "
-    ],
-    "validEntries": [
-        " A  = Synchronous Optical Network (SONET)  B  = Dense Wave Division Multiplexing (DWDM)   C  = Optical Transport Network (OTN) "
-    ],
-    "validEntryNotes": " A valid entry of \"N\" is used when an FNI has not previously been assigned. ",
+    "validEntries": "\nA%20\n%3D%20\nSynchronous%20Optical%20Network%20(SONET)%20\nB%20\n%3D%20\nDense%20Wave%20Division%20Multiplexing%20(DWDM)%20%20\nC%20\n%3D%20\nOptical%20Transport%20Network%20(OTN)%20",
+    "count": 0,
     "usage": "Conditional",
+    "usageNotes": " Required when the FNI field is populated, otherwise prohibited.  ",
     "dataCharacteristics": "Alpha",
     "fieldLength": "1",
-    "usageNotes": " Required when the FNI field is populated, otherwise prohibited.  "
+    "examples": "\nB"
 }

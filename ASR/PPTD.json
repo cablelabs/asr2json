@@ -3,9 +3,8 @@
     "title": "PPTD",
     "name": "Project Plant Test Date",
     "definition": " Identifies the pre negotiated plant test date for the start of overall testing of the service requested on this ASR. ",
-    "validEntries": [
-        " U.S. Standard  Metric Format  T wo Digit Month  ( 01-12)  T wo Digit Century  ( 00-99)  T wo Digit Day  ( 01-31)  T wo Digit Year  ( 00-99)  T wo Digit Century  ( 00-99)  T wo Digit Month  ( 01-12)  T wo Digit Year  ( 00-99)  T wo Digit Day  ( 01-31) "
-    ],
+    "validEntries": "\nU.S.%20Standard%20\nMetric%20Format%20\nT\nwo%20Digit%20Month%20\n(\n01-12)%20\nT\nwo%20Digit%20Century%20\n(\n00-99)%20\nT\nwo%20Digit%20Day%20\n(\n01-31)%20\nT\nwo%20Digit%20Year%20\n(\n00-99)%20\nT\nwo%20Digit%20Century%20\n(\n00-99)%20\nT\nwo%20Digit%20Month%20\n(\n01-12)%20\nT\nwo%20Digit%20Year%20\n(\n00-99)%20\nT\nwo%20Digit%20Day%20\n(\n01-31)%20",
+    "count": 0,
     "usage": "Conditional",
     "usageNotes": " Optional when the PROJECT field is populated, otherwise prohibited. ",
     "dataCharacteristics": "Alphanumeric",

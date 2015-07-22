@@ -1,8 +1,13 @@
 {
     "fieldNumber": "24",
     "title": "QSA",
-    "name": "Quantity Service Address Location Information (continued)",
-    "definition": "9%3A Otherwise optional. ",
+    "name": "Quantity Service Address Location Information",
+    "definition": " Identifies the total number of Service Address Location Information Forms being sent by the customer. ",
+    "fieldNotes": [
+        " QSA cannot be greater than \"01\" when the REQTYP field is \"E\" and the SEI field is populated. "
+    ],
+    "usage": "Conditional",
+    "usageNotes": " Prohibited when the EVCI field is \"A\". \nRequired when the ACT field is \"N\" or \"T\", the first position of the REQTYP field is \"S\", \"E\", \"W\", \"V\" or \"X\", the NAG and SEI fields are not populated, and the first position of any PRILOC/SECLOC field is an \"E\".  \nRequired when the ACT field is \"N\" and the first position of the REQTYP field is \"R\" and the first position of the PRILOC field is \"E\" and the SPO T  ( PRI )  field is not a CLLI Code on the Ring or ARI Form.  \nRequired when the ACT field is \"N\" or \"T\" and the first position of the REQTYP field is \"A\" and the NSL field on the FGA Form is populated. \nRequired when the first position of the REQTYP is \"E\", the ACT field is \"M\" or \"N\" and the SEI field is populated. \nProhibited  w hen the first position of the REQTYP field is \"M\". \nProhibited when the first position of the REQTYP field is \"S\" and the SEI field is populated. 8%3A  Prohibited when the NAG field is populated.  Quantity Service Address Location Information (continued)9%3A Otherwise optional. ",
     "dataCharacteristics": "Numeric",
     "fieldLength": "2",
     "examples": "\n0%206"

@@ -3,15 +3,11 @@
     "title": "UNE",
     "name": " Unbundled Network Elements",
     "definition": " Identifies this request is ordering unbundled network elements for local service. ",
-    "fieldNotes": [
-        " The format and structure of this field is defined by ANSI in document T1.251, Identification of Telecommunications Service Provider Codes for the North American Telecommunications System. "
-    ],
-    "validEntries": [
-        " Y  = Ordering unbundled elements. "
-    ],
-    "validEntryNotes": " When the ASC-EC field is populated, this field must be identical to the ASC-EC entry. ",
+    "validEntries": "\nY%20\n%3D%20\nOrdering%20unbundled%20elements.%20",
+    "count": 0,
     "usage": "Conditional",
+    "usageNotes": " Optional when the CC field is populated and the first position of the REQTYP field is \"M\", \"S\" or   \"L\", otherwise prohibited. ",
     "dataCharacteristics": "Alpha",
     "fieldLength": "1",
-    "usageNotes": " Optional when the CC field is populated and the first position of the REQTYP field is \"M\", \"S\" or   \"L\", otherwise prohibited. "
+    "examples": "\nY%20"
 }

@@ -9,12 +9,9 @@
         "When the CCVN field is populated, the RPON field for the disconnect ASR must contain the ne w connect ASR PON.   The RPON field of the ne w connect ASR may contain the disconnect ASR PON.",
         "When the TQ field is \"A\", the RPON field will contain the PON of the ASR which has the TQ attached (Master ASR). See ATIS/OBF-ASR-019, General Section.   This rule takes precedence over any other RPON value. "
     ],
-    "validEntries": [
-        " T elephone number format  NPA-NXX-XXXX "
-    ],
-    "validEntryNotes": " This telephone number would be customer owned and identified during customer/provider pre- negotiations. ",
     "usage": "Conditional",
+    "usageNotes": " Required when the ACT field is \"D\" and the CCVN field is populated.  \nRequired when the NOR field is populated. \nRequired when the first position of the TQ field is \"A\". \nRequired when the ATN field on the Transport Form is \"N\". \nRequired when the REL TSC field on the Trunkin g Form is \"N\". \nOtherwise optional. ",
     "dataCharacteristics": "Alphanumeric",
     "fieldLength": "16",
-    "usageNotes": " Required when the ACT field is \"D\" and the CCVN field is populated.  \nRequired when the NOR field is populated. \nRequired when the first position of the TQ field is \"A\". \nRequired when the ATN field on the Transport Form is \"N\". \nRequired when the REL TSC field on the Trunkin g Form is \"N\". \nOtherwise optional. "
+    "examples": "\n8%202\n4\nZ\n9"
 }

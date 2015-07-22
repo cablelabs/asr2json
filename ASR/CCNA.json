@@ -6,14 +6,18 @@
     "fieldNotes": [
         " The format and structure of this field is defined by ANSI in document ATIS-0300251 Codes for Identification of Service Providers for Information Exchange. ",
         "This code is established prior to the submission of  the ASR. ",
-        "For the casual customer who does not have an IAC code, this field should reflect an entry of \"CUS\". The customer name should be entered in the CUS Tfield on the ASR. ",
+        "For the casual customer who does not have an IAC code, this field should reflect an entry of \"CUS\". The customer name should be entered in the CUST field on the ASR. ",
         "The IAC designated in the CCNA field is the provider's contact for management of the access ordering/negotiation process for the life of the order.  When using \"CUS\", management of this process may be determined on an individual provider basis. ",
         "The CCNA is not intended to indicate the customer being billed for the access service.  This is reflected in the ACNA field on the ASR. "
     ],
     "validEntries": [
-        " IAC Code  CUS = Casual customer "
+        {
+            "value": "CUS ",
+            "description": "Casual customer "
+        }
     ],
-    "validEntryNotes": " Valid IAC codes are maintained by  Telcordi a  Technologies. ",
+    "count": 0,
+    "validEntryNotes": " Valid IAC codes are maintained by Telcordia Technologies. ",
     "usage": "Required",
     "dataCharacteristics": "Alpha",
     "fieldLength": "3",

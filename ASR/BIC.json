@@ -8,8 +8,8 @@
     "dataCharacteristics": "Alphanumeric",
     "fieldLength": "12",
     "examples": "\n%20C%20\nP\n%20C%20\n-\nM\nS\nM\nI\nT\nH"
-}2 = Engineering Change  3  = ICSC Record Change  4 = Facility Transfer  5 = Network Reconfiguration  6 = Maintenance Consideration  7 = Other "
-    ],
+}(\nTGSR\n)\n2%20%3D%20Engineering%20Change%20\n3%20\n%3D%20\nICSC%20Record%20Change%20\n4%20%3D%20Facility%20Transfer%20\n5%20%3D%20Network%20Reconfiguration%20\n6%20%3D%20Maintenance%20Consideration%20\n7%20%3D%20Other%20",
+    "count": 0,
     "usage": "Conditional",
     "usageNotes": " Prohibited when the ACT field is \"M\", otherwise optional. ",
     "dataCharacteristics": "Numeric",

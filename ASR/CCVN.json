@@ -4,17 +4,14 @@
     "name": "-",
     "definition": " Coordinated Conversion Identifies the request as being a coordinated conversion reusin g a portion of an existing access service configuration for the provisioning of a new access service. ",
     "fieldNotes": [
-        " Two access service requests  ( one new connect and one disconnect) are required. ",
-        "The entry allows for specification of both ACNA and CCNA as depicted in the example below. ",
-        "When this field is populated on an ASR with \"N\" activity, the ECCKT field must be populated with the circuit identification(s) of the former customer's access service. ",
-        "When a Coordinated Conversion is applicable, it is strongly recommended that both requests  ( N and D) are fully cross- referenced using CCVN, PON and RPON fields, which will allow for a more efficient transition of the services. "
+        " Implemented March 17, 2012  75. ASC-EC - Access Service Coordination - Exchange Company Identifies the ICSC code of the Access Service Coordination - Exchange Company (ASC-EC )  whenever an access service passes through more than one provider territory. ",
+        "An entry in this field indicates that a Multi-EC Form must be associated with this access service request.  "
     ],
-    "validEntries": [
-        " IAC Code(s) "
-    ],
+    "validEntries": "\nIAC%20Code(s)%20",
+    "count": 0,
     "usage": "Conditional",
-    "usageNotes": " Optional when the ACT field is \"N\" or \"D\", otherwise prohibited. ",
-    "dataCharacteristics": "Alpha",
-    "fieldLength": "6",
-    "examples": "\nA%20B\n%20C%20"
+    "usageNotes": " Required when multiple providers are involved in providing access service and the EVCI field is not equal to \"B\".  \nRequired when the JPR field is populated. \nOtherwise prohibited. ",
+    "dataCharacteristics": "Alphanumeric",
+    "fieldLength": "4",
+    "examples": "\nN\nJ\n9\n0"
 }
