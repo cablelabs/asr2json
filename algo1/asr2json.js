@@ -9,19 +9,20 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
     field.fieldNumber = 0;
     for( var i = 0; i<json.formImage["Pages"].length; i++) {
         var texts = json.formImage["Pages"][i]["Texts"];
-        processPage(texts);
+        field.fieldNumber = processPage(texts,field.fieldNumber);
         previous = "none";
     }
 });
 
+
 //function to process the page and fine the definitions in the json file page by page
-function processPage(texts){
+function processPage(texts,fieldNumber){
     var previous = " ";
     var content = " ";
     var number = 0;
     var notesflag = 0;  //flag for notes. 1. field notes, 2. Valid entry notes, 3. Usage notes, 4. Example notes.
 //    var notenumber = 0; //The note number
-    var section_flag = 0;        // flag to indicate the section for the field ( 0 = admin, 1 = bill, 2 = contact)
+    var section_flag = "";        // flag to indicate the section for the field (admin, bill, contact)
     for( var j = 0; j<texts.length; j++) {
         var R = texts[j]["R"];
         for( var k = 0; k<R.length; k++) {
@@ -43,65 +44,59 @@ function processPage(texts){
 //                    fs.mkdirSync(value);
 //                    console.log(" ASR" + value);
                     previous = "form";
-                    }else if(value.indexOf("SECTION") > -1){   //keyword section
-        //                    Checks to find the section for the fields
-                        if(value.indexOf("ADMINISTRATIVE") > -1){
-                            section_flag = 0;
-                            field.section = "ADMIN";
-                            content = content + "ADMIN";
-//                            console.log("section : ADMIN");
-                        }else if(value.indexOf("BILL") > -1){
-                            section_flag = 1;
-                            field.section = "BILL";
-                            content = content + "BILL";
-//                            console.log("section : BILL");
-                        }else if(value.indexOf("CONTACT") > -1){
-                            section_flag = 2;
-                            field.section = "CONTACT";
-                            content = content + "CONTACT";
-//                            console.log("section : CONTACT");
-                        }
-                        previous = "SECTION";
-                    }else if(value.indexOf("NOTE") > -1){
-            //                    console.log(notesflag + " " +value);
-//                        notenumber = (value.substring(value.indexOf(" "), value.indexOf("%3A")));
-                        previous = "NOTES";
-                    }else if(value.indexOf("VALID ENTRIES") > -1){
-                        notesflag = 2;
-                        previous = "VALID ENTRIES";
-                    }else if(value.indexOf("USAGE") > -1){
-                        previous = "USAGE";
-                        notesflag = 3;
-                    }else if(value.indexOf("DATA CHARACTERISTICS") > -1){
-                        previous = "DATA";
-                    }else if(value.indexOf("EXAMPLE") > -1 || value.indexOf("EXAMPLES") > -1){
-                        previous = "EXAMPLE";
-                        notesflag = 4;
-                    }else if(previous === "VALID ENTRIES"){
-                        content = content + value;
-//                        console.log(content);
-//                        console.log("Valid Entry "+number + " " +value);
-                    }else if(value.indexOf("-") > -1){
+                }else if(value.indexOf("SECTION") > -1){   //keyword section
+//                    Checks to find the section for the fields
+                    section_flag = value.substring(0,(value.indexOf("SECTION")));
+                    content = content + section_flag;
+//                    console.log(content);
+                    previous = "SECTION";
+                }else if(value.indexOf("NOTE") > -1){
+//                    console.log(notesflag + " " +value);
+//                    notenumber = (value.substring(value.indexOf(" "), value.indexOf("%3A")));
+                    previous = "NOTES";
+                }else if(value.indexOf("VALID ENTRIES") > -1){
+                    notesflag = 2;
+                    previous = "VALID ENTRIES";
+                }else if(value.indexOf("USAGE") > -1){
+                    previous = "USAGE";
+                    notesflag = 3;
+                }else if(value.indexOf("DATA CHARACTERISTICS") > -1){
+                    previous = "DATA";
+                }else if(value.indexOf("EXAMPLE") > -1 || value.indexOf("EXAMPLES") > -1){
+                    previous = "EXAMPLE";
+                    notesflag = 4;
+                }else{
+                    if(previous === " " || previous === "SECTION"){
 //                        check for fields
-                        previous = "TITLE";
-                        value = getTitle(value);
-                        printContent(previous,value);
+                        var num = parseInt(number);
+                        if(num === (fieldNumber+1)){
+                            previous = "TITLE";
+                            value = getTitle(value);
+                            fieldNumber = num;
+                            printContent(previous,value);
+                        }
                         printContent("fieldnumber",number);
                         notesflag = 1;
+                    }else if(previous === "VALID ENTRIES"){ //use that flag for the notes and this will be handled
+                        previous = "VALID ENTRIES";
+                        console.log("Extra " +value + " previous "+previous);
                     }
-            }else{
-                if(previous === "VALID ENTRIES"){
-                    //add to valid entries
                 }
+            }else{
+//                if(previous === "VALID ENTRIES"){
+//                    //add to valid entries
+//                }
                 number = value;
             }
-
+//            If the string is not in bold
+//              Have to check for not bold after continued appears
            }else if(bold === 0){
 //                 console.log(previous);
                 if(previous === "TITLE"){
-//                    console.log("NAME: " +value);
-                    previous = "NAME";
-                    printContent(previous,value);
+                    if(value.indexOf("(continued)") < -1){
+                        previous = "NAME";
+                        printContent(previous,value);
+                    }
                 }else if(previous === "NAME" || previous === "DEFINITION"){
                     content = content + value;
 //                    console.log("definition: " +value);
@@ -128,6 +123,7 @@ function processPage(texts){
         }
     }
     printContent(previous,content);
+    return fieldNumber;
 }
 
 //format the description based on the tag
@@ -139,16 +135,18 @@ function getFormat(previous,content){
     }
 }
 
+
 //function to convert valid entries to value/description format
 //function formatValidEntries(content){
 //}
+
 
 
 //function to get field length and characteristics
 function getLength(content){
     var values = content.trim();
     values = values.split(" ");
-    console.log("fieldLength: " + values[0]);
+//    console.log("fieldLength: " + values[0]);
     if(values[1] === "alpha"){
         console.log("characteristics: Alpha");
     }else if(values[1] === "numeric"){
@@ -158,12 +156,13 @@ function getLength(content){
     }
 }
 
+
 //extract the title, field number
 function getTitle(content){
     var title = " ";
-    console.log(content);
+//    console.log(content);
     if(content.indexOf(".") > -1){
-        var values = content.replace(/ /g,'');
+        var values = content.replace(/-/g,'');
         //check for field number, if it exists then ignore
         title = title + values;
     }else{
@@ -174,6 +173,7 @@ function getTitle(content){
     return title.substring(0,title.length-1);
 }
 
+
 //print the definition read in the json file
 function printContent(previous,content){
     if(previous === " " && content === " "){
@@ -182,6 +182,7 @@ function printContent(previous,content){
         console.log(previous + ": " + content);
     }
 }
+
 
 //function to convert the special characters in text
 //returns the converted text
@@ -194,6 +195,7 @@ function convertToText(content){
        }
     return content;
 }
+
 
 //function to write the definitions in a separate file
 //fs.writeFile('myfile.json', 'Hey there!', 'utf8', function(err){
