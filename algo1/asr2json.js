@@ -1,5 +1,6 @@
 var fs = require('fs');
 var field = {};
+var currentPointer = {};
 
 fs.readFile('asr.json', 'utf8', function(err, data) {
     if (err) {
@@ -10,7 +11,6 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
     for( var i = 0; i<json.formImage["Pages"].length; i++) {
         var texts = json.formImage["Pages"][i]["Texts"];
         field.fieldNumber = processPage(texts,field);
-        console.log("\n");
     }
 });
 
@@ -19,9 +19,8 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
 function processPage(texts,field){
     var previous = " ";
     var content = " ";
-    var number = 0;
+    var fieldnumber = " ";
     var notesFlag = " ";  //flag for notes.  field notes,  Valid entry notes,  Usage notes,  Example notes.
-//    var noteNumber = 0; //The note number
     var section_flag = "";        // flag to indicate the section for the field (admin, bill, contact)
     for( var j = 0; j<texts.length; j++) {
         var R = texts[j]["R"];
@@ -31,7 +30,6 @@ function processPage(texts,field){
 
             var bold = TS[2];
             value = decodeURI(value);
-
            if(bold === 1){
             //bold and a keyword
             if(isNaN(value)){
@@ -40,8 +38,10 @@ function processPage(texts,field){
                 content = " ";
                 if(value.indexOf("FORM") > -1){           //keyword form
                     field.form = value.substring(value.indexOf("(")+1, value.indexOf(")"));
-//                    fs.mkdirSync(value);
-//                    console.log(" ASR" + value);
+                    var directory = "./" + field.form;
+                    if (!fs.existsSync(directory)) {
+                        fs.mkdirSync(directory);
+                    }
                 }else if(value.indexOf("SECTION") > -1){   //keyword section
 //                    Checks to find the section for the fields
                     section_flag = value.substring(0,(value.indexOf("SECTION")));
@@ -64,20 +64,24 @@ function processPage(texts,field){
                 }else{
                     if(previous === " " || previous === "section"){
 //                        check for fields
-                        var num = (parseInt(number) != (field.fieldNumber+1) ? getFieldNumber(value) : parseInt(number));
-                        if(num === (field.fieldNumber+1)){
+                        var numb = (parseInt(fieldnumber) != (field.fieldNumber+1) ? getFieldNumber(value) : parseInt(fieldnumber));
+                        if(numb === (field.fieldNumber+1)){
                             previous = "title";
-                            field.fieldNumber = num;
-                            value = getTitle(value);
-                            console.log("processed: " +new Date());
+                            writeToFile();
+                            clear();
+                            field.fieldNumber = numb;
+                            field.title = getTitle(value);
+                            field.processed = new Date();
                             printContent("form", field.form);
                             printContent("section",field.section);
-                            printContent(previous,value);
-                            printContent("fieldNumber",number);
+                            printContent(previous,field.title);
+                            printContent("fieldNumber",field.fieldNumber);
+                            notesFlag = "field";
+                        }else{
+                            notesFlag = currentPointer.notesFlag;
                         }
-                        notesFlag = "field";
                     }else{
-                        if(value != "-"){
+                        if(value != "-"){                 //for bold in valid entries
                             previous = notesFlag;
 //                            content  = content + value;
                             printContent(previous,value);
@@ -88,31 +92,29 @@ function processPage(texts,field){
 //                if(previous === "VALID ENTRIES"){
 //                    //add to valid entries
 //                }
-                number = value;
+                fieldnumber = value;
             }
 //            If the string is not in bold
 //              Have to check for not bold after continued appears
            }else if(bold === 0){
-//                 console.log(previous);
                 if(previous === "title"){
                     previous = "name";
-                    printContent(previous,value);
+                    field.name = value;
+                    printContent(previous,field.name);
                 }else if(previous === "name" || previous === "definition"){
                     content = content + value;
-//                    console.log("definition: " +value);
                     previous = "definition";
-//                    content = content + value;
                     notesFlag = "field";
                 }else if(previous != " "){
                     content = content + value;
-                }else if(previous === "form"){
+//                }else if(previous === "form"){
                     //ignore the form description
                 }
             }
         }
     }
-    field.previous = previous;
-    printContent(field.previous,content);           //for examples
+    currentPointer.notesFlag = notesFlag;
+    printContent(previous,content);           //for examples
     return field.fieldNumber;
 }
 
@@ -130,36 +132,30 @@ function getFieldNumber(content){
 //}
 
 
-
 //function to get field length and characteristics
 function getLength(content){
     var values = content.trim();
     values = values.split(" ");
-    printContent("fieldLength",values[0]);
-//    console.log("fieldLength: " + values[0]);
+    field.fieldLength = values[0];
+    printContent("fieldLength",field.fieldLength);
     if(values[1] === "alpha"){
         field.characteristics = "Alpha";
-//        console.log("characteristics: Alpha");
     }else if(values[1] === "numeric"){
         field.characteristics = "Numeric";
-//        console.log("characteristics: Numeric");
     }else if(values[1].indexOf("%2F") > -1){
         field.characteristics = "AlphaNumeric";
-//        console.log("characteristics: AlphaNumeric");
     }
     return field.characteristics;
 }
 
 
-//extract the title, field number
+//extract the title, field fieldnumber
 function getTitle(content){
     var title = " ";
     var values = content.replace(/ |-/g,'');
-//    console.log(content);
     if(content.indexOf(".") > -1){
         var num = values.substring(0,values.indexOf("."));
         values = values.substring((values.indexOf(".")+1),values.length);
-        //check for field number, if it exists then ignore
         title = title + values;
     }else{
         return values;
@@ -168,17 +164,37 @@ function getTitle(content){
 }
 
 
+////function to populate the object field
+function addToField(previous,content){
+    if(previous === "definition"){
+        field.definition = content;
+    }else if(previous === "field notes"){
+        field.fieldNotes.push(content);
+    }else if(previous === "valid entries notes"){
+        field.validEntryNotes.push(content);
+    }else if(previous === "usage notes"){
+        field.usageNotes.push(content);
+    }else if(previous === "usage"){
+        field.usage = content;
+    }else if(previous === "example"){
+        field.example = content;
+    }else if(previous === "valid entries"){
+        field.validEntry.push(content);
+    }
+}
+
+
 //print the definition read in the json file
 function printContent(previous,content){
     if(previous === " " && content === " "){
     }else if(content != " "){
-        if(previous != "data"){
+        if(previous != "data" && isNaN(content)){
         content = convertToText(content);
+        addToField(previous,content);
         }else if(previous === "data"){
             content = getLength(content);
             previous = "characteristics";
         }
-        console.log(previous + ": " + content); //write to a file
     }
 }
 
@@ -191,16 +207,27 @@ function convertToText(content){
        for( var index = 0; index < specialCharacters.length; index++ ) {
            content = content.split(specialCharacters[index]);
            content = content.join(joinText[index]);
+           content = content.trim();
        }
     return content;
 }
 
+//prevFieldNumber, formName, field
+function writeToFile() {
+    console.log(JSON.stringify(field, null, 4));
+    outputFileName =  field.form + "/" + field.title + "meta.json";
+    fs.writeFile(outputFileName, JSON.stringify(field, null, 4), function(err) {
+        if (err) {
+            return console.log(err);
+        }
+    })
+}
 
-//function to write the definitions in a separate file
-//fs.writeFile('myfile.json', 'Hey there!', 'utf8', function(err){
-//    if(err){
-//        return console.log(err);
-//    }
-//
-//    console.log("File saved!");
-//});
+
+//function to clear field properties
+function clear(){
+    field.fieldNotes = [];
+    field.usageNotes = [];
+    field.validEntryNotes = [];
+    field.validEntry = [];
+}
