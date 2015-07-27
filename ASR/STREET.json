@@ -1,6 +1,8 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:08:41.984Z",
+    "processed": "2015-07-27T16:21:24.118Z",
+    "form": "ASR",
+    "section": "CONTACT SECTION",
     "fieldNumber": "109",
     "title": "STREET",
     "name": "Street Address (DSGCON)",
@@ -9,6 +11,6 @@
     "dataCharacteristics": "Alphanumeric",
     "fieldLength": "25",
     "examples": "\n1%202\n5\nE\nM\nA\nI\nN\nS\nT\nR%20E\nE\nT"
-}dLength": "25",
+}ngth": "25",
     "examples": "\n1%202\n5\nE\nM\nA\nI\nN\nS\nT\nR%20E\nE\nT"
 }

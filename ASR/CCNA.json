@@ -1,7 +1,9 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:08:41.984Z",
+    "processed": "2015-07-27T16:21:24.118Z",
     "fieldNumber": "1",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE SECTION",
     "title": "CCNA",
     "name": "Customer Carrier Name Abbreviation",
     "definition": " Identifies the COMMON LANGUAGE IAC code for the customer submitting the ASR and receiving the Confirmation Notice Form (CN). ",

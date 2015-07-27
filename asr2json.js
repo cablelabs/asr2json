@@ -29,9 +29,9 @@ fs.readFile('asrpdf.json', 'utf8', function(err, data) {
                 T = field.R[0]["T"];
                 var checkIfForm = T.split("FORM");
                 if ( checkIfForm.length>1 ) {
-                    var formName = T.split("(");
-                    var formName = formName[1].split(")");
-                    console.log(formName[0]);
+                    field.form = T.split("(");
+                    field.form = (field.form[1].split(")"))[0];
+                    console.log(field.form);
                     flag = 0;
                     continue;
                 }
@@ -46,6 +46,7 @@ fs.readFile('asrpdf.json', 'utf8', function(err, data) {
                 var section = T.split("%20");
                 if (section.length > 1 ) {
                     if ( section[1] == "SECTION") {
+                        field.section = section.join(" ").trim();
                         console.log("Section= " + section.join(" "));
                         continue;
                     }
@@ -66,7 +67,7 @@ fs.readFile('asrpdf.json', 'utf8', function(err, data) {
             else {
                 var prevFieldNumber = field.fieldNumber;
                 if ( prevFieldNumber!=0 && field.fieldNumber!=currentFieldNumber[0] ) {
-                    writeOutput(prevFieldNumber, formName[0], field);
+                    writeOutput(prevFieldNumber, field);
                     cleanFieldProperties();
                     field.fieldNumber = currentFieldNumber[0];
                 }
@@ -337,12 +338,12 @@ function validEntriesFilter(definition) {
 //    return field.validEntries;
 }
 
-function writeOutput(prevFieldNumber, formName, field) {
-    var dir = "./" + formName;
+function writeOutput(prevFieldNumber, field) {
+    var dir = "./" + field.form;
     if (!ofs.existsSync(dir)) {
         ofs.mkdirSync(dir);
     }
-    outputFileName =  formName + "/" + field.title + ".json";
+    outputFileName =  field.form + "/" + field.title + ".json";
     ofs.writeFile(outputFileName, JSON.stringify(field, replacer, 4), function(err) {
         if (err) {
             return console.log(err);
@@ -359,7 +360,7 @@ function replacer(key, value) {
 
 function cleanFieldProperties() {
     for ( var key in field ) {
-        if ( key!="i" && key!="j" && key!="k" && key!="breakString" && key!="breakValue" && key!="asogVersion" && key!="processed" && key!="formName" ) {
+        if ( key!="i" && key!="j" && key!="k" && key!="breakString" && key!="breakValue" && key!="asogVersion" && key!="processed" && key!="form" && key!="section") {
             delete field[key];
         }
     }
