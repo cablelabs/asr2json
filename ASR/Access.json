@@ -1,0 +1,18 @@
+{
+    "fieldNumber": "69",
+    "title": "Access",
+    "name": "NOTE 2%3A",
+    "definition": " Valid CLLI Codes are outlined inTelcordiaTechnologies practice BR 795-(100-186)-100. ",
+    "fieldNotes": [
+        " Use of assigned CLLI Codes may be negotiated. ",
+        "This field will carry the CLLI Code assigned for the location. The precise usage of the field by  a provider will result from negotiation between the provider and the customer. ",
+        "On an Access Service Request for a WAL, the customer may indicate the ACTL from which or to which the WAL traffic originates or terminates. ",
+        "The ACTL code is an 11 character CLLI Code designed for the identification of location entities for all services.  The first 8 characters ma y represent a building location.  The 9 th , 10 th  and 11 th  characters identify a specific customer, and, in addition, may also represent a specific type of service. ",
+        "The APOT field is required if the ACTL does not identify the specific physical termination point of the access service. 8%3A In a customer leasing arrangement, this field will be populated with the facility ACTL (e.g., 9 th,  10 th 11 th  characters are \"WXX\" or \"HXX\" of the facilit y owner's point of presence %5BPOP%5D). 9%3A Multiple customers may utilize the same ACTL.  In some cases, providers maintain the same ACTL CLLI Code in this situation, and in other cases, providers may assign different CLLI Codes  ( 9, 10 and 11 th  characters) for each customer.  This would include access service requested between the terminals of two different customers. 10%3A For those companies that do not rebundle unbundled trunking and transport, the ACTL and SECLOC must represent the same physical location. "
+    ],
+    "usage": "Conditional",
+    "usageNotes": " Prohibited when the EVCI field is \"A\". \nProhibited when the first position of the REQTYP field is \"E\" or \"X\". \nProhibited when the PRILOC field on the RING Form is populated. \nProhibited when the PSLI field is \"A\". \nOptional when the second position of the TQ field is \"N\" or \"X\". \nOptional when the first position of the REQTYP field is \"W\" and the BAN field is not \"N\". \nOtherwise required. ",
+    "dataCharacteristics": "Alphanumeric",
+    "fieldLength": "11",
+    "examples": "\nM\nI\nL\nN\nT\nN\nM\nA\nW\n0\n1\nM\nI\nL\nN\nT\nN\nM\nA\nX\nM\nD"
+}

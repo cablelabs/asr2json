@@ -1,10 +1,25 @@
 {
+    "asogVersion": "50",
+    "processed": "2015-07-27T16:08:41.984Z",
     "fieldNumber": "49",
     "title": "FNT",
     "name": "Fiber Network Type",
     "definition": " Identifies the type of network to which the fiber based service is being assigned. ",
-    "validEntries": "\nA%20\n%3D%20\nSynchronous%20Optical%20Network%20(SONET)%20\nB%20\n%3D%20\nDense%20Wave%20Division%20Multiplexing%20(DWDM)%20%20\nC%20\n%3D%20\nOptical%20Transport%20Network%20(OTN)%20",
-    "count": 0,
+    "validEntries": [
+        {
+            "value": "A ",
+            "description": "Synchronous Optical Network (SONET) "
+        },
+        {
+            "value": "B ",
+            "description": "Dense Wave Division Multiplexing (DWDM)  "
+        },
+        {
+            "value": "C ",
+            "description": "Optical Transport Network (OTN) "
+        }
+    ],
+    "count": 3,
     "usage": "Conditional",
     "usageNotes": " Required when the FNI field is populated, otherwise prohibited.  ",
     "dataCharacteristics": "Alpha",

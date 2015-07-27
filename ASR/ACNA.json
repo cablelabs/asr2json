@@ -1,4 +1,6 @@
 {
+    "asogVersion": "50",
+    "processed": "2015-07-27T16:08:41.984Z",
     "fieldNumber": "83",
     "title": "ACNA",
     "name": "Access Customer Name Abbreviation",
@@ -8,8 +10,21 @@
         "This code is established prior to the submission of the ASR.  ",
         "Billing to an end user who does not have an IAC code is specified with an entry of \"ZZZ\".  When utilizing \"ZZZ\", the Bill Section of the ASR Form should be completed with the end user billin g information. "
     ],
-    "validEntries": "\nIAC%20Code%20\nZZZ%20\n%3D%20\nCasual%20customer%20or%20end%20user%20billing%20",
-    "count": 0,
+    "validEntries": [
+        {
+            "value": "",
+            "description": ""
+        },
+        {
+            "value": "",
+            "description": "IAC Code "
+        },
+        {
+            "value": "ZZZ ",
+            "description": "Casual customer or end user billing "
+        }
+    ],
+    "count": 3,
     "validEntryNotes": " Valid IAC codes are maintained by Telcordia Technologies. ",
     "usage": "Required",
     "dataCharacteristics": "Alpha",

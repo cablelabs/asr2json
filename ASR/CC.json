@@ -1,4 +1,6 @@
 {
+    "asogVersion": "50",
+    "processed": "2015-07-27T16:08:41.984Z",
     "fieldNumber": "7",
     "title": "CC",
     "name": "Company Code",
@@ -6,8 +8,25 @@
     "fieldNotes": [
         " The format and structure of this field is defined by ANSI in document T1.251, Identification of Telecommunications Service Provider Codes for the North American Telecommunications System. "
     ],
-    "validEntries": "\nA%20four%20alpha%2Fnumeric%20character%20code%20structure%20for%20all\nExchange%20Carriers%20in%20North%20America%20and%20certain%20U.S.\nterritories%20maintained%20by%20NECA.%20",
-    "count": 0,
+    "validEntries": [
+        {
+            "value": "",
+            "description": ""
+        },
+        {
+            "value": "",
+            "description": "A four alpha/numeric character code structure for all"
+        },
+        {
+            "value": "",
+            "description": "Exchange Carriers in North America and certain U.S."
+        },
+        {
+            "value": "",
+            "description": "territories maintained by NECA. "
+        }
+    ],
+    "count": 4,
     "usage": "Conditional",
     "usageNotes": " Required when ordering local interconnection services or unbundled network elements, otherwise prohibited. ",
     "dataCharacteristics": "Alphanumeric",

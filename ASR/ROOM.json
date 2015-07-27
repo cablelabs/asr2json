@@ -1,0 +1,11 @@
+{
+    "fieldNumber": "113",
+    "title": "ROOM",
+    "name": "Room (DSGCON)",
+    "definition": " Identifies the room of the design/engineering contact's address. ",
+    "usage": "Conditional",
+    "usageNotes": " Optional when the STREET  ( DSGCON )  field is populated, otherwise prohibited. ",
+    "dataCharacteristics": "Alphanumeric",
+    "fieldLength": "6",
+    "examples": "\nK%20-\n1\n5\n1\nA"
+}

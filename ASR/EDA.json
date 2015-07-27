@@ -1,4 +1,6 @@
 {
+    "asogVersion": "50",
+    "processed": "2015-07-27T16:08:41.984Z",
     "fieldNumber": "36",
     "title": "EDA",
     "name": "Early Date Acceptance",
@@ -7,8 +9,13 @@
         " Population of this field specifies that the customer agrees to accept billing based on the provider due date returned on the confirmation notice. ",
         "Population of this field will not result in expedite charges being billed. "
     ],
-    "validEntries": "\nY%20\n%3D%20\nEarly%20Acceptance%20Authorized%20",
-    "count": 0,
+    "validEntries": [
+        {
+            "value": "Y ",
+            "description": "Early Acceptance Authorized "
+        }
+    ],
+    "count": 1,
     "usage": "Conditional",
     "usageNotes": " Prohibited when the EXP field is populated. \nProhibited when the ASC-EC field is populated. \nOtherwise optional. ",
     "dataCharacteristics": "Alpha",

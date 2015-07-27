@@ -1,10 +1,17 @@
 {
+    "asogVersion": "50",
+    "processed": "2015-07-27T16:08:41.984Z",
     "fieldNumber": "10",
     "title": "QA",
     "name": "Quote Authorized",
     "definition": " Indicates that a quotation charge for special construction is authorized. ",
-    "validEntries": "\nY%20%3D%20Quotation%20Authorized%20",
-    "count": 0,
+    "validEntries": [
+        {
+            "value": "Y ",
+            "description": " Quotation Authorized "
+        }
+    ],
+    "count": 1,
     "usage": "Conditional",
     "usageNotes": " Optional when ACT field is \"N\", \"C\" or \"T\", otherwise prohibited. ",
     "dataCharacteristics": "Alpha",

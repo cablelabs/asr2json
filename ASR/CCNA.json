@@ -1,4 +1,6 @@
 {
+    "asogVersion": "50",
+    "processed": "2015-07-27T16:08:41.984Z",
     "fieldNumber": "1",
     "title": "CCNA",
     "name": "Customer Carrier Name Abbreviation",
@@ -12,11 +14,19 @@
     ],
     "validEntries": [
         {
+            "value": "",
+            "description": ""
+        },
+        {
+            "value": "",
+            "description": "IAC Code "
+        },
+        {
             "value": "CUS ",
             "description": "Casual customer "
         }
     ],
-    "count": 0,
+    "count": 3,
     "validEntryNotes": " Valid IAC codes are maintained by Telcordia Technologies. ",
     "usage": "Required",
     "dataCharacteristics": "Alpha",

@@ -1,11 +1,46 @@
 {
+    "asogVersion": "50",
+    "processed": "2015-07-27T16:08:41.984Z",
     "fieldNumber": "3",
     "title": "COMMON",
     "name": "defined by ANSI ATIS-0300097%3A  Structure for the",
     "definition": " Identification of Telecommunications Connections for the North American Telecommunications System or by  COMMON LANGUAGE in BR-795-450-100. A brie f  summary of the format can be found in ASOG Practice 000, Section 2.14.5.  ",
     "examples": "\n6\n0\n0%200%206%20\n0%200\n0\n0\n0\n0\n6",
-    "validEntries": "\nNOTE%201%3A\nFor%20identification%20of%20an%20unbundled%20multiplexer%20\n(including%20the%20collocation%20cross-connect\n)\n%2C%20unbundled\ntransport%20or%20a%20high%20capacity%20facility%20to%20a%20HUB%20\nlocation.%20",
-    "count": 0,
+    "validEntries": [
+        {
+            "value": "",
+            "description": ""
+        },
+        {
+            "value": "",
+            "description": "NOTE 1:"
+        },
+        {
+            "value": "",
+            "description": "For identification of an unbundled multiplexer "
+        },
+        {
+            "value": "",
+            "description": "(including the collocation cross-connect"
+        },
+        {
+            "value": "",
+            "description": ")"
+        },
+        {
+            "value": "",
+            "description": ", unbundled"
+        },
+        {
+            "value": "",
+            "description": "transport or a high capacity facility to a HUB "
+        },
+        {
+            "value": "",
+            "description": "location. "
+        }
+    ],
+    "count": 8,
     "validEntryNotes": " Either Location A or Z must be 11 characters.  ",
     "usage": "Conditional",
     "usageNotes": " Required when the ACT field is \"N\", \"C\", \"D\", \"M\" or \"T\", the second position of the TQ field is not \"N\" or \"X\", and the EOD USE field on the EOD Form is not \"A\". \nProhibited when the second position of the TQ field is \"N\" or \"X\". \nProhibited  w hen the EOD USE field on the EOD Form is \"A\". \nOtherwise optional. ",

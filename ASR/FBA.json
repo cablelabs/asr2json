@@ -1,10 +1,70 @@
 {
+    "asogVersion": "50",
+    "processed": "2015-07-27T16:08:41.984Z",
     "fieldNumber": "47",
     "title": "FBA",
     "name": "Facility Billing Arrangement",
     "definition": " Indicates a special arrangement has been negotiated between the host customer of a higher level service and the subsequent customer of the lower level service.  ",
-    "validEntries": "\n1\nst\n%20Position%20\nA%20%3D%20Shared%20network%20\nB%20%3D%20Lease%20Back%20\nC%20\n%3D%20\nSplit%20Billing%20-%20All%20Elements%20\nD%20%3D%20Split%20Billing%20\n2\nnd\n%20through%204\nth\n%20Positions%20\nY%20%3D%20Indicates%20the%20requirement%20of%20split%20billing%20on%20the\nrespective%20element.%20",
-    "count": 0,
+    "validEntries": [
+        {
+            "value": "",
+            "description": ""
+        },
+        {
+            "value": "",
+            "description": "1"
+        },
+        {
+            "value": "",
+            "description": "st"
+        },
+        {
+            "value": "",
+            "description": " Position "
+        },
+        {
+            "value": "A ",
+            "description": " Shared network "
+        },
+        {
+            "value": "B ",
+            "description": " Lease Back "
+        },
+        {
+            "value": "C ",
+            "description": "Split Billing - All Elements "
+        },
+        {
+            "value": "D ",
+            "description": " Split Billing "
+        },
+        {
+            "value": "",
+            "description": "2"
+        },
+        {
+            "value": "",
+            "description": "nd"
+        },
+        {
+            "value": "",
+            "description": " through 4"
+        },
+        {
+            "value": "",
+            "description": "th"
+        },
+        {
+            "value": "",
+            "description": " Positions "
+        },
+        {
+            "value": "Y ",
+            "description": " Indicates the requirement of split billing on the"
+        },
+        {}
+    ],
+    "count": 14,
     "validEntryNotes": " An entry in one or more of positions 2 through 4 is required when position 1 is \"D\". \nThe following define element labels%3A   EF %3D Entrance Facility  DT %3D Direct Transport  MUX %3D Multiplexing ",
     "usage": "Conditional",
     "usageNotes": " Required when the ACT field is \"N\", \"C\" or \"T\" and the ACNA field is different from the ACNA associated with the facility  ( CFA and/or SCFA )  and the UNE and CC fields are not populated. \nOptional  w hen the ACT field is \"R\" and the ACNA field is different from the ACNA associated with the facility  ( CFA and/or SCFA )  and the UNE and CC fields are not populated. \nOtherwise prohibited. ",

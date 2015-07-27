@@ -1,4 +1,6 @@
 {
+    "asogVersion": "50",
+    "processed": "2015-07-27T16:08:41.984Z",
     "fieldNumber": "79",
     "title": "SPEC",
     "name": "Service and Product Enhancement Code",
@@ -7,8 +9,21 @@
         " SPEC may be applicable for circuit level features and options other than those already identified by the Network Channel  ( NC )  and Network Channel Interface (NCI) codes. ",
         " Telcordia Technologies, Inc. is the intellectual property owner and administrator of SPEC. The SPEC code structure and use are outlined in Telcordia Technologies special report SR-2491. "
     ],
-    "validEntries": "\nPositions%201-7%20%3D%20Any%20alpha%20character%20except%20%E2%80%9CI%E2%80%9D%20or%20an\ny\nnumeric%20character%20except%20%E2%80%9C0%E2%80%9D.%20",
-    "count": 0,
+    "validEntries": [
+        {
+            "value": "Positions 1-7 ",
+            "description": " Any alpha character except %E2%80%9CI%E2%80%9D or an"
+        },
+        {
+            "value": "",
+            "description": "y"
+        },
+        {
+            "value": "",
+            "description": "numeric character except %E2%80%9C0%E2%80%9D. "
+        }
+    ],
+    "count": 3,
     "usage": "Conditional",
     "usageNotes": " Prohibited when the EVCI field is \"A\", otherwise optional. ",
     "dataCharacteristics": "Alphanumeric",

@@ -1,4 +1,6 @@
 {
+    "asogVersion": "50",
+    "processed": "2015-07-27T16:08:41.984Z",
     "fieldNumber": "37",
     "title": "AENG",
     "name": "-",
@@ -7,8 +9,33 @@
         " This engineering activity is ordered from applicable state tariffs, not from Inter-state Access Tariffs.  ",
         "Additional technical information after the provider has provided the Design Layout Report  ( DLR ) , ma y be billable as additional engineering.  "
     ],
-    "validEntries": "\n1%20%3D%20overtime%20engineering%20\n2%20\n%3D%20\nengineering%20connections%20when%20more%20than%20one%20provider\nis%20providing%20the%20access%20service%20\n3%20%3D%20overtime%20engineering%20and%20engineering%20with%20other\nproviders%20\n4%20%3D%20other%20engineering%20",
-    "count": 0,
+    "validEntries": [
+        {
+            "value": "1 ",
+            "description": " overtime engineering "
+        },
+        {
+            "value": "2 ",
+            "description": "engineering connections when more than one provider"
+        },
+        {
+            "value": "",
+            "description": "is providing the access service "
+        },
+        {
+            "value": "3 ",
+            "description": " overtime engineering and engineering with other"
+        },
+        {
+            "value": "",
+            "description": "providers "
+        },
+        {
+            "value": "4 ",
+            "description": " other engineering "
+        }
+    ],
+    "count": 6,
     "usage": "Conditional",
     "usageNotes": " Optional when the ACT field is \"N\", \"C\", \"M\" or \"T\", otherwise prohibited. ",
     "dataCharacteristics": "Numeric",

@@ -1,4 +1,6 @@
 {
+    "asogVersion": "50",
+    "processed": "2015-07-27T16:08:41.984Z",
     "fieldNumber": "19",
     "title": "LUP",
     "name": "Intrastate IntraLATA Usage Percentage",
@@ -6,8 +8,21 @@
     "fieldNotes": [
         " This field may apply whenever PIU is less than 100."
     ],
-    "validEntries": "\n1%20to%20100%20\nLOF%20%3D%20Letter%20on%20File%20",
-    "count": 0,
+    "validEntries": [
+        {
+            "value": "",
+            "description": ""
+        },
+        {
+            "value": "",
+            "description": "1 to 100 "
+        },
+        {
+            "value": "LOF ",
+            "description": " Letter on File "
+        }
+    ],
+    "count": 3,
     "usage": "Conditional",
     "usageNotes": " Prohibited when the PIU field is not populated or is \"100\". \nProhibited when the first position of the REQTYP field is \"R\". \nProhibited when the ACT field is \"D\". \nOtherwise optional. ",
     "dataCharacteristics": "Alphanumeric",

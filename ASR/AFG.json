@@ -1,10 +1,17 @@
 {
+    "asogVersion": "50",
+    "processed": "2015-07-27T16:08:41.984Z",
     "fieldNumber": "78",
     "title": "AFG",
     "name": "Agency of the Federal Government",
     "definition": " Identifies that this service is provided to an agency of the Federal Government. ",
-    "validEntries": "\nY%20%3D%20Yes%20",
-    "count": 0,
+    "validEntries": [
+        {
+            "value": "Y ",
+            "description": " Yes "
+        }
+    ],
+    "count": 1,
     "usage": " This field is optional. ",
     "dataCharacteristics": "Alpha",
     "fieldLength": "1",

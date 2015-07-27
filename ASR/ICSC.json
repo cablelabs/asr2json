@@ -1,4 +1,6 @@
 {
+    "asogVersion": "50",
+    "processed": "2015-07-27T16:08:41.984Z",
     "fieldNumber": "6",
     "title": "ICSC",
     "name": "Interexchange Customer Service Center",
@@ -8,8 +10,17 @@
         "The first two characters identify the provider.  The third and fourth characters are a unique number within the region identifying the specific ICSC.  The allowable range is 00 to 99.  The provider will supply and periodically update the ICSC codes listing to the customer.  The provider will also supply guidelines for choosing the appropriate ICSC. ",
         " The format and structure of this field is defined by Telcordia in BR-751-100-801 Interexchange Customer Service Center/Service Center (ICSC/SC). "
     ],
-    "validEntries": "\nValid%20ICSC%20Code%20",
-    "count": 0,
+    "validEntries": [
+        {
+            "value": "",
+            "description": ""
+        },
+        {
+            "value": "",
+            "description": "Valid ICSC Code "
+        }
+    ],
+    "count": 2,
     "validEntryNotes": " When the ASC-EC field is populated, this field must be identical to the ASC-EC entry. ",
     "usage": "Required",
     "dataCharacteristics": "Alphanumeric",

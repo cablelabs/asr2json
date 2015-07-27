@@ -1,4 +1,6 @@
 {
+    "asogVersion": "50",
+    "processed": "2015-07-27T16:08:41.984Z",
     "fieldNumber": "76",
     "title": "TSP",
     "name": "Telecommunications Service Priority",
@@ -6,8 +8,25 @@
     "fieldNotes": [
         " These codes are assigned by the TSP Program Office. "
     ],
-    "validEntries": "\nNine%20Character%20TSP%20Control%20Identifier%20\nOne%20Character%20Provisioning%20Priority%20Level%20(E%2C%200-5)%20\nOne%20Digit%20Restoration%20Priority%20Level%20(0-5)%20",
-    "count": 0,
+    "validEntries": [
+        {
+            "value": "",
+            "description": ""
+        },
+        {
+            "value": "",
+            "description": "Nine Character TSP Control Identifier "
+        },
+        {
+            "value": "",
+            "description": "One Character Provisioning Priority Level (E, 0-5) "
+        },
+        {
+            "value": "",
+            "description": "One Digit Restoration Priority Level (0-5) "
+        }
+    ],
+    "count": 4,
     "validEntryNotes": " A TSP code ending in \"00\" indicates \"revocation\", the removal of a previously assigned TSP code.  ",
     "usage": " This field is optional. ",
     "dataCharacteristics": "Alphanumeric",

@@ -3,6 +3,8 @@ var ofs = require('fs');
 var field = {};
 field.breakString = [ "NOTE", "VALID ENTRIES", "USAGE", "DATA CHARACTERISTICS", "EXAMPLE", "EXAMPLES" ];
 field.breakValue = "EXAMPLE";
+field.asogVersion = "50";
+field.processed = new Date();
 
 fs.readFile('asrpdf.json', 'utf8', function(err, data) {
     if (err) {
@@ -13,8 +15,8 @@ fs.readFile('asrpdf.json', 'utf8', function(err, data) {
     var flag = 0;
     var sectionFlag = 0;
     field.fieldNumber = 0;
-//    for( field.i = 0; field.i<json.formImage["Pages"].length; field.i++) {
-    for( field.i = 0; field.i<4; field.i++) { // For each page
+    for( field.i = 0; field.i<json.formImage["Pages"].length; field.i++) {
+//    for( field.i = 0; field.i<4; field.i++) { // For each page
         field.texts = json.formImage["Pages"][field.i]["Texts"];
         for( field.j = 0; field.j<field.texts.length; field.j++) {  // For text in the page
             field.R = field.texts[field.j]["R"];
@@ -107,13 +109,12 @@ fs.readFile('asrpdf.json', 'utf8', function(err, data) {
                     // Valid Entries
                     if ( field.breakValue == "VALID ENTRIES") {
                         if ( 'validEntries' in field ) {
-                            field.validEntries = field.validEntries + "\n" + getFieldInfo(json);
+                            validEntries = validEntries + "\n" + getFieldInfo(json);
                         }
                         else {
-                            field.validEntries = getFieldInfo(json);
+                            var validEntries = getFieldInfo(json);
                         }
-//                        field.validEntries = validEntriesFilter(field.validEntries);
-                        validEntriesFilter(field.validEntries);
+                        validEntriesFilter(validEntries);
 //                        field.validEntries = field.validEntries.split("\n");
                         console.log("\nvalidEntries= " + field.validEntries);
                     }
@@ -177,9 +178,9 @@ fs.readFile('asrpdf.json', 'utf8', function(err, data) {
                     }
                 } while ( field.breakValue!="EXAMPLE" && field.breakValue!="EXAMPLES" );
             }
-            if(field.i > 4) {
-                break;
-            }
+//            if(field.i > 4) {
+//                break;
+//            }
         }
     }
 
@@ -256,8 +257,8 @@ function getFieldInfo(json) {
 }
 
 function filter(definition) {
-    var splitValues = [ "T\n", "\n", "%20", " b y ", " o f ", " w ithin ", " CUS Tfield ", " Telcordi a ", " NOTE ", "%2C", "%E2%80%9C", "%E2%80%9D", "%E2%80%99", "%2F", "1%3A ", "2%3A ", "3%3A ", "4%3A ", "5%3A ", "6%3A ", "7%3A " ];
-    var joinValues = [ "T", " ", " ", " by ", " of ", " within ", " CUST field ",  "Telcordia", "", ",", "\"", "\"", "\'", "/", "\n", "\n", "\n", "\n", "\n", "\n", "\n" ];
+    var splitValues = [ "T\n", "\n", "%20", " b y ", " o f ", " w ithin ", " w indow ", " CUS Tfield ", " w ith ", " uniquel y ", " Telcordi a ", " NOTE ", "%2C", "%E2%80%9C", "%E2%80%9D", "%E2%80%99", "%2F", "1%3A ", "2%3A ", "3%3A ", "4%3A ", "5%3A ", "6%3A ", "7%3A " ];
+    var joinValues = [ "T", " ", " ", " by ", " of ", " within ", " window ", " CUST field ", " with ", " uniquely ",  "Telcordia", "", ",", "\"", "\"", "\'", "/", "\n", "\n", "\n", "\n", "\n", "\n", "\n" ];
     for( var index = 0; index < splitValues.length; index++ ) {
         definition = definition.split(splitValues[index]);
         definition = definition.join(joinValues[index]);
@@ -268,8 +269,8 @@ function filter(definition) {
 function validEntriesFilter(definition) {
 //    var splitValues = [ "%20", "%2F", "%3D", "= \n" ];
 //    var joinValues = [ " ", "/", "=", "= " ];
-    var splitValues = [ "%3D%20", "%2F", "%3D", "= \n", "\n=", "%20" ];
-    var joinValues = [ "= ", "/", "=", "=", "=", " " ];
+    var splitValues = [ "%3D%20", "%2F", "%2C", "%3D", "= \n", "\n=", "%20", "T\n", "%E2%80%93", "%3A", "\n1\nst\n Character" ];
+    var joinValues = [ "= ", "/", ",", "=", "=", "=", " ", "T", "-", ":", "1st Character" ];
 
     for( var index = 0; index < splitValues.length; index++ ) {
         definition = definition.split(splitValues[index]);
@@ -277,21 +278,59 @@ function validEntriesFilter(definition) {
     }
     definition = definition.split("\n");
 
+//    field.validEntries = definition;
     field.validEntries = [];
     field.count = 0;
-    field.validEntries[field.count] = {};
 
     console.log("definition length=" + definition.length);
     for ( var index = 0; index < definition.length; index++ ) {
         console.log("definition[index]=" + definition[index]);
         var len = definition[index].length;
+        field.validEntries[field.count] = {};
         if ( definition[index].indexOf("=") > -1 && definition[index].indexOf("=")!=0 && definition[index].indexOf("=")!=len-1 ) {
-
-            field.validEntries[0].value = definition[index].split("=")[0];
-            field.validEntries[0].description = definition[index].split("=")[1];
-            console.log("field.validEntries[field.count]= " + field["validEntries"[0]]);
-            console.log("field.validEntries[field.count].value= " + field["validEntries"][0]["value"]);
-            console.log("field.validEntries[field.count].description= " + field["validEntries"][0]["description"]);
+            console.log("CASE 1");
+            field.validEntries[field.count].value = definition[index].split("=")[0];
+            field.validEntries[field.count].description = definition[index].split("=")[1];
+            console.log("field.validEntries[field.count]= " + field["validEntries"][field.count]);
+            console.log("field.validEntries[field.count].value= " + field["validEntries"][field.count]["value"]);
+            console.log("field.validEntries[field.count].description= " + field["validEntries"][field.count]["description"]);
+            field.count++;
+        }
+        else if ( definition[index].indexOf("=") > -1 && definition[index].indexOf("=")==0 ) {
+            console.log("CASE 2");
+            field.validEntries[field.count].value = definition[index].split("=")[1];
+            field.validEntries[field.count].description = definition[index - 1];
+            field.count++;
+        }
+        else if ( definition[index].indexOf("=") > -1 && definition[index].indexOf("=")==len-1 ) {
+            console.log("CASE 3");
+            field.validEntries[field.count].value = definition[index].split("=")[0];
+            field.validEntries[field.count].description = definition[index + 1];
+            field.count++;
+        }
+        else {
+            console.log("CASE 4");
+            var flag = 0;
+            if ( index == 0 ) {
+                if(definition[index + 1].indexOf("=") <=-1) {
+                    flag = 1;
+                }
+            }
+            else if ( index == definition.length - 1 ) {
+                if(definition[index - 1].indexOf("=") <=-1) {
+                    flag = 1;
+                }
+            }
+            else if( definition[index - 1].indexOf("=")!= definition[index - 1].length && definition[index + 1].indexOf("=")!=0) {
+                flag = 1;
+            }
+            if ( flag == 1 ) {
+                field.validEntries[field.count].value = "";
+                console.log("defn.index= " + definition[index]);
+                field.validEntries[field.count].description = definition[index];
+                console.log("field.validEntries[field.count].description= " + field.validEntries[field.count].description);
+                field.count++;
+            }
         }
     }
     console.log("field.validEntries= " + field.validEntries);
@@ -312,16 +351,15 @@ function writeOutput(prevFieldNumber, formName, field) {
 }
 
 function replacer(key, value) {
-    if ( key=="R" || key=="texts" || key=="i" || key=="j" || key=="k" || key=="breakString" || key=="breakValue" ) {
+    if ( key=="R" || key=="texts" || key=="i" || key=="j" || key=="k" || key=="breakString" || key=="breakValue") {
         return undefined;
     }
     return value;
 }
+
 function cleanFieldProperties() {
     for ( var key in field ) {
-//        console.log("key= " + key);
-        if ( key!="i" && key!="j" && key!="k" && key!="breakString" && key!="breakValue" ) {
-//            console.log("Key deleted= " + key);
+        if ( key!="i" && key!="j" && key!="k" && key!="breakString" && key!="breakValue" && key!="asogVersion" && key!="processed" && key!="formName" ) {
             delete field[key];
         }
     }

@@ -1,4 +1,6 @@
 {
+    "asogVersion": "50",
+    "processed": "2015-07-27T16:08:41.984Z",
     "fieldNumber": "46",
     "title": "NAG",
     "name": "Network Access Groom",
@@ -7,8 +9,13 @@
         " This field applies only when the Primary, Secondary, Intermediary CFA or CCEA is changin g  and the end user terminating location is not changing. ",
         " Population of this field indicates that the provider will use existing end user location information on record for the circuit(s) being groomed. "
     ],
-    "validEntries": "\nY%20%3D%20Yes%20",
-    "count": 0,
+    "validEntries": [
+        {
+            "value": "Y ",
+            "description": " Yes "
+        }
+    ],
+    "count": 1,
     "usage": "Conditional",
     "usageNotes": " Optional when the first position of the REQTYP field is \"S\", the ACT field is \"N\" or \"D\", the RPON field is populated, the NSL field on the Transport Form is not populated and a Network Access Groom is being requested. \n Optional when the first position of the REQTYP field is \"S\", the ACT field is \"C\", the NSL field on the Transport Form is not populated and a Networ k  Access Groom is being requested. \n Otherwise prohibited. ",
     "dataCharacteristics": "Alpha",

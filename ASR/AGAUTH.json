@@ -1,4 +1,6 @@
 {
+    "asogVersion": "50",
+    "processed": "2015-07-27T16:08:41.984Z",
     "fieldNumber": "39",
     "title": "AGAUTH",
     "name": "Agency Authorization Status",
@@ -7,8 +9,21 @@
         " If this is a new authorization, the customer must provide a copy of the written authorization to the provider. ",
         "Consult with the provider to determine local polic y of agency authorization requirements for the billin g of end users when ordered by the customer. "
     ],
-    "validEntries": "\nB%20\n%3D%20\nBlanket%20authorization%20was%20previously%20provided%20\nE%20\n%3D%20\nAuthorization%20was%20previously%20provided%20%20\nN%20\n%3D%20\nNew%20authorization%20is%20submitted%20",
-    "count": 0,
+    "validEntries": [
+        {
+            "value": "B ",
+            "description": "Blanket authorization was previously provided "
+        },
+        {
+            "value": "E ",
+            "description": "Authorization was previously provided  "
+        },
+        {
+            "value": "N ",
+            "description": "New authorization is submitted "
+        }
+    ],
+    "count": 3,
     "usage": "Conditional",
     "usageNotes": " Required when the customer is acting as  a customer agent, otherwise optional. ",
     "dataCharacteristics": "Alpha",

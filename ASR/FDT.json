@@ -1,4 +1,6 @@
 {
+    "asogVersion": "50",
+    "processed": "2015-07-27T16:08:41.984Z",
     "fieldNumber": "13",
     "title": "FDT",
     "name": "Frame Due Time",
@@ -6,9 +8,78 @@
     "fieldNotes": [
         " Types of changes that require coordination are CIC redirects, switch conversions, mutual trunkin g arrangement, point code changes, traffic rehome/reroutes, call through testing requests, cut over, etc.  "
     ],
-    "validEntries": "\nTime%20Zone%20(Position%201)%20\nCentral%20%3D%20C%20\nEastern%20%3D%20E%20\nMountain%20%3D%20M%20\nPacific%20%3D%20P%20\nTime%20of%20Day%20(Positions%202-7)%20\nT\nwo%20Digit%20Hour%20\n(\n01-12)%2FTwo%20Digit%20Minute%20(00-59)%2FAM%20or%20PM%20\nT\nwo%20Digit%20Hour%20\n(\n01-12)%2FA%20or%20P%2FTwo%20Digit%20Hour%20(01-12)%2FA%20or%20P%20\nAM%20or%20PM%20\nT\nwo%20Digit%20Hour%20\n(\n01-12)%2FA%20or%20P%20",
-    "count": 0,
-    "validEntryNotes": " Indicates the time zone and time or time zone and w indow of time when the service should be connected, disconnected or coordinated. \nWhen this field is populated in con j unction with the CB TEL NO field, a specific time of day including the hour or hour and minute is required. ",
+    "validEntries": [
+        {
+            "value": "",
+            "description": ""
+        },
+        {
+            "value": "",
+            "description": "Time Zone (Position 1) "
+        },
+        {
+            "value": "Central ",
+            "description": " C "
+        },
+        {
+            "value": "Eastern ",
+            "description": " E "
+        },
+        {
+            "value": "Mountain ",
+            "description": " M "
+        },
+        {
+            "value": "Pacific ",
+            "description": " P "
+        },
+        {
+            "value": "",
+            "description": "Time of Day (Positions 2-7) "
+        },
+        {
+            "value": "",
+            "description": "Two Digit Hour "
+        },
+        {
+            "value": "",
+            "description": "("
+        },
+        {
+            "value": "",
+            "description": "01-12)/Two Digit Minute (00-59)/AM or PM "
+        },
+        {
+            "value": "",
+            "description": "Two Digit Hour "
+        },
+        {
+            "value": "",
+            "description": "("
+        },
+        {
+            "value": "",
+            "description": "01-12)/A or P/Two Digit Hour (01-12)/A or P "
+        },
+        {
+            "value": "",
+            "description": "AM or PM "
+        },
+        {
+            "value": "",
+            "description": "Two Digit Hour "
+        },
+        {
+            "value": "",
+            "description": "("
+        },
+        {
+            "value": "",
+            "description": "01-12)/A or P "
+        }
+    ],
+    "count": 17,
+    "validEntryNotes": " Indicates the time zone and time or time zone and window of time when the service should be connected, disconnected or coordinated. \nWhen this field is populated in con j unction with the CB TEL NO field, a specific time of day including the hour or hour and minute is required. ",
     "usage": "Conditional",
     "usageNotes": " Required when the first position of the REQTYP type is \"M\" or \"L\", the ACT field is \"N\", \"C\", or \"D\", and routing and/or translation change requires coordination. \nProhibited when ACT field is \"R\". \nRequired when the CB TEL NO is populated. \nOtherwise optional. ",
     "dataCharacteristics": "Alphanumeric",

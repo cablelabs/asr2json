@@ -1,4 +1,6 @@
 {
+    "asogVersion": "50",
+    "processed": "2015-07-27T16:08:41.984Z",
     "fieldNumber": "38",
     "title": "ALBR",
     "name": "Additional Labor",
@@ -8,8 +10,38 @@
         "It is assumed the initiator has the authority to authorize these requests.  ",
         "Entry in this field is not required if a \"Y\" has been entered in the Expedite (EXP) field.  "
     ],
-    "validEntries": "\n1%20%3D%20Overtime%20installation%20\n2%20%3D%20\nT\nesting%20with%20other%20providers%20\n3%20%3D%20Other%20labor%20\n4%20\n%3D%20\nOvertime%20installation%20and%20testing%20with%20other%20providers%20\n5%20\n%3D%20\nOvertime%20and%20other%20labor%20\n6%20%3D%20\nT\nesting%20with%20other%20providers%20and%20other%20labor%20\n7%20\n%3D%20\nOvertime%20installation%2C%20testing%20with%20other%20providers%20and\nother%20labor%20",
-    "count": 0,
+    "validEntries": [
+        {
+            "value": "1 ",
+            "description": " Overtime installation "
+        },
+        {
+            "value": "2 ",
+            "description": "Testing with other providers "
+        },
+        {
+            "value": "3 ",
+            "description": " Other labor "
+        },
+        {
+            "value": "4 ",
+            "description": "Overtime installation and testing with other providers "
+        },
+        {
+            "value": "5 ",
+            "description": "Overtime and other labor "
+        },
+        {
+            "value": "6 ",
+            "description": "Testing with other providers and other labor "
+        },
+        {
+            "value": "7 ",
+            "description": "Overtime installation, testing with other providers and"
+        },
+        {}
+    ],
+    "count": 7,
     "usage": "Conditional",
     "usageNotes": " Optional when the ACT field is \"N\", \"C\", \"M\" or \"T\", otherwise prohibited.  ",
     "dataCharacteristics": "Numeric",

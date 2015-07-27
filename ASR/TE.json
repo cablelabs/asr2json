@@ -1,10 +1,81 @@
 {
+    "asogVersion": "50",
+    "processed": "2015-07-27T16:08:41.984Z",
     "fieldNumber": "84",
     "title": "TE",
     "name": "Tax Exemption",
     "definition": " Indicates that the customer has submitted a tax exemption form to the provider. ",
-    "validEntries": "\nEntry%20%3D%20\nExempt%20From%20\nA%20\n%3D%20\nF%20%26%20S%20\nB%20\n%3D%20\nF%20%26%20C%20\nC%20\n%3D%20\nCounty%20or%20Local%20\nD%20\n%3D%20\nF%20%26%20S%20%26%20C%20\nE%20\n%3D%20\nF%20%26%20S%20%26%20M%20\nF%20%3D%20Federal%20\nG%20\n%3D%20\nF%20%26%20S%20%26%20C%20%26%20M%20\nH%20\n%3D%20\nS%20%26%20C%20\nI%20\n%3D%20\nS%20%26%20M%20\nJ%20\n%3D%20\nC%20%26%20M%20\nK%20\n%3D%20\nF%20%26%20M%20\nL%20\n%3D%20\nLetter%20on%20File%20\nM%20%3D%20Municipal%20\nN%20%3D%20Non%20Exempt%20\nP%20\n%3D%20\nS%20%26%20C%20%26%20M%20\nS%20%3D%20State%2FProvince%20",
-    "count": 0,
+    "validEntries": [
+        {
+            "value": "Entry ",
+            "description": "Exempt From "
+        },
+        {
+            "value": "A ",
+            "description": "F %26 S "
+        },
+        {
+            "value": "B ",
+            "description": "F %26 C "
+        },
+        {
+            "value": "C ",
+            "description": "County or Local "
+        },
+        {
+            "value": "D ",
+            "description": "F %26 S %26 C "
+        },
+        {
+            "value": "E ",
+            "description": "F %26 S %26 M "
+        },
+        {
+            "value": "F ",
+            "description": " Federal "
+        },
+        {
+            "value": "G ",
+            "description": "F %26 S %26 C %26 M "
+        },
+        {
+            "value": "H ",
+            "description": "S %26 C "
+        },
+        {
+            "value": "I ",
+            "description": "S %26 M "
+        },
+        {
+            "value": "J ",
+            "description": "C %26 M "
+        },
+        {
+            "value": "K ",
+            "description": "F %26 M "
+        },
+        {
+            "value": "L ",
+            "description": "Letter on File "
+        },
+        {
+            "value": "M ",
+            "description": " Municipal "
+        },
+        {
+            "value": "N ",
+            "description": " Non Exempt "
+        },
+        {
+            "value": "P ",
+            "description": "S %26 C %26 M "
+        },
+        {
+            "value": "S ",
+            "description": " State/Province "
+        }
+    ],
+    "count": 17,
     "usage": "Conditional",
     "usageNotes": " Required when the ACT field is \"N\" and the BAN field is \"N\", otherwise optional. ",
     "dataCharacteristics": "Alpha",

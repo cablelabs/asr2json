@@ -1,10 +1,121 @@
 {
+    "asogVersion": "50",
+    "processed": "2015-07-27T16:08:41.984Z",
     "fieldNumber": "40",
     "title": "DATED",
     "name": "Date of Agency Authorization",
     "definition": " Identifies the date appearing on the agency authorization, which was previously submitted to the provider.  ",
-    "validEntries": "\nU.S.%20Standard%20\nMetric%20Format%20\nT\nwo%20Digit%20Month%20\n(\n01-12)%20\nT\nwo%20Digit%20Century%20\n(\n00-99)%20\nT\nwo%20Digit%20Day%20\n(\n01-31)%20\nT\nwo%20Digit%20Year%20\n(\n00-99)%20\nT\nwo%20Digit%20Century%20\n(\n00-99)%20\nT\nwo%20Digit%20Month%20\n(\n01-12)%20\nT\nwo%20Digit%20Year%20\n(\n00-99)%20\nT\nwo%20Digit%20Day%20\n(\n01-31)%20",
-    "count": 0,
+    "validEntries": [
+        {
+            "value": "",
+            "description": ""
+        },
+        {
+            "value": "",
+            "description": "U.S. Standard "
+        },
+        {
+            "value": "",
+            "description": "Metric Format "
+        },
+        {
+            "value": "",
+            "description": "Two Digit Month "
+        },
+        {
+            "value": "",
+            "description": "("
+        },
+        {
+            "value": "",
+            "description": "01-12) "
+        },
+        {
+            "value": "",
+            "description": "Two Digit Century "
+        },
+        {
+            "value": "",
+            "description": "("
+        },
+        {
+            "value": "",
+            "description": "00-99) "
+        },
+        {
+            "value": "",
+            "description": "Two Digit Day "
+        },
+        {
+            "value": "",
+            "description": "("
+        },
+        {
+            "value": "",
+            "description": "01-31) "
+        },
+        {
+            "value": "",
+            "description": "Two Digit Year "
+        },
+        {
+            "value": "",
+            "description": "("
+        },
+        {
+            "value": "",
+            "description": "00-99) "
+        },
+        {
+            "value": "",
+            "description": "Two Digit Century "
+        },
+        {
+            "value": "",
+            "description": "("
+        },
+        {
+            "value": "",
+            "description": "00-99) "
+        },
+        {
+            "value": "",
+            "description": "Two Digit Month "
+        },
+        {
+            "value": "",
+            "description": "("
+        },
+        {
+            "value": "",
+            "description": "01-12) "
+        },
+        {
+            "value": "",
+            "description": "Two Digit Year "
+        },
+        {
+            "value": "",
+            "description": "("
+        },
+        {
+            "value": "",
+            "description": "00-99) "
+        },
+        {
+            "value": "",
+            "description": "Two Digit Day "
+        },
+        {
+            "value": "",
+            "description": "("
+        },
+        {
+            "value": "",
+            "description": "01-31) "
+        }
+    ],
+    "count": 27,
     "usage": "Conditional",
     "usageNotes": " Required when the AGAUTH field is \"E\" or \"B\", otherwise optional.  ",
     "dataCharacteristics": "Alphanumeric",

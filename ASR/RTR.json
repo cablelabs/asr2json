@@ -1,4 +1,6 @@
 {
+    "asogVersion": "50",
+    "processed": "2015-07-27T16:08:41.984Z",
     "fieldNumber": "30",
     "title": "RTR",
     "name": "Response Type Requested",
@@ -7,9 +9,31 @@
         " Implemented March 15, 2014  31. SUP -  Supplement Type A supplement is any new iteration of an Access Service Request (ASR). The entry in the SUP field identifies the reason for which the supplement is being issued.  ",
         "An entry in the REMARKS field can be used to clarify the request. "
     ],
-    "validEntries": "\nF%20\n%3D%20\nSend%20FOC%20only%20\nN%20\n%3D%20\nNo%20response%20required%20\nS%20\n%3D%20\nSend%20FOC%20and%20DLR%3B%20CDLRD%20waived%20\n\n1%20\n%3D%20Cancel%20-%20Indicates%20that%20the%20pending%20order%20is%20to%20be\ncanceled%20in%20its%20entirety.%20",
-    "count": 1,
-    "validEntryNotes": " Implemented March 15, 2014  31.      SUP -  Supplement Type (continued) \nValid for Firm Orders when the ASR has not been confirmed by the provider. \nValid for Service Requests  ( Inquiry )  whether or not the ASR has been confirmed by the provider.  \nIn a Multi-EC environment, the use of a SUP type \"4\" is to be based on the status of the ASC-EC FOC. Since an OEC FOC status may not necessaril y match the ASC-EC FOC status, OECs must be able to accept SUP type \"4\" regardless of FOC status when the ASC-EC field is populated. \nUsed when an OEC is added to or deleted from the Multi-EC Form. When the ASC-EC field is populated w ith an ICSC code other than that of the receivin g provider, the receipt of a SUP \"4\" must be acceptable as the initial ASR to the added OEC. ",
+    "validEntries": [
+        {
+            "value": "F ",
+            "description": "Send FOC only "
+        },
+        {
+            "value": "N ",
+            "description": "No response required "
+        },
+        {
+            "value": "S ",
+            "description": "Send FOC and DLR%3B CDLRD waived "
+        },
+        {
+            "value": "",
+            "description": ""
+        },
+        {
+            "value": "1 ",
+            "description": " Cancel - Indicates that the pending order is to be"
+        },
+        {}
+    ],
+    "count": 5,
+    "validEntryNotes": " Implemented March 15, 2014  31.      SUP -  Supplement Type (continued) \nValid for Firm Orders when the ASR has not been confirmed by the provider. \nValid for Service Requests  ( Inquiry )  whether or not the ASR has been confirmed by the provider.  \nIn a Multi-EC environment, the use of a SUP type \"4\" is to be based on the status of the ASC-EC FOC. Since an OEC FOC status may not necessaril y match the ASC-EC FOC status, OECs must be able to accept SUP type \"4\" regardless of FOC status when the ASC-EC field is populated. \nUsed when an OEC is added to or deleted from the Multi-EC Form. When the ASC-EC field is populated with an ICSC code other than that of the receivin g provider, the receipt of a SUP \"4\" must be acceptable as the initial ASR to the added OEC. ",
     "usage": "Conditional",
     "dataCharacteristics": "Numeric",
     "fieldLength": "1",

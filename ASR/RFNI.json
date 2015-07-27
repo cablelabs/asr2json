@@ -1,4 +1,6 @@
 {
+    "asogVersion": "50",
+    "processed": "2015-07-27T16:08:41.984Z",
     "fieldNumber": "50",
     "title": "RFNI",
     "name": "Related Fiber Network Identification",
@@ -6,8 +8,17 @@
     "fieldNotes": [
         " The Related Fiber Net w ork Identification data will have been previously assigned by the provider. "
     ],
-    "validEntries": "\nValid%20Fiber%20Network%20Identification%20",
-    "count": 0,
+    "validEntries": [
+        {
+            "value": "",
+            "description": ""
+        },
+        {
+            "value": "",
+            "description": "Valid Fiber Network Identification "
+        }
+    ],
+    "count": 2,
     "usage": "Conditional",
     "usageNotes": " Optional when the first position of the REQTYP field is \"R\", \"S\" or \"E\" and the ACT field is not \"D\", otherwise prohibited. ",
     "dataCharacteristics": "Alphanumeric",

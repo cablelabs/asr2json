@@ -1,4 +1,6 @@
 {
+    "asogVersion": "50",
+    "processed": "2015-07-27T16:08:41.984Z",
     "fieldNumber": "45",
     "title": "JPR",
     "name": "Jointly Provided Ring",
@@ -7,8 +9,17 @@
         " A ring can consist of multiple node locations that are not included in the ring CFA of a riding circuit, but are pass-through locations with another provider on the ring who requires a copy of the ASR for cross connection. ",
         "All services riding a Jointly Provided Ring require all providers on the ring to receive a copy of the ASR, even if the locations on the Ring CFA of the riding circuit do not indicate another provider. "
     ],
-    "validEntries": "\nCentral%20Office%20CLLI%20Code%20of%20the%20other%20provider%20on%20the%20ring%20",
-    "count": 0,
+    "validEntries": [
+        {
+            "value": "",
+            "description": ""
+        },
+        {
+            "value": "",
+            "description": "Central Office CLLI Code of the other provider on the ring "
+        }
+    ],
+    "count": 2,
     "usage": "Conditional",
     "usageNotes": " Optional when the first position of the REQTYP field is \"S\", and the CFA or SCFA field on the Transport form or ACI form, or any of the ICFA  ( n ) fields on the NAI form contains a CFA of a  j ointl y provided ring.  \nOptional when the first position of the REQTYP field is \"E\", and the CFA  ( PRILOC )  or CFA ( SECLOC )  field on the EUSA Form, or the CFA or SCFA on the ACI form, or any of the ICFA ( n )  fields on the NAI form contains a CFA of a  j ointl y provided ring.  \nOtherwise prohibited.  ",
     "dataCharacteristics": "",

@@ -1,10 +1,17 @@
 {
+    "asogVersion": "50",
+    "processed": "2015-07-27T16:08:41.984Z",
     "fieldNumber": "35",
     "title": "EXP",
     "name": "Expedite",
     "definition": " Indicates that expedited treatment is requested and any charges generated in provisioning this request  ( e.g., additional engineering charges or labor charges if applicable )  will be accepted.  ",
-    "validEntries": "\nY%20\n%3D%20\nExpedite%20Charges%20Authorized%20",
-    "count": 0,
+    "validEntries": [
+        {
+            "value": "Y ",
+            "description": "Expedite Charges Authorized "
+        }
+    ],
+    "count": 1,
     "usage": "Conditional",
     "usageNotes": " Required when desired due date is less than the standard interval for the provisioning of the service and the ACT field is not \"D\". \nProhibited when the ACT field is \"D\", except outward WATS service. \nOtherwise optional. ",
     "dataCharacteristics": "Alpha",

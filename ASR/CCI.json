@@ -1,10 +1,17 @@
 {
+    "asogVersion": "50",
+    "processed": "2015-07-27T16:08:41.984Z",
     "fieldNumber": "15",
     "title": "CCI",
     "name": "Coordinated Change Indicator",
     "definition": " Identifies this request is a Coordinated Change Activity to an existing access service. ",
-    "validEntries": "\nY%20\n%3D%20\nCoordinated%20Change%20Activity%20",
-    "count": 0,
+    "validEntries": [
+        {
+            "value": "Y ",
+            "description": "Coordinated Change Activity "
+        }
+    ],
+    "count": 1,
     "usage": "Conditional",
     "usageNotes": " Optional when the first position of the REQTYP field is \"E'', \"L\", \"M\", \"S'', \"V\" or \"X\",  and the AC Tfield is  \"N\", \"C\", \"D\", \"T\" or \"M\", otherwise prohibited. ",
     "dataCharacteristics": "Alpha",

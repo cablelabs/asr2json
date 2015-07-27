@@ -1,4 +1,6 @@
 {
+    "asogVersion": "50",
+    "processed": "2015-07-27T16:08:41.984Z",
     "fieldNumber": "20",
     "title": "BSA",
     "name": "Basic Serving Arrangement",
@@ -6,8 +8,13 @@
     "fieldNotes": [
         " In a Multi-EC situation, this field should be populated when at least one provider is bein g requested to provide a BSA or BSE.  "
     ],
-    "validEntries": "\nY%20%3D%20Unbundled%20Ordering%20",
-    "count": 0,
+    "validEntries": [
+        {
+            "value": "Y ",
+            "description": " Unbundled Ordering "
+        }
+    ],
+    "count": 1,
     "usage": "Conditional",
     "usageNotes": " Prohibited when the CC or WST field is populated, otherwise optional. ",
     "dataCharacteristics": "Alpha",
