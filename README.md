@@ -1,6 +1,7 @@
 # asr2json
 asr2json is a converter that takes in the ASR PDF Spec and produces JSON.
-For more information about the converter: https://github.com/cablelabs/asr2json/wiki
+
+* For more information about the converter: https://github.com/cablelabs/asr2json/wiki
 
 ##Setup
 
