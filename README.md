@@ -5,7 +5,7 @@ asr2json is a converter that takes in the ASR PDF Spec and produces JSON.
 
 ##Setup
 
-###Install Node.
+###Install Node.js.
 
 For instructions:
 * https://nodejs.org/download/
@@ -13,7 +13,7 @@ For instructions:
 ###Install pdf2json module.
 * https://github.com/modesty/pdf2json
 
-###Clone the repository
+###Clone the repository.
 Open the terminal. Use the "cd" command to navigate to the desired directory. Clone the git repository (git required)
 
 * git clone https://github.com/cablelabs/asr2json.git
