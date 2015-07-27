@@ -19,6 +19,7 @@ Open the terminal. Use the "cd" command to navigate to the desired directory. Cl
 * git clone https://github.com/cablelabs/asr2json.git
 
 ##Run
+* The module as of now requires the PDF to be converted to a JSON file using the pdf2json module mentioned above. This JSON file is the provided to the asr2json module which converts the file and stores the file in a directory that shares the same name as the form.
 
 ###Navigate to the asr2json directory
 * cd asr2json
