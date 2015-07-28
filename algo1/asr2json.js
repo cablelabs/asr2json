@@ -1,6 +1,5 @@
 var fs = require('fs');
 var field = {};
-var currentPointer = {};
 
 fs.readFile('asr.json', 'utf8', function(err, data) {
     if (err) {
@@ -11,6 +10,9 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
     for( var i = 0; i<json.formImage["Pages"].length; i++) {
         var texts = json.formImage["Pages"][i]["Texts"];
         field.fieldNumber = processPage(texts,field);
+        if(i === json.formImage["Pages"].length-1){     //for the last field
+            writeToFile();
+        }
     }
 });
 
@@ -18,6 +20,7 @@ fs.readFile('asr.json', 'utf8', function(err, data) {
 //function to process the page and retrieve the definitions in the json file page by page
 function processPage(texts,field){
     var previous = " ";
+    var validTitles = " ";
     var content = " ";
     var fieldnumber = " ";
     var notesFlag = " ";  //flag for notes.  field notes,  Valid entry notes,  Usage notes,  Example notes.
@@ -40,7 +43,7 @@ function processPage(texts,field){
                     field.form = value.substring(value.indexOf("(")+1, value.indexOf(")"));
                     var directory = "./" + field.form;
                     if (!fs.existsSync(directory)) {
-                        fs.mkdirSync(directory);
+//                        fs.mkdirSync(directory);
                     }
                 }else if(value.indexOf("SECTION") > -1){   //keyword section
 //                    Checks to find the section for the fields
@@ -69,22 +72,20 @@ function processPage(texts,field){
                             previous = "title";
                             writeToFile();
                             clear();
-                            field.fieldNumber = numb;
-                            field.title = getTitle(value);
                             field.processed = new Date();
-                            printContent("form", field.form);
-                            printContent("section",field.section);
-                            printContent(previous,field.title);
-                            printContent("fieldNumber",field.fieldNumber);
+                            field.title = getTitle(value);
+                            field.fieldNumber = numb;
                             notesFlag = "field";
                         }else{
-                            notesFlag = currentPointer.notesFlag;
+                            notesFlag = field.notesFlag;
+//                            console.log(notesFlag);
                         }
                     }else{
                         if(value != "-"){                 //for bold in valid entries
                             previous = notesFlag;
-//                            content  = content + value;
-                            printContent(previous,value);
+//                            validTitles = validTitles + value;
+                            content  = content + value + " ";
+//                            printContent(previous,value);
                         }
                     }
                 }
@@ -95,25 +96,23 @@ function processPage(texts,field){
                 fieldnumber = value;
             }
 //            If the string is not in bold
-//              Have to check for not bold after continued appears
            }else if(bold === 0){
                 if(previous === "title"){
                     previous = "name";
-                    field.name = value;
-                    printContent(previous,field.name);
+                    field.name = value.replace(/-/g,"");
                 }else if(previous === "name" || previous === "definition"){
                     content = content + value;
                     previous = "definition";
                     notesFlag = "field";
                 }else if(previous != " "){
                     content = content + value;
-//                }else if(previous === "form"){
-                    //ignore the form description
+                    validTitles = " ";
                 }
             }
         }
     }
-    currentPointer.notesFlag = notesFlag;
+//    writeToFile();
+    field.notesFlag = notesFlag;
     printContent(previous,content);           //for examples
     return field.fieldNumber;
 }
@@ -128,8 +127,23 @@ function getFieldNumber(content){
 
 
 //function to convert valid entries to value/description format
-//function formatValidEntries(content){
-//}
+function formatValidEntries(content){
+//    console.log(content);
+//    console.log(" ...");
+    var re = /=/g;
+    var lastSpace = 0;
+    var subStr = " ";
+    var equalSign = [];
+    while((match = re.exec(content))!= null){
+        equalSign.push(match.index);
+    }
+    for(var i = 0;i<equalSign.length;i++){
+        subStr = content.substring(lastSpace,equalSign[i]);
+        lastSpace = subStr.lastIndexOf(" ");
+        field.validEntry.description = subStr.substring(0,lastSpace);
+        field.validEntry.value = subStr.substring(lastSpace,equalSign[i]);
+    }
+}
 
 
 //function to get field length and characteristics
@@ -137,7 +151,6 @@ function getLength(content){
     var values = content.trim();
     values = values.split(" ");
     field.fieldLength = values[0];
-    printContent("fieldLength",field.fieldLength);
     if(values[1] === "alpha"){
         field.characteristics = "Alpha";
     }else if(values[1] === "numeric"){
@@ -145,7 +158,6 @@ function getLength(content){
     }else if(values[1].indexOf("%2F") > -1){
         field.characteristics = "AlphaNumeric";
     }
-    return field.characteristics;
 }
 
 
@@ -158,6 +170,7 @@ function getTitle(content){
         values = values.substring((values.indexOf(".")+1),values.length);
         title = title + values;
     }else{
+        values = (values.replace(/%2F/g,"/"));
         return values;
     }
     return title;
@@ -166,6 +179,7 @@ function getTitle(content){
 
 ////function to populate the object field
 function addToField(previous,content){
+    content = convertToText(content);
     if(previous === "definition"){
         field.definition = content;
     }else if(previous === "field notes"){
@@ -179,6 +193,7 @@ function addToField(previous,content){
     }else if(previous === "example"){
         field.example = content;
     }else if(previous === "valid entries"){
+        formatValidEntries(content);
         field.validEntry.push(content);
     }
 }
@@ -189,10 +204,9 @@ function printContent(previous,content){
     if(previous === " " && content === " "){
     }else if(content != " "){
         if(previous != "data" && isNaN(content)){
-        content = convertToText(content);
         addToField(previous,content);
         }else if(previous === "data"){
-            content = getLength(content);
+            getLength(content);
             previous = "characteristics";
         }
     }
@@ -202,8 +216,8 @@ function printContent(previous,content){
 //function to convert the special characters in text
 //returns the converted text
 function convertToText(content){
-    var specialCharacters= [ "T\n", "\n", "%20", "%26", " b y ", " o f ", " w ithin ", "%2C", "%E2%80%9C", "%E2%80%9D", "%E2%80%99", "%2F", "%3A ", "2%3A ", "3%3A ", "4%3A ", "5%3A ", "6%3A ", "7%3A ", " %3D ", " - " ];
-    var joinText = [ "T", "  ", " ", " & " , " by ", " of ", " within ", ",", "\"", "\"", "\'", "/", ":\n", "\n", "\n", "\n", "\n", "\n", "\n", "=", " " ];
+    var specialCharacters= [ "T\n", "\n", "%20", "%26", " b y ", " o f ", " w ithin ", "%2C", "%E2%80%9C", "%E2%80%9D", "%E2%80%99", "%2F", "%3A ", "y%3A ", "3%3A ", "4%3A ", "5%3A ", "6%3A ", "7%3A ", " %3D ", " - ", "m%3A" ];
+    var joinText = [ "T", "  ", " ", " & " , " by ", " of ", " within ", ",", "\"", "\"", "\'", "/", ": ", "\n", "\n", "\n", "\n", "\n", "\n", "=", " ", "m:" ];
        for( var index = 0; index < specialCharacters.length; index++ ) {
            content = content.split(specialCharacters[index]);
            content = content.join(joinText[index]);
@@ -214,13 +228,15 @@ function convertToText(content){
 
 //prevFieldNumber, formName, field
 function writeToFile() {
+    if(field.fieldNumber != 0){
     console.log(JSON.stringify(field, null, 4));
-    outputFileName =  field.form + "/" + field.title + "meta.json";
-    fs.writeFile(outputFileName, JSON.stringify(field, null, 4), function(err) {
-        if (err) {
-            return console.log(err);
-        }
-    })
+//    outputFileName =  field.form + "/" + field.title + "Meta.json";
+//    fs.writeFile(outputFileName, JSON.stringify(field, null, 4), function(err) {
+//        if (err) {
+//            return console.log(err);
+//        }
+//    })
+    }
 }
 
 
