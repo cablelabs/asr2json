@@ -1,15 +1,18 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "CONTACT SECTION",
-    "fieldNumber": "118",
-    "title": "CBPC",
     "name": "Conference Bridge Passcode Number",
-    "definition": " Identifies the passcode associated with the conference bridge telephone number. ",
-    "usage": "Conditional",
-    "usageNotes": " Optional when the CB TEL NO field is populated, otherwise prohibited ",
-    "dataCharacteristics": "Alphanumeric",
+    "title": "CBPC",
+    "fieldNumber": "118",
     "fieldLength": "15",
-    "examples": "\n1%202\n3\n4\n5\n6\n7\n8\n9\n1\n2\n3\n4\n5\n6%20\n*%202\n3\n4\n5\n6\n7\n7\n*"
+    "characteristics": "Alphanumeric",
+    "usage": "Conditional",
+    "example": "\n1%202\n3\n4\n5\n6\n7\n8\n9\n1\n2\n3\n4\n5\n6%20\n*%202\n3\n4\n5\n6\n7\n7\n*",
+    "definition": "Identifies the passcode associated with the conference bridge telephone number.",
+    "validEntry": "",
+    "validEntryNotes": "",
+    "usageNotes": "Optional when the CB TEL NO field is populated, otherwise prohibited",
+    "fieldNotes": ""
 }

@@ -1,18 +1,20 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE SECTION",
-    "fieldNumber": "67",
-    "title": "TSC",
     "name": "Two Six Code",
-    "definition": " Identifies a code assigned to a trunk group or a CCS Link Set.  ",
-    "fieldNotes": [
-        " The code set is unique to each established trun k group or CCS Link Set and is provided to the customer on the Firm Order Confirmation.  The TSC entry may then be populated by the customer w hen ordering changes, additions or deletions to an existing trunk group or CCS Link Set. "
-    ],
-    "usage": "Conditional",
-    "usageNotes": " Required when the LA field is \"Y\" for established trunk side service or CCS Link Set. \nOptional when the LA field is not populated for established trunk side service or CCS Link Set. \nOtherwise prohibited. ",
-    "dataCharacteristics": "Alphanumeric",
+    "title": "TSC",
+    "fieldNumber": "67",
     "fieldLength": "8",
-    "examples": "\nA%20Q\n2\n3\n4\n5\n6\n7"
+    "characteristics": "Alphanumeric",
+    "usage": "Conditional",
+    "example": "\nA%20Q\n2\n3\n4\n5\n6\n7",
+    "definition": "Identifies a code assigned to a trunk group or a CCS Link Set.",
+    "validEntry": "",
+    "validEntryNotes": "",
+    "usageNotes": "Required when the LA field is \"Y\" for established trunk side service or CCS Link Set. \nOptional when the LA field is not populated for established trunk side service or CCS Link Set. \nOtherwise prohibited.",
+    "fieldNotes": [
+        "The code set is unique to each established trun k group or CCS Link Set and is provided to the customer on the Firm Order Confirmation.  The TSC entry may then be populated by the customer w hen ordering changes, additions or deletions to an existing trunk group or CCS Link Set."
+    ]
 }

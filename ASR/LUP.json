@@ -1,16 +1,17 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE SECTION",
-    "fieldNumber": "19",
-    "title": "LUP",
     "name": "Intrastate IntraLATA Usage Percentage",
-    "definition": " Identifies the percent Intrastate IntraLATA usage for use with IntraLATA competition.  ",
-    "fieldNotes": [
-        " This field may apply whenever PIU is less than 100."
-    ],
-    "validEntries": [
+    "title": "LUP",
+    "fieldNumber": "19",
+    "fieldLength": "3",
+    "characteristics": "Alphanumeric",
+    "usage": "Conditional",
+    "example": "\n3%200",
+    "definition": "Identifies the percent Intrastate IntraLATA usage for use with IntraLATA competition.",
+    "validEntry": [
         {
             "value": "",
             "description": ""
@@ -24,10 +25,9 @@
             "description": " Letter on File "
         }
     ],
-    "count": 3,
-    "usage": "Conditional",
-    "usageNotes": " Prohibited when the PIU field is not populated or is \"100\". \nProhibited when the first position of the REQTYP field is \"R\". \nProhibited when the ACT field is \"D\". \nOtherwise optional. ",
-    "dataCharacteristics": "Alphanumeric",
-    "fieldLength": "3",
-    "examples": "\n3%200"
+    "validEntryNotes": "",
+    "usageNotes": "Prohibited when the PIU field is not populated or is \"100\". \nProhibited when the first position of the REQTYP field is \"R\". \nProhibited when the ACT field is \"D\". \nOtherwise optional.",
+    "fieldNotes": [
+        "This field may apply whenever PIU is less than 100."
+    ]
 }

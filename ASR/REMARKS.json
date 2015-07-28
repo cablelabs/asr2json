@@ -1,14 +1,18 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "BILL SECTION",
-    "fieldNumber": "80",
-    "title": "REMARKS",
     "name": "Remarks",
-    "definition": " Identifies a free flowing field, which can be used to expand upon and clarify other data on this form. ",
-    "usage": " This field is optional. ",
-    "dataCharacteristics": "Alphanumeric",
+    "title": "REMARKS",
+    "fieldNumber": "80",
     "fieldLength": "186",
-    "examples": "\nD\nI\nS\n%20C%20\nO\nF\nF\nI\nR\nS\nT\n%20C%20\nI%20R%20C\nU\nI\nT%20\nI\nN\n%20G%20\nR\nO\nU\nP"
+    "characteristics": "Alphanumeric",
+    "usage": "Optional",
+    "example": "\nD\nI\nS\n%20C%20\nO\nF\nF\nI\nR\nS\nT\n%20C%20\nI%20R%20C\nU\nI\nT%20\nI\nN\n%20G%20\nR\nO\nU\nP",
+    "definition": "Identifies a free flowing field, which can be used to expand upon and clarify other data on this form.",
+    "validEntry": "",
+    "validEntryNotes": "",
+    "usageNotes": "",
+    "fieldNotes": ""
 }

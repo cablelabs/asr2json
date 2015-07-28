@@ -1,14 +1,18 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE SECTION",
-    "fieldNumber": "5",
-    "title": "SPA",
     "name": "Special Action Indicator",
-    "definition": " An indicator used by the customer to identify an order bein g  sampled for quality control purposes. ",
-    "usage": " This field is optional. ",
-    "dataCharacteristics": "Alphanumeric",
+    "title": "SPA",
+    "fieldNumber": "5",
     "fieldLength": "1",
-    "examples": "\nA%20"
+    "characteristics": "Alphanumeric",
+    "usage": "Optional",
+    "example": "\nA%20",
+    "definition": "An indicator used by the customer to identify an order bein g  sampled for quality control purposes.",
+    "validEntry": "",
+    "validEntryNotes": "",
+    "usageNotes": "",
+    "fieldNotes": ""
 }

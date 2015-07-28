@@ -1,13 +1,17 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE SECTION",
-    "fieldNumber": "53",
-    "title": "PSLI",
     "name": "Primary Service Location Indicator",
-    "definition": " Identifies the use of the PSL field. ",
-    "validEntries": [
+    "title": "PSLI",
+    "fieldNumber": "53",
+    "fieldLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "\nA%20",
+    "definition": "Identifies the use of the PSL field.",
+    "validEntry": [
         {
             "value": "A ",
             "description": " Provider Switch "
@@ -49,11 +53,7 @@
             "description": "NPA/NXX%E2%80%99s assigned) "
         }
     ],
-    "count": 10,
-    "validEntryNotes": " Valid entry of \"E\" is to be used to identify the customer's Telcordia%E2%84%A2 LERG%E2%84%A2 Routing Guide based switch for Local Interconnection or Wireless Trunks w hen the actual switch is outside the LATA of services for the assigned NPA/NXX's.  \n Valid entry of \"F\" is to be used to identify the customer's LERG%E2%84%A2 based switch for Local Interconnection or Wireless Trunks when the actual switch is inside the LATA of services for the assigned NPA/NXX's. ",
-    "usage": "Conditional",
-    "usageNotes": " Required when the CC and UNE fields are populated and the ACTL field is not populated. \nRequired when the ACT field is \"N\" or \"C\", the first position of the REQTYP field is \"M\" and the CC or WST fields, or the CC and WST fields are populated. \nProhibited when the ACT field is \"D\". \nOtherwise optional. ",
-    "dataCharacteristics": "Alpha",
-    "fieldLength": "1",
-    "examples": "\nA%20"
+    "validEntryNotes": "Valid entry of \"E\" is to be used to identify the customer's Telcordia%E2%84%A2 LERG%E2%84%A2 Routing Guide based switch for Local Interconnection or Wireless Trunks w hen the actual switch is outside the LATA of services for the assigned NPA/NXX's.  \n Valid entry of \"F\" is to be used to identify the customer's LERG%E2%84%A2 based switch for Local Interconnection or Wireless Trunks when the actual switch is inside the LATA of services for the assigned NPA/NXX's.",
+    "usageNotes": "Required when the CC and UNE fields are populated and the ACTL field is not populated. \nRequired when the ACT field is \"N\" or \"C\", the first position of the REQTYP field is \"M\" and the CC or WST fields, or the CC and WST fields are populated. \nProhibited when the ACT field is \"D\". \nOtherwise optional.",
+    "fieldNotes": ""
 }

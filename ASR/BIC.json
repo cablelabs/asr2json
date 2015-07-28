@@ -1,25 +1,21 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE SECTION",
-    "fieldNumber": "66",
-    "title": "BIC",
     "name": "BIC Identifier",
-    "definition": " Identifies the provider contact, work group or a serial type log, etc., associated with the BIC.  ",
-    "usage": "Conditional",
-    "usageNotes": " Required when the BIC field is populated, otherwise prohibited. ",
-    "dataCharacteristics": "Alphanumeric",
+    "title": "BIC",
+    "fieldNumber": "66",
     "fieldLength": "12",
-    "examples": "\n%20C%20\nP\n%20C%20\n-\nM\nS\nM\nI\nT\nH"
-}cription": "Trunk Group Service Request "
-        },
-        {
-            "value": "",
-            "description": "("
-        },
-        {
-            "value": "",
+    "characteristics": "Alphanumeric",
+    "usage": "Conditional",
+    "example": "\n%20C%20\nP\n%20C%20\n-\nM\nS\nM\nI\nT\nH",
+    "definition": "Identifies the provider contact, work group or a serial type log, etc., associated with the BIC.",
+    "validEntry": "",
+    "validEntryNotes": "",
+    "usageNotes": "Required when the BIC field is populated, otherwise prohibited.",
+    "fieldNotes": ""
+}        "value": "",
             "description": "TGSR"
         },
         {
@@ -51,10 +47,10 @@
             "description": " Other "
         }
     ],
-    "count": 10,
-    "usage": "Conditional",
-    "usageNotes": " Prohibited when the ACT field is \"M\", otherwise optional. ",
-    "dataCharacteristics": "Numeric",
-    "fieldLength": "1",
-    "examples": "\n3%20"
+    "validEntryNotes": "",
+    "usageNotes": "Prohibited when the ACT field is \"M\", otherwise optional.",
+    "fieldNotes": [
+        "BIC entries are provided to the customer by the provider. ",
+        "This field is valid on an ASR Form that responds to a provider initiated change."
+    ]
 }

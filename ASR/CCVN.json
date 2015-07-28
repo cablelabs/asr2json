@@ -1,17 +1,17 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE SECTION",
-    "fieldNumber": "74",
-    "title": "CCVN",
     "name": "-",
-    "definition": " Coordinated Conversion Identifies the request as being a coordinated conversion reusin g a portion of an existing access service configuration for the provisioning of a new access service. ",
-    "fieldNotes": [
-        " Implemented March 17, 2012  75. ASC-EC - Access Service Coordination - Exchange Company Identifies the ICSC code of the Access Service Coordination - Exchange Company (ASC-EC )  whenever an access service passes through more than one provider territory. ",
-        "An entry in this field indicates that a Multi-EC Form must be associated with this access service request.  "
-    ],
-    "validEntries": [
+    "title": "CCVN",
+    "fieldNumber": "74",
+    "fieldLength": "4",
+    "characteristics": "Alphanumeric",
+    "usage": "Conditional",
+    "example": "\nN\nJ\n9\n0",
+    "definition": "Coordinated Conversion Identifies the request as being a coordinated conversion reusin g a portion of an existing access service configuration for the provisioning of a new access service.",
+    "validEntry": [
         {
             "value": "",
             "description": ""
@@ -21,10 +21,10 @@
             "description": "IAC Code(s) "
         }
     ],
-    "count": 2,
-    "usage": "Conditional",
-    "usageNotes": " Required when multiple providers are involved in providing access service and the EVCI field is not equal to \"B\".  \nRequired when the JPR field is populated. \nOtherwise prohibited. ",
-    "dataCharacteristics": "Alphanumeric",
-    "fieldLength": "4",
-    "examples": "\nN\nJ\n9\n0"
+    "validEntryNotes": "",
+    "usageNotes": "Required when multiple providers are involved in providing access service and the EVCI field is not equal to \"B\".  \nRequired when the JPR field is populated. \nOtherwise prohibited.",
+    "fieldNotes": [
+        "Implemented March 17, 2012  75. ASC-EC - Access Service Coordination - Exchange Company Identifies the ICSC code of the Access Service Coordination - Exchange Company (ASC-EC )  whenever an access service passes through more than one provider territory. ",
+        "An entry in this field indicates that a Multi-EC Form must be associated with this access service request."
+    ]
 }

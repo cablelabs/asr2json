@@ -1,18 +1,20 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "CONTACT SECTION",
-    "fieldNumber": "117",
-    "title": "CB",
     "name": "Conference Bridge",
-    "definition": " Telephone Number Identifies the Conference Bridge Telephone number to be used at the time of implementation or cut over. ",
-    "fieldNotes": [
-        " The time allocated for the implementation/cut over activity will be specified in the Frame Due Time (FDT) field on the ASR. "
-    ],
-    "usage": "Conditional",
-    "usageNotes": " Prohibited when the first position of the REQTYP field is \"A\", \"R\", or \"W\", otherwise optional. ",
-    "dataCharacteristics": "Numeric",
+    "title": "CB",
+    "fieldNumber": "117",
     "fieldLength": "10",
-    "examples": "\n8%207\n7\n-\n9\n8\n1\n-\n3\n5\n0\n0"
+    "characteristics": "Numeric",
+    "usage": "Conditional",
+    "example": "\n8%207\n7\n-\n9\n8\n1\n-\n3\n5\n0\n0",
+    "definition": "Telephone Number Identifies the Conference Bridge Telephone number to be used at the time of implementation or cut over.",
+    "validEntry": "",
+    "validEntryNotes": "",
+    "usageNotes": "Prohibited when the first position of the REQTYP field is \"A\", \"R\", or \"W\", otherwise optional.",
+    "fieldNotes": [
+        "The time allocated for the implementation/cut over activity will be specified in the Frame Due Time (FDT) field on the ASR."
+    ]
 }

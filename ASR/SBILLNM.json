@@ -1,14 +1,18 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "BILL SECTION",
-    "fieldNumber": "82",
-    "title": "SBILLNM",
     "name": "Secondary Billing Name",
-    "definition": " Identifies the name of a department or group within the designated BILLNM entry. May also be used to specify the end user customer as identified in field entry \"SAN\", Subscriber Authorization Number used by the customer in con j unction with billing its customer. ",
-    "usage": " This field is optional. ",
-    "dataCharacteristics": "Alphanumeric",
+    "title": "SBILLNM",
+    "fieldNumber": "82",
     "fieldLength": "25",
-    "examples": "\nA%20C\n%20C%20\nO\nU\nN\nT\nS\nR\nE\n%20C%20\nE\nI%20V\nA\nB\nL\nE"
+    "characteristics": "Alphanumeric",
+    "usage": "Optional",
+    "example": "\nA%20C\n%20C%20\nO\nU\nN\nT\nS\nR\nE\n%20C%20\nE\nI%20V\nA\nB\nL\nE",
+    "definition": "Identifies the name of a department or group within the designated BILLNM entry. May also be used to specify the end user customer as identified in field entry \"SAN\", Subscriber Authorization Number used by the customer in con j unction with billing its customer.",
+    "validEntry": "",
+    "validEntryNotes": "",
+    "usageNotes": "",
+    "fieldNotes": ""
 }

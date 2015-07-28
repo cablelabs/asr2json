@@ -1,15 +1,18 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "CONTACT SECTION",
-    "fieldNumber": "114",
-    "title": "CITY",
     "name": "City (DSGCON)",
-    "definition": " Identifies the city, village, township, etc. of the design/engineering contact's address.  ",
-    "usage": "Conditional",
-    "usageNotes": " Required when the STREET  ( DSGCON )  field is populated, otherwise prohibited. ",
-    "dataCharacteristics": "Alpha",
+    "title": "CITY",
+    "fieldNumber": "114",
     "fieldLength": "25",
-    "examples": "\nP%20I\nS\n%20C%20\nA\nT\nA\nW\nA\nY"
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "\nP%20I\nS\n%20C%20\nA\nT\nA\nW\nA\nY",
+    "definition": "Identifies the city, village, township, etc. of the design/engineering contact's address.",
+    "validEntry": "",
+    "validEntryNotes": "",
+    "usageNotes": "Required when the STREET  ( DSGCON )  field is populated, otherwise prohibited.",
+    "fieldNotes": ""
 }

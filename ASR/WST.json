@@ -1,13 +1,17 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE SECTION",
-    "fieldNumber": "25",
-    "title": "WST",
     "name": "Wireless Service Type",
-    "definition": " Identifies the type of wireless service being requested. ",
-    "validEntries": [
+    "title": "WST",
+    "fieldNumber": "25",
+    "fieldLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "\nD",
+    "definition": "Identifies the type of wireless service being requested.",
+    "validEntry": [
         {
             "value": "A ",
             "description": "Dial Mobile or Paging "
@@ -101,10 +105,7 @@
             "description": "Direct connection to an operator tandem "
         }
     ],
-    "count": 23,
-    "usage": "Conditional",
-    "usageNotes": " Prohibited when the first position of the REQTYP field is \"S\", \"W\", \"L\", \"R\", \"V\" or \"X\". \nProhibited when the ACT field is \"D\" and the ACTI field is \"D\" or \"F\". \nOtherwise optional. ",
-    "dataCharacteristics": "Alpha",
-    "fieldLength": "1",
-    "examples": "\nD"
+    "validEntryNotes": "",
+    "usageNotes": "Prohibited when the first position of the REQTYP field is \"S\", \"W\", \"L\", \"R\", \"V\" or \"X\". \nProhibited when the ACT field is \"D\" and the ACTI field is \"D\" or \"F\". \nOtherwise optional.",
+    "fieldNotes": ""
 }

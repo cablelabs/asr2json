@@ -1,15 +1,18 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "CONTACT SECTION",
-    "fieldNumber": "116",
-    "title": "ZIP",
     "name": "ZIP Code (DSGCON)",
-    "definition": " Identifies the ZIP code or postal code of the design/engineerin g contact's address.  ",
-    "usage": "Conditional",
-    "usageNotes": " Required when the STREET  ( DSGCON )  field is populated, otherwise prohibited. ",
-    "dataCharacteristics": "Alphanumeric",
+    "title": "ZIP",
+    "fieldNumber": "116",
     "fieldLength": "12",
-    "examples": "\n0%207\n0\n3\n9\n0%208\n8\n5\n4\n-\n1\n2\n3\n4\n5\n6\nM\n6\n%20G%20\n3\nY\n7"
+    "characteristics": "Alphanumeric",
+    "usage": "Conditional",
+    "example": "\n0%207\n0\n3\n9\n0%208\n8\n5\n4\n-\n1\n2\n3\n4\n5\n6\nM\n6\n%20G%20\n3\nY\n7",
+    "definition": "Identifies the ZIP code or postal code of the design/engineerin g contact's address.",
+    "validEntry": "",
+    "validEntryNotes": "",
+    "usageNotes": "Required when the STREET  ( DSGCON )  field is populated, otherwise prohibited.",
+    "fieldNotes": ""
 }

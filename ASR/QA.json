@@ -1,22 +1,23 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE SECTION",
-    "fieldNumber": "10",
-    "title": "QA",
     "name": "Quote Authorized",
-    "definition": " Indicates that a quotation charge for special construction is authorized. ",
-    "validEntries": [
+    "title": "QA",
+    "fieldNumber": "10",
+    "fieldLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "\nY%20",
+    "definition": "Indicates that a quotation charge for special construction is authorized.",
+    "validEntry": [
         {
             "value": "Y ",
             "description": " Quotation Authorized "
         }
     ],
-    "count": 1,
-    "usage": "Conditional",
-    "usageNotes": " Optional when ACT field is \"N\", \"C\" or \"T\", otherwise prohibited. ",
-    "dataCharacteristics": "Alpha",
-    "fieldLength": "1",
-    "examples": "\nY%20"
+    "validEntryNotes": "",
+    "usageNotes": "Optional when ACT field is \"N\", \"C\" or \"T\", otherwise prohibited.",
+    "fieldNotes": ""
 }

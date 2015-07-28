@@ -1,13 +1,17 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "CONTACT SECTION",
-    "fieldNumber": "100",
-    "title": "PSD",
     "name": "Promotion Subscription Date",
-    "definition": " Identifies the date the customer requested or contracted the pricing promotion from the provider. ",
-    "validEntries": [
+    "title": "PSD",
+    "fieldNumber": "100",
+    "fieldLength": "10",
+    "characteristics": "Alphanumeric",
+    "usage": "Conditional",
+    "example": "\n0%203\n-\n0\n2\n-\n1\n9\n9\n9\n1%209\n9\n9\n-\n0\n3\n-\n0\n2",
+    "definition": "Identifies the date the customer requested or contracted the pricing promotion from the provider.",
+    "validEntry": [
         {
             "value": "",
             "description": ""
@@ -117,10 +121,7 @@
             "description": "01-31) "
         }
     ],
-    "count": 27,
-    "usage": "Conditional",
-    "usageNotes": " Optional when the PNUM field is populated, otherwise prohibited. ",
-    "dataCharacteristics": "Alphanumeric",
-    "fieldLength": "10",
-    "examples": "\n0%203\n-\n0\n2\n-\n1\n9\n9\n9\n1%209\n9\n9\n-\n0\n3\n-\n0\n2"
+    "validEntryNotes": "",
+    "usageNotes": "Optional when the PNUM field is populated, otherwise prohibited.",
+    "fieldNotes": ""
 }

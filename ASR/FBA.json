@@ -1,13 +1,17 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE SECTION",
-    "fieldNumber": "47",
-    "title": "FBA",
     "name": "Facility Billing Arrangement",
-    "definition": " Indicates a special arrangement has been negotiated between the host customer of a higher level service and the subsequent customer of the lower level service.  ",
-    "validEntries": [
+    "title": "FBA",
+    "fieldNumber": "47",
+    "fieldLength": "4",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "\nFBA\nEF%20\nDT%20\nMUX\nD%20Y%20Y%20",
+    "definition": "Indicates a special arrangement has been negotiated between the host customer of a higher level service and the subsequent customer of the lower level service.",
+    "validEntry": [
         {
             "value": "",
             "description": ""
@@ -66,11 +70,7 @@
         },
         {}
     ],
-    "count": 14,
-    "validEntryNotes": " An entry in one or more of positions 2 through 4 is required when position 1 is \"D\". \nThe following define element labels%3A   EF %3D Entrance Facility  DT %3D Direct Transport  MUX %3D Multiplexing ",
-    "usage": "Conditional",
-    "usageNotes": " Required when the ACT field is \"N\", \"C\" or \"T\" and the ACNA field is different from the ACNA associated with the facility  ( CFA and/or SCFA )  and the UNE and CC fields are not populated. \nOptional  w hen the ACT field is \"R\" and the ACNA field is different from the ACNA associated with the facility  ( CFA and/or SCFA )  and the UNE and CC fields are not populated. \nOtherwise prohibited. ",
-    "dataCharacteristics": "Alpha",
-    "fieldLength": "4",
-    "examples": "\nFBA\nEF%20\nDT%20\nMUX\nD%20Y%20Y%20"
+    "validEntryNotes": "An entry in one or more of positions 2 through 4 is required when position 1 is \"D\". \nThe following define element labels%3A   EF %3D Entrance Facility  DT %3D Direct Transport  MUX %3D Multiplexing",
+    "usageNotes": "Required when the ACT field is \"N\", \"C\" or \"T\" and the ACNA field is different from the ACNA associated with the facility  ( CFA and/or SCFA )  and the UNE and CC fields are not populated. \nOptional  w hen the ACT field is \"R\" and the ACNA field is different from the ACNA associated with the facility  ( CFA and/or SCFA )  and the UNE and CC fields are not populated. \nOtherwise prohibited.",
+    "fieldNotes": ""
 }

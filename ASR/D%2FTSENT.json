@@ -1,13 +1,17 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE SECTION",
-    "fieldNumber": "9",
-    "title": "D%2FTSENT",
     "name": "Date and Time Sent",
-    "definition": " Identifies the date and time that the Access Service Request is sent by the customer. ",
-    "validEntries": [
+    "title": "D%2FTSENT",
+    "fieldNumber": "9",
+    "fieldLength": "17",
+    "characteristics": "Alphanumeric",
+    "usage": "Required",
+    "example": "\n0%205\n-\n2\n2\n-\n1\n9\n8\n5\n-\n1\n1\n1\n5%20A%20M\n1%209\n8\n5\n-\n0\n5\n-\n2\n2\n-\n1\n1\n1\n5%20A%20M",
+    "definition": "Identifies the date and time that the Access Service Request is sent by the customer.",
+    "validEntry": [
         {
             "value": "",
             "description": ""
@@ -169,9 +173,7 @@
             "description": "AM or PM "
         }
     ],
-    "count": 40,
-    "usage": "Required",
-    "dataCharacteristics": "Alphanumeric",
-    "fieldLength": "17",
-    "examples": "\n0%205\n-\n2\n2\n-\n1\n9\n8\n5\n-\n1\n1\n1\n5%20A%20M\n1%209\n8\n5\n-\n0\n5\n-\n2\n2\n-\n1\n1\n1\n5%20A%20M"
+    "validEntryNotes": "",
+    "usageNotes": "",
+    "fieldNotes": ""
 }

@@ -1,25 +1,25 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE SECTION",
-    "fieldNumber": "20",
-    "title": "BSA",
     "name": "Basic Serving Arrangement",
-    "definition": " Identifies the requirement for a Basic Serving Arrangement ( BSA ) , which is the minimum necessary transport arrangement for the delivery of the unbundled network features and functions, or for a Basic Service Element  ( BSE )  associated with a Basic Serving Arrangement. ",
-    "fieldNotes": [
-        " In a Multi-EC situation, this field should be populated when at least one provider is bein g requested to provide a BSA or BSE.  "
-    ],
-    "validEntries": [
+    "title": "BSA",
+    "fieldNumber": "20",
+    "fieldLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "\nY%20",
+    "definition": "Identifies the requirement for a Basic Serving Arrangement ( BSA ) , which is the minimum necessary transport arrangement for the delivery of the unbundled network features and functions, or for a Basic Service Element  ( BSE )  associated with a Basic Serving Arrangement.",
+    "validEntry": [
         {
             "value": "Y ",
             "description": " Unbundled Ordering "
         }
     ],
-    "count": 1,
-    "usage": "Conditional",
-    "usageNotes": " Prohibited when the CC or WST field is populated, otherwise optional. ",
-    "dataCharacteristics": "Alpha",
-    "fieldLength": "1",
-    "examples": "\nY%20"
+    "validEntryNotes": "",
+    "usageNotes": "Prohibited when the CC or WST field is populated, otherwise optional.",
+    "fieldNotes": [
+        "In a Multi-EC situation, this field should be populated when at least one provider is bein g requested to provide a BSA or BSE."
+    ]
 }

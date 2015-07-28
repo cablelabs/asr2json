@@ -1,13 +1,17 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE SECTION",
-    "fieldNumber": "57",
-    "title": "PLU",
     "name": "Percentage of Local Usage",
-    "definition": " Identifies the percent of local usage associated with trun k groups carrying local traffic between a LEC and a CLEC. ",
-    "validEntries": [
+    "title": "PLU",
+    "fieldNumber": "57",
+    "fieldLength": "3",
+    "characteristics": "Alphanumeric",
+    "usage": "Conditional",
+    "example": "\n0%203\n0",
+    "definition": "Identifies the percent of local usage associated with trun k groups carrying local traffic between a LEC and a CLEC.",
+    "validEntry": [
         {
             "value": "",
             "description": ""
@@ -21,10 +25,7 @@
             "description": " Letter on File "
         }
     ],
-    "count": 3,
-    "usage": "Conditional",
-    "usageNotes": " Required when the CC field is populated and the first position of the REQTYP field is \"M\" and the ACT field is \"N\", \"C\" or \"R\". \nOptional when the CC field is populated and the first position of the REQTYP field is \"S\" or \"L\" and the ACT field is \"N\", \"C\", \"M\", \"T\" or \"R\". \nOtherwise prohibited. ",
-    "dataCharacteristics": "Alphanumeric",
-    "fieldLength": "3",
-    "examples": "\n0%203\n0"
+    "validEntryNotes": "",
+    "usageNotes": "Required when the CC field is populated and the first position of the REQTYP field is \"M\" and the ACT field is \"N\", \"C\" or \"R\". \nOptional when the CC field is populated and the first position of the REQTYP field is \"S\" or \"L\" and the ACT field is \"N\", \"C\", \"M\", \"T\" or \"R\". \nOtherwise prohibited.",
+    "fieldNotes": ""
 }

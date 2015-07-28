@@ -1,17 +1,17 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE SECTION",
-    "fieldNumber": "79",
-    "title": "SPEC",
     "name": "Service and Product Enhancement Code",
-    "definition": " Identifies a specific product or service offering. ",
-    "fieldNotes": [
-        " SPEC may be applicable for circuit level features and options other than those already identified by the Network Channel  ( NC )  and Network Channel Interface (NCI) codes. ",
-        " Telcordia Technologies, Inc. is the intellectual property owner and administrator of SPEC. The SPEC code structure and use are outlined in Telcordia Technologies special report SR-2491. "
-    ],
-    "validEntries": [
+    "title": "SPEC",
+    "fieldNumber": "79",
+    "fieldLength": "5",
+    "characteristics": "Alphanumeric",
+    "usage": "Conditional",
+    "example": "\nF%20R\nD\nS\n3\n2\n2",
+    "definition": "Identifies a specific product or service offering.",
+    "validEntry": [
         {
             "value": "Positions 1-7 ",
             "description": " Any alpha character except %E2%80%9CI%E2%80%9D or an"
@@ -25,10 +25,10 @@
             "description": "numeric character except %E2%80%9C0%E2%80%9D. "
         }
     ],
-    "count": 3,
-    "usage": "Conditional",
-    "usageNotes": " Prohibited when the EVCI field is \"A\", otherwise optional. ",
-    "dataCharacteristics": "Alphanumeric",
-    "fieldLength": "5",
-    "examples": "\nF%20R\nD\nS\n3\n2\n2"
+    "validEntryNotes": "",
+    "usageNotes": "Prohibited when the EVCI field is \"A\", otherwise optional.",
+    "fieldNotes": [
+        "SPEC may be applicable for circuit level features and options other than those already identified by the Network Channel  ( NC )  and Network Channel Interface (NCI) codes. ",
+        " Telcordia Technologies, Inc. is the intellectual property owner and administrator of SPEC. The SPEC code structure and use are outlined in Telcordia Technologies special report SR-2491."
+    ]
 }

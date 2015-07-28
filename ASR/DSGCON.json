@@ -1,19 +1,21 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "CONTACT SECTION",
-    "fieldNumber": "105",
-    "title": "DSGCON",
     "name": "Design%2FEngineering Contact",
-    "definition": " Identifies the employee of the customer or agent who should be contacted on design/engineering/translation issues and to whom the Design Layout Report may be sent. ",
-    "fieldNotes": [
-        " If DSGCON represents a customer different from the CCNA, the Design Routing Code  ( DRC )  field may be populated for proper DLR distribution. ",
-        "Ty pes of routing and or translation changes that require coordination are CIC redirects, switch conversions, mutual trunking arrangement, point code changes, traffic rehome/reroutes, call through testing requests, etc. "
-    ],
-    "usage": "Conditional",
-    "usageNotes": " Required when the ACT field is \"N\", \"C\", \"M\", or \"T\", otherwise prohibited. ",
-    "dataCharacteristics": "Alphanumeric",
+    "title": "DSGCON",
+    "fieldNumber": "105",
     "fieldLength": "15",
-    "examples": "\nJ%20O\nH\nN\nS\nM\nI\nT\nH"
+    "characteristics": "Alphanumeric",
+    "usage": "Conditional",
+    "example": "\nJ%20O\nH\nN\nS\nM\nI\nT\nH",
+    "definition": "Identifies the employee of the customer or agent who should be contacted on design/engineering/translation issues and to whom the Design Layout Report may be sent.",
+    "validEntry": "",
+    "validEntryNotes": "",
+    "usageNotes": "Required when the ACT field is \"N\", \"C\", \"M\", or \"T\", otherwise prohibited.",
+    "fieldNotes": [
+        "If DSGCON represents a customer different from the CCNA, the Design Routing Code  ( DRC )  field may be populated for proper DLR distribution. ",
+        "Ty pes of routing and or translation changes that require coordination are CIC redirects, switch conversions, mutual trunking arrangement, point code changes, traffic rehome/reroutes, call through testing requests, etc."
+    ]
 }

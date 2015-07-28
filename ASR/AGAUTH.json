@@ -1,17 +1,17 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE SECTION",
-    "fieldNumber": "39",
-    "title": "AGAUTH",
     "name": "Agency Authorization Status",
-    "definition": " Indicates that a customer is acting as another customer's agent.",
-    "fieldNotes": [
-        " If this is a new authorization, the customer must provide a copy of the written authorization to the provider. ",
-        "Consult with the provider to determine local polic y of agency authorization requirements for the billin g of end users when ordered by the customer. "
-    ],
-    "validEntries": [
+    "title": "AGAUTH",
+    "fieldNumber": "39",
+    "fieldLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "\nE%20",
+    "definition": "Indicates that a customer is acting as another customer's agent.",
+    "validEntry": [
         {
             "value": "B ",
             "description": "Blanket authorization was previously provided "
@@ -25,10 +25,10 @@
             "description": "New authorization is submitted "
         }
     ],
-    "count": 3,
-    "usage": "Conditional",
-    "usageNotes": " Required when the customer is acting as  a customer agent, otherwise optional. ",
-    "dataCharacteristics": "Alpha",
-    "fieldLength": "1",
-    "examples": "\nE%20"
+    "validEntryNotes": "",
+    "usageNotes": "Required when the customer is acting as  a customer agent, otherwise optional.",
+    "fieldNotes": [
+        "If this is a new authorization, the customer must provide a copy of the written authorization to the provider. ",
+        "Consult with the provider to determine local polic y of agency authorization requirements for the billin g of end users when ordered by the customer."
+    ]
 }

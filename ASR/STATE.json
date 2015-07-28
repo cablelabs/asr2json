@@ -1,15 +1,18 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "CONTACT SECTION",
-    "fieldNumber": "115",
-    "title": "STATE",
     "name": "State%2FProvince (DSGCON)",
-    "definition": " Identifies the two character postal code for the state/province of  the design/engineering contact's location.  ",
-    "usage": "Conditional",
-    "usageNotes": " Required when the STREET  ( DSGCON )  field is populated, otherwise prohibited. ",
-    "dataCharacteristics": "Alpha",
+    "title": "STATE",
+    "fieldNumber": "115",
     "fieldLength": "2",
-    "examples": "\nN%20J"
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "\nN%20J",
+    "definition": "Identifies the two character postal code for the state/province of  the design/engineering contact's location.",
+    "validEntry": "",
+    "validEntryNotes": "",
+    "usageNotes": "Required when the STREET  ( DSGCON )  field is populated, otherwise prohibited.",
+    "fieldNotes": ""
 }

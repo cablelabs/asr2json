@@ -1,18 +1,21 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE SECTION",
-    "fieldNumber": "63",
-    "title": "ASG",
     "name": "Access Service Group",
-    "definition": " Identifies the access service group assigned to a particular circuit or group of circuits.  ",
-    "fieldNotes": [
-        " This number appears on the Customer Service Record  ( the billing service charge details )  which w as forwarded to the customer when the service was installed, or, when there  w as a change to the bill resulting from service order activity.  The ASG may also be provided on the Confirmation Notice Form (CN) by the provider. ",
-        "If a new ASG is being requested then the only valid entry is \"N\". "
-    ],
-    "usage": " This field is optional. ",
-    "dataCharacteristics": "Alphanumeric",
+    "title": "ASG",
+    "fieldNumber": "63",
     "fieldLength": "6",
-    "examples": "\n1%202\n3"
+    "characteristics": "Alphanumeric",
+    "usage": "Optional",
+    "example": "\n1%202\n3",
+    "definition": "Identifies the access service group assigned to a particular circuit or group of circuits.",
+    "validEntry": "",
+    "validEntryNotes": "",
+    "usageNotes": "",
+    "fieldNotes": [
+        "This number appears on the Customer Service Record  ( the billing service charge details )  which w as forwarded to the customer when the service was installed, or, when there  w as a change to the bill resulting from service order activity.  The ASG may also be provided on the Confirmation Notice Form (CN) by the provider. ",
+        "If a new ASG is being requested then the only valid entry is \"N\"."
+    ]
 }

@@ -1,18 +1,20 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "CONTACT SECTION",
-    "fieldNumber": "112",
-    "title": "FLOOR",
     "name": " Floor (DSGCON)",
-    "definition": " Identifies the floor of the design/engineering contact's address. ",
-    "usage": "Conditional",
-    "usageNotes": " Optional when the STREET  ( DSGCON )  field is populated, otherwise prohibited. ",
-    "dataCharacteristics": "Alphanumeric",
+    "title": "FLOOR",
+    "fieldNumber": "112",
     "fieldLength": "6",
-    "examples": "\nK%20-\n1\n5\n1\nA",
+    "characteristics": "Alphanumeric",
+    "usage": "Conditional",
+    "example": "\nK%20-\n1\n5\n1\nA",
+    "definition": "Identifies the floor of the design/engineering contact's address.",
+    "validEntry": "",
+    "validEntryNotes": "",
+    "usageNotes": "Optional when the STREET  ( DSGCON )  field is populated, otherwise prohibited.",
     "fieldNotes": [
-        " Implemented October 8, 2005  113. ROOM -  Room (DSGCON) Identifies the room of the design/engineering contact's address. "
+        "Implemented October 8, 2005  113. ROOM -  Room (DSGCON) Identifies the room of the design/engineering contact's address."
     ]
 }

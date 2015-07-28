@@ -1,26 +1,26 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE SECTION",
-    "fieldNumber": "42",
-    "title": "LA",
     "name": "Lease Arrangement",
-    "definition": " Indicates there is a lease arrangement associated with the ACTL  and ACNA identified. ",
-    "fieldNotes": [
-        " A lease arrangement exists when one customer's access service is being provided into another customer's point of interface (POI). ",
-        "The customer may be required to provide either  a written copy of the lease arrangement, a letter of  authorization  ( LOA )  or defined, pertinent, auditable information to the provider when the circuit/facilit y being ordered is an immediate service that terminates at the ACTL. Circuit/facility requests by  the same customer ordering against the immediate circuit/facility for which a lease arrangement exists will not be required to reaffirm the lease agreement."
-    ],
-    "validEntries": [
+    "title": "LA",
+    "fieldNumber": "42",
+    "fieldLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "\nY%20",
+    "definition": "Indicates there is a lease arrangement associated with the ACTL  and ACNA identified.",
+    "validEntry": [
         {
             "value": "Y ",
             "description": " Yes "
         }
     ],
-    "count": 1,
-    "usage": "Conditional",
-    "usageNotes": " Required when a lease arrangement exists, otherwise prohibited.  ",
-    "dataCharacteristics": "Alpha",
-    "fieldLength": "1",
-    "examples": "\nY%20"
+    "validEntryNotes": "",
+    "usageNotes": "Required when a lease arrangement exists, otherwise prohibited.",
+    "fieldNotes": [
+        "A lease arrangement exists when one customer's access service is being provided into another customer's point of interface (POI). ",
+        "The customer may be required to provide either  a written copy of the lease arrangement, a letter of  authorization  ( LOA )  or defined, pertinent, auditable information to the provider when the circuit/facilit y being ordered is an immediate service that terminates at the ACTL. Circuit/facility requests by  the same customer ordering against the immediate circuit/facility for which a lease arrangement exists will not be required to reaffirm the lease agreement."
+    ]
 }

@@ -1,16 +1,20 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "CONTACT SECTION",
-    "fieldNumber": "109",
-    "title": "STREET",
     "name": "Street Address (DSGCON)",
-    "definition": " Identifies the street address for the design/engineering contact. ",
-    "usage": " This field is optional. ",
-    "dataCharacteristics": "Alphanumeric",
+    "title": "STREET",
+    "fieldNumber": "109",
     "fieldLength": "25",
-    "examples": "\n1%202\n5\nE\nM\nA\nI\nN\nS\nT\nR%20E\nE\nT"
-}ngth": "25",
-    "examples": "\n1%202\n5\nE\nM\nA\nI\nN\nS\nT\nR%20E\nE\nT"
+    "characteristics": "Alphanumeric",
+    "usage": "Optional",
+    "example": "\n1%202\n5\nE\nM\nA\nI\nN\nS\nT\nR%20E\nE\nT",
+    "definition": "Identifies the street address for the design/engineering contact.",
+    "validEntry": "",
+    "validEntryNotes": "",
+    "usageNotes": "",
+    "fieldNotes": ""
+} the BAN field is \"N\", otherwise optional.",
+    "fieldNotes": ""
 }

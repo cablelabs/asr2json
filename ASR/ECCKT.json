@@ -1,22 +1,17 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE SECTION",
-    "fieldNumber": "60",
-    "title": "ECCKT",
     "name": "Exchange Company Circuit ID",
-    "definition": " Identifies the provider circuit ID or multiple circuit IDs.  ",
-    "fieldNotes": [
-        " The provider assigning this circuit identifier determines the content of this field in accordance with COMMON LANGUAGE standards maintained by Telcordia Technologies. ",
-        "When a component within the format is purposel y omitted, the component should still be delimited and compressed to eliminate any spaces.   ",
-        "All components within the ECCKT should be delimited by either virgules or periods. ",
-        "If all positions in a component within the ECCK Tare not populated, the component should be compressed to eliminate any spaces.   ",
-        "Use of ranging is based on customer/provider negotiations. Ranges should be shown within the appropriate component of the ID by specifying the lowest value of the component, hyphen, highest value of the component, e.g., trunk numbers 3500 through 3512 would be shown as 3500-3512. ",
-        "When disconnecting all circuits in a given account, \"ALL\" should be entered in this field, the BAN field populated, and the ACT field should contain a \"D\". ",
-        "The COMMON LANGUAGE Special Service Circuit  Code in this field should not reflect a value that  equates to the EVC circuit identification.  8%3A The format and structure of the field is defined by ANSI standards. "
-    ],
-    "validEntries": [
+    "title": "ECCKT",
+    "fieldNumber": "60",
+    "fieldLength": "",
+    "characteristics": "",
+    "usage": "",
+    "example": "\nA2%2FSBFS%2F201%2F981%2F3500%2F%2F123%20\nA2%2FLBFS%2F032719%2F001%2FNY%20\n2.%20\nCOMMON%20LANGUAGE%20Message%20Trunk%20Circuit%20Codes\n(CLCI%20MSG%20Codes)%20as%20defined%20by%20ANSI%20in%20ATIS-0300097%3A\nStructure%20for%20the%20Identification%20of%20Telecommunications\nConnections%20for%20the%20North%20American%20Telecommunications\nSystem%20or%20by%20COMMON%20LANGUAGE%20in%20BR-795-400-100.\nA%20brief%20summary%20of%20the%20format%20can%20be%20found%20in%20ASOG\nPractice%20000%2C%20Section%202.14.2.%20%20",
+    "definition": "Identifies the provider circuit ID or multiple circuit IDs.",
+    "validEntry": [
         {
             "value": "",
             "description": ""
@@ -54,6 +49,15 @@
             "description": "ASOG Practice 000, Section 2.14.3 and 2.14.4. "
         }
     ],
-    "count": 9,
-    "examples": "\nA2%2FSBFS%2F201%2F981%2F3500%2F%2F123%20\nA2%2FLBFS%2F032719%2F001%2FNY%20\n2.%20\nCOMMON%20LANGUAGE%20Message%20Trunk%20Circuit%20Codes\n(CLCI%20MSG%20Codes)%20as%20defined%20by%20ANSI%20in%20ATIS-0300097%3A\nStructure%20for%20the%20Identification%20of%20Telecommunications\nConnections%20for%20the%20North%20American%20Telecommunications\nSystem%20or%20by%20COMMON%20LANGUAGE%20in%20BR-795-400-100.\nA%20brief%20summary%20of%20the%20format%20can%20be%20found%20in%20ASOG\nPractice%20000%2C%20Section%202.14.2.%20%20"
+    "validEntryNotes": "",
+    "usageNotes": "",
+    "fieldNotes": [
+        "The provider assigning this circuit identifier determines the content of this field in accordance with COMMON LANGUAGE standards maintained by Telcordia Technologies. ",
+        "When a component within the format is purposel y omitted, the component should still be delimited and compressed to eliminate any spaces.   ",
+        "All components within the ECCKT should be delimited by either virgules or periods. ",
+        "If all positions in a component within the ECCK Tare not populated, the component should be compressed to eliminate any spaces.   ",
+        "Use of ranging is based on customer/provider negotiations. Ranges should be shown within the appropriate component of the ID by specifying the lowest value of the component, hyphen, highest value of the component, e.g., trunk numbers 3500 through 3512 would be shown as 3500-3512. ",
+        "When disconnecting all circuits in a given account, \"ALL\" should be entered in this field, the BAN field populated, and the ACT field should contain a \"D\". ",
+        "The COMMON LANGUAGE Special Service Circuit  Code in this field should not reflect a value that  equates to the EVC circuit identification.  8%3A The format and structure of the field is defined by ANSI standards."
+    ]
 }

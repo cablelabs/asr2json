@@ -1,20 +1,20 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "CONTACT SECTION",
-    "fieldNumber": "104",
-    "title": "INIT",
     "name": "Initiator Electronic Mail Address",
-    "definition": " Identifies the electronic mail address of the initiator. ",
-    "usage": " This field is optional. ",
-    "dataCharacteristics": "Alphanumeric",
+    "title": "INIT",
+    "fieldNumber": "104",
     "fieldLength": "60",
-    "examples": "\nZ%20J\nO\nN\nE\nS\n%40\nN\nO\nT\nE\nS\n.\nB\nE%20L%20L%20C\nO\nM\nP%20A\nN\nY\n.\n%20C%20\nO\nM"
-}f this person. "
-    ],
-    "usage": "Required",
-    "dataCharacteristics": "Alphanumeric",
-    "fieldLength": "15",
-    "examples": "\nJ%20O\nH\nN\nS\nM\nI\nT\nH"
+    "characteristics": "Alphanumeric",
+    "usage": "Optional",
+    "example": "\nZ%20J\nO\nN\nE\nS\n%40\nN\nO\nT\nE\nS\n.\nB\nE%20L%20L%20C\nO\nM\nP%20A\nN\nY\n.\n%20C%20\nO\nM",
+    "definition": "Identifies the electronic mail address of the initiator.",
+    "validEntry": "",
+    "validEntryNotes": "",
+    "usageNotes": "",
+    "fieldNotes": ""
+}his request. An y authorizations of charges, changes or waiving the Confirming Design Layout Report  ( CDLR )  are the responsibility of this person."
+    ]
 }

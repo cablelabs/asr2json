@@ -1,20 +1,22 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "CONTACT SECTION",
-    "fieldNumber": "110",
-    "title": "DRC",
     "name": "Design Routing Code",
-    "definition": " Identifies the customer location routing code for the design contact for this request.  ",
-    "fieldNotes": [
-        " The routing code represents the followin g information%3A  Company  Street  Floor  Room  City  State/Province  ZIP Code ",
-        "When populated, this will be the first choice for routing the DLR. ",
-        "Valid DRC codes are outlined inTelcordiaTechnologies' practice BR-751-100-465. "
-    ],
-    "usage": "Conditional",
-    "usageNotes": " Required when the ACT field is \"N\", \"C\" or \"T\", the RTR field is \"S\" or \"1-10\", and the STREE T  (DSGCON) field is not populated or the DSGCON FAX NO field is not populated.   \nProhibited when the first position of the RTR field is \"F\". \nOtherwise optional. ",
-    "dataCharacteristics": "Alphanumeric",
+    "title": "DRC",
+    "fieldNumber": "110",
     "fieldLength": "3",
-    "examples": "\nA%20N\n3"
+    "characteristics": "Alphanumeric",
+    "usage": "Conditional",
+    "example": "\nA%20N\n3",
+    "definition": "Identifies the customer location routing code for the design contact for this request.",
+    "validEntry": "",
+    "validEntryNotes": "",
+    "usageNotes": "Required when the ACT field is \"N\", \"C\" or \"T\", the RTR field is \"S\" or \"1-10\", and the STREE T  (DSGCON) field is not populated or the DSGCON FAX NO field is not populated.   \nProhibited when the first position of the RTR field is \"F\". \nOtherwise optional.",
+    "fieldNotes": [
+        "The routing code represents the followin g information%3A  Company  Street  Floor  Room  City  State/Province  ZIP Code ",
+        "When populated, this will be the first choice for routing the DLR. ",
+        "Valid DRC codes are outlined inTelcordiaTechnologies' practice BR-751-100-465."
+    ]
 }

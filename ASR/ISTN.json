@@ -1,13 +1,17 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE SECTION",
-    "fieldNumber": "68",
-    "title": "ISTN",
     "name": "Interconnection Screening Telephone Number",
-    "definition": " Identifies the telephone number used for billing or translation purposes. ",
-    "validEntries": [
+    "title": "ISTN",
+    "fieldNumber": "68",
+    "fieldLength": "10",
+    "characteristics": "Numeric",
+    "usage": "Conditional",
+    "example": "\n3%201\n4\n-\n8\n3\n7\n-\n1\n2\n3\n4",
+    "definition": "Identifies the telephone number used for billing or translation purposes.",
+    "validEntry": [
         {
             "value": "",
             "description": ""
@@ -21,11 +25,7 @@
             "description": "NPA-NXX-XXXX "
         }
     ],
-    "count": 3,
-    "validEntryNotes": " This telephone number would be customer owned and identified during customer/provider pre- negotiations. ",
-    "usage": "Conditional",
-    "usageNotes": " Prohibited when the ACT field is \"D\", otherwise optional. ",
-    "dataCharacteristics": "Numeric",
-    "fieldLength": "10",
-    "examples": "\n3%201\n4\n-\n8\n3\n7\n-\n1\n2\n3\n4"
+    "validEntryNotes": "This telephone number would be customer owned and identified during customer/provider pre- negotiations.",
+    "usageNotes": "Prohibited when the ACT field is \"D\", otherwise optional.",
+    "fieldNotes": ""
 }

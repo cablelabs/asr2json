@@ -1,16 +1,17 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE SECTION",
-    "fieldNumber": "32",
-    "title": "AFO",
     "name": "Indicates which additional forms are being submitted with this",
-    "definition": " request.   Character Position 1 %3D Additional Circuit Information  ( ACI )  Form  Character Position 2 %3D  Reserved for future use  Character Position 3 %3D  Network Assignment Information (NAI)  Character Position 4 %3D  End Office Detail (EOD) Form  Character Position 5 %3D  Virtual Concatenation (VCAT) Form ",
-    "fieldNotes": [
-        " The customer should populate the appropriate character position ( s )  to indicate which additional form(s) is attached.  "
-    ],
-    "validEntries": [
+    "title": "AFO",
+    "fieldNumber": "32",
+    "fieldLength": "5",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "\nY%20",
+    "definition": "request.   Character Position 1 %3D Additional Circuit Information  ( ACI )  Form  Character Position 2 %3D  Reserved for future use  Character Position 3 %3D  Network Assignment Information (NAI)  Character Position 4 %3D  End Office Detail (EOD) Form  Character Position 5 %3D  Virtual Concatenation (VCAT) Form",
+    "validEntry": [
         {
             "value": "",
             "description": ""
@@ -52,11 +53,9 @@
             "description": "5 Y VCAT Form "
         }
     ],
-    "count": 10,
-    "validEntryNotes": " Position 1 entry must be populated for  a  supplement canceling all circuits contained on the initial ACI records%3B each individual circuit record on the supplement would carry a CKTACT %3D \"K\". \nAn entry in position 1 is not applicable when the first position of the REQTYP field is \"R\".   \nAn entry in position 1 must be used when position 3 is populated and the first position of the REQTYP field is \"M\", the entry in the QTY field is greater than one (1 )  and the QACI field on the Trunkin g  Form is populated. \nWhen position 3 is populated and the first position of the REQTYP field is \"A\", \"E\" or \"S\" and the entr y  in the QTY field is greater than one  ( 1 ) , character position 1 must be populated.  \nAn entry in position 5 is only applicable when the first position of the REQTYP field is \"E\", \"R\", \"S\", \"V\" or \"X\".   ",
-    "usage": "Conditional",
-    "usageNotes": " Required when the associated request form ( s )  is applicable and sent, otherwise prohibited.  ",
-    "dataCharacteristics": "Alpha",
-    "fieldLength": "5",
-    "examples": "\nY%20"
+    "validEntryNotes": "Position 1 entry must be populated for  a  supplement canceling all circuits contained on the initial ACI records%3B each individual circuit record on the supplement would carry a CKTACT %3D \"K\". \nAn entry in position 1 is not applicable when the first position of the REQTYP field is \"R\".   \nAn entry in position 1 must be used when position 3 is populated and the first position of the REQTYP field is \"M\", the entry in the QTY field is greater than one (1 )  and the QACI field on the Trunkin g  Form is populated. \nWhen position 3 is populated and the first position of the REQTYP field is \"A\", \"E\" or \"S\" and the entr y  in the QTY field is greater than one  ( 1 ) , character position 1 must be populated.  \nAn entry in position 5 is only applicable when the first position of the REQTYP field is \"E\", \"R\", \"S\", \"V\" or \"X\".",
+    "usageNotes": "Required when the associated request form ( s )  is applicable and sent, otherwise prohibited.",
+    "fieldNotes": [
+        "The customer should populate the appropriate character position ( s )  to indicate which additional form(s) is attached."
+    ]
 }

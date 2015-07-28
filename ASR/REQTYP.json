@@ -1,98 +1,17 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE SECTION",
-    "fieldNumber": "21",
-    "title": "REQTYP",
     "name": "Requisition Type and Status",
-    "definition": " Identifies the type of service being requested and the status of the request. ",
-    "fieldNotes": [
-        " A request may be issued as a Service Request (Inquiry) or Firm Order.  The Service Request and Firm Order process description can be found in the Access Service Ordering Overview (ATIS-0404000, Section 5, Four Step Ordering Process).  ",
-        "The first character of REQTYP specifies the type of service/element. ",
-        "The second character of REQTYP specifies the status of the request in the four step order process."
-    ],
-    "validEntries": [
-        {
-            "value": "A ",
-            "description": "Switched Access - Feature Group A "
-        },
-        {
-            "value": "E ",
-            "description": "End User Special Access, DNAL, Part Time/Full Time"
-        },
-        {
-            "value": "",
-            "description": "Television or Program Audio, Specialized Ethernet"
-        },
-        {
-            "value": "",
-            "description": "Aggregation, Switched Ethernet Services "
-        },
-        {
-            "value": "L ",
-            "description": "CCS Link or Unbundled STP Port "
-        },
-        {
-            "value": "M ",
-            "description": "Trunking "
-        },
-        {
-            "value": "",
-            "description": "("
-        },
-        {
-            "value": "",
-            "description": "FG B, C, D, SAC NXX, Wireless and Local"
-        },
-        {
-            "value": "",
-            "description": ")"
-        },
-        {
-            "value": "R ",
-            "description": " Ring "
-        },
-        {
-            "value": "S ",
-            "description": " Special Access, Full Time/Part Time Television or"
-        },
-        {
-            "value": "",
-            "description": "Program Audio, DNAL Switched Access Facility,"
-        },
-        {
-            "value": "",
-            "description": "Unbundled Dedicated Transport, Unbundled"
-        },
-        {
-            "value": "",
-            "description": "Multiplexer, Specialized Ethernet Aggregation, Switched"
-        },
-        {
-            "value": "",
-            "description": "Ethernet Services, Stand Alone EVC "
-        },
-        {
-            "value": "V ",
-            "description": "Broadband Services, ATM, Frame Relay Service "
-        },
-        {
-            "value": "W ",
-            "description": "WATS Access Line "
-        },
-        {
-            "value": "X ",
-            "description": " Broadband End User Services, ATM, Frame Rela"
-        },
-        {
-            "value": "",
-            "description": "y "
-        },
-        {
-            "value": "",
-            "description": "Service "
-        },
+    "title": "REQTYP",
+    "fieldNumber": "21",
+    "fieldLength": "2",
+    "characteristics": "Alpha",
+    "usage": "Required",
+    "example": "\nM\nA",
+    "definition": "Identifies the type of service being requested and the status of the request.",
+    "validEntry": [
         {
             "value": "",
             "description": ""
@@ -223,10 +142,11 @@
         },
         {}
     ],
-    "count": 52,
-    "validEntryNotes": " \"E\" is prohibited for Stand Alone Ethernet Virtual Connection (EVCI %3D \"A\") services. ",
-    "usage": "Required",
-    "dataCharacteristics": "Alpha",
-    "fieldLength": "2",
-    "examples": "\nM\nA"
+    "validEntryNotes": "\"E\" is prohibited for Stand Alone Ethernet Virtual Connection (EVCI %3D \"A\") services.",
+    "usageNotes": "",
+    "fieldNotes": [
+        "A request may be issued as a Service Request (Inquiry) or Firm Order.  The Service Request and Firm Order process description can be found in the Access Service Ordering Overview (ATIS-0404000, Section 5, Four Step Ordering Process).  ",
+        "The first character of REQTYP specifies the type of service/element. ",
+        "The second character of REQTYP specifies the status of the request in the four step order process."
+    ]
 }

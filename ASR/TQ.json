@@ -1,13 +1,17 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE SECTION",
-    "fieldNumber": "34",
-    "title": "TQ",
     "name": "Translation Questionnaire Request",
-    "definition": " Indicates that a translation questionnaire is being submitted. ",
-    "validEntries": [
+    "title": "TQ",
+    "fieldNumber": "34",
+    "fieldLength": "2",
+    "characteristics": "Alphanumeric",
+    "usage": "Conditional",
+    "example": "\nD\nY\n1%20Y",
+    "definition": "Indicates that a translation questionnaire is being submitted.",
+    "validEntry": [
         {
             "value": "",
             "description": ""
@@ -125,11 +129,7 @@
             "description": ")"
         }
     ],
-    "count": 29,
-    "validEntryNotes": " When the first position of TQ is \"A\", the ASR which has the TQ Form attached will be identified in the RPON field. \nWhen the first position of TQ is \"L\", \"M\", \"W\", \"X\" or \"C\", entries in the CC or WST, or the CC and the WST fields are required. \nWhen the first position of TQ is \"A\", \"B\", \"D\", \"S\", \"T\", \"U\", or \"1-9\", entries in the CC or WST, or the CC and the WST fields are prohibited. \nThe second position of \"X\" indicates a Trunkin g Form is provided for system requirements rather than provisioning purposes. \nWhen the ACT field is \"N\", a second position of \"N\" or \"X\" is prohibited. \n When the first position of the TQ field is \"E\", the second position of the TQ field must be an \"X\". \n When the first position of the TQ field is \"E\", the first position of the REQTYP field must be an \"L\" and the ACT field must be a \"C\". 8%3A  When the first position of the TQ field is \"C\", the first position of the REQTYP field must be an \"M\" and the ACT field must be a \"C\". ",
-    "usage": "Conditional",
-    "usageNotes": " Required when the first position of the REQTYP field is \"M\", the ACT field is \"N\" and the AC TI field is \"B\" or \"C\". \nOptional when the first position of the REQTYP field is \"L\" or \"M\" and the ACT field is \"C\". \nRequired when the first position of the REQTYP field is \"M\", the ACT field is \"D\" and the ACTI field is \"E\". \nOtherwise prohibited. ",
-    "dataCharacteristics": "Alphanumeric",
-    "fieldLength": "2",
-    "examples": "\nD\nY\n1%20Y"
+    "validEntryNotes": "When the first position of TQ is \"A\", the ASR which has the TQ Form attached will be identified in the RPON field. \nWhen the first position of TQ is \"L\", \"M\", \"W\", \"X\" or \"C\", entries in the CC or WST, or the CC and the WST fields are required. \nWhen the first position of TQ is \"A\", \"B\", \"D\", \"S\", \"T\", \"U\", or \"1-9\", entries in the CC or WST, or the CC and the WST fields are prohibited. \nThe second position of \"X\" indicates a Trunkin g Form is provided for system requirements rather than provisioning purposes. \nWhen the ACT field is \"N\", a second position of \"N\" or \"X\" is prohibited. \n When the first position of the TQ field is \"E\", the second position of the TQ field must be an \"X\". \n When the first position of the TQ field is \"E\", the first position of the REQTYP field must be an \"L\" and the ACT field must be a \"C\". 8%3A  When the first position of the TQ field is \"C\", the first position of the REQTYP field must be an \"M\" and the ACT field must be a \"C\".",
+    "usageNotes": "Required when the first position of the REQTYP field is \"M\", the ACT field is \"N\" and the AC TI field is \"B\" or \"C\". \nOptional when the first position of the REQTYP field is \"L\" or \"M\" and the ACT field is \"C\". \nRequired when the first position of the REQTYP field is \"M\", the ACT field is \"D\" and the ACTI field is \"E\". \nOtherwise prohibited.",
+    "fieldNotes": ""
 }

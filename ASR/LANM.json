@@ -1,15 +1,18 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE SECTION",
-    "fieldNumber": "44",
-    "title": "LANM",
     "name": "Lease Authorization Name",
-    "definition": " Indicates the name of the transport owner (lessor )  representative who signed the lease arrangement (LOA). ",
-    "usage": "Conditional",
-    "usageNotes": " Optional when the LA field is \"Y\", otherwise prohibited. ",
-    "dataCharacteristics": "Alphanumeric",
+    "title": "LANM",
+    "fieldNumber": "44",
     "fieldLength": "15",
-    "examples": "\nJ%200\nH\nN\nJ\nO\nN\nE\nS"
+    "characteristics": "Alphanumeric",
+    "usage": "Conditional",
+    "example": "\nJ%200\nH\nN\nJ\nO\nN\nE\nS",
+    "definition": "Indicates the name of the transport owner (lessor )  representative who signed the lease arrangement (LOA).",
+    "validEntry": "",
+    "validEntryNotes": "",
+    "usageNotes": "Optional when the LA field is \"Y\", otherwise prohibited.",
+    "fieldNotes": ""
 }

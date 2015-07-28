@@ -1,13 +1,17 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE SECTION",
-    "fieldNumber": "43",
-    "title": "LADATED",
     "name": "Date of Lease Arrangement",
-    "definition": " Identifies the date appearing on the lease arrangement.  ",
-    "validEntries": [
+    "title": "LADATED",
+    "fieldNumber": "43",
+    "fieldLength": "10",
+    "characteristics": "Alphanumeric",
+    "usage": "Conditional",
+    "example": "\n0%206\n-\n2\n0\n-\n1\n9\n8\n4\n1%209\n8\n4\n-\n0\n6\n-\n2\n0",
+    "definition": "Identifies the date appearing on the lease arrangement.",
+    "validEntry": [
         {
             "value": "",
             "description": ""
@@ -117,10 +121,7 @@
             "description": "01-31) "
         }
     ],
-    "count": 27,
-    "usage": "Conditional",
-    "usageNotes": " Required when the LANM field is populated, otherwise prohibited.  ",
-    "dataCharacteristics": "Alphanumeric",
-    "fieldLength": "10",
-    "examples": "\n0%206\n-\n2\n0\n-\n1\n9\n8\n4\n1%209\n8\n4\n-\n0\n6\n-\n2\n0"
+    "validEntryNotes": "",
+    "usageNotes": "Required when the LANM field is populated, otherwise prohibited.",
+    "fieldNotes": ""
 }

@@ -1,16 +1,17 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE SECTION",
-    "fieldNumber": "73",
-    "title": "LAG",
     "name": "Link Aggregation Group ",
-    "definition": " Identifies this request is ordering Link Aggregation. ",
-    "fieldNotes": [
-        " More information relative to link aggregation can be found in IEEE 802.1AX. When link aggregation pertains to ENNI usage, more information can also be found in MEF 26.1. "
-    ],
-    "validEntries": [
+    "title": "LAG",
+    "fieldNumber": "73",
+    "fieldLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "\nE%20",
+    "definition": "Identifies this request is ordering Link Aggregation.",
+    "validEntry": [
         {
             "value": "E ",
             "description": "Existing Link Aggregation group. Activity impacting an"
@@ -48,11 +49,9 @@
             "description": "Disconnect of entire existing Link Aggregation group. "
         }
     ],
-    "count": 9,
-    "validEntryNotes": " A valid entry of \"E\" is applicable when the ACT field is \"N\", \"C\" or \"D\". \nA valid entry of \"N\" is only applicable when the AC T  field is \"N\".  \nA valid entry of \"D\" is only applicable when the AC T  field is \"D\".  ",
-    "usage": "Conditional",
-    "usageNotes": " Optional when the first position of the REQTYP field is \"E'' or \"S\" and the ACT field is \"N\", \"C\" or \"D\", otherwise prohibited. ",
-    "dataCharacteristics": "Alpha",
-    "fieldLength": "1",
-    "examples": "\nE%20"
+    "validEntryNotes": "A valid entry of \"E\" is applicable when the ACT field is \"N\", \"C\" or \"D\". \nA valid entry of \"N\" is only applicable when the AC T  field is \"N\".  \nA valid entry of \"D\" is only applicable when the AC T  field is \"D\".",
+    "usageNotes": "Optional when the first position of the REQTYP field is \"E'' or \"S\" and the ACT field is \"N\", \"C\" or \"D\", otherwise prohibited.",
+    "fieldNotes": [
+        "More information relative to link aggregation can be found in IEEE 802.1AX. When link aggregation pertains to ENNI usage, more information can also be found in MEF 26.1."
+    ]
 }

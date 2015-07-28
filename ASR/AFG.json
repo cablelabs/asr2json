@@ -1,21 +1,23 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE SECTION",
-    "fieldNumber": "78",
-    "title": "AFG",
     "name": "Agency of the Federal Government",
-    "definition": " Identifies that this service is provided to an agency of the Federal Government. ",
-    "validEntries": [
+    "title": "AFG",
+    "fieldNumber": "78",
+    "fieldLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Optional",
+    "example": "\nY%20",
+    "definition": "Identifies that this service is provided to an agency of the Federal Government.",
+    "validEntry": [
         {
             "value": "Y ",
             "description": " Yes "
         }
     ],
-    "count": 1,
-    "usage": " This field is optional. ",
-    "dataCharacteristics": "Alpha",
-    "fieldLength": "1",
-    "examples": "\nY%20"
+    "validEntryNotes": "",
+    "usageNotes": "",
+    "fieldNotes": ""
 }

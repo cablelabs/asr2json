@@ -1,13 +1,17 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "BILL SECTION",
-    "fieldNumber": "84",
-    "title": "TE",
     "name": "Tax Exemption",
-    "definition": " Indicates that the customer has submitted a tax exemption form to the provider. ",
-    "validEntries": [
+    "title": "TE",
+    "fieldNumber": "84",
+    "fieldLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "\nB%20",
+    "definition": "Indicates that the customer has submitted a tax exemption form to the provider.",
+    "validEntry": [
         {
             "value": "Entry ",
             "description": "Exempt From "
@@ -77,10 +81,7 @@
             "description": " State/Province "
         }
     ],
-    "count": 17,
-    "usage": "Conditional",
-    "usageNotes": " Required when the ACT field is \"N\" and the BAN field is \"N\", otherwise optional. ",
-    "dataCharacteristics": "Alpha",
-    "fieldLength": "1",
-    "examples": "\nB%20"
+    "validEntryNotes": "",
+    "usageNotes": "Required when the ACT field is \"N\" and the BAN field is \"N\", otherwise optional.",
+    "fieldNotes": ""
 }

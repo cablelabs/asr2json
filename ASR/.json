@@ -1,21 +1,24 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE SECTION",
-    "fieldNumber": "29",
-    "title": "",
     "name": "Identifies the Service Reservation Number assigned by the",
-    "definition": " provider in response to a request to reserve facilities. ",
-    "fieldNotes": [
-        " If a provider offers a reservation process, this number would be assigned based on pre- planning/pre-engineering agreements or the service inquiry process.  "
-    ],
-    "usage": " This field is optional. ",
-    "dataCharacteristics": "Alphanumeric",
+    "title": "",
+    "fieldNumber": "29",
     "fieldLength": "15",
-    "examples": "\n0%201\nL\nZ\n%20C%20\nH\n-\n0\n0\n0\n0\n1\n0%201\nL\nZ\n%20C%20\nH\n-\n0\n1"
-}eNotes": " Required when the first position of the REQTYP field is \"E\" or \"S\" and Switched Ethernet services are being requested, otherwise prohibited. ",
-    "dataCharacteristics": "Alpha",
-    "fieldLength": "1",
-    "examples": "\nY%20"
+    "characteristics": "Alphanumeric",
+    "usage": "Optional",
+    "example": "\n0%201\nL\nZ\n%20C%20\nH\n-\n0\n0\n0\n0\n1\n0%201\nL\nZ\n%20C%20\nH\n-\n0\n1",
+    "definition": "provider in response to a request to reserve facilities.",
+    "validEntry": "",
+    "validEntryNotes": "",
+    "usageNotes": "",
+    "fieldNotes": [
+        "If a provider offers a reservation process, this number would be assigned based on pre- planning/pre-engineering agreements or the service inquiry process."
+    ]
+}hernet services are being requested, otherwise prohibited.",
+    "fieldNotes": [
+        "The Transport and End User Special Access Forms are not to be  used when the SEI field is populated."
+    ]
 }

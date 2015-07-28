@@ -1,14 +1,18 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE SECTION",
-    "fieldNumber": "51",
-    "title": "CFNI",
     "name": "Customer Fiber Network ID",
-    "definition": " Identifies the customer's circuit identification code for the rin g being requested.  ",
-    "usage": " This field is optional. ",
-    "dataCharacteristics": "Alphanumeric",
+    "title": "CFNI",
+    "fieldNumber": "51",
     "fieldLength": "20",
-    "examples": "\n1%202\n3\n4\n5\n6\n7\n8\nB"
+    "characteristics": "Alphanumeric",
+    "usage": "Optional",
+    "example": "\n1%202\n3\n4\n5\n6\n7\n8\nB",
+    "definition": "Identifies the customer's circuit identification code for the rin g being requested.",
+    "validEntry": "",
+    "validEntryNotes": "",
+    "usageNotes": "",
+    "fieldNotes": ""
 }

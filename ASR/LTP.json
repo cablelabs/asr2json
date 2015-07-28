@@ -1,129 +1,17 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE SECTION",
-    "fieldNumber": "59",
-    "title": "LTP",
     "name": "Local Transport",
-    "definition": " Identifies the switched access local transport elements affected by this request.  ",
-    "validEntries": [
-        {
-            "value": "",
-            "description": ""
-        },
-        {
-            "value": "",
-            "description": "1"
-        },
-        {
-            "value": "",
-            "description": "st"
-        },
-        {
-            "value": "",
-            "description": " Position (Elements to be ordered by this request) "
-        },
-        {
-            "value": "A ",
-            "description": "Entrance Facility (EF) "
-        },
-        {
-            "value": "B ",
-            "description": "Trunks, Tandem-Switched Transport and EF "
-        },
-        {
-            "value": "C ",
-            "description": "Trunks and Tandem-Switched Transport "
-        },
-        {
-            "value": "D ",
-            "description": " Lines/Trunks, Direct-"
-        },
-        {
-            "value": "",
-            "description": "Trunked Transport and EF to"
-        },
-        {
-            "value": "",
-            "description": "End Office "
-        },
-        {
-            "value": "E ",
-            "description": " Lines/Trunks and Direct-"
-        },
-        {
-            "value": "",
-            "description": "Trunked Transport to End"
-        },
-        {
-            "value": "",
-            "description": "Office "
-        },
-        {
-            "value": "F ",
-            "description": " Lines/Trunks "
-        },
-        {
-            "value": "G ",
-            "description": "Direct-Trunked Transport and EF to End Office or Hub"
-        },
-        {
-            "value": "H ",
-            "description": "Direct-Trunked Transport to End Office or Hub "
-        },
-        {
-            "value": "I ",
-            "description": "Tandem-Switched Transport and EF "
-        },
-        {
-            "value": "J ",
-            "description": "Direct-Trunked Transport to Access Tandem "
-        },
-        {
-            "value": "K ",
-            "description": "Direct-Trunked Transport and EF to Access Tandem "
-        },
-        {
-            "value": "L ",
-            "description": "Trunks and Direct-"
-        },
-        {
-            "value": "",
-            "description": "Trunked Transport to Access"
-        },
-        {
-            "value": "",
-            "description": "Tandem "
-        },
-        {
-            "value": "M ",
-            "description": "Trunks, Direct-"
-        },
-        {
-            "value": "",
-            "description": "Trunked Transport and EF to Access"
-        },
-        {
-            "value": "",
-            "description": "Tandem "
-        },
-        {
-            "value": "N ",
-            "description": "LTP not applicable "
-        },
-        {
-            "value": "P ",
-            "description": "Links, Direct-Link Transport and EF to STP "
-        },
-        {
-            "value": "Q ",
-            "description": "Direct-Link Transport and Links to STP "
-        },
-        {
-            "value": "R ",
-            "description": " Links "
-        },
+    "title": "LTP",
+    "fieldNumber": "59",
+    "fieldLength": "4",
+    "characteristics": "Alphanumeric",
+    "usage": "Conditional",
+    "example": "\nD\nF\n1\n1\nN",
+    "definition": "Identifies the switched access local transport elements affected by this request.",
+    "validEntry": [
         {
             "value": "",
             "description": ""
@@ -225,11 +113,7 @@
             "description": "DS3 capacity for transport "
         }
     ],
-    "count": 54,
-    "validEntryNotes": " When ordering local transport to an access tandem, the direct-trunked transport valid entries should be used for flat-rated service. Tandem-switched transport valid entries should be used for usage- rated service. \nWhen the first position is \"A\", the fourth position is prohibited.  \nWhen the first position is \"C\" or \"E\" and EF is bein g ordered separately, RPON is required. \nWhen the first position is \"N\", the second, third and fourth positions are prohibited. \nWhen the first position is \"B\" or \"C\", the use of the fourth position may be prohibited based on provider tariffs/practices.  \nUse of the third and fourth positions of this field is based on customer practices.  \nWhen the first position of the REQTYP field is \"L\", use of \"B\", \"C\", \"D\" or \"E\" in the second position is prohibited. ",
-    "usage": "Conditional",
-    "usageNotes": " Required when the first position of the REQTYP field is \"M\" or \"A\" and the ACT field is \"N\", \"C\" or \"D\". \nRequired for switched access facilities when the ACT field is \"N\", \"C\" or \"D\". \n Optional when the first position of the REQTYP field is \"L\" and the ACT field is \"N\", \"C\" or \"D\". \nOtherwise prohibited. ",
-    "dataCharacteristics": "Alphanumeric",
-    "fieldLength": "4",
-    "examples": "\nD\nF\n1\n1\nN"
+    "validEntryNotes": "When ordering local transport to an access tandem, the direct-trunked transport valid entries should be used for flat-rated service. Tandem-switched transport valid entries should be used for usage- rated service. \nWhen the first position is \"A\", the fourth position is prohibited.  \nWhen the first position is \"C\" or \"E\" and EF is bein g ordered separately, RPON is required. \nWhen the first position is \"N\", the second, third and fourth positions are prohibited. \nWhen the first position is \"B\" or \"C\", the use of the fourth position may be prohibited based on provider tariffs/practices.  \nUse of the third and fourth positions of this field is based on customer practices.  \nWhen the first position of the REQTYP field is \"L\", use of \"B\", \"C\", \"D\" or \"E\" in the second position is prohibited.",
+    "usageNotes": "Required when the first position of the REQTYP field is \"M\" or \"A\" and the ACT field is \"N\", \"C\" or \"D\". \nRequired for switched access facilities when the ACT field is \"N\", \"C\" or \"D\". \n Optional when the first position of the REQTYP field is \"L\" and the ACT field is \"N\", \"C\" or \"D\". \nOtherwise prohibited.",
+    "fieldNotes": ""
 }

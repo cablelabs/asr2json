@@ -1,125 +1,17 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE SECTION",
-    "fieldNumber": "11",
-    "title": "CBD",
     "name": "Call Before Dispatch",
-    "definition": " May identify a customer location as \"Unstaffed\" and request the provider call the LCON at a desired time prior to %E2%80%98dispatch out' of a service technician, or a coordination call based on  a  provider's existing process for service installation or disconnect.",
-    "validEntries": [
-        {
-            "value": "A ",
-            "description": "Unstaffed Service Delivery Location "
-        },
-        {
-            "value": "",
-            "description": ""
-        },
-        {
-            "value": "",
-            "description": "U.S. Standard "
-        },
-        {
-            "value": "",
-            "description": "Metric Format "
-        },
-        {
-            "value": "",
-            "description": "Two Digit Month "
-        },
-        {
-            "value": "",
-            "description": "("
-        },
-        {
-            "value": "",
-            "description": "01-12) "
-        },
-        {
-            "value": "",
-            "description": "Two Digit Century "
-        },
-        {
-            "value": "",
-            "description": "("
-        },
-        {
-            "value": "",
-            "description": "00-99) "
-        },
-        {
-            "value": "",
-            "description": "Two Digit Day "
-        },
-        {
-            "value": "",
-            "description": "("
-        },
-        {
-            "value": "",
-            "description": "01-31) "
-        },
-        {
-            "value": "",
-            "description": "Two Digit Year "
-        },
-        {
-            "value": "",
-            "description": "("
-        },
-        {
-            "value": "",
-            "description": "00-99) "
-        },
-        {
-            "value": "",
-            "description": "Two Digit Century "
-        },
-        {
-            "value": "",
-            "description": "("
-        },
-        {
-            "value": "",
-            "description": "00-99) "
-        },
-        {
-            "value": "",
-            "description": "Two Digit Month "
-        },
-        {
-            "value": "",
-            "description": "("
-        },
-        {
-            "value": "",
-            "description": "01-12) "
-        },
-        {
-            "value": "",
-            "description": "Two Digit Year "
-        },
-        {
-            "value": "",
-            "description": "("
-        },
-        {
-            "value": "",
-            "description": "00-99) "
-        },
-        {
-            "value": "",
-            "description": "Two Digit Day "
-        },
-        {
-            "value": "",
-            "description": "("
-        },
-        {
-            "value": "",
-            "description": "01-31) "
-        },
+    "title": "CBD",
+    "fieldNumber": "11",
+    "fieldLength": "10",
+    "characteristics": "Alphanumeric",
+    "usage": "Required",
+    "example": "\n0%203\n-\n0\n2\n-\n1\n9\n9\n9\n1%209\n9\n9\n-\n0\n3\n-\n0\n2",
+    "definition": "May identify a customer location as \"Unstaffed\" and request the provider call the LCON at a desired time prior to %E2%80%98dispatch out' of a service technician, or a coordination call based on  a  provider's existing process for service installation or disconnect.",
+    "validEntry": [
         {
             "value": "",
             "description": ""
@@ -137,17 +29,13 @@
             "description": " Desired Due Date (continued) "
         }
     ],
-    "count": 32,
-    "validEntryNotes": " Defines the service delivery location as \"Unstaffed\" requiring coordination with LCON prior to technician dispatch.  2 nd  and 3 rd  Character 01- 99  %3D Hours \nThe desired number of hours prior to dispatch to facilitate access for the service technician.  ",
-    "usage": "Required",
-    "dataCharacteristics": "Alphanumeric",
-    "fieldLength": "10",
-    "examples": "\n0%203\n-\n0\n2\n-\n1\n9\n9\n9\n1%209\n9\n9\n-\n0\n3\n-\n0\n2",
+    "validEntryNotes": "Defines the service delivery location as \"Unstaffed\" requiring coordination with LCON prior to technician dispatch.  2 nd  and 3 rd  Character 01- 99  %3D Hours \nThe desired number of hours prior to dispatch to facilitate access for the service technician.",
+    "usageNotes": "",
     "fieldNotes": [
-        " Implemented September 23, 2000  12. DDD -  Desired Due Date Identifies the customer's desired due date. ",
+        "Implemented September 23, 2000  12. DDD -  Desired Due Date Identifies the customer's desired due date. ",
         "The actual due date may be different from that desired because of factors such as the availabilit y of facilities and the quantity, complexity, and impact on local service of the circuit(s) involved. ",
         "On disconnect requests, this date represents the date billing is to stop on the involved circuit ( s )  and can be no earlier than the date the request is received by the provider. ",
         "When different due dates are required, these dates are stipulated using a separate request for each desired due date.  For example, a total of 50 circuits are desired and the customer wants them at a rate of 10 per day.  Therefore, five ASR forms may be submitted stipulating this requirement. ",
-        "When multiple ASRs are associated  with one Translation Questionnaire, all DDDs must be identical. "
+        "When multiple ASRs are associated  with one Translation Questionnaire, all DDDs must be identical."
     ]
 }

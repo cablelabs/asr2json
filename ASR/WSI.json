@@ -1,13 +1,17 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE SECTION",
-    "fieldNumber": "58",
-    "title": "WSI",
     "name": "Wireless Site Indicator",
-    "definition": " Identifies that the termination is at a wireless site. ",
-    "validEntries": [
+    "title": "WSI",
+    "fieldNumber": "58",
+    "fieldLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "\nN",
+    "definition": "Identifies that the termination is at a wireless site.",
+    "validEntry": [
         {
             "value": "N ",
             "description": " New "
@@ -17,11 +21,7 @@
             "description": " Existing "
         }
     ],
-    "count": 2,
-    "validEntryNotes": " A valid entry of \"New\" indicates that this is the customer's initial order to this wireless site. \nA valid entry of \"Existing\" indicates that the customer has previously ordered to this wireless site. ",
-    "usage": "Conditional",
-    "usageNotes": " Required when the ACT field is \"N\" and the first position of the REQTYP is \"S\" or \"E\" and the SECLOC field on the Transport or EUSA Form is  a wireless site, otherwise prohibited. ",
-    "dataCharacteristics": "Alpha",
-    "fieldLength": "1",
-    "examples": "\nN"
+    "validEntryNotes": "A valid entry of \"New\" indicates that this is the customer's initial order to this wireless site. \nA valid entry of \"Existing\" indicates that the customer has previously ordered to this wireless site.",
+    "usageNotes": "Required when the ACT field is \"N\" and the first position of the REQTYP is \"S\" or \"E\" and the SECLOC field on the Transport or EUSA Form is  a wireless site, otherwise prohibited.",
+    "fieldNotes": ""
 }

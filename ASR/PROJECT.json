@@ -1,20 +1,22 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE SECTION",
-    "fieldNumber": "14",
-    "title": "PROJECT",
     "name": "Project Identification",
-    "definition": " Identifies the project with which the request is to be associated.",
-    "fieldNotes": [
-        " Examples of the use of this field would be relatin g multiple Access Service Requests, previousl y  negotiated orders, etc. ",
-        "The provider may initiate the pro j ect identification and provide this to the customer who will populate the field when submitting an ASR. ",
-        "The Pro j ect Number must be entered by the ne w and the former customers on \"N\" and \"D\" coordinated conversion orders. "
-    ],
-    "usage": "Conditional",
-    "usageNotes": " Required when the ACT field is \"N\" or \"D\", and the CCVN field is populated, otherwise optional.  ",
-    "dataCharacteristics": "Alphanumeric",
+    "title": "PROJECT",
+    "fieldNumber": "14",
     "fieldLength": "16",
-    "examples": "\nM\nS\n7\n3\n6\n1\n1\n9"
+    "characteristics": "Alphanumeric",
+    "usage": "Conditional",
+    "example": "\nM\nS\n7\n3\n6\n1\n1\n9",
+    "definition": "Identifies the project with which the request is to be associated.",
+    "validEntry": "",
+    "validEntryNotes": "",
+    "usageNotes": "Required when the ACT field is \"N\" or \"D\", and the CCVN field is populated, otherwise optional.",
+    "fieldNotes": [
+        "Examples of the use of this field would be relatin g multiple Access Service Requests, previousl y  negotiated orders, etc. ",
+        "The provider may initiate the pro j ect identification and provide this to the customer who will populate the field when submitting an ASR. ",
+        "The Pro j ect Number must be entered by the ne w and the former customers on \"N\" and \"D\" coordinated conversion orders."
+    ]
 }

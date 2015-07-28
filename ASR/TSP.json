@@ -1,16 +1,17 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE SECTION",
-    "fieldNumber": "76",
-    "title": "TSP",
     "name": "Telecommunications Service Priority",
-    "definition": " Indicates the provisioning and restoration priority as defined under the TSP Service Vendor Handbook.  ",
-    "fieldNotes": [
-        " These codes are assigned by the TSP Program Office. "
-    ],
-    "validEntries": [
+    "title": "TSP",
+    "fieldNumber": "76",
+    "fieldLength": "12",
+    "characteristics": "Alphanumeric",
+    "usage": "Optional",
+    "example": "\nT%20S\nP\n1\n2\n3\n4\n5\n%20C%20\n-\nE\n1",
+    "definition": "Indicates the provisioning and restoration priority as defined under the TSP Service Vendor Handbook.",
+    "validEntry": [
         {
             "value": "",
             "description": ""
@@ -28,10 +29,9 @@
             "description": "One Digit Restoration Priority Level (0-5) "
         }
     ],
-    "count": 4,
-    "validEntryNotes": " A TSP code ending in \"00\" indicates \"revocation\", the removal of a previously assigned TSP code.  ",
-    "usage": " This field is optional. ",
-    "dataCharacteristics": "Alphanumeric",
-    "fieldLength": "12",
-    "examples": "\nT%20S\nP\n1\n2\n3\n4\n5\n%20C%20\n-\nE\n1"
+    "validEntryNotes": "A TSP code ending in \"00\" indicates \"revocation\", the removal of a previously assigned TSP code.",
+    "usageNotes": "",
+    "fieldNotes": [
+        "These codes are assigned by the TSP Program Office."
+    ]
 }

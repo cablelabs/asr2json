@@ -1,14 +1,18 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE SECTION",
-    "fieldNumber": "16",
-    "title": "CNO",
     "name": "Case Number",
-    "definition": " Identifies the quotation tracking number assigned by the provider in response to a provisioning arrangement inquiry, e.g., diversity. ",
-    "usage": " This field is optional. ",
-    "dataCharacteristics": "Alphanumeric",
+    "title": "CNO",
+    "fieldNumber": "16",
     "fieldLength": "12",
-    "examples": "\nB\nS\n0\n6\n1\n1\n9\n6\n-\n0\n0\n2"
+    "characteristics": "Alphanumeric",
+    "usage": "Optional",
+    "example": "\nB\nS\n0\n6\n1\n1\n9\n6\n-\n0\n0\n2",
+    "definition": "Identifies the quotation tracking number assigned by the provider in response to a provisioning arrangement inquiry, e.g., diversity.",
+    "validEntry": "",
+    "validEntryNotes": "",
+    "usageNotes": "",
+    "fieldNotes": ""
 }

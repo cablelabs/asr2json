@@ -1,22 +1,23 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE SECTION",
-    "fieldNumber": "35",
-    "title": "EXP",
     "name": "Expedite",
-    "definition": " Indicates that expedited treatment is requested and any charges generated in provisioning this request  ( e.g., additional engineering charges or labor charges if applicable )  will be accepted.  ",
-    "validEntries": [
+    "title": "EXP",
+    "fieldNumber": "35",
+    "fieldLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "\nY%20",
+    "definition": "Indicates that expedited treatment is requested and any charges generated in provisioning this request  ( e.g., additional engineering charges or labor charges if applicable )  will be accepted.",
+    "validEntry": [
         {
             "value": "Y ",
             "description": "Expedite Charges Authorized "
         }
     ],
-    "count": 1,
-    "usage": "Conditional",
-    "usageNotes": " Required when desired due date is less than the standard interval for the provisioning of the service and the ACT field is not \"D\". \nProhibited when the ACT field is \"D\", except outward WATS service. \nOtherwise optional. ",
-    "dataCharacteristics": "Alpha",
-    "fieldLength": "1",
-    "examples": "\nY%20"
+    "validEntryNotes": "",
+    "usageNotes": "Required when desired due date is less than the standard interval for the provisioning of the service and the ACT field is not \"D\". \nProhibited when the ACT field is \"D\", except outward WATS service. \nOtherwise optional.",
+    "fieldNotes": ""
 }

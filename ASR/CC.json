@@ -1,16 +1,17 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE SECTION",
-    "fieldNumber": "7",
-    "title": "CC",
     "name": "Company Code",
-    "definition": " Identifies the Exchange Carrier requesting local services. ",
-    "fieldNotes": [
-        " The format and structure of this field is defined by ANSI in document T1.251, Identification of Telecommunications Service Provider Codes for the North American Telecommunications System. "
-    ],
-    "validEntries": [
+    "title": "CC",
+    "fieldNumber": "7",
+    "fieldLength": "4",
+    "characteristics": "Alphanumeric",
+    "usage": "Conditional",
+    "example": "\n8%207\n1\n2\n1%202\nA\n3",
+    "definition": "Identifies the Exchange Carrier requesting local services.",
+    "validEntry": [
         {
             "value": "",
             "description": ""
@@ -28,10 +29,9 @@
             "description": "territories maintained by NECA. "
         }
     ],
-    "count": 4,
-    "usage": "Conditional",
-    "usageNotes": " Required when ordering local interconnection services or unbundled network elements, otherwise prohibited. ",
-    "dataCharacteristics": "Alphanumeric",
-    "fieldLength": "4",
-    "examples": "\n8%207\n1\n2\n1%202\nA\n3"
+    "validEntryNotes": "",
+    "usageNotes": "Required when ordering local interconnection services or unbundled network elements, otherwise prohibited.",
+    "fieldNotes": [
+        "The format and structure of this field is defined by ANSI in document T1.251, Identification of Telecommunications Service Provider Codes for the North American Telecommunications System."
+    ]
 }

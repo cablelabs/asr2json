@@ -1,18 +1,20 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE SECTION",
-    "fieldNumber": "54",
-    "title": "CKR",
     "name": "Customer Circuit Reference",
-    "definition": " Identifies the circuit number or range of circuit numbers used by the customer.  ",
-    "fieldNotes": [
-        " CKR is used by the customer as a cross reference to the provider circuit ID ( s )  and in many cases to identify the customer's end-to-end service.  "
-    ],
-    "usage": "Conditional",
-    "usageNotes": " Prohibited when EVCI field is \"A\", otherwise optional. ",
-    "dataCharacteristics": "Alphanumeric",
+    "title": "CKR",
+    "fieldNumber": "54",
     "fieldLength": "53",
-    "examples": "\nL%200\n0\n0\n2\n-\n0\n0\n2\n4"
+    "characteristics": "Alphanumeric",
+    "usage": "Conditional",
+    "example": "\nL%200\n0\n0\n2\n-\n0\n0\n2\n4",
+    "definition": "Identifies the circuit number or range of circuit numbers used by the customer.",
+    "validEntry": "",
+    "validEntryNotes": "",
+    "usageNotes": "Prohibited when EVCI field is \"A\", otherwise optional.",
+    "fieldNotes": [
+        "CKR is used by the customer as a cross reference to the provider circuit ID ( s )  and in many cases to identify the customer's end-to-end service."
+    ]
 }

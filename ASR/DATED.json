@@ -1,13 +1,17 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE SECTION",
-    "fieldNumber": "40",
-    "title": "DATED",
     "name": "Date of Agency Authorization",
-    "definition": " Identifies the date appearing on the agency authorization, which was previously submitted to the provider.  ",
-    "validEntries": [
+    "title": "DATED",
+    "fieldNumber": "40",
+    "fieldLength": "10",
+    "characteristics": "Alphanumeric",
+    "usage": "Conditional",
+    "example": "\n0%206\n-\n2\n0\n-\n1\n9\n8\n4\n1%209\n8\n4\n-\n0\n6\n-\n2\n0",
+    "definition": "Identifies the date appearing on the agency authorization, which was previously submitted to the provider.",
+    "validEntry": [
         {
             "value": "",
             "description": ""
@@ -117,10 +121,7 @@
             "description": "01-31) "
         }
     ],
-    "count": 27,
-    "usage": "Conditional",
-    "usageNotes": " Required when the AGAUTH field is \"E\" or \"B\", otherwise optional.  ",
-    "dataCharacteristics": "Alphanumeric",
-    "fieldLength": "10",
-    "examples": "\n0%206\n-\n2\n0\n-\n1\n9\n8\n4\n1%209\n8\n4\n-\n0\n6\n-\n2\n0"
+    "validEntryNotes": "",
+    "usageNotes": "Required when the AGAUTH field is \"E\" or \"B\", otherwise optional.",
+    "fieldNotes": ""
 }

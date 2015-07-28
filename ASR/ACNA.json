@@ -1,18 +1,17 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "BILL SECTION",
-    "fieldNumber": "83",
-    "title": "ACNA",
     "name": "Access Customer Name Abbreviation",
-    "definition": " Identifies the COMMON LANGUAGE IAC code for the customer who should receive the bill for the ordered service. ",
-    "fieldNotes": [
-        " The format and structure of this field is defined by  ANSI in document ATIS-0300251 Codes for Identification of Service Providers for Information Exchange. ",
-        "This code is established prior to the submission of the ASR.  ",
-        "Billing to an end user who does not have an IAC code is specified with an entry of \"ZZZ\".  When utilizing \"ZZZ\", the Bill Section of the ASR Form should be completed with the end user billin g information. "
-    ],
-    "validEntries": [
+    "title": "ACNA",
+    "fieldNumber": "83",
+    "fieldLength": "3",
+    "characteristics": "Alpha",
+    "usage": "Required",
+    "example": "\nU\nT\n%20C%20",
+    "definition": "Identifies the COMMON LANGUAGE IAC code for the customer who should receive the bill for the ordered service.",
+    "validEntry": [
         {
             "value": "",
             "description": ""
@@ -26,10 +25,11 @@
             "description": "Casual customer or end user billing "
         }
     ],
-    "count": 3,
-    "validEntryNotes": " Valid IAC codes are maintained by Telcordia Technologies. ",
-    "usage": "Required",
-    "dataCharacteristics": "Alpha",
-    "fieldLength": "3",
-    "examples": "\nU\nT\n%20C%20"
+    "validEntryNotes": "Valid IAC codes are maintained by Telcordia Technologies.",
+    "usageNotes": "",
+    "fieldNotes": [
+        "The format and structure of this field is defined by  ANSI in document ATIS-0300251 Codes for Identification of Service Providers for Information Exchange. ",
+        "This code is established prior to the submission of the ASR.  ",
+        "Billing to an end user who does not have an IAC code is specified with an entry of \"ZZZ\".  When utilizing \"ZZZ\", the Bill Section of the ASR Form should be completed with the end user billin g information."
+    ]
 }

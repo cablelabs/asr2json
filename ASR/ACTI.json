@@ -1,13 +1,17 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-27T16:21:24.118Z",
+    "processed": "2015-07-28T18:42:41.806Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE SECTION",
-    "fieldNumber": "23",
-    "title": "ACTI",
     "name": " - Activity Indicator",
-    "definition": " Identifies whether an order is an augment or a new trunk group and a partial or full disconnect. ",
-    "validEntries": [
+    "title": "ACTI",
+    "fieldNumber": "23",
+    "fieldLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "\nC%20",
+    "definition": "Identifies whether an order is an augment or a new trunk group and a partial or full disconnect.",
+    "validEntry": [
         {
             "value": "A ",
             "description": "Trunk Group Augment without translation changes "
@@ -38,11 +42,7 @@
         },
         {}
     ],
-    "count": 7,
-    "validEntryNotes": " An entry of \"A\" is valid for an increase in the number of trunks within an existing trunk group, with no changes made to the features or translations. \n An entry of \"B\" is valid for an increase in the number of trunks within an existing trunk group, with changes made to the features or translations. \n An entry of \"C\" is valid when ordering a new trun k group. \n An entry of \"D\" is valid for a decrease in the number of trunks within an existing trunk group, with no changes made to the features or translations.   \n An entry of \"E\" is valid for the complete disconnect of a trunk group, and the re-route of traffic as defined in the attached TQ. \n An entry of \"F\" is valid for the complete disconnect of a trunk group  ( no TQ will accompany this service request). ",
-    "usage": "Conditional",
-    "usageNotes": " Required when the first position of the REQTYP field is \"M\" and ACT field is \"N\".  Valid ACTI values must be \"A\", \"B\" or \"C\". \n Required when the first position of the REQTYP field is \"M\" and the ACT field is \"D\".  Valid ACTI values must be \"D\", \"E\" or \"F\". \n Otherwise prohibited. ",
-    "dataCharacteristics": "Alpha",
-    "fieldLength": "1",
-    "examples": "\nC%20"
+    "validEntryNotes": "An entry of \"A\" is valid for an increase in the number of trunks within an existing trunk group, with no changes made to the features or translations. \n An entry of \"B\" is valid for an increase in the number of trunks within an existing trunk group, with changes made to the features or translations. \n An entry of \"C\" is valid when ordering a new trun k group. \n An entry of \"D\" is valid for a decrease in the number of trunks within an existing trunk group, with no changes made to the features or translations.   \n An entry of \"E\" is valid for the complete disconnect of a trunk group, and the re-route of traffic as defined in the attached TQ. \n An entry of \"F\" is valid for the complete disconnect of a trunk group  ( no TQ will accompany this service request).",
+    "usageNotes": "Required when the first position of the REQTYP field is \"M\" and ACT field is \"N\".  Valid ACTI values must be \"A\", \"B\" or \"C\". \n Required when the first position of the REQTYP field is \"M\" and the ACT field is \"D\".  Valid ACTI values must be \"D\", \"E\" or \"F\". \n Otherwise prohibited.",
+    "fieldNotes": ""
 }
