@@ -24,7 +24,7 @@ function processPage(texts,field){
     var content = " ";
     var fieldnumber = " ";
     var notesFlag = " ";  //flag for notes.  field notes,  Valid entry notes,  Usage notes,  Example notes.
-    var section_flag = "";        // flag to indicate the section for the field (admin, bill, contact)
+    var section_flag = "";        // flag to indicate the section for the field (e.g. admin, bill, contact)
     for( var j = 0; j<texts.length; j++) {
         var R = texts[j]["R"];
         for( var k = 0; k<R.length; k++) {
@@ -32,6 +32,7 @@ function processPage(texts,field){
             var TS = R[k]["TS"];
 
             var bold = TS[2];
+            field.processed = new Date();
             value = decodeURI(value);
            if(bold === 1){
             //bold and a keyword
@@ -72,7 +73,6 @@ function processPage(texts,field){
                             previous = "title";
                             writeToFile();
                             clear();
-                            field.processed = new Date();
                             field.title = getTitle(value);
                             field.fieldNumber = numb;
                             notesFlag = "field";
@@ -111,7 +111,6 @@ function processPage(texts,field){
             }
         }
     }
-//    writeToFile();
     field.notesFlag = notesFlag;
     printContent(previous,content);           //for examples
     return field.fieldNumber;
@@ -165,12 +164,12 @@ function getLength(content){
 function getTitle(content){
     var title = " ";
     var values = content.replace(/ |-/g,'');
+    values = (values.replace(/%2F/g,"/"));
     if(content.indexOf(".") > -1){
         var num = values.substring(0,values.indexOf("."));
         values = values.substring((values.indexOf(".")+1),values.length);
         title = title + values;
     }else{
-        values = (values.replace(/%2F/g,"/"));
         return values;
     }
     return title;
@@ -216,8 +215,8 @@ function printContent(previous,content){
 //function to convert the special characters in text
 //returns the converted text
 function convertToText(content){
-    var specialCharacters= [ "T\n", "\n", "%20", "%26", " b y ", " o f ", " w ithin ", "%2C", "%E2%80%9C", "%E2%80%9D", "%E2%80%99", "%2F", "%3A ", "y%3A ", "3%3A ", "4%3A ", "5%3A ", "6%3A ", "7%3A ", " %3D ", " - ", "m%3A" ];
-    var joinText = [ "T", "  ", " ", " & " , " by ", " of ", " within ", ",", "\"", "\"", "\'", "/", ": ", "\n", "\n", "\n", "\n", "\n", "\n", "=", " ", "m:" ];
+    var specialCharacters= [ "T\n", "\n", "%20", "%26", "%2C", "%E2%80%9C", "%E2%80%9D", "%E2%80%99", "%2F", "%3A ", "y%3A ", "3%3A ", "4%3A ", "5%3A ", "6%3A ", "7%3A ", " %3D ", " - ", "m%3A" ];
+    var joinText = [ "T", "  ", " ", " & " , ",", "\"", "\"", "\'", "/", ": ", "\n", "\n", "\n", "\n", "\n", "\n", "=", " ", "m:" ];
        for( var index = 0; index < specialCharacters.length; index++ ) {
            content = content.split(specialCharacters[index]);
            content = content.join(joinText[index]);
