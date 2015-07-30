@@ -1,5 +1,4 @@
 var fs = require('fs');
-var ofs = require('fs');
 var field = {"asogVersion": "", "processed": "", "form": "", "section": "", "name": "", "title": "", "fieldNumber": "", "fieldLength": "", "characteristics": "", "usage": "", "example": "", "definition": "", "validEntry": "", "validEntryNotes": "", "usageNotes": "", "fieldNotes": ""};
 field.breakString = [ "NOTE", "VALID ENTRIES", "USAGE", "DATA CHARACTERISTICS", "EXAMPLE", "EXAMPLES" ];
 field.breakValue = "EXAMPLE";
@@ -10,6 +9,7 @@ fs.readFile('asrpdf.json', 'utf8', function(err, data) {
     if (err) {
         throw err;
     }
+    // TODO: line consolidator on json
     json = JSON.parse(data);
 
     var flag = 0;
@@ -21,10 +21,12 @@ fs.readFile('asrpdf.json', 'utf8', function(err, data) {
         for( field.j = 0; field.j<field.texts.length; field.j++) {  // For text in the page
             field.R = field.texts[field.j]["R"];
             T = field.R[0]["T"];
-            TS = field.R[0]["TS"][2];
+            isBold = field.R[0]["TS"][2];
 
             // STORING FORM NAME
-            if ( T == "3." && TS == "1" && field.texts[field.j+1]["R"][0]["T"].indexOf("FORM")>-1) {
+            // TODO : Change 3. to constant (wherever possible)
+
+            if ( T == "3." && isBold == "1" && field.texts[field.j+1]["R"][0]["T"].indexOf("FORM")>-1) {
                 field.R = field.texts[++field.j]["R"];
                 T = field.R[0]["T"];
                 var checkIfForm = T.split("FORM");
@@ -40,6 +42,7 @@ fs.readFile('asrpdf.json', 'utf8', function(err, data) {
                 }
             }
 
+            // TODO : Add isBold function
             // STORING SECTION NAME
             var sectionNumber = T.split(".");
             if ( sectionFlag == 1 ) {
@@ -53,7 +56,7 @@ fs.readFile('asrpdf.json', 'utf8', function(err, data) {
                 }
                 sectionFlag = 0;
             }
-            else if ( !isNaN(sectionNumber[0]) && !isNaN(sectionNumber[1]) && sectionNumber[1].length>0 && TS == "1") {
+            else if ( !isNaN(sectionNumber[0]) && !isNaN(sectionNumber[1]) && sectionNumber[1].length>0 && isBold == "1") {
                 sectionFlag = 1;
                 continue;
             }
@@ -326,11 +329,11 @@ function validEntryFilter(definition) {
 
 function writeOutput(prevFieldNumber, field) {
     var dir = "./" + field.form;
-    if (!ofs.existsSync(dir)) {
-        ofs.mkdirSync(dir);
+    if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir);
     }
     outputFileName =  field.form + "/" + field.title + ".json";
-    ofs.writeFile(outputFileName, JSON.stringify(field, replacer, 4), function(err) {
+    fs.writeFile(outputFileName, JSON.stringify(field, replacer, 4), function(err) {
         if (err) {
             return console.log(err);
         }
