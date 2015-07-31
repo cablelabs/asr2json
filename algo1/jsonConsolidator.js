@@ -44,6 +44,7 @@ function getJsonData(json){
     }
     content = " ";
     content = decodeURIComponent(finalText);
+    content = content.replace(/,/g,"");
     fs.writeFile('parsedText.txt',content, function (err){
         if(err){
             return console.log(err);
