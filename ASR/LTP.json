@@ -1,0 +1,18 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-03T20:17:02.996Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Local Transport",
+    "title": "LTP",
+    "fieldNumber": "59",
+    "fieldLength": "4",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "DF11\nN",
+    "definition": "Identifies the switched access local transport elements affected\nby this request.  ",
+    "validEntry": "2\nnd\n Position (Identifies if element uses special access facility) \nA = EF rides special access facility \nB = Direct-Trunked Transport rides special access facility \nC = Direct-Trunked Transport and EF ride special access\nfacility \nD = Tandem-Switched Transport rides special access facility\nE = Tandem-Switched Transport and EF ride special access\nfacility \nF = No special access \n3\nrd\n Position (Level of EF) \n0 = Voice grade capacity for the EF \n1 = DS1 capacity for the EF \n3 = DS3 capacity for the EF \n4\nth\n Position (Level of Transport) \n0 = Voice grade capacity for transport \n1 = DS1 capacity for transport \n3 = DS3 capacity for transport ",
+    "validEntryNotes": "When the first position is “N”, the second, third and\nfourth positions are prohibited. \nNOTE 5:\nWhen the first position is “B” or “C”, the use of the\nfourth position may be prohibited based on provider\ntariffs/practices.  \nNOTE 6:\nUse of the third and fourth positions of this field is\nbased on customer practices.  \nNOTE 7:\nWhen the first position of the REQTYP field is “L”,\nuse of “B”, “C”, “D” or “E” in the second position is\nprohibited. ",
+    "usageNotes": "Required when the first position of the REQTYP\nfield is “M” or “A” and the ACT field is “N”, “C” or\n“D”. \nNOTE 2:\nRequired for switched access facilities when the\nACT field is “N”, “C” or “D”. \nNOTE 3: \nOptional when the first position of the REQTYP\nfield is “L” and the ACT field is “N”, “C” or “D”. \nNOTE 4:\nOtherwise prohibited. ",
+    "fieldNotes": ""
+}

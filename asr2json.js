@@ -11,8 +11,8 @@ var line = "";
 
 var contents = fs.readFileSync('textalone', 'utf8').toString().split("\n");
 var i=0;
-//for ( i=0; i < contents.length; i++) {
-for ( i=0; i < 100; i++) {
+for ( i=0; i < contents.length; i++) {
+//for ( i=0; i < 100; i++) {
     line = contents[i];
 
     // CHECK IF FORM
@@ -71,6 +71,10 @@ function getField(line) {
         console.log("Name= " + field.name);
         field.breakValue = "DEFINITION";
     }
+    else {
+        line = contents[++i];
+        checkKeyWord(line);
+    }
 
     var pageNumberRegex = /^3-[0-9]+$/;
     while ( i+1 != contents.length && !pageNumberRegex.exec(contents[i+1]) ) {
@@ -102,11 +106,7 @@ function getField(line) {
                 console.log("USAGE NOTES= " + field.usageNotes);
                 break;
             case "DATA CHARACTERISTICS":
-                var info = getFieldInfo();
-                console.log("info0= " + info);
-                info = info.split(" ");
-                console.log("info0= " + info[0]);
-                console.log("info1= " + info[1]);
+                var info = (getFieldInfo()).split(" ");
                 field.fieldLength = info[0];
                 field.characteristics = (info[1].indexOf("alpha") > -1) ? ((info[1].indexOf("numeric") > -1) ? "AlphaNumeric" : "Alpha" ) : "Numeric";
                 console.log("Characteristics= " + field.characteristics);
@@ -120,32 +120,14 @@ function getField(line) {
 }
 
 function getFieldInfo() {
-    var keyWords = [ "NOTE", "VALID ENTRIES", "USAGE", "DATA CHARACTERISTICS", "EXAMPLE", "EXAMPLES" ];
     var pageNumberRegex = /^3-[0-9]+$/;
     var fieldInfo = "";
     while ( i+1 != contents.length && !pageNumberRegex.exec(contents[i+1])) {
         line = contents[++i];
-        for ( var index=0; index<keyWords.length; index++ ) {
-            if ( line.indexOf( keyWords[index] ) > -1 ) {
-                if ( keyWords[index]=="NOTE" ) {
-                    if ( field.breakValue == "FIELD NOTES" || field.breakValue == "VALID ENTRY NOTES" || field.breakValue == "USAGE NOTES" ) {
-                        break;
-                    }
-                    else if ( field.breakValue == "DEFINITION" ) {
-                        field.breakValue = "FIELD NOTES";
-                    }
-                    else if ( field.breakValue == "VALID ENTRIES" ) {
-                        field.breakValue = "VALID ENTRY NOTES";
-                    }
-                    else if ( field.breakValue == "USAGE" ) {
-                        field.breakValue = "USAGE NOTES";
-                    }
-                }
-                else {
-                    field.breakValue = keyWords[index];
-                }
-                return fieldInfo;
-            }
+
+        // Check if keyword is present
+        if( checkKeyWord(line) == 1 ) {
+            return fieldInfo;
         }
         if ( fieldInfo == "" ) {
             fieldInfo = line;
@@ -157,6 +139,32 @@ function getFieldInfo() {
     return fieldInfo;
 }
 
+function checkKeyWord(line) {
+    var keyWords = [ "NOTE", "VALID ENTRIES", "USAGE", "DATA CHARACTERISTICS", "EXAMPLE", "EXAMPLES" ];
+    for ( var index=0; index<keyWords.length; index++ ) {
+        if ( line.indexOf( keyWords[index] ) > -1 ) {
+            if ( keyWords[index]=="NOTE" ) {
+                if ( field.breakValue == "FIELD NOTES" || field.breakValue == "VALID ENTRY NOTES" || field.breakValue == "USAGE NOTES" ) {
+                    break;
+                }
+                else if ( field.breakValue == "DEFINITION" ) {
+                    field.breakValue = "FIELD NOTES";
+                }
+                else if ( field.breakValue == "VALID ENTRIES" ) {
+                    field.breakValue = "VALID ENTRY NOTES";
+                }
+                else if ( field.breakValue == "USAGE" ) {
+                    field.breakValue = "USAGE NOTES";
+                }
+            }
+            else {
+                field.breakValue = keyWords[index];
+            }
+            return 1;
+        }
+    }
+    return 0;
+}
 
 function writeOutput(prevFieldNumber) {
     var dir = "./" + field.form;

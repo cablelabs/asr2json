@@ -1,0 +1,18 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-03T20:17:02.996Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Activity Indicator",
+    "title": "ACTI",
+    "fieldNumber": "23",
+    "fieldLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "C ",
+    "definition": "Identifies whether an order is an augment or a new trunk group\nand a partial or full disconnect. ",
+    "validEntry": "A = Trunk Group Augment without translation changes \nB = Trunk Group Augment with translation changes \nC = New Trunk Group \nD = Partial Trunk Group Disconnect \nE = Full Trunk Group Disconnect and Traffic Re-route\n(Single service request process) \nF = Full Trunk Group Disconnect and No Traffic to be Re-\nrouted ",
+    "validEntryNotes": "An entry of “F” is valid for the complete disconnect\nof a trunk group (no TQ will accompany this service\nrequest). ",
+    "usageNotes": "Required when the first position of the REQTYP\nfield is “M” and ACT field is “N”.  Valid ACTI values\nmust be “A”, “B” or “C”. \nNOTE 2: \nRequired when the first position of the REQTYP\nfield is “M” and the ACT field is “D”.  Valid ACTI\nvalues must be “D”, “E” or “F”. \nNOTE 3: \nOtherwise prohibited. ",
+    "fieldNotes": ""
+}

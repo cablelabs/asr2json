@@ -1,0 +1,18 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-03T20:17:02.996Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Two Six Code",
+    "title": "TSC",
+    "fieldNumber": "67",
+    "fieldLength": "8",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "A Q234567",
+    "definition": "Identifies a code assigned to a trunk group or a CCS Link Set.  ",
+    "validEntry": "",
+    "validEntryNotes": "",
+    "usageNotes": "Required when the LA field is “Y” for established\ntrunk side service or CCS Link Set. \nNOTE 2:\nOptional when the LA field is not populated for\nestablished trunk side service or CCS Link Set. \nNOTE 3:\nOtherwise prohibited. ",
+    "fieldNotes": "The code set is unique to each established trunk\ngroup or CCS Link Set and is provided to the\ncustomer on the Firm Order Confirmation.  The\nTSC entry may then be populated by the customer\nwhen ordering changes, additions or deletions to an\nexisting trunk group or CCS Link Set. "
+}

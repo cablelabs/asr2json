@@ -1,0 +1,18 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-03T20:17:02.996Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Project Identification",
+    "title": "PROJECT",
+    "fieldNumber": "14",
+    "fieldLength": "16",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "MS736119",
+    "definition": "Identifies the project with which the request is to be associated.",
+    "validEntry": "",
+    "validEntryNotes": "",
+    "usageNotes": "Required when the ACT field is “N” or “D”, and the\nCCVN field is populated, otherwise optional.  ",
+    "fieldNotes": "Examples of the use of this field would be relating\nmultiple Access Service Requests, previously \nnegotiated orders, etc. \nNOTE 2:\nThe provider may initiate the project identification\nand provide this to the customer who will populate\nthe field when submitting an ASR. \nNOTE 3:\nThe Project Number must be entered by the new\nand the former customers on “N” and “D”\ncoordinated conversion orders. "
+}

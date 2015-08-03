@@ -1,0 +1,18 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-03T20:17:02.996Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Quantity",
+    "title": "QTY",
+    "fieldNumber": "61",
+    "fieldLength": "7",
+    "characteristics": "Numeric",
+    "usage": "Conditional",
+    "example": "6\n00 0 6 \n0 000006",
+    "definition": "Identifies the quantity of circuits, ring segments, BHMCs, or the\npercent of market share involved in this service request.  ",
+    "validEntry": "",
+    "validEntryNotes": "",
+    "usageNotes": "Required when the ACT field is “N”, “C”, “D”, “M” or\n“T”, the second position of the TQ field is not “N” or\n“X”, and the EOD USE field on the EOD Form is\nnot “A”. \nNOTE 2:\nProhibited when the second position of the TQ field\nis “N” or “X”. \nNOTE 3:\nProhibited when the EOD USE field on the EOD\nForm is “A”. \nNOTE 4:\nOtherwise optional. ",
+    "fieldNotes": "On a new request for additional QTY or on a\ndisconnect request for reducing the existing QTY,\nonly the amount to be added or disconnected\nshould be entered here.  On a supplement to\nchange the QTY on a pending order, the entire new \ndesired QTY should be entered here.  \nIn the latter case, a description of what the\ncustomer wants done is required in the REMARKS\nfield. For example, if a customer has 10 circuits\nworking and wished to remove 3 of them, they \nshould send in a disconnect request for 3 circuits\n(QTY=3). \nIf, on the other hand, the customer places an order\nfor 10 circuits and then decides they don't want 3\nof them before the order is completed, they should\nsend in a supplement to the original new request\nthat shows the new QTY desired, i.e., 7 circuits\n(QTY=7). \nNOTE 7:\nA multipoint circuit is considered to be one circuit.\nOnly 1 multipoint circuit may be requested per\nAccess Service Request, as interpreted herein. \nNOTE 8:\nQTY must be equal to one (1) if NVC on the\nTransport or EUSA Form is greater than zero (0).\n(NVC entry on the service specific form will indicate\nthe number of VC with activity). \nNOTE 9:\nQTY must be equal to one (1) when the EVCI field is\npopulated. (NUT field on the EVC form will indicate\nthe number of UNI terminations with activity). "
+}

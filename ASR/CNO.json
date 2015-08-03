@@ -1,0 +1,18 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-03T20:17:02.996Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Case Number",
+    "title": "CNO",
+    "fieldNumber": "16",
+    "fieldLength": "12",
+    "characteristics": "AlphaNumeric",
+    "usage": "Optional",
+    "example": "BS061196-002",
+    "definition": "Identifies the quotation tracking number assigned by the\nprovider in response to a provisioning arrangement inquiry, e.g.,\ndiversity. ",
+    "validEntry": "",
+    "validEntryNotes": "",
+    "usageNotes": "",
+    "fieldNotes": ""
+}

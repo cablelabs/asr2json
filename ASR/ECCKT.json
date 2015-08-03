@@ -1,0 +1,18 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-03T20:17:02.996Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Exchange Company Circuit ID",
+    "title": "ECCKT",
+    "fieldNumber": "60",
+    "fieldLength": "53",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "101/T1/NYCMNY50/NYCMNY54W01 ",
+    "definition": "Identifies the provider circuit ID or multiple circuit IDs.  ",
+    "validEntry": "",
+    "validEntryNotes": "For identification of an unbundled multiplexer \n(including the collocation cross-connect), unbundled\ntransport or a high capacity facility to a HUB \nlocation. \nNOTE 2:\nEither Location A or Z must be 11 characters.  ",
+    "usageNotes": "Prohibited when the EVCI field is “A”. \nNOTE 2:\nRequired when the ACT field is “C”, “D”, “M” or “T”\nand the first position of the TQ field is not “S”. \nNOTE 3:\nRequired when the ACT field is “N”, the first\nposition of the TQ field is not “S”, and the CCVN\nfield is populated. \nNOTE 4:\nRequired when the ACT field is “N” or “R”, the first\nposition of the TQ field is not “S”, and an ECCKT\nhas been previously provided to the customer. \nNOTE 5:\nOtherwise optional. ",
+    "fieldNotes": "The provider assigning this circuit identifier\ndetermines the content of this field in accordance\nwith COMMON LANGUAGE standards maintained\nby Telcordia Technologies. \nNOTE 2:\nWhen a component within the format is purposely\nomitted, the component should still be delimited\nand compressed to eliminate any spaces.   \nNOTE 3:\nAll components within the ECCKT should be\ndelimited by either virgules or periods. \nNOTE 4:\nIf all positions in a component within the ECCKT\nare not populated, the component should be\ncompressed to eliminate any spaces.   \nNOTE 5:\nUse of ranging is based on customer/provider\nnegotiations. Ranges should be shown within the\nappropriate component of the ID by specifying the\nlowest value of the component, hyphen, highest\nvalue of the component, e.g., trunk numbers 3500\nthrough 3512 would be shown as 3500-3512. \nNOTE 6:\nWhen disconnecting all circuits in a given account,\n“ALL” should be entered in this field, the BAN field\npopulated, and the ACT field should contain a “D”. \nNOTE 7:\nThe COMMON LANGUAGE Special Service Circuit \nCode in this field should not reflect a value that \nequates to the EVC circuit identification.  \nNOTE 8:\nThe format and structure of the field is defined by\nANSI standards. "
+}

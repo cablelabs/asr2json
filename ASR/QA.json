@@ -1,0 +1,18 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-03T20:17:02.996Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Quote Authorized",
+    "title": "QA",
+    "fieldNumber": "10",
+    "fieldLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "Y ",
+    "definition": "Indicates that a quotation charge for special construction is\nauthorized. ",
+    "validEntry": "Y = Quotation Authorized ",
+    "validEntryNotes": "",
+    "usageNotes": "Optional when ACT field is “N”, “C” or “T”,\notherwise prohibited. ",
+    "fieldNotes": ""
+}

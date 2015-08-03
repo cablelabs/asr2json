@@ -1,0 +1,18 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-03T20:17:02.996Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Related Purchase Order Number",
+    "title": "RPON",
+    "fieldNumber": "72",
+    "fieldLength": "16",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "8 24Z9",
+    "definition": "Identifies the PON of a related Access Service Request. ",
+    "validEntry": "",
+    "validEntryNotes": "",
+    "usageNotes": "Required when the ATN field on the Transport\nForm is “N”. \nNOTE 5:\nRequired when the REL TSC field on the Trunking\nForm is “N”. \nNOTE 6:\nOtherwise optional. ",
+    "fieldNotes": "The RPON field may be used for relating both “N”\nand “D” Access Service Requests that change a\nlocation (different premises) of an existing service. \nNOTE 2:\nThe RPON field may be used to relate intrastate\nand interstate requests for a mixed group such as\nfor Feature Group A service when ordered using\nseparate Access Service Requests or relating\nrequests with firm orders. \nNOTE 3:\nWhen the CCVN field is populated, the RPON field\nfor the disconnect ASR must contain the new\nconnect ASR PON.   The RPON field of the new\nconnect ASR may contain the disconnect ASR PON.\nNOTE 4:\nWhen the TQ field is “A”, the RPON field will\ncontain the PON of the ASR which has the TQ\nattached (Master ASR). See ATIS/OBF-ASR-019,\nGeneral Section.   This rule takes precedence over\nany other RPON value. "
+}

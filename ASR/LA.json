@@ -1,0 +1,18 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-03T20:17:02.996Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Lease Arrangement",
+    "title": "LA",
+    "fieldNumber": "42",
+    "fieldLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "Y ",
+    "definition": "Indicates there is a lease arrangement associated with the ACTL \nand ACNA identified. ",
+    "validEntry": "Y = Yes ",
+    "validEntryNotes": "",
+    "usageNotes": "Required when a lease arrangement exists,\notherwise prohibited.  ",
+    "fieldNotes": "A lease arrangement exists when one customer's\naccess service is being provided into another\ncustomer's point of interface (POI). \nNOTE 2:\nThe customer may be required to provide either a\nwritten copy of the lease arrangement, a letter of \nauthorization (LOA) or defined, pertinent, auditable\ninformation to the provider when the circuit/facility\nbeing ordered is an immediate service that\nterminates at the ACTL. Circuit/facility requests by \nthe same customer ordering against the immediate\ncircuit/facility for which a lease arrangement exists\nwill not be required to reaffirm the lease agreement."
+}

@@ -1,0 +1,18 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-03T20:17:02.996Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Unit Identification",
+    "title": "UNIT",
+    "fieldNumber": "55",
+    "fieldLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "B ",
+    "definition": "Identifies whether the Quantity (QTY) field contains number of\ncircuits, ring segments, Busy Hour Minutes of Capacity (BHMC)\nfor switched access service or percent of market share. ",
+    "validEntry": "B = Number of BHMC \nC = Number of lines, trunks, facilities, circuits, CCS links,\nring segments or unbundled elements. \nP = Percent market share ",
+    "validEntryNotes": "Percent of market share is an option for the ordering\nof initial Feature Group D.   The percent of market\nshare figure is specified by the customer.  The\nprovider converts this figure into the number of\ntrunks required for service.  The customer may \nspecify this figure only when an end office is\nscheduled for equal access conversion. ",
+    "usageNotes": "Otherwise optional. ",
+    "fieldNotes": ""
+}

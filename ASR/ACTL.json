@@ -1,0 +1,18 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-03T20:17:02.996Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Access Customer Terminal Location",
+    "title": "ACTL",
+    "fieldNumber": "69",
+    "fieldLength": "11",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "MILNTNMAW01\nMILNTNMAXMD",
+    "definition": "Identifies the CLLI Code of the customer facility terminal\nlocation. The CLLI Code will have been previously assigned. ",
+    "validEntry": "",
+    "validEntryNotes": "",
+    "usageNotes": "Prohibited when the EVCI field is “A”. \nNOTE 2:\nProhibited when the first position of the REQTYP\nfield is “E” or “X”. \nNOTE 3:\nProhibited when the PRILOC field on the RING\nForm is populated. \nNOTE 4:\nProhibited when the PSLI field is “A”. \nNOTE 5:\nOptional when the second position of the TQ field is\n“N” or “X”. \nNOTE 6:\nOptional when the first position of the REQTYP\nfield is “W” and the BAN field is not “N”. \nNOTE 7:\nOtherwise required. ",
+    "fieldNotes": "For those companies that do not rebundle\nunbundled trunking and transport, the ACTL and\nSECLOC must represent the same physical\nlocation. "
+}

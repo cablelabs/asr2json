@@ -1,0 +1,18 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-03T20:17:02.996Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Fiber Network Identification",
+    "title": "FNI",
+    "fieldNumber": "48",
+    "fieldLength": "13",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "N12345\n W12345\n N",
+    "definition": "Identifies all services associated with a particular fiber based\nnetwork. Also may identify customer ring and associated ring \nservices.  ",
+    "validEntry": "Valid Fiber Network Identification \nN = New ",
+    "validEntryNotes": "A valid entry of “N” is used when an FNI has not\npreviously been assigned. ",
+    "usageNotes": "Required when the first position of the REQTYP\nfield is “R” and the UNE field is not populated. \nNOTE 2:\nRequired for DS1/DS3 within a fiber network when\nthe ACT field is “N”, “C”, “M”, “T” or “R” and the\nUNE field is not populated. \nNOTE 3:\nRequired for services riding a dedicated ring when\nthe ACT field is “N”, “C”, “M”, “T” or “R” and the\nUNE field is not populated. \nNOTE 4:\nOtherwise prohibited. ",
+    "fieldNotes": "The Fiber Network Identification data will be\nassigned by the provider.  "
+}

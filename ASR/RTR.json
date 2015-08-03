@@ -1,0 +1,18 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-03T20:17:02.996Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Response Type Requested",
+    "title": "RTR",
+    "fieldNumber": "30",
+    "fieldLength": "2",
+    "characteristics": "AlphaNumeric",
+    "usage": "Required",
+    "example": "This example illustrates a numeric value but is left\njustified since it is treated as text. \nN \nS ",
+    "definition": "Identifies the type of confirmation response requested by the\ncustomer.  ",
+    "validEntry": "F = Send FOC only \nN = No response required \nS = Send FOC and DLR; CDLRD waived ",
+    "validEntryNotes": "“S” is prohibited when the ACT field is “D”, “M” or\n“R” or the EVCI field is “A”. \n1-10 = Send FOC and DLR; CDLRD required \nNOTE 1:\nA numeric entry indicates the number of working\ndays that the customer requires to confirm the\nDesign Layout Report (DLR) and will be added to the\noverall interval. \nNOTE 2:\n“1-10” prohibited when the ACT field is “D”, “M” or\n“R” or the EVCI field is “A”. ",
+    "usageNotes": "",
+    "fieldNotes": "Changes to this field are only permitted prior to\nconfirmation.  "
+}

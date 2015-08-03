@@ -1,0 +1,18 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-03T20:17:02.996Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "ndicator",
+    "title": "EVCI – Ethernet Virtual Connection",
+    "fieldNumber": "27",
+    "fieldLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "A ",
+    "definition": "Identifies that an Ethernet Virtual Connection (EVC) Form is\nassociated with this service request.  ",
+    "validEntry": "A = Stand Alone EVC  \nB = Combination EVC ",
+    "validEntryNotes": "A change to this field that is allowed on Firm\nOrders and does not require a cancellation of the\noriginal request is as follows: \nChanging from a combination to a UNI/ENNI \nNOTE 6:\nA change to this field that is allowed at the time of\nsubmission from Service Request Confirmation\n(REQTYP “EB” or “SB”) to Firm Order (REQTYP\n“EC” or “SC”) and does not require a cancellation of \nthe original request is as follows: \nChanging from a UNI/ENNI to a combination ",
+    "usageNotes": "Optional when the first position of the REQTYP\nfield is “S” or “E” otherwise prohibited.  ",
+    "fieldNotes": ""
+}

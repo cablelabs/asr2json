@@ -1,0 +1,18 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-03T20:17:02.996Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Additional Forms",
+    "title": "AFO",
+    "fieldNumber": "32",
+    "fieldLength": "5",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "Y ",
+    "definition": "Indicates which additional forms are being submitted with this\nrequest.  \nCharacter Position 1= Additional Circuit Information (ACI) \nForm \nCharacter Position 2= Reserved for future use \nCharacter Position 3= Network Assignment Information (NAI) \nCharacter Position 4= End Office Detail (EOD) Form \nCharacter Position 5= Virtual Concatenation (VCAT) Form ",
+    "validEntry": "Character Position Valid Entry Attached Form(s) \n1 Y ACI Form \n2  Reserved for future \nuse \n3 Y NAI Form \n4 Y EOD Form \n5 Y VCAT Form ",
+    "validEntryNotes": "An entry in position 1 must be used when position\n3 is populated and the first position of the REQTYP\nfield is “M”, the entry in the QTY field is greater\nthan one (1) and the QACI field on the Trunking \nForm is populated. \nNOTE 4:\nWhen position 3 is populated and the first position\nof the REQTYP field is “A”, “E” or “S” and the entry \nin the QTY field is greater than one (1), character\nposition 1 must be populated.  \nNOTE 5:\nAn entry in position 5 is only applicable when the\nfirst position of the REQTYP field is “E”, “R”, “S”,\n“V” or “X”.   ",
+    "usageNotes": "Required when the associated request form(s) is\napplicable and sent, otherwise prohibited.  ",
+    "fieldNotes": "The customer should populate the appropriate\ncharacter position(s) to indicate which additional\nform(s) is attached.  "
+}

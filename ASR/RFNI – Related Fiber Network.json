@@ -1,0 +1,18 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-03T20:17:02.996Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "dentification",
+    "title": "RFNI – Related Fiber Network",
+    "fieldNumber": "50",
+    "fieldLength": "13",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "N12345\n W12345",
+    "definition": "Identifies the associated fiber based network information for\nthis request. ",
+    "validEntry": "Valid Fiber Network Identification ",
+    "validEntryNotes": "",
+    "usageNotes": "Optional when the first position of the REQTYP\nfield is “R”, “S” or “E” and the ACT field is not “D”,\notherwise prohibited. ",
+    "fieldNotes": "The Related Fiber Network Identification data will\nhave been previously assigned by the provider. "
+}

@@ -1,0 +1,18 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-03T20:17:02.996Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Interexchange Customer Service Center",
+    "title": "ICSC",
+    "fieldNumber": "6",
+    "fieldLength": "4",
+    "characteristics": "AlphaNumeric",
+    "usage": "Required",
+    "example": "P T02",
+    "definition": "Identifies the provider service center. ",
+    "validEntry": "Valid ICSC Code ",
+    "validEntryNotes": "When the ASC-EC field is populated, this field must\nbe identical to the ASC-EC entry. ",
+    "usageNotes": "",
+    "fieldNotes": "The ICSC code appearing in this field will represent\nthe Access Service Coordination - Exchange\nCompany (ASC-EC) when the ASC-EC field is\npopulated. \nNOTE 2:\nThe first two characters identify the provider.  The\nthird and fourth characters are a unique number\nwithin the region identifying the specific ICSC.  The\nallowable range is 00 to 99.  The provider will\nsupply and periodically update the ICSC codes\nlisting to the customer.  The provider will also\nsupply guidelines for choosing the appropriate\nICSC. \nNOTE 3: \nThe format and structure of this field is defined by\nTelcordia in BR-751-100-801 Interexchange\nCustomer Service Center/Service Center\n(ICSC/SC). "
+}

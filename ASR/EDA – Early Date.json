@@ -1,0 +1,18 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-03T20:17:02.996Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "cceptance",
+    "title": "EDA – Early Date",
+    "fieldNumber": "36",
+    "fieldLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "Y ",
+    "definition": "Indicates that the customer agrees to accept an earlier due date\non their confirmation notice than the desired due date\nrequested if the provider can accommodate an earlier date.  ",
+    "validEntry": "Y = Early Acceptance Authorized ",
+    "validEntryNotes": "",
+    "usageNotes": "Prohibited when the EXP field is populated. \nNOTE 2:\nProhibited when the ASC-EC field is populated. \nNOTE 3:\nOtherwise optional. ",
+    "fieldNotes": "Population of this field specifies that the customer\nagrees to accept billing based on the provider due\ndate returned on the confirmation notice. \nNOTE 2:\nPopulation of this field will not result in expedite\ncharges being billed. "
+}

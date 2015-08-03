@@ -1,0 +1,18 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-03T20:17:02.996Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Supplement Type",
+    "title": "SUP",
+    "fieldNumber": "31",
+    "fieldLength": "1",
+    "characteristics": "Numeric",
+    "usage": "Conditional",
+    "example": "4 ",
+    "definition": "A supplement is any new iteration of an Access Service Request\n(ASR). The entry in the SUP field identifies the reason for which\nthe supplement is being issued.  ",
+    "validEntry": "1 = Cancel - Indicates that the pending order is to be\ncanceled in its entirety. ",
+    "validEntryNotes": "Valid for Firm Orders when the ASR has not been\nconfirmed by the provider. \nNOTE 2:\nValid for Service Requests (Inquiry) whether or not\nthe ASR has been confirmed by the provider.  \nNOTE 3:\nIn a Multi-EC environment, the use of a SUP type\n“4” is to be based on the status of the ASC-EC FOC.\nSince an OEC FOC status may not necessarily\nmatch the ASC-EC FOC status, OECs must be able\nto accept SUP type “4” regardless of FOC status\nwhen the ASC-EC field is populated. \nNOTE 4:\nUsed when an OEC is added to or deleted from the\nMulti-EC Form. When the ASC-EC field is populated\nwith an ICSC code other than that of the receiving\nprovider, the receipt of a SUP “4” must be\nacceptable as the initial ASR to the added OEC. ",
+    "usageNotes": "Prohibited on initial requests. \nNOTE 2:\nProhibited when changing a Service Request to a \nFirm Order.  \nNOTE 3:\nProhibited when changing service type, which\nresults in a change to the first character of the\nREQTYP field.  \nNOTE 4: \nProhibited if the pending order was already \ncompleted as ordered or canceled.  \nNOTE 5:\nOtherwise required.   ",
+    "fieldNotes": "An entry in the REMARKS field can be used to\nclarify the request. "
+}

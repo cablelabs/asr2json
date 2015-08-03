@@ -1,0 +1,18 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-03T20:17:02.996Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Basic Serving Arrangement",
+    "title": "BSA",
+    "fieldNumber": "20",
+    "fieldLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "Y ",
+    "definition": "Identifies the requirement for a Basic Serving Arrangement\n(BSA), which is the minimum necessary transport arrangement\nfor the delivery of the unbundled network features and\nfunctions, or for a Basic Service Element (BSE) associated with\na Basic Serving Arrangement. ",
+    "validEntry": "Y = Unbundled Ordering ",
+    "validEntryNotes": "",
+    "usageNotes": "Prohibited when the CC or WST field is populated,\notherwise optional. ",
+    "fieldNotes": "In a Multi-EC situation, this field should be\npopulated when at least one provider is being\nrequested to provide a BSA or BSE.  "
+}

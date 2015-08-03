@@ -1,0 +1,18 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-03T20:17:02.996Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Percentage of Interstate Usage",
+    "title": "PIU",
+    "fieldNumber": "56",
+    "fieldLength": "3",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "1 00\nL OF",
+    "definition": "Identifies the expected Interstate Usage for the access service on\nthis request.  Both Interstate and Intrastate may be ordered on\na single Access Service Request by specifying the applicable\npercent of Interstate usage.  However, two Access Service\nRequests may be related to one another through the entry\nRPON (Related Purchase Order Number). ",
+    "validEntry": "0 to 100 \nLOF = Letter on File ",
+    "validEntryNotes": "Special access must be ordered as 0 or 100. \nNOTE 2:\nWATS access must be ordered as 0 or 100. \nNOTE 3:\nFGC or FGD may be ordered with PIU field left blank\nwhere specified by tariff. The PIU is determined from\nmeasurements. \nNOTE 4:\nFGA or FGB may be ordered as 0 to 100 for the\nline/trunk group. \nNOTE 5:\nDNAL or switched access facilities may be ordered\nas 0 to 100. \nNOTE 6:\nWhen the UNE field is populated the PIU must be 0\nor LOF. ",
+    "usageNotes": "Required for services other than FGC and FGD\nwhen the ACT field is “N” and the WST field is not\npopulated. \nNOTE 2:\nRequired when the first position of the REQTYP\nfield is “S”, “E”, “V”, “X” or “W” and the ACT field is\n“C”, “M”, “T” or “R”. \nNOTE 3:\nProhibited when the ACT field is “D”. \nNOTE 4:\nOtherwise optional. ",
+    "fieldNotes": ""
+}

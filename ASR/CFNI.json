@@ -1,0 +1,18 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-03T20:17:02.996Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Customer Fiber Network ID",
+    "title": "CFNI",
+    "fieldNumber": "51",
+    "fieldLength": "20",
+    "characteristics": "AlphaNumeric",
+    "usage": "Optional",
+    "example": "1 2345678B",
+    "definition": "Identifies the customer’s circuit identification code for the ring\nbeing requested.  ",
+    "validEntry": "",
+    "validEntryNotes": "",
+    "usageNotes": "",
+    "fieldNotes": ""
+}

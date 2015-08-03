@@ -1,0 +1,18 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-03T20:17:02.996Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "umber",
+    "title": "SRN – Service Reservation",
+    "fieldNumber": "29",
+    "fieldLength": "15",
+    "characteristics": "AlphaNumeric",
+    "usage": "Optional",
+    "example": "0 1LZ C H-00001\n0 1LZ C H-01",
+    "definition": "Identifies the Service Reservation Number assigned by the\nprovider in response to a request to reserve facilities. ",
+    "validEntry": "",
+    "validEntryNotes": "",
+    "usageNotes": "",
+    "fieldNotes": "If a provider offers a reservation process, this\nnumber would be assigned based on pre-\nplanning/pre-engineering agreements or the service\ninquiry process.  "
+}

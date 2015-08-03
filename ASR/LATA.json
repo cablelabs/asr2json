@@ -1,0 +1,18 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-03T20:17:02.996Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Local Access Transport Area",
+    "title": "LATA",
+    "fieldNumber": "26",
+    "fieldLength": "3",
+    "characteristics": "Numeric",
+    "usage": "Optional",
+    "example": "4 38",
+    "definition": "Identifies the geographical area for the service being provided. ",
+    "validEntry": "",
+    "validEntryNotes": "",
+    "usageNotes": "",
+    "fieldNotes": "It is anticipated that the termination point for this\nservice is a point of presence (POP), a point of\ninterconnection (POI) or end user premises within\nthis LATA. "
+}

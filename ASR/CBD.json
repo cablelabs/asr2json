@@ -1,0 +1,18 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-03T20:17:02.996Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Call Before Dispatch",
+    "title": "CBD",
+    "fieldNumber": "11",
+    "fieldLength": "",
+    "characteristics": "Numeric",
+    "usage": "Optional",
+    "example": "This example represents an “Unstaffed”  \nSite requiring LCON coordination based\non a provider’s existing process. ",
+    "definition": "May identify a customer location as “Unstaffed” and request\nthe provider call the LCON at a desired time prior to ‘dispatch\nout’ of a service technician, or a coordination call based on a \nprovider’s existing process for service installation or disconnect.",
+    "validEntry": "1\nst\n Character \nA = Unstaffed Service Delivery Location ",
+    "validEntryNotes": "Defines the service delivery location as “Unstaffed”\nrequiring coordination with LCON prior to\ntechnician dispatch. \n2\nnd\n and 3\nrd\n Character\n01-\n99 \n= Hours \nNOTE 1:\nThe desired number of hours prior to dispatch to\nfacilitate access for the service technician.  ",
+    "usageNotes": "",
+    "fieldNotes": ""
+}

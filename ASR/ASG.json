@@ -1,0 +1,18 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-03T20:17:02.996Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Access Service Group",
+    "title": "ASG",
+    "fieldNumber": "63",
+    "fieldLength": "6",
+    "characteristics": "AlphaNumeric",
+    "usage": "Optional",
+    "example": "1 23",
+    "definition": "Identifies the access service group assigned to a particular\ncircuit or group of circuits.  ",
+    "validEntry": "",
+    "validEntryNotes": "",
+    "usageNotes": "",
+    "fieldNotes": "This number appears on the Customer Service\nRecord (the billing service charge details) which\nwas forwarded to the customer when the service\nwas installed, or, when there was a change to the\nbill resulting from service order activity.  The ASG\nmay also be provided on the Confirmation Notice\nForm (CN) by the provider. \nNOTE 2:\nIf a new ASG is being requested then the only valid\nentry is “N”. "
+}

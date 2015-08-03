@@ -1,0 +1,18 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-03T20:17:02.996Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Activity",
+    "title": "ACT",
+    "fieldNumber": "22",
+    "fieldLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Required",
+    "example": "N ",
+    "definition": "Identifies the activity involved in this service request.  ",
+    "validEntry": "C = Change or modification to an existing service ",
+    "validEntryNotes": "If the customer wishes to cancel a request for a\nLOS, but the UNI/ENNI termination remains intact\non the request, the LOSACT of “K” will be used. ",
+    "usageNotes": "",
+    "fieldNotes": "The activity defined in this field is circuit activity\nfrom the customer perspective and does not\nnecessarily reflect the type of provider order activity\nthat would result. \nNOTE 2:\nOn a supplement to a request this field carries the\noriginal activity type. "
+}

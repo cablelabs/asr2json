@@ -1,0 +1,18 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-03T20:17:02.996Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Primary Service Location Indicator",
+    "title": "PSLI",
+    "fieldNumber": "53",
+    "fieldLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "A ",
+    "definition": "Identifies the use of the PSL field. ",
+    "validEntry": "A = Provider Switch \nB = Provider Central Office \nC = Customer Physical Collocation \nD = Customer Virtual Collocation \nE = LERG Switch CLLI (CSL Out of LATA Scenario) \nF = LERG Switch CLLI (CSL In LATA Scenario) \nG = Wireless Terminating Service (Out of LATA Scenario no\nNPA/NXX’s assigned) ",
+    "validEntryNotes": "Valid entry of “E” is to be used to identify the\ncustomer’s Telcordia™ LERG™ Routing Guide based\nswitch for Local Interconnection or Wireless Trunks\nwhen the actual switch is outside the LATA of\nservices for the assigned NPA/NXX’s.  \nNOTE 2: \nValid entry of “F” is to be used to identify the\ncustomer’s LERG™ based switch for Local\nInterconnection or Wireless Trunks when the actual\nswitch is inside the LATA of services for the assigned\nNPA/NXX’s. ",
+    "usageNotes": "Prohibited when the ACT field is “D”. \nNOTE 4:\nOtherwise optional. ",
+    "fieldNotes": ""
+}

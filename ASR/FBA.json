@@ -1,0 +1,18 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-03T20:17:02.996Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Facility Billing Arrangement",
+    "title": "FBA",
+    "fieldNumber": "47",
+    "fieldLength": "4",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "FBAEF DT MUX\nD Y Y ",
+    "definition": "Indicates a special arrangement has been negotiated between\nthe host customer of a higher level service and the subsequent\ncustomer of the lower level service.  ",
+    "validEntry": "1\nst\n Position \nA = Shared network \nB = Lease Back \nC = Split Billing - All Elements \nD = Split Billing \n2\nnd\n through 4\nth\n Positions \nY = Indicates the requirement of split billing on the\nrespective element. ",
+    "validEntryNotes": "An entry in one or more of positions 2 through 4 is\nrequired when position 1 is “D”. \nNOTE 2:\nThe following define element labels:  \nEF = Entrance Facility \nDT = Direct Transport \nMUX= Multiplexing ",
+    "usageNotes": "Optional when the ACT field is “R” and the ACNA\nfield is different from the ACNA associated with the\nfacility (CFA and/or SCFA) and the UNE and CC\nfields are not populated. \nNOTE 3:\nOtherwise prohibited. ",
+    "fieldNotes": ""
+}

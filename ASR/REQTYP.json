@@ -1,0 +1,18 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-03T20:17:02.996Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Requisition Type and Status",
+    "title": "REQTYP",
+    "fieldNumber": "21",
+    "fieldLength": "2",
+    "characteristics": "Alpha",
+    "usage": "Required",
+    "example": "MA",
+    "definition": "Identifies the type of service being requested and the status of\nthe request. ",
+    "validEntry": "2\nnd\n Character (4-Step Process) \nService Request:  Entered \nby: \nStep 1 – Service Request \nA = Manual/mechanized Customer \nF = Verbal Provider \nG = Access Service Request follow up to verbal Customer \nStep 2 – Service Request Confirmation \nB = Manual/mechanized Provider \nStep 3A – Firm Order – Service Request Sent (Same PON) \nC = Manual/mechanized Customer \nH = Verbal Provider \nJ = Access Service Request follow up to verbal Customer \nStep 3B – Firm Order – Service Request Not Sent \nD = Manual/mechanized Customer \nJ = Access Service Request follow up to verbal \nK = Verbal Provider \nStep 4 – Firm Order Confirmation (FOC) \nE = Manual/mechanized Provider ",
+    "validEntryNotes": "“E” is prohibited for Stand Alone Ethernet Virtual\nConnection (EVCI = “A”) services. ",
+    "usageNotes": "",
+    "fieldNotes": "A request may be issued as a Service Request\n(Inquiry) or Firm Order. \nThe Service Request and Firm Order process\ndescription can be found in the Access Service\nOrdering Overview (ATIS-0404000, Section 5, Four\nStep Ordering Process).  \nNOTE 2:\nThe first character of REQTYP specifies the type of\nservice/element. \nNOTE 3:\nThe second character of REQTYP specifies the\nstatus of the request in the four step order process."
+}

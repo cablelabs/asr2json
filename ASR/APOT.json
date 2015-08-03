@@ -1,0 +1,18 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-03T20:17:02.996Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Additional Point of Termination",
+    "title": "APOT",
+    "fieldNumber": "70",
+    "fieldLength": "11",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "The above example could indicate Bay 17, Panel 5\nand Jack 24 as the APOT. ",
+    "definition": "Further identifies the physical ACTL Point of Termination. ",
+    "validEntry": "",
+    "validEntryNotes": "",
+    "usageNotes": "Required when the ACTL field does not identify the\nspecific physical termination point of the access\nservice. \nNOTE 2:\nProhibited when the ACT field is “D”. \nNOTE 3:\nOtherwise optional. ",
+    "fieldNotes": "describe the functional category of equipment or work\ncenter that is contained in a structure. Equipment\ncategories, including central office switching and\nancillary equipment or non-switching or access\nterminations, are associated with a building or network\nsite for purposes of maintaining equipment inventories\nand for identifying facility and circuit terminations and\nnodal locations  (3 alpha/numeric characters). \nNOTE 3:\nValid CLLI Codes are outlined in Telcordia\nTechnologies practice BR 795-(100-186)-100. "
+}

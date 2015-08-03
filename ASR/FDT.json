@@ -1,0 +1,18 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-03T20:17:02.996Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Frame Due Time",
+    "title": "FDT",
+    "fieldNumber": "13",
+    "fieldLength": "7",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": " C 1015PM\nE 12P02P\nP 08A10A\nMAM\n C 10P",
+    "definition": "Provides special handling instructions for the connection,\ndisconnection or coordination of changes for this request. ",
+    "validEntry": "Time Zone (Position 1) \nCentral = C \nEastern = E \nMountain = M \nPacific = P \nTime of Day (Positions 2-7) \nTwo Digit Hour (01-12)/Two Digit Minute (00-59)/AM or PM \nTwo Digit Hour (01-12)/A or P/Two Digit Hour (01-12)/A or P \nAM or PM \nTwo Digit Hour (01-12)/A or P ",
+    "validEntryNotes": "Indicates the time zone and time or time zone and\nwindow of time when the service should be\nconnected, disconnected or coordinated. \nNOTE 2:\nWhen this field is populated in conjunction with the\nCB TEL NO field, a specific time of day including the\nhour or hour and minute is required. ",
+    "usageNotes": "Required when the first position of the REQTYP\ntype is “M” or “L”, the ACT field is “N”, “C”, or “D”,\nand routing and/or translation change requires\ncoordination. \nNOTE 2:\nProhibited when ACT field is “R”. \nNOTE 3:\nRequired when the CB TEL NO is populated. \nNOTE 4:\nOtherwise optional. ",
+    "fieldNotes": "Types of changes that require coordination are CIC\nredirects, switch conversions, mutual trunking\narrangement, point code changes, traffic\nrehome/reroutes, call through testing requests,\ncut over, etc.  "
+}

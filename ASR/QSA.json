@@ -1,0 +1,18 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-03T20:17:02.996Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Quantity Service Address Location Information",
+    "title": "QSA",
+    "fieldNumber": "24",
+    "fieldLength": "2",
+    "characteristics": "Numeric",
+    "usage": "Conditional",
+    "example": "0 6",
+    "definition": "Identifies the total number of Service Address Location\nInformation Forms being sent by the customer. ",
+    "validEntry": "",
+    "validEntryNotes": "",
+    "usageNotes": "Otherwise optional. ",
+    "fieldNotes": "QSA cannot be greater than “01” when the REQTYP\nfield is “E” and the SEI field is populated. "
+}
