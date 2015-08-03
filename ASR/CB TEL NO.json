@@ -1,0 +1,18 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-03T19:06:31.937Z",
+    "form": "ASR",
+    "section": "CONTACT",
+    "name": "Conference BridgeTelephone Number",
+    "title": "CB TEL NO",
+    "fieldNumber": "117",
+    "fieldLength": "10",
+    "characteristics": "10 numeric characters (excluding \n2 preprinted hyphens) ",
+    "usage": "Conditional",
+    "example": "8 77-981-3500",
+    "definition": "Identifies the Conference Bridge Telephone number to be used\nat the time of implementation or cut over. ",
+    "validEntry": "",
+    "validEntryNotes": "",
+    "usageNotes": "Prohibited when the first position of the REQTYP\nfield is “A”, “R”, or “W”, otherwise optional. ",
+    "fieldNotes": "The time allocated for the implementation/cut over\nactivity will be specified in the Frame Due Time\n(FDT) field on the ASR. "
+}

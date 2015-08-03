@@ -1,20 +1,18 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-30T14:31:00.943Z",
+    "processed": "2015-08-03T19:06:31.937Z",
     "form": "ASR",
-    "section": "BILL SECTION",
+    "section": "BILL",
     "name": "Promotion Number",
     "title": "PNUM",
     "fieldNumber": "99",
     "fieldLength": "20",
-    "characteristics": "",
+    "characteristics": "20  alpha/numeric characters  ",
     "usage": "Optional",
-    "example": "\nV%20Z\nA\nH\n1\n2\n%20C%20\nD\nS\n-\n1\n2\n3\n4\n5\n6\n-%20\n0\n0\n1\n6%20-%20U\n%20T",
+    "example": "V ZAH12\n C DS-123456- 0016 - U T",
     "definition": "Identifies the contract tariff option for a pricing promotion plan.",
     "validEntry": "",
     "validEntryNotes": "",
     "usageNotes": "",
-    "fieldNotes": [
-        "The Promotion Number will be assigned by the provider."
-    ]
+    "fieldNotes": "The Promotion Number will be assigned by the\nprovider. "
 }

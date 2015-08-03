@@ -1,30 +1,18 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-30T14:31:00.943Z",
+    "processed": "2015-08-03T19:06:31.937Z",
     "form": "ASR",
-    "section": "ADMINISTRATIVE SECTION",
-    "name": "-",
+    "section": "ADMINISTRATIVE",
+    "name": "Coordinated Conversion",
     "title": "CCVN",
     "fieldNumber": "74",
-    "fieldLength": "4",
-    "characteristics": "Alphanumeric",
+    "fieldLength": "",
+    "characteristics": "",
     "usage": "Conditional",
-    "example": "\nN\nJ\n9\n0",
-    "definition": "Coordinated Conversion Identifies the request as being a coordinated conversion reusin g a portion of an existing access service configuration for the provisioning of a new access service.",
-    "validEntry": [
-        {
-            "value": "",
-            "description": ""
-        },
-        {
-            "value": "",
-            "description": "IAC Code(s) "
-        }
-    ],
+    "example": "The above example indicates that the ACNA and\nCCNA are different. ",
+    "definition": "Identifies the request as being a coordinated conversion reusing\na portion of an existing access service configuration for the\nprovisioning of a new access service. ",
+    "validEntry": "IAC Code(s) ",
     "validEntryNotes": "",
-    "usageNotes": "Required when multiple providers are involved in providing access service and the EVCI field is not equal to \"B\".  \nRequired when the JPR field is populated. \nOtherwise prohibited.",
-    "fieldNotes": [
-        "Implemented March 17, 2012  75. ASC-EC - Access Service Coordination - Exchange Company Identifies the ICSC code of the Access Service Coordination - Exchange Company (ASC-EC )  whenever an access service passes through more than one provider territory. ",
-        "An entry in this field indicates that a Multi-EC Form must be associated with this access service request."
-    ]
+    "usageNotes": "Optional when the ACT field is “N” or “D”, otherwise\nprohibited. ",
+    "fieldNotes": "Two access service requests (one new connect and\none disconnect) are required. \nNOTE 2:\nThe entry allows for specification of both ACNA and\nCCNA as depicted in the example below. \nNOTE 3:\nWhen this field is populated on an ASR with “N”\nactivity, the ECCKT field must be populated with\nthe circuit identification(s) of the former customer’s\naccess service. \nNOTE 4:\nWhen a Coordinated Conversion is applicable, it is\nstrongly recommended that both requests (N and\nD) are fully cross- referenced using CCVN, PON and\nRPON fields, which will allow for a more efficient\ntransition of the services. "
 }

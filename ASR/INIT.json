@@ -1,20 +1,18 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-30T14:31:00.943Z",
+    "processed": "2015-08-03T19:06:31.937Z",
     "form": "ASR",
-    "section": "CONTACT SECTION",
-    "name": "Initiator Electronic Mail Address",
+    "section": "CONTACT",
+    "name": "Initiator",
     "title": "INIT",
-    "fieldNumber": "104",
-    "fieldLength": "60",
-    "characteristics": "Alphanumeric",
-    "usage": "Optional",
-    "example": "\nZ%20J\nO\nN\nE\nS\n%40\nN\nO\nT\nE\nS\n.\nB\nE%20L%20L%20C\nO\nM\nP%20A\nN\nY\n.\n%20C%20\nO\nM",
-    "definition": "Identifies the electronic mail address of the initiator.",
+    "fieldNumber": "101",
+    "fieldLength": "15",
+    "characteristics": "15 alpha/numeric characters ",
+    "usage": "Required",
+    "example": "J OHNSMITH",
+    "definition": "Identifies the customer employee who originated this request. ",
     "validEntry": "",
     "validEntryNotes": "",
     "usageNotes": "",
-    "fieldNotes": ""
-}his request. An y authorizations of charges, changes or waiving the Confirming Design Layout Report  ( CDLR )  are the responsibility of this person."
-    ]
+    "fieldNotes": "This is the person who should be contacted if there\nare any questions regarding this request. Any\nauthorizations of charges, changes or waiving the\nConfirming Design Layout Report (CDLR) are the\nresponsibility of this person. "
 }

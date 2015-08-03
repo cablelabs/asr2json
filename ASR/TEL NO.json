@@ -1,0 +1,19 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-03T19:06:31.937Z",
+    "form": "ASR",
+    "section": "CONTACT",
+    "name": "Telephone Number (IMPCON)",
+    "title": "TEL NO",
+    "fieldNumber": "123",
+    "fieldLength": "14",
+    "characteristics": "14 numeric characters (excluding \n3 preprinted hyphens) ",
+    "usage": "Conditional",
+    "example": "2 01-981-3500-35 8 7 ",
+    "definition": "Identifies the telephone number of the implementation contact. ",
+    "validEntry": "",
+    "validEntryNotes": "",
+    "usageNotes": "Required when the IMPCON field is populated,\notherwise prohibited. ",
+    "fieldNotes": ""
+}: ""
+}

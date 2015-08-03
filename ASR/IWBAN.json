@@ -1,27 +1,18 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-30T14:31:00.943Z",
+    "processed": "2015-08-03T19:06:31.937Z",
     "form": "ASR",
-    "section": "BILL SECTION",
+    "section": "BILL",
     "name": "Inside Wire Billing Account Number",
     "title": "IWBAN",
     "fieldNumber": "98",
     "fieldLength": "16",
-    "characteristics": "",
+    "characteristics": "16  alpha/numeric characters  ",
     "usage": "Conditional",
-    "example": "\nN\nX\nY\nZ\n1\n2\n3\n4\n5\nA\n%20C%20\nX\n2\n1\n4%203%20",
-    "definition": "Identifies the previously assigned Billing Account Number for charges associated with inside wire.",
-    "validEntry": [
-        {
-            "value": "",
-            "description": ""
-        },
-        {
-            "value": "",
-            "description": "Billing Account Number "
-        }
-    ],
+    "example": "NXYZ12345A C X214 3 ",
+    "definition": "Identifies the previously assigned Billing Account Number for\ncharges associated with inside wire. ",
+    "validEntry": "Billing Account Number ",
     "validEntryNotes": "",
-    "usageNotes": "Required  w hen the GETO field on the service specific form is \"A\", \"E\", \"S\", \"T\", \"U\", \"V\", \"W\", \"Y\", or \"Z\". \nProhibited when the ACT field is \"D\". \nOtherwise optional.",
+    "usageNotes": "Required when the GETO field on the service\nspecific form is “A”, “E”, “S”, “T”, “U”, “V”, “W”, “Y”,\nor “Z”. \nNOTE 2:\nProhibited when the ACT field is “D”. \nNOTE 3:\nOtherwise optional. ",
     "fieldNotes": ""
 }

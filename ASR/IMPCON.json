@@ -1,21 +1,18 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-30T14:31:00.943Z",
+    "processed": "2015-08-03T19:06:31.937Z",
     "form": "ASR",
-    "section": "CONTACT SECTION",
+    "section": "CONTACT",
     "name": "Implementation Contact",
     "title": "IMPCON",
     "fieldNumber": "122",
     "fieldLength": "15",
-    "characteristics": "Alphanumeric",
+    "characteristics": "15 alpha/numeric characters ",
     "usage": "Conditional",
-    "example": "\nJ%20O\nH\nN\nS\nM\nI\nT\nH",
-    "definition": "Identifies the customer employee or office responsible for control of installation and completion.",
+    "example": "J OHNSMITH",
+    "definition": "Identifies the customer employee or office responsible for\ncontrol of installation and completion. ",
     "validEntry": "",
     "validEntryNotes": "",
-    "usageNotes": "Required when the ACT field is \"N\", \"C\", \"M\", \"D\", or \"T\". \nRequired when the ACT field is \"R\" and the TQ field is populated. \nOtherwise optional.",
-    "fieldNotes": [
-        "During installation, the provider will notify this person when the end user requests activity in addition to the activity specified on the ASR. ",
-        "This is the contact to be used for completions, acceptance testing and other such related installation activity."
-    ]
+    "usageNotes": "Required when the ACT field is “N”, “C”, “M”, “D”, or\n“T”. \nNOTE 2:\nRequired when the ACT field is “R” and the TQ field\nis populated. \nNOTE 3:\nOtherwise optional. ",
+    "fieldNotes": "During installation, the provider will notify this\nperson when the end user requests activity in\naddition to the activity specified on the ASR. \nNOTE 2:\nThis is the contact to be used for completions,\nacceptance testing and other such related\ninstallation activity. "
 }

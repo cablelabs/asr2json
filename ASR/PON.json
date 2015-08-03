@@ -1,20 +1,18 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-30T14:31:00.943Z",
+    "processed": "2015-08-03T19:58:23.045Z",
     "form": "ASR",
-    "section": "ADMINISTRATIVE SECTION",
+    "section": "ADMINISTRATIVE",
     "name": "Purchase Order Number",
     "title": "PON",
     "fieldNumber": "2",
     "fieldLength": "16",
-    "characteristics": "Alphanumeric",
+    "characteristics": "AlphaNumeric",
     "usage": "Required",
-    "example": "\n8%202\n4\nZ\n9",
-    "definition": "Identifies the customer's unique purchase order or requisition number that authorizes the issuance of this request or supplement.",
+    "example": "8 24Z9",
+    "definition": "Identifies the customer's unique purchase order or requisition\nnumber that authorizes the issuance of this request or\nsupplement. ",
     "validEntry": "",
     "validEntryNotes": "",
     "usageNotes": "",
-    "fieldNotes": [
-        "The Purchase Order Number may be reused after two years from the due date of the original request."
-    ]
+    "fieldNotes": "The Purchase Order Number may be reused after\ntwo years from the due date of the original request."
 }

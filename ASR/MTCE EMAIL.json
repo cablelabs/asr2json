@@ -1,0 +1,18 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-03T19:06:31.937Z",
+    "form": "ASR",
+    "section": "CONTACT",
+    "name": "Maintenance Contact Electronic Mail Address",
+    "title": "MTCE EMAIL",
+    "fieldNumber": "121",
+    "fieldLength": "60",
+    "characteristics": "60 alpha/numeric characters  ",
+    "usage": "Optional",
+    "example": "P ANY. C OM",
+    "definition": "Identifies the electronic mail address of the maintenance\ncontact when defined by customer/provider contracts, tariffs\nand/or negotiated agreements. ",
+    "validEntry": "",
+    "validEntryNotes": "",
+    "usageNotes": "",
+    "fieldNotes": ""
+}

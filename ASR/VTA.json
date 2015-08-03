@@ -1,20 +1,18 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-30T14:31:00.943Z",
+    "processed": "2015-08-03T19:06:31.937Z",
     "form": "ASR",
-    "section": "BILL SECTION",
-    "name": " Variable Term Agreement",
+    "section": "BILL",
+    "name": "Variable Term Agreement",
     "title": "VTA",
     "fieldNumber": "96",
     "fieldLength": "17",
-    "characteristics": "Alphanumeric",
-    "usage": "Conditional",
-    "example": "\n3%20N\n%20C%20\nO\nR",
-    "definition": "Identifies the duration, identifying USOC, contract date or contract identification number of any variable term agreement that may be offered by a provider.",
+    "characteristics": "17 alpha/numeric characters ",
+    "usage": "Optional",
+    "example": "This example illustrates a numeric value but is left\njustified since it is treated as text. \n C 12345\n3 61091489BLKH00 0 1 ",
+    "definition": "Identifies the duration, identifying USOC, contract date or\ncontract identification number of any variable term agreement\nthat may be offered by a provider. ",
     "validEntry": "",
     "validEntryNotes": "",
-    "usageNotes": "Optional when the first position of the REQTYP field on the ASR Form is \"V\" or \"X\" and the VCVTA field on the VC Form is not populated, otherwise prohibited.",
-    "fieldNotes": [
-        "Implemented June 13, 1998  97. VCVTA -  Virtual Connection Variable Term Agreement Identifies the duration, identifying USOC, contract date or contract identification number of any variable term agreement that may be offered by a provider for a virtual connection."
-    ]
+    "usageNotes": "",
+    "fieldNotes": "When the ASC-EC field is populated, this identifies\nthe duration, identifying USOC, contract date or\ncontract identification number of any variable term\nagreement that may be offered by ASC-EC.  "
 }

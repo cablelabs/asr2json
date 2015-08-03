@@ -1,34 +1,18 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-30T14:31:00.943Z",
+    "processed": "2015-08-03T19:06:31.937Z",
     "form": "ASR",
-    "section": "ADMINISTRATIVE SECTION",
+    "section": "ADMINISTRATIVE",
     "name": "Service and Product Enhancement Code",
     "title": "SPEC",
     "fieldNumber": "79",
     "fieldLength": "5",
-    "characteristics": "Alphanumeric",
+    "characteristics": "5 alpha/numeric characters\nminimum, and 7 alpha/numeric\ncharacters maximum ",
     "usage": "Conditional",
-    "example": "\nF%20R\nD\nS\n3\n2\n2",
-    "definition": "Identifies a specific product or service offering.",
-    "validEntry": [
-        {
-            "value": "Positions 1-7 ",
-            "description": " Any alpha character except %E2%80%9CI%E2%80%9D or an"
-        },
-        {
-            "value": "",
-            "description": "y"
-        },
-        {
-            "value": "",
-            "description": "numeric character except %E2%80%9C0%E2%80%9D. "
-        }
-    ],
+    "example": "F RDS322",
+    "definition": "Identifies a specific product or service offering. ",
+    "validEntry": "Positions 1-7 = Any alpha character except “I” or any\nnumeric character except “0”. ",
     "validEntryNotes": "",
-    "usageNotes": "Prohibited when the EVCI field is \"A\", otherwise optional.",
-    "fieldNotes": [
-        "SPEC may be applicable for circuit level features and options other than those already identified by the Network Channel  ( NC )  and Network Channel Interface (NCI) codes. ",
-        " Telcordia Technologies, Inc. is the intellectual property owner and administrator of SPEC. The SPEC code structure and use are outlined in Telcordia Technologies special report SR-2491."
-    ]
+    "usageNotes": "Prohibited when the EVCI field is “A”, otherwise\noptional. ",
+    "fieldNotes": "SPEC may be applicable for circuit level features\nand options other than those already identified by\nthe Network Channel (NC) and Network Channel\nInterface (NCI) codes. \nNOTE 2: \nTelcordia Technologies, Inc. is the intellectual\nproperty owner and administrator of SPEC. The\nSPEC code structure and use are outlined in\nTelcordia Technologies special report SR-2491. "
 }

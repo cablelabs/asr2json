@@ -1,0 +1,18 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-03T19:06:31.937Z",
+    "form": "ASR",
+    "section": "BILL",
+    "name": "Billing Contact Electronic Mail Address",
+    "title": "BILLCON EMAIL",
+    "fieldNumber": "95",
+    "fieldLength": "60",
+    "characteristics": "60 alpha/numeric characters  ",
+    "usage": "Conditional",
+    "example": "P ANY. C OM",
+    "definition": "Identifies the electronic mail address of the Billing Contact\nwhen a customer profile does not already exist. ",
+    "validEntry": "",
+    "validEntryNotes": "",
+    "usageNotes": "Optional when the BILLCON field is populated,\notherwise prohibited. ",
+    "fieldNotes": ""
+}

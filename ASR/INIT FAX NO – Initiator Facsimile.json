@@ -1,0 +1,18 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-03T19:06:31.937Z",
+    "form": "ASR",
+    "section": "CONTACT",
+    "name": "umber",
+    "title": "INIT FAX NO – Initiator Facsimile",
+    "fieldNumber": "103",
+    "fieldLength": "10",
+    "characteristics": "10 numeric characters (excluding \n2 preprinted hyphens) ",
+    "usage": "Optional",
+    "example": "9 08-336-2980",
+    "definition": "Identifies the fax number of the initiator. ",
+    "validEntry": "",
+    "validEntryNotes": "",
+    "usageNotes": "",
+    "fieldNotes": ""
+}

@@ -1,20 +1,18 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-30T14:31:00.943Z",
+    "processed": "2015-08-03T19:06:31.937Z",
     "form": "ASR",
-    "section": "CONTACT SECTION",
-    "name": " Floor (DSGCON)",
+    "section": "CONTACT",
+    "name": "Floor (DSGCON)",
     "title": "FLOOR",
     "fieldNumber": "112",
-    "fieldLength": "6",
-    "characteristics": "Alphanumeric",
+    "fieldLength": "3",
+    "characteristics": "3 alpha/numeric characters ",
     "usage": "Conditional",
-    "example": "\nK%20-\n1\n5\n1\nA",
-    "definition": "Identifies the floor of the design/engineering contact's address.",
+    "example": "This example illustrates a numeric value but is left\njustified since it is treated as text. \n1 MZ",
+    "definition": "Identifies the floor of the design/engineering contact’s address. ",
     "validEntry": "",
     "validEntryNotes": "",
-    "usageNotes": "Optional when the STREET  ( DSGCON )  field is populated, otherwise prohibited.",
-    "fieldNotes": [
-        "Implemented October 8, 2005  113. ROOM -  Room (DSGCON) Identifies the room of the design/engineering contact's address."
-    ]
+    "usageNotes": "Optional when the STREET (DSGCON) field is\npopulated, otherwise prohibited. ",
+    "fieldNotes": ""
 }

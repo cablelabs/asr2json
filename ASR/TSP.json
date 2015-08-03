@@ -1,37 +1,18 @@
 {
     "asogVersion": "50",
-    "processed": "2015-07-30T14:31:00.943Z",
+    "processed": "2015-08-03T19:06:31.937Z",
     "form": "ASR",
-    "section": "ADMINISTRATIVE SECTION",
+    "section": "ADMINISTRATIVE",
     "name": "Telecommunications Service Priority",
     "title": "TSP",
     "fieldNumber": "76",
     "fieldLength": "12",
-    "characteristics": "Alphanumeric",
+    "characteristics": "12 alpha/numeric characters\n(including 1 preprinted hyphen) ",
     "usage": "Optional",
-    "example": "\nT%20S\nP\n1\n2\n3\n4\n5\n%20C%20\n-\nE\n1",
-    "definition": "Indicates the provisioning and restoration priority as defined under the TSP Service Vendor Handbook.",
-    "validEntry": [
-        {
-            "value": "",
-            "description": ""
-        },
-        {
-            "value": "",
-            "description": "Nine Character TSP Control Identifier "
-        },
-        {
-            "value": "",
-            "description": "One Character Provisioning Priority Level (E, 0-5) "
-        },
-        {
-            "value": "",
-            "description": "One Digit Restoration Priority Level (0-5) "
-        }
-    ],
-    "validEntryNotes": "A TSP code ending in \"00\" indicates \"revocation\", the removal of a previously assigned TSP code.",
+    "example": "T SP12345 C -E1",
+    "definition": "Indicates the provisioning and restoration priority as defined\nunder the TSP Service Vendor Handbook.  ",
+    "validEntry": "Nine Character TSP Control Identifier \nOne Character Provisioning Priority Level (E, 0-5) \nOne Digit Restoration Priority Level (0-5) ",
+    "validEntryNotes": "A TSP code ending in “00” indicates “revocation”,\nthe removal of a previously assigned TSP code.  ",
     "usageNotes": "",
-    "fieldNotes": [
-        "These codes are assigned by the TSP Program Office."
-    ]
+    "fieldNotes": "These codes are assigned by the TSP Program\nOffice. "
 }
