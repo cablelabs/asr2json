@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T17:08:46.829Z",
+    "processed": "2015-08-04T21:34:01.001Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Telecommunications Service Priority",
@@ -13,7 +13,11 @@
         "TSP12345C-E1"
     ],
     "definition": "Indicates the provisioning and restoration priority as defined under the TSP Service Vendor Handbook.",
-    "validEntry": "Nine Character TSP Control Identifier\nOne Character Provisioning Priority Level (E, 0-5)\nOne Digit Restoration Priority Level (0-5)",
+    "validEntry": [
+        "Nine Character TSP Control Identifier",
+        "One Character Provisioning Priority Level (E, 0-5)",
+        "One Digit Restoration Priority Level (0-5)"
+    ],
     "validEntryNotes": [
         "A TSP code ending in “00” indicates “revocation”, the removal of a previously assigned TSP code. "
     ],

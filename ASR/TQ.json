@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T17:08:46.829Z",
+    "processed": "2015-08-04T21:34:01.001Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Translation Questionnaire Request",
@@ -14,7 +14,80 @@
         "1Y"
     ],
     "definition": "Indicates that a translation questionnaire is being submitted.",
-    "validEntry": "1\nst\nPosition\nA = No TQ attached\nB = FGB translations\nC = Code (NPA/NXX) Translation Routing Only\nD = FGD translations\nE = STP Translation Changes\nL = Local translations\nM = Local translations and Code Translation Routing\nS = SAC only\nT= FGD translations and SAC\nU = FGB translations and SAC\nW = Wireless translations\nX = Wireless translations and Code Translation Routing\n1-9 = TQ on file\n2\nnd\nPosition\nN = No Trunking Form\nX = Trunking Form (no trunk activity)\nY = Trunking Form (trunk activity)",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "1st Position"
+        },
+        {
+            "value": "A",
+            "description": "No TQ attached"
+        },
+        {
+            "value": "B",
+            "description": "FGB translations"
+        },
+        {
+            "value": "C",
+            "description": "Code (NPA/NXX) Translation Routing Only"
+        },
+        {
+            "value": "D",
+            "description": "FGD translations"
+        },
+        {
+            "value": "E",
+            "description": "STP Translation Changes"
+        },
+        {
+            "value": "L",
+            "description": "Local translations"
+        },
+        {
+            "value": "M",
+            "description": "Local translations and Code Translation Routing"
+        },
+        {
+            "value": "S",
+            "description": "SAC only"
+        },
+        {
+            "value": "T",
+            "description": "FGD translations and SAC"
+        },
+        {
+            "value": "U",
+            "description": "FGB translations and SAC"
+        },
+        {
+            "value": "W",
+            "description": "Wireless translations"
+        },
+        {
+            "value": "X",
+            "description": "Wireless translations and Code Translation Routing"
+        },
+        {
+            "value": "1-9",
+            "description": "TQ on file"
+        },
+        {
+            "value": "",
+            "description": "2nd Position"
+        },
+        {
+            "value": "N",
+            "description": "No Trunking Form"
+        },
+        {
+            "value": "X",
+            "description": "Trunking Form (no trunk activity)"
+        },
+        {
+            "value": "Y",
+            "description": "Trunking Form (trunk activity)"
+        }
+    ],
     "validEntryNotes": [
         "When the first position of TQ is “A”, the ASR which has the TQ Form attached will be identified in the RPON field.",
         "When the first position of TQ is “L”, “M”, “W”, “X” or “C”, entries in the CC or WST, or the CC and the WST fields are required.",

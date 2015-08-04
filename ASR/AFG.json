@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T17:08:46.829Z",
+    "processed": "2015-08-04T21:34:01.001Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Agency of the Federal Government",
@@ -13,7 +13,12 @@
         "Y"
     ],
     "definition": "Identifies that this service is provided to an agency of the Federal Government.",
-    "validEntry": "Y = Yes",
+    "validEntry": [
+        {
+            "value": "Y",
+            "description": "Yes"
+        }
+    ],
     "validEntryNotes": [
         ""
     ],

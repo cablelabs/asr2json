@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T17:08:46.829Z",
+    "processed": "2015-08-04T21:34:01.001Z",
     "form": "ASR",
     "section": "BILL",
     "name": "Access Customer Name Abbreviation",
@@ -13,7 +13,16 @@
         "UTC"
     ],
     "definition": "Identifies the COMMON LANGUAGE IAC code for the customer who should receive the bill for the ordered service.",
-    "validEntry": "IAC Code\nZZZ = Casual customer or end user billing",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "IAC Code"
+        },
+        {
+            "value": "ZZZ",
+            "description": "Casual customer or end user billing"
+        }
+    ],
     "validEntryNotes": [
         "Valid IAC codes are maintained by Telcordia Technologies. "
     ],

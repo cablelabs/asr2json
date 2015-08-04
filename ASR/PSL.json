@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T17:08:46.829Z",
+    "processed": "2015-08-04T21:34:01.001Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Primary Service Location",
@@ -13,7 +13,12 @@
         "WASHDCSWDS1"
     ],
     "definition": "Identifies the primary service location when the terminating and the originating points are not the ACTL.",
-    "validEntry": "Valid CLLI Code",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "Valid CLLI Code"
+        }
+    ],
     "validEntryNotes": [
         "Valid entries (CLLI Codes) are maintained by Telcordia Technologies. "
     ],

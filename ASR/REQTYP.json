@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T17:08:46.829Z",
+    "processed": "2015-08-04T21:34:01.001Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Requisition Type and Status",
@@ -13,7 +13,152 @@
         "MA"
     ],
     "definition": "Identifies the type of service being requested and the status of the request.",
-    "validEntry": "1\nst\nCharacter\nA = Switched Access - Feature Group A\nE = End User Special Access, DNAL, Part Time/Full Time\nTelevision or Program Audio, Specialized Ethernet\nAggregation, Switched Ethernet Services\nL = CCS Link or Unbundled STP Port\nM = Trunking (FG B, C, D, SAC NXX, Wireless and Local)\nR = Ring\nS = Special Access, Full Time/Part Time Television or\nProgram Audio, DNAL Switched Access Facility,\nUnbundled Dedicated Transport, Unbundled\nMultiplexer, Specialized Ethernet Aggregation, Switched\nEthernet Services, Stand Alone EVC\nV = Broadband Services, ATM, Frame Relay Service\nW = WATS Access Line\nX = Broadband End User Services, ATM, Frame Relay\nService2\nnd\nCharacter (4-Step Process)\nService Request:  Entered\nby:\nStep 1 – Service Request\nA = Manual/mechanized Customer\nF = Verbal Provider\nG = Access Service Request follow up to verbal Customer\nStep 2 – Service Request Confirmation\nB = Manual/mechanized Provider\nStep 3A – Firm Order – Service Request Sent (Same PON)\nC = Manual/mechanized Customer\nH = Verbal Provider\nJ = Access Service Request follow up to verbal Customer\nStep 3B – Firm Order – Service Request Not Sent\nD = Manual/mechanized Customer\nJ = Access Service Request follow up to verbal\nK = Verbal Provider\nStep 4 – Firm Order Confirmation (FOC)\nE = Manual/mechanized Provider",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "1st Character"
+        },
+        {
+            "value": "A",
+            "description": "Switched Access - Feature Group A"
+        },
+        {
+            "value": "E",
+            "description": "End User Special Access, DNAL, Part Time/Full Time"
+        },
+        {
+            "value": "",
+            "description": "Television or Program Audio, Specialized Ethernet"
+        },
+        {
+            "value": "",
+            "description": "Aggregation, Switched Ethernet Services"
+        },
+        {
+            "value": "L",
+            "description": "CCS Link or Unbundled STP Port"
+        },
+        {
+            "value": "M",
+            "description": "Trunking (FG B, C, D, SAC NXX, Wireless and Local)"
+        },
+        {
+            "value": "R",
+            "description": "Ring"
+        },
+        {
+            "value": "S",
+            "description": "Special Access, Full Time/Part Time Television or"
+        },
+        {
+            "value": "",
+            "description": "Program Audio, DNAL Switched Access Facility,"
+        },
+        {
+            "value": "",
+            "description": "Unbundled Dedicated Transport, Unbundled"
+        },
+        {
+            "value": "",
+            "description": "Multiplexer, Specialized Ethernet Aggregation, Switched"
+        },
+        {
+            "value": "",
+            "description": "Ethernet Services, Stand Alone EVC"
+        },
+        {
+            "value": "V",
+            "description": "Broadband Services, ATM, Frame Relay Service"
+        },
+        {
+            "value": "W",
+            "description": "WATS Access Line"
+        },
+        {
+            "value": "X",
+            "description": "Broadband End User Services, ATM, Frame Relay"
+        },
+        {
+            "value": "",
+            "description": "Service"
+        },
+        {
+            "value": "",
+            "description": "2nd Character (4-Step Process)"
+        },
+        {
+            "value": "",
+            "description": "Service Request:  Entered"
+        },
+        {
+            "value": "",
+            "description": "by:"
+        },
+        {
+            "value": "",
+            "description": "Step 1 – Service Request"
+        },
+        {
+            "value": "A",
+            "description": "Manual/mechanized Customer"
+        },
+        {
+            "value": "F",
+            "description": "Verbal Provider"
+        },
+        {
+            "value": "G",
+            "description": "Access Service Request follow up to verbal Customer"
+        },
+        {
+            "value": "",
+            "description": "Step 2 – Service Request Confirmation"
+        },
+        {
+            "value": "B",
+            "description": "Manual/mechanized Provider"
+        },
+        {
+            "value": "",
+            "description": "Step 3A – Firm Order – Service Request Sent (Same PON)"
+        },
+        {
+            "value": "C",
+            "description": "Manual/mechanized Customer"
+        },
+        {
+            "value": "H",
+            "description": "Verbal Provider"
+        },
+        {
+            "value": "J",
+            "description": "Access Service Request follow up to verbal Customer"
+        },
+        {
+            "value": "",
+            "description": "Step 3B – Firm Order – Service Request Not Sent"
+        },
+        {
+            "value": "D",
+            "description": "Manual/mechanized Customer"
+        },
+        {
+            "value": "J",
+            "description": "Access Service Request follow up to verbal"
+        },
+        {
+            "value": "K",
+            "description": "Verbal Provider"
+        },
+        {
+            "value": "",
+            "description": "Step 4 – Firm Order Confirmation (FOC)"
+        },
+        {
+            "value": "E",
+            "description": "Manual/mechanized Provider"
+        }
+    ],
     "validEntryNotes": [
         "“E” is prohibited for Stand Alone Ethernet Virtual Connection (EVCI = “A”) services. "
     ],

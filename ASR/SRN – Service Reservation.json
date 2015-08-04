@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T17:08:46.829Z",
+    "processed": "2015-08-04T21:34:01.001Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "umber",
@@ -14,7 +14,12 @@
         "01LZCH-01"
     ],
     "definition": "Identifies the Service Reservation Number assigned by the provider in response to a request to reserve facilities.",
-    "validEntry": "",
+    "validEntry": [
+        {
+            "value": "",
+            "description": ""
+        }
+    ],
     "validEntryNotes": [
         ""
     ],

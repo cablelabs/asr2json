@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T17:08:46.829Z",
+    "processed": "2015-08-04T21:34:01.001Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "roup",
@@ -13,7 +13,36 @@
         "E"
     ],
     "definition": "Identifies this request is ordering Link Aggregation.",
-    "validEntry": "E = Existing Link Aggregation group. Activity impacting an\nexisting Link Aggregation group (add or remove\nmembers)\nN = New Link Aggregation group created on this request\n(The provider will assign a LAG-ID and provide it on the\nConfirmation Notice)\nD = Disconnect of entire existing Link Aggregation group.",
+    "validEntry": [
+        {
+            "value": "E",
+            "description": "Existing Link Aggregation group. Activity impacting an"
+        },
+        {
+            "value": "",
+            "description": "existing Link Aggregation group (add or remove"
+        },
+        {
+            "value": "",
+            "description": "members)"
+        },
+        {
+            "value": "N",
+            "description": "New Link Aggregation group created on this request"
+        },
+        {
+            "value": "",
+            "description": "(The provider will assign a LAG-ID and provide it on the"
+        },
+        {
+            "value": "",
+            "description": "Confirmation Notice)"
+        },
+        {
+            "value": "D",
+            "description": "Disconnect of entire existing Link Aggregation group."
+        }
+    ],
     "validEntryNotes": [
         "A valid entry of “E” is applicable when the ACT field is “N”, “C” or “D”.",
         "A valid entry of “N” is only applicable when the ACT field is “N”.",

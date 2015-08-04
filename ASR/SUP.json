@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T17:08:46.829Z",
+    "processed": "2015-08-04T21:34:01.001Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Supplement Type",
@@ -13,11 +13,44 @@
         "4"
     ],
     "definition": "A supplement is any new iteration of an Access Service Request (ASR). The entry in the SUP field identifies the reason for which the supplement is being issued.",
-    "validEntry": "1 = Cancel - Indicates that the pending order is to be\ncanceled in its entirety.",
+    "validEntry": [
+        {
+            "value": "1",
+            "description": "Cancel - Indicates that the pending order is to be"
+        },
+        {
+            "value": "",
+            "description": "canceled in its entirety."
+        },
+        {
+            "value": "2",
+            "description": "New Due Date - Indicates a change to the Desired Due"
+        },
+        {
+            "value": "",
+            "description": "Date (DDD) and any associated fields as defined by"
+        },
+        {
+            "value": "",
+            "description": "provider customer negotiations."
+        },
+        {
+            "value": "4",
+            "description": "Correction - Indicates that this request is being issued"
+        },
+        {
+            "value": "",
+            "description": "to correct a previous request that has not already been"
+        },
+        {
+            "value": "",
+            "description": "confirmed by the provider."
+        }
+    ],
     "validEntryNotes": [
         "If the pending order was already completed as ordered, a separate request must be sent instead of the supplement.",
         "Valid for Service Requests (Inquiry) and Firm Orders whether or not the ASR has been confirmed by the provider.",
-        "If the ASC-EC changes, a SUP 1 must be issued to cancel the request. A new request is then issued with the new ASC-EC. 2 = New Due Date - Indicates a change to the Desired Due Date (DDD) and any associated fields as defined by provider customer negotiations.",
+        "If the ASC-EC changes, a SUP 1 must be issued to cancel the request. A new request is then issued with the new ASC-EC. ",
         "The new DDD may not exceed the limits defined in Provider Access Tariff/practices. The EXP field must be populated when the DDD is less than the standard interval. The EXP field may need to be populated when the DDD is sooner than the existing desired due date.",
         "Valid only for Firm Orders whether or not the ASR has been confirmed by the provider.  3 = Other - Any other change to the Firm Order that has been confirmed by the provider.",
         "This Supplement Type may affect the previously agreed upon due date.",
@@ -25,7 +58,7 @@
         "If this Supplement Type also includes a change to the DDD, the new date may not exceed the limits defined in Provider Access Tariff/practices. The EXP field must be populated when the DDD is less than the standard interval. The EXP field may need to be populated when the DDD is sooner than the existing DDD.",
         "Provider Access Tariffs/practices define the allowable set of changes that can be accommodated on this Supplement Type.",
         "In a Multi-EC environment, the use of a SUP type “3” is to be based on the status of the ASC-EC FOC. Since an OEC FOC status may not necessarily match the ASC-EC FOC status, OECs must be able to accept SUP type “3” regardless of FOC status when the ASC-EC field is populated.",
-        "Used when an OEC is added to or deleted from the Multi-EC Form. Therefore, when the ASC-EC field is populated with an ICSC code other than that of the receiving provider, the receipt of a SUP “3” must be acceptable as the initial ASR to the added OEC. 4 = Correction - Indicates that this request is being issued to correct a previous request that has not already been confirmed by the provider. ",
+        "Used when an OEC is added to or deleted from the Multi-EC Form. Therefore, when the ASC-EC field is populated with an ICSC code other than that of the receiving provider, the receipt of a SUP “3” must be acceptable as the initial ASR to the added OEC. ",
         "Valid for Firm Orders when the ASR has not been confirmed by the provider.",
         "Valid for Service Requests (Inquiry) whether or not the ASR has been confirmed by the provider.",
         "In a Multi-EC environment, the use of a SUP type “4” is to be based on the status of the ASC-EC FOC. Since an OEC FOC status may not necessarily match the ASC-EC FOC status, OECs must be able to accept SUP type “4” regardless of FOC status when the ASC-EC field is populated.",

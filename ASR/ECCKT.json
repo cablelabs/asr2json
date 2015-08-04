@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T17:08:46.829Z",
+    "processed": "2015-08-04T21:34:01.001Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Exchange Company Circuit ID",
@@ -13,7 +13,15 @@
         "101/T1/NYCMNY50/NYCMNY54W01"
     ],
     "definition": "Identifies the provider circuit ID or multiple circuit IDs.",
-    "validEntry": "1. COMMON LANGUAGE Special Service Circuit Codes\n(CLCI S/S Codes) as defined by ANSI in ATIS-0300097:\nStructure for the Identification of Telecommunications\nConnections for the North American Telecommunications\nSystems or by COMMON LANGUAGE in BR-795-402-\n100. A brief summary of the format can be found in\nASOG Practice 000, Section 2.14.3 and 2.14.4.",
+    "validEntry": [
+        "1. COMMON LANGUAGE Special Service Circuit Codes",
+        "(CLCI S/S Codes) as defined by ANSI in ATIS-0300097:",
+        "Structure for the Identification of Telecommunications",
+        "Connections for the North American Telecommunications",
+        "Systems or by COMMON LANGUAGE in BR-795-402-",
+        "100. A brief summary of the format can be found in",
+        "ASOG Practice 000, Section 2.14.3 and 2.14.4."
+    ],
     "validEntryNotes": [
         "For identification of an unbundled multiplexer (including the collocation cross-connect), unbundled transport or a high capacity facility to a HUB location.",
         "Either Location A or Z must be 11 characters. "

@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T17:08:46.829Z",
+    "processed": "2015-08-04T21:34:01.001Z",
     "form": "ASR",
     "section": "BILL",
     "name": "Variable Term Agreement",
@@ -16,7 +16,12 @@
         "361091489BLKH0001"
     ],
     "definition": "Identifies the duration, identifying USOC, contract date or contract identification number of any variable term agreement that may be offered by a provider.",
-    "validEntry": "",
+    "validEntry": [
+        {
+            "value": "",
+            "description": ""
+        }
+    ],
     "validEntryNotes": [
         ""
     ],

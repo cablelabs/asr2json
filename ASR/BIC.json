@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T17:08:46.829Z",
+    "processed": "2015-08-04T21:34:01.001Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Exchange Company Initiated Change",
@@ -13,7 +13,36 @@
         "3"
     ],
     "definition": "Indicates the type of provider initiated change requested.",
-    "validEntry": "1 = Trunk Group Service Request (TGSR)\n2 = Engineering Change\n3 = ICSC Record Change\n4 = Facility Transfer\n5 = Network Reconfiguration\n6 = Maintenance Consideration\n7 = Other",
+    "validEntry": [
+        {
+            "value": "1",
+            "description": "Trunk Group Service Request (TGSR)"
+        },
+        {
+            "value": "2",
+            "description": "Engineering Change"
+        },
+        {
+            "value": "3",
+            "description": "ICSC Record Change"
+        },
+        {
+            "value": "4",
+            "description": "Facility Transfer"
+        },
+        {
+            "value": "5",
+            "description": "Network Reconfiguration"
+        },
+        {
+            "value": "6",
+            "description": "Maintenance Consideration"
+        },
+        {
+            "value": "7",
+            "description": "Other"
+        }
+    ],
     "validEntryNotes": [
         ""
     ],

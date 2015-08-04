@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T17:08:46.829Z",
+    "processed": "2015-08-04T21:34:01.001Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Agency Authorization Status",
@@ -13,7 +13,20 @@
         "E"
     ],
     "definition": "Indicates that a customer is acting as another customer's agent.",
-    "validEntry": "B = Blanket authorization was previously provided\nE = Authorization was previously provided\nN = New authorization is submitted",
+    "validEntry": [
+        {
+            "value": "B",
+            "description": "Blanket authorization was previously provided"
+        },
+        {
+            "value": "E",
+            "description": "Authorization was previously provided"
+        },
+        {
+            "value": "N",
+            "description": "New authorization is submitted"
+        }
+    ],
     "validEntryNotes": [
         ""
     ],

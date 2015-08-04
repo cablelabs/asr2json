@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T17:08:46.829Z",
+    "processed": "2015-08-04T21:34:01.001Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "ndicator",
@@ -13,7 +13,16 @@
         "N"
     ],
     "definition": "Identifies that the termination is at a wireless site.",
-    "validEntry": "N = New\nE = Existing",
+    "validEntry": [
+        {
+            "value": "N",
+            "description": "New"
+        },
+        {
+            "value": "E",
+            "description": "Existing"
+        }
+    ],
     "validEntryNotes": [
         "A valid entry of “New” indicates that this is the customer’s initial order to this wireless site.",
         "A valid entry of “Existing” indicates that the customer has previously ordered to this wireless site. "

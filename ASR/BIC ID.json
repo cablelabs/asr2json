@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T17:08:46.829Z",
+    "processed": "2015-08-04T21:34:01.001Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "BIC Identifier",
@@ -13,7 +13,12 @@
         "CPC-MSMITH"
     ],
     "definition": "Identifies the provider contact, work group or a serial type log, etc., associated with the BIC.",
-    "validEntry": "",
+    "validEntry": [
+        {
+            "value": "",
+            "description": ""
+        }
+    ],
     "validEntryNotes": [
         ""
     ],

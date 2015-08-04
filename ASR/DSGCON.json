@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T17:08:46.829Z",
+    "processed": "2015-08-04T21:34:01.001Z",
     "form": "ASR",
     "section": "CONTACT",
     "name": "Design/Engineering Contact",
@@ -13,7 +13,12 @@
         "JOHNSMITH"
     ],
     "definition": "Identifies the employee of the customer or agent who should be contacted on design/engineering/translation issues and to whom the Design Layout Report may be sent.",
-    "validEntry": "",
+    "validEntry": [
+        {
+            "value": "",
+            "description": ""
+        }
+    ],
     "validEntryNotes": [
         ""
     ],

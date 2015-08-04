@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T17:08:46.829Z",
+    "processed": "2015-08-04T21:34:01.001Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "BIC Telephone Number",
@@ -13,7 +13,12 @@
         "201-981-3582"
     ],
     "definition": "Identifies the telephone number of the provider representative responsible for the BIC.",
-    "validEntry": "",
+    "validEntry": [
+        {
+            "value": "",
+            "description": ""
+        }
+    ],
     "validEntryNotes": [
         ""
     ],

@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T17:08:46.829Z",
+    "processed": "2015-08-04T21:34:01.001Z",
     "form": "ASR",
     "section": "BILL",
     "name": "Inside Wire Billing Account Number",
@@ -13,7 +13,12 @@
         "NXYZ12345ACX2143"
     ],
     "definition": "Identifies the previously assigned Billing Account Number for charges associated with inside wire.",
-    "validEntry": "Billing Account Number",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "Billing Account Number"
+        }
+    ],
     "validEntryNotes": [
         ""
     ],

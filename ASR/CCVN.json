@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T17:08:46.829Z",
+    "processed": "2015-08-04T21:34:01.001Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Coordinated Conversion",
@@ -14,7 +14,12 @@
         "CCNAaredifferent."
     ],
     "definition": "Identifies the request as being a coordinated conversion reusing a portion of an existing access service configuration for the provisioning of a new access service.",
-    "validEntry": "IAC Code(s)",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "IAC Code(s)"
+        }
+    ],
     "validEntryNotes": [
         ""
     ],

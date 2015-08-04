@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T17:08:46.829Z",
+    "processed": "2015-08-04T21:34:01.001Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Lease Authorization Name",
@@ -13,7 +13,12 @@
         "J0HNJONES"
     ],
     "definition": "Indicates the name of the transport owner (lessor) representative who signed the lease arrangement (LOA).",
-    "validEntry": "",
+    "validEntry": [
+        {
+            "value": "",
+            "description": ""
+        }
+    ],
     "validEntryNotes": [
         ""
     ],

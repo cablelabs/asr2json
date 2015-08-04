@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T17:08:46.829Z",
+    "processed": "2015-08-04T21:34:01.001Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Fiber Network Type",
@@ -13,7 +13,20 @@
         "B"
     ],
     "definition": "Identifies the type of network to which the fiber based service is being assigned.",
-    "validEntry": "A = Synchronous Optical Network (SONET)\nB = Dense Wave Division Multiplexing (DWDM)\nC = Optical Transport Network (OTN)",
+    "validEntry": [
+        {
+            "value": "A",
+            "description": "Synchronous Optical Network (SONET)"
+        },
+        {
+            "value": "B",
+            "description": "Dense Wave Division Multiplexing (DWDM)"
+        },
+        {
+            "value": "C",
+            "description": "Optical Transport Network (OTN)"
+        }
+    ],
     "validEntryNotes": [
         ""
     ],

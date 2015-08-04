@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T17:08:46.829Z",
+    "processed": "2015-08-04T21:34:01.001Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "ndicator",
@@ -13,7 +13,16 @@
         "A"
     ],
     "definition": "Identifies that an Ethernet Virtual Connection (EVC) Form is associated with this service request.",
-    "validEntry": "A = Stand Alone EVC\nB = Combination EVC",
+    "validEntry": [
+        {
+            "value": "A",
+            "description": "Stand Alone EVC"
+        },
+        {
+            "value": "B",
+            "description": "Combination EVC"
+        }
+    ],
     "validEntryNotes": [
         "An entry of “A” indicates that the request is a Stand Alone EVC.  The Transport, End User Special Access,  and Switched Ethernet Services forms are prohibited.",
         "An Entry of “A” is applicable only when the first position of the REQTYP is “S”.",

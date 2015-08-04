@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T17:08:46.829Z",
+    "processed": "2015-08-04T21:34:01.001Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Facility Billing Arrangement",
@@ -14,10 +14,55 @@
         "DYY"
     ],
     "definition": "Indicates a special arrangement has been negotiated between the host customer of a higher level service and the subsequent customer of the lower level service.",
-    "validEntry": "1\nst\nPosition\nA = Shared network\nB = Lease Back\nC = Split Billing - All Elements\nD = Split Billing\n2\nnd\nthrough 4\nth\nPositions\nY = Indicates the requirement of split billing on the\nrespective element.",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "1st Position"
+        },
+        {
+            "value": "A",
+            "description": "Shared network"
+        },
+        {
+            "value": "B",
+            "description": "Lease Back"
+        },
+        {
+            "value": "C",
+            "description": "Split Billing - All Elements"
+        },
+        {
+            "value": "D",
+            "description": "Split Billing"
+        },
+        {
+            "value": "",
+            "description": "2nd through 4th Positions"
+        },
+        {
+            "value": "Y",
+            "description": "Indicates the requirement of split billing on the"
+        },
+        {
+            "value": "",
+            "description": "respective element."
+        },
+        {
+            "value": "EF",
+            "description": "Entrance Facility"
+        },
+        {
+            "value": "DT",
+            "description": "Direct Transport"
+        },
+        {
+            "value": "MUX",
+            "description": "Multiplexing"
+        }
+    ],
     "validEntryNotes": [
         "An entry in one or more of positions 2 through 4 is required when position 1 is “D”.",
-        "The following define element labels: EF = Entrance Facility DT = Direct Transport MUX= Multiplexing "
+        "The following define element labels: "
     ],
     "usageNotes": [
         "Required when the ACT field is “N”, “C” or “T” and the ACNA field is different from the ACNA associated with the facility (CFA and/or SCFA) and the UNE and CC fields are not populated.NOTE 2: Optional when the ACT field is “R” and the ACNA field is different from the ACNA associated with the facility (CFA and/or SCFA) and the UNE and CC fields are not populated.",

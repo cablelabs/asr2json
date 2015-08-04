@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T17:08:46.829Z",
+    "processed": "2015-08-04T21:34:01.001Z",
     "form": "ASR",
     "section": "BILL",
     "name": "Tax Exemption",
@@ -13,7 +13,76 @@
         "B"
     ],
     "definition": "Indicates that the customer has submitted a tax exemption form to the provider.",
-    "validEntry": "Entry = Exempt From\nA = F & S\nB = F & C\nC = County or Local\nD = F & S & C\nE = F & S & M\nF = Federal\nG = F & S & C & M\nH = S & C\nI = S & M\nJ = C & M\nK = F & M\nL = Letter on File\nM = Municipal\nN = Non Exempt\nP = S & C & M\nS = State/Province",
+    "validEntry": [
+        {
+            "value": "Entry",
+            "description": "Exempt From"
+        },
+        {
+            "value": "A",
+            "description": "F & S"
+        },
+        {
+            "value": "B",
+            "description": "F & C"
+        },
+        {
+            "value": "C",
+            "description": "County or Local"
+        },
+        {
+            "value": "D",
+            "description": "F & S & C"
+        },
+        {
+            "value": "E",
+            "description": "F & S & M"
+        },
+        {
+            "value": "F",
+            "description": "Federal"
+        },
+        {
+            "value": "G",
+            "description": "F & S & C & M"
+        },
+        {
+            "value": "H",
+            "description": "S & C"
+        },
+        {
+            "value": "I",
+            "description": "S & M"
+        },
+        {
+            "value": "J",
+            "description": "C & M"
+        },
+        {
+            "value": "K",
+            "description": "F & M"
+        },
+        {
+            "value": "L",
+            "description": "Letter on File"
+        },
+        {
+            "value": "M",
+            "description": "Municipal"
+        },
+        {
+            "value": "N",
+            "description": "Non Exempt"
+        },
+        {
+            "value": "P",
+            "description": "S & C & M"
+        },
+        {
+            "value": "S",
+            "description": "State/Province"
+        }
+    ],
     "validEntryNotes": [
         ""
     ],

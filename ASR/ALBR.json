@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T17:08:46.829Z",
+    "processed": "2015-08-04T21:34:01.001Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Additional Labor",
@@ -13,7 +13,40 @@
         "2"
     ],
     "definition": "Indicates that additional labor is requested and charges will be accepted in conjunction with this Access Service Request, (e.g., Sunday or out of normal business hour installation is being requested).",
-    "validEntry": "1 = Overtime installation\n2 = Testing with other providers\n3 = Other labor\n4 = Overtime installation and testing with other providers\n5 = Overtime and other labor\n6 = Testing with other providers and other labor\n7 = Overtime installation, testing with other providers and\nother labor",
+    "validEntry": [
+        {
+            "value": "1",
+            "description": "Overtime installation"
+        },
+        {
+            "value": "2",
+            "description": "Testing with other providers"
+        },
+        {
+            "value": "3",
+            "description": "Other labor"
+        },
+        {
+            "value": "4",
+            "description": "Overtime installation and testing with other providers"
+        },
+        {
+            "value": "5",
+            "description": "Overtime and other labor"
+        },
+        {
+            "value": "6",
+            "description": "Testing with other providers and other labor"
+        },
+        {
+            "value": "7",
+            "description": "Overtime installation, testing with other providers and"
+        },
+        {
+            "value": "",
+            "description": "other labor"
+        }
+    ],
     "validEntryNotes": [
         ""
     ],

@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T17:08:46.829Z",
+    "processed": "2015-08-04T21:34:01.001Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Additional Engineering",
@@ -13,7 +13,32 @@
         "3"
     ],
     "definition": "Indicates that if additional engineering is required, an estimate of the charges is to be forwarded to the initiator of the request.",
-    "validEntry": "1 = overtime engineering\n2 = engineering connections when more than one provider\nis providing the access service\n3 = overtime engineering and engineering with other\nproviders\n4 = other engineering",
+    "validEntry": [
+        {
+            "value": "1",
+            "description": "overtime engineering"
+        },
+        {
+            "value": "2",
+            "description": "engineering connections when more than one provider"
+        },
+        {
+            "value": "",
+            "description": "is providing the access service"
+        },
+        {
+            "value": "3",
+            "description": "overtime engineering and engineering with other"
+        },
+        {
+            "value": "",
+            "description": "providers"
+        },
+        {
+            "value": "4",
+            "description": "other engineering"
+        }
+    ],
     "validEntryNotes": [
         ""
     ],

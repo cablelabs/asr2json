@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T17:08:46.829Z",
+    "processed": "2015-08-04T21:34:01.001Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Interexchange Customer Service Center",
@@ -13,7 +13,12 @@
         "PT02"
     ],
     "definition": "Identifies the provider service center.",
-    "validEntry": "Valid ICSC Code",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "Valid ICSC Code"
+        }
+    ],
     "validEntryNotes": [
         "When the ASC-EC field is populated, this field must be identical to the ASC-EC entry. "
     ],

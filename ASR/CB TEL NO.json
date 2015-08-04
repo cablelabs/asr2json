@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T17:08:46.829Z",
+    "processed": "2015-08-04T21:34:01.001Z",
     "form": "ASR",
     "section": "CONTACT",
     "name": "Conference BridgeTelephone Number",
@@ -13,7 +13,12 @@
         "877-981-3500"
     ],
     "definition": "Identifies the Conference Bridge Telephone number to be used at the time of implementation or cut over.",
-    "validEntry": "",
+    "validEntry": [
+        {
+            "value": "",
+            "description": ""
+        }
+    ],
     "validEntryNotes": [
         ""
     ],

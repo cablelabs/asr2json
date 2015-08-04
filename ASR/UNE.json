@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T17:08:46.829Z",
+    "processed": "2015-08-04T21:34:01.001Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Unbundled Network Elements",
@@ -13,7 +13,12 @@
         "Y"
     ],
     "definition": "Identifies this request is ordering unbundled network elements for local service.",
-    "validEntry": "Y = Ordering unbundled elements.",
+    "validEntry": [
+        {
+            "value": "Y",
+            "description": "Ordering unbundled elements."
+        }
+    ],
     "validEntryNotes": [
         ""
     ],

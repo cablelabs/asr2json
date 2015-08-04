@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T17:08:46.829Z",
+    "processed": "2015-08-04T21:34:01.001Z",
     "form": "ASR",
     "section": "BILL",
     "name": "ee",
@@ -13,7 +13,20 @@
         "E"
     ],
     "definition": "Indicates the service being ordered on this request should be either assessed or exempted from the Federal Universal Service Fee (FUSF).",
-    "validEntry": "E = Exempt Federal Universal Service Fee\nN = Non–Exempt (Assessed) Federal Universal Service\nFee",
+    "validEntry": [
+        {
+            "value": "E",
+            "description": "Exempt Federal Universal Service Fee"
+        },
+        {
+            "value": "N",
+            "description": "Non–Exempt (Assessed) Federal Universal Service"
+        },
+        {
+            "value": "",
+            "description": "Fee"
+        }
+    ],
     "validEntryNotes": [
         "Exempt indicates the customer is both (a) reselling the Special Access as a telecommunications service and (b) contributing directly into the Federal Universal Service Fund for the service being ordered. For a valid entry of “E” both conditions must be met.",
         "Non-Exempt (Assess) indicates the customer is (a) not reselling the Special Access as a telecommunications service and/or (b) not contributing directly into the Federal Universal Service Fund for the service being ordered.",

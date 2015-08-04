@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T17:08:46.829Z",
+    "processed": "2015-08-04T21:34:01.001Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Interconnection Screening Telephone Number",
@@ -13,7 +13,10 @@
         "314-837-1234"
     ],
     "definition": "Identifies the telephone number used for billing or translation purposes.",
-    "validEntry": "Telephone number format\nNPA-NXX-XXXX",
+    "validEntry": [
+        "Telephone number format",
+        "NPA-NXX-XXXX"
+    ],
     "validEntryNotes": [
         "This telephone number would be customer owned and identified during customer/provider pre- negotiations. "
     ],

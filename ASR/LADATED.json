@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T17:08:46.829Z",
+    "processed": "2015-08-04T21:34:01.001Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Date of Lease Arrangement",
@@ -14,7 +14,13 @@
         "1984-06-20"
     ],
     "definition": "Identifies the date appearing on the lease arrangement.",
-    "validEntry": "U.S. Standard Metric Format\nTwo Digit Month (01-12) Two Digit Century (00-99)\nTwo Digit Day (01-31) Two Digit Year (00-99)\nTwo Digit Century (00-99) Two Digit Month (01-12)\nTwo Digit Year (00-99) Two Digit Day (01-31)",
+    "validEntry": [
+        "U.S. Standard Metric Format",
+        "Two Digit Month (01-12) Two Digit Century (00-99)",
+        "Two Digit Day (01-31) Two Digit Year (00-99)",
+        "Two Digit Century (00-99) Two Digit Month (01-12)",
+        "Two Digit Year (00-99) Two Digit Day (01-31)"
+    ],
     "validEntryNotes": [
         ""
     ],

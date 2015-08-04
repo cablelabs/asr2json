@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T17:08:46.829Z",
+    "processed": "2015-08-04T21:34:01.001Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Frame Due Time",
@@ -17,7 +17,48 @@
         "C10P"
     ],
     "definition": "Provides special handling instructions for the connection, disconnection or coordination of changes for this request.",
-    "validEntry": "Time Zone (Position 1)\nCentral = C\nEastern = E\nMountain = M\nPacific = P\nTime of Day (Positions 2-7)\nTwo Digit Hour (01-12)/Two Digit Minute (00-59)/AM or PM\nTwo Digit Hour (01-12)/A or P/Two Digit Hour (01-12)/A or P\nAM or PM\nTwo Digit Hour (01-12)/A or P",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "Time Zone (Position 1)"
+        },
+        {
+            "value": "Central",
+            "description": "C"
+        },
+        {
+            "value": "Eastern",
+            "description": "E"
+        },
+        {
+            "value": "Mountain",
+            "description": "M"
+        },
+        {
+            "value": "Pacific",
+            "description": "P"
+        },
+        {
+            "value": "",
+            "description": "Time of Day (Positions 2-7)"
+        },
+        {
+            "value": "",
+            "description": "Two Digit Hour (01-12)/Two Digit Minute (00-59)/AM or PM"
+        },
+        {
+            "value": "",
+            "description": "Two Digit Hour (01-12)/A or P/Two Digit Hour (01-12)/A or P"
+        },
+        {
+            "value": "",
+            "description": "AM or PM"
+        },
+        {
+            "value": "",
+            "description": "Two Digit Hour (01-12)/A or P"
+        }
+    ],
     "validEntryNotes": [
         "Indicates the time zone and time or time zone and window of time when the service should be connected, disconnected or coordinated.",
         "When this field is populated in conjunction with the CB TEL NO field, a specific time of day including the hour or hour and minute is required. "

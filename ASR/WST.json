@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T17:08:46.829Z",
+    "processed": "2015-08-04T21:34:01.001Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Wireless Service Type",
@@ -13,7 +13,84 @@
         "D"
     ],
     "definition": "Identifies the type of wireless service being requested.",
-    "validEntry": "A = Dial Mobile or Paging\nB = Manual Mobile with DA allowance\nC = Manual Paging\nD = Type Dial Live Line\nE = Type 1 Direct Inward Dial Trunk\nF = Type 2A Tandem Interconnection\nG = Type 2B End Office Interconnection\nH = Type 1 Trunk Side Message Toll\nJ = Type 2D Direct connection to a DA Tandem\nK = 2T Equal Access Tandem trunks\nL = 2C E911 to a selector router\nM = EO 251/252  End Office trunks (with full NXX)\nN = AX 251/252 Auxiliary trunk with basic 911, DA, OS\nand IC PIC\nP = ME 251/252 Modified End Office (Land to Mobile\nblocks of 100’s or 1000’s)\nR = TD 251/252 Tandem trunk\nS = TT 251/252 Transit trunk (for IC traffic)\nT= Direct connection to an operator tandem",
+    "validEntry": [
+        {
+            "value": "A",
+            "description": "Dial Mobile or Paging"
+        },
+        {
+            "value": "B",
+            "description": "Manual Mobile with DA allowance"
+        },
+        {
+            "value": "C",
+            "description": "Manual Paging"
+        },
+        {
+            "value": "D",
+            "description": "Type Dial Live Line"
+        },
+        {
+            "value": "E",
+            "description": "Type 1 Direct Inward Dial Trunk"
+        },
+        {
+            "value": "F",
+            "description": "Type 2A Tandem Interconnection"
+        },
+        {
+            "value": "G",
+            "description": "Type 2B End Office Interconnection"
+        },
+        {
+            "value": "H",
+            "description": "Type 1 Trunk Side Message Toll"
+        },
+        {
+            "value": "J",
+            "description": "Type 2D Direct connection to a DA Tandem"
+        },
+        {
+            "value": "K",
+            "description": "2T Equal Access Tandem trunks"
+        },
+        {
+            "value": "L",
+            "description": "2C E911 to a selector router"
+        },
+        {
+            "value": "M",
+            "description": "EO 251/252  End Office trunks (with full NXX)"
+        },
+        {
+            "value": "N",
+            "description": "AX 251/252 Auxiliary trunk with basic 911, DA, OS"
+        },
+        {
+            "value": "",
+            "description": "and IC PIC"
+        },
+        {
+            "value": "P",
+            "description": "ME 251/252 Modified End Office (Land to Mobile"
+        },
+        {
+            "value": "",
+            "description": "blocks of 100’s or 1000’s)"
+        },
+        {
+            "value": "R",
+            "description": "TD 251/252 Tandem trunk"
+        },
+        {
+            "value": "S",
+            "description": "TT 251/252 Transit trunk (for IC traffic)"
+        },
+        {
+            "value": "T",
+            "description": "Direct connection to an operator tandem"
+        }
+    ],
     "validEntryNotes": [
         ""
     ],

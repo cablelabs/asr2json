@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T17:08:46.829Z",
+    "processed": "2015-08-04T21:34:01.001Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Service and Product Enhancement Code",
@@ -13,7 +13,16 @@
         "FRDS322"
     ],
     "definition": "Identifies a specific product or service offering.",
-    "validEntry": "Positions 1-7 = Any alpha character except “I” or any\nnumeric character except “0”.",
+    "validEntry": [
+        {
+            "value": "Positions 1-7",
+            "description": "Any alpha character except “I” or any"
+        },
+        {
+            "value": "",
+            "description": "numeric character except “0”."
+        }
+    ],
     "validEntryNotes": [
         ""
     ],

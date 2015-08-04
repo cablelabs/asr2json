@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T17:08:46.829Z",
+    "processed": "2015-08-04T21:34:01.001Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Customer Carrier Name Abbreviation",
@@ -13,7 +13,16 @@
         "UTC"
     ],
     "definition": "Identifies the COMMON LANGUAGE IAC code for the customer submitting the ASR and receiving the Confirmation Notice Form (CN).",
-    "validEntry": "IAC Code\nCUS = Casual customer",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "IAC Code"
+        },
+        {
+            "value": "CUS",
+            "description": "Casual customer"
+        }
+    ],
     "validEntryNotes": [
         "Valid IAC codes are maintained by Telcordia Technologies. "
     ],

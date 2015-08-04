@@ -10,9 +10,16 @@ fs.readFile('asrpdf.json', 'utf8', module.exports = function(err, data) {
         var texts = json.formImage["Pages"][i]["Texts"];
         for( var j = 0; j<texts.length; j++) {
             var tempj = j;
-            while ( j+1 != texts.length) {
+            while ( j+1 < texts.length) {
                 if ( texts[j+1]["y"] == texts[tempj]["y"] ) {
                     json.formImage["Pages"][i]["Texts"][tempj]["R"][0]["T"] +=  json.formImage["Pages"][i]["Texts"][++j]["R"][0]["T"];
+                    delete json.formImage["Pages"][i]["Texts"][j];
+                }
+                else if ( j+2 < texts.length && texts[j+2]["y"] == texts[tempj]["y"]) {
+                    console.log(texts[tempj]["R"][0]["T"] + " " + texts[j+1]["R"][0]["T"] + " " + texts[j+2]["R"][0]["T"]);
+
+                    json.formImage["Pages"][i]["Texts"][tempj]["R"][0]["T"] +=  json.formImage["Pages"][i]["Texts"][++j]["R"][0]["T"] + json.formImage["Pages"][i]["Texts"][++j]["R"][0]["T"];
+                    delete json.formImage["Pages"][i]["Texts"][j-1];
                     delete json.formImage["Pages"][i]["Texts"][j];
                 }
                 else {

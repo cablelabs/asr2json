@@ -258,22 +258,14 @@ the provider call the LCON at a desired time prior to ‘dispatch
 out’ of a service technician, or a coordination call based on a 
 provider’s existing process for service installation or disconnect.
 VALID ENTRIES: 
-1
-st
- Character 
+1st Character 
 A = Unstaffed Service Delivery Location 
 NOTE 1:
 Defines the service delivery location as “Unstaffed”
 requiring coordination with LCON prior to
 technician dispatch. 
-2
-nd
- and 3
-rd
- Character
-01-
-99 
-= Hours 
+2nd and 3rd Character
+01-99 = Hours 
 NOTE 1:
 The desired number of hours prior to dispatch to
 facilitate access for the service technician.  
@@ -567,9 +559,7 @@ NOTE 3:
 The second character of REQTYP specifies the
 status of the request in the four step order process.
 VALID ENTRIES: 
-1
-st
- Character
+1st Character
 A = Switched Access - Feature Group A 
 E = End User Special Access, DNAL, Part Time/Full Time
 Television or Program Audio, Specialized Ethernet
@@ -594,9 +584,7 @@ NOTE 1:
 “E” is prohibited for Stand Alone Ethernet Virtual
 Connection (EVCI = “A”) services. 
 VALID ENTRIES: 
-2
-nd
- Character (4-Step Process) 
+2nd Character (4-Step Process) 
 Service Request:  Entered 
 by: 
 Step 1 – Service Request 
@@ -788,34 +776,20 @@ Issued March 28, 2014 Implemented September 20, 2014
 22.      ACT - Activity (continued) 
 Type of ActivityASR ACT  UACT LOSACT 
 New Connect N N N 
-Complete Disconnect of 
-EVC 
-D D 
-Add UNI Termination  C 
-1
- N N 
+Complete Disconnect of EVC D D 
+Add UNI Termination  C 1 N N 
 Disconnect UNI/ENNI 
 Termination 
- C 
-1
- D 
+ C 1 D 
 Change EVC/OVC 
 (includes changes to a 
 UNI/ENNI termination) 
- C 
-1
-N, C, D N, C, D 
+ C 1N, C, D N, C, D 
 Record Activity R R 
 Cancel UNI/ENNI
 Termination 
-N, C
-1
-, D, RK   
-Cancel a Level of 
-Service (LOS) 
- N, C
-1
-K  
+N, C1, D, RK   
+Cancel a Level of Service (LOS)  N, C1K  
 Inside Move Segment N/A N/A  N/A 
 Outside Move Segment N/A N/A N/A 
 NOTE 1:
@@ -1352,9 +1326,7 @@ Issued September 10, 2004 Implemented March 12, 2005
 34.TQ - Translation Questionnaire Request
 Indicates that a translation questionnaire is being submitted. 
 VALID ENTRIES: 
-1
-st
- Position 
+1st Position 
 A = No TQ attached 
 B = FGB translations 
 C = Code (NPA/NXX) Translation Routing Only 
@@ -1368,9 +1340,7 @@ U = FGB translations and SAC
 W = Wireless translations 
 X = Wireless translations and Code Translation Routing 
 1-9 = TQ on file 
-2
-nd
- Position 
+2nd Position 
 N = No Trunking Form 
 X = Trunking Form (no trunk activity)
 Y = Trunking Form (trunk activity)
@@ -1778,18 +1748,12 @@ Indicates a special arrangement has been negotiated between
 the host customer of a higher level service and the subsequent
 customer of the lower level service.  
 VALID ENTRIES: 
-1
-st
- Position 
+1st Position 
 A = Shared network 
 B = Lease Back 
 C = Split Billing - All Elements 
 D = Split Billing 
-2
-nd
- through 4
-th
- Positions 
+2nd through 4th Positions 
 Y = Indicates the requirement of split billing on the
 respective element. 
 NOTE 1:
@@ -2174,9 +2138,7 @@ Issued July 19, 2001 Implemented January 19, 2002
 Identifies the switched access local transport elements affected
 by this request.  
 VALID ENTRIES: 
-1
-st
- Position (Elements to be ordered by this request) 
+1st Position (Elements to be ordered by this request) 
 A = Entrance Facility (EF) 
 B = Trunks, Tandem-Switched Transport and EF 
 C = Trunks and Tandem-Switched Transport 
@@ -2203,9 +2165,7 @@ ATIS-0404001-0050 Effective November 6, 1993
 Issued September 17, 1993 Implemented November 6, 1993 
 59.      LTP - Local Transport (continued) 
 VALID ENTRIES Continued: 
-2
-nd
- Position (Identifies if element uses special access facility) 
+2nd Position (Identifies if element uses special access facility) 
 A = EF rides special access facility 
 B = Direct-Trunked Transport rides special access facility 
 C = Direct-Trunked Transport and EF ride special access
@@ -2214,15 +2174,11 @@ D = Tandem-Switched Transport rides special access facility
 E = Tandem-Switched Transport and EF ride special access
 facility 
 F = No special access 
-3
-rd
- Position (Level of EF) 
+3rd Position (Level of EF) 
 0 = Voice grade capacity for the EF 
 1 = DS1 capacity for the EF 
 3 = DS3 capacity for the EF 
-4
-th
- Position (Level of Transport) 
+4th Position (Level of Transport) 
 0 = Voice grade capacity for transport 
 1 = DS1 capacity for transport 
 3 = DS3 capacity for transport 
@@ -2713,14 +2669,8 @@ NOTE 6:
 The ACTL code is an 11 character CLLI Code
 designed for the identification of location entities
 for all services.  The first 8 characters may
-represent a building location.  The 9
-th
-, 10
-th
- and
-11
-th
- characters identify a specific customer, and, in
+represent a building location.  The 9th, 10th and
+11th characters identify a specific customer, and, in
 addition, may also represent a specific type of
 service. 
 NOTE 7:
@@ -2729,22 +2679,16 @@ identify the specific physical termination point of
 the access service. 
 NOTE 8:
 In a customer leasing arrangement, this field will
-be populated with the facility ACTL (e.g., 9
-th,
- 10
+be populated with the facility ACTL (e.g., 9th, 10
 th
-11
-th
- characters are “WXX” or “HXX” of the facility
+11th characters are “WXX” or “HXX” of the facility
 owner’s point of presence [POP]). 
 NOTE 9:
 Multiple customers may utilize the same ACTL.  In
 some cases, providers maintain the same ACTL
 CLLI Code in this situation, and in other cases,
 providers may assign different CLLI Codes (9, 10
-and 11
-th
- characters) for each customer.  This would
+and 11th characters) for each customer.  This would
 include access service requested between the
 terminals of two different customers. 
 3-104

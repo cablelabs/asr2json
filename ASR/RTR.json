@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T17:08:46.829Z",
+    "processed": "2015-08-04T21:34:01.001Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Response Type Requested",
@@ -16,7 +16,20 @@
         "S"
     ],
     "definition": "Identifies the type of confirmation response requested by the customer.",
-    "validEntry": "F = Send FOC only\nN = No response required\nS = Send FOC and DLR; CDLRD waived",
+    "validEntry": [
+        {
+            "value": "F",
+            "description": "Send FOC only"
+        },
+        {
+            "value": "N",
+            "description": "No response required"
+        },
+        {
+            "value": "S",
+            "description": "Send FOC and DLR; CDLRD waived"
+        }
+    ],
     "validEntryNotes": [
         "“S” is prohibited when the ACT field is “D”, “M” or “R” or the EVCI field is “A”. 1-10 = Send FOC and DLR; CDLRD required",
         "A numeric entry indicates the number of working days that the customer requires to confirm the Design Layout Report (DLR) and will be added to the overall interval.",

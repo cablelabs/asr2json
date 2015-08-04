@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T17:08:46.829Z",
+    "processed": "2015-08-04T21:34:01.001Z",
     "form": "ASR",
     "section": "CONTACT",
     "name": "State/Province (DSGCON)",
@@ -13,7 +13,12 @@
         "NJ"
     ],
     "definition": "Identifies the two character postal code for the state/province of the design/engineering contact’s location.",
-    "validEntry": "",
+    "validEntry": [
+        {
+            "value": "",
+            "description": ""
+        }
+    ],
     "validEntryNotes": [
         ""
     ],

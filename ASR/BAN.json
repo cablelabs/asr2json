@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T17:08:46.829Z",
+    "processed": "2015-08-04T21:34:01.001Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Billing Account Number",
@@ -13,7 +13,24 @@
         "201981-3587"
     ],
     "definition": "Identifies the billing account to which the recurring and non- recurring charges for this request will be billed.",
-    "validEntry": "Valid Billing Account Number\nE = Existing\nN = New Billing Account requested\nNB = Multi-EC Non-billing provider",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "Valid Billing Account Number"
+        },
+        {
+            "value": "E",
+            "description": "Existing"
+        },
+        {
+            "value": "N",
+            "description": "New Billing Account requested"
+        },
+        {
+            "value": "NB",
+            "description": "Multi-EC Non-billing provider"
+        }
+    ],
     "validEntryNotes": [
         "If the customer wishes to have a new billing account number for this order, enter “N” in this field.  The new billing account number will appear on the bill and the Confirmation Notice Form (CN).",
         "“NB” represents a non-billing provider that is involved in providing this access service, when the ASC-EC field is populated.",
