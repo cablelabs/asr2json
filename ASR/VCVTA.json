@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "BILL",
     "name": "Virtual Connection Variable Term Agreement",
@@ -9,10 +9,18 @@
     "fieldLength": "17",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": "3 N C OR",
-    "definition": "Identifies the duration, identifying USOC, contract date or\ncontract identification number of any variable term agreement\nthat may be offered by a provider for a virtual connection. ",
+    "example": [
+        "3NCOR"
+    ],
+    "definition": "Identifies the duration, identifying USOC, contract date or contract identification number of any variable term agreement that may be offered by a provider for a virtual connection.",
     "validEntry": "",
-    "validEntryNotes": "",
-    "usageNotes": "Optional when the first position of the REQTYP\nfield on the ASR Form is “V” or “X” and the VCVTA\nfield on the VC Form is not populated, otherwise\nprohibited. ",
-    "fieldNotes": ""
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Optional when the first position of the REQTYP field on the ASR Form is “V” or “X” and the VCVTA field on the VC Form is not populated, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        ""
+    ]
 }

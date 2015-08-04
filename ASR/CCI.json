@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Coordinated Change Indicator",
@@ -9,10 +9,18 @@
     "fieldLength": "1",
     "characteristics": "Alpha",
     "usage": "Conditional",
-    "example": "Y ",
-    "definition": "Identifies this request is a Coordinated Change Activity to an\nexisting access service. ",
-    "validEntry": "Y = Coordinated Change Activity ",
-    "validEntryNotes": "",
-    "usageNotes": "Optional when the first position of the REQTYP\nfield is “E’’, “L”, “M”, “S’’, “V” or “X”,  and the ACT\nfield is  “N”, “C”, “D”, “T” or “M”, otherwise\nprohibited. ",
-    "fieldNotes": ""
+    "example": [
+        "Y"
+    ],
+    "definition": "Identifies this request is a Coordinated Change Activity to an existing access service.",
+    "validEntry": "Y = Coordinated Change Activity",
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Optional when the first position of the REQTYP field is “E’’, “L”, “M”, “S’’, “V” or “X”,  and the ACT field is  “N”, “C”, “D”, “T” or “M”, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        ""
+    ]
 }

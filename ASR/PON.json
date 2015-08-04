@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Purchase Order Number",
@@ -9,10 +9,18 @@
     "fieldLength": "16",
     "characteristics": "AlphaNumeric",
     "usage": "Required",
-    "example": "8 24Z9",
-    "definition": "Identifies the customer's unique purchase order or requisition\nnumber that authorizes the issuance of this request or\nsupplement. ",
+    "example": [
+        "824Z9"
+    ],
+    "definition": "Identifies the customer's unique purchase order or requisition number that authorizes the issuance of this request or supplement.",
     "validEntry": "",
-    "validEntryNotes": "",
-    "usageNotes": "",
-    "fieldNotes": "The Purchase Order Number may be reused after\ntwo years from the due date of the original request."
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        "The Purchase Order Number may be reused after two years from the due date of the original request."
+    ]
 }

@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Billing Account Number",
@@ -9,10 +9,22 @@
     "fieldLength": "12",
     "characteristics": "AlphaNumeric",
     "usage": "Required",
-    "example": "2 01981-3587",
-    "definition": "Identifies the billing account to which the recurring and non-\nrecurring charges for this request will be billed. ",
-    "validEntry": "Valid Billing Account Number \nE = Existing \nN = New Billing Account requested \nNB = Multi-EC Non-billing provider ",
-    "validEntryNotes": "If the customer wishes to have a new billing account\nnumber for this order, enter “N” in this field.  The\nnew billing account number will appear on the bill\nand the Confirmation Notice Form (CN). \nNOTE 2:\n“NB” represents a non-billing provider that is\ninvolved in providing this access service, when the\nASC-EC field is populated. \nNOTE 3:\nIf an existing service BAN is invalid, the provider will\ndetermine the appropriate BAN and return it on the\nConfirmation Notice Form (CN). \nNOTE 4:\nUse of valid entry of “E” is based on \ncustomer/provider negotiations. ",
-    "usageNotes": "",
-    "fieldNotes": "The precise format will be defined by each provider\nin accordance with individual billing procedures\nand provided to the customer. \nNOTE 2:\nThe BAN entry appearing on this form must be for\nthe provider identified in the ICSC field. "
+    "example": [
+        "201981-3587"
+    ],
+    "definition": "Identifies the billing account to which the recurring and non- recurring charges for this request will be billed.",
+    "validEntry": "Valid Billing Account Number\nE = Existing\nN = New Billing Account requested\nNB = Multi-EC Non-billing provider",
+    "validEntryNotes": [
+        "If the customer wishes to have a new billing account number for this order, enter “N” in this field.  The new billing account number will appear on the bill and the Confirmation Notice Form (CN).",
+        "“NB” represents a non-billing provider that is involved in providing this access service, when the ASC-EC field is populated.",
+        "If an existing service BAN is invalid, the provider will determine the appropriate BAN and return it on the Confirmation Notice Form (CN).",
+        "Use of valid entry of “E” is based on customer/provider negotiations. "
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        "The precise format will be defined by each provider in accordance with individual billing procedures and provided to the customer.",
+        "The BAN entry appearing on this form must be for the provider identified in the ICSC field."
+    ]
 }

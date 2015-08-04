@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Project Plant Test Date",
@@ -9,10 +9,19 @@
     "fieldLength": "10",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": "0 3-02-1999\n1 999-03-02",
-    "definition": "Identifies the pre negotiated plant test date for the start of\noverall testing of the service requested on this ASR. ",
-    "validEntry": "U.S. Standard Metric Format \nTwo Digit Month (01-12) Two Digit Century (00-99) \nTwo Digit Day (01-31) Two Digit Year (00-99) \nTwo Digit Century (00-99) Two Digit Month (01-12) \nTwo Digit Year (00-99) Two Digit Day (01-31) ",
-    "validEntryNotes": "",
-    "usageNotes": "Optional when the PROJECT field is populated,\notherwise prohibited. ",
-    "fieldNotes": ""
+    "example": [
+        "03-02-1999",
+        "1999-03-02"
+    ],
+    "definition": "Identifies the pre negotiated plant test date for the start of overall testing of the service requested on this ASR.",
+    "validEntry": "U.S. Standard Metric Format\nTwo Digit Month (01-12) Two Digit Century (00-99)\nTwo Digit Day (01-31) Two Digit Year (00-99)\nTwo Digit Century (00-99) Two Digit Month (01-12)\nTwo Digit Year (00-99) Two Digit Day (01-31)",
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Optional when the PROJECT field is populated, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        ""
+    ]
 }

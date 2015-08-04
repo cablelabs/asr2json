@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "BILL",
     "name": "ee",
@@ -9,10 +9,21 @@
     "fieldLength": "1",
     "characteristics": "Alpha",
     "usage": "Conditional",
-    "example": "E ",
-    "definition": "Indicates the service being ordered on this request should be\neither assessed or exempted from the Federal Universal Service\nFee (FUSF). ",
-    "validEntry": "E = Exempt Federal Universal Service Fee \nN = Non–Exempt (Assessed) Federal Universal Service\nFee ",
-    "validEntryNotes": "Exempt indicates the customer is both (a) reselling \nthe Special Access as a telecommunications service\nand (b) contributing directly into the Federal\nUniversal Service Fund for the service being \nordered. For a valid entry of “E” both conditions\nmust be met. \nNOTE 2:\nNon-Exempt (Assess) indicates the customer is (a)\nnot reselling the Special Access as a\ntelecommunications service and/or (b) not\ncontributing directly into the Federal Universal\nService Fund for the service being ordered. \nNOTE 3:\nAn entry in this field applies to all the circuits\nbeing ordered on this service request. ",
-    "usageNotes": "Optional when the ACT field is “R”. \nNOTE 3:\nOtherwise prohibited. ",
-    "fieldNotes": "Services that are ordered to provide an information\nservice, used for internal consumption or used for\nadministrative purposes are services that are to be\nassessed a FUSF. "
+    "example": [
+        "E"
+    ],
+    "definition": "Indicates the service being ordered on this request should be either assessed or exempted from the Federal Universal Service Fee (FUSF).",
+    "validEntry": "E = Exempt Federal Universal Service Fee\nN = Non–Exempt (Assessed) Federal Universal Service\nFee",
+    "validEntryNotes": [
+        "Exempt indicates the customer is both (a) reselling the Special Access as a telecommunications service and (b) contributing directly into the Federal Universal Service Fund for the service being ordered. For a valid entry of “E” both conditions must be met.",
+        "Non-Exempt (Assess) indicates the customer is (a) not reselling the Special Access as a telecommunications service and/or (b) not contributing directly into the Federal Universal Service Fund for the service being ordered.",
+        "An entry in this field applies to all the circuits being ordered on this service request. "
+    ],
+    "usageNotes": [
+        "Required when the ACT field is “N”, “C” or “T”.NOTE 2: Optional when the ACT field is “R”.",
+        "Otherwise prohibited."
+    ],
+    "fieldNotes": [
+        "Services that are ordered to provide an information service, used for internal consumption or used for administrative purposes are services that are to be assessed a FUSF."
+    ]
 }

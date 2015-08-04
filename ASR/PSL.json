@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Primary Service Location",
@@ -9,10 +9,21 @@
     "fieldLength": "11",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": "WASHD C SWDS1",
-    "definition": "Identifies the primary service location when the terminating and\nthe originating points are not the ACTL. ",
-    "validEntry": "Valid CLLI Code ",
-    "validEntryNotes": "Valid entries (CLLI Codes) are maintained by\nTelcordia Technologies.  ",
-    "usageNotes": "Prohibited when the PSLI is “G”. \nNOTE 2:\nRequired when the PSLI is “A”, “B”, “C”, “D”, “E” or\n“F”. \nNOTE 3:\nProhibited when the ACT field is “D”. \nNOTE 4:\nOtherwise optional. ",
-    "fieldNotes": "The format and structure of this field is defined by \nANSI in document T1.253 (ATIS-0325300):\nIdentification of Location Entities for the North\nAmerican Telecommunications System or by \nCOMMON LANGUAGE in BR-795-100-100. A brief \nsummary of the format can be found in ASOG\nPractice 000, Section 2.14.1.  "
+    "example": [
+        "WASHDCSWDS1"
+    ],
+    "definition": "Identifies the primary service location when the terminating and the originating points are not the ACTL.",
+    "validEntry": "Valid CLLI Code",
+    "validEntryNotes": [
+        "Valid entries (CLLI Codes) are maintained by Telcordia Technologies. "
+    ],
+    "usageNotes": [
+        "Prohibited when the PSLI is “G”.",
+        "Required when the PSLI is “A”, “B”, “C”, “D”, “E” or “F”.",
+        "Prohibited when the ACT field is “D”.",
+        "Otherwise optional."
+    ],
+    "fieldNotes": [
+        "The format and structure of this field is defined by ANSI in document T1.253 (ATIS-0325300): Identification of Location Entities for the North American Telecommunications System or by COMMON LANGUAGE in BR-795-100-100. A brief summary of the format can be found in ASOG Practice 000, Section 2.14.1."
+    ]
 }

@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Related Order Number",
@@ -9,10 +9,18 @@
     "fieldLength": "17",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": " C 456895",
-    "definition": "Identifies a provider’s related order number. ",
+    "example": [
+        "C456895"
+    ],
+    "definition": "Identifies a provider’s related order number.",
     "validEntry": "",
-    "validEntryNotes": "",
-    "usageNotes": "Required when the provider has pre-assigned a \nrelated order number, otherwise prohibited. ",
-    "fieldNotes": "This field may be used to convey a CENTREX order\nnumber obtained from the provider representative\nhandling the CENTREX account. "
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the provider has pre-assigned a related order number, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        "This field may be used to convey a CENTREX order number obtained from the provider representative handling the CENTREX account."
+    ]
 }

@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Service and Product Enhancement Code",
@@ -9,10 +9,19 @@
     "fieldLength": "5",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": "F RDS322",
-    "definition": "Identifies a specific product or service offering. ",
-    "validEntry": "Positions 1-7 = Any alpha character except “I” or any\nnumeric character except “0”. ",
-    "validEntryNotes": "",
-    "usageNotes": "Prohibited when the EVCI field is “A”, otherwise\noptional. ",
-    "fieldNotes": "SPEC may be applicable for circuit level features\nand options other than those already identified by\nthe Network Channel (NC) and Network Channel\nInterface (NCI) codes. \nNOTE 2: \nTelcordia Technologies, Inc. is the intellectual\nproperty owner and administrator of SPEC. The\nSPEC code structure and use are outlined in\nTelcordia Technologies special report SR-2491. "
+    "example": [
+        "FRDS322"
+    ],
+    "definition": "Identifies a specific product or service offering.",
+    "validEntry": "Positions 1-7 = Any alpha character except “I” or any\nnumeric character except “0”.",
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Prohibited when the EVCI field is “A”, otherwise optional."
+    ],
+    "fieldNotes": [
+        "SPEC may be applicable for circuit level features and options other than those already identified by the Network Channel (NC) and Network Channel Interface (NCI) codes.",
+        "Telcordia Technologies, Inc. is the intellectual property owner and administrator of SPEC. The SPEC code structure and use are outlined in Telcordia Technologies special report SR-2491."
+    ]
 }

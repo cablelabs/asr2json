@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "BILL",
     "name": "Variable Term Agreement",
@@ -9,10 +9,21 @@
     "fieldLength": "17",
     "characteristics": "AlphaNumeric",
     "usage": "Optional",
-    "example": "This example illustrates a numeric value but is left\njustified since it is treated as text. \n C 12345\n3 61091489BLKH00 0 1 ",
-    "definition": "Identifies the duration, identifying USOC, contract date or\ncontract identification number of any variable term agreement\nthat may be offered by a provider. ",
+    "example": [
+        "Thisexampleillustratesanumericvaluebutisleft",
+        "justifiedsinceitistreatedastext.",
+        "C12345",
+        "361091489BLKH0001"
+    ],
+    "definition": "Identifies the duration, identifying USOC, contract date or contract identification number of any variable term agreement that may be offered by a provider.",
     "validEntry": "",
-    "validEntryNotes": "",
-    "usageNotes": "",
-    "fieldNotes": "When the ASC-EC field is populated, this identifies\nthe duration, identifying USOC, contract date or\ncontract identification number of any variable term\nagreement that may be offered by ASC-EC.  "
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        "When the ASC-EC field is populated, this identifies the duration, identifying USOC, contract date or contract identification number of any variable term agreement that may be offered by ASC-EC."
+    ]
 }

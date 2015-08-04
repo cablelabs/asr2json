@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "CONTACT",
     "name": "Maintenance Contact",
@@ -9,10 +9,18 @@
     "fieldLength": "11",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": "MT C EOFFI C E",
-    "definition": "Identifies the customer employee or office responsible for\nmaintenance subsequent to the installation of the access\nservice. ",
+    "example": [
+        "MTCEOFFICE"
+    ],
+    "definition": "Identifies the customer employee or office responsible for maintenance subsequent to the installation of the access service.",
     "validEntry": "",
-    "validEntryNotes": "",
-    "usageNotes": "Prohibited when the Implementation Contact and\nthe Maintenance Contact are the same, otherwise\noptional. ",
-    "fieldNotes": ""
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Prohibited when the Implementation Contact and the Maintenance Contact are the same, otherwise optional."
+    ],
+    "fieldNotes": [
+        ""
+    ]
 }

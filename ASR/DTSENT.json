@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Date and Time Sent",
@@ -9,10 +9,19 @@
     "fieldLength": "17",
     "characteristics": "AlphaNumeric",
     "usage": "Required",
-    "example": "0 5-22-1985-1115 A M\n1 985-05-22-1115 A M",
-    "definition": "Identifies the date and time that the Access Service Request is\nsent by the customer. ",
-    "validEntry": "U.S. Standard Metric Format \nTwo Digit Month (01-12) Two Digit Century (00-99) \nTwo Digit Day (01-31) Two Digit Year (00-99) \nTwo Digit Century (00-99) Two Digit Month (01-12) \nTwo Digit Year (00-99) Two Digit Day (01-31) \nTwo Digit Hour (01-12) Two Digit Hour (01-12) \nTwo Digit Minute (00-59) Two Digit Minute (00-59) \nAM or PM AM or PM ",
-    "validEntryNotes": "",
-    "usageNotes": "",
-    "fieldNotes": ""
+    "example": [
+        "05-22-1985-1115AM",
+        "1985-05-22-1115AM"
+    ],
+    "definition": "Identifies the date and time that the Access Service Request is sent by the customer.",
+    "validEntry": "U.S. Standard Metric Format\nTwo Digit Month (01-12) Two Digit Century (00-99)\nTwo Digit Day (01-31) Two Digit Year (00-99)\nTwo Digit Century (00-99) Two Digit Month (01-12)\nTwo Digit Year (00-99) Two Digit Day (01-31)\nTwo Digit Hour (01-12) Two Digit Hour (01-12)\nTwo Digit Minute (00-59) Two Digit Minute (00-59)\nAM or PM AM or PM",
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        ""
+    ]
 }

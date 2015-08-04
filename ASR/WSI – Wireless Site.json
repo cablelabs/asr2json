@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "ndicator",
@@ -9,10 +9,19 @@
     "fieldLength": "1",
     "characteristics": "Alpha",
     "usage": "Conditional",
-    "example": "N",
-    "definition": "Identifies that the termination is at a wireless site. ",
-    "validEntry": "N = New \nE = Existing ",
-    "validEntryNotes": "A valid entry of “New” indicates that this is the\ncustomer’s initial order to this wireless site. \nNOTE 2:\nA valid entry of “Existing” indicates that the\ncustomer has previously ordered to this wireless\nsite. ",
-    "usageNotes": "Required when the ACT field is “N” and the first\nposition of the REQTYP is “S” or “E” and the\nSECLOC field on the Transport or EUSA Form is a\nwireless site, otherwise prohibited. ",
-    "fieldNotes": ""
+    "example": [
+        "N"
+    ],
+    "definition": "Identifies that the termination is at a wireless site.",
+    "validEntry": "N = New\nE = Existing",
+    "validEntryNotes": [
+        "A valid entry of “New” indicates that this is the customer’s initial order to this wireless site.",
+        "A valid entry of “Existing” indicates that the customer has previously ordered to this wireless site. "
+    ],
+    "usageNotes": [
+        "Required when the ACT field is “N” and the first position of the REQTYP is “S” or “E” and the SECLOC field on the Transport or EUSA Form is a wireless site, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        ""
+    ]
 }

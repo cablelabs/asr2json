@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Facility Billing Arrangement",
@@ -9,10 +9,21 @@
     "fieldLength": "4",
     "characteristics": "Alpha",
     "usage": "Conditional",
-    "example": "FBAEF DT MUX\nD Y Y ",
-    "definition": "Indicates a special arrangement has been negotiated between\nthe host customer of a higher level service and the subsequent\ncustomer of the lower level service.  ",
-    "validEntry": "1\nst\n Position \nA = Shared network \nB = Lease Back \nC = Split Billing - All Elements \nD = Split Billing \n2\nnd\n through 4\nth\n Positions \nY = Indicates the requirement of split billing on the\nrespective element. ",
-    "validEntryNotes": "An entry in one or more of positions 2 through 4 is\nrequired when position 1 is “D”. \nNOTE 2:\nThe following define element labels:  \nEF = Entrance Facility \nDT = Direct Transport \nMUX= Multiplexing ",
-    "usageNotes": "Optional when the ACT field is “R” and the ACNA\nfield is different from the ACNA associated with the\nfacility (CFA and/or SCFA) and the UNE and CC\nfields are not populated. \nNOTE 3:\nOtherwise prohibited. ",
-    "fieldNotes": ""
+    "example": [
+        "FBAEFDTMUX",
+        "DYY"
+    ],
+    "definition": "Indicates a special arrangement has been negotiated between the host customer of a higher level service and the subsequent customer of the lower level service.",
+    "validEntry": "1\nst\nPosition\nA = Shared network\nB = Lease Back\nC = Split Billing - All Elements\nD = Split Billing\n2\nnd\nthrough 4\nth\nPositions\nY = Indicates the requirement of split billing on the\nrespective element.",
+    "validEntryNotes": [
+        "An entry in one or more of positions 2 through 4 is required when position 1 is “D”.",
+        "The following define element labels: EF = Entrance Facility DT = Direct Transport MUX= Multiplexing "
+    ],
+    "usageNotes": [
+        "Required when the ACT field is “N”, “C” or “T” and the ACNA field is different from the ACNA associated with the facility (CFA and/or SCFA) and the UNE and CC fields are not populated.NOTE 2: Optional when the ACT field is “R” and the ACNA field is different from the ACNA associated with the facility (CFA and/or SCFA) and the UNE and CC fields are not populated.",
+        "Otherwise prohibited."
+    ],
+    "fieldNotes": [
+        ""
+    ]
 }

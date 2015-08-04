@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "CONTACT",
     "name": "Maintenance Contact Electronic Mail Address",
@@ -9,10 +9,18 @@
     "fieldLength": "60",
     "characteristics": "AlphaNumeric",
     "usage": "Optional",
-    "example": "P ANY. C OM",
-    "definition": "Identifies the electronic mail address of the maintenance\ncontact when defined by customer/provider contracts, tariffs\nand/or negotiated agreements. ",
+    "example": [
+        "PANY.COM"
+    ],
+    "definition": "Identifies the electronic mail address of the maintenance contact when defined by customer/provider contracts, tariffs and/or negotiated agreements.",
     "validEntry": "",
-    "validEntryNotes": "",
-    "usageNotes": "",
-    "fieldNotes": ""
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        ""
+    ]
 }

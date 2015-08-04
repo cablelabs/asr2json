@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "BILL",
     "name": "BILL)",
@@ -9,10 +9,20 @@
     "fieldLength": "12",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": "0 7039\n0 8854-123456\nM541X7",
-    "definition": "Identifies the ZIP code or postal code of the billing address\nassociated with the billing name.  ",
+    "example": [
+        "07039",
+        "08854-123456",
+        "M541X7"
+    ],
+    "definition": "Identifies the ZIP code or postal code of the billing address associated with the billing name.",
     "validEntry": "",
-    "validEntryNotes": "",
-    "usageNotes": "Required when the BAN field is “N”, otherwise\noptional. ",
-    "fieldNotes": ""
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the BAN field is “N”, otherwise optional."
+    ],
+    "fieldNotes": [
+        ""
+    ]
 }

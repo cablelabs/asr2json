@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "BILL",
     "name": "Extended Billing Plan",
@@ -9,10 +9,18 @@
     "fieldLength": "6",
     "characteristics": "AlphaNumeric",
     "usage": "Optional",
-    "example": "Y ",
-    "definition": "Identifies the request for establishing or removing installment\nbilling of non-recurring charges that may be offered by a\nprovider. ",
+    "example": [
+        "Y"
+    ],
+    "definition": "Identifies the request for establishing or removing installment billing of non-recurring charges that may be offered by a provider.",
     "validEntry": "",
-    "validEntryNotes": "",
-    "usageNotes": "",
-    "fieldNotes": ""
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        ""
+    ]
 }

@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Subscriber Authorization Number",
@@ -9,10 +9,19 @@
     "fieldLength": "30",
     "characteristics": "AlphaNumeric",
     "usage": "Optional",
-    "example": "A B12345678",
-    "definition": "Identifies a number equivalent to the End User Purchase Order\nNumber.  ",
+    "example": [
+        "AB12345678"
+    ],
+    "definition": "Identifies a number equivalent to the End User Purchase Order Number.",
     "validEntry": "",
-    "validEntryNotes": "",
-    "usageNotes": "",
-    "fieldNotes": "This may, at the option of the customer, be a\nrequirement when providing service to some\ngovernmental agencies. \nNOTE 2:\nThis field may be used in conjunction with the\nSBILLNM field.  "
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        "This may, at the option of the customer, be a requirement when providing service to some governmental agencies.",
+        "This field may be used in conjunction with the SBILLNM field."
+    ]
 }

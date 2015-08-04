@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "CONTACT",
     "name": "Street Address (DSGCON)",
@@ -9,12 +9,24 @@
     "fieldLength": "25",
     "characteristics": "AlphaNumeric",
     "usage": "Optional",
-    "example": "1 25EMAINST\nR EET",
-    "definition": "Identifies the street address for the design/engineering contact. ",
+    "example": [
+        "125EMAINST",
+        "REET"
+    ],
+    "definition": "Identifies the street address for the design/engineering contact.",
     "validEntry": "",
-    "validEntryNotes": "",
-    "usageNotes": "",
-    "fieldNotes": ""
-} the BAN field is “N”, otherwise\noptional. ",
-    "fieldNotes": ""
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        ""
+    ]
+}�, otherwise optional."
+    ],
+    "fieldNotes": [
+        ""
+    ]
 }

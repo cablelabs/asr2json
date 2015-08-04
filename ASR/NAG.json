@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Network Access Groom",
@@ -9,10 +9,21 @@
     "fieldLength": "1",
     "characteristics": "Alpha",
     "usage": "Conditional",
-    "example": "Y ",
-    "definition": "Identifies this service request as a CFA or CCEA change which\nwill require no contact with the end user at the terminating\nlocation (SECLOC). ",
-    "validEntry": "Y = Yes ",
-    "validEntryNotes": "",
-    "usageNotes": "Optional when the first position of the REQTYP\nfield is “S”, the ACT field is “N” or “D”, the RPON\nfield is populated, the NSL field on the Transport\nForm is not populated and a Network Access\nGroom is being requested. \nNOTE 2: \nOptional when the first position of the REQTYP\nfield is “S”, the ACT field is “C”, the NSL field on the\nTransport Form is not populated and a Network \nAccess Groom is being requested. \nNOTE 3: \nOtherwise prohibited. ",
-    "fieldNotes": "This field applies only when the Primary,\nSecondary, Intermediary CFA or CCEA is changing \nand the end user terminating location is not\nchanging. \nNOTE 2: \nPopulation of this field indicates that the provider\nwill use existing end user location information on\nrecord for the circuit(s) being groomed. "
+    "example": [
+        "Y"
+    ],
+    "definition": "Identifies this service request as a CFA or CCEA change which will require no contact with the end user at the terminating location (SECLOC).",
+    "validEntry": "Y = Yes",
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Optional when the first position of the REQTYP field is “S”, the ACT field is “N” or “D”, the RPON field is populated, the NSL field on the Transport Form is not populated and a Network Access Groom is being requested.",
+        "Optional when the first position of the REQTYP field is “S”, the ACT field is “C”, the NSL field on the Transport Form is not populated and a Network Access Groom is being requested.",
+        "Otherwise prohibited."
+    ],
+    "fieldNotes": [
+        "This field applies only when the Primary, Secondary, Intermediary CFA or CCEA is changing and the end user terminating location is not changing.",
+        "Population of this field indicates that the provider will use existing end user location information on record for the circuit(s) being groomed."
+    ]
 }

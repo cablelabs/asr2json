@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "BILL",
     "name": "Billing Contact",
@@ -9,10 +9,18 @@
     "fieldLength": "15",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": "J ANETDOE",
-    "definition": "Identifies the name of the person or office to be contacted on\nbilling matters. ",
+    "example": [
+        "JANETDOE"
+    ],
+    "definition": "Identifies the name of the person or office to be contacted on billing matters.",
     "validEntry": "",
-    "validEntryNotes": "",
-    "usageNotes": "Required when the BAN field is “N”, otherwise\noptional. ",
-    "fieldNotes": ""
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the BAN field is “N”, otherwise optional."
+    ],
+    "fieldNotes": [
+        ""
+    ]
 }

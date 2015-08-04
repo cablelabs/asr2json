@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Translation Questionnaire Request",
@@ -9,10 +9,29 @@
     "fieldLength": "2",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": "DY\n1 Y",
-    "definition": "Indicates that a translation questionnaire is being submitted. ",
-    "validEntry": "1\nst\n Position \nA = No TQ attached \nB = FGB translations \nC = Code (NPA/NXX) Translation Routing Only \nD = FGD translations \nE = STP Translation Changes \nL = Local translations \nM = Local translations and Code Translation Routing \nS = SAC only \nT= FGD translations and SAC \nU = FGB translations and SAC \nW = Wireless translations \nX = Wireless translations and Code Translation Routing \n1-9 = TQ on file \n2\nnd\n Position \nN = No Trunking Form \nX = Trunking Form (no trunk activity)\nY = Trunking Form (trunk activity)",
-    "validEntryNotes": "The second position of “X” indicates a Trunking\nForm is provided for system requirements rather\nthan provisioning purposes. \nNOTE 5:\nWhen the ACT field is “N”, a second position of “N”\nor “X” is prohibited. \nNOTE 6: \nWhen the first position of the TQ field is “E”, the\nsecond position of the TQ field must be an “X”. \nNOTE 7: \nWhen the first position of the TQ field is “E”, the\nfirst position of the REQTYP field must be an “L”\nand the ACT field must be a “C”. \nNOTE 8: \nWhen the first position of the TQ field is “C”, the\nfirst position of the REQTYP field must be an “M”\nand the ACT field must be a “C”. ",
-    "usageNotes": "Required when the first position of the REQTYP\nfield is “M”, the ACT field is “N” and the ACTI field\nis “B” or “C”. \nNOTE 2:\nOptional when the first position of the REQTYP\nfield is “L” or “M” and the ACT field is “C”. \nNOTE 3:\nRequired when the first position of the REQTYP\nfield is “M”, the ACT field is “D” and the ACTI field\nis “E”. \nNOTE 4:\nOtherwise prohibited. ",
-    "fieldNotes": ""
+    "example": [
+        "DY",
+        "1Y"
+    ],
+    "definition": "Indicates that a translation questionnaire is being submitted.",
+    "validEntry": "1\nst\nPosition\nA = No TQ attached\nB = FGB translations\nC = Code (NPA/NXX) Translation Routing Only\nD = FGD translations\nE = STP Translation Changes\nL = Local translations\nM = Local translations and Code Translation Routing\nS = SAC only\nT= FGD translations and SAC\nU = FGB translations and SAC\nW = Wireless translations\nX = Wireless translations and Code Translation Routing\n1-9 = TQ on file\n2\nnd\nPosition\nN = No Trunking Form\nX = Trunking Form (no trunk activity)\nY = Trunking Form (trunk activity)",
+    "validEntryNotes": [
+        "When the first position of TQ is “A”, the ASR which has the TQ Form attached will be identified in the RPON field.",
+        "When the first position of TQ is “L”, “M”, “W”, “X” or “C”, entries in the CC or WST, or the CC and the WST fields are required.",
+        "When the first position of TQ is “A”, “B”, “D”, “S”, “T”, “U”, or “1-9”, entries in the CC or WST, or the CC and the WST fields are prohibited. ",
+        "The second position of “X” indicates a Trunking Form is provided for system requirements rather than provisioning purposes.",
+        "When the ACT field is “N”, a second position of “N” or “X” is prohibited.",
+        "When the first position of the TQ field is “E”, the second position of the TQ field must be an “X”.",
+        "When the first position of the TQ field is “E”, the first position of the REQTYP field must be an “L” and the ACT field must be a “C”.",
+        "When the first position of the TQ field is “C”, the first position of the REQTYP field must be an “M” and the ACT field must be a “C”. "
+    ],
+    "usageNotes": [
+        "Required when the first position of the REQTYP field is “M”, the ACT field is “N” and the ACTI field is “B” or “C”.",
+        "Optional when the first position of the REQTYP field is “L” or “M” and the ACT field is “C”.",
+        "Required when the first position of the REQTYP field is “M”, the ACT field is “D” and the ACTI field is “E”.",
+        "Otherwise prohibited."
+    ],
+    "fieldNotes": [
+        ""
+    ]
 }

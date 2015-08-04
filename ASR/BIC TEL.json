@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "BIC Telephone Number",
@@ -9,10 +9,18 @@
     "fieldLength": "10",
     "characteristics": "Numeric",
     "usage": "Conditional",
-    "example": "2 01-981-3582",
-    "definition": "Identifies the telephone number of the provider representative\nresponsible for the BIC. ",
+    "example": [
+        "201-981-3582"
+    ],
+    "definition": "Identifies the telephone number of the provider representative responsible for the BIC.",
     "validEntry": "",
-    "validEntryNotes": "",
-    "usageNotes": "Required when the BIC ID field is populated,\notherwise prohibited. ",
-    "fieldNotes": ""
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the BIC ID field is populated, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        ""
+    ]
 }

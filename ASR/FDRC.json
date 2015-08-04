@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "CONTACT",
     "name": "Facility Design Routing Code",
@@ -9,10 +9,20 @@
     "fieldLength": "3",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": "A N3",
-    "definition": "Identifies the customer location routing code for the design\ncontact for the facility in a combined ASR situation.  ",
+    "example": [
+        "AN3"
+    ],
+    "definition": "Identifies the customer location routing code for the design contact for the facility in a combined ASR situation.",
     "validEntry": "",
-    "validEntryNotes": "",
-    "usageNotes": "Required when the ACT field is “N”, “C” or “T”, the\nRTR field is “S” or “1-10”, and the STREET \n(DSGCON) field is not populated or the DSGCON\nFAX NO field is not populated and the FDRC is\ndifferent from the DRC, otherwise prohibited. ",
-    "fieldNotes": "The routing code represents the following \ninformation: \nCompany \nStreet \nFloor \nRoom \nCity \nState/Province \nZIP Code \nNOTE 2:\nWhen populated, this will be the first choice for\nrouting the facility DLR. \nNOTE 3:\nThe codes are assigned by the provider. "
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the ACT field is “N”, “C” or “T”, the RTR field is “S” or “1-10”, and the STREET (DSGCON) field is not populated or the DSGCON FAX NO field is not populated and the FDRC is different from the DRC, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        "The routing code represents the following information: Company Street Floor Room City State/Province ZIP Code",
+        "When populated, this will be the first choice for routing the facility DLR.",
+        "The codes are assigned by the provider."
+    ]
 }

@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "cceptance",
@@ -9,10 +9,21 @@
     "fieldLength": "1",
     "characteristics": "Alpha",
     "usage": "Conditional",
-    "example": "Y ",
-    "definition": "Indicates that the customer agrees to accept an earlier due date\non their confirmation notice than the desired due date\nrequested if the provider can accommodate an earlier date.  ",
-    "validEntry": "Y = Early Acceptance Authorized ",
-    "validEntryNotes": "",
-    "usageNotes": "Prohibited when the EXP field is populated. \nNOTE 2:\nProhibited when the ASC-EC field is populated. \nNOTE 3:\nOtherwise optional. ",
-    "fieldNotes": "Population of this field specifies that the customer\nagrees to accept billing based on the provider due\ndate returned on the confirmation notice. \nNOTE 2:\nPopulation of this field will not result in expedite\ncharges being billed. "
+    "example": [
+        "Y"
+    ],
+    "definition": "Indicates that the customer agrees to accept an earlier due date on their confirmation notice than the desired due date requested if the provider can accommodate an earlier date.",
+    "validEntry": "Y = Early Acceptance Authorized",
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Prohibited when the EXP field is populated.",
+        "Prohibited when the ASC-EC field is populated.",
+        "Otherwise optional."
+    ],
+    "fieldNotes": [
+        "Population of this field specifies that the customer agrees to accept billing based on the provider due date returned on the confirmation notice.",
+        "Population of this field will not result in expedite charges being billed."
+    ]
 }

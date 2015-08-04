@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "CONTACT",
     "name": "Design Facsimile Number",
@@ -9,10 +9,18 @@
     "fieldLength": "10",
     "characteristics": "Numeric",
     "usage": "Conditional",
-    "example": "9 08-336-2980",
-    "definition": "Identifies the fax number of the design contact. ",
+    "example": [
+        "908-336-2980"
+    ],
+    "definition": "Identifies the fax number of the design contact.",
     "validEntry": "",
-    "validEntryNotes": "",
-    "usageNotes": "Required when the ACT field is “N”, “C” or “T”, the\nDRC field is not populated, the RTR field is “S” or\n“1-10” and the STREET (DSGCON) field is not\npopulated, otherwise optional. ",
-    "fieldNotes": ""
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the ACT field is “N”, “C” or “T”, the DRC field is not populated, the RTR field is “S” or “1-10” and the STREET (DSGCON) field is not populated, otherwise optional."
+    ],
+    "fieldNotes": [
+        ""
+    ]
 }

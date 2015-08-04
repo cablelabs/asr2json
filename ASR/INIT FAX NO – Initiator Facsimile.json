@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "CONTACT",
     "name": "umber",
@@ -9,10 +9,18 @@
     "fieldLength": "10",
     "characteristics": "Numeric",
     "usage": "Optional",
-    "example": "9 08-336-2980",
-    "definition": "Identifies the fax number of the initiator. ",
+    "example": [
+        "908-336-2980"
+    ],
+    "definition": "Identifies the fax number of the initiator.",
     "validEntry": "",
-    "validEntryNotes": "",
-    "usageNotes": "",
-    "fieldNotes": ""
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        ""
+    ]
 }

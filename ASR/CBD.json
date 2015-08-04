@@ -1,18 +1,29 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Call Before Dispatch",
     "title": "CBD",
     "fieldNumber": "11",
-    "fieldLength": "",
-    "characteristics": "Numeric",
+    "fieldLength": "3",
+    "characteristics": "AlphaNumeric",
     "usage": "Optional",
-    "example": "This example represents an “Unstaffed”  \nSite requiring LCON coordination based\non a provider’s existing process. ",
-    "definition": "May identify a customer location as “Unstaffed” and request\nthe provider call the LCON at a desired time prior to ‘dispatch\nout’ of a service technician, or a coordination call based on a \nprovider’s existing process for service installation or disconnect.",
-    "validEntry": "1\nst\n Character \nA = Unstaffed Service Delivery Location ",
-    "validEntryNotes": "Defines the service delivery location as “Unstaffed”\nrequiring coordination with LCON prior to\ntechnician dispatch. \n2\nnd\n and 3\nrd\n Character\n01-\n99 \n= Hours \nNOTE 1:\nThe desired number of hours prior to dispatch to\nfacilitate access for the service technician.  ",
-    "usageNotes": "",
-    "fieldNotes": ""
+    "example": [
+        "Thisexamplerepresentsan“Unstaffed”",
+        "SiterequiringLCONcoordinationbased",
+        "onaprovider’sexistingprocess."
+    ],
+    "definition": "May identify a customer location as “Unstaffed” and request the provider call the LCON at a desired time prior to ‘dispatch out’ of a service technician, or a coordination call based on a provider’s existing process for service installation or disconnect.",
+    "validEntry": "1\nst\nCharacter\nA = Unstaffed Service Delivery Location",
+    "validEntryNotes": [
+        "Defines the service delivery location as “Unstaffed” requiring coordination with LCON prior to technician dispatch. 2 nd and 3 rd Character 01- 99 = Hours",
+        "The desired number of hours prior to dispatch to facilitate access for the service technician. "
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        ""
+    ]
 }

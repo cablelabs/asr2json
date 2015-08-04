@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Customer Carrier Name Abbreviation",
@@ -9,10 +9,22 @@
     "fieldLength": "3",
     "characteristics": "Alpha",
     "usage": "Required",
-    "example": "UT C ",
-    "definition": "Identifies the COMMON LANGUAGE IAC code for the customer\nsubmitting the ASR and receiving the Confirmation Notice Form\n(CN). ",
-    "validEntry": "IAC Code \nCUS = Casual customer ",
-    "validEntryNotes": "Valid IAC codes are maintained by Telcordia \nTechnologies. ",
-    "usageNotes": "",
-    "fieldNotes": "The format and structure of this field is defined by\nANSI in document ATIS-0300251 Codes for\nIdentification of Service Providers for Information\nExchange. \nNOTE 2:\nThis code is established prior to the submission of \nthe ASR. \nNOTE 3:\nFor the casual customer who does not have an IAC\ncode, this field should reflect an entry of “CUS”.\nThe customer name should be entered in the CUST\nfield on the ASR. \nNOTE 4:\nThe IAC designated in the CCNA field is the\nprovider’s contact for management of the access\nordering/negotiation process for the life of the\norder.  When using “CUS”, management of this\nprocess may be determined on an individual\nprovider basis. \nNOTE 5:\nThe CCNA is not intended to indicate the customer\nbeing billed for the access service.  This is reflected\nin the ACNA field on the ASR. "
+    "example": [
+        "UTC"
+    ],
+    "definition": "Identifies the COMMON LANGUAGE IAC code for the customer submitting the ASR and receiving the Confirmation Notice Form (CN).",
+    "validEntry": "IAC Code\nCUS = Casual customer",
+    "validEntryNotes": [
+        "Valid IAC codes are maintained by Telcordia Technologies. "
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        "The format and structure of this field is defined by ANSI in document ATIS-0300251 Codes for Identification of Service Providers for Information Exchange.",
+        "This code is established prior to the submission of the ASR.",
+        "For the casual customer who does not have an IAC code, this field should reflect an entry of “CUS”. The customer name should be entered in the CUST field on the ASR.",
+        "The IAC designated in the CCNA field is the provider’s contact for management of the access ordering/negotiation process for the life of the order.  When using “CUS”, management of this process may be determined on an individual provider basis.",
+        "The CCNA is not intended to indicate the customer being billed for the access service.  This is reflected in the ACNA field on the ASR."
+    ]
 }

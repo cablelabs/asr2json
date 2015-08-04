@@ -12,7 +12,7 @@ var line = "";
 var contents = fs.readFileSync('textalone', 'utf8').toString().split("\n");
 var i=0;
 for ( i=0; i < contents.length; i++) {
-//for ( i=0; i < 100; i++) {
+//for ( i=0; i < 23; i++) {
     line = contents[i];
 
     // CHECK IF FORM
@@ -28,6 +28,7 @@ for ( i=0; i < contents.length; i++) {
     }
 
     // CHECK IF FIELD
+    line = line.trim() + "\n";
     regex = /^[0-9]+\./;
     if ( regex.exec(line) && (line.indexOf("-")>-1 || line.indexOf("–")>-1)) {
         getField(line);
@@ -37,7 +38,7 @@ for ( i=0; i < contents.length; i++) {
 function getForm() {
     field.form = line.split("(");
     field.form = (field.form[1].split(")"))[0];
-    console.log(field.form);
+    console.log("FORM= " + field.form);
 }
 
 function getSection() {
@@ -51,6 +52,7 @@ function getField(line) {
     var prevFieldNumber = field.fieldNumber;
 
     if ( prevFieldNumber!=0 && prevFieldNumber!=currentFieldNumber ) { // END OF FIELD
+        filterDefinitions();
         writeOutput(prevFieldNumber);
         cleanFieldProperties();
         field.fieldNumber = currentFieldNumber;
@@ -67,12 +69,13 @@ function getField(line) {
         var result = re1.exec(line);
         field.title = result[1].trim();
         field.name = result[2].trim();
+        console.log("FieldNumber= " + field.fieldNumber);
         console.log("Title= " + field.title);
         console.log("Name= " + field.name);
         field.breakValue = "DEFINITION";
     }
     else {
-        line = contents[++i];
+        line = contents[++i].trim() + "\n";
         checkKeyWord(line);
     }
 
@@ -80,39 +83,38 @@ function getField(line) {
     while ( i+1 != contents.length && !pageNumberRegex.exec(contents[i+1]) ) {
         switch(field.breakValue) {
             case "DEFINITION":
-                field.definition = getFieldInfo();
+                field.definition = getFieldInfo().replace(/\n/g," ").trim();
                 console.log("DEFINITION= " + field.definition);
                 break;
             case "FIELD NOTES":
-                field.fieldNotes = getFieldInfo();
+                field.fieldNotes = field.fieldNotes + getFieldInfo().trimRight();
                 console.log("FIELD NOTES= " + field.fieldNotes);
                 break;
             case "VALID ENTRIES":
-                field.validEntry = getFieldInfo();
+                field.validEntry = field.validEntry + getFieldInfo().trim();
                 console.log("VALID ENTRIES= " + field.validEntry);
                 break;
             case "VALID ENTRY NOTES":
-                field.validEntryNotes = getFieldInfo();
+                field.validEntryNotes = field.validEntryNotes + getFieldInfo();
                 console.log("VALID ENTRY NOTES= " + field.validEntryNotes);
                 break;
             case "USAGE":
-                field.usage = getFieldInfo();
+                field.usage = getFieldInfo().trim();
                 field.usage = (field.usage.indexOf("required") > -1)? "Required" : ((field.usage.indexOf("conditional") > -1)? "Conditional" : "Optional");
                 console.log("USAGE= " + field.usage);
                 break;
             case "USAGE NOTES":
-                field.usageNotes = getFieldInfo();
-
+                field.usageNotes = field.usageNotes + getFieldInfo().trim();
                 console.log("USAGE NOTES= " + field.usageNotes);
                 break;
             case "DATA CHARACTERISTICS":
-                var info = (getFieldInfo()).split(" ");
+                var info = (getFieldInfo().trim()).split(" ");
                 field.fieldLength = info[0];
                 field.characteristics = (info[1].indexOf("alpha") > -1) ? ((info[1].indexOf("numeric") > -1) ? "AlphaNumeric" : "Alpha" ) : "Numeric";
                 console.log("Characteristics= " + field.characteristics);
                 break;
             case "EXAMPLE" || "EXAMPLES":
-                field.example = getFieldInfo();
+                field.example = getFieldInfo().trim();
                 console.log("EXAMPLE= " + field.example);
                 break;
         }
@@ -122,8 +124,11 @@ function getField(line) {
 function getFieldInfo() {
     var pageNumberRegex = /^3-[0-9]+$/;
     var fieldInfo = "";
+    if ( field.breakValue == "FIELD NOTES" || field.breakValue == "VALID ENTRY NOTES" || field.breakValue == "USAGE NOTES" ) {
+        fieldInfo = " " + contents[i].trim() + "\n";
+    }
     while ( i+1 != contents.length && !pageNumberRegex.exec(contents[i+1])) {
-        line = contents[++i];
+        line = contents[++i].trim() + "\n";
 
         // Check if keyword is present
         if( checkKeyWord(line) == 1 ) {
@@ -133,7 +138,7 @@ function getFieldInfo() {
             fieldInfo = line;
         }
         else {
-            fieldInfo = fieldInfo + "\n" + line;
+            fieldInfo = fieldInfo + line;
         }
     }
     return fieldInfo;
@@ -164,6 +169,18 @@ function checkKeyWord(line) {
         }
     }
     return 0;
+}
+
+function filterDefinitions() {
+    field.usageNotes = field.usageNotes.replace("NOTE 1:\n","").replace(/\n/g," ").split(/ NOTE [0-9]: /);
+    field.example = field.example.replace(/ /g,"").split("\n");
+    field.fieldNotes = field.fieldNotes.replace(" NOTE 1:\n","").replace(/\n/g," ").split(/ NOTE [0-9]+: /);
+
+    var regex = /^ NOTE 1:\n/;
+//    field.validEntryNotes = regex.exec(field.validEntryNotes);
+//    field.validEntryNotes = field.validEntryNotes.replace(/\n/g," ").split(/ NOTE [0-9]+: /);
+    field.validEntryNotes = field.validEntryNotes.replace(regex,"").replace(/\n/g," ").split(/ NOTE [0-9]+: /);
+//    field.fieldNotes = field.fieldNotes.replace(/\n/g," ").split(/ NOTE [0-9]: /);
 }
 
 function writeOutput(prevFieldNumber) {

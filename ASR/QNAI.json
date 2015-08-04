@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Quantity Network Assignment Information",
@@ -9,10 +9,18 @@
     "fieldLength": "2",
     "characteristics": "Numeric",
     "usage": "Conditional",
-    "example": "0 6",
-    "definition": "Identifies the total number of NAI Circuit Detail Sections sent\nby the customer. ",
+    "example": [
+        "06"
+    ],
+    "definition": "Identifies the total number of NAI Circuit Detail Sections sent by the customer.",
     "validEntry": "",
-    "validEntryNotes": "",
-    "usageNotes": "Required when the third position of the AFO field is\n“Y”, otherwise prohibited. ",
-    "fieldNotes": ""
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the third position of the AFO field is “Y”, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        ""
+    ]
 }

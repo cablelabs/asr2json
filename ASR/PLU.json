@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Percentage of Local Usage",
@@ -9,10 +9,20 @@
     "fieldLength": "3",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": "0 30",
-    "definition": "Identifies the percent of local usage associated with trunk\ngroups carrying local traffic between a LEC and a CLEC. ",
-    "validEntry": "000 to 100 \nLOF = Letter on File ",
-    "validEntryNotes": "",
-    "usageNotes": "Required when the CC field is populated and the\nfirst position of the REQTYP field is “M” and the\nACT field is “N”, “C” or “R”. \nNOTE 2:\nOptional when the CC field is populated and the\nfirst position of the REQTYP field is “S” or “L” and\nthe ACT field is “N”, “C”, “M”, “T” or “R”. \nNOTE 3:\nOtherwise prohibited. ",
-    "fieldNotes": ""
+    "example": [
+        "030"
+    ],
+    "definition": "Identifies the percent of local usage associated with trunk groups carrying local traffic between a LEC and a CLEC.",
+    "validEntry": "000 to 100\nLOF = Letter on File",
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the CC field is populated and the first position of the REQTYP field is “M” and the ACT field is “N”, “C” or “R”.",
+        "Optional when the CC field is populated and the first position of the REQTYP field is “S” or “L” and the ACT field is “N”, “C”, “M”, “T” or “R”.",
+        "Otherwise prohibited."
+    ],
+    "fieldNotes": [
+        ""
+    ]
 }

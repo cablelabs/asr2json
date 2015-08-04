@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Expedite",
@@ -9,10 +9,20 @@
     "fieldLength": "1",
     "characteristics": "Alpha",
     "usage": "Conditional",
-    "example": "Y ",
-    "definition": "Indicates that expedited treatment is requested and any charges\ngenerated in provisioning this request (e.g., additional\nengineering charges or labor charges if applicable) will be\naccepted.  ",
-    "validEntry": "Y = Expedite Charges Authorized ",
-    "validEntryNotes": "",
-    "usageNotes": "Required when desired due date is less than the\nstandard interval for the provisioning of the service\nand the ACT field is not “D”. \nNOTE 2:\nProhibited when the ACT field is “D”, except\noutward WATS service. \nNOTE 3:\nOtherwise optional. ",
-    "fieldNotes": ""
+    "example": [
+        "Y"
+    ],
+    "definition": "Indicates that expedited treatment is requested and any charges generated in provisioning this request (e.g., additional engineering charges or labor charges if applicable) will be accepted.",
+    "validEntry": "Y = Expedite Charges Authorized",
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when desired due date is less than the standard interval for the provisioning of the service and the ACT field is not “D”.",
+        "Prohibited when the ACT field is “D”, except outward WATS service.",
+        "Otherwise optional."
+    ],
+    "fieldNotes": [
+        ""
+    ]
 }

@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Unit Identification",
@@ -9,10 +9,20 @@
     "fieldLength": "1",
     "characteristics": "Alpha",
     "usage": "Conditional",
-    "example": "B ",
-    "definition": "Identifies whether the Quantity (QTY) field contains number of\ncircuits, ring segments, Busy Hour Minutes of Capacity (BHMC)\nfor switched access service or percent of market share. ",
-    "validEntry": "B = Number of BHMC \nC = Number of lines, trunks, facilities, circuits, CCS links,\nring segments or unbundled elements. \nP = Percent market share ",
-    "validEntryNotes": "Percent of market share is an option for the ordering\nof initial Feature Group D.   The percent of market\nshare figure is specified by the customer.  The\nprovider converts this figure into the number of\ntrunks required for service.  The customer may \nspecify this figure only when an end office is\nscheduled for equal access conversion. ",
-    "usageNotes": "Otherwise optional. ",
-    "fieldNotes": ""
+    "example": [
+        "B"
+    ],
+    "definition": "Identifies whether the Quantity (QTY) field contains number of circuits, ring segments, Busy Hour Minutes of Capacity (BHMC) for switched access service or percent of market share.",
+    "validEntry": "B = Number of BHMC\nC = Number of lines, trunks, facilities, circuits, CCS links,\nring segments or unbundled elements.\nP = Percent market share",
+    "validEntryNotes": [
+        "Percent of market share is an option for the ordering of initial Feature Group D.   The percent of market share figure is specified by the customer.  The provider converts this figure into the number of trunks required for service.  The customer may specify this figure only when an end office is scheduled for equal access conversion. "
+    ],
+    "usageNotes": [
+        "Required when the first position of the REQTYP field is “M”, the ACT field is “N”, “C” or “D”, the second position of the TQ field is not “N” or “X” and the EOD USE field on the EOD Form is not “A”.",
+        "Required when the first position of the REQTYP field is “A” or “L” and the ACT field is “N”, “C” or “D”.",
+        "Prohibited when the second position of the TQ field is “N” or “X” or the EOD USE field on the EOD Form is “A”.NOTE 4: Otherwise optional."
+    ],
+    "fieldNotes": [
+        ""
+    ]
 }

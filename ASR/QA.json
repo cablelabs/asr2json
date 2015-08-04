@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Quote Authorized",
@@ -9,10 +9,18 @@
     "fieldLength": "1",
     "characteristics": "Alpha",
     "usage": "Conditional",
-    "example": "Y ",
-    "definition": "Indicates that a quotation charge for special construction is\nauthorized. ",
-    "validEntry": "Y = Quotation Authorized ",
-    "validEntryNotes": "",
-    "usageNotes": "Optional when ACT field is “N”, “C” or “T”,\notherwise prohibited. ",
-    "fieldNotes": ""
+    "example": [
+        "Y"
+    ],
+    "definition": "Indicates that a quotation charge for special construction is authorized.",
+    "validEntry": "Y = Quotation Authorized",
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Optional when ACT field is “N”, “C” or “T”, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        ""
+    ]
 }

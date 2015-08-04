@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "CONTACT",
     "name": "Design Routing Code",
@@ -9,10 +9,22 @@
     "fieldLength": "3",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": "A N3",
-    "definition": "Identifies the customer location routing code for the design\ncontact for this request.  ",
+    "example": [
+        "AN3"
+    ],
+    "definition": "Identifies the customer location routing code for the design contact for this request.",
     "validEntry": "",
-    "validEntryNotes": "",
-    "usageNotes": "Required when the ACT field is “N”, “C” or “T”, the\nRTR field is “S” or “1-10”, and the STREET \n(DSGCON) field is not populated or the DSGCON\nFAX NO field is not populated.   \nNOTE 2:\nProhibited when the first position of the RTR field is\n“F”. \nNOTE 3:\nOtherwise optional. ",
-    "fieldNotes": "The routing code represents the following\ninformation: \nCompany \nStreet \nFloor \nRoom \nCity \nState/Province \nZIP Code \nNOTE 2:\nWhen populated, this will be the first choice for\nrouting the DLR. \nNOTE 3:\nValid DRC codes are outlined in Telcordia\nTechnologies’ practice BR-751-100-465. "
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the ACT field is “N”, “C” or “T”, the RTR field is “S” or “1-10”, and the STREET (DSGCON) field is not populated or the DSGCON FAX NO field is not populated.",
+        "Prohibited when the first position of the RTR field is “F”.",
+        "Otherwise optional."
+    ],
+    "fieldNotes": [
+        "The routing code represents the following information: Company Street Floor Room City State/Province ZIP Code",
+        "When populated, this will be the first choice for routing the DLR.",
+        "Valid DRC codes are outlined in Telcordia Technologies’ practice BR-751-100-465."
+    ]
 }

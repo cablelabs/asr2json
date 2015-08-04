@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Jointly Provided Ring",
@@ -9,10 +9,22 @@
     "fieldLength": "8",
     "characteristics": "Numeric",
     "usage": "Conditional",
-    "example": " C H C  G ILWB\nL SAN C A01H21",
-    "definition": "Indicates one of the Central Office nodes of the other provider\non a jointly provided ring when the facility is immediately riding\na protected ring. ",
-    "validEntry": "Central Office CLLI Code of the other provider on the ring ",
-    "validEntryNotes": "",
-    "usageNotes": "Optional when the first position of the REQTYP\nfield is “S”, and the CFA or SCFA field on the\nTransport form or ACI form, or any of the ICFA (n)\nfields on the NAI form contains a CFA of a jointly\nprovided ring.  \nNOTE 2:\nOptional when the first position of the REQTYP\nfield is “E”, and the CFA (PRILOC) or CFA\n(SECLOC) field on the EUSA Form, or the CFA or\nSCFA on theACI form, or any of the ICFA(n) fields\non the NAI form contains a CFA of a jointly\nprovided ring.  \nNOTE 3:\nOtherwise prohibited.  ",
-    "fieldNotes": "A ring can consist of multiple node locations that\nare not included in the ring CFA of a riding circuit,\nbut are pass-through locations with another\nprovider on the ring who requires a copy of the ASR\nfor cross connection. \nNOTE 2:\nAll services riding a Jointly Provided Ring require\nall providers on the ring to receive a copy of the\nASR, even if the locations on the Ring CFA of the\nriding circuit do not indicate another provider. "
+    "example": [
+        "CHCGILWB",
+        "LSANCA01H21"
+    ],
+    "definition": "Indicates one of the Central Office nodes of the other provider on a jointly provided ring when the facility is immediately riding a protected ring.",
+    "validEntry": "Central Office CLLI Code of the other provider on the ring",
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Optional when the first position of the REQTYP field is “S”, and the CFA or SCFA field on the Transport form or ACI form, or any of the ICFA (n) fields on the NAI form contains a CFA of a jointly provided ring.",
+        "Optional when the first position of the REQTYP field is “E”, and the CFA (PRILOC) or CFA (SECLOC) field on the EUSA Form, or the CFA or SCFA on theACI form, or any of the ICFA(n) fields on the NAI form contains a CFA of a jointly provided ring.",
+        "Otherwise prohibited."
+    ],
+    "fieldNotes": [
+        "A ring can consist of multiple node locations that are not included in the ring CFA of a riding circuit, but are pass-through locations with another provider on the ring who requires a copy of the ASR for cross connection.",
+        "All services riding a Jointly Provided Ring require all providers on the ring to receive a copy of the ASR, even if the locations on the Ring CFA of the riding circuit do not indicate another provider."
+    ]
 }

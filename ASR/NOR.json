@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Number of Requests",
@@ -9,10 +9,19 @@
     "fieldLength": "4",
     "characteristics": "Numeric",
     "usage": "Conditional",
-    "example": " 1of6",
-    "definition": "Identifies both specific ASR and total quantity of Access Service\nRequests within a group of ASRs being ordered. ",
+    "example": [
+        "1of6"
+    ],
+    "definition": "Identifies both specific ASR and total quantity of Access Service Requests within a group of ASRs being ordered.",
     "validEntry": "",
-    "validEntryNotes": "",
-    "usageNotes": "Required when the TQ field is populated and a total\nof two or more ASRs are associated with the\ntranslation questionnaire, otherwise optional. ",
-    "fieldNotes": "In order to facilitate the process, at least the first\nrelated ASR should describe or list the total RPONs\nused when RPON is not the same for all such\nrequests. For example, six ASRs are to be\nassociated and individual PONs and RPONs are\nbeing used. \nNOTE 2:\nAll service types must be identical for such\ngrouping of like orders.  "
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the TQ field is populated and a total of two or more ASRs are associated with the translation questionnaire, otherwise optional."
+    ],
+    "fieldNotes": [
+        "In order to facilitate the process, at least the first related ASR should describe or list the total RPONs used when RPON is not the same for all such requests. For example, six ASRs are to be associated and individual PONs and RPONs are being used.",
+        "All service types must be identical for such grouping of like orders."
+    ]
 }

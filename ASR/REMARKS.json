@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "BILL",
     "name": "Remarks",
@@ -9,10 +9,19 @@
     "fieldLength": "186",
     "characteristics": "AlphaNumeric",
     "usage": "Optional",
-    "example": "DIS C OFFIRST C I R CUI\nT IN G ROUP",
-    "definition": "Identifies a free flowing field, which can be used to expand upon\nand clarify other data on this form. ",
+    "example": [
+        "DISCOFFIRSTCIRCUI",
+        "TINGROUP"
+    ],
+    "definition": "Identifies a free flowing field, which can be used to expand upon and clarify other data on this form.",
     "validEntry": "",
-    "validEntryNotes": "",
-    "usageNotes": "",
-    "fieldNotes": ""
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        ""
+    ]
 }

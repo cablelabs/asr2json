@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Interconnection Screening Telephone Number",
@@ -9,10 +9,18 @@
     "fieldLength": "10",
     "characteristics": "Numeric",
     "usage": "Conditional",
-    "example": "3 14-837-1234",
-    "definition": "Identifies the telephone number used for billing or translation\npurposes. ",
-    "validEntry": "Telephone number format \nNPA-NXX-XXXX ",
-    "validEntryNotes": "This telephone number would be customer owned\nand identified during customer/provider pre-\nnegotiations. ",
-    "usageNotes": "Prohibited when the ACT field is “D”, otherwise\noptional. ",
-    "fieldNotes": ""
+    "example": [
+        "314-837-1234"
+    ],
+    "definition": "Identifies the telephone number used for billing or translation purposes.",
+    "validEntry": "Telephone number format\nNPA-NXX-XXXX",
+    "validEntryNotes": [
+        "This telephone number would be customer owned and identified during customer/provider pre- negotiations. "
+    ],
+    "usageNotes": [
+        "Prohibited when the ACT field is “D”, otherwise optional."
+    ],
+    "fieldNotes": [
+        ""
+    ]
 }

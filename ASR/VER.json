@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Version Identification",
@@ -9,10 +9,19 @@
     "fieldLength": "2",
     "characteristics": "AlphaNumeric",
     "usage": "Required",
-    "example": "A ",
-    "definition": "Identifies the customer’s version number.  ",
+    "example": [
+        "A"
+    ],
+    "definition": "Identifies the customer’s version number.",
     "validEntry": "",
-    "validEntryNotes": "",
-    "usageNotes": "",
-    "fieldNotes": "Any reissuance can use this entry to uniquely\nidentify the form from any other version. \nNOTE 2:\nThe version identification does not have to agree\nwith the provider order supplement identification.\nThe customer’s order may have been supplemented\ninternally many times after the ASR has been\nissued. "
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        "Any reissuance can use this entry to uniquely identify the form from any other version.",
+        "The version identification does not have to agree with the provider order supplement identification. The customer’s order may have been supplemented internally many times after the ASR has been issued."
+    ]
 }

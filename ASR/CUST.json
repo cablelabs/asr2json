@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Customer Name",
@@ -9,10 +9,19 @@
     "fieldLength": "25",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": "J OHNJ.SMITH\n CORP.",
-    "definition": "Identifies the name of the customer who originated this request\nwhen that customer will only have a limited amount of\nexchange access and has not been assigned a CCNA (Customer\nCarrier Name Abbreviation).  ",
+    "example": [
+        "JOHNJ.SMITH",
+        "CORP."
+    ],
+    "definition": "Identifies the name of the customer who originated this request when that customer will only have a limited amount of exchange access and has not been assigned a CCNA (Customer Carrier Name Abbreviation).",
     "validEntry": "",
-    "validEntryNotes": "",
-    "usageNotes": "Required when the CCNA field is “CUS”, otherwise\noptional.  ",
-    "fieldNotes": "The initiator of this request will be contacted to\nsupply customer location information and technical\nspecifications. "
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the CCNA field is “CUS”, otherwise optional."
+    ],
+    "fieldNotes": [
+        "The initiator of this request will be contacted to supply customer location information and technical specifications."
+    ]
 }

@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "BILL",
     "name": "Inside Wire Billing Account Number",
@@ -9,10 +9,20 @@
     "fieldLength": "16",
     "characteristics": "Numeric",
     "usage": "Conditional",
-    "example": "NXYZ12345A C X214 3 ",
-    "definition": "Identifies the previously assigned Billing Account Number for\ncharges associated with inside wire. ",
-    "validEntry": "Billing Account Number ",
-    "validEntryNotes": "",
-    "usageNotes": "Required when the GETO field on the service\nspecific form is “A”, “E”, “S”, “T”, “U”, “V”, “W”, “Y”,\nor “Z”. \nNOTE 2:\nProhibited when the ACT field is “D”. \nNOTE 3:\nOtherwise optional. ",
-    "fieldNotes": ""
+    "example": [
+        "NXYZ12345ACX2143"
+    ],
+    "definition": "Identifies the previously assigned Billing Account Number for charges associated with inside wire.",
+    "validEntry": "Billing Account Number",
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the GETO field on the service specific form is “A”, “E”, “S”, “T”, “U”, “V”, “W”, “Y”, or “Z”.",
+        "Prohibited when the ACT field is “D”.",
+        "Otherwise optional."
+    ],
+    "fieldNotes": [
+        ""
+    ]
 }

@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "BILL",
     "name": "Billing Name",
@@ -9,10 +9,22 @@
     "fieldLength": "25",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": "X YZ C ORPORATI\nON",
-    "definition": "Identifies the name of the person, office, or company to whom\nthe customer has designated that the bill be sent.  ",
+    "example": [
+        "XYZCORPORATI",
+        "ON"
+    ],
+    "definition": "Identifies the name of the person, office, or company to whom the customer has designated that the bill be sent.",
     "validEntry": "",
-    "validEntryNotes": "",
-    "usageNotes": "Required when the BAN field is “N”. \nNOTE 2:\nRequired when the CCNA field is “CUS”. \nNOTE 3:\nRequired when the ACNA field is “ZZZ”. \nNOTE 4:\nOtherwise optional. ",
-    "fieldNotes": ""
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the BAN field is “N”.",
+        "Required when the CCNA field is “CUS”.",
+        "Required when the ACNA field is “ZZZ”.",
+        "Otherwise optional."
+    ],
+    "fieldNotes": [
+        ""
+    ]
 }

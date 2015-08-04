@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "BILL",
     "name": "Tax Exemption",
@@ -9,10 +9,18 @@
     "fieldLength": "1",
     "characteristics": "Alpha",
     "usage": "Conditional",
-    "example": "B ",
-    "definition": "Indicates that the customer has submitted a tax exemption\nform to the provider. ",
-    "validEntry": "Entry = Exempt From \nA = F & S \nB = F & C \nC = County or Local \nD = F & S & C \nE = F & S & M \nF = Federal \nG = F & S & C & M \nH = S & C \nI = S & M \nJ = C & M \nK = F & M \nL = Letter on File \nM = Municipal \nN = Non Exempt \nP = S & C & M \nS = State/Province ",
-    "validEntryNotes": "",
-    "usageNotes": "Required when the ACT field is “N” and the BAN\nfield is “N”, otherwise optional. ",
-    "fieldNotes": ""
+    "example": [
+        "B"
+    ],
+    "definition": "Indicates that the customer has submitted a tax exemption form to the provider.",
+    "validEntry": "Entry = Exempt From\nA = F & S\nB = F & C\nC = County or Local\nD = F & S & C\nE = F & S & M\nF = Federal\nG = F & S & C & M\nH = S & C\nI = S & M\nJ = C & M\nK = F & M\nL = Letter on File\nM = Municipal\nN = Non Exempt\nP = S & C & M\nS = State/Province",
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the ACT field is “N” and the BAN field is “N”, otherwise optional."
+    ],
+    "fieldNotes": [
+        ""
+    ]
 }

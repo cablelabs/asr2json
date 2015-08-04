@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-03T20:17:02.996Z",
+    "processed": "2015-08-04T17:08:46.829Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Case Number",
@@ -9,10 +9,18 @@
     "fieldLength": "12",
     "characteristics": "AlphaNumeric",
     "usage": "Optional",
-    "example": "BS061196-002",
-    "definition": "Identifies the quotation tracking number assigned by the\nprovider in response to a provisioning arrangement inquiry, e.g.,\ndiversity. ",
+    "example": [
+        "BS061196-002"
+    ],
+    "definition": "Identifies the quotation tracking number assigned by the provider in response to a provisioning arrangement inquiry, e.g., diversity.",
     "validEntry": "",
-    "validEntryNotes": "",
-    "usageNotes": "",
-    "fieldNotes": ""
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        ""
+    ]
 }
