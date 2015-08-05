@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-05T18:35:45.713Z",
+    "processed": "2015-08-05T20:29:36.061Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Exchange Company Circuit ID",
@@ -10,7 +10,25 @@
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
     "example": [
-        "101/T1/NYCMNY50/NYCMNY54W01"
+        "A2/SBFS/201/981/3500//123",
+        "A2/LBFS/032719/001/NY",
+        "2.COMMONLANGUAGEMessageTrunkCircuitCodes",
+        "(CLCIMSGCodes)asdefinedbyANSIinATIS-0300097:",
+        "StructurefortheIdentificationofTelecommunications",
+        "ConnectionsfortheNorthAmericanTelecommunications",
+        "SystemorbyCOMMONLANGUAGEinBR-795-400-100.",
+        "AbriefsummaryoftheformatcanbefoundinASOG",
+        "Practice000,Section2.14.2.1234/AF54IECN/MDSNWI16CG0/M-",
+        "/DSNWI020IT",
+        "/DF55IE/BSTNMAAACG0/M-",
+        "/MCDNMACOCG1",
+        "3.COMMONLANGUAGEFacilityCodes(CLFICodes)as",
+        "definedbyANSIATIS-0300097:Structureforthe",
+        "IdentificationofTelecommunicationsConnectionsforthe",
+        "NorthAmericanTelecommunicationsSystemorby",
+        "COMMONLANGUAGEinBR-795-450-100.Abrief",
+        "summaryoftheformatcanbefoundinASOGPractice",
+        "000,Section2.14.5.101/T1/NYCMNY50/NYCMNY54W01"
     ],
     "definition": "Identifies the provider circuit ID or multiple circuit IDs.",
     "validEntry": [

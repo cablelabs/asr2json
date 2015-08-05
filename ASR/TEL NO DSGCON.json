@@ -1,0 +1,26 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-05T20:29:36.061Z",
+    "form": "ASR",
+    "section": "CONTACT",
+    "name": "Telephone Number (DSGCON)",
+    "title": "TEL NO",
+    "fieldNumber": "106",
+    "fieldLength": "17",
+    "characteristics": "Numeric",
+    "usage": "Conditional",
+    "example": [
+        "201-981-3500-3587"
+    ],
+    "definition": "Identifies the telephone number of the design/engineering contact.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the DSGCON field is populated, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        ""
+    ]
+}

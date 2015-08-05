@@ -1,7 +1,7 @@
 var jsonConsolidator = require("./jsonConsolidator");
 jsonConsolidator.jsonConsol();
 var fs = require('fs');
-
+var hashMap = {};
 var formNumber = "3";
 var field = {"asogVersion": "", "processed": "", "form": "", "section": "", "name": "", "title": "", "fieldNumber": "", "fieldLength": "", "characteristics": "", "usage": "", "example": "", "definition": "", "validEntry": "", "validEntryNotes": "", "usageNotes": "", "fieldNotes": ""};
 
@@ -16,6 +16,20 @@ fs.readFile("textalone", "utf8", function (error, contents) {
         console.log(error);
     }
     contents = contents.toString().split("\n");
+    for ( i=0; i < contents.length; i++) {
+        line = contents[i];
+        var regex = /^[0-9]+\./;
+        if ( regex.exec(line) && (line.indexOf("-")>-1 || line.indexOf("–")>-1) && line.indexOf("continued") == -1) {
+            getFieldNameandTitle(line);
+            if( hashMap[field.title] == undefined ) {
+                hashMap[field.title] = 1;
+            }
+            else {
+                hashMap[field.title] = hashMap[field.title] + 1;
+            }
+        }
+    }
+    cleanFieldProperties();
 
     for ( i=0; i < contents.length; i++) {
         line = contents[i];
@@ -41,6 +55,28 @@ fs.readFile("textalone", "utf8", function (error, contents) {
         if ( i>=contents.length ) {
     //        console.log("contents.length = " + contents.length );
     //        console.log("i= " + i);
+        }
+    }
+
+    function getFieldNameandTitle(line) {
+        if ( line.split("-").length == 2 || line.split("–").length == 2) {
+            var re1 = new RegExp( "[0-9]+\.(.*)[\-\–](.*)", "g" );
+            var result = re1.exec(line);
+            field.title = result[1].trim();
+            field.name = result[2].trim();
+        }
+        else if ( line.match(/^[0-9]+\.[A-Z]+[\-\–]/)) {
+            var re1 = new RegExp( "[0-9]+\.([A-Z\-\–]+)([A-Z][a-z].*)", "g" );
+            var result1 = re1.exec(line);
+            field.title = result1[1].replace(/[\-\–]$/,"").trim();
+            field.name = result1[2].trim();
+
+        }
+        else {
+            var re1 = new RegExp( "[0-9]+\.([ A-Z/\-\–]+?)[\-\–][ ]([A-Z][a-z].*)", "g" );
+            var result = re1.exec(line);
+            field.title = result[1].trim();
+            field.name = result[2].trim();
         }
     }
 
@@ -70,24 +106,9 @@ fs.readFile("textalone", "utf8", function (error, contents) {
         if( line.indexOf("continued") == -1) {
             field.fieldNumber = currentFieldNumber;
             // TITLE AND NAME
-            if ( line.split("-").length == 2 || line.split("–").length == 2) {
-                var re1 = new RegExp( "[0-9]+\.(.*)[\-\–](.*)", "g" );
-                var result = re1.exec(line);
-                field.title = result[1].trim();
-                field.name = result[2].trim();
-            }
-            else if ( line.match(/^[0-9]+\.[A-Z]+[\-\–]/)) {
-                var re1 = new RegExp( "[0-9]+\.([A-Z\-\–]+)([A-Z][a-z].*)", "g" );
-                var result1 = re1.exec(line);
-                field.title = result1[1].replace(/[\-\–]$/,"").trim();
-                field.name = result1[2].trim();
-            }
-            else {
-                var re1 = new RegExp( "[0-9]+\.([ A-Z/\-\–]+?)[\-\–][ ]([A-Z][a-z].*)", "g" );
-                var result = re1.exec(line);
-                field.title = result[1].trim();
-                field.name = result[2].trim();
-            }
+
+
+            getFieldNameandTitle(line);
     //        console.log("Title= " + field.title);
     //        console.log("Name= " + field.name);
             field.breakValue = "DEFINITION";
@@ -132,10 +153,14 @@ fs.readFile("textalone", "utf8", function (error, contents) {
     //                console.log("Characteristics= " + field.characteristics);
                     break;
                 case "EXAMPLE" || "EXAMPLES":
-                    field.example = getFieldInfo().trim();
+                    field.example = field.example + getFieldInfo().trim();
     //                console.log("EXAMPLE= " + field.example);
                     break;
             }
+        }
+        if ( i+1 >= contents.length ) {
+            filterDefinitions();
+            writeOutput(field.fieldNumber);
         }
     }
 
@@ -238,18 +263,15 @@ fs.readFile("textalone", "utf8", function (error, contents) {
         }
         outputFileName =  field.form + "/" + field.title.replace("/","") + ".json";
 
-    //    console.log("outputFileName = " + outputFileName);
-    //    if (fs.existsSync(outputFileName)) {
-    //        console.log('Found file');
-    ////        outputFileName =  field.form + "/" + (field.name.replace(" ", "")).replace("/","") + ".json";
-    //    }
+        if(hashMap[field.title] > 1) {
+            outputFileName = field.form + "/" + field.title.replace("/","") + " " + field.name.split("(")[1].split(")")[0] + ".json";
+        }
 
         fs.writeFile(outputFileName, JSON.stringify(field, replacer, 4), function(err) {
             if (err) {
                 return console.log(err);
             }
-        })
-    //    console.log("");
+        });
     }
 
     function replacer(key, value) {

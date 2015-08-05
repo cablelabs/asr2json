@@ -1,0 +1,28 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-05T20:29:36.061Z",
+    "form": "ASR",
+    "section": "BILL",
+    "name": "Floor (BILL)",
+    "title": "FLOOR",
+    "fieldNumber": "88",
+    "fieldLength": "3",
+    "characteristics": "AlphaNumeric",
+    "usage": "Optional",
+    "example": [
+        "33Thisexampleillustratesanumericvaluebutisleft",
+        "justifiedsinceitistreatedastext.",
+        "1MZ"
+    ],
+    "definition": "Identifies the floor for the billing address associated with the billing name.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        ""
+    ]
+}

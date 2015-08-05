@@ -1,0 +1,26 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-05T20:29:36.061Z",
+    "form": "ASR",
+    "section": "CONTACT",
+    "name": "Telephone Number (INIT)",
+    "title": "TEL NO",
+    "fieldNumber": "102",
+    "fieldLength": "17",
+    "characteristics": "Numeric",
+    "usage": "Required",
+    "example": [
+        "201-981-3500-2262262"
+    ],
+    "definition": "Identifies the telephone number of the customer employee who initiated this request.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        ""
+    ]
+}

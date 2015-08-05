@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-05T18:35:45.713Z",
+    "processed": "2015-08-05T20:29:36.061Z",
     "form": "ASR",
     "section": "BILL",
     "name": "Variable Term Agreement",
@@ -10,7 +10,10 @@
     "characteristics": "AlphaNumeric",
     "usage": "Optional",
     "example": [
-        "Thisexampleillustratesanumericvaluebutisleft",
+        "36Thisexampleillustratesanumericvaluebutisleft",
+        "justifiedsinceitistreatedastext.",
+        "VTPPP",
+        "082089Thisexampleillustratesanumericvaluebutisleft",
         "justifiedsinceitistreatedastext.",
         "C12345",
         "361091489BLKH0001"

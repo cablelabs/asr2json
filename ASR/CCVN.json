@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-05T18:35:45.713Z",
+    "processed": "2015-08-05T20:29:36.061Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Coordinated Conversion",
@@ -10,7 +10,9 @@
     "characteristics": "Alpha",
     "usage": "Conditional",
     "example": [
-        "TheaboveexampleindicatesthattheACNAand",
+        "ABCTheaboveexampleindicatesthattheACNAand",
+        "CCNAarethesame.",
+        "ABCXYZTheaboveexampleindicatesthattheACNAand",
         "CCNAaredifferent."
     ],
     "definition": "Identifies the request as being a coordinated conversion reusing a portion of an existing access service configuration for the provisioning of a new access service.",
