@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T21:34:01.001Z",
+    "processed": "2015-08-05T17:22:29.828Z",
     "form": "ASR",
     "section": "CONTACT",
     "name": "Street Address (DSGCON)",
@@ -14,12 +14,7 @@
         "REET"
     ],
     "definition": "Identifies the street address for the design/engineering contact.",
-    "validEntry": [
-        {
-            "value": "",
-            "description": ""
-        }
-    ],
+    "validEntry": [],
     "validEntryNotes": [
         ""
     ],

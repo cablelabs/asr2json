@@ -1,10 +1,10 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T21:34:01.001Z",
+    "processed": "2015-08-05T17:22:29.828Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
-    "name": "dentification",
-    "title": "RFNI – Related Fiber Network",
+    "name": "Related Fiber Network Identification",
+    "title": "RFNI",
     "fieldNumber": "50",
     "fieldLength": "13",
     "characteristics": "AlphaNumeric",

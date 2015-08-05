@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T21:34:01.001Z",
+    "processed": "2015-08-05T17:22:29.828Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Local Access Transport Area",
@@ -13,12 +13,7 @@
         "438"
     ],
     "definition": "Identifies the geographical area for the service being provided.",
-    "validEntry": [
-        {
-            "value": "",
-            "description": ""
-        }
-    ],
+    "validEntry": [],
     "validEntryNotes": [
         ""
     ],

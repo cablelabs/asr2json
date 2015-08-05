@@ -1,10 +1,10 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T21:34:01.001Z",
+    "processed": "2015-08-05T17:22:29.828Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
-    "name": "umber",
-    "title": "SRN – Service Reservation",
+    "name": "Service Reservation Number",
+    "title": "SRN",
     "fieldNumber": "29",
     "fieldLength": "15",
     "characteristics": "AlphaNumeric",
@@ -14,12 +14,7 @@
         "01LZCH-01"
     ],
     "definition": "Identifies the Service Reservation Number assigned by the provider in response to a request to reserve facilities.",
-    "validEntry": [
-        {
-            "value": "",
-            "description": ""
-        }
-    ],
+    "validEntry": [],
     "validEntryNotes": [
         ""
     ],

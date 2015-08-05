@@ -33,18 +33,22 @@ for ( i=0; i < contents.length; i++) {
     if ( regex.exec(line) && (line.indexOf("-")>-1 || line.indexOf("–")>-1)) {
         getField(line);
     }
+    if ( i>=contents.length ) {
+//        console.log("contents.length = " + contents.length );
+//        console.log("i= " + i);
+    }
 }
 
 function getForm() {
     field.form = line.split("(");
     field.form = (field.form[1].split(")"))[0];
-    console.log("FORM= " + field.form);
+//    console.log("FORM= " + field.form);
 }
 
 function getSection() {
     field.section = String(line.match(/[a-zA-Z ]+$/));
     field.section = (field.section.split(" SECTION"))[0];
-    console.log("Section= " + field.section);
+//    console.log("Section= " + field.section);
 }
 
 function getField(line) {
@@ -57,19 +61,28 @@ function getField(line) {
         cleanFieldProperties();
         field.fieldNumber = currentFieldNumber;
     }
-    else {
-//        console.log("Same Field");
-//        console.log("Line= " + line);
-    }
 
     if( line.indexOf("continued") == -1) {
         field.fieldNumber = currentFieldNumber;
         // TITLE AND NAME
-        var re1 = new RegExp( "[0-9]+\.([ A-Z/\-\–]+)[^a-z](.+)", "g" );
-        var result = re1.exec(line);
-        field.title = result[1].trim();
-        field.name = result[2].trim();
-        console.log("FieldNumber= " + field.fieldNumber);
+        if ( line.split("-").length == 2 || line.split("–").length == 2) {
+            var re1 = new RegExp( "[0-9]+\.(.*)[\-\–](.*)", "g" );
+            var result = re1.exec(line);
+            field.title = result[1].trim();
+            field.name = result[2].trim();
+        }
+        else if ( line.match(/^[0-9]+\.[A-Z]+[\-\–]/)) {
+            var re1 = new RegExp( "[0-9]+\.([A-Z\-\–]+)([A-Z][a-z].*)", "g" );
+            var result1 = re1.exec(line);
+            field.title = result1[1].replace(/[\-\–]$/,"").trim();
+            field.name = result1[2].trim();
+        }
+        else {
+            var re1 = new RegExp( "[0-9]+\.([ A-Z/\-\–]+?)[\-\–][ ]([A-Z][a-z].*)", "g" );
+            var result = re1.exec(line);
+            field.title = result[1].trim();
+            field.name = result[2].trim();
+        }
 //        console.log("Title= " + field.title);
 //        console.log("Name= " + field.name);
         field.breakValue = "DEFINITION";
@@ -92,7 +105,7 @@ function getField(line) {
                 break;
             case "VALID ENTRIES":
                 field.validEntry = field.validEntry + getFieldInfo();
-                console.log("VALID ENTRIES= " + field.validEntry);
+//                console.log("VALID ENTRIES= " + field.validEntry);
                 break;
             case "VALID ENTRY NOTES":
                 field.validEntryNotes = field.validEntryNotes + getFieldInfo();
@@ -129,7 +142,6 @@ function getFieldInfo() {
     }
     while ( i+1 != contents.length && !pageNumberRegex.exec(contents[i+1])) {
         line = contents[++i].trim() + "\n";
-        console.log("line after= " + line);
 
         // Check if keyword is present
         if( checkKeyWord(line) == 1 ) {
@@ -138,11 +150,8 @@ function getFieldInfo() {
 
         // Checking if valid entries are present after valid entry notes
         var validEntriesRegex = /^[A-Z0-9 ]+=.*/;
-//        console.log("breakValue= " + field.breakValue);
         if ( line.match(validEntriesRegex) && field.breakValue == "VALID ENTRY NOTES" ) {
             i--;
-            console.log("line= " + line);
-//            console.log("fieldInfo= " + fieldInfo);
             field.breakValue = "VALID ENTRIES";
             return fieldInfo;
         }
@@ -196,9 +205,12 @@ function filterDefinitions() {
     }
     else {
         var validEntries = field.validEntry;
-        field.validEntry = [];
-        var count = 0;
+        if ( validEntries.length == 0 ) { // NO VALID ENTRIES PRESENT
+            field.validEntry = [];
+            return;
+        }
 
+        field.validEntry = [];
         validEntries = validEntries.split("\n");
         for( var index=0; index<validEntries.length; index++ ) {
             field.validEntry[index] = {};
@@ -221,9 +233,10 @@ function writeOutput(prevFieldNumber) {
     }
     outputFileName =  field.form + "/" + field.title.replace("/","") + ".json";
 
+//    console.log("outputFileName = " + outputFileName);
 //    if (fs.existsSync(outputFileName)) {
 //        console.log('Found file');
-//        outputFileName =  field.form + "/" + (field.name.replace(" ", "")).replace("/","") + ".json";
+////        outputFileName =  field.form + "/" + (field.name.replace(" ", "")).replace("/","") + ".json";
 //    }
 
     fs.writeFile(outputFileName, JSON.stringify(field, replacer, 4), function(err) {
@@ -231,7 +244,7 @@ function writeOutput(prevFieldNumber) {
             return console.log(err);
         }
     })
-    console.log("");
+//    console.log("");
 }
 
 function replacer(key, value) {

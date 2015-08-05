@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T21:34:01.001Z",
+    "processed": "2015-08-05T17:22:29.828Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Customer Fiber Network ID",
@@ -13,12 +13,7 @@
         "12345678B"
     ],
     "definition": "Identifies the customer’s circuit identification code for the ring being requested.",
-    "validEntry": [
-        {
-            "value": "",
-            "description": ""
-        }
-    ],
+    "validEntry": [],
     "validEntryNotes": [
         ""
     ],

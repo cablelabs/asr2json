@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T21:34:01.001Z",
+    "processed": "2015-08-05T17:22:29.828Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Purchase Order Number",
@@ -13,12 +13,7 @@
         "824Z9"
     ],
     "definition": "Identifies the customer's unique purchase order or requisition number that authorizes the issuance of this request or supplement.",
-    "validEntry": [
-        {
-            "value": "",
-            "description": ""
-        }
-    ],
+    "validEntry": [],
     "validEntryNotes": [
         ""
     ],

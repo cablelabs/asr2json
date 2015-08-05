@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T21:34:01.001Z",
+    "processed": "2015-08-05T17:22:29.828Z",
     "form": "ASR",
     "section": "BILL",
     "name": "Secondary Billing Name",
@@ -14,12 +14,7 @@
         "IVABLE"
     ],
     "definition": "Identifies the name of a department or group within the designated BILLNM entry. May also be used to specify the end user customer as identified in field entry “SAN”, Subscriber Authorization Number used by the customer in conjunction with billing its customer.",
-    "validEntry": [
-        {
-            "value": "",
-            "description": ""
-        }
-    ],
+    "validEntry": [],
     "validEntryNotes": [
         ""
     ],

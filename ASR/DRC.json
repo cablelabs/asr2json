@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T21:34:01.001Z",
+    "processed": "2015-08-05T17:22:29.828Z",
     "form": "ASR",
     "section": "CONTACT",
     "name": "Design Routing Code",
@@ -13,12 +13,7 @@
         "AN3"
     ],
     "definition": "Identifies the customer location routing code for the design contact for this request.",
-    "validEntry": [
-        {
-            "value": "",
-            "description": ""
-        }
-    ],
+    "validEntry": [],
     "validEntryNotes": [
         ""
     ],

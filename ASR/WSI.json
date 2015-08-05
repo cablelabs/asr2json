@@ -1,10 +1,10 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-04T21:34:01.001Z",
+    "processed": "2015-08-05T17:22:29.828Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
-    "name": "ndicator",
-    "title": "WSI – Wireless Site",
+    "name": "Wireless Site Indicator",
+    "title": "WSI",
     "fieldNumber": "58",
     "fieldLength": "1",
     "characteristics": "Alpha",
