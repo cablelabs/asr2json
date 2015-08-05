@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T20:45:39.747Z",
+    "processed": "2015-08-05T21:37:54.232Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Percentage of Local Usage",
@@ -14,7 +14,11 @@
     "definition": "  Identifies the percent of local usage associated with trunk groups carrying local traffic between a LEC and a CLEC. ",
     "validEntry": [
         {
-            "value": "000 to 100  LOF",
+            "value": "",
+            "description": "000 to 100 "
+        },
+        {
+            "value": "LOF",
             "description": "Letter on File"
         }
     ],

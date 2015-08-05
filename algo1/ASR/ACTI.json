@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T20:45:39.730Z",
+    "processed": "2015-08-05T21:37:54.217Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Activity Indicator",
@@ -15,7 +15,35 @@
     "validEntry": [
         {
             "value": "A",
-            "description": "Trunk Group Augment without translation changes  B"
+            "description": "Trunk Group Augment without translation changes"
+        },
+        {
+            "value": "B",
+            "description": "Trunk Group Augment with translation changes"
+        },
+        {
+            "value": "C",
+            "description": "New Trunk Group"
+        },
+        {
+            "value": "D",
+            "description": "Partial Trunk Group Disconnect"
+        },
+        {
+            "value": "E",
+            "description": "Full Trunk Group Disconnect and Traffic Re-route"
+        },
+        {
+            "value": "",
+            "description": "(Single service request process) "
+        },
+        {
+            "value": "F",
+            "description": "Full Trunk Group Disconnect and No Traffic to be Re-"
+        },
+        {
+            "value": "",
+            "description": "routed"
         }
     ],
     "validEntryNotes": [

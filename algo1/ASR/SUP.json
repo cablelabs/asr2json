@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T20:45:39.735Z",
+    "processed": "2015-08-05T21:37:54.220Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Supplement Type",
@@ -15,7 +15,11 @@
     "validEntry": [
         {
             "value": "1",
-            "description": "Cancel - Indicates that the pending order is to be canceled in its entirety."
+            "description": "Cancel - Indicates that the pending order is to be"
+        },
+        {
+            "value": "",
+            "description": "canceled in its entirety."
         },
         {
             "value": "2",

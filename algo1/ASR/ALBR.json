@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T20:45:39.742Z",
+    "processed": "2015-08-05T21:37:54.223Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Additional Labor",
@@ -15,7 +15,35 @@
     "validEntry": [
         {
             "value": "1",
-            "description": "Overtime installation  2"
+            "description": "Overtime installation"
+        },
+        {
+            "value": "2",
+            "description": "Testing with other providers"
+        },
+        {
+            "value": "3",
+            "description": "Other labor"
+        },
+        {
+            "value": "4",
+            "description": "Overtime installation and testing with other providers"
+        },
+        {
+            "value": "5",
+            "description": "Overtime and other labor"
+        },
+        {
+            "value": "6",
+            "description": "Testing with other providers and other labor"
+        },
+        {
+            "value": "7",
+            "description": "Overtime installation testing with other providers and"
+        },
+        {
+            "value": "",
+            "description": "other labor"
         }
     ],
     "validEntryNotes": [],

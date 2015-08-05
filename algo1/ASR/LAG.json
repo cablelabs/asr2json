@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T20:45:39.756Z",
+    "processed": "2015-08-05T21:37:54.240Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Link Aggregation Group ",
@@ -15,7 +15,31 @@
     "validEntry": [
         {
             "value": "E",
-            "description": "Existing Link Aggregation group. Activity impacting an existing Link Aggregation group (add or remove members)  N"
+            "description": "Existing Link Aggregation group. Activity impacting an"
+        },
+        {
+            "value": "",
+            "description": "existing Link Aggregation group (add or remove"
+        },
+        {
+            "value": "",
+            "description": "members) "
+        },
+        {
+            "value": "N",
+            "description": "New Link Aggregation group created on this request"
+        },
+        {
+            "value": "",
+            "description": "(The provider will assign a LAG-ID and provide it on the"
+        },
+        {
+            "value": "",
+            "description": "Confirmation Notice) "
+        },
+        {
+            "value": "D",
+            "description": "Disconnect of entire existing Link Aggregation group."
         }
     ],
     "validEntryNotes": [

@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T20:45:39.726Z",
+    "processed": "2015-08-05T21:37:54.213Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Intrastate IntraLATA Usage Percentage",
@@ -14,7 +14,11 @@
     "definition": "  Identifies the percent Intrastate IntraLATA usage for use with IntraLATA competition.  ",
     "validEntry": [
         {
-            "value": "1 to 100  LOF",
+            "value": "",
+            "description": "1 to 100 "
+        },
+        {
+            "value": "LOF",
             "description": "Letter on File"
         }
     ],

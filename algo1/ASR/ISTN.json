@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T20:45:39.752Z",
+    "processed": "2015-08-05T21:37:54.237Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Interconnection Screening Telephone Number",
@@ -15,7 +15,11 @@
     "validEntry": [
         {
             "value": "",
-            "description": "Telephone number format  NPA-NXX-XXXX"
+            "description": "Telephone number format "
+        },
+        {
+            "value": "",
+            "description": "NPA-NXX-XXXX"
         }
     ],
     "validEntryNotes": [

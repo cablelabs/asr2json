@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T20:45:39.741Z",
+    "processed": "2015-08-05T21:37:54.223Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Additional Engineering",
@@ -15,7 +15,27 @@
     "validEntry": [
         {
             "value": "1",
-            "description": "overtime engineering  2"
+            "description": "overtime engineering"
+        },
+        {
+            "value": "2",
+            "description": "engineering connections when more than one provider"
+        },
+        {
+            "value": "",
+            "description": "is providing the access service "
+        },
+        {
+            "value": "3",
+            "description": "overtime engineering and engineering with other"
+        },
+        {
+            "value": "",
+            "description": "providers "
+        },
+        {
+            "value": "4",
+            "description": "other engineering"
         }
     ],
     "validEntryNotes": [],

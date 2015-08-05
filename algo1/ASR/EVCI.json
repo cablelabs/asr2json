@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T20:45:39.732Z",
+    "processed": "2015-08-05T21:37:54.218Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Ethernet Virtual Connection Indicator",
@@ -15,7 +15,11 @@
     "validEntry": [
         {
             "value": "A",
-            "description": "Stand Alone EVC   B"
+            "description": "Stand Alone EVC"
+        },
+        {
+            "value": "B",
+            "description": "Combination EVC"
         }
     ],
     "validEntryNotes": [

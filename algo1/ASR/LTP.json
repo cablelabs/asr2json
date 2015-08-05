@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T20:45:39.748Z",
+    "processed": "2015-08-05T21:37:54.233Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Local Transport",
@@ -14,16 +14,288 @@
     "definition": "  Identifies the switched access local transport elements affected by this request.  ",
     "validEntry": [
         {
-            "value": "1 st  Position (Elements to be ordered by this request)  A",
-            "description": "Entrance Facility (EF)  B"
+            "value": "",
+            "description": "1"
         },
         {
-            "value": "1 st  Position (Elements to be ordered by this request)  A",
-            "description": "Entrance Facility (EF)  B"
+            "value": "",
+            "description": "st"
         },
         {
-            "value": "2 nd  Position (Identifies if element uses special access facility)  A",
-            "description": "EF rides special access facility  B"
+            "value": "",
+            "description": " Position (Elements to be ordered by this request) "
+        },
+        {
+            "value": "A",
+            "description": "Entrance Facility (EF)"
+        },
+        {
+            "value": "B",
+            "description": "Trunks Tandem-Switched Transport and EF"
+        },
+        {
+            "value": "C",
+            "description": "Trunks and Tandem-Switched Transport"
+        },
+        {
+            "value": "D",
+            "description": "Lines/Trunks Direct-Trunked Transport and EF to"
+        },
+        {
+            "value": "",
+            "description": "End Office "
+        },
+        {
+            "value": "E",
+            "description": "Lines/Trunks and Direct-Trunked Transport to End"
+        },
+        {
+            "value": "",
+            "description": "Office "
+        },
+        {
+            "value": "F",
+            "description": "Lines/Trunks"
+        },
+        {
+            "value": "G",
+            "description": "Direct-Trunked Transport and EF to End Office or Hub"
+        },
+        {
+            "value": "H",
+            "description": "Direct-Trunked Transport to End Office or Hub"
+        },
+        {
+            "value": "I",
+            "description": "Tandem-Switched Transport and EF"
+        },
+        {
+            "value": "J",
+            "description": "Direct-Trunked Transport to Access Tandem"
+        },
+        {
+            "value": "K",
+            "description": "Direct-Trunked Transport and EF to Access Tandem"
+        },
+        {
+            "value": "L",
+            "description": "Trunks and Direct-Trunked Transport to Access"
+        },
+        {
+            "value": "",
+            "description": "Tandem "
+        },
+        {
+            "value": "M",
+            "description": "Trunks Direct-Trunked Transport and EF to Access"
+        },
+        {
+            "value": "",
+            "description": "Tandem "
+        },
+        {
+            "value": "N",
+            "description": "LTP not applicable"
+        },
+        {
+            "value": "P",
+            "description": "Links Direct-Link Transport and EF to STP"
+        },
+        {
+            "value": "Q",
+            "description": "Direct-Link Transport and Links to STP"
+        },
+        {
+            "value": "R",
+            "description": "Links"
+        },
+        {
+            "value": "",
+            "description": "1"
+        },
+        {
+            "value": "",
+            "description": "st"
+        },
+        {
+            "value": "",
+            "description": " Position (Elements to be ordered by this request) "
+        },
+        {
+            "value": "A",
+            "description": "Entrance Facility (EF)"
+        },
+        {
+            "value": "B",
+            "description": "Trunks Tandem-Switched Transport and EF"
+        },
+        {
+            "value": "C",
+            "description": "Trunks and Tandem-Switched Transport"
+        },
+        {
+            "value": "D",
+            "description": "Lines/Trunks Direct-Trunked Transport and EF to"
+        },
+        {
+            "value": "",
+            "description": "End Office "
+        },
+        {
+            "value": "E",
+            "description": "Lines/Trunks and Direct-Trunked Transport to End"
+        },
+        {
+            "value": "",
+            "description": "Office "
+        },
+        {
+            "value": "F",
+            "description": "Lines/Trunks"
+        },
+        {
+            "value": "G",
+            "description": "Direct-Trunked Transport and EF to End Office or Hub"
+        },
+        {
+            "value": "H",
+            "description": "Direct-Trunked Transport to End Office or Hub"
+        },
+        {
+            "value": "I",
+            "description": "Tandem-Switched Transport and EF"
+        },
+        {
+            "value": "J",
+            "description": "Direct-Trunked Transport to Access Tandem"
+        },
+        {
+            "value": "K",
+            "description": "Direct-Trunked Transport and EF to Access Tandem"
+        },
+        {
+            "value": "L",
+            "description": "Trunks and Direct-Trunked Transport to Access"
+        },
+        {
+            "value": "",
+            "description": "Tandem "
+        },
+        {
+            "value": "M",
+            "description": "Trunks Direct-Trunked Transport and EF to Access"
+        },
+        {
+            "value": "",
+            "description": "Tandem "
+        },
+        {
+            "value": "N",
+            "description": "LTP not applicable"
+        },
+        {
+            "value": "P",
+            "description": "Links Direct-Link Transport and EF to STP"
+        },
+        {
+            "value": "Q",
+            "description": "Direct-Link Transport and Links to STP"
+        },
+        {
+            "value": "R",
+            "description": "Links"
+        },
+        {
+            "value": "",
+            "description": "2"
+        },
+        {
+            "value": "",
+            "description": "nd"
+        },
+        {
+            "value": "",
+            "description": " Position (Identifies if element uses special access facility) "
+        },
+        {
+            "value": "A",
+            "description": "EF rides special access facility"
+        },
+        {
+            "value": "B",
+            "description": "Direct-Trunked Transport rides special access facility"
+        },
+        {
+            "value": "C",
+            "description": "Direct-Trunked Transport and EF ride special access"
+        },
+        {
+            "value": "",
+            "description": "facility "
+        },
+        {
+            "value": "D",
+            "description": "Tandem-Switched Transport rides special access facility"
+        },
+        {
+            "value": "E",
+            "description": "Tandem-Switched Transport and EF ride special access"
+        },
+        {
+            "value": "",
+            "description": "facility "
+        },
+        {
+            "value": "F",
+            "description": "No special access"
+        },
+        {
+            "value": "",
+            "description": "3"
+        },
+        {
+            "value": "",
+            "description": "rd"
+        },
+        {
+            "value": "",
+            "description": " Position (Level of EF) "
+        },
+        {
+            "value": "0",
+            "description": "Voice grade capacity for the EF"
+        },
+        {
+            "value": "1",
+            "description": "DS1 capacity for the EF"
+        },
+        {
+            "value": "3",
+            "description": "DS3 capacity for the EF"
+        },
+        {
+            "value": "",
+            "description": "4"
+        },
+        {
+            "value": "",
+            "description": "th"
+        },
+        {
+            "value": "",
+            "description": " Position (Level of Transport) "
+        },
+        {
+            "value": "0",
+            "description": "Voice grade capacity for transport"
+        },
+        {
+            "value": "1",
+            "description": "DS1 capacity for transport"
+        },
+        {
+            "value": "3",
+            "description": "DS3 capacity for transport"
         }
     ],
     "validEntryNotes": [

@@ -1,6 +1,6 @@
 var fs = require('fs');
 //var field = {};
-var jsonConsolidator = require("./jsonConsolidator");
+var jsonConsolidator = require("./jsonConsolidator.js");
 jsonConsolidator.jsonCon();
 var field = {"asogVersion": "", "processed": "", "form": "", "section": "", "name": "", "title": "", "fieldNumber": "", "minimumLength": "", "maximumLength": "", "characteristics": "", "usage": "", "example": "", "definition": "", "validEntry": "", "validEntryNotes": "", "usageNotes": "", "fieldNotes": "", "exampleNotes": ""};
 field.fieldNumber = 0;
@@ -8,24 +8,24 @@ field.keywordFlag = true;
 var tillEntries = 0;
 
 //read asynchronously
-//fs.readFile("parsedText.txt", "utf8", function (error, data) {
-//    if(error){
-//        console.log(error);
-//    }
-//    lines = data;
-//    parseLine(lines);
-//});
+fs.readFile("parsedText.txt", "utf8", function (error, data) {
+    if(error){
+        console.log(error);
+    }
+    lines = data;
+    parseLine(lines);
+});
 
 //read synchronously
-var fileContent = fs.readFileSync('parsedText.txt','utf8').toString().split("\n");
+//var fileContent = fs.readFileSync('parsedText','utf8').toString().split("\n");
 clear();
-for(var i = 0; i< fileContent.length;i++){
-    parseLine(fileContent[i]);
-    if(i == fileContent.length -1){
-        getDescription(field.content);
-        writeToFile();      //for the last field
-    }
-}
+//for(var i = 0; i< fileContent.length;i++){
+//    parseLine(fileContent[i]);
+//    if(i == fileContent.length -1){
+//        getDescription(field.content);
+//        writeToFile();      //for the last field
+//    }
+//}
 
 /**
 * Process the pdf, line by line.
@@ -156,11 +156,11 @@ function getFieldInfo(line){
     }else if(field.previousField != "field"  && previous === field.previousField){
         if(field.previousField != "valid entry" && field.previousField != "validEntryNotes"){
             field.content = field.content + " \n " + line;
-        }else if(reg.exec(line) && field.previousField === "validEntryNotes"){
+        }else if(reg.exec(line) != null && field.previousField === "validEntryNotes"){
             if(line.indexOf("=") > -1){
                 processValidEntry(line);
             }else{
-                field.content = field.content + " \t " + line;
+                field.content = field.content + " \n " + line;
             }
         }else{
             field.content = field.content + "\n" + line;
@@ -268,28 +268,30 @@ function getKeyword(line){
 */
 function getDescription(line){
     var re = /^3-\d+$/;
-    if(field.previousField != "example"){
-        line = line.replace(/\n/g," ");
-    }
     if(re.exec(line) === null && line != " "){
         line = line.trim();
         switch(field.previousField){
             case "fieldNotes":
+                line = line.replace(/\n/g," ");
                 field.fieldNotes.push(line);
                 break;
             case "validEntryNotes":
+                line = line.replace(/\n/g," ");
                 field.validEntryNotes.push(line);
                 break;
             case "usageNotes":
+                line = line.replace(/\n/g," ");
                 field.usageNotes.push(line);
                 break;
             case "exampleNotes":
+                line = line.replace(/\n/g," ");
                 field.exampleNotes.push(line);
                 break;
             case "valid entry":
                 processValidEntry(line);
                 break;
             case "data":
+                line = line.replace(/\n/g," ");
                 getLength(line);
                 break;
             case "example":
@@ -300,6 +302,7 @@ function getDescription(line){
                 }
                 break;
             case "usage":
+                line = line.replace(/\n/g," ");
                 line = line.trim();
                 line = line.split(" ");
                 switch(line[3]){

@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T20:45:39.740Z",
+    "processed": "2015-08-05T21:37:54.222Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Translation Questionnaire Request",
@@ -14,8 +14,92 @@
     "definition": "  Indicates that a translation questionnaire is being submitted. ",
     "validEntry": [
         {
-            "value": "1 st  Position  A",
-            "description": "No TQ attached  B"
+            "value": "",
+            "description": "1"
+        },
+        {
+            "value": "",
+            "description": "st"
+        },
+        {
+            "value": "",
+            "description": " Position "
+        },
+        {
+            "value": "A",
+            "description": "No TQ attached"
+        },
+        {
+            "value": "B",
+            "description": "FGB translations"
+        },
+        {
+            "value": "C",
+            "description": "Code (NPA/NXX) Translation Routing Only"
+        },
+        {
+            "value": "D",
+            "description": "FGD translations"
+        },
+        {
+            "value": "E",
+            "description": "STP Translation Changes"
+        },
+        {
+            "value": "L",
+            "description": "Local translations"
+        },
+        {
+            "value": "M",
+            "description": "Local translations and Code Translation Routing"
+        },
+        {
+            "value": "S",
+            "description": "SAC only"
+        },
+        {
+            "value": "T",
+            "description": "FGD translations and SAC"
+        },
+        {
+            "value": "U",
+            "description": "FGB translations and SAC"
+        },
+        {
+            "value": "W",
+            "description": "Wireless translations"
+        },
+        {
+            "value": "X",
+            "description": "Wireless translations and Code Translation Routing"
+        },
+        {
+            "value": "1-9",
+            "description": "TQ on file"
+        },
+        {
+            "value": "",
+            "description": "2"
+        },
+        {
+            "value": "",
+            "description": "nd"
+        },
+        {
+            "value": "",
+            "description": " Position "
+        },
+        {
+            "value": "N",
+            "description": "No Trunking Form"
+        },
+        {
+            "value": "X",
+            "description": "Trunking Form (no trunk activity)"
+        },
+        {
+            "value": "Y",
+            "description": "Trunking Form (trunk activity)"
         }
     ],
     "validEntryNotes": [

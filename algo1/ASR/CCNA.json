@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T20:45:39.713Z",
+    "processed": "2015-08-05T21:37:54.199Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Customer Carrier Name Abbreviation",
@@ -14,7 +14,11 @@
     "definition": "  Identifies the COMMON LANGUAGE IAC code for the customer submitting the ASR and receiving the Confirmation Notice Form (CN). ",
     "validEntry": [
         {
-            "value": "IAC Code  CUS",
+            "value": "",
+            "description": "IAC Code "
+        },
+        {
+            "value": "CUS",
             "description": "Casual customer"
         }
     ],

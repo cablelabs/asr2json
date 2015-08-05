@@ -1,14 +1,11 @@
 var fs = require('fs');
 //var exports = module.exports = {};
 
-exports.jsonCon = function(){
-    fs.readFile('asr.json', 'utf8', function(err, data) {
-        if (err) {
-            throw err;
-        }
-        var json = JSON.parse(data);
-        getJsonData(json);
-    });
+
+module.exports.jsonCon = function(){
+    var text = "";
+    var json = JSON.parse(fs.readFileSync('asr.json', 'utf8'));
+    getJsonData(json);
 
     function getJsonData(json){
         var value = [];
@@ -48,10 +45,11 @@ exports.jsonCon = function(){
         content = "\n";
         content = decodeURIComponent(finalText);
         content = content.replace(/,/g,"");
-        fs.writeFile('parsedText.txt',content, function (err){
-            if(err){
-                return console.log(err);
-            }
-        })
+        text = text + content;
     }
+    fs.writeFile('parsedText.txt',text, function (err){
+        if(err){
+            return console.log(err);
+        }
+    })
 }

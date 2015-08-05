@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T20:45:39.745Z",
+    "processed": "2015-08-05T21:37:54.230Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Primary Service Location Indicator",
@@ -15,7 +15,35 @@
     "validEntry": [
         {
             "value": "A",
-            "description": "Provider Switch  B"
+            "description": "Provider Switch"
+        },
+        {
+            "value": "B",
+            "description": "Provider Central Office"
+        },
+        {
+            "value": "C",
+            "description": "Customer Physical Collocation"
+        },
+        {
+            "value": "D",
+            "description": "Customer Virtual Collocation"
+        },
+        {
+            "value": "E",
+            "description": "LERG Switch CLLI (CSL Out of LATA Scenario)"
+        },
+        {
+            "value": "F",
+            "description": "LERG Switch CLLI (CSL In LATA Scenario)"
+        },
+        {
+            "value": "G",
+            "description": "Wireless Terminating Service (Out of LATA Scenario no"
+        },
+        {
+            "value": "",
+            "description": "NPA/NXX’s assigned)"
         }
     ],
     "validEntryNotes": [

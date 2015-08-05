@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T20:45:39.718Z",
+    "processed": "2015-08-05T21:37:54.206Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Company Code",
@@ -15,7 +15,15 @@
     "validEntry": [
         {
             "value": "",
-            "description": "A four alpha/numeric character code structure for all Exchange Carriers in North America and certain U.S. territories maintained by NECA."
+            "description": "A four alpha/numeric character code structure for all"
+        },
+        {
+            "value": "",
+            "description": "Exchange Carriers in North America and certain U.S."
+        },
+        {
+            "value": "",
+            "description": "territories maintained by NECA."
         }
     ],
     "validEntryNotes": [],

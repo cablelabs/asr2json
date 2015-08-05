@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T20:45:39.744Z",
+    "processed": "2015-08-05T21:37:54.227Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Facility Billing Arrangement",
@@ -14,8 +14,60 @@
     "definition": "  Indicates a special arrangement has been negotiated between the host customer of a higher level service and the subsequent customer of the lower level service.  ",
     "validEntry": [
         {
-            "value": "1 st  Position  A",
-            "description": "Shared network  B"
+            "value": "",
+            "description": "1"
+        },
+        {
+            "value": "",
+            "description": "st"
+        },
+        {
+            "value": "",
+            "description": " Position "
+        },
+        {
+            "value": "A",
+            "description": "Shared network"
+        },
+        {
+            "value": "B",
+            "description": "Lease Back"
+        },
+        {
+            "value": "C",
+            "description": "Split Billing - All Elements"
+        },
+        {
+            "value": "D",
+            "description": "Split Billing"
+        },
+        {
+            "value": "",
+            "description": "2"
+        },
+        {
+            "value": "",
+            "description": "nd"
+        },
+        {
+            "value": "",
+            "description": " through 4"
+        },
+        {
+            "value": "",
+            "description": "th"
+        },
+        {
+            "value": "",
+            "description": " Positions "
+        },
+        {
+            "value": "Y",
+            "description": "Indicates the requirement of split billing on the"
+        },
+        {
+            "value": "",
+            "description": "respective element."
         },
         {
             "value": "EF",

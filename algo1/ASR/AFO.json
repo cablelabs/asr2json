@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T20:45:39.737Z",
+    "processed": "2015-08-05T21:37:54.221Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Additional Forms ",
@@ -15,7 +15,31 @@
     "validEntry": [
         {
             "value": "",
-            "description": "Character Position Valid Entry Attached Form(s)  1 Y ACI Form  2  Reserved for future  use  3 Y NAI Form  4 Y EOD Form  5 Y VCAT Form"
+            "description": "Character Position Valid Entry Attached Form(s) "
+        },
+        {
+            "value": "",
+            "description": "1 Y ACI Form "
+        },
+        {
+            "value": "",
+            "description": "2  Reserved for future "
+        },
+        {
+            "value": "",
+            "description": "use "
+        },
+        {
+            "value": "",
+            "description": "3 Y NAI Form "
+        },
+        {
+            "value": "",
+            "description": "4 Y EOD Form "
+        },
+        {
+            "value": "",
+            "description": "5 Y VCAT Form"
         }
     ],
     "validEntryNotes": [

@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T20:45:39.757Z",
+    "processed": "2015-08-05T21:37:54.241Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Telecommunications Service Priority",
@@ -15,7 +15,15 @@
     "validEntry": [
         {
             "value": "",
-            "description": "Nine Character TSP Control Identifier  One Character Provisioning Priority Level (E 0-5)  One Digit Restoration Priority Level (0-5)"
+            "description": "Nine Character TSP Control Identifier "
+        },
+        {
+            "value": "",
+            "description": "One Character Provisioning Priority Level (E 0-5) "
+        },
+        {
+            "value": "",
+            "description": "One Digit Restoration Priority Level (0-5)"
         }
     ],
     "validEntryNotes": [

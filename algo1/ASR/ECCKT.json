@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T20:45:39.749Z",
+    "processed": "2015-08-05T21:37:54.234Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Exchange Company Circuit ID",
@@ -15,7 +15,27 @@
     "validEntry": [
         {
             "value": "",
-            "description": "1. COMMON LANGUAGE Special Service Circuit Codes Structure for the Identification of Telecommunications Connections for the North American Telecommunications Systems or by COMMON LANGUAGE in BR-795-402- 100. A brief summary of the format can be found in ASOG Practice 000 Section 2.14.3 and 2.14.4."
+            "description": "1. COMMON LANGUAGE Special Service Circuit Codes"
+        },
+        {
+            "value": "",
+            "description": "Structure for the Identification of Telecommunications"
+        },
+        {
+            "value": "",
+            "description": "Connections for the North American Telecommunications"
+        },
+        {
+            "value": "",
+            "description": "Systems or by COMMON LANGUAGE in BR-795-402-"
+        },
+        {
+            "value": "",
+            "description": "100. A brief summary of the format can be found in"
+        },
+        {
+            "value": "",
+            "description": "ASOG Practice 000 Section 2.14.3 and 2.14.4."
         }
     ],
     "validEntryNotes": [

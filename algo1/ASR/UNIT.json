@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T20:45:39.746Z",
+    "processed": "2015-08-05T21:37:54.231Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Unit Identification",
@@ -15,7 +15,19 @@
     "validEntry": [
         {
             "value": "B",
-            "description": "Number of BHMC  C"
+            "description": "Number of BHMC"
+        },
+        {
+            "value": "C",
+            "description": "Number of lines trunks facilities circuits CCS links"
+        },
+        {
+            "value": "",
+            "description": "ring segments or unbundled elements. "
+        },
+        {
+            "value": "P",
+            "description": "Percent market share"
         }
     ],
     "validEntryNotes": [

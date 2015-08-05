@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T20:45:39.733Z",
+    "processed": "2015-08-05T21:37:54.219Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Response Type Requested",
@@ -15,7 +15,15 @@
     "validEntry": [
         {
             "value": "F",
-            "description": "Send FOC only  N"
+            "description": "Send FOC only"
+        },
+        {
+            "value": "N",
+            "description": "No response required"
+        },
+        {
+            "value": "S",
+            "description": "Send FOC and DLR; CDLRD waived"
         }
     ],
     "validEntryNotes": [

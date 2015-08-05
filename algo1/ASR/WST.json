@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T20:45:39.731Z",
+    "processed": "2015-08-05T21:37:54.217Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Wireless Service Type",
@@ -15,7 +15,79 @@
     "validEntry": [
         {
             "value": "A",
-            "description": "Dial Mobile or Paging  B"
+            "description": "Dial Mobile or Paging"
+        },
+        {
+            "value": "B",
+            "description": "Manual Mobile with DA allowance"
+        },
+        {
+            "value": "C",
+            "description": "Manual Paging"
+        },
+        {
+            "value": "D",
+            "description": "Type Dial Live Line"
+        },
+        {
+            "value": "E",
+            "description": "Type 1 Direct Inward Dial Trunk"
+        },
+        {
+            "value": "F",
+            "description": "Type 2A Tandem Interconnection"
+        },
+        {
+            "value": "G",
+            "description": "Type 2B End Office Interconnection"
+        },
+        {
+            "value": "H",
+            "description": "Type 1 Trunk Side Message Toll"
+        },
+        {
+            "value": "J",
+            "description": "Type 2D Direct connection to a DA Tandem"
+        },
+        {
+            "value": "K",
+            "description": "2T Equal Access Tandem trunks"
+        },
+        {
+            "value": "L",
+            "description": "2C E911 to a selector router"
+        },
+        {
+            "value": "M",
+            "description": "EO 251/252  End Office trunks (with full NXX)"
+        },
+        {
+            "value": "N",
+            "description": "AX 251/252 Auxiliary trunk with basic 911 DA OS"
+        },
+        {
+            "value": "",
+            "description": "and IC PIC "
+        },
+        {
+            "value": "P",
+            "description": "ME 251/252 Modified End Office (Land to Mobile"
+        },
+        {
+            "value": "",
+            "description": "blocks of 100’s or 1000’s) "
+        },
+        {
+            "value": "R",
+            "description": "TD 251/252 Tandem trunk"
+        },
+        {
+            "value": "S",
+            "description": "TT 251/252 Transit trunk (for IC traffic)"
+        },
+        {
+            "value": "T",
+            "description": "Direct connection to an operator tandem"
         }
     ],
     "validEntryNotes": [],

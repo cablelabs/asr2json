@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T20:45:39.750Z",
+    "processed": "2015-08-05T21:37:54.235Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Billing Account Number",
@@ -14,8 +14,20 @@
     "definition": "  Identifies the billing account to which the recurring and non- recurring charges for this request will be billed. ",
     "validEntry": [
         {
-            "value": "Valid Billing Account Number  E",
-            "description": "Existing  N"
+            "value": "",
+            "description": "Valid Billing Account Number "
+        },
+        {
+            "value": "E",
+            "description": "Existing"
+        },
+        {
+            "value": "N",
+            "description": "New Billing Account requested"
+        },
+        {
+            "value": "NB",
+            "description": "Multi-EC Non-billing provider"
         }
     ],
     "validEntryNotes": [
