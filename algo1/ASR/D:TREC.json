@@ -1,0 +1,27 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-05T20:45:39.772Z",
+    "form": "ASR",
+    "section": "CONTACT",
+    "name": " Date and Time Received",
+    "title": "D:TREC",
+    "fieldNumber": "124",
+    "minimumLength": " ",
+    "maximumLength": "17",
+    "characteristics": "AlphaNumeric",
+    "usage": "Optional",
+    "example": "  03-22-1985-1115AM 1985-03-22-1115AM",
+    "definition": "  Identifies the date and time that the provider received the Access Service Request. ",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "U.S. Standard Metric Format  Two Digit Month (01-12) Two Digit Century (00-99)  Two Digit Day (01-31) Two Digit Year (00-99)  Two Digit Century (00-99) Two Digit Month (01-12)  Two Digit Year (00-99) Two Digit Day (01-31)  Two Digit Hour (01-12) Two Digit Hour (01-12)  Two Digit Minute (00-59) Two Digit Minute (00-59)  AM or PM AM or PM"
+        }
+    ],
+    "validEntryNotes": [],
+    "usageNotes": [],
+    "fieldNotes": [
+        "This field will be generated automatically by the   provider upon receipt of requests from the   customer utilizing mechanized order entry."
+    ],
+    "exampleNotes": []
+}

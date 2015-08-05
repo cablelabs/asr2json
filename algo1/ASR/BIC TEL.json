@@ -1,0 +1,22 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-05T20:45:39.752Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": " BIC Telephone Number",
+    "title": "BIC TEL",
+    "fieldNumber": "65",
+    "minimumLength": " ",
+    "maximumLength": "10",
+    "characteristics": "Numeric",
+    "usage": "Conditional",
+    "example": "  201-981-3582",
+    "definition": "  Identifies the telephone number of the provider representative responsible for the BIC. ",
+    "validEntry": [],
+    "validEntryNotes": [],
+    "usageNotes": [
+        "Required when the BIC ID field is populated   otherwise prohibited."
+    ],
+    "fieldNotes": [],
+    "exampleNotes": []
+}

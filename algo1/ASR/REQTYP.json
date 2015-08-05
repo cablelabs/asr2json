@@ -1,0 +1,39 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-05T20:45:39.727Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": " Requisition Type and Status",
+    "title": "REQTYP",
+    "fieldNumber": "21",
+    "minimumLength": " ",
+    "maximumLength": "2",
+    "characteristics": "Alpha",
+    "usage": "Required",
+    "example": "  MA",
+    "definition": "  Identifies the type of service being requested and the status of the request. ",
+    "validEntry": [
+        {
+            "value": "1 st  Character A",
+            "description": "Switched Access - Feature Group A  E"
+        },
+        {
+            "value": "1 st  Character A",
+            "description": "Switched Access - Feature Group A  E"
+        },
+        {
+            "value": "2 nd  Character (4-Step Process)  Service Request:  Entered  by:  Step 1 – Service Request  A",
+            "description": "Manual/mechanized Customer  F"
+        }
+    ],
+    "validEntryNotes": [
+        "“E” is prohibited for Stand Alone Ethernet Virtual Connection (EVCI = “A”) services."
+    ],
+    "usageNotes": [],
+    "fieldNotes": [
+        "A request may be issued as a Service Request   (Inquiry) or Firm Order.    The Service Request and Firm Order process   description can be found in the Access Service   Step Ordering Process).",
+        "The first character of REQTYP specifies the type of   service/element.",
+        "The second character of REQTYP specifies the   status of the request in the four step order process."
+    ],
+    "exampleNotes": []
+}

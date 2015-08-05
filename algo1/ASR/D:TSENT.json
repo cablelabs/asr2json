@@ -1,0 +1,25 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-05T20:45:39.719Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": " Date and Time Sent",
+    "title": "D:TSENT",
+    "fieldNumber": "9",
+    "minimumLength": " ",
+    "maximumLength": "17",
+    "characteristics": "AlphaNumeric",
+    "usage": "Required",
+    "example": "  05-22-1985-1115AM 1985-05-22-1115AM",
+    "definition": "  Identifies the date and time that the Access Service Request is sent by the customer. ",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "U.S. Standard Metric Format  Two Digit Month (01-12) Two Digit Century (00-99)  Two Digit Day (01-31) Two Digit Year (00-99)  Two Digit Century (00-99) Two Digit Month (01-12)  Two Digit Year (00-99) Two Digit Day (01-31)  Two Digit Hour (01-12) Two Digit Hour (01-12)  Two Digit Minute (00-59) Two Digit Minute (00-59)  AM or PM AM or PM"
+        }
+    ],
+    "validEntryNotes": [],
+    "usageNotes": [],
+    "fieldNotes": [],
+    "exampleNotes": []
+}

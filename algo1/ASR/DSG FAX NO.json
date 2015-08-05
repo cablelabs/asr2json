@@ -1,0 +1,22 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-05T20:45:39.766Z",
+    "form": "ASR",
+    "section": "CONTACT",
+    "name": " Design Facsimile Number",
+    "title": "DSG FAX NO",
+    "fieldNumber": "107",
+    "minimumLength": " ",
+    "maximumLength": "10",
+    "characteristics": "Numeric",
+    "usage": "Conditional",
+    "example": "  908-336-2980",
+    "definition": "  Identifies the fax number of the design contact. ",
+    "validEntry": [],
+    "validEntryNotes": [],
+    "usageNotes": [
+        "Required when the ACT field is “N” “C” or “T” the   DRC field is not populated the RTR field is “S” or   “1-10” and the STREET (DSGCON) field is not   populated otherwise optional."
+    ],
+    "fieldNotes": [],
+    "exampleNotes": []
+}

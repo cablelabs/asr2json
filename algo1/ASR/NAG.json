@@ -1,0 +1,32 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-05T20:45:39.744Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": " Network Access Groom",
+    "title": "NAG",
+    "fieldNumber": "46",
+    "minimumLength": " ",
+    "maximumLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "  Y",
+    "definition": "  Identifies this service request as a CFA or CCEA change which will require no contact with the end user at the terminating location (SECLOC). ",
+    "validEntry": [
+        {
+            "value": "Y",
+            "description": "Yes"
+        }
+    ],
+    "validEntryNotes": [],
+    "usageNotes": [
+        "Optional when the first position of the REQTYP   field is “S” the ACT field is “N” or “D” the RPON   field is populated the NSL field on the Transport   Form is not populated and a Network Access   Groom is being requested.",
+        "Optional when the first position of the REQTYP   field is “S” the ACT field is “C” the NSL field on the   Transport Form is not populated and a Network    Access Groom is being requested.",
+        "Otherwise prohibited."
+    ],
+    "fieldNotes": [
+        "This field applies only when the Primary   Secondary Intermediary CFA or CCEA is changing    and the end user terminating location is not   changing.",
+        "Population of this field indicates that the provider   will use existing end user location information on   record for the circuit(s) being groomed."
+    ],
+    "exampleNotes": []
+}

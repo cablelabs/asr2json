@@ -1,0 +1,24 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-05T20:45:39.755Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": " Related Order Number",
+    "title": "RORD",
+    "fieldNumber": "71",
+    "minimumLength": " ",
+    "maximumLength": "17",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "  C456895",
+    "definition": "  Identifies a provider’s related order number. ",
+    "validEntry": [],
+    "validEntryNotes": [],
+    "usageNotes": [
+        "Required when the provider has pre-assigned a    related order number otherwise prohibited."
+    ],
+    "fieldNotes": [
+        "This field may be used to convey a CENTREX order   number obtained from the provider representative   handling the CENTREX account."
+    ],
+    "exampleNotes": []
+}

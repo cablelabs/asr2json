@@ -1,0 +1,34 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-05T20:45:39.745Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": " Primary Service Location Indicator",
+    "title": "PSLI",
+    "fieldNumber": "53",
+    "minimumLength": " ",
+    "maximumLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "  A",
+    "definition": "  Identifies the use of the PSL field. ",
+    "validEntry": [
+        {
+            "value": "A",
+            "description": "Provider Switch  B"
+        }
+    ],
+    "validEntryNotes": [
+        "Valid entry of “E” is to be used to identify the customer’s Telcordia™ LERG™ Routing Guide based switch for Local Interconnection or Wireless Trunks when the actual switch is outside the LATA of services for the assigned NPA/NXX’s.",
+        "Valid entry of “F” is to be used to identify the customer’s LERG™ based switch for Local Interconnection or Wireless Trunks when the actual switch is inside the LATA of services for the assigned NPA/NXX’s."
+    ],
+    "usageNotes": [
+        "Required when the CC and UNE fields are   populated and the ACTL field is not populated.",
+        "Required when the ACT field is “N” or “C” the first   position of the REQTYP field is “M” and the CC or   WST fields or the CC and WST fields are   populated.",
+        "Required when the ACT field is “N” or “C” the first   position of the REQTYP field is “M” and the CC or   WST fields or the CC and WST fields are   populated.",
+        "Prohibited when the ACT field is “D”.",
+        "Otherwise optional."
+    ],
+    "fieldNotes": [],
+    "exampleNotes": []
+}

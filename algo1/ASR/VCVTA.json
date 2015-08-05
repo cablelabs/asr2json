@@ -1,0 +1,22 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-05T20:45:39.763Z",
+    "form": "ASR",
+    "section": "BILL",
+    "name": " Virtual Connection Variable Term Agreement",
+    "title": "VCVTA",
+    "fieldNumber": "97",
+    "minimumLength": " ",
+    "maximumLength": "17",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "  3NCOR",
+    "definition": "  Identifies the duration identifying USOC contract date or contract identification number of any variable term agreement that may be offered by a provider for a virtual connection. ",
+    "validEntry": [],
+    "validEntryNotes": [],
+    "usageNotes": [
+        "Optional when the first position of the REQTYP   field on the ASR Form is “V” or “X” and the VCVTA   field on the VC Form is not populated otherwise   prohibited."
+    ],
+    "fieldNotes": [],
+    "exampleNotes": []
+}

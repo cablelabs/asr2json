@@ -1,0 +1,25 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-05T20:45:39.725Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": " Number of Requests",
+    "title": "NOR",
+    "fieldNumber": "18",
+    "minimumLength": " ",
+    "maximumLength": "4",
+    "characteristics": "Numeric",
+    "usage": "Conditional",
+    "example": "  1of6",
+    "definition": "  Identifies both specific ASR and total quantity of Access Service Requests within a group of ASRs being ordered. ",
+    "validEntry": [],
+    "validEntryNotes": [],
+    "usageNotes": [
+        "Required when the TQ field is populated and a total   of two or more ASRs are associated with the   translation questionnaire otherwise optional."
+    ],
+    "fieldNotes": [
+        "In order to facilitate the process at least the first   related ASR should describe or list the total RPONs   used when RPON is not the same for all such   requests. For example six ASRs are to be   associated and individual PONs and RPONs are   being used.",
+        "All service types must be identical for such   grouping of like orders."
+    ],
+    "exampleNotes": []
+}

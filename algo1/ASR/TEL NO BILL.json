@@ -1,0 +1,22 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-05T20:45:39.762Z",
+    "form": "ASR",
+    "section": "BILL",
+    "name": " Telephone Number (BILL)",
+    "title": "TEL NO BILL",
+    "fieldNumber": "94",
+    "minimumLength": " ",
+    "maximumLength": "17",
+    "characteristics": "Numeric",
+    "usage": "Conditional",
+    "example": "  201-555-3400-222",
+    "definition": "  Identifies the telephone number of the billing contact. ",
+    "validEntry": [],
+    "validEntryNotes": [],
+    "usageNotes": [
+        "Required when the BAN field is “N” otherwise   optional."
+    ],
+    "fieldNotes": [],
+    "exampleNotes": []
+}

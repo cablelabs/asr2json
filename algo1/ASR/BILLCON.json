@@ -1,0 +1,22 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-05T20:45:39.761Z",
+    "form": "ASR",
+    "section": "BILL",
+    "name": " Billing Contact",
+    "title": "BILLCON",
+    "fieldNumber": "93",
+    "minimumLength": " ",
+    "maximumLength": "15",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "  JANETDOE",
+    "definition": "  Identifies the name of the person or office to be contacted on billing matters. ",
+    "validEntry": [],
+    "validEntryNotes": [],
+    "usageNotes": [
+        "Required when the BAN field is “N” otherwise   optional."
+    ],
+    "fieldNotes": [],
+    "exampleNotes": []
+}

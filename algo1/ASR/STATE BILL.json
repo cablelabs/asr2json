@@ -1,0 +1,22 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-05T20:45:39.761Z",
+    "form": "ASR",
+    "section": "BILL",
+    "name": " State/Province (BILL)",
+    "title": "STATE BILL",
+    "fieldNumber": "91",
+    "minimumLength": " ",
+    "maximumLength": "2",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "  NJ",
+    "definition": "  Identifies the two character postal code for the state/province of the billing address associated with the billing name.  ",
+    "validEntry": [],
+    "validEntryNotes": [],
+    "usageNotes": [
+        "Required when the BAN field is “N” otherwise   optional."
+    ],
+    "fieldNotes": [],
+    "exampleNotes": []
+}

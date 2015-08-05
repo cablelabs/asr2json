@@ -1,0 +1,20 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-05T20:45:39.760Z",
+    "form": "ASR",
+    "section": "BILL",
+    "name": "Extended Billing Plan",
+    "title": "EBP",
+    "fieldNumber": "86",
+    "minimumLength": " ",
+    "maximumLength": "6",
+    "characteristics": "AlphaNumeric",
+    "usage": "Optional",
+    "example": "  Y",
+    "definition": "  Identifies the request for establishing or removing installment billing of non-recurring charges that may be offered by a provider. ",
+    "validEntry": [],
+    "validEntryNotes": [],
+    "usageNotes": [],
+    "fieldNotes": [],
+    "exampleNotes": []
+}

@@ -1,0 +1,25 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-05T20:45:39.758Z",
+    "form": "ASR",
+    "section": "BILL",
+    "name": " Billing Name",
+    "title": "BILLNM",
+    "fieldNumber": "81",
+    "minimumLength": " ",
+    "maximumLength": "25",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "  XYZCORPORATI ON",
+    "definition": "  Identifies the name of the person office or company to whom the customer has designated that the bill be sent.  ",
+    "validEntry": [],
+    "validEntryNotes": [],
+    "usageNotes": [
+        "Required when the BAN field is “N”.",
+        "Required when the CCNA field is “CUS”.",
+        "Required when the ACNA field is “ZZZ”.",
+        "Otherwise optional."
+    ],
+    "fieldNotes": [],
+    "exampleNotes": []
+}

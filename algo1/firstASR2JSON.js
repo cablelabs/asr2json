@@ -112,7 +112,7 @@ function processPage(texts,field){
         }
     }
     field.notesFlag = notesFlag;
-    printContent(previous,content);           //for examples
+    printContent(previous,content);           //for the end of the page
     return field.fieldNumber;
 }
 

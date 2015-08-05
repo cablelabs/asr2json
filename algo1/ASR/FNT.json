@@ -1,0 +1,27 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-05T20:45:39.744Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": " Fiber Network Type",
+    "title": "FNT",
+    "fieldNumber": "49",
+    "minimumLength": " ",
+    "maximumLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "  B",
+    "definition": "  Identifies the type of network to which the fiber based service is being assigned. ",
+    "validEntry": [
+        {
+            "value": "A",
+            "description": "Synchronous Optical Network (SONET)  B"
+        }
+    ],
+    "validEntryNotes": [],
+    "usageNotes": [
+        "Required when the FNI field is populated otherwise   prohibited."
+    ],
+    "fieldNotes": [],
+    "exampleNotes": []
+}

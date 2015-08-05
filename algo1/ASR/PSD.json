@@ -1,0 +1,27 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-05T20:45:39.763Z",
+    "form": "ASR",
+    "section": "CONTACT",
+    "name": " Promotion Subscription Date",
+    "title": "PSD",
+    "fieldNumber": "100",
+    "minimumLength": " ",
+    "maximumLength": "10",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "  03-02-1999 1999-03-02",
+    "definition": "  Identifies the date the customer requested or contracted the pricing promotion from the provider. ",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "U.S. Standard Metric Format  Two Digit Month (01-12) Two Digit Century (00-99)  Two Digit Day (01-31) Two Digit Year (00-99)  Two Digit Century (00-99) Two Digit Month (01-12)  Two Digit Year (00-99) Two Digit Day (01-31)"
+        }
+    ],
+    "validEntryNotes": [],
+    "usageNotes": [
+        "Optional when the PNUM field is populated   otherwise prohibited."
+    ],
+    "fieldNotes": [],
+    "exampleNotes": []
+}

@@ -1,0 +1,27 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-05T20:45:39.759Z",
+    "form": "ASR",
+    "section": "BILL",
+    "name": " Tax Exemption",
+    "title": "TE",
+    "fieldNumber": "84",
+    "minimumLength": " ",
+    "maximumLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "  B",
+    "definition": "  Indicates that the customer has submitted a tax exemption form to the provider. ",
+    "validEntry": [
+        {
+            "value": "Entry",
+            "description": "Exempt From  A"
+        }
+    ],
+    "validEntryNotes": [],
+    "usageNotes": [
+        "Required when the ACT field is “N” and the BAN   field is “N” otherwise optional."
+    ],
+    "fieldNotes": [],
+    "exampleNotes": []
+}

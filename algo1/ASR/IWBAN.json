@@ -1,0 +1,29 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-05T20:45:39.763Z",
+    "form": "ASR",
+    "section": "BILL",
+    "name": " Inside Wire Billing Account Number",
+    "title": "IWBAN",
+    "fieldNumber": "98",
+    "minimumLength": " ",
+    "maximumLength": "16",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "  NXYZ12345ACX2143",
+    "definition": "  Identifies the previously assigned Billing Account Number for charges associated with inside wire. ",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "Billing Account Number"
+        }
+    ],
+    "validEntryNotes": [],
+    "usageNotes": [
+        "Required when the GETO field on the service   specific form is “A” “E” “S” “T” “U” “V” “W” “Y”   or “Z”.",
+        "Prohibited when the ACT field is “D”.",
+        "Otherwise optional."
+    ],
+    "fieldNotes": [],
+    "exampleNotes": []
+}

@@ -1,0 +1,30 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-05T20:45:39.741Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Additional Engineering",
+    "title": "AENG",
+    "fieldNumber": "37",
+    "minimumLength": " ",
+    "maximumLength": "1",
+    "characteristics": "Numeric",
+    "usage": "Conditional",
+    "example": "  3",
+    "definition": "  Indicates that if additional engineering is required an estimate of the charges is to be forwarded to the initiator of the request. ",
+    "validEntry": [
+        {
+            "value": "1",
+            "description": "overtime engineering  2"
+        }
+    ],
+    "validEntryNotes": [],
+    "usageNotes": [
+        "Optional when the ACT field is “N” “C” “M” or “T”   otherwise prohibited."
+    ],
+    "fieldNotes": [
+        "This engineering activity is ordered from applicable   state tariffs not from Inter-state Access Tariffs.",
+        "Additional technical information after the provider   has provided the Design Layout Report (DLR) may   be billable as additional engineering."
+    ],
+    "exampleNotes": []
+}

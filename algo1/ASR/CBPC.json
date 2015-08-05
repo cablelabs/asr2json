@@ -1,0 +1,22 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-05T20:45:39.771Z",
+    "form": "ASR",
+    "section": "CONTACT",
+    "name": " Conference Bridge Passcode Number",
+    "title": "CBPC",
+    "fieldNumber": "118",
+    "minimumLength": " ",
+    "maximumLength": "15",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "  123456789123456 *2345677*",
+    "definition": "  Identifies the passcode associated with the conference bridge telephone number. ",
+    "validEntry": [],
+    "validEntryNotes": [],
+    "usageNotes": [
+        "Optional when the CB TEL NO field is populated   otherwise prohibited"
+    ],
+    "fieldNotes": [],
+    "exampleNotes": []
+}

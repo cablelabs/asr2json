@@ -1,0 +1,34 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-05T20:45:39.745Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": " Primary Service Location",
+    "title": "PSL",
+    "fieldNumber": "52",
+    "minimumLength": " ",
+    "maximumLength": "11",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "  WASHDCSWDS1",
+    "definition": "  Identifies the primary service location when the terminating and the originating points are not the ACTL. ",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "Valid CLLI Code"
+        }
+    ],
+    "validEntryNotes": [
+        "Valid entries (CLLI Codes) are maintained by Telcordia Technologies."
+    ],
+    "usageNotes": [
+        "Prohibited when the PSLI is “G”.",
+        "Required when the PSLI is “A” “B” “C” “D” “E” or   “F”.",
+        "Prohibited when the ACT field is “D”.",
+        "Otherwise optional."
+    ],
+    "fieldNotes": [
+        "The format and structure of this field is defined by    Identification of Location Entities for the North   American Telecommunications System or by    COMMON LANGUAGE in BR-795-100-100. A brief    summary of the format can be found in ASOG   Practice 000 Section 2.14.1."
+    ],
+    "exampleNotes": []
+}

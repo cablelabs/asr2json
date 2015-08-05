@@ -1,0 +1,22 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-05T20:45:39.769Z",
+    "form": "ASR",
+    "section": "CONTACT",
+    "name": " Room (DSGCON)",
+    "title": "ROOM DSGCON",
+    "fieldNumber": "113",
+    "minimumLength": " ",
+    "maximumLength": "6",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "  K-151A",
+    "definition": "  Identifies the room of the design/engineering contact’s address. ",
+    "validEntry": [],
+    "validEntryNotes": [],
+    "usageNotes": [
+        "Optional when the STREET (DSGCON) field is   populated otherwise prohibited."
+    ],
+    "fieldNotes": [],
+    "exampleNotes": []
+}

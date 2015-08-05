@@ -1,0 +1,24 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-05T20:45:39.768Z",
+    "form": "ASR",
+    "section": "CONTACT",
+    "name": " Floor (DSGCON)",
+    "title": "FLOOR DSGCON",
+    "fieldNumber": "112",
+    "minimumLength": " ",
+    "maximumLength": "3",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "  33",
+    "definition": "  Identifies the floor of the design/engineering contact’s address. ",
+    "validEntry": [],
+    "validEntryNotes": [],
+    "usageNotes": [
+        "Optional when the STREET (DSGCON) field is   populated otherwise prohibited."
+    ],
+    "fieldNotes": [],
+    "exampleNotes": [
+        "This example illustrates a numeric value but is left   justified since it is treated as text.    1 MZ"
+    ]
+}

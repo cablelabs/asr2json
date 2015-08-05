@@ -1,0 +1,22 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-05T20:45:39.761Z",
+    "form": "ASR",
+    "section": "BILL",
+    "name": " City (BILL)",
+    "title": "CITY BILL",
+    "fieldNumber": "90",
+    "minimumLength": " ",
+    "maximumLength": "25",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "  LIVINGSTON",
+    "definition": "  Identifies the city village township etc. of the billing address associated with the billing name. ",
+    "validEntry": [],
+    "validEntryNotes": [],
+    "usageNotes": [
+        "Required when the BAN field is “N” otherwise   optional."
+    ],
+    "fieldNotes": [],
+    "exampleNotes": []
+}

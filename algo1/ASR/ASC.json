@@ -1,0 +1,26 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-05T20:45:39.756Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "EC",
+    "title": "ASC",
+    "fieldNumber": "75",
+    "minimumLength": " ",
+    "maximumLength": "4",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "  NJ90",
+    "definition": "  Identifies the ICSC code of the Access Service Coordination - Exchange Company (ASC-EC) whenever an access service passes through more than one provider territory. ",
+    "validEntry": [],
+    "validEntryNotes": [],
+    "usageNotes": [
+        "Required when multiple providers are involved in   providing access service and the EVCI field is not   equal to “B”.",
+        "Required when the JPR field is populated.",
+        "Otherwise prohibited."
+    ],
+    "fieldNotes": [
+        "An entry in this field indicates that a Multi-EC   Form must be associated with this access service   request."
+    ],
+    "exampleNotes": []
+}

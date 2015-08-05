@@ -1,0 +1,35 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-05T20:45:39.722Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": " Frame Due Time",
+    "title": "FDT",
+    "fieldNumber": "13",
+    "minimumLength": " ",
+    "maximumLength": "7",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "  C1015PM E12P02P P08A10A MAM C10P",
+    "definition": "  Provides special handling instructions for the connection disconnection or coordination of changes for this request. ",
+    "validEntry": [
+        {
+            "value": "Time Zone (Position 1)  Central",
+            "description": "C  Eastern"
+        }
+    ],
+    "validEntryNotes": [
+        "Indicates the time zone and time or time zone and window of time when the service should be connected disconnected or coordinated.",
+        "When this field is populated in conjunction with the CB TEL NO field a specific time of day including the hour or hour and minute is required."
+    ],
+    "usageNotes": [
+        "Required when the first position of the REQTYP   type is “M” or “L” the ACT field is “N” “C” or “D”   and routing and/or translation change requires   coordination.",
+        "Prohibited when ACT field is “R”.",
+        "Required when the CB TEL NO is populated.",
+        "Otherwise optional."
+    ],
+    "fieldNotes": [
+        "Types of changes that require coordination are CIC   redirects switch conversions mutual trunking   arrangement point code changes traffic   rehome/reroutes call through testing requests   cut over etc."
+    ],
+    "exampleNotes": []
+}

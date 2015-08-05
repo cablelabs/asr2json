@@ -1,0 +1,34 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-05T20:45:39.720Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": " Desired Due Date",
+    "title": "DDD",
+    "fieldNumber": "12",
+    "minimumLength": " ",
+    "maximumLength": "10",
+    "characteristics": "AlphaNumeric",
+    "usage": "Required",
+    "example": "  03-02-1999 1999-03-02",
+    "definition": "  Identifies the customer's desired due date. ",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "U.S. Standard Metric Format  Two Digit Month (01-12) Two Digit Century (00-99)  Two Digit Day (01-31) Two Digit Year (00-99)  Two Digit Century (00-99) Two Digit Month (01-12)  Two Digit Year (00-99) Two Digit Day (01-31)"
+        },
+        {
+            "value": "",
+            "description": "U.S. Standard Metric Format  Two Digit Month (01-12) Two Digit Century (00-99)  Two Digit Day (01-31) Two Digit Year (00-99)  Two Digit Century (00-99) Two Digit Month (01-12)  Two Digit Year (00-99) Two Digit Day (01-31)"
+        }
+    ],
+    "validEntryNotes": [],
+    "usageNotes": [],
+    "fieldNotes": [
+        "The actual due date may be different from that   desired because of factors such as the availability   of facilities and the quantity complexity and   impact on local service of the circuit(s) involved.",
+        "On disconnect requests this date represents the   date billing is to stop on the involved circuit(s) and   can be no earlier than the date the request is   received by the provider.",
+        "When different due dates are required these dates   are stipulated using a separate request for each   desired due date.  For example a total of 50   circuits are desired and the customer wants them   at a rate of 10 per day.  Therefore five ASR forms   may be submitted stipulating this requirement.",
+        "When multiple ASRs are associated with one   Translation Questionnaire all DDDs must be   identical."
+    ],
+    "exampleNotes": []
+}

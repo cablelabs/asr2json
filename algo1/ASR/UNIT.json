@@ -1,0 +1,33 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-05T20:45:39.746Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": " Unit Identification",
+    "title": "UNIT",
+    "fieldNumber": "55",
+    "minimumLength": " ",
+    "maximumLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "  B",
+    "definition": "  Identifies whether the Quantity (QTY) field contains number of circuits ring segments Busy Hour Minutes of Capacity (BHMC) for switched access service or percent of market share. ",
+    "validEntry": [
+        {
+            "value": "B",
+            "description": "Number of BHMC  C"
+        }
+    ],
+    "validEntryNotes": [
+        "Percent of market share is an option for the ordering of initial Feature Group D.   The percent of market share figure is specified by the customer.  The provider converts this figure into the number of trunks required for service.  The customer may  specify this figure only when an end office is scheduled for equal access conversion."
+    ],
+    "usageNotes": [
+        "Required when the first position of the REQTYP   field is “M” the ACT field is “N” “C” or “D” the   second position of the TQ field is not “N” or “X” and   the EOD USE field on the EOD Form is not “A”.",
+        "Required when the first position of the REQTYP   field is “A” or “L” and the ACT field is “N” “C” or   “D”.",
+        "Prohibited when the second position of the TQ field   is “N” or “X” or the EOD USE field on the EOD   Form is “A”.",
+        "Prohibited when the second position of the TQ field   is “N” or “X” or the EOD USE field on the EOD   Form is “A”.",
+        "Otherwise optional."
+    ],
+    "fieldNotes": [],
+    "exampleNotes": []
+}

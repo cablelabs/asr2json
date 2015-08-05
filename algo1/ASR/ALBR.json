@@ -1,0 +1,31 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-05T20:45:39.742Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": " Additional Labor",
+    "title": "ALBR",
+    "fieldNumber": "38",
+    "minimumLength": " ",
+    "maximumLength": "1",
+    "characteristics": "Numeric",
+    "usage": "Conditional",
+    "example": "  2",
+    "definition": "  Indicates that additional labor is requested and charges will be accepted in conjunction with this Access Service Request (e.g. Sunday or out of normal business hour installation is being requested).  ",
+    "validEntry": [
+        {
+            "value": "1",
+            "description": "Overtime installation  2"
+        }
+    ],
+    "validEntryNotes": [],
+    "usageNotes": [
+        "Optional when the ACT field is “N” “C” “M” or “T”   otherwise prohibited."
+    ],
+    "fieldNotes": [
+        "If other labor is requested the specific labor will be   determined in verbal contact between the provider   installation-control office and the customer   implementation contact.",
+        "It is assumed the initiator has the authority to   authorize these requests.",
+        "Entry in this field is not required if a “Y” has been   entered in the Expedite (EXP) field."
+    ],
+    "exampleNotes": []
+}

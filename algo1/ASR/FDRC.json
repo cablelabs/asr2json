@@ -1,0 +1,26 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-05T20:45:39.768Z",
+    "form": "ASR",
+    "section": "CONTACT",
+    "name": " Facility Design Routing Code",
+    "title": "FDRC",
+    "fieldNumber": "111",
+    "minimumLength": " ",
+    "maximumLength": "3",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "  AN3",
+    "definition": "  Identifies the customer location routing code for the design contact for the facility in a combined ASR situation.  ",
+    "validEntry": [],
+    "validEntryNotes": [],
+    "usageNotes": [
+        "Required when the ACT field is “N” “C” or “T” the   RTR field is “S” or “1-10” and the STREET    (DSGCON) field is not populated or the DSGCON   FAX NO field is not populated and the FDRC is   different from the DRC otherwise prohibited."
+    ],
+    "fieldNotes": [
+        "The routing code represents the following    information:    Company    Street    Floor    Room    City    State/Province    ZIP Code",
+        "When populated this will be the first choice for   routing the facility DLR.",
+        "The codes are assigned by the provider."
+    ],
+    "exampleNotes": []
+}
