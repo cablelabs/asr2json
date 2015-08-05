@@ -1,10 +1,8 @@
 var fs = require('fs');
+var exports = module.exports = {};
 
-fs.readFile('asrpdf.json', 'utf8', module.exports = function(err, data) {
-    if (err) {
-        throw err;
-    }
-    var json = JSON.parse(data);
+exports.jsonConsol = function() {
+    var json = JSON.parse(fs.readFileSync('asrpdf.json', 'utf8'));
     var text="";
     for( var i = 0; i<json.formImage["Pages"].length; i++) {
         var texts = json.formImage["Pages"][i]["Texts"];
@@ -16,8 +14,6 @@ fs.readFile('asrpdf.json', 'utf8', module.exports = function(err, data) {
                     delete json.formImage["Pages"][i]["Texts"][j];
                 }
                 else if ( j+2 < texts.length && texts[j+2]["y"] == texts[tempj]["y"]) {
-                    console.log(texts[tempj]["R"][0]["T"] + " " + texts[j+1]["R"][0]["T"] + " " + texts[j+2]["R"][0]["T"]);
-
                     json.formImage["Pages"][i]["Texts"][tempj]["R"][0]["T"] +=  json.formImage["Pages"][i]["Texts"][++j]["R"][0]["T"] + json.formImage["Pages"][i]["Texts"][++j]["R"][0]["T"];
                     delete json.formImage["Pages"][i]["Texts"][j-1];
                     delete json.formImage["Pages"][i]["Texts"][j];
@@ -37,5 +33,4 @@ fs.readFile('asrpdf.json', 'utf8', module.exports = function(err, data) {
     var wstream = fs.createWriteStream('textalone');
     wstream.write(text);
     wstream.end();
-});
-//module.exports.jsonConsol = jsonConsol;
+}
