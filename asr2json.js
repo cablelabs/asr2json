@@ -1,21 +1,24 @@
 var jsonConsolidator = require("./jsonConsolidator");
 jsonConsolidator.jsonConsol();
 var fs = require('fs');
+
 var hashMap = {};
 var formNumber = "3";
 var field = {"asogVersion": "", "processed": "", "form": "", "section": "", "name": "", "title": "", "fieldNumber": "", "fieldLength": "", "characteristics": "", "usage": "", "example": "", "definition": "", "validEntry": "", "validEntryNotes": "", "usageNotes": "", "fieldNotes": ""};
-
 field.breakValue = "EXAMPLE";
 field.asogVersion = "50";
 field.processed = new Date();
 var line = "";
 var i=0;
 var contents ="";
+
 fs.readFile("textalone", "utf8", function (error, contents) {
     if(error){
         console.log(error);
     }
     contents = contents.toString().split("\n");
+
+    // HASH MAP TO FIND FIELDS HAVING SAME FIELD TITLE
     for ( i=0; i < contents.length; i++) {
         line = contents[i];
         var regex = /^[0-9]+\./;
@@ -31,20 +34,13 @@ fs.readFile("textalone", "utf8", function (error, contents) {
     }
     cleanFieldProperties();
 
+    // READING CONTENTS LINE BY LINE
     for ( i=0; i < contents.length; i++) {
         line = contents[i];
 
-        // CHECK IF FORM
-        var regex = new RegExp("^" + formNumber + "\.[^0-9]");
-        if ( regex.exec(line) && line.indexOf("FORM")>-1) {
-            getForm();
-        }
+        checkIfForm();
 
-        // CHECK IF SECTION
-        regex = /^3\.[0-9]/;
-        if ( regex.exec(line) && line.indexOf("SECTION")>-1) {
-            getSection();
-        }
+        checkIfSection();
 
         // CHECK IF FIELD
         line = line.trim() + "\n";
@@ -52,9 +48,82 @@ fs.readFile("textalone", "utf8", function (error, contents) {
         if ( regex.exec(line) && (line.indexOf("-")>-1 || line.indexOf("–")>-1)) {
             getField(line);
         }
-        if ( i>=contents.length ) {
-    //        console.log("contents.length = " + contents.length );
-    //        console.log("i= " + i);
+    }
+
+    function checkIfForm() {
+        var regex = new RegExp("^" + formNumber + "\.[^0-9]");
+        if ( regex.exec(line) && line.indexOf("FORM")>-1) {
+            field.form = (line.split("(")[1]).split(")")[0];
+        }
+    }
+
+    function checkIfSection() {
+        var regex = /^3\.[0-9]/;
+        if ( regex.exec(line) && line.indexOf("SECTION")>-1) {
+            field.section = String(line.match(/[a-zA-Z ]+$/));
+            field.section = (field.section.split(" SECTION"))[0];
+        }
+    }
+
+    function getField(line) {
+        var currentFieldNumber = line.split(".")[0];
+        var prevFieldNumber = field.fieldNumber;
+
+        // CHECKING END OF FIELD
+        if ( prevFieldNumber!=0 && prevFieldNumber!=currentFieldNumber ) {
+            filterDefinitions();
+            writeOutput(prevFieldNumber);
+            cleanFieldProperties();
+            field.fieldNumber = currentFieldNumber;
+        }
+
+        if( line.indexOf("continued") == -1) { // FOR NEW FIELD
+            field.fieldNumber = currentFieldNumber;
+
+            // TITLE AND NAME
+            getFieldNameandTitle(line);
+            field.breakValue = "DEFINITION";
+        }
+        else { // FOR CONTINUED FIELD
+            line = contents[++i].trim() + "\n";
+            checkKeyWord(line);
+        }
+
+        var pageNumberRegex = /^3-[0-9]+$/;
+        while ( i+1 != contents.length && !pageNumberRegex.exec(contents[i+1]) ) {
+            switch(field.breakValue) {
+                case "DEFINITION":
+                    field.definition = getFieldInfo().replace(/\n/g," ").trim();
+                    break;
+                case "FIELD NOTES":
+                    field.fieldNotes = field.fieldNotes + getFieldInfo().trimRight();
+                    break;
+                case "VALID ENTRIES":
+                    field.validEntry = field.validEntry + getFieldInfo();
+                    break;
+                case "VALID ENTRY NOTES":
+                    field.validEntryNotes = field.validEntryNotes + getFieldInfo();
+                    break;
+                case "USAGE":
+                    field.usage = getFieldInfo().trim();
+                    field.usage = (field.usage.indexOf("required") > -1)? "Required" : ((field.usage.indexOf("conditional") > -1)? "Conditional" : "Optional");
+                    break;
+                case "USAGE NOTES":
+                    field.usageNotes = field.usageNotes + getFieldInfo().trim();
+                    break;
+                case "DATA CHARACTERISTICS":
+                    var info = (getFieldInfo().trim()).split(" ");
+                    field.fieldLength = info[0];
+                    field.characteristics = (info[1].indexOf("alpha") > -1) ? ((info[1].indexOf("numeric") > -1) ? "AlphaNumeric" : "Alpha" ) : "Numeric";
+                    break;
+                case "EXAMPLE" || "EXAMPLES":
+                    field.example = field.example + getFieldInfo().trim();
+                    break;
+            }
+        }
+        if ( i+1 >= contents.length ) { // OUTPUT FOR LAST FIELD
+            filterDefinitions();
+            writeOutput(field.fieldNumber);
         }
     }
 
@@ -80,90 +149,6 @@ fs.readFile("textalone", "utf8", function (error, contents) {
         }
     }
 
-    function getForm() {
-        field.form = line.split("(");
-        field.form = (field.form[1].split(")"))[0];
-        //console.log("FORM= " + field.form);
-    }
-
-    function getSection() {
-        field.section = String(line.match(/[a-zA-Z ]+$/));
-        field.section = (field.section.split(" SECTION"))[0];
-        //console.log("Section= " + field.section);
-    }
-
-    function getField(line) {
-        var currentFieldNumber = line.split(".")[0];
-        var prevFieldNumber = field.fieldNumber;
-
-        if ( prevFieldNumber!=0 && prevFieldNumber!=currentFieldNumber ) { // END OF FIELD
-            filterDefinitions();
-            writeOutput(prevFieldNumber);
-            cleanFieldProperties();
-            field.fieldNumber = currentFieldNumber;
-        }
-
-        if( line.indexOf("continued") == -1) {
-            field.fieldNumber = currentFieldNumber;
-            // TITLE AND NAME
-
-
-            getFieldNameandTitle(line);
-    //        console.log("Title= " + field.title);
-    //        console.log("Name= " + field.name);
-            field.breakValue = "DEFINITION";
-        }
-        else {
-            line = contents[++i].trim() + "\n";
-            checkKeyWord(line);
-        }
-
-        var pageNumberRegex = /^3-[0-9]+$/;
-        while ( i+1 != contents.length && !pageNumberRegex.exec(contents[i+1]) ) {
-            switch(field.breakValue) {
-                case "DEFINITION":
-                    field.definition = getFieldInfo().replace(/\n/g," ").trim();
-    //                console.log("DEFINITION= " + field.definition);
-                    break;
-                case "FIELD NOTES":
-                    field.fieldNotes = field.fieldNotes + getFieldInfo().trimRight();
-    //                console.log("FIELD NOTES= " + field.fieldNotes);
-                    break;
-                case "VALID ENTRIES":
-                    field.validEntry = field.validEntry + getFieldInfo();
-    //                console.log("VALID ENTRIES= " + field.validEntry);
-                    break;
-                case "VALID ENTRY NOTES":
-                    field.validEntryNotes = field.validEntryNotes + getFieldInfo();
-    //                console.log("VALID ENTRY NOTES= " + field.validEntryNotes);
-                    break;
-                case "USAGE":
-                    field.usage = getFieldInfo().trim();
-                    field.usage = (field.usage.indexOf("required") > -1)? "Required" : ((field.usage.indexOf("conditional") > -1)? "Conditional" : "Optional");
-    //                console.log("USAGE= " + field.usage);
-                    break;
-                case "USAGE NOTES":
-                    field.usageNotes = field.usageNotes + getFieldInfo().trim();
-    //                console.log("USAGE NOTES= " + field.usageNotes);
-                    break;
-                case "DATA CHARACTERISTICS":
-                    var info = (getFieldInfo().trim()).split(" ");
-                    field.fieldLength = info[0];
-                    field.characteristics = (info[1].indexOf("alpha") > -1) ? ((info[1].indexOf("numeric") > -1) ? "AlphaNumeric" : "Alpha" ) : "Numeric";
-    //                console.log("Characteristics= " + field.characteristics);
-                    break;
-                case "EXAMPLE" || "EXAMPLES":
-                    field.example = field.example + getFieldInfo().trim();
-    //                console.log("EXAMPLE= " + field.example);
-                    break;
-            }
-        }
-        if ( i+1 >= contents.length ) {
-            filterDefinitions();
-            writeOutput(field.fieldNumber);
-        }
-    }
-
     function getFieldInfo() {
         var pageNumberRegex = /^3-[0-9]+$/;
         var fieldInfo = "";
@@ -186,6 +171,7 @@ fs.readFile("textalone", "utf8", function (error, contents) {
                 return fieldInfo;
             }
 
+            // Store Field Information
             if ( fieldInfo == "" ) {
                 fieldInfo = line;
             }
@@ -258,15 +244,21 @@ fs.readFile("textalone", "utf8", function (error, contents) {
 
     function writeOutput(prevFieldNumber) {
         var dir = "./" + field.form;
+
+        // CREATE NEW DIRECTORY IF IT DOES NOT EXIST
         if (!fs.existsSync(dir)) {
             fs.mkdirSync(dir);
         }
-        outputFileName =  field.form + "/" + field.title.replace("/","") + ".json";
 
+        // CHECKING IF FIELD HAS DUPLICATE TITLE
         if(hashMap[field.title] > 1) {
             outputFileName = field.form + "/" + field.title.replace("/","") + " " + field.name.split("(")[1].split(")")[0] + ".json";
         }
+        else {
+            outputFileName =  field.form + "/" + field.title.replace("/","") + ".json";
+        }
 
+        // WRITE OUTPUT TO FILE
         fs.writeFile(outputFileName, JSON.stringify(field, replacer, 4), function(err) {
             if (err) {
                 return console.log(err);
