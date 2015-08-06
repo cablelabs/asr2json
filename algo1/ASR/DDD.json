@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T21:37:54.211Z",
+    "processed": "2015-08-06T14:42:40.189Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Desired Due Date",
@@ -10,29 +10,9 @@
     "maximumLength": "10",
     "characteristics": "AlphaNumeric",
     "usage": "Required",
-    "example": "  03-02-1999 1999-03-02",
+    "example": " ",
     "definition": "  Identifies the customer's desired due date. ",
     "validEntry": [
-        {
-            "value": "",
-            "description": "U.S. Standard Metric Format "
-        },
-        {
-            "value": "",
-            "description": "Two Digit Month (01-12) Two Digit Century (00-99) "
-        },
-        {
-            "value": "",
-            "description": "Two Digit Day (01-31) Two Digit Year (00-99) "
-        },
-        {
-            "value": "",
-            "description": "Two Digit Century (00-99) Two Digit Month (01-12) "
-        },
-        {
-            "value": "",
-            "description": "Two Digit Year (00-99) Two Digit Day (01-31)"
-        },
         {
             "value": "",
             "description": "U.S. Standard Metric Format "

@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T21:37:54.227Z",
+    "processed": "2015-08-06T14:42:40.208Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Jointly Provided Ring",
@@ -10,7 +10,7 @@
     "maximumLength": "8",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": "  CHCGILWB LSANCA01H21",
+    "example": " ",
     "definition": "  Indicates one of the Central Office nodes of the other provider on a jointly provided ring when the facility is immediately riding a protected ring. ",
     "validEntry": [
         {
@@ -22,7 +22,6 @@
     "usageNotes": [
         "Optional when the first position of the REQTYP   field is “S” and the CFA or SCFA field on the   Transport form or ACI form or any of the ICFA (n)   fields on the NAI form contains a CFA of a jointly   provided ring.",
         "Optional when the first position of the REQTYP   field is “E” and the CFA (PRILOC) or CFA   (SECLOC) field on the EUSA Form or the CFA or   SCFA on theACI form or any of the ICFA(n) fields   on the NAI form contains a CFA of a jointly   provided ring.",
-        "Otherwise prohibited.",
         "Otherwise prohibited."
     ],
     "fieldNotes": [

@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T21:37:54.257Z",
+    "processed": "2015-08-06T14:42:40.240Z",
     "form": "ASR",
     "section": "CONTACT",
     "name": " Implementation Contact",
@@ -10,7 +10,7 @@
     "maximumLength": "15",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": "  JOHNSMITH",
+    "example": " ",
     "definition": "  Identifies the customer employee or office responsible for control of installation and completion. ",
     "validEntry": [],
     "validEntryNotes": [],

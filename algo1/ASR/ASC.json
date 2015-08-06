@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T21:37:54.241Z",
+    "processed": "2015-08-06T14:42:40.221Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "EC",
@@ -10,7 +10,7 @@
     "maximumLength": "4",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": "  NJ90",
+    "example": " ",
     "definition": "  Identifies the ICSC code of the Access Service Coordination - Exchange Company (ASC-EC) whenever an access service passes through more than one provider territory. ",
     "validEntry": [],
     "validEntryNotes": [],

@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T21:37:54.241Z",
+    "processed": "2015-08-06T14:42:40.221Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Coordinated Conversion",
@@ -29,7 +29,6 @@
         "When a Coordinated Conversion is applicable it is   strongly recommended that both requests (N and   D) are fully cross- referenced using CCVN PON and   RPON fields which will allow for a more efficient   transition of the services."
     ],
     "exampleNotes": [
-        "The above example indicates that the ACNA and   CCNA are the same.     A B C XYZ",
-        "The above example indicates that the ACNA and   CCNA are different."
+        "The above example indicates that the ACNA and   CCNA are the same.     A B C XYZ"
     ]
 }

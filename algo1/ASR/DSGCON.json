@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T21:37:54.250Z",
+    "processed": "2015-08-06T14:42:40.235Z",
     "form": "ASR",
     "section": "CONTACT",
     "name": " Design/Engineering Contact",
@@ -10,7 +10,7 @@
     "maximumLength": "15",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": "  JOHNSMITH",
+    "example": " ",
     "definition": "  Identifies the employee of the customer or agent who should be contacted on design/engineering/translation issues and to whom the Design Layout Report may be sent. ",
     "validEntry": [],
     "validEntryNotes": [],

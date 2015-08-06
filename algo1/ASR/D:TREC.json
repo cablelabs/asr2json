@@ -1,17 +1,17 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-06T14:42:40.182Z",
+    "processed": "2015-08-06T14:42:40.240Z",
     "form": "ASR",
-    "section": "ADMINISTRATIVE",
-    "name": " Date and Time Sent",
-    "title": "D:TSENT",
-    "fieldNumber": "9",
+    "section": "CONTACT",
+    "name": " Date and Time Received",
+    "title": "D:TREC",
+    "fieldNumber": "124",
     "minimumLength": " ",
     "maximumLength": "17",
     "characteristics": "AlphaNumeric",
-    "usage": "Required",
+    "usage": "Optional",
     "example": " ",
-    "definition": "  Identifies the date and time that the Access Service Request is sent by the customer. ",
+    "definition": "  Identifies the date and time that the provider received the Access Service Request. ",
     "validEntry": [
         {
             "value": "",
@@ -48,6 +48,8 @@
     ],
     "validEntryNotes": [],
     "usageNotes": [],
-    "fieldNotes": [],
+    "fieldNotes": [
+        "This field will be generated automatically by the   provider upon receipt of requests from the   customer utilizing mechanized order entry."
+    ],
     "exampleNotes": []
 }

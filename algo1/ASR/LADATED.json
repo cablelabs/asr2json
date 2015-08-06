@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T21:37:54.226Z",
+    "processed": "2015-08-06T14:42:40.208Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Date of Lease Arrangement",
@@ -10,7 +10,7 @@
     "maximumLength": "10",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": "  06-20-1984 1984-06-20",
+    "example": " ",
     "definition": "  Identifies the date appearing on the lease arrangement.  ",
     "validEntry": [
         {

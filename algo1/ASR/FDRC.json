@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T21:37:54.251Z",
+    "processed": "2015-08-06T14:42:40.237Z",
     "form": "ASR",
     "section": "CONTACT",
     "name": " Facility Design Routing Code",
@@ -10,7 +10,7 @@
     "maximumLength": "3",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": "  AN3",
+    "example": " ",
     "definition": "  Identifies the customer location routing code for the design contact for the facility in a combined ASR situation.  ",
     "validEntry": [],
     "validEntryNotes": [],

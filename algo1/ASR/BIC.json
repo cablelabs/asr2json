@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T21:37:54.236Z",
+    "processed": "2015-08-06T14:42:40.218Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Exchange Company Initiated Change",
@@ -10,7 +10,7 @@
     "maximumLength": "1",
     "characteristics": "Numeric",
     "usage": "Conditional",
-    "example": "  3",
+    "example": " ",
     "definition": "  Indicates the type of provider initiated change requested. ",
     "validEntry": [
         {

@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T21:37:54.239Z",
+    "processed": "2015-08-06T14:42:40.220Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Related Purchase Order Number",
@@ -10,14 +10,13 @@
     "maximumLength": "16",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": "  824Z9",
+    "example": " ",
     "definition": "  Identifies the PON of a related Access Service Request. ",
     "validEntry": [],
     "validEntryNotes": [],
     "usageNotes": [
         "Required when the ACT field is “D” and the CCVN   field is populated.",
         "Required when the NOR field is populated.",
-        "Required when the first position of the TQ field is   “A”.",
         "Required when the first position of the TQ field is   “A”.",
         "Required when the ATN field on the Transport   Form is “N”.",
         "Required when the REL TSC field on the Trunking   Form is “N”.",

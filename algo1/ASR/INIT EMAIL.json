@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T21:37:54.249Z",
+    "processed": "2015-08-06T14:42:40.235Z",
     "form": "ASR",
     "section": "CONTACT",
     "name": " Initiator Electronic Mail Address",
@@ -10,7 +10,7 @@
     "maximumLength": "60",
     "characteristics": "AlphaNumeric",
     "usage": "Optional",
-    "example": "  ZJONES@NOTES.BELLCOM PANY.COM",
+    "example": " ",
     "definition": "  Identifies the electronic mail address of the initiator. ",
     "validEntry": [],
     "validEntryNotes": [],

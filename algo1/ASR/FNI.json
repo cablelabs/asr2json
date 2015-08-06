@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T21:37:54.228Z",
+    "processed": "2015-08-06T14:42:40.209Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Fiber Network Identification",
@@ -10,7 +10,7 @@
     "maximumLength": "13",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": "  N12345 W12345 N",
+    "example": " ",
     "definition": "  Identifies all services associated with a particular fiber based network. Also may identify customer ring and associated ring  services.  ",
     "validEntry": [
         {
@@ -29,7 +29,6 @@
         "Required when the first position of the REQTYP   field is “R” and the UNE field is not populated.",
         "Required for DS1/DS3 within a fiber network when   the ACT field is “N” “C” “M” “T” or “R” and the   UNE field is not populated.",
         "Required for services riding a dedicated ring when   the ACT field is “N” “C” “M” “T” or “R” and the   UNE field is not populated.",
-        "Otherwise prohibited.",
         "Otherwise prohibited."
     ],
     "fieldNotes": [

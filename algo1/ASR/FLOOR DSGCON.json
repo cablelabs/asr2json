@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T21:37:54.252Z",
+    "processed": "2015-08-06T14:42:40.237Z",
     "form": "ASR",
     "section": "CONTACT",
     "name": " Floor (DSGCON)",
@@ -18,7 +18,5 @@
         "Optional when the STREET (DSGCON) field is   populated otherwise prohibited."
     ],
     "fieldNotes": [],
-    "exampleNotes": [
-        "This example illustrates a numeric value but is left   justified since it is treated as text.    1 MZ"
-    ]
+    "exampleNotes": []
 }

@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T21:37:54.234Z",
+    "processed": "2015-08-06T14:42:40.216Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Quantity",
@@ -10,7 +10,7 @@
     "maximumLength": "7",
     "characteristics": "Numeric",
     "usage": "Conditional",
-    "example": "  6 0006 0000006",
+    "example": " ",
     "definition": "  Identifies the quantity of circuits ring segments BHMCs or the percent of market share involved in this service request.  ",
     "validEntry": [],
     "validEntryNotes": [],
@@ -26,11 +26,9 @@
         "When a “B” or a “C” is entered in the UNIT field and   a “3” (two way) is entered in the TTT field on the   Trunking Form then two traffic types may be   specified in the TRFTYP field on the Trunking   Form.",
         "If more than one access circuit or facility is   involved the circuits must have identical   transmission and switching characteristics.   Furthermore all of the request information   (including the desired due date) except for the   circuit IDs must be the same for all circuits   involved.",
         "If this order is a change rearrangement or add of a   leg to a multipoint circuit (no change in circuit   quantity) then the customer will enter a one (1) in   this field.  (NSL entry will indicate the number of   legs with activity.)",
-        "If this order is a change rearrangement or add of a   leg to a multipoint circuit (no change in circuit   quantity) then the customer will enter a one (1) in   this field.  (NSL entry will indicate the number of   legs with activity.)",
         "On a new request for additional QTY or on a   disconnect request for reducing the existing QTY   only the amount to be added or disconnected   should be entered here.  On a supplement to   change the QTY on a pending order the entire new    desired QTY should be entered here.     In the latter case a description of what the   customer wants done is required in the REMARKS   field. For example if a customer has 10 circuits   working and wished to remove 3 of them they    should send in a disconnect request for 3 circuits   (QTY=3).    If on the other hand the customer places an order   for 10 circuits and then decides they don't want 3   of them before the order is completed they should   send in a supplement to the original new request   that shows the new QTY desired i.e. 7 circuits   (QTY=7).",
         "A multipoint circuit is considered to be one circuit.   Only 1 multipoint circuit may be requested per   Access Service Request as interpreted herein.",
         "QTY must be equal to one (1) if NVC on the   Transport or EUSA Form is greater than zero (0).   (NVC entry on the service specific form will indicate   the number of VC with activity).",
-        "QTY must be equal to one (1) when the EVCI field is   populated. (NUT field on the EVC form will indicate   the number of UNI terminations with activity).",
         "QTY must be equal to one (1) when the EVCI field is   populated. (NUT field on the EVC form will indicate   the number of UNI terminations with activity)."
     ],
     "exampleNotes": []

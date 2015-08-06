@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T21:37:54.214Z",
+    "processed": "2015-08-06T14:42:40.193Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Requisition Type and Status",
@@ -10,85 +10,9 @@
     "maximumLength": "2",
     "characteristics": "Alpha",
     "usage": "Required",
-    "example": "  MA",
+    "example": " ",
     "definition": "  Identifies the type of service being requested and the status of the request. ",
     "validEntry": [
-        {
-            "value": "",
-            "description": "1"
-        },
-        {
-            "value": "",
-            "description": "st"
-        },
-        {
-            "value": "",
-            "description": " Character"
-        },
-        {
-            "value": "A",
-            "description": "Switched Access - Feature Group A"
-        },
-        {
-            "value": "E",
-            "description": "End User Special Access DNAL Part Time/Full Time"
-        },
-        {
-            "value": "",
-            "description": "Television or Program Audio Specialized Ethernet"
-        },
-        {
-            "value": "",
-            "description": "Aggregation Switched Ethernet Services "
-        },
-        {
-            "value": "L",
-            "description": "CCS Link or Unbundled STP Port"
-        },
-        {
-            "value": "M",
-            "description": "Trunking (FG B C D SAC NXX Wireless and Local)"
-        },
-        {
-            "value": "R",
-            "description": "Ring"
-        },
-        {
-            "value": "S",
-            "description": "Special Access Full Time/Part Time Television or"
-        },
-        {
-            "value": "",
-            "description": "Program Audio DNAL Switched Access Facility"
-        },
-        {
-            "value": "",
-            "description": "Unbundled Dedicated Transport Unbundled"
-        },
-        {
-            "value": "",
-            "description": "Multiplexer Specialized Ethernet Aggregation Switched"
-        },
-        {
-            "value": "",
-            "description": "Ethernet Services Stand Alone EVC "
-        },
-        {
-            "value": "V",
-            "description": "Broadband Services ATM Frame Relay Service"
-        },
-        {
-            "value": "W",
-            "description": "WATS Access Line"
-        },
-        {
-            "value": "X",
-            "description": "Broadband End User Services ATM Frame Relay"
-        },
-        {
-            "value": "",
-            "description": "Service"
-        },
         {
             "value": "",
             "description": "1"

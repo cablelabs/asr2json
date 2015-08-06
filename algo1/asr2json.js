@@ -1,31 +1,52 @@
+var pdfConverter = require('/Users/wlopes/IdeaProjects/node_modules/pdf2json');
+
 var fs = require('fs');
-//var field = {};
 var jsonConsolidator = require("./jsonConsolidator.js");
 jsonConsolidator.jsonCon();
+
+//TODO formNumber( if applicable)
+
 var field = {"asogVersion": "", "processed": "", "form": "", "section": "", "name": "", "title": "", "fieldNumber": "", "minimumLength": "", "maximumLength": "", "characteristics": "", "usage": "", "example": "", "definition": "", "validEntry": "", "validEntryNotes": "", "usageNotes": "", "fieldNotes": "", "exampleNotes": ""};
 field.fieldNumber = 0;
+var fileContent = [];
 field.keywordFlag = true;
 var tillEntries = 0;
 
 //read asynchronously
-fs.readFile("parsedText.txt", "utf8", function (error, data) {
-    if(error){
-        console.log(error);
-    }
-    lines = data;
-    parseLine(lines);
+//fs.readFile("parsedText.txt", "utf8", function (error, data) {
+//    if(error){
+//        console.log(error);
+//    }
+//    lines = data;
+//    parseLine(lines);
+//});
+
+var readableStream = fs.createReadStream('parsedText.txt');
+var data = ' ';
+readableStream.setEncoding('utf8');
+
+/**
+* Read the data in the stream
+*/
+readableStream.on('data',function(chunk){
+    data = data + chunk;
 });
 
-//read synchronously
-//var fileContent = fs.readFileSync('parsedText','utf8').toString().split("\n");
-clear();
-//for(var i = 0; i< fileContent.length;i++){
-//    parseLine(fileContent[i]);
-//    if(i == fileContent.length -1){
-//        getDescription(field.content);
-//        writeToFile();      //for the last field
-//    }
-//}
+/**
+* After reading the last line of the stream
+*/
+readableStream.on('end',function(){
+//    console.log(fileContent);
+    fileContent = data.split("\n");
+//    console.log(fileContent);
+    clear();
+    for(var i = 0; i< fileContent.length;i++){
+        parseLine(fileContent[i]);
+        if(i == fileContent.length -1){
+            writeToFile();      //for the last field
+        }
+    }
+});
 
 /**
 * Process the pdf, line by line.
@@ -118,7 +139,6 @@ function getFieldInfo(line){
     var lineConsidered = 0;                     //if the line is already considered
     var newPage = isNewPage(line);
     if(newPage){    //ignore the line number, use it to store the info as no other keyword will be seen
-        getDescription(field.content);
         previous = " ";
     }
     if(line.indexOf("ATIS") > -1 || line.indexOf("Issued") > -1 || line.indexOf("Implemented") > -1){   //ignore the lines

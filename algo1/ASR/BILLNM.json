@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T21:37:54.243Z",
+    "processed": "2015-08-06T14:42:40.223Z",
     "form": "ASR",
     "section": "BILL",
     "name": " Billing Name",
@@ -10,7 +10,7 @@
     "maximumLength": "25",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": "  XYZCORPORATI ON",
+    "example": " ",
     "definition": "  Identifies the name of the person office or company to whom the customer has designated that the bill be sent.  ",
     "validEntry": [],
     "validEntryNotes": [],

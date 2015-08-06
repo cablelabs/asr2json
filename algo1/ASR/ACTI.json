@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T21:37:54.217Z",
+    "processed": "2015-08-06T14:42:40.197Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Activity Indicator",
@@ -10,7 +10,7 @@
     "maximumLength": "1",
     "characteristics": "Alpha",
     "usage": "Conditional",
-    "example": "  C",
+    "example": " ",
     "definition": "  Identifies whether an order is an augment or a new trunk group and a partial or full disconnect. ",
     "validEntry": [
         {
@@ -51,7 +51,6 @@
         "An entry of “B” is valid for an increase in the number of trunks within an existing trunk group with changes made to the features or translations.",
         "An entry of “C” is valid when ordering a new trunk group.",
         "An entry of “D” is valid for a decrease in the number of trunks within an existing trunk group with no changes made to the features or translations.",
-        "An entry of “E” is valid for the complete disconnect of a trunk group and the re-route of traffic as defined in the attached TQ.",
         "An entry of “E” is valid for the complete disconnect of a trunk group and the re-route of traffic as defined in the attached TQ.",
         "An entry of “F” is valid for the complete disconnect of a trunk group (no TQ will accompany this service request)."
     ],

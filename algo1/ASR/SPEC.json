@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T21:37:54.242Z",
+    "processed": "2015-08-06T14:42:40.223Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Service and Product Enhancement Code",
@@ -10,7 +10,7 @@
     "maximumLength": "7",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": "  FRDS322",
+    "example": " ",
     "definition": "  Identifies a specific product or service offering. ",
     "validEntry": [
         {

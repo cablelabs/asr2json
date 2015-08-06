@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T21:37:54.243Z",
+    "processed": "2015-08-06T14:42:40.223Z",
     "form": "ASR",
     "section": "BILL",
     "name": " Secondary Billing Name",
@@ -10,7 +10,7 @@
     "maximumLength": "25",
     "characteristics": "AlphaNumeric",
     "usage": "Optional",
-    "example": "  ACCOUNTSRECE IVABLE",
+    "example": " ",
     "definition": "  Identifies the name of a department or group within the designated BILLNM entry. May also be used to specify the end user customer as identified in field entry “SAN” Subscriber Authorization Number used by the customer in conjunction with billing its customer. ",
     "validEntry": [],
     "validEntryNotes": [],

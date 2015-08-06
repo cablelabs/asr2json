@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T21:37:54.213Z",
+    "processed": "2015-08-06T14:42:40.192Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Project Plant Test Date",
@@ -10,7 +10,7 @@
     "maximumLength": "10",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": "  03-02-1999 1999-03-02",
+    "example": " ",
     "definition": "  Identifies the pre negotiated plant test date for the start of overall testing of the service requested on this ASR. ",
     "validEntry": [
         {

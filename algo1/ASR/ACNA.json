@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T21:37:54.243Z",
+    "processed": "2015-08-06T14:42:40.224Z",
     "form": "ASR",
     "section": "BILL",
     "name": " Access Customer Name Abbreviation",
@@ -10,7 +10,7 @@
     "maximumLength": "3",
     "characteristics": "Alpha",
     "usage": "Required",
-    "example": "  UTC",
+    "example": " ",
     "definition": "  Identifies the COMMON LANGUAGE IAC code for the customer who should receive the bill for the ordered service. ",
     "validEntry": [
         {

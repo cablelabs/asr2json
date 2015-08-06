@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T21:37:54.246Z",
+    "processed": "2015-08-06T14:42:40.227Z",
     "form": "ASR",
     "section": "BILL",
     "name": " Telephone Number (BILL)",
@@ -10,7 +10,7 @@
     "maximumLength": "17",
     "characteristics": "Numeric",
     "usage": "Conditional",
-    "example": "  201-555-3400-222",
+    "example": " ",
     "definition": "  Identifies the telephone number of the billing contact. ",
     "validEntry": [],
     "validEntryNotes": [],

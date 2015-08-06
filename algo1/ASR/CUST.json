@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T21:37:54.225Z",
+    "processed": "2015-08-06T14:42:40.207Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Customer Name",
@@ -10,7 +10,7 @@
     "maximumLength": "25",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": "  JOHNJ.SMITH CORP.",
+    "example": " ",
     "definition": "  Identifies the name of the customer who originated this request when that customer will only have a limited amount of exchange access and has not been assigned a CCNA (Customer Carrier Name Abbreviation).  ",
     "validEntry": [],
     "validEntryNotes": [],

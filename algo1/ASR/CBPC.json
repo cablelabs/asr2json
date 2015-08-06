@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T21:37:54.255Z",
+    "processed": "2015-08-06T14:42:40.239Z",
     "form": "ASR",
     "section": "CONTACT",
     "name": " Conference Bridge Passcode Number",
@@ -10,7 +10,7 @@
     "maximumLength": "15",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": "  123456789123456 *2345677*",
+    "example": " ",
     "definition": "  Identifies the passcode associated with the conference bridge telephone number. ",
     "validEntry": [],
     "validEntryNotes": [],

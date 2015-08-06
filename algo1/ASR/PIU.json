@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T21:37:54.231Z",
+    "processed": "2015-08-06T14:42:40.213Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Percentage of Interstate Usage",
@@ -10,7 +10,7 @@
     "maximumLength": "3",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": "  100 LOF",
+    "example": " ",
     "definition": "  Identifies the expected Interstate Usage for the access service on this request.  Both Interstate and Intrastate may be ordered on a single Access Service Request by specifying the applicable percent of Interstate usage.  However two Access Service Requests may be related to one another through the entry RPON (Related Purchase Order Number). ",
     "validEntry": [
         {

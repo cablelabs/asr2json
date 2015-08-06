@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T21:37:54.208Z",
+    "processed": "2015-08-06T14:42:40.183Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Call Before Dispatch",
@@ -36,7 +36,5 @@
     ],
     "usageNotes": [],
     "fieldNotes": [],
-    "exampleNotes": [
-        "This example represents an “Unstaffed”     Site requiring LCON coordination based   on a provider’s existing process."
-    ]
+    "exampleNotes": []
 }

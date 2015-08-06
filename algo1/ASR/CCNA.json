@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T21:37:54.199Z",
+    "processed": "2015-08-06T14:42:40.175Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Customer Carrier Name Abbreviation",
@@ -10,7 +10,7 @@
     "maximumLength": "3",
     "characteristics": "Alpha",
     "usage": "Required",
-    "example": "  UTC",
+    "example": " ",
     "definition": "  Identifies the COMMON LANGUAGE IAC code for the customer submitting the ASR and receiving the Confirmation Notice Form (CN). ",
     "validEntry": [
         {
@@ -23,7 +23,6 @@
         }
     ],
     "validEntryNotes": [
-        "Valid IAC codes are maintained by Telcordia  Technologies.",
         "Valid IAC codes are maintained by Telcordia  Technologies."
     ],
     "usageNotes": [],

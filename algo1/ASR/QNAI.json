@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T21:37:54.221Z",
+    "processed": "2015-08-06T14:42:40.205Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Quantity Network Assignment Information",
@@ -10,7 +10,7 @@
     "maximumLength": "2",
     "characteristics": "Numeric",
     "usage": "Conditional",
-    "example": "  06",
+    "example": " ",
     "definition": "  Identifies the total number of NAI Circuit Detail Sections sent by the customer. ",
     "validEntry": [],
     "validEntryNotes": [],

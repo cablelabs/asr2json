@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T21:37:54.218Z",
+    "processed": "2015-08-06T14:42:40.200Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Service Reservation Number",
@@ -10,7 +10,7 @@
     "maximumLength": "15",
     "characteristics": "AlphaNumeric",
     "usage": "Optional",
-    "example": "  01LZCH-00001 01LZCH-01",
+    "example": " ",
     "definition": "  Identifies the Service Reservation Number assigned by the provider in response to a request to reserve facilities. ",
     "validEntry": [],
     "validEntryNotes": [],

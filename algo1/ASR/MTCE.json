@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T21:37:54.256Z",
+    "processed": "2015-08-06T14:42:40.239Z",
     "form": "ASR",
     "section": "CONTACT",
     "name": " Maintenance Contact",
@@ -10,7 +10,7 @@
     "maximumLength": "11",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": "  MTCEOFFICE",
+    "example": " ",
     "definition": "  Identifies the customer employee or office responsible for maintenance subsequent to the installation of the access service. ",
     "validEntry": [],
     "validEntryNotes": [],

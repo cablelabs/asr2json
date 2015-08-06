@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T21:37:54.211Z",
+    "processed": "2015-08-06T14:42:40.190Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Frame Due Time",
@@ -10,7 +10,7 @@
     "maximumLength": "7",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": "  C1015PM E12P02P P08A10A MAM C10P",
+    "example": " ",
     "definition": "  Provides special handling instructions for the connection disconnection or coordination of changes for this request. ",
     "validEntry": [
         {

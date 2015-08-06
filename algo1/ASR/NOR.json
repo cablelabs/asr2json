@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-05T21:37:54.213Z",
+    "processed": "2015-08-06T14:42:40.192Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Number of Requests",
@@ -10,7 +10,7 @@
     "maximumLength": "4",
     "characteristics": "Numeric",
     "usage": "Conditional",
-    "example": "  1of6",
+    "example": " ",
     "definition": "  Identifies both specific ASR and total quantity of Access Service Requests within a group of ASRs being ordered. ",
     "validEntry": [],
     "validEntryNotes": [],
