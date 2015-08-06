@@ -1,6 +1,35 @@
-var pdfConverter = require('/Users/wlopes/IdeaProjects/node_modules/pdf2json');
-
+//var pdfConverter = require('/Users/wlopes/IdeaProjects/node_modules/pdf2json');
 var fs = require('fs');
+
+/**
+* Split the pdf based on page number
+*/
+var execute = require('child_process').exec,child;
+child = execute('python splitPDF.py a50bk.pdf 372 533',
+  function (error, stdout, stderr) {
+    console.log('stdout: ' + stdout);
+    console.log('stderr: ' + stderr);
+    if (error !== null) {
+      console.log('exec error: ' + error);
+    }
+});
+
+/**
+* Convert the pdf to json
+*/
+var exec = require('child_process').exec,child;
+child = exec('pdf2json -f asr.pdf -s',{maxBuffer: 2056 * 500},
+function (error, stdout, stderr) {
+    console.log('stdout: ' + stdout);
+    console.log('stderr: ' + stderr);
+    if (error !== null) {
+        console.log('exec error: ' + error);
+    }
+});
+
+/**
+* Consolidator for lines based on y-coordinate, written to a text file
+*/
 var jsonConsolidator = require("./jsonConsolidator.js");
 jsonConsolidator.jsonCon();
 
@@ -8,9 +37,9 @@ jsonConsolidator.jsonCon();
 
 var field = {"asogVersion": "", "processed": "", "form": "", "section": "", "name": "", "title": "", "fieldNumber": "", "minimumLength": "", "maximumLength": "", "characteristics": "", "usage": "", "example": "", "definition": "", "validEntry": "", "validEntryNotes": "", "usageNotes": "", "fieldNotes": "", "exampleNotes": ""};
 field.fieldNumber = 0;
-var fileContent = [];
-field.keywordFlag = true;
-var tillEntries = 0;
+var fileContent = [];       //text from the file written by consolidator
+field.keywordFlag = true;     //if the keyword is encountered
+var tillEntries = 0;    //for valid entries
 
 //read asynchronously
 //fs.readFile("parsedText.txt", "utf8", function (error, data) {
@@ -25,6 +54,7 @@ var readableStream = fs.createReadStream('parsedText.txt');
 var data = ' ';
 readableStream.setEncoding('utf8');
 
+
 /**
 * Read the data in the stream
 */
@@ -32,21 +62,21 @@ readableStream.on('data',function(chunk){
     data = data + chunk;
 });
 
+
 /**
 * After reading the last line of the stream
 */
 readableStream.on('end',function(){
-//    console.log(fileContent);
     fileContent = data.split("\n");
-//    console.log(fileContent);
     clear();
     for(var i = 0; i< fileContent.length;i++){
-        parseLine(fileContent[i]);
+//        parseLine(fileContent[i]);
         if(i == fileContent.length -1){
             writeToFile();      //for the last field
         }
     }
 });
+
 
 /**
 * Process the pdf, line by line.
@@ -68,6 +98,7 @@ function parseLine(lines){
     }
 }
 
+
 /**
 * Check if the line indicates the start of a form.
 */
@@ -79,6 +110,7 @@ function isForm(line){
     }
     return 1;
 }
+
 
 /**
 * Check if the line indicates the start of a section.
@@ -92,6 +124,7 @@ function isSection(line){
     }
     return 2;
 }
+
 
 /**
 * Check if the line indicates the start of a field.
@@ -110,6 +143,7 @@ function isField(line,state){
     getFieldInfo(line);
 }
 
+
 /**
 * Get the form name and create a directory with the name, if there is none created
 */
@@ -121,6 +155,7 @@ function getFormInfo(line){
     }
 }
 
+
 /**
 * Get the section name
 */
@@ -129,6 +164,7 @@ function getSectionInfo(line){
     field.section = String(line.match(/[a-z.*A-Z ]+$/));
     field.section = (field.section.split(" SECTION"))[0];
 }
+
 
 /**
 * Get the field info and add in the field object
@@ -190,6 +226,7 @@ function getFieldInfo(line){
     }
 }
 
+
 /**
 * Check for keyword in the line
 */
@@ -204,6 +241,7 @@ function checkKeyword(line){
     }
 }
 
+
 /**
 * Return the version from the line
 */
@@ -215,12 +253,14 @@ function getVersion(line){
     }
 }
 
+
 /**
 * Store processing information (Date-time)
 */
 function processedAt(){
     field.processed = new Date();
 }
+
 
 /**
 * Retrieve title
@@ -235,6 +275,7 @@ function getTitle(line,hyphen){
     }
 }
 
+
 /**
 * Retrieve the name, which will be used for the file
 */
@@ -243,12 +284,14 @@ function getName(line,hyphen){
     field.name = (field.name.split(hyphen))[1];
 }
 
+
 /**
 * Retrieve definition info
 */
 function getDefinition(line){
     field.definition = field.definition + " " + line;
 }
+
 
 /**
 * Retrieve the keyword. The lines following will be the description for the keyword
@@ -282,6 +325,7 @@ function getKeyword(line){
         field.previousField = "example";
     }
 }
+
 
 /**
 * Retrieve description and store in the respective keywords in the field object
@@ -387,6 +431,7 @@ function getLength(line){
     }
 }
 
+
 /**
 * Retrieve the characteristics and length if only one data value is specified
 */
@@ -427,16 +472,16 @@ function isNewPage(line){
 * Initialize and clear previous values stored
 */
 function clear(){
-    field.fieldNotes = [];
-    field.usageNotes = [];
-    field.validEntryNotes = [];
-    field.validEntry = [];
-    field.exampleNotes = [];
     field.previousField = " ";
     field.definition = " ";
     field.example = " ";
     field.content = " ";
     tillEntries = 0;
+    field.fieldNotes = [];
+    field.usageNotes = [];
+    field.validEntryNotes = [];
+    field.validEntry = [];
+    field.exampleNotes = [];
 }
 
 
@@ -455,6 +500,10 @@ function writeToFile() {
     }
 }
 
+
+/**
+* Replace the keys that should not be displayed/written to a file
+*/
 function replacer(key, value) {
     if ( key=="keywordFlag" || key=="previousField" || key=="content") {
         return undefined;
