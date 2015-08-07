@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-05T21:09:13.041Z",
+    "processed": "2015-08-07T16:38:17.508Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Access Service Coordination - Exchange Company",
@@ -12,7 +12,7 @@
     "example": [
         "NJ90"
     ],
-    "definition": "Identifies the ICSC code of the Access Service Coordination - Exchange Company (ASC-EC) whenever an access service passes through more than one provider territory.",
+    "definition": "Identifies the ICSC code of the Access Service Coordination - Exchange Company (ASC-EC)whenever an access service passes through more than one provider territory.",
     "validEntry": [],
     "validEntryNotes": [
         ""
@@ -24,5 +24,8 @@
     ],
     "fieldNotes": [
         "An entry in this field indicates that a Multi-EC Form must be associated with this access service request."
+    ],
+    "exampleNotes": [
+        ""
     ]
 }

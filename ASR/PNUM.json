@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-05T21:09:13.041Z",
+    "processed": "2015-08-07T16:38:17.508Z",
     "form": "ASR",
     "section": "BILL",
     "name": "Promotion Number",
@@ -23,5 +23,8 @@
     ],
     "fieldNotes": [
         "The Promotion Number will be assigned by the provider."
+    ],
+    "exampleNotes": [
+        ""
     ]
 }

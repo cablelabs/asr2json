@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-05T21:09:13.041Z",
+    "processed": "2015-08-07T16:38:17.508Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Unit Identification",
@@ -32,7 +32,7 @@
         }
     ],
     "validEntryNotes": [
-        "Percent of market share is an option for the ordering of initial Feature Group D.   The percent of market share figure is specified by the customer.  The provider converts this figure into the number of trunks required for service.  The customer may specify this figure only when an end office is scheduled for equal access conversion. "
+        "Percent of market share is an option for the ordering of initial Feature Group D.   The percent of market share figure is specified by the customer. The provider converts this figure into the number of trunks required for service. The customer may specify this figure only when an end office is scheduled for equal access conversion. "
     ],
     "usageNotes": [
         "Required when the first position of the REQTYP field is “M”, the ACT field is “N”, “C” or “D”, the second position of the TQ field is not “N” or “X” and the EOD USE field on the EOD Form is not “A”.",
@@ -40,6 +40,9 @@
         "Prohibited when the second position of the TQ field is “N” or “X” or the EOD USE field on the EOD Form is “A”.NOTE 4: Otherwise optional."
     ],
     "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
         ""
     ]
 }

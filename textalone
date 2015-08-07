@@ -38,7 +38,7 @@ NOTE 4:
 The IAC designated in the CCNA field is the
 provider’s contact for management of the access
 ordering/negotiation process for the life of the
-order.  When using “CUS”, management of this
+order. When using “CUS”, management of this
 process may be determined on an individual
 provider basis. 
 NOTE 5:
@@ -145,9 +145,9 @@ NOTE 2:
 The first two characters identify the provider.  The
 third and fourth characters are a unique number
 within the region identifying the specific ICSC.  The
-allowable range is 00 to 99.  The provider will
+allowable range is 00 to 99. The provider will
 supply and periodically update the ICSC codes
-listing to the customer.  The provider will also
+listing to the customer. The provider will also
 supply guidelines for choosing the appropriate
 ICSC. 
 NOTE 3: 
@@ -276,7 +276,7 @@ DATA CHARACTERISTICS:
 EXAMPLES:
  04
 A 12
-A  
+A 
 NOTE 1:
 This example represents an “Unstaffed”  
 Site requiring LCON coordination based
@@ -299,7 +299,7 @@ received by the provider.
 NOTE 3:
 When different due dates are required, these dates
 are stipulated using a separate request for each
-desired due date.  For example, a total of 50
+desired due date. For example, a total of 50
 circuits are desired and the customer wants them
 at a rate of 10 per day.  Therefore, five ASR forms
 may be submitted stipulating this requirement. 
@@ -420,7 +420,7 @@ This field is conditional.
 NOTE 1:
 Optional when the first position of the REQTYP
 field is “E’’, “L”, “M”, “S’’, “V” or “X”,  and the ACT
-field is  “N”, “C”, “D”, “T” or “M”, otherwise
+field is “N”, “C”, “D”, “T” or “M”, otherwise
 prohibited. 
 DATA CHARACTERISTICS:
 1 alpha character 
@@ -708,7 +708,7 @@ Record R R
 Cancel a Leg K 
 * 2 MSLs required 
 NOTE 1:
-If the disconnect of a Leg(s) on an existing
+If the disconnect of a Leg(s)on an existing
 multipoint configuration causes it to change to a 
 two point configuration, two ASRs may be required
 depending on provider procedures. If two ASRs are
@@ -741,7 +741,7 @@ Node allocation change C C
 Recap of Segment C R 
 *Adding and disconnecting segments supports the “move”
 activities 
-VIRTUAL CONNECTION ORDERING: Virtual Connection
+VIRTUAL CONNECTION ORDERING:Virtual Connection
 activity specific rules are covered in the following matrix
 describing the use of ACT as it relates to the VCACT field on the
 VC Form: 
@@ -784,11 +784,11 @@ Termination
 Change EVC/OVC 
 (includes changes to a 
 UNI/ENNI termination) 
- C 1N, C, D N, C, D 
+ C 1 N, C, D N, C, D 
 Record Activity R R 
 Cancel UNI/ENNI
 Termination 
-N, C1, D, RK   
+N, C1, D, RK 
 Cancel a Level of Service (LOS)  N, C1K  
 Inside Move Segment N/A N/A  N/A 
 Outside Move Segment N/A N/A N/A 
@@ -991,7 +991,7 @@ A = Stand Alone EVC
 B = Combination EVC 
 NOTE 1:
 An entry of “A” indicates that the request is a Stand
-Alone EVC.  The Transport, End User Special
+Alone EVC. The Transport, End User Special
 Access,  and Switched Ethernet Services forms are
 prohibited. 
 NOTE 2:
@@ -1009,14 +1009,14 @@ Changes to this field that are prohibited on Firm
 Orders and require a cancellation of the original
 request and a new request to be submitted are as
 follows: 
-Changing from a stand alone EVC/OVC to a 
+xChanging from a stand alone EVC/OVC to a 
 combination  
-Changing from a combination to a stand
+xChanging from a combination to a stand
 alone EVC/OVC 
-Changing from a UNI/ENNI to a stand alone
+xChanging from a UNI/ENNI to a stand alone
 EVC/OVC  
-Changing from a UNI/ENNI to a combination
-Changing from a stand alone EVC/OVC to a 
+xChanging from a UNI/ENNI to a combination
+xChanging from a stand alone EVC/OVC to a 
 UNI/ENNI  
 3-42
 ATIS-0404001-0050 Effective September 20, 2014 
@@ -1026,14 +1026,14 @@ NOTE 5:
 A change to this field that is allowed on Firm
 Orders and does not require a cancellation of the
 original request is as follows: 
-Changing from a combination to a UNI/ENNI 
+xChanging from a combination to a UNI/ENNI 
 NOTE 6:
 A change to this field that is allowed at the time of
 submission from Service Request Confirmation
 (REQTYP “EB” or “SB”) to Firm Order (REQTYP
 “EC” or “SC”) and does not require a cancellation of 
 the original request is as follows: 
-Changing from a UNI/ENNI to a combination 
+xChanging from a UNI/ENNI to a combination 
 USAGE:
 This field is conditional. 
 NOTE 1:
@@ -1150,7 +1150,7 @@ If the ASC-EC changes, a SUP 1 must be issued to
 cancel the request. A new request is then issued
 with the new ASC-EC.  
 2 = New Due Date - Indicates a change to the Desired Due
-Date (DDD) and any associated fields as defined by
+Date (DDD)and any associated fields as defined by
 provider customer negotiations. 
 NOTE 1:
 The new DDD may not exceed the limits defined in
@@ -1259,12 +1259,12 @@ Character Position 4= End Office Detail (EOD) Form
 Character Position 5= Virtual Concatenation (VCAT) Form 
 NOTE 1:
 The customer should populate the appropriate
-character position(s) to indicate which additional
+character position(s)to indicate which additional
 form(s) is attached.  
 VALID ENTRIES: 
 Character Position Valid Entry Attached Form(s) 
 1 Y ACI Form 
-2  Reserved for future 
+2 Reserved for future 
 use 
 3 Y NAI Form 
 4 Y EOD Form 
@@ -1997,9 +1997,9 @@ P = Percent market share
 NOTE 1:
 Percent of market share is an option for the ordering
 of initial Feature Group D.   The percent of market
-share figure is specified by the customer.  The
+share figure is specified by the customer. The
 provider converts this figure into the number of
-trunks required for service.  The customer may 
+trunks required for service. The customer may 
 specify this figure only when an end office is
 scheduled for equal access conversion. 
 USAGE:
@@ -2034,7 +2034,7 @@ Issued April 5, 1999 Implemented September 25, 1999
 Identifies the expected Interstate Usage for the access service on
 this request.  Both Interstate and Intrastate may be ordered on
 a single Access Service Request by specifying the applicable
-percent of Interstate usage.  However, two Access Service
+percent of Interstate usage. However, two Access Service
 Requests may be related to one another through the entry
 RPON (Related Purchase Order Number). 
 VALID ENTRIES: 
@@ -2192,7 +2192,8 @@ NOTE 2:
 When the first position is “A”, the fourth position is
 prohibited.  
 NOTE 3:
-When the first position is “C” or “E” and EF is being
+When the first position is “C” or “E” and EF is bein
+g
 ordered separately, RPON is required. 
 3-87
 ATIS-0404001-0050 Effective September 13, 2003 
@@ -2298,7 +2299,7 @@ EXAMPLES:
 /DF55IE/BSTNMAAACG0/M-
 /MCDNMACOCG1
 3. COMMON LANGUAGE Facility Codes (CLFI Codes) as
-defined by ANSI ATIS-0300097:  Structure for the
+defined by ANSI ATIS-0300097: Structure for the
 Identification of Telecommunications Connections for the
 North American Telecommunications System or by 
 COMMON LANGUAGE in BR-795-450-100. A brief 
@@ -2382,7 +2383,7 @@ NOTE 6:
 On a new request for additional QTY or on a
 disconnect request for reducing the existing QTY,
 only the amount to be added or disconnected
-should be entered here.  On a supplement to
+should be entered here. On a supplement to
 change the QTY on a pending order, the entire new 
 desired QTY should be entered here.  
 In the latter case, a description of what the
@@ -2569,7 +2570,7 @@ Identifies a code assigned to a trunk group or a CCS Link Set.
 NOTE 1:
 The code set is unique to each established trunk
 group or CCS Link Set and is provided to the
-customer on the Firm Order Confirmation.  The
+customer on the Firm Order Confirmation. The
 TSC entry may then be populated by the customer
 when ordering changes, additions or deletions to an
 existing trunk group or CCS Link Set. 
@@ -2620,13 +2621,13 @@ NOTE 1:
 The format and structure of this field is defined by
 ANSI in document T1.253, Identification of
 Location Entities for the North American
-Telecommunications System.  The CLLI Code
+Telecommunications System. The CLLI Code
 consists of the following elements: 
 1. Geographical Code – Positions 1 through 4 describe
 the designation for a single geographical locality within
 a state, province, territory, country, or distinct region of
 the world (e.g., municipality) (4 alpha characters). 
-2. Geopolitical Code – Positions 5 and 6 describe the
+2. Geopolitical Code– Positions 5 and 6 describe the
 designation of a state or territory of the United States, a
 province or territory of Canada, another country having
 a national federal government, or a unique designation
@@ -2641,7 +2642,8 @@ numeric characters).
 4. Network Entity Code – Positions 9 through 11
 describe the functional category of equipment or work
 center that is contained in a structure. Equipment
-categories, including central office switching and
+categories, including central office s
+witching and
 ancillary equipment or non-switching or access
 terminations, are associated with a building or network
 site for purposes of maintaining equipment inventories
@@ -2668,8 +2670,8 @@ which the WAL traffic originates or terminates.
 NOTE 6:
 The ACTL code is an 11 character CLLI Code
 designed for the identification of location entities
-for all services.  The first 8 characters may
-represent a building location.  The 9th, 10th and
+for all services. The first 8 characters may
+represent a building location. The 9th, 10th and
 11th characters identify a specific customer, and, in
 addition, may also represent a specific type of
 service. 
@@ -2741,13 +2743,13 @@ When the entry in this field contains a CLLI Code,
 the format and structure of this field is defined by 
 ANSI in document T1.253, Identification of
 Location Entities for the North American
-Telecommunications System.  The CLLI Code
+Telecommunications System. The CLLI Code
 consists of the following elements: 
 1. Geographical Code – Positions 1 through 4 describe
 the designation for a single geographical locality within
 a state, province, territory, country, or distinct region of
 the world (e.g., municipality) (4 alpha characters). 
-2. Geopolitical Code – Positions 5 and 6 describe the
+2. Geopolitical Code– Positions 5 and 6 describe the
 designation of a state or territory of the United States, a 
 province or territory of Canada, another country having
 a national federal government, or a unique designation
@@ -2763,7 +2765,7 @@ numeric characters.
 ATIS-0404001-0050 Effective March 17, 2012 
 Issued September 23, 2011 Implemented March 17, 2012 
 70.      APOT - Additional Point of Termination (continued) 
-4. Network Entity Code – Positions 9 through 11
+4. Network Entity Code– Positions 9 through 11
 describe the functional category of equipment or work
 center that is contained in a structure. Equipment
 categories, including central office switching and
@@ -2829,7 +2831,7 @@ requests with firm orders.
 NOTE 3:
 When the CCVN field is populated, the RPON field
 for the disconnect ASR must contain the new
-connect ASR PON.   The RPON field of the new
+connect ASR PON. The RPON field of the new
 connect ASR may contain the disconnect ASR PON.
 NOTE 4:
 When the TQ field is “A”, the RPON field will
@@ -2951,7 +2953,7 @@ ATIS-0404001-0050 Effective March 17, 2012
 Issued September 23, 2011 Implemented March 17, 2012 
 75.ASC-EC-Access Service Coordination - Exchange Company
 Identifies the ICSC code of the Access Service Coordination -
-Exchange Company (ASC-EC) whenever an access service
+Exchange Company (ASC-EC)whenever an access service
 passes through more than one provider territory. 
 NOTE 1:
 An entry in this field indicates that a Multi-EC
@@ -3035,7 +3037,7 @@ Identifies a specific product or service offering.
 NOTE 1:
 SPEC may be applicable for circuit level features
 and options other than those already identified by
-the Network Channel (NC) and Network Channel
+the Network Channel (NC)and Network Channel
 Interface (NCI) codes. 
 NOTE 2: 
 Telcordia Technologies, Inc. is the intellectual
@@ -3133,7 +3135,7 @@ This code is established prior to the submission of
 the ASR.  
 NOTE 3:
 Billing to an end user who does not have an IAC
-code is specified with an entry of “ZZZ”.  When
+code is specified with an entry of “ZZZ”. When
 utilizing “ZZZ”, the Bill Section of the ASR Form
 should be completed with the end user billing
 information. 
@@ -3196,7 +3198,7 @@ administrative purposes are services that are to be
 assessed a FUSF. 
 VALID ENTRIES: 
 E = Exempt Federal Universal Service Fee 
-N = Non–Exempt (Assessed) Federal Universal Service
+N = Non–Exempt (Assessed)Federal Universal Service
 Fee 
 NOTE 1:
 Exempt indicates the customer is both (a) reselling 
@@ -3363,7 +3365,7 @@ DATA CHARACTERISTICS:
 17 numeric characters (excluding 
 3 preprinted hyphens) 
 EXAMPLE:
-2 01-555-3400-22 2  
+2 01-555-3400-22 2 
 3-134
 ATIS-0404001-0050 Effective March 12, 2005 
 Issued September 10, 2004 Implemented March 12, 2005 
@@ -3496,7 +3498,7 @@ NOTE 1:
 This is the person who should be contacted if there
 are any questions regarding this request. Any
 authorizations of charges, changes or waiving the
-Confirming Design Layout Report (CDLR) are the
+Confirming Design Layout Report (CDLR)are the
 responsibility of this person. 
 USAGE:
 This field is required. 
@@ -3582,7 +3584,7 @@ DATA CHARACTERISTICS:
 17 numeric characters (excluding 
 3 preprinted hyphens) 
 EXAMPLE:
-2 01-981-3500-35 8 7  
+2 01-981-3500-35 8 7 
 3-146
 ATIS-0404001-0050 Effective March 20, 2004 
 Issued September 19, 2003 Implemented March 20, 2004 
@@ -3593,7 +3595,7 @@ This field is conditional.
 NOTE 1:
 Required when the ACT field is “N”, “C” or “T”, the
 DRC field is not populated, the RTR field is “S” or
-“1-10” and the STREET (DSGCON) field is not
+“1-10” and the STREET (DSGCON)field is not
 populated, otherwise optional. 
 DATA CHARACTERISTICS:
 10 numeric characters (excluding 
@@ -3895,7 +3897,8 @@ NOTE 1:
 Required when the IMPCON field is populated,
 otherwise prohibited. 
 DATA CHARACTERISTICS:
-14 numeric characters (excluding 
+14 numeric characters 
+(excluding 
 3 preprinted hyphens) 
 EXAMPLE:
 2 01-981-3500-35 8 7 

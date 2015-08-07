@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-05T21:09:13.041Z",
+    "processed": "2015-08-07T16:38:17.508Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Agency Authorization Status",
@@ -36,5 +36,8 @@
     "fieldNotes": [
         "If this is a new authorization, the customer must provide a copy of the written authorization to the provider.",
         "Consult with the provider to determine local policy of agency authorization requirements for the billing of end users when ordered by the customer."
+    ],
+    "exampleNotes": [
+        ""
     ]
 }

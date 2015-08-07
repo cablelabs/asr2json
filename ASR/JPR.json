@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-05T21:09:13.041Z",
+    "processed": "2015-08-07T16:38:17.508Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Jointly Provided Ring",
@@ -31,5 +31,8 @@
     "fieldNotes": [
         "A ring can consist of multiple node locations that are not included in the ring CFA of a riding circuit, but are pass-through locations with another provider on the ring who requires a copy of the ASR for cross connection.",
         "All services riding a Jointly Provided Ring require all providers on the ring to receive a copy of the ASR, even if the locations on the Ring CFA of the riding circuit do not indicate another provider."
+    ],
+    "exampleNotes": [
+        ""
     ]
 }

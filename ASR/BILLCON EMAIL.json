@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-05T21:09:13.041Z",
+    "processed": "2015-08-07T16:38:17.508Z",
     "form": "ASR",
     "section": "BILL",
     "name": "Billing Contact Electronic Mail Address",
@@ -10,7 +10,7 @@
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
     "example": [
-        "PANY.COM"
+        ""
     ],
     "definition": "Identifies the electronic mail address of the Billing Contact when a customer profile does not already exist.",
     "validEntry": [],
@@ -22,5 +22,8 @@
     ],
     "fieldNotes": [
         ""
+    ],
+    "exampleNotes": [
+        "Z JONES@NOTES.BE L L COM P ANY. C OM"
     ]
 }

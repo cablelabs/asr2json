@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-05T21:09:13.041Z",
+    "processed": "2015-08-07T16:38:17.508Z",
     "form": "ASR",
     "section": "BILL",
     "name": "Variable Term Agreement",
@@ -10,13 +10,7 @@
     "characteristics": "AlphaNumeric",
     "usage": "Optional",
     "example": [
-        "36Thisexampleillustratesanumericvaluebutisleft",
-        "justifiedsinceitistreatedastext.",
-        "VTPPP",
-        "082089Thisexampleillustratesanumericvaluebutisleft",
-        "justifiedsinceitistreatedastext.",
-        "C12345",
-        "361091489BLKH0001"
+        "36"
     ],
     "definition": "Identifies the duration, identifying USOC, contract date or contract identification number of any variable term agreement that may be offered by a provider.",
     "validEntry": [],
@@ -28,5 +22,9 @@
     ],
     "fieldNotes": [
         "When the ASC-EC field is populated, this identifies the duration, identifying USOC, contract date or contract identification number of any variable term agreement that may be offered by ASC-EC."
+    ],
+    "exampleNotes": [
+        "This example illustrates a numeric value but is left justified since it is treated as text. V TPPP 0 82089",
+        "This example illustrates a numeric value but is left justified since it is treated as text. C 12345 3 61091489BLKH00 0 1"
     ]
 }

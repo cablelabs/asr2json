@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-05T21:09:13.041Z",
+    "processed": "2015-08-07T16:38:17.508Z",
     "form": "ASR",
     "section": "CONTACT",
     "name": "Initiator",
@@ -21,6 +21,9 @@
         ""
     ],
     "fieldNotes": [
-        "This is the person who should be contacted if there are any questions regarding this request. Any authorizations of charges, changes or waiving the Confirming Design Layout Report (CDLR) are the responsibility of this person."
+        "This is the person who should be contacted if there are any questions regarding this request. Any authorizations of charges, changes or waiving the Confirming Design Layout Report (CDLR)are the responsibility of this person."
+    ],
+    "exampleNotes": [
+        ""
     ]
 }

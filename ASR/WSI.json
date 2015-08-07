@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-05T21:09:13.041Z",
+    "processed": "2015-08-07T16:38:17.508Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Wireless Site Indicator",
@@ -31,6 +31,9 @@
         "Required when the ACT field is “N” and the first position of the REQTYP is “S” or “E” and the SECLOC field on the Transport or EUSA Form is a wireless site, otherwise prohibited."
     ],
     "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
         ""
     ]
 }

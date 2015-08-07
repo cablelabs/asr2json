@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-05T21:09:13.041Z",
+    "processed": "2015-08-07T16:38:17.508Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Intrastate IntraLATA Usage Percentage",
@@ -34,5 +34,8 @@
     ],
     "fieldNotes": [
         "This field may apply whenever PIU is less than 100."
+    ],
+    "exampleNotes": [
+        ""
     ]
 }

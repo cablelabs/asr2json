@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-05T21:09:13.041Z",
+    "processed": "2015-08-07T16:38:17.508Z",
     "form": "ASR",
     "section": "CONTACT",
     "name": "Floor (DSGCON)",
@@ -10,9 +10,7 @@
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
     "example": [
-        "33Thisexampleillustratesanumericvaluebutisleft",
-        "justifiedsinceitistreatedastext.",
-        "1MZ"
+        "33"
     ],
     "definition": "Identifies the floor of the design/engineering contact’s address.",
     "validEntry": [],
@@ -24,5 +22,8 @@
     ],
     "fieldNotes": [
         ""
+    ],
+    "exampleNotes": [
+        "This example illustrates a numeric value but is left justified since it is treated as text. 1 MZ"
     ]
 }

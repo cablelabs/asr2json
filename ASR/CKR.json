@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-05T21:09:13.041Z",
+    "processed": "2015-08-07T16:38:17.508Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Customer Circuit Reference",
@@ -22,5 +22,8 @@
     ],
     "fieldNotes": [
         "CKR is used by the customer as a cross reference to the provider circuit ID(s) and in many cases to identify the customer's end-to-end service."
+    ],
+    "exampleNotes": [
+        ""
     ]
 }

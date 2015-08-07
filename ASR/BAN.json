@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-05T21:09:13.041Z",
+    "processed": "2015-08-07T16:38:17.508Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Billing Account Number",
@@ -43,5 +43,8 @@
     "fieldNotes": [
         "The precise format will be defined by each provider in accordance with individual billing procedures and provided to the customer.",
         "The BAN entry appearing on this form must be for the provider identified in the ICSC field."
+    ],
+    "exampleNotes": [
+        ""
     ]
 }

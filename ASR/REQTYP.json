@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-05T21:09:13.041Z",
+    "processed": "2015-08-07T16:38:17.508Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Requisition Type and Status",
@@ -169,5 +169,8 @@
         "A request may be issued as a Service Request (Inquiry) or Firm Order. The Service Request and Firm Order process description can be found in the Access Service Ordering Overview (ATIS-0404000, Section 5, Four Step Ordering Process).",
         "The first character of REQTYP specifies the type of service/element.",
         "The second character of REQTYP specifies the status of the request in the four step order process."
+    ],
+    "exampleNotes": [
+        ""
     ]
 }

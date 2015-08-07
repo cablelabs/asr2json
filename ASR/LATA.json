@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-05T21:09:13.041Z",
+    "processed": "2015-08-07T16:38:17.508Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Local Access Transport Area",
@@ -22,5 +22,8 @@
     ],
     "fieldNotes": [
         "It is anticipated that the termination point for this service is a point of presence (POP), a point of interconnection (POI) or end user premises within this LATA."
+    ],
+    "exampleNotes": [
+        ""
     ]
 }

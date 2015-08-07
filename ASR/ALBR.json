@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-05T21:09:13.041Z",
+    "processed": "2015-08-07T16:38:17.508Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Additional Labor",
@@ -57,5 +57,8 @@
         "If other labor is requested, the specific labor will be determined in verbal contact between the provider installation-control office and the customer implementation contact.",
         "It is assumed the initiator has the authority to authorize these requests.",
         "Entry in this field is not required if a “Y” has been entered in the Expedite (EXP) field."
+    ],
+    "exampleNotes": [
+        ""
     ]
 }

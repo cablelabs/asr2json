@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-05T21:09:13.041Z",
+    "processed": "2015-08-07T16:38:17.508Z",
     "form": "ASR",
     "section": "BILL",
     "name": "Virtual Connection Variable Term Agreement",
@@ -21,6 +21,9 @@
         "Optional when the first position of the REQTYP field on the ASR Form is “V” or “X” and the VCVTA field on the VC Form is not populated, otherwise prohibited."
     ],
     "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
         ""
     ]
 }

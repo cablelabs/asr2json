@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-05T21:09:13.041Z",
+    "processed": "2015-08-07T16:38:17.508Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Network Access Groom",
@@ -30,5 +30,8 @@
     "fieldNotes": [
         "This field applies only when the Primary, Secondary, Intermediary CFA or CCEA is changing and the end user terminating location is not changing.",
         "Population of this field indicates that the provider will use existing end user location information on record for the circuit(s) being groomed."
+    ],
+    "exampleNotes": [
+        ""
     ]
 }

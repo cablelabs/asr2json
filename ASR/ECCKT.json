@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-05T21:09:13.041Z",
+    "processed": "2015-08-07T16:38:17.508Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Exchange Company Circuit ID",
@@ -60,5 +60,8 @@
         "When disconnecting all circuits in a given account, “ALL” should be entered in this field, the BAN field populated, and the ACT field should contain a “D”.",
         "The COMMON LANGUAGE Special Service Circuit Code in this field should not reflect a value that equates to the EVC circuit identification.",
         "The format and structure of the field is defined by ANSI standards."
+    ],
+    "exampleNotes": [
+        ""
     ]
 }

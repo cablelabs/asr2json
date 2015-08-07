@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-05T21:09:13.041Z",
+    "processed": "2015-08-07T16:38:17.508Z",
     "form": "ASR",
     "section": "BILL",
     "name": "Federal Universal Service Fee",
@@ -20,7 +20,7 @@
         },
         {
             "value": "N",
-            "description": "Non–Exempt (Assessed) Federal Universal Service"
+            "description": "Non–Exempt (Assessed)Federal Universal Service"
         },
         {
             "value": "",
@@ -38,5 +38,8 @@
     ],
     "fieldNotes": [
         "Services that are ordered to provide an information service, used for internal consumption or used for administrative purposes are services that are to be assessed a FUSF."
+    ],
+    "exampleNotes": [
+        ""
     ]
 }

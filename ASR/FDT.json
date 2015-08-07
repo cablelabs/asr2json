@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-05T21:09:13.041Z",
+    "processed": "2015-08-07T16:38:17.508Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Frame Due Time",
@@ -71,5 +71,8 @@
     ],
     "fieldNotes": [
         "Types of changes that require coordination are CIC redirects, switch conversions, mutual trunking arrangement, point code changes, traffic rehome/reroutes, call through testing requests, cut over, etc."
+    ],
+    "exampleNotes": [
+        ""
     ]
 }

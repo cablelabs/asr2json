@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-05T21:09:13.041Z",
+    "processed": "2015-08-07T16:38:17.508Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Unbundled Network Elements",
@@ -26,6 +26,9 @@
         "Optional when the CC field is populated and the first position of the REQTYP field is “M”, “S” or “L”, otherwise prohibited."
     ],
     "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
         ""
     ]
 }

@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-05T21:09:13.041Z",
+    "processed": "2015-08-07T16:38:17.508Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Two Six Code",
@@ -23,6 +23,9 @@
         "Otherwise prohibited."
     ],
     "fieldNotes": [
-        "The code set is unique to each established trunk group or CCS Link Set and is provided to the customer on the Firm Order Confirmation.  The TSC entry may then be populated by the customer when ordering changes, additions or deletions to an existing trunk group or CCS Link Set."
+        "The code set is unique to each established trunk group or CCS Link Set and is provided to the customer on the Firm Order Confirmation. The TSC entry may then be populated by the customer when ordering changes, additions or deletions to an existing trunk group or CCS Link Set."
+    ],
+    "exampleNotes": [
+        ""
     ]
 }

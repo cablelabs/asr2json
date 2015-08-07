@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-05T21:09:13.041Z",
+    "processed": "2015-08-07T16:38:17.508Z",
     "form": "ASR",
     "section": "CONTACT",
     "name": "Design Routing Code",
@@ -26,5 +26,8 @@
         "The routing code represents the following information: Company Street Floor Room City State/Province ZIP Code",
         "When populated, this will be the first choice for routing the DLR.",
         "Valid DRC codes are outlined in Telcordia Technologies’ practice BR-751-100-465."
+    ],
+    "exampleNotes": [
+        ""
     ]
 }

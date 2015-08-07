@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-05T21:09:13.041Z",
+    "processed": "2015-08-07T16:38:17.508Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Response Type Requested",
@@ -10,10 +10,7 @@
     "characteristics": "AlphaNumeric",
     "usage": "Required",
     "example": [
-        "2Thisexampleillustratesanumericvaluebutisleft",
-        "justifiedsinceitistreatedastext.",
-        "N",
-        "S"
+        "2"
     ],
     "definition": "Identifies the type of confirmation response requested by the customer.",
     "validEntry": [
@@ -40,5 +37,8 @@
     ],
     "fieldNotes": [
         "Changes to this field are only permitted prior to confirmation."
+    ],
+    "exampleNotes": [
+        "This example illustrates a numeric value but is left justified since it is treated as text. N S"
     ]
 }

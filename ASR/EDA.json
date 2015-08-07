@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-05T21:09:13.041Z",
+    "processed": "2015-08-07T16:38:17.508Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Early Date Acceptance",
@@ -30,5 +30,8 @@
     "fieldNotes": [
         "Population of this field specifies that the customer agrees to accept billing based on the provider due date returned on the confirmation notice.",
         "Population of this field will not result in expedite charges being billed."
+    ],
+    "exampleNotes": [
+        ""
     ]
 }

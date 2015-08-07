@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-05T21:09:13.041Z",
+    "processed": "2015-08-07T16:38:17.508Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Additional Forms",
@@ -16,7 +16,7 @@
     "validEntry": [
         "Character Position Valid Entry Attached Form(s)",
         "1 Y ACI Form",
-        "2  Reserved for future",
+        "2 Reserved for future",
         "use",
         "3 Y NAI Form",
         "4 Y EOD Form",
@@ -33,6 +33,9 @@
         "Required when the associated request form(s) is applicable and sent, otherwise prohibited."
     ],
     "fieldNotes": [
-        "The customer should populate the appropriate character position(s) to indicate which additional form(s) is attached."
+        "The customer should populate the appropriate character position(s)to indicate which additional form(s) is attached."
+    ],
+    "exampleNotes": [
+        ""
     ]
 }

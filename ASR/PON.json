@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-05T21:09:13.041Z",
+    "processed": "2015-08-07T16:38:17.508Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Purchase Order Number",
@@ -22,5 +22,8 @@
     ],
     "fieldNotes": [
         "The Purchase Order Number may be reused after two years from the due date of the original request."
+    ],
+    "exampleNotes": [
+        ""
     ]
 }
