@@ -1,17 +1,16 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-06T17:06:04.285Z",
+    "processed": "2015-08-07T17:14:57.127Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Interconnection Screening Telephone Number",
     "title": "ISTN",
     "fieldNumber": "68",
-    "minimumLength": " ",
+    "minimumLength": "",
     "maximumLength": "10",
     "characteristics": "Numeric",
     "usage": "Conditional",
-    "example": " ",
-    "definition": "  Identifies the telephone number used for billing or translation purposes. ",
+    "definition": " Identifies the telephone number used for billing or translation purposes. ",
     "validEntry": [
         {
             "value": "",

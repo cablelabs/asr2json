@@ -1,17 +1,16 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-06T17:06:04.271Z",
+    "processed": "2015-08-07T17:14:57.114Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Date of Agency Authorization",
     "title": "DATED",
     "fieldNumber": "40",
-    "minimumLength": " ",
+    "minimumLength": "",
     "maximumLength": "10",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": " ",
-    "definition": "  Identifies the date appearing on the agency authorization which was previously submitted to the provider.  ",
+    "definition": " Identifies the date appearing on the agency authorization which was previously submitted to the provider.  ",
     "validEntry": [
         {
             "value": "",

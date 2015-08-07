@@ -1,17 +1,16 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-06T17:06:04.292Z",
+    "processed": "2015-08-07T17:14:57.133Z",
     "form": "ASR",
     "section": "BILL",
     "name": " Access Customer Name Abbreviation",
     "title": "ACNA",
     "fieldNumber": "83",
-    "minimumLength": " ",
+    "minimumLength": "",
     "maximumLength": "3",
     "characteristics": "Alpha",
     "usage": "Required",
-    "example": " ",
-    "definition": "  Identifies the COMMON LANGUAGE IAC code for the customer who should receive the bill for the ordered service. ",
+    "definition": " Identifies the COMMON LANGUAGE IAC code for the customer who should receive the bill for the ordered service. ",
     "validEntry": [
         {
             "value": "",
@@ -29,7 +28,7 @@
     "fieldNotes": [
         "The format and structure of this field is defined by    Identification of Service Providers for Information   Exchange.",
         "This code is established prior to the submission of   the ASR.",
-        "Billing to an end user who does not have an IAC   code is specified with an entry of “ZZZ”.  When   utilizing “ZZZ” the Bill Section of the ASR Form   should be completed with the end user billing   information."
+        "Billing to an end user who does not have an IAC   code is specified with an entry of “ZZZ”. When   utilizing “ZZZ” the Bill Section of the ASR Form   should be completed with the end user billing   information."
     ],
     "exampleNotes": []
 }

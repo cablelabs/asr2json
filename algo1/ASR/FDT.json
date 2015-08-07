@@ -1,17 +1,16 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-06T17:06:04.253Z",
+    "processed": "2015-08-07T17:14:57.099Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Frame Due Time",
     "title": "FDT",
     "fieldNumber": "13",
-    "minimumLength": " ",
+    "minimumLength": "",
     "maximumLength": "7",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": " ",
-    "definition": "  Provides special handling instructions for the connection disconnection or coordination of changes for this request. ",
+    "definition": " Provides special handling instructions for the connection disconnection or coordination of changes for this request. ",
     "validEntry": [
         {
             "value": "",

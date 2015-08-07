@@ -1,17 +1,16 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-06T17:06:04.274Z",
+    "processed": "2015-08-07T17:14:57.117Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Fiber Network Type",
     "title": "FNT",
     "fieldNumber": "49",
-    "minimumLength": " ",
+    "minimumLength": "",
     "maximumLength": "1",
     "characteristics": "Alpha",
     "usage": "Conditional",
-    "example": " ",
-    "definition": "  Identifies the type of network to which the fiber based service is being assigned. ",
+    "definition": " Identifies the type of network to which the fiber based service is being assigned. ",
     "validEntry": [
         {
             "value": "A",

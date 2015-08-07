@@ -1,17 +1,16 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-06T17:06:04.264Z",
+    "processed": "2015-08-07T17:14:57.109Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Switched Ethernet Indicator",
     "title": "SEI",
     "fieldNumber": "28",
-    "minimumLength": " ",
+    "minimumLength": "",
     "maximumLength": "1",
     "characteristics": "Alpha",
     "usage": "Conditional",
-    "example": " ",
-    "definition": "  Identifies this service request is ordering a UNI/ENNI connection to a provider owned Ethernet switch/router with the Switched Ethernet Services Form. ",
+    "definition": " Identifies this service request is ordering a UNI/ENNI connection to a provider owned Ethernet switch/router with the Switched Ethernet Services Form. ",
     "validEntry": [
         {
             "value": "Y",

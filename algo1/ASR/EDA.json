@@ -1,17 +1,16 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-06T17:06:04.269Z",
+    "processed": "2015-08-07T17:14:57.113Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Early Date Acceptance",
     "title": "EDA",
     "fieldNumber": "36",
-    "minimumLength": " ",
+    "minimumLength": "",
     "maximumLength": "1",
     "characteristics": "Alpha",
     "usage": "Conditional",
-    "example": " ",
-    "definition": "  Indicates that the customer agrees to accept an earlier due date on their confirmation notice than the desired due date requested if the provider can accommodate an earlier date.  ",
+    "definition": " Indicates that the customer agrees to accept an earlier due date on their confirmation notice than the desired due date requested if the provider can accommodate an earlier date.  ",
     "validEntry": [
         {
             "value": "Y",

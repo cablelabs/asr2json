@@ -1,17 +1,16 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-06T17:06:04.256Z",
+    "processed": "2015-08-07T17:14:57.102Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Requisition Type and Status",
     "title": "REQTYP",
     "fieldNumber": "21",
-    "minimumLength": " ",
+    "minimumLength": "",
     "maximumLength": "2",
     "characteristics": "Alpha",
     "usage": "Required",
-    "example": " ",
-    "definition": "  Identifies the type of service being requested and the status of the request. ",
+    "definition": " Identifies the type of service being requested and the status of the request. ",
     "validEntry": [
         {
             "value": "",
@@ -88,6 +87,10 @@
         {
             "value": "",
             "description": "Service"
+        },
+        {
+            "value": "",
+            "description": ""
         },
         {
             "value": "",

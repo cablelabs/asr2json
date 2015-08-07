@@ -1,17 +1,16 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-06T17:06:04.275Z",
+    "processed": "2015-08-07T17:14:57.118Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Primary Service Location",
     "title": "PSL",
     "fieldNumber": "52",
-    "minimumLength": " ",
+    "minimumLength": "",
     "maximumLength": "11",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": " ",
-    "definition": "  Identifies the primary service location when the terminating and the originating points are not the ACTL. ",
+    "definition": " Identifies the primary service location when the terminating and the originating points are not the ACTL. ",
     "validEntry": [
         {
             "value": "",

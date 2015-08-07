@@ -1,17 +1,16 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-06T17:06:04.273Z",
+    "processed": "2015-08-07T17:14:57.116Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Facility Billing Arrangement",
     "title": "FBA",
     "fieldNumber": "47",
-    "minimumLength": " ",
+    "minimumLength": "",
     "maximumLength": "4",
     "characteristics": "Alpha",
     "usage": "Conditional",
-    "example": " ",
-    "definition": "  Indicates a special arrangement has been negotiated between the host customer of a higher level service and the subsequent customer of the lower level service.  ",
+    "definition": " Indicates a special arrangement has been negotiated between the host customer of a higher level service and the subsequent customer of the lower level service.  ",
     "validEntry": [
         {
             "value": "",
@@ -88,6 +87,7 @@
     ],
     "usageNotes": [
         "Required when the ACT field is “N” “C” or “T” and   the ACNA field is different from the ACNA   associated with the facility (CFA and/or SCFA) and   the UNE and CC fields are not populated.",
+        "",
         "Optional when the ACT field is “R” and the ACNA   field is different from the ACNA associated with the   facility (CFA and/or SCFA) and the UNE and CC   fields are not populated.",
         "Otherwise prohibited."
     ],

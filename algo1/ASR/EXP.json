@@ -1,17 +1,16 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-06T17:06:04.268Z",
+    "processed": "2015-08-07T17:14:57.113Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Expedite",
     "title": "EXP",
     "fieldNumber": "35",
-    "minimumLength": " ",
+    "minimumLength": "",
     "maximumLength": "1",
     "characteristics": "Alpha",
     "usage": "Conditional",
-    "example": " ",
-    "definition": "  Indicates that expedited treatment is requested and any charges generated in provisioning this request (e.g. additional engineering charges or labor charges if applicable) will be accepted.  ",
+    "definition": " Indicates that expedited treatment is requested and any charges generated in provisioning this request (e.g. additional engineering charges or labor charges if applicable) will be accepted.  ",
     "validEntry": [
         {
             "value": "Y",

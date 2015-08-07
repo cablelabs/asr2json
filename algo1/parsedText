@@ -2236,7 +2236,8 @@ NOTE 2:
 When the first position is “A” the fourth position is
 prohibited.  
 NOTE 3:
-When the first position is “C” or “E” and EF is being
+When the first position is “C” or “E” and EF is bein
+g
 ordered separately RPON is required. 
 3-87
 ATIS-0404001-0050 Effective September 13 2003 
@@ -2685,7 +2686,8 @@ numeric characters).
 4. Network Entity Code – Positions 9 through 11
 describe the functional category of equipment or work
 center that is contained in a structure. Equipment
-categories including central office switching and
+categories including central office s
+witching and
 ancillary equipment or non-switching or access
 terminations are associated with a building or network
 site for purposes of maintaining equipment inventories
@@ -3951,7 +3953,8 @@ NOTE 1:
 Required when the IMPCON field is populated
 otherwise prohibited. 
 DATA CHARACTERISTICS:
-14 numeric characters (excluding 
+14 numeric characters 
+(excluding 
 3 preprinted hyphens) 
 EXAMPLE:
 2 01-981-3500-35 8 7 

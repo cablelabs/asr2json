@@ -1,17 +1,16 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-06T17:06:04.274Z",
+    "processed": "2015-08-07T17:14:57.117Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Related Fiber Network Identification",
     "title": "RFNI",
     "fieldNumber": "50",
-    "minimumLength": " ",
+    "minimumLength": "",
     "maximumLength": "13",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": " ",
-    "definition": "  Identifies the associated fiber based network information for this request. ",
+    "definition": " Identifies the associated fiber based network information for this request. ",
     "validEntry": [
         {
             "value": "",

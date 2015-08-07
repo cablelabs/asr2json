@@ -1,17 +1,16 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-06T17:06:04.290Z",
+    "processed": "2015-08-07T17:14:57.132Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Telecommunications Service Priority",
     "title": "TSP",
     "fieldNumber": "76",
-    "minimumLength": " ",
+    "minimumLength": "",
     "maximumLength": "12",
     "characteristics": "AlphaNumeric",
     "usage": "Optional",
-    "example": " ",
-    "definition": "  Indicates the provisioning and restoration priority as defined under the TSP Service Vendor Handbook.  ",
+    "definition": " Indicates the provisioning and restoration priority as defined under the TSP Service Vendor Handbook.  ",
     "validEntry": [
         {
             "value": "",

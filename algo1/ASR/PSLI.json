@@ -1,17 +1,16 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-06T17:06:04.275Z",
+    "processed": "2015-08-07T17:14:57.119Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Primary Service Location Indicator",
     "title": "PSLI",
     "fieldNumber": "53",
-    "minimumLength": " ",
+    "minimumLength": "",
     "maximumLength": "1",
     "characteristics": "Alpha",
     "usage": "Conditional",
-    "example": " ",
-    "definition": "  Identifies the use of the PSL field. ",
+    "definition": " Identifies the use of the PSL field. ",
     "validEntry": [
         {
             "value": "A",
@@ -53,6 +52,7 @@
     "usageNotes": [
         "Required when the CC and UNE fields are   populated and the ACTL field is not populated.",
         "Required when the ACT field is “N” or “C” the first   position of the REQTYP field is “M” and the CC or   WST fields or the CC and WST fields are   populated.",
+        "",
         "Prohibited when the ACT field is “D”.",
         "Otherwise optional."
     ],

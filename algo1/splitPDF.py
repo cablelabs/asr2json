@@ -72,21 +72,30 @@ pageRect = CGRectMake (0, 0, 612, 792)
 if splitPageNums[-1] < maxPages:
   splitPageNums.append(maxPages)
 
-startPageNum = 1
+startPageNum = splitPageNums[0]
+endPageNum = splitPageNums[1]
+
 for i, splitPageNum in enumerate(splitPageNums):
-  outputFN = '%s.part%d.%d_%d.pdf' % \
-             (baseFN, i + 1, startPageNum, splitPageNum)
+
+  # outputFN = '%s.part%d.%d_%d.pdf' % \
+  #            (baseFN, i + 1, startPageNum, splitPageNum)
+
+  outputFN = '%s.%d_%d.pdf' % \
+            (baseFN, startPageNum, endPageNum)
+
+  print i
   writeContext = CGPDFContextCreateWithFilename(outputFN, pageRect)
 
   print 'Writing page %d-%d to %s...' % \
-        (startPageNum, splitPageNum, outputFN)
+        (startPageNum, endPageNum, outputFN)
 
-  for pageNum in xrange(startPageNum, splitPageNum + 1):
+  for pageNum in xrange(startPageNum, endPageNum + 1):
     mediaBox = inputDoc.getMediaBox(pageNum)
     writeContext.beginPage(mediaBox)
     writeContext.drawPDFDocument(mediaBox, inputDoc, pageNum)
     writeContext.endPage()
 
-  startPageNum = splitPageNum + 1
+  break
+  # startPageNum = splitPageNum + 1
 
 print 'Done: %d file(s) generated.' % len(splitPageNums)

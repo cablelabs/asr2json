@@ -1,17 +1,16 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-06T17:06:04.256Z",
+    "processed": "2015-08-07T17:14:57.102Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Basic Serving Arrangement",
     "title": "BSA",
     "fieldNumber": "20",
-    "minimumLength": " ",
+    "minimumLength": "",
     "maximumLength": "1",
     "characteristics": "Alpha",
     "usage": "Conditional",
-    "example": " ",
-    "definition": "  Identifies the requirement for a Basic Serving Arrangement (BSA) which is the minimum necessary transport arrangement for the delivery of the unbundled network features and functions or for a Basic Service Element (BSE) associated with a Basic Serving Arrangement. ",
+    "definition": " Identifies the requirement for a Basic Serving Arrangement (BSA) which is the minimum necessary transport arrangement for the delivery of the unbundled network features and functions or for a Basic Service Element (BSE) associated with a Basic Serving Arrangement. ",
     "validEntry": [
         {
             "value": "Y",

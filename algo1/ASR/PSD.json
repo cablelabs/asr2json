@@ -1,17 +1,16 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-06T17:06:04.297Z",
+    "processed": "2015-08-07T17:14:57.137Z",
     "form": "ASR",
     "section": "CONTACT",
     "name": " Promotion Subscription Date",
     "title": "PSD",
     "fieldNumber": "100",
-    "minimumLength": " ",
+    "minimumLength": "",
     "maximumLength": "10",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": " ",
-    "definition": "  Identifies the date the customer requested or contracted the pricing promotion from the provider. ",
+    "definition": " Identifies the date the customer requested or contracted the pricing promotion from the provider. ",
     "validEntry": [
         {
             "value": "",

@@ -1,17 +1,16 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-06T17:06:04.255Z",
+    "processed": "2015-08-07T17:14:57.101Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Intrastate IntraLATA Usage Percentage",
     "title": "LUP",
     "fieldNumber": "19",
-    "minimumLength": " ",
+    "minimumLength": "",
     "maximumLength": "3",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": " ",
-    "definition": "  Identifies the percent Intrastate IntraLATA usage for use with IntraLATA competition.  ",
+    "definition": " Identifies the percent Intrastate IntraLATA usage for use with IntraLATA competition.  ",
     "validEntry": [
         {
             "value": "",

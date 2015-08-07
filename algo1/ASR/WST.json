@@ -1,17 +1,16 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-06T17:06:04.263Z",
+    "processed": "2015-08-07T17:14:57.108Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Wireless Service Type",
     "title": "WST",
     "fieldNumber": "25",
-    "minimumLength": " ",
+    "minimumLength": "",
     "maximumLength": "1",
     "characteristics": "Alpha",
     "usage": "Conditional",
-    "example": " ",
-    "definition": "  Identifies the type of wireless service being requested. ",
+    "definition": " Identifies the type of wireless service being requested. ",
     "validEntry": [
         {
             "value": "A",

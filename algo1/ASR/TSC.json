@@ -1,17 +1,16 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-06T17:06:04.285Z",
+    "processed": "2015-08-07T17:14:57.127Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Two Six Code",
     "title": "TSC",
     "fieldNumber": "67",
-    "minimumLength": " ",
+    "minimumLength": "",
     "maximumLength": "8",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": " ",
-    "definition": "  Identifies a code assigned to a trunk group or a CCS Link Set.  ",
+    "definition": " Identifies a code assigned to a trunk group or a CCS Link Set.  ",
     "validEntry": [],
     "validEntryNotes": [],
     "usageNotes": [
@@ -20,7 +19,7 @@
         "Otherwise prohibited."
     ],
     "fieldNotes": [
-        "The code set is unique to each established trunk   group or CCS Link Set and is provided to the   customer on the Firm Order Confirmation.  The   TSC entry may then be populated by the customer   when ordering changes additions or deletions to an   existing trunk group or CCS Link Set."
+        "The code set is unique to each established trunk   group or CCS Link Set and is provided to the   customer on the Firm Order Confirmation. The   TSC entry may then be populated by the customer   when ordering changes additions or deletions to an   existing trunk group or CCS Link Set."
     ],
     "exampleNotes": []
 }

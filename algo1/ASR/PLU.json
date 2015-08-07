@@ -1,17 +1,16 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-06T17:06:04.278Z",
+    "processed": "2015-08-07T17:14:57.121Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Percentage of Local Usage",
     "title": "PLU",
     "fieldNumber": "57",
-    "minimumLength": " ",
+    "minimumLength": "",
     "maximumLength": "3",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": " ",
-    "definition": "  Identifies the percent of local usage associated with trunk groups carrying local traffic between a LEC and a CLEC. ",
+    "definition": " Identifies the percent of local usage associated with trunk groups carrying local traffic between a LEC and a CLEC. ",
     "validEntry": [
         {
             "value": "",

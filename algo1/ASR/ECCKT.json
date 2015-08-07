@@ -1,17 +1,16 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-06T17:06:04.281Z",
+    "processed": "2015-08-07T17:14:57.123Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Exchange Company Circuit ID",
     "title": "ECCKT",
     "fieldNumber": "60",
-    "minimumLength": " ",
-    "maximumLength": "4",
+    "minimumLength": "",
+    "maximumLength": "53",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": "  A2/SBFS/201/981/3500//123 A2/LBFS/032719/001/NY 2.COMMONLANGUAGEMessageTrunkCircuitCodes StructurefortheIdentificationofTelecommunications ConnectionsfortheNorthAmericanTelecommunications SystemorbyCOMMONLANGUAGEinBR-795-400-100. AbriefsummaryoftheformatcanbefoundinASOG Practice000Section2.14.2. 1234/AF54IECN/MDSNWI16CG0/M- /DSNWI020IT /DF55IE/BSTNMAAACG0/M- /MCDNMACOCG1 3.COMMONLANGUAGEFacilityCodes(CLFICodes)as IdentificationofTelecommunicationsConnectionsforthe NorthAmericanTelecommunicationsSystemorby COMMONLANGUAGEinBR-795-450-100.Abrief summaryoftheformatcanbefoundinASOGPractice 000Section2.14.5. 101/T1/NYCMNY50/NYCMNY54W01",
-    "definition": "  Identifies the provider circuit ID or multiple circuit IDs.  ",
+    "definition": " Identifies the provider circuit ID or multiple circuit IDs.  ",
     "validEntry": [
         {
             "value": "",
@@ -36,6 +35,10 @@
         {
             "value": "",
             "description": "ASOG Practice 000 Section 2.14.3 and 2.14.4."
+        },
+        {
+            "value": "",
+            "description": ""
         }
     ],
     "validEntryNotes": [
@@ -57,7 +60,8 @@
         "Use of ranging is based on customer/provider   negotiations. Ranges should be shown within the   appropriate component of the ID by specifying the   lowest value of the component hyphen highest   value of the component e.g. trunk numbers 3500   through 3512 would be shown as 3500-3512.",
         "When disconnecting all circuits in a given account   “ALL” should be entered in this field the BAN field   populated and the ACT field should contain a “D”.",
         "The COMMON LANGUAGE Special Service Circuit    Code in this field should not reflect a value that    equates to the EVC circuit identification.",
-        "The format and structure of the field is defined by   ANSI standards."
+        "The format and structure of the field is defined by   ANSI standards.",
+        ""
     ],
     "exampleNotes": []
 }

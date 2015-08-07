@@ -1,17 +1,16 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-06T17:06:04.278Z",
+    "processed": "2015-08-07T17:14:57.121Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Wireless Site Indicator",
     "title": "WSI",
     "fieldNumber": "58",
-    "minimumLength": " ",
+    "minimumLength": "",
     "maximumLength": "1",
     "characteristics": "Alpha",
     "usage": "Conditional",
-    "example": " ",
-    "definition": "  Identifies that the termination is at a wireless site. ",
+    "definition": " Identifies that the termination is at a wireless site. ",
     "validEntry": [
         {
             "value": "N",

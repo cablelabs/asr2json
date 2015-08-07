@@ -2,9 +2,9 @@ var fs = require('fs');
 //var exports = module.exports = {};
 
 
-module.exports.jsonCon = function(){
+module.exports.jsonCon = function(fileName){
     var text = "";
-    var json = JSON.parse(fs.readFileSync('asr.json', 'utf8'));
+    var json = JSON.parse(fs.readFileSync(fileName, 'utf8'));
     getJsonData(json);
 
     function getJsonData(json){

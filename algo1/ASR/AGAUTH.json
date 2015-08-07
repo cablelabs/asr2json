@@ -1,17 +1,16 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-06T17:06:04.271Z",
+    "processed": "2015-08-07T17:14:57.114Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Agency Authorization Status",
     "title": "AGAUTH",
     "fieldNumber": "39",
-    "minimumLength": " ",
+    "minimumLength": "",
     "maximumLength": "1",
     "characteristics": "Alpha",
     "usage": "Conditional",
-    "example": " ",
-    "definition": "  Indicates that a customer is acting as another customer's agent.",
+    "definition": " Indicates that a customer is acting as another customer's agent.",
     "validEntry": [
         {
             "value": "B",

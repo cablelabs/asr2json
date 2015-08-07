@@ -1,17 +1,16 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-06T17:06:04.250Z",
+    "processed": "2015-08-07T17:14:57.097Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Quote Authorized",
     "title": "QA",
     "fieldNumber": "10",
-    "minimumLength": " ",
+    "minimumLength": "",
     "maximumLength": "1",
     "characteristics": "Alpha",
     "usage": "Conditional",
-    "example": " ",
-    "definition": "  Indicates that a quotation charge for special construction is authorized. ",
+    "definition": " Indicates that a quotation charge for special construction is authorized. ",
     "validEntry": [
         {
             "value": "Y",

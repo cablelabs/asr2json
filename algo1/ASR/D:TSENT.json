@@ -1,17 +1,16 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-06T17:06:04.250Z",
+    "processed": "2015-08-07T17:14:57.097Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Date and Time Sent",
-    "title": "D:TSENT",
+    "title": "D/TSENT",
     "fieldNumber": "9",
-    "minimumLength": " ",
+    "minimumLength": "",
     "maximumLength": "17",
     "characteristics": "AlphaNumeric",
     "usage": "Required",
-    "example": " ",
-    "definition": "  Identifies the date and time that the Access Service Request is sent by the customer. ",
+    "definition": " Identifies the date and time that the Access Service Request is sent by the customer. ",
     "validEntry": [
         {
             "value": "",

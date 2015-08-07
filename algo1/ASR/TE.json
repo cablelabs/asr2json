@@ -1,17 +1,16 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-06T17:06:04.293Z",
+    "processed": "2015-08-07T17:14:57.133Z",
     "form": "ASR",
     "section": "BILL",
     "name": " Tax Exemption",
     "title": "TE",
     "fieldNumber": "84",
-    "minimumLength": " ",
+    "minimumLength": "",
     "maximumLength": "1",
     "characteristics": "Alpha",
     "usage": "Conditional",
-    "example": " ",
-    "definition": "  Indicates that the customer has submitted a tax exemption form to the provider. ",
+    "definition": " Indicates that the customer has submitted a tax exemption form to the provider. ",
     "validEntry": [
         {
             "value": "Entry",

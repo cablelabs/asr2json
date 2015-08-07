@@ -1,17 +1,16 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-06T17:06:04.278Z",
+    "processed": "2015-08-07T17:14:57.121Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Percentage of Interstate Usage",
     "title": "PIU",
     "fieldNumber": "56",
-    "minimumLength": " ",
+    "minimumLength": "",
     "maximumLength": "3",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": " ",
-    "definition": "  Identifies the expected Interstate Usage for the access service on this request.  Both Interstate and Intrastate may be ordered on a single Access Service Request by specifying the applicable percent of Interstate usage.  However two Access Service Requests may be related to one another through the entry RPON (Related Purchase Order Number). ",
+    "definition": " Identifies the expected Interstate Usage for the access service on this request.  Both Interstate and Intrastate may be ordered on a single Access Service Request by specifying the applicable percent of Interstate usage. However two Access Service Requests may be related to one another through the entry RPON (Related Purchase Order Number). ",
     "validEntry": [
         {
             "value": "",

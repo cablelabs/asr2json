@@ -1,37 +1,59 @@
 //var pdfConverter = require('/Users/wlopes/IdeaProjects/node_modules/pdf2json');
 var fs = require('fs');
+var fileName = "";
+var startPageNo = "" ;
+var endPageNo = "";
+var execute = require('child_process').exec;
+var jsonConsolidator = require("./jsonConsolidator.js");
 
-/**
-* Split the pdf based on page number
-*/
-var execute = require('child_process').exec,child;
-child = execute('python splitPDF.py a50bk.pdf 372 533',
-  function (error, stdout, stderr) {
-    console.log('stdout: ' + stdout);
-    console.log('stderr: ' + stderr);
-    if (error !== null) {
-      console.log('exec error: ' + error);
+process.argv.forEach(function(val, index, array){
+    switch(index){
+        case 2:
+            fileName = val;
+            break;
+        case 3:
+            startPageNo = val;
+            break;
+        case 4:
+            endPageNo = val;
+            break;
+        default:
+            break;
     }
 });
 
 /**
-* Convert the pdf to json
+* Split the pdf based on page number
 */
-var exec = require('child_process').exec,child;
-child = exec('pdf2json -f asr.pdf -s',{maxBuffer: 2056 * 500},
-function (error, stdout, stderr) {
-    console.log('stdout: ' + stdout);
-    console.log('stderr: ' + stderr);
+var command = 'python splitPDF.py ' + fileName + ' ' + startPageNo + ' ' +endPageNo;
+child = execute(command, function (error, stdout, stderr) {
     if (error !== null) {
-        console.log('exec error: ' + error);
+      console.log('exec error: ' + error);
+    }else{
+
+    /**
+    * Convert the pdf to json
+    */
+        fileName = fileName.substring(0,fileName.indexOf("."));
+        child = execute('pdf2json -f ' + fileName + '.' + startPageNo + '_' +endPageNo + '.pdf -s',{maxBuffer: 2056 * 500},function (error, stdout, stderr) {
+            if (error !== null) {
+                console.log('exec error: ' + error);
+            }else{
+                fileName = fileName + '.' + startPageNo + '_' +endPageNo + '.json';
+                consolidate(fileName);
+            }
+        });
     }
 });
 
 /**
 * Consolidator for lines based on y-coordinate, written to a text file
 */
-var jsonConsolidator = require("./jsonConsolidator.js");
-jsonConsolidator.jsonCon();
+function consolidate(fileName){
+    var jsonConsolidator = require("./jsonConsolidator.js");
+    jsonConsolidator.jsonCon(fileName);
+    read();
+}
 
 //TODO formNumber( if applicable)
 
@@ -42,7 +64,7 @@ field.keywordFlag = true;     //if the keyword is encountered
 var tillEntries = 0;    //for valid entries
 
 //read asynchronously
-//fs.readFile("parsedText.txt", "utf8", function (error, data) {
+//fs.readFile("parsedText", "utf8", function (error, data) {
 //    if(error){
 //        console.log(error);
 //    }
@@ -50,32 +72,29 @@ var tillEntries = 0;    //for valid entries
 //    parseLine(lines);
 //});
 
-var readableStream = fs.createReadStream('parsedText.txt');
-var data = ' ';
-readableStream.setEncoding('utf8');
-
-
 /**
-* Read the data in the stream
+* Read the stream
 */
-readableStream.on('data',function(chunk){
-    data = data + chunk;
-});
-
-
-/**
-* After reading the last line of the stream
-*/
-readableStream.on('end',function(){
-    fileContent = data.split("\n");
-    clear();
-    for(var i = 0; i< fileContent.length;i++){
-//        parseLine(fileContent[i]);
-        if(i == fileContent.length -1){
-            writeToFile();      //for the last field
+function read(){
+    var readableStream = fs.createReadStream('parsedText');
+    var data = ' ';
+    readableStream.setEncoding('utf8');
+    readableStream.on('data',function(chunk){
+        data = data + chunk;
+    });
+    readableStream.on('end',function(){
+        fileContent = data.split("\n");
+        clear();
+        for(var i = 0; i< fileContent.length;i++){
+            parseLine(fileContent[i]);
+            if(i == fileContent.length -1){ //for the last field
+                getDescription(field.content);
+                writeToFile();
+            }
         }
-    }
-});
+    });
+}
+
 
 
 /**
@@ -175,10 +194,12 @@ function getFieldInfo(line){
     var lineConsidered = 0;                     //if the line is already considered
     var newPage = isNewPage(line);
     if(newPage){    //ignore the line number, use it to store the info as no other keyword will be seen
-        previous = " ";
+        getDescription(field.content);
+        field.content = "";
+        previous = "";
     }
     if(line.indexOf("ATIS") > -1 || line.indexOf("Issued") > -1 || line.indexOf("Implemented") > -1){   //ignore the lines
-        previous = " ";
+        previous = "";
     }
     getVersion(line);       //use atis for the version number
     var re = /^\d+(\.).*/;
@@ -199,7 +220,7 @@ function getFieldInfo(line){
                 lineConsidered = 1;
             }else{
                 field.fieldNumber = prevFieldNumber;
-                previous = " ";
+                previous = "";
             }
         }
     }
@@ -207,7 +228,7 @@ function getFieldInfo(line){
     field.keywordFlag = checkKeyword(line);
     if(field.keywordFlag != false){
         getDescription(field.content);
-        field.content = " ";
+        field.content = "";
         getKeyword(line);
     }else if(field.previousField != "field"  && previous === field.previousField){
         if(field.previousField != "valid entry" && field.previousField != "validEntryNotes"){
@@ -269,7 +290,7 @@ function processedAt(){
 function getTitle(line,hyphen){
     var title = String(line.match(/([A-Z\-\–]+)-(.*)/));
     field.title = line.substring(line.indexOf(".")+1,line.indexOf(hyphen));
-    field.title = field.title.replace('/',':').trim();
+    field.title = field.title.trim();
     if(line.indexOf("(") > -1 && line.indexOf(")") > -1){
         field.title = field.title + " " +line.substring(line.indexOf("(")+1,line.indexOf(")"));
     }
@@ -359,11 +380,12 @@ function getDescription(line){
                 getLength(line);
                 break;
             case "example":
-                var values = line.split("\n");
-                for(var tillValues = 0; tillValues < values.length;tillValues++){
-                    values[tillValues] = values[tillValues].replace(/\s/g,"");
-                    field.example = field.example + " " + values[tillValues];
-                }
+/*             Example is removed as the format is not right */
+//                var values = line.split("\n");
+//                for(var tillValues = 0; tillValues < values.length;tillValues++){
+//                    values[tillValues] = values[tillValues].replace(/\s/g,"");
+//                    field.example = (field.example + " " + values[tillValues]).trim();
+//                }
                 break;
             case "usage":
                 line = line.replace(/\n/g," ");
@@ -395,23 +417,18 @@ function getDescription(line){
 */
 function processValidEntry(line){
     line = line.trim();
-//    if(line.indexOf("\n") > -1 && line.indexOf("=") == -1){   //check for tables
-//        field.validEntry = " ";
-//        field.validEntry = line;
-//    }else{
-        var entries = line.split("\n");
-        for(var entryCounter = 0; entryCounter < entries.length; entryCounter++){
-            field.validEntry[tillEntries] = {};
-            if(entries[entryCounter].indexOf("=") > -1){
-                field.validEntry[tillEntries].value = entries[entryCounter].split("=")[0].trim();
-                field.validEntry[tillEntries].description = entries[entryCounter].split("=")[1].trim();
-            }else{
-                field.validEntry[tillEntries].value = "";
-                field.validEntry[tillEntries].description = entries[entryCounter];
-            }
-            tillEntries++;
+    var entries = line.split("\n");
+    for(var entryCounter = 0; entryCounter < entries.length; entryCounter++){
+        field.validEntry[tillEntries] = {};
+        if(entries[entryCounter].indexOf("=") > -1){
+            field.validEntry[tillEntries].value = entries[entryCounter].split("=")[0].trim();
+            field.validEntry[tillEntries].description = entries[entryCounter].split("=")[1].trim();
+        }else{
+            field.validEntry[tillEntries].value = "";
+            field.validEntry[tillEntries].description = entries[entryCounter];
         }
-//    }
+        tillEntries++;
+    }
 }
 
 
@@ -426,7 +443,7 @@ function getLength(line){
             getLengthValues(values[i]);
         }
     }else{
-        field.minimumLength = " ";
+        field.minimumLength = "";
         getLengthValues(line);
     }
 }
@@ -472,10 +489,10 @@ function isNewPage(line){
 * Initialize and clear previous values stored
 */
 function clear(){
-    field.previousField = " ";
-    field.definition = " ";
-    field.example = " ";
-    field.content = " ";
+    field.previousField = "";
+    field.definition = "";
+    field.example = "";
+    field.content = "";
     tillEntries = 0;
     field.fieldNotes = [];
     field.usageNotes = [];
@@ -489,9 +506,11 @@ function clear(){
 * Write the output to the file
 */
 function writeToFile() {
+var title = field.title;
+title = title.replace('/',':');
     if(field.fieldNumber != 0){
 //        console.log(JSON.stringify(field, replacer, 4));
-        outputFileName =  field.form + "/" + field.title + ".json";
+        outputFileName =  field.form + "/" + title + ".json";
         fs.writeFile(outputFileName, JSON.stringify(field, replacer, 4), function(err) {
         if (err) {
             return console.log(err);
@@ -503,9 +522,10 @@ function writeToFile() {
 
 /**
 * Replace the keys that should not be displayed/written to a file
+* example is removed as the format is not right
 */
 function replacer(key, value) {
-    if ( key=="keywordFlag" || key=="previousField" || key=="content") {
+    if ( key=="keywordFlag" || key=="previousField" || key=="content" || key == "example") {
         return undefined;
     }
     return value;

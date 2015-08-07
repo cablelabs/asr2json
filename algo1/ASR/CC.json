@@ -1,17 +1,16 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-06T17:06:04.249Z",
+    "processed": "2015-08-07T17:14:57.096Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Company Code",
     "title": "CC",
     "fieldNumber": "7",
-    "minimumLength": " ",
+    "minimumLength": "",
     "maximumLength": "4",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": " ",
-    "definition": "  Identifies the Exchange Carrier requesting local services. ",
+    "definition": " Identifies the Exchange Carrier requesting local services. ",
     "validEntry": [
         {
             "value": "",

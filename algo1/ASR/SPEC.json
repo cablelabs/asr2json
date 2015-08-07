@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-06T17:06:04.291Z",
+    "processed": "2015-08-07T17:14:57.132Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Service and Product Enhancement Code",
@@ -10,8 +10,7 @@
     "maximumLength": "7",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": " ",
-    "definition": "  Identifies a specific product or service offering. ",
+    "definition": " Identifies a specific product or service offering. ",
     "validEntry": [
         {
             "value": "Positions 1-7",
@@ -27,7 +26,7 @@
         "Prohibited when the EVCI field is “A” otherwise   optional."
     ],
     "fieldNotes": [
-        "SPEC may be applicable for circuit level features   and options other than those already identified by   the Network Channel (NC) and Network Channel   Interface (NCI) codes.",
+        "SPEC may be applicable for circuit level features   and options other than those already identified by   the Network Channel (NC)and Network Channel   Interface (NCI) codes.",
         "Telcordia Technologies Inc. is the intellectual   property owner and administrator of SPEC. The   SPEC code structure and use are outlined in   Telcordia Technologies special report SR-2491."
     ],
     "exampleNotes": []

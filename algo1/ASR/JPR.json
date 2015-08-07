@@ -1,17 +1,16 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-06T17:06:04.273Z",
+    "processed": "2015-08-07T17:14:57.116Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Jointly Provided Ring",
     "title": "JPR",
     "fieldNumber": "45",
-    "minimumLength": " ",
+    "minimumLength": "",
     "maximumLength": "8",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": " ",
-    "definition": "  Indicates one of the Central Office nodes of the other provider on a jointly provided ring when the facility is immediately riding a protected ring. ",
+    "definition": " Indicates one of the Central Office nodes of the other provider on a jointly provided ring when the facility is immediately riding a protected ring. ",
     "validEntry": [
         {
             "value": "",
@@ -22,7 +21,8 @@
     "usageNotes": [
         "Optional when the first position of the REQTYP   field is “S” and the CFA or SCFA field on the   Transport form or ACI form or any of the ICFA (n)   fields on the NAI form contains a CFA of a jointly   provided ring.",
         "Optional when the first position of the REQTYP   field is “E” and the CFA (PRILOC) or CFA   (SECLOC) field on the EUSA Form or the CFA or   SCFA on theACI form or any of the ICFA(n) fields   on the NAI form contains a CFA of a jointly   provided ring.",
-        "Otherwise prohibited."
+        "Otherwise prohibited.",
+        ""
     ],
     "fieldNotes": [
         "A ring can consist of multiple node locations that   are not included in the ring CFA of a riding circuit   but are pass-through locations with another   provider on the ring who requires a copy of the ASR   for cross connection.",

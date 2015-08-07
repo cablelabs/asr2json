@@ -1,17 +1,16 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-06T17:06:04.272Z",
+    "processed": "2015-08-07T17:14:57.115Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Date of Lease Arrangement",
     "title": "LADATED",
     "fieldNumber": "43",
-    "minimumLength": " ",
+    "minimumLength": "",
     "maximumLength": "10",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": " ",
-    "definition": "  Identifies the date appearing on the lease arrangement.  ",
+    "definition": " Identifies the date appearing on the lease arrangement.  ",
     "validEntry": [
         {
             "value": "",

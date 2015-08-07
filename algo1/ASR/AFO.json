@@ -1,17 +1,16 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-06T17:06:04.267Z",
+    "processed": "2015-08-07T17:14:57.111Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Additional Forms ",
     "title": "AFO",
     "fieldNumber": "32",
-    "minimumLength": " ",
+    "minimumLength": "",
     "maximumLength": "5",
     "characteristics": "Alpha",
     "usage": "Conditional",
-    "example": " ",
-    "definition": "  Indicates which additional forms are being submitted with this request.   Character Position 1= Additional Circuit Information (ACI)  Form  Character Position 2= Reserved for future use  Character Position 3= Network Assignment Information (NAI)  Character Position 4= End Office Detail (EOD) Form  Character Position 5= Virtual Concatenation (VCAT) Form ",
+    "definition": " Indicates which additional forms are being submitted with this request.   Character Position 1= Additional Circuit Information (ACI)  Form  Character Position 2= Reserved for future use  Character Position 3= Network Assignment Information (NAI)  Character Position 4= End Office Detail (EOD) Form  Character Position 5= Virtual Concatenation (VCAT) Form ",
     "validEntry": [
         {
             "value": "",
@@ -23,7 +22,7 @@
         },
         {
             "value": "",
-            "description": "2  Reserved for future "
+            "description": "2 Reserved for future "
         },
         {
             "value": "",
@@ -45,6 +44,7 @@
     "validEntryNotes": [
         "Position 1 entry must be populated for a  supplement canceling all circuits contained on the initial ACI records; each individual circuit record on the supplement would carry a CKTACT = “K”.",
         "An entry in position 1 is not applicable when the first position of the REQTYP field is “R”.",
+        "",
         "An entry in position 1 must be used when position 3 is populated and the first position of the REQTYP field is “M” the entry in the QTY field is greater than one (1) and the QACI field on the Trunking  Form is populated.",
         "When position 3 is populated and the first position of the REQTYP field is “A” “E” or “S” and the entry  in the QTY field is greater than one (1) character position 1 must be populated.",
         "An entry in position 5 is only applicable when the first position of the REQTYP field is “E” “R” “S” “V” or “X”."
@@ -53,7 +53,7 @@
         "Required when the associated request form(s) is   applicable and sent otherwise prohibited."
     ],
     "fieldNotes": [
-        "The customer should populate the appropriate   character position(s) to indicate which additional   form(s) is attached."
+        "The customer should populate the appropriate   character position(s)to indicate which additional   form(s) is attached."
     ],
     "exampleNotes": []
 }
