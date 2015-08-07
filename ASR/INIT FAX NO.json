@@ -1,0 +1,27 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-07T17:35:31.050Z",
+    "form": "ASR",
+    "section": "CONTACT",
+    "name": "Initiator Facsimile Number",
+    "title": "INIT FAX NO",
+    "fieldNumber": "103",
+    "fieldLength": "10",
+    "characteristics": "Numeric",
+    "usage": "Optional",
+    "example": "",
+    "definition": "Identifies the fax number of the initiator.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

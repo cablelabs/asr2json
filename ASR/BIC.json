@@ -1,0 +1,57 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-07T17:35:31.050Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Exchange Company Initiated Change",
+    "title": "BIC",
+    "fieldNumber": "64",
+    "fieldLength": "1",
+    "characteristics": "Numeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Indicates the type of provider initiated change requested.",
+    "validEntry": [
+        {
+            "value": "1",
+            "description": "Trunk Group Service Request (TGSR)"
+        },
+        {
+            "value": "2",
+            "description": "Engineering Change"
+        },
+        {
+            "value": "3",
+            "description": "ICSC Record Change"
+        },
+        {
+            "value": "4",
+            "description": "Facility Transfer"
+        },
+        {
+            "value": "5",
+            "description": "Network Reconfiguration"
+        },
+        {
+            "value": "6",
+            "description": "Maintenance Consideration"
+        },
+        {
+            "value": "7",
+            "description": "Other"
+        }
+    ],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Prohibited when the ACT field is “M”, otherwise optional."
+    ],
+    "fieldNotes": [
+        "BIC entries are provided to the customer by the provider.",
+        "This field is valid on an ASR Form that responds to a provider initiated change."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

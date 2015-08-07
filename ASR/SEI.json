@@ -1,0 +1,36 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-07T17:35:31.050Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Switched Ethernet Indicator",
+    "title": "SEI",
+    "fieldNumber": "28",
+    "fieldLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies this service request is ordering a UNI/ENNI connection to a provider owned Ethernet switch/router with the Switched Ethernet Services Form.",
+    "validEntry": [
+        {
+            "value": "Y",
+            "description": "Switched Ethernet Services Form is associated with the"
+        },
+        {
+            "value": "",
+            "description": "request."
+        }
+    ],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the first position of the REQTYP field is “E” or “S” and Switched Ethernet services are being requested, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        "The Transport and End User Special Access Forms are not to be  used when the SEI field is populated."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

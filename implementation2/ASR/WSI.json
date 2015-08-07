@@ -1,0 +1,37 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-07T17:43:29.879Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Wireless Site Indicator",
+    "title": "WSI",
+    "fieldNumber": "58",
+    "fieldLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies that the termination is at a wireless site.",
+    "validEntry": [
+        {
+            "value": "N",
+            "description": "New"
+        },
+        {
+            "value": "E",
+            "description": "Existing"
+        }
+    ],
+    "validEntryNotes": [
+        "A valid entry of “New” indicates that this is the customer’s initial order to this wireless site.",
+        "A valid entry of “Existing” indicates that the customer has previously ordered to this wireless site. "
+    ],
+    "usageNotes": [
+        "Required when the ACT field is “N” and the first position of the REQTYP is “S” or “E” and the SECLOC field on the Transport or EUSA Form is a wireless site, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

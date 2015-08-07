@@ -1,0 +1,38 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-07T17:35:31.050Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Percentage of Local Usage",
+    "title": "PLU",
+    "fieldNumber": "57",
+    "fieldLength": "3",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the percent of local usage associated with trunk groups carrying local traffic between a LEC and a CLEC.",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "000 to 100"
+        },
+        {
+            "value": "LOF",
+            "description": "Letter on File"
+        }
+    ],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the CC field is populated and the first position of the REQTYP field is “M” and the ACT field is “N”, “C” or “R”.",
+        "Optional when the CC field is populated and the first position of the REQTYP field is “S” or “L” and the ACT field is “N”, “C”, “M”, “T” or “R”.",
+        "Otherwise prohibited."
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

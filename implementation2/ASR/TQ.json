@@ -1,0 +1,110 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-07T17:43:29.879Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Translation Questionnaire Request",
+    "title": "TQ",
+    "fieldNumber": "34",
+    "fieldLength": "2",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Indicates that a translation questionnaire is being submitted.",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "1st Position"
+        },
+        {
+            "value": "A",
+            "description": "No TQ attached"
+        },
+        {
+            "value": "B",
+            "description": "FGB translations"
+        },
+        {
+            "value": "C",
+            "description": "Code (NPA/NXX) Translation Routing Only"
+        },
+        {
+            "value": "D",
+            "description": "FGD translations"
+        },
+        {
+            "value": "E",
+            "description": "STP Translation Changes"
+        },
+        {
+            "value": "L",
+            "description": "Local translations"
+        },
+        {
+            "value": "M",
+            "description": "Local translations and Code Translation Routing"
+        },
+        {
+            "value": "S",
+            "description": "SAC only"
+        },
+        {
+            "value": "T",
+            "description": "FGD translations and SAC"
+        },
+        {
+            "value": "U",
+            "description": "FGB translations and SAC"
+        },
+        {
+            "value": "W",
+            "description": "Wireless translations"
+        },
+        {
+            "value": "X",
+            "description": "Wireless translations and Code Translation Routing"
+        },
+        {
+            "value": "1-9",
+            "description": "TQ on file"
+        },
+        {
+            "value": "",
+            "description": "2nd Position"
+        },
+        {
+            "value": "N",
+            "description": "No Trunking Form"
+        },
+        {
+            "value": "X",
+            "description": "Trunking Form (no trunk activity)"
+        },
+        {
+            "value": "Y",
+            "description": "Trunking Form (trunk activity)"
+        }
+    ],
+    "validEntryNotes": [
+        "When the first position of TQ is “A”, the ASR which has the TQ Form attached will be identified in the RPON field.",
+        "When the first position of TQ is “L”, “M”, “W”, “X” or “C”, entries in the CC or WST, or the CC and the WST fields are required.",
+        "When the first position of TQ is “A”, “B”, “D”, “S”, “T”, “U”, or “1-9”, entries in the CC or WST, or the CC and the WST fields are prohibited. ",
+        "The second position of “X” indicates a Trunking Form is provided for system requirements rather than provisioning purposes.",
+        "When the ACT field is “N”, a second position of “N” or “X” is prohibited.",
+        "When the first position of the TQ field is “E”, the second position of the TQ field must be an “X”.",
+        "When the first position of the TQ field is “E”, the first position of the REQTYP field must be an “L” and the ACT field must be a “C”.",
+        "When the first position of the TQ field is “C”, the first position of the REQTYP field must be an “M” and the ACT field must be a “C”. "
+    ],
+    "usageNotes": [
+        "Required when the first position of the REQTYP field is “M”, the ACT field is “N” and the ACTI field is “B” or “C”.",
+        "Optional when the first position of the REQTYP field is “L” or “M” and the ACT field is “C”.",
+        "Required when the first position of the REQTYP field is “M”, the ACT field is “D” and the ACTI field is “E”.",
+        "Otherwise prohibited."
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

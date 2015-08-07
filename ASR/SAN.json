@@ -1,0 +1,28 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-07T17:35:31.050Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Subscriber Authorization Number",
+    "title": "SAN",
+    "fieldNumber": "77",
+    "fieldLength": "30",
+    "characteristics": "AlphaNumeric",
+    "usage": "Optional",
+    "example": "",
+    "definition": "Identifies a number equivalent to the End User Purchase Order Number.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        "This may, at the option of the customer, be a requirement when providing service to some governmental agencies.",
+        "This field may be used in conjunction with the SBILLNM field."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

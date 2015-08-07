@@ -1,0 +1,27 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-07T17:35:31.050Z",
+    "form": "ASR",
+    "section": "CONTACT",
+    "name": "Maintenance Contact",
+    "title": "MTCE",
+    "fieldNumber": "119",
+    "fieldLength": "11",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the customer employee or office responsible for maintenance subsequent to the installation of the access service.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Prohibited when the Implementation Contact and the Maintenance Contact are the same, otherwise optional."
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

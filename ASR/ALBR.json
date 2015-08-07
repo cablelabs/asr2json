@@ -1,0 +1,62 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-07T17:35:31.050Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Additional Labor",
+    "title": "ALBR",
+    "fieldNumber": "38",
+    "fieldLength": "1",
+    "characteristics": "Numeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Indicates that additional labor is requested and charges will be accepted in conjunction with this Access Service Request, (e.g., Sunday or out of normal business hour installation is being requested).",
+    "validEntry": [
+        {
+            "value": "1",
+            "description": "Overtime installation"
+        },
+        {
+            "value": "2",
+            "description": "Testing with other providers"
+        },
+        {
+            "value": "3",
+            "description": "Other labor"
+        },
+        {
+            "value": "4",
+            "description": "Overtime installation and testing with other providers"
+        },
+        {
+            "value": "5",
+            "description": "Overtime and other labor"
+        },
+        {
+            "value": "6",
+            "description": "Testing with other providers and other labor"
+        },
+        {
+            "value": "7",
+            "description": "Overtime installation, testing with other providers and"
+        },
+        {
+            "value": "",
+            "description": "other labor"
+        }
+    ],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Optional when the ACT field is “N”, “C”, “M” or “T”, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        "If other labor is requested, the specific labor will be determined in verbal contact between the provider installation-control office and the customer implementation contact.",
+        "It is assumed the initiator has the authority to authorize these requests.",
+        "Entry in this field is not required if a “Y” has been entered in the Expedite (EXP) field."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

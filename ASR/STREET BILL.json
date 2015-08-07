@@ -1,0 +1,27 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-07T17:35:31.050Z",
+    "form": "ASR",
+    "section": "BILL",
+    "name": "Street Address (BILL)",
+    "title": "STREET",
+    "fieldNumber": "87",
+    "fieldLength": "25",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the street of the billing address associated with the billing name.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the BAN field is “N”, otherwise optional."
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

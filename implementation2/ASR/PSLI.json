@@ -1,0 +1,63 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-07T17:43:29.879Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Primary Service Location Indicator",
+    "title": "PSLI",
+    "fieldNumber": "53",
+    "fieldLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the use of the PSL field.",
+    "validEntry": [
+        {
+            "value": "A",
+            "description": "Provider Switch"
+        },
+        {
+            "value": "B",
+            "description": "Provider Central Office"
+        },
+        {
+            "value": "C",
+            "description": "Customer Physical Collocation"
+        },
+        {
+            "value": "D",
+            "description": "Customer Virtual Collocation"
+        },
+        {
+            "value": "E",
+            "description": "LERG Switch CLLI (CSL Out of LATA Scenario)"
+        },
+        {
+            "value": "F",
+            "description": "LERG Switch CLLI (CSL In LATA Scenario)"
+        },
+        {
+            "value": "G",
+            "description": "Wireless Terminating Service (Out of LATA Scenario no"
+        },
+        {
+            "value": "",
+            "description": "NPA/NXX’s assigned)"
+        }
+    ],
+    "validEntryNotes": [
+        "Valid entry of “E” is to be used to identify the customer’s Telcordia™ LERG™ Routing Guide based switch for Local Interconnection or Wireless Trunks when the actual switch is outside the LATA of services for the assigned NPA/NXX’s.",
+        "Valid entry of “F” is to be used to identify the customer’s LERG™ based switch for Local Interconnection or Wireless Trunks when the actual switch is inside the LATA of services for the assigned NPA/NXX’s. "
+    ],
+    "usageNotes": [
+        "Required when the CC and UNE fields are populated and the ACTL field is not populated.",
+        "Required when the ACT field is “N” or “C”, the first position of the REQTYP field is “M” and the CC or WST fields, or the CC and WST fields are populated.NOTE 3: Prohibited when the ACT field is “D”.",
+        "Otherwise optional."
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

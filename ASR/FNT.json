@@ -1,0 +1,40 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-07T17:35:31.050Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Fiber Network Type",
+    "title": "FNT",
+    "fieldNumber": "49",
+    "fieldLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the type of network to which the fiber based service is being assigned.",
+    "validEntry": [
+        {
+            "value": "A",
+            "description": "Synchronous Optical Network (SONET)"
+        },
+        {
+            "value": "B",
+            "description": "Dense Wave Division Multiplexing (DWDM)"
+        },
+        {
+            "value": "C",
+            "description": "Optical Transport Network (OTN)"
+        }
+    ],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the FNI field is populated, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

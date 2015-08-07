@@ -1,0 +1,96 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-07T17:43:29.879Z",
+    "form": "ASR",
+    "section": "BILL",
+    "name": "Tax Exemption",
+    "title": "TE",
+    "fieldNumber": "84",
+    "fieldLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Indicates that the customer has submitted a tax exemption form to the provider.",
+    "validEntry": [
+        {
+            "value": "Entry",
+            "description": "Exempt From"
+        },
+        {
+            "value": "A",
+            "description": "F & S"
+        },
+        {
+            "value": "B",
+            "description": "F & C"
+        },
+        {
+            "value": "C",
+            "description": "County or Local"
+        },
+        {
+            "value": "D",
+            "description": "F & S & C"
+        },
+        {
+            "value": "E",
+            "description": "F & S & M"
+        },
+        {
+            "value": "F",
+            "description": "Federal"
+        },
+        {
+            "value": "G",
+            "description": "F & S & C & M"
+        },
+        {
+            "value": "H",
+            "description": "S & C"
+        },
+        {
+            "value": "I",
+            "description": "S & M"
+        },
+        {
+            "value": "J",
+            "description": "C & M"
+        },
+        {
+            "value": "K",
+            "description": "F & M"
+        },
+        {
+            "value": "L",
+            "description": "Letter on File"
+        },
+        {
+            "value": "M",
+            "description": "Municipal"
+        },
+        {
+            "value": "N",
+            "description": "Non Exempt"
+        },
+        {
+            "value": "P",
+            "description": "S & C & M"
+        },
+        {
+            "value": "S",
+            "description": "State/Province"
+        }
+    ],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the ACT field is “N” and the BAN field is “N”, otherwise optional."
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

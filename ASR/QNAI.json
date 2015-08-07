@@ -1,0 +1,27 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-07T17:35:31.050Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Quantity Network Assignment Information",
+    "title": "QNAI",
+    "fieldNumber": "33",
+    "fieldLength": "2",
+    "characteristics": "Numeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the total number of NAI Circuit Detail Sections sent by the customer.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the third position of the AFO field is “Y”, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}
