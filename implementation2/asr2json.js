@@ -8,7 +8,6 @@ var startPage = arguments[1];
 var endPage = arguments[2];
 
 // SPLITTING THE PDF
-
 var child = exec("python pdfsplit.py " + fileName + " " + startPage + " " + endPage, function (error, stdout, stderr) {
     if (error !== null) {
          console.log('exec error: ' + error);
@@ -30,7 +29,7 @@ var child = exec("python pdfsplit.py " + fileName + " " + startPage + " " + endP
 // INITIALIZING VARIABLES
 var hashMap = {};
 var formNumber = "3";
-var field = {"asogVersion": "", "processed": "", "form": "", "section": "", "name": "", "title": "", "fieldNumber": "", "fieldLength": "", "characteristics": "", "usage": "", "example": "", "definition": "", "validEntry": "", "validEntryNotes": "", "usageNotes": "", "fieldNotes": "", "exampleNotes": ""};
+var field = {"asogVersion": "", "processed": "", "form": "", "section": "", "name": "", "title": "", "fieldNumber": "", "minimumLength": "", "maximumLength": "", "characteristics": "", "usage": "", "example": "", "definition": "", "validEntry": "", "validEntryNotes": "", "usageNotes": "", "fieldNotes": "", "exampleNotes": ""};
 field.breakValue = "EXAMPLE";
 field.asogVersion = "50";
 field.processed = new Date();
@@ -140,9 +139,15 @@ function parse() {
                         field.usageNotes = field.usageNotes + getFieldInfo().trim();
                         break;
                     case "DATA CHARACTERISTICS":
-                        var info = (getFieldInfo().trim()).split(" ");
-                        field.fieldLength = info[0];
-                        field.characteristics = (info[1].indexOf("alpha") > -1) ? ((info[1].indexOf("numeric") > -1) ? "AlphaNumeric" : "Alpha" ) : "Numeric";
+                        var info = (getFieldInfo().trim());
+                        if ( info.indexOf("minimum") == -1 ) {
+                            field.maximumLength = info[0];
+                        }
+                        else {
+                            field.minimumLength = info.split("and")[0].trim().split(" ")[0].trim();
+                            field.maximumLength = info.split("and")[1].trim().split(" ")[0].trim();
+                        }
+                        field.characteristics = (info.split(" ")[1].indexOf("alpha") > -1) ? ((info.split(" ")[1].indexOf("numeric") > -1) ? "AlphaNumeric" : "Alpha" ) : "Numeric";
                         break;
                     case "EXAMPLE" || "EXAMPLES":
                         field.example = field.example + getFieldInfo().trim();
@@ -159,13 +164,13 @@ function parse() {
         }
 
         function getFieldNameandTitle(line) {
-            if ( line.split("-").length == 2 || line.split("–").length == 2) {
+            if ( line.split("-").length == 2 || line.split("–").length == 2) { // Condition when there is only one hyphen
                 var re1 = new RegExp( "[0-9]+\.(.*)[\-\–](.*)", "g" );
                 var result = re1.exec(line);
                 field.title = result[1].trim();
                 field.name = result[2].trim();
             }
-            else if ( line.match(/^[0-9]+\.[A-Z]+[\-\–]/)) {
+            else if ( line.match(/^[0-9]+\.[A-Z]+[\-\–]/)) { // Condition when there are no spaces in title, name line (E.g. 85.FUSF-Federal...)
                 var re1 = new RegExp( "[0-9]+\.([A-Z\-\–]+)([A-Z][a-z].*)", "g" );
                 var result1 = re1.exec(line);
                 field.title = result1[1].replace(/[\-\–]$/,"").trim();
@@ -173,7 +178,7 @@ function parse() {
 
             }
             else {
-                var re1 = new RegExp( "[0-9]+\.([ A-Z/\-\–]+?)[\-\–][ ]([A-Z][a-z].*)", "g" );
+                var re1 = new RegExp( "[0-9]+\.([ A-Z/\-\–]+?)[\-\–][ ]([A-Z][a-z].*)", "g" ); // Condition when there are spaces in title, name line (E.g. 1. CCNA - Customer...)
                 var result = re1.exec(line);
                 field.title = result[1].trim();
                 field.name = result[2].trim();
@@ -251,28 +256,22 @@ function parse() {
             field.exampleNotes = field.exampleNotes.replace(/^NOTE 1:\n/,"").replace(/\n/g," ").split(/ NOTE [0-9]+: /);
 
             field.validEntry = field.validEntry.trim();
-            if ( field.validEntry.indexOf("=") == -1 && field.validEntry.indexOf("\n") > -1) { // FOR VALID ENTRIES IN TABLE FORMAT
-                field.validEntry = field.validEntry.split("\n");
-            }
-            else {
-                var validEntries = field.validEntry;
-                if ( validEntries.length == 0 ) { // NO VALID ENTRIES PRESENT
-                    field.validEntry = [];
-                    return;
-                }
-
+            var validEntries = field.validEntry;
+            if ( validEntries.length == 0 ) { // NO VALID ENTRIES PRESENT
                 field.validEntry = [];
-                validEntries = validEntries.split("\n");
-                for( var index=0; index<validEntries.length; index++ ) {
-                    field.validEntry[index] = {};
-                    if ( validEntries[index].indexOf("=") == -1 ) {
-                        field.validEntry[index].value = "";
-                        field.validEntry[index].description = validEntries[index];
-                    }
-                    else {
-                        field.validEntry[index].value = validEntries[index].split("=")[0].trim();
-                        field.validEntry[index].description = validEntries[index].split("=")[1].trim();
-                    }
+                return;
+            }
+            field.validEntry = [];
+            validEntries = validEntries.split("\n");
+            for( var index=0; index<validEntries.length; index++ ) {
+                field.validEntry[index] = {};
+                if ( validEntries[index].indexOf("=") == -1 ) {
+                    field.validEntry[index].value = "";
+                    field.validEntry[index].description = validEntries[index];
+                }
+                else {
+                    field.validEntry[index].value = validEntries[index].split("=")[0].trim();
+                    field.validEntry[index].description = validEntries[index].split("=")[1].trim();
                 }
             }
         }
