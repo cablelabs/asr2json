@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T16:38:17.508Z",
+    "processed": "2015-08-07T17:13:43.569Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Access Service Group",
@@ -9,9 +9,7 @@
     "fieldLength": "6",
     "characteristics": "AlphaNumeric",
     "usage": "Optional",
-    "example": [
-        "123"
-    ],
+    "example": "",
     "definition": "Identifies the access service group assigned to a particular circuit or group of circuits.",
     "validEntry": [],
     "validEntryNotes": [

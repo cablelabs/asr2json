@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T16:38:17.508Z",
+    "processed": "2015-08-07T17:13:43.569Z",
     "form": "ASR",
     "section": "CONTACT",
     "name": "Date and Time Received",
@@ -9,10 +9,7 @@
     "fieldLength": "17",
     "characteristics": "AlphaNumeric",
     "usage": "Optional",
-    "example": [
-        "03-22-1985-1115AM",
-        "1985-03-22-1115AM"
-    ],
+    "example": "",
     "definition": "Identifies the date and time that the provider received the Access Service Request.",
     "validEntry": [
         "U.S. Standard Metric Format",

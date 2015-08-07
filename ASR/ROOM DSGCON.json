@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T16:38:17.508Z",
+    "processed": "2015-08-07T17:13:43.569Z",
     "form": "ASR",
     "section": "CONTACT",
     "name": "Room (DSGCON)",
@@ -9,9 +9,7 @@
     "fieldLength": "6",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": [
-        "K-151A"
-    ],
+    "example": "",
     "definition": "Identifies the room of the design/engineering contact’s address.",
     "validEntry": [],
     "validEntryNotes": [

@@ -302,8 +302,11 @@ function parse() {
         }
 
         function replacer(key, value) {
-            if ( key=="breakValue") {
+            if ( key=="breakValue" ) {
                 return undefined;
+            }
+            else if ( key=="example" ) {
+                return "";
             }
             return value;
         }

@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T16:38:17.508Z",
+    "processed": "2015-08-07T17:13:43.569Z",
     "form": "ASR",
     "section": "BILL",
     "name": "Billing Contact",
@@ -9,9 +9,7 @@
     "fieldLength": "15",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": [
-        "JANETDOE"
-    ],
+    "example": "",
     "definition": "Identifies the name of the person or office to be contacted on billing matters.",
     "validEntry": [],
     "validEntryNotes": [

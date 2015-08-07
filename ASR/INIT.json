@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T16:38:17.508Z",
+    "processed": "2015-08-07T17:13:43.569Z",
     "form": "ASR",
     "section": "CONTACT",
     "name": "Initiator",
@@ -9,9 +9,7 @@
     "fieldLength": "15",
     "characteristics": "AlphaNumeric",
     "usage": "Required",
-    "example": [
-        "JOHNSMITH"
-    ],
+    "example": "",
     "definition": "Identifies the customer employee who originated this request.",
     "validEntry": [],
     "validEntryNotes": [

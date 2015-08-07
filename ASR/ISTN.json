@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T16:38:17.508Z",
+    "processed": "2015-08-07T17:13:43.569Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Interconnection Screening Telephone Number",
@@ -9,9 +9,7 @@
     "fieldLength": "10",
     "characteristics": "Numeric",
     "usage": "Conditional",
-    "example": [
-        "314-837-1234"
-    ],
+    "example": "",
     "definition": "Identifies the telephone number used for billing or translation purposes.",
     "validEntry": [
         "Telephone number format",

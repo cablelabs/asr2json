@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T16:38:17.508Z",
+    "processed": "2015-08-07T17:13:43.569Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Ethernet Virtual Connection Indicator",
@@ -9,9 +9,7 @@
     "fieldLength": "1",
     "characteristics": "Alpha",
     "usage": "Conditional",
-    "example": [
-        "A"
-    ],
+    "example": "",
     "definition": "Identifies that an Ethernet Virtual Connection (EVC) Form is associated with this service request.",
     "validEntry": [
         {

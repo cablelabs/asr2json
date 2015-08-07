@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T16:38:17.508Z",
+    "processed": "2015-08-07T17:13:43.569Z",
     "form": "ASR",
     "section": "BILL",
     "name": "State/Province (BILL)",
@@ -9,9 +9,7 @@
     "fieldLength": "2",
     "characteristics": "Alpha",
     "usage": "Conditional",
-    "example": [
-        "NJ"
-    ],
+    "example": "",
     "definition": "Identifies the two character postal code for the state/province of the billing address associated with the billing name.",
     "validEntry": [],
     "validEntryNotes": [

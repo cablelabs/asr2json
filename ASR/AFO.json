@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T16:38:17.508Z",
+    "processed": "2015-08-07T17:13:43.569Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Additional Forms",
@@ -9,9 +9,7 @@
     "fieldLength": "5",
     "characteristics": "Alpha",
     "usage": "Conditional",
-    "example": [
-        "Y"
-    ],
+    "example": "",
     "definition": "Indicates which additional forms are being submitted with this request. Character Position 1= Additional Circuit Information (ACI) Form Character Position 2= Reserved for future use Character Position 3= Network Assignment Information (NAI) Character Position 4= End Office Detail (EOD) Form Character Position 5= Virtual Concatenation (VCAT) Form",
     "validEntry": [
         "Character Position Valid Entry Attached Form(s)",

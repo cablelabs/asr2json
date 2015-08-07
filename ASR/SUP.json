@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T16:38:17.508Z",
+    "processed": "2015-08-07T17:13:43.569Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Supplement Type",
@@ -9,9 +9,7 @@
     "fieldLength": "1",
     "characteristics": "Numeric",
     "usage": "Conditional",
-    "example": [
-        "4"
-    ],
+    "example": "",
     "definition": "A supplement is any new iteration of an Access Service Request (ASR). The entry in the SUP field identifies the reason for which the supplement is being issued.",
     "validEntry": [
         {

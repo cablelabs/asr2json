@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T16:38:17.508Z",
+    "processed": "2015-08-07T17:13:43.569Z",
     "form": "ASR",
     "section": "CONTACT",
     "name": "Promotion Subscription Date",
@@ -9,10 +9,7 @@
     "fieldLength": "10",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": [
-        "03-02-1999",
-        "1999-03-02"
-    ],
+    "example": "",
     "definition": "Identifies the date the customer requested or contracted the pricing promotion from the provider.",
     "validEntry": [
         "U.S. Standard Metric Format",

@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T16:38:17.508Z",
+    "processed": "2015-08-07T17:13:43.569Z",
     "form": "ASR",
     "section": "CONTACT",
     "name": "Telephone Number (DSGCON)",
@@ -9,9 +9,7 @@
     "fieldLength": "17",
     "characteristics": "Numeric",
     "usage": "Conditional",
-    "example": [
-        "201-981-3500-3587"
-    ],
+    "example": "",
     "definition": "Identifies the telephone number of the design/engineering contact.",
     "validEntry": [],
     "validEntryNotes": [

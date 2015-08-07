@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T16:38:17.508Z",
+    "processed": "2015-08-07T17:13:43.569Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Case Number",
@@ -9,9 +9,7 @@
     "fieldLength": "12",
     "characteristics": "AlphaNumeric",
     "usage": "Optional",
-    "example": [
-        "BS061196-002"
-    ],
+    "example": "",
     "definition": "Identifies the quotation tracking number assigned by the provider in response to a provisioning arrangement inquiry, e.g., diversity.",
     "validEntry": [],
     "validEntryNotes": [

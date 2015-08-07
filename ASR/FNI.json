@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T16:38:17.508Z",
+    "processed": "2015-08-07T17:13:43.569Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Fiber Network Identification",
@@ -9,11 +9,7 @@
     "fieldLength": "13",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": [
-        "N12345",
-        "W12345",
-        "N"
-    ],
+    "example": "",
     "definition": "Identifies all services associated with a particular fiber based network. Also may identify customer ring and associated ring services.",
     "validEntry": [
         {

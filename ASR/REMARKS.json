@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T16:38:17.508Z",
+    "processed": "2015-08-07T17:13:43.569Z",
     "form": "ASR",
     "section": "BILL",
     "name": "Remarks",
@@ -9,10 +9,7 @@
     "fieldLength": "186",
     "characteristics": "AlphaNumeric",
     "usage": "Optional",
-    "example": [
-        "DISCOFFIRSTCIRCUI",
-        "TINGROUP"
-    ],
+    "example": "",
     "definition": "Identifies a free flowing field, which can be used to expand upon and clarify other data on this form.",
     "validEntry": [],
     "validEntryNotes": [

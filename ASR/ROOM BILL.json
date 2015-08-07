@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T16:38:17.508Z",
+    "processed": "2015-08-07T17:13:43.569Z",
     "form": "ASR",
     "section": "BILL",
     "name": "Room (BILL)",
@@ -9,9 +9,7 @@
     "fieldLength": "6",
     "characteristics": "AlphaNumeric",
     "usage": "Optional",
-    "example": [
-        "1K151A"
-    ],
+    "example": "",
     "definition": "Identifies the room for the billing address associated with the billing name.",
     "validEntry": [],
     "validEntryNotes": [

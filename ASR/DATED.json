@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T16:38:17.508Z",
+    "processed": "2015-08-07T17:13:43.569Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Date of Agency Authorization",
@@ -9,10 +9,7 @@
     "fieldLength": "10",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": [
-        "06-20-1984",
-        "1984-06-20"
-    ],
+    "example": "",
     "definition": "Identifies the date appearing on the agency authorization, which was previously submitted to the provider.",
     "validEntry": [
         "U.S. Standard Metric Format",

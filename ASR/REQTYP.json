@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T16:38:17.508Z",
+    "processed": "2015-08-07T17:13:43.569Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Requisition Type and Status",
@@ -9,9 +9,7 @@
     "fieldLength": "2",
     "characteristics": "Alpha",
     "usage": "Required",
-    "example": [
-        "MA"
-    ],
+    "example": "",
     "definition": "Identifies the type of service being requested and the status of the request.",
     "validEntry": [
         {

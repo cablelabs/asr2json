@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T16:38:17.508Z",
+    "processed": "2015-08-07T17:13:43.569Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Two Six Code",
@@ -9,9 +9,7 @@
     "fieldLength": "8",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": [
-        "AQ234567"
-    ],
+    "example": "",
     "definition": "Identifies a code assigned to a trunk group or a CCS Link Set.",
     "validEntry": [],
     "validEntryNotes": [

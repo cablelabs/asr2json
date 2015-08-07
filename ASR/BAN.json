@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T16:38:17.508Z",
+    "processed": "2015-08-07T17:13:43.569Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Billing Account Number",
@@ -9,9 +9,7 @@
     "fieldLength": "12",
     "characteristics": "AlphaNumeric",
     "usage": "Required",
-    "example": [
-        "201981-3587"
-    ],
+    "example": "",
     "definition": "Identifies the billing account to which the recurring and non- recurring charges for this request will be billed.",
     "validEntry": [
         {

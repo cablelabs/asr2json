@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T16:38:17.508Z",
+    "processed": "2015-08-07T17:13:43.569Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Quantity",
@@ -9,11 +9,7 @@
     "fieldLength": "7",
     "characteristics": "Numeric",
     "usage": "Conditional",
-    "example": [
-        "6",
-        "0006",
-        "0000006"
-    ],
+    "example": "",
     "definition": "Identifies the quantity of circuits, ring segments, BHMCs, or the percent of market share involved in this service request.",
     "validEntry": [],
     "validEntryNotes": [

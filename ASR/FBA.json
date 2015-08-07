@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T16:38:17.508Z",
+    "processed": "2015-08-07T17:13:43.569Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Facility Billing Arrangement",
@@ -9,10 +9,7 @@
     "fieldLength": "4",
     "characteristics": "Alpha",
     "usage": "Conditional",
-    "example": [
-        "FBAEFDTMUX",
-        "DYY"
-    ],
+    "example": "",
     "definition": "Indicates a special arrangement has been negotiated between the host customer of a higher level service and the subsequent customer of the lower level service.",
     "validEntry": [
         {

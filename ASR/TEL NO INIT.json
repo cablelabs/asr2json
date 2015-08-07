@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T16:38:17.508Z",
+    "processed": "2015-08-07T17:13:43.569Z",
     "form": "ASR",
     "section": "CONTACT",
     "name": "Telephone Number (INIT)",
@@ -9,9 +9,7 @@
     "fieldLength": "17",
     "characteristics": "Numeric",
     "usage": "Required",
-    "example": [
-        "201-981-3500-2262262"
-    ],
+    "example": "",
     "definition": "Identifies the telephone number of the customer employee who initiated this request.",
     "validEntry": [],
     "validEntryNotes": [

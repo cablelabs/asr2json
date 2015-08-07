@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T16:38:17.508Z",
+    "processed": "2015-08-07T17:13:43.569Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Related Purchase Order Number",
@@ -9,9 +9,7 @@
     "fieldLength": "16",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": [
-        "824Z9"
-    ],
+    "example": "",
     "definition": "Identifies the PON of a related Access Service Request.",
     "validEntry": [],
     "validEntryNotes": [

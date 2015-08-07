@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T16:38:17.508Z",
+    "processed": "2015-08-07T17:13:43.569Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Project Identification",
@@ -9,9 +9,7 @@
     "fieldLength": "16",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": [
-        "MS736119"
-    ],
+    "example": "",
     "definition": "Identifies the project with which the request is to be associated.",
     "validEntry": [],
     "validEntryNotes": [

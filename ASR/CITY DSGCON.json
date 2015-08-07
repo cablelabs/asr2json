@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T16:38:17.508Z",
+    "processed": "2015-08-07T17:13:43.569Z",
     "form": "ASR",
     "section": "CONTACT",
     "name": "City (DSGCON)",
@@ -9,9 +9,7 @@
     "fieldLength": "25",
     "characteristics": "Alpha",
     "usage": "Conditional",
-    "example": [
-        "PISCATAWAY"
-    ],
+    "example": "",
     "definition": "Identifies the city, village, township, etc. of the design/engineering contact’s address.",
     "validEntry": [],
     "validEntryNotes": [

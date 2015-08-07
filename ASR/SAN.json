@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T16:38:17.508Z",
+    "processed": "2015-08-07T17:13:43.569Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Subscriber Authorization Number",
@@ -9,9 +9,7 @@
     "fieldLength": "30",
     "characteristics": "AlphaNumeric",
     "usage": "Optional",
-    "example": [
-        "AB12345678"
-    ],
+    "example": "",
     "definition": "Identifies a number equivalent to the End User Purchase Order Number.",
     "validEntry": [],
     "validEntryNotes": [

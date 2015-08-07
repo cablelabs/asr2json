@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T16:38:17.508Z",
+    "processed": "2015-08-07T17:13:43.569Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Telecommunications Service Priority",
@@ -9,9 +9,7 @@
     "fieldLength": "12",
     "characteristics": "AlphaNumeric",
     "usage": "Optional",
-    "example": [
-        "TSP12345C-E1"
-    ],
+    "example": "",
     "definition": "Indicates the provisioning and restoration priority as defined under the TSP Service Vendor Handbook.",
     "validEntry": [
         "Nine Character TSP Control Identifier",

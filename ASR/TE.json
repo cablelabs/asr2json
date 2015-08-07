@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T16:38:17.508Z",
+    "processed": "2015-08-07T17:13:43.569Z",
     "form": "ASR",
     "section": "BILL",
     "name": "Tax Exemption",
@@ -9,9 +9,7 @@
     "fieldLength": "1",
     "characteristics": "Alpha",
     "usage": "Conditional",
-    "example": [
-        "B"
-    ],
+    "example": "",
     "definition": "Indicates that the customer has submitted a tax exemption form to the provider.",
     "validEntry": [
         {

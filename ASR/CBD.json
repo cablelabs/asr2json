@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T16:38:17.508Z",
+    "processed": "2015-08-07T17:13:43.569Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Call Before Dispatch",
@@ -9,11 +9,7 @@
     "fieldLength": "3",
     "characteristics": "AlphaNumeric",
     "usage": "Optional",
-    "example": [
-        "04",
-        "A12",
-        "A"
-    ],
+    "example": "",
     "definition": "May identify a customer location as “Unstaffed” and request the provider call the LCON at a desired time prior to ‘dispatch out’ of a service technician, or a coordination call based on a provider’s existing process for service installation or disconnect.",
     "validEntry": [
         {

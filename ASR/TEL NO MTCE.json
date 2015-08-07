@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T16:38:17.508Z",
+    "processed": "2015-08-07T17:13:43.569Z",
     "form": "ASR",
     "section": "CONTACT",
     "name": "Telephone Number (MTCE)",
@@ -9,9 +9,7 @@
     "fieldLength": "10",
     "characteristics": "Numeric",
     "usage": "Conditional",
-    "example": [
-        "201-968-7463"
-    ],
+    "example": "",
     "definition": "Identifies the telephone number of the maintenance contact.",
     "validEntry": [],
     "validEntryNotes": [

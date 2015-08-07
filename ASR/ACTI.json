@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T16:38:17.508Z",
+    "processed": "2015-08-07T17:13:43.569Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Activity Indicator",
@@ -9,9 +9,7 @@
     "fieldLength": "1",
     "characteristics": "Alpha",
     "usage": "Conditional",
-    "example": [
-        "C"
-    ],
+    "example": "",
     "definition": "Identifies whether an order is an augment or a new trunk group and a partial or full disconnect.",
     "validEntry": [
         {

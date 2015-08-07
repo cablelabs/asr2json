@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T16:38:17.508Z",
+    "processed": "2015-08-07T17:13:43.569Z",
     "form": "ASR",
     "section": "BILL",
     "name": "Virtual Connection Variable Term Agreement",
@@ -9,9 +9,7 @@
     "fieldLength": "17",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": [
-        "3NCOR"
-    ],
+    "example": "",
     "definition": "Identifies the duration, identifying USOC, contract date or contract identification number of any variable term agreement that may be offered by a provider for a virtual connection.",
     "validEntry": [],
     "validEntryNotes": [

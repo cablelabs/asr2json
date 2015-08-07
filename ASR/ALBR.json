@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T16:38:17.508Z",
+    "processed": "2015-08-07T17:13:43.569Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Additional Labor",
@@ -9,9 +9,7 @@
     "fieldLength": "1",
     "characteristics": "Numeric",
     "usage": "Conditional",
-    "example": [
-        "2"
-    ],
+    "example": "",
     "definition": "Indicates that additional labor is requested and charges will be accepted in conjunction with this Access Service Request, (e.g., Sunday or out of normal business hour installation is being requested).",
     "validEntry": [
         {

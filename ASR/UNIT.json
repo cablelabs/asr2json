@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T16:38:17.508Z",
+    "processed": "2015-08-07T17:13:43.569Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Unit Identification",
@@ -9,9 +9,7 @@
     "fieldLength": "1",
     "characteristics": "Alpha",
     "usage": "Conditional",
-    "example": [
-        "B"
-    ],
+    "example": "",
     "definition": "Identifies whether the Quantity (QTY) field contains number of circuits, ring segments, Busy Hour Minutes of Capacity (BHMC) for switched access service or percent of market share.",
     "validEntry": [
         {

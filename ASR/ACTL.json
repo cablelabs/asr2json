@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T16:38:17.508Z",
+    "processed": "2015-08-07T17:13:43.569Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Access Customer Terminal Location",
@@ -9,10 +9,7 @@
     "fieldLength": "11",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
-    "example": [
-        "MILNTNMAW01",
-        "MILNTNMAXMD"
-    ],
+    "example": "",
     "definition": "Identifies the CLLI Code of the customer facility terminal location. The CLLI Code will have been previously assigned.",
     "validEntry": [],
     "validEntryNotes": [

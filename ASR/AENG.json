@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T16:38:17.508Z",
+    "processed": "2015-08-07T17:13:43.569Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Additional Engineering",
@@ -9,9 +9,7 @@
     "fieldLength": "1",
     "characteristics": "Numeric",
     "usage": "Conditional",
-    "example": [
-        "3"
-    ],
+    "example": "",
     "definition": "Indicates that if additional engineering is required, an estimate of the charges is to be forwarded to the initiator of the request.",
     "validEntry": [
         {
