@@ -215,7 +215,6 @@ function getFieldInfo(line){
                 field.fieldNumber = lineConsidered;
 //                console.log("field.fieldNumber " + field.fieldNumber);
                 getTitle(line,hyphen);
-                getName(line,hyphen);
                 field.previousField = "field";
                 lineConsidered = 1;
             }else{
@@ -286,13 +285,20 @@ function processedAt(){
 /**
 * Retrieve title
 */
-// TODO handle multiple hyphens
 function getTitle(line,hyphen){
-    var title = String(line.match(/([A-Z\-\–]+)-(.*)/));
-    field.title = line.substring(line.indexOf(".")+1,line.indexOf(hyphen));
-    field.title = field.title.trim();
-    if(line.indexOf("(") > -1 && line.indexOf(")") > -1){
-        field.title = field.title + " " +line.substring(line.indexOf("(")+1,line.indexOf(")"));
+    var re = /\d+s*\.([A-Z\–\-]+)([A-Z][a-z].*)/;
+    if(re.exec(line) && (line.indexOf(hyphen) != line.lastIndexOf(hyphen))){
+        var title = re.exec(line);
+        field.title = title[1].substring(0,title[1].lastIndexOf(hyphen));
+        field.name = title[2];
+    }else{
+        var title = String(line.match(/[A-Z]+\-\–[A-Za-z]+.*/));
+        field.title = line.substring(line.indexOf(".")+1,line.indexOf(hyphen));
+        field.title = field.title.trim();
+        if(line.indexOf("(") > -1 && line.indexOf(")") > -1){
+            field.title = field.title + " " +line.substring(line.indexOf("(")+1,line.indexOf(")"));
+        }
+        getName(line,hyphen);
     }
 }
 
