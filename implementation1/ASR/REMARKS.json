@@ -1,0 +1,19 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-07T17:17:21.289Z",
+    "form": "ASR",
+    "section": "BILL",
+    "name": "Remarks",
+    "title": "REMARKS",
+    "fieldNumber": "80",
+    "minimumLength": "",
+    "maximumLength": "186",
+    "characteristics": "AlphaNumeric",
+    "usage": "Optional",
+    "definition": " Identifies a free flowing field which can be used to expand upon and clarify other data on this form. ",
+    "validEntry": [],
+    "validEntryNotes": [],
+    "usageNotes": [],
+    "fieldNotes": [],
+    "exampleNotes": []
+}

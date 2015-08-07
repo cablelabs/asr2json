@@ -1,0 +1,26 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-07T17:17:21.251Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": " Unbundled Network Elements",
+    "title": "UNE",
+    "fieldNumber": "8",
+    "minimumLength": "",
+    "maximumLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "definition": " Identifies this request is ordering unbundled network elements for local service. ",
+    "validEntry": [
+        {
+            "value": "Y",
+            "description": "Ordering unbundled elements."
+        }
+    ],
+    "validEntryNotes": [],
+    "usageNotes": [
+        "Optional when the CC field is populated and the   first position of the REQTYP field is “M” “S” or     “L” otherwise prohibited."
+    ],
+    "fieldNotes": [],
+    "exampleNotes": []
+}

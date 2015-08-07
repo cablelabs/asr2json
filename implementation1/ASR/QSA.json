@@ -1,0 +1,32 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-07T17:17:21.262Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": " Quantity Service Address Location Information",
+    "title": "QSA",
+    "fieldNumber": "24",
+    "minimumLength": "",
+    "maximumLength": "2",
+    "characteristics": "Numeric",
+    "usage": "Conditional",
+    "definition": " Identifies the total number of Service Address Location Information Forms being sent by the customer. ",
+    "validEntry": [],
+    "validEntryNotes": [],
+    "usageNotes": [
+        "Prohibited when the EVCI field is “A”.",
+        "Required when the ACT field is “N” or “T” the first   position of the REQTYP field is “S” “E” “W” “V” or   “X” the NAG and SEI fields are not populated and   the first position of any PRILOC/SECLOC field is   an “E”.",
+        "Required when the ACT field is “N” and the first   position of the REQTYP field is “R” and the first   position of the PRILOC field is “E” and the SPOT    (PRI) field is not a CLLI Code on the Ring or ARI   Form.",
+        "Required when the ACT field is “N” or “T” and the   first position of the REQTYP field is “A” and the   NSL field on the FGA Form is populated.",
+        "Required when the first position of the REQTYP is   “E” the ACT field is “M” or “N” and the SEI field is   populated.",
+        "Prohibited when the first position of the REQTYP   field is “M”.",
+        "Prohibited when the first position of the REQTYP   field is “S” and the SEI field is populated.",
+        "Prohibited when the NAG field is populated.",
+        "",
+        "Otherwise optional."
+    ],
+    "fieldNotes": [
+        "QSA cannot be greater than “01” when the REQTYP   field is “E” and the SEI field is populated."
+    ],
+    "exampleNotes": []
+}
