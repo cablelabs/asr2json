@@ -1,0 +1,27 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-07T17:43:29.879Z",
+    "form": "ASR",
+    "section": "CONTACT",
+    "name": "Initiator Electronic Mail Address",
+    "title": "INIT EMAIL",
+    "fieldNumber": "104",
+    "fieldLength": "60",
+    "characteristics": "AlphaNumeric",
+    "usage": "Optional",
+    "example": "",
+    "definition": "Identifies the electronic mail address of the initiator.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        "Z JONES@NOTES.BE L L COM P ANY. C OM"
+    ]
+}

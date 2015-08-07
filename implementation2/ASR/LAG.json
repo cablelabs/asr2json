@@ -1,0 +1,58 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-07T17:43:29.879Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": "Link Aggregation Group",
+    "title": "LAG",
+    "fieldNumber": "73",
+    "fieldLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies this request is ordering Link Aggregation.",
+    "validEntry": [
+        {
+            "value": "E",
+            "description": "Existing Link Aggregation group. Activity impacting an"
+        },
+        {
+            "value": "",
+            "description": "existing Link Aggregation group (add or remove"
+        },
+        {
+            "value": "",
+            "description": "members)"
+        },
+        {
+            "value": "N",
+            "description": "New Link Aggregation group created on this request"
+        },
+        {
+            "value": "",
+            "description": "(The provider will assign a LAG-ID and provide it on the"
+        },
+        {
+            "value": "",
+            "description": "Confirmation Notice)"
+        },
+        {
+            "value": "D",
+            "description": "Disconnect of entire existing Link Aggregation group."
+        }
+    ],
+    "validEntryNotes": [
+        "A valid entry of “E” is applicable when the ACT field is “N”, “C” or “D”.",
+        "A valid entry of “N” is only applicable when the ACT field is “N”.",
+        "A valid entry of “D” is only applicable when the ACT field is “D”. "
+    ],
+    "usageNotes": [
+        "Optional when the first position of the REQTYP field is “E’’ or “S” and the ACT field is “N”, “C” or “D”, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        "More information relative to link aggregation can be found in IEEE 802.1AX. When link aggregation pertains to ENNI usage, more information can also be found in MEF 26.1."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}
