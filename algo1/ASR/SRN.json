@@ -1,0 +1,21 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-07T17:14:57.109Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": " Service Reservation Number",
+    "title": "SRN",
+    "fieldNumber": "29",
+    "minimumLength": "",
+    "maximumLength": "15",
+    "characteristics": "AlphaNumeric",
+    "usage": "Optional",
+    "definition": " Identifies the Service Reservation Number assigned by the provider in response to a request to reserve facilities. ",
+    "validEntry": [],
+    "validEntryNotes": [],
+    "usageNotes": [],
+    "fieldNotes": [
+        "If a provider offers a reservation process this   number would be assigned based on pre-   planning/pre-engineering agreements or the service   inquiry process."
+    ],
+    "exampleNotes": []
+}

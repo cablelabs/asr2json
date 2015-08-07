@@ -1,0 +1,23 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-07T17:14:57.114Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": " Customer Name",
+    "title": "CUST",
+    "fieldNumber": "41",
+    "minimumLength": "",
+    "maximumLength": "25",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "definition": " Identifies the name of the customer who originated this request when that customer will only have a limited amount of exchange access and has not been assigned a CCNA (Customer Carrier Name Abbreviation).  ",
+    "validEntry": [],
+    "validEntryNotes": [],
+    "usageNotes": [
+        "Required when the CCNA field is “CUS” otherwise   optional."
+    ],
+    "fieldNotes": [
+        "The initiator of this request will be contacted to   supply customer location information and technical   specifications."
+    ],
+    "exampleNotes": []
+}

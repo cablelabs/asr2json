@@ -1,0 +1,19 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-07T17:17:21.297Z",
+    "form": "ASR",
+    "section": "CONTACT",
+    "name": " Design Electronic Mail Address",
+    "title": "DSG EMAIL",
+    "fieldNumber": "108",
+    "minimumLength": "",
+    "maximumLength": "60",
+    "characteristics": "AlphaNumeric",
+    "usage": "Optional",
+    "definition": " Identifies the electronic mail address of the design contact. ",
+    "validEntry": [],
+    "validEntryNotes": [],
+    "usageNotes": [],
+    "fieldNotes": [],
+    "exampleNotes": []
+}

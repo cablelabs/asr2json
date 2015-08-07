@@ -1,0 +1,70 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-07T17:17:21.253Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": " Frame Due Time",
+    "title": "FDT",
+    "fieldNumber": "13",
+    "minimumLength": "",
+    "maximumLength": "7",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "definition": " Provides special handling instructions for the connection disconnection or coordination of changes for this request. ",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "Time Zone (Position 1) "
+        },
+        {
+            "value": "Central",
+            "description": "C"
+        },
+        {
+            "value": "Eastern",
+            "description": "E"
+        },
+        {
+            "value": "Mountain",
+            "description": "M"
+        },
+        {
+            "value": "Pacific",
+            "description": "P"
+        },
+        {
+            "value": "",
+            "description": "Time of Day (Positions 2-7) "
+        },
+        {
+            "value": "",
+            "description": "Two Digit Hour (01-12)/Two Digit Minute (00-59)/AM or PM "
+        },
+        {
+            "value": "",
+            "description": "Two Digit Hour (01-12)/A or P/Two Digit Hour (01-12)/A or P "
+        },
+        {
+            "value": "",
+            "description": "AM or PM "
+        },
+        {
+            "value": "",
+            "description": "Two Digit Hour (01-12)/A or P"
+        }
+    ],
+    "validEntryNotes": [
+        "Indicates the time zone and time or time zone and window of time when the service should be connected disconnected or coordinated.",
+        "When this field is populated in conjunction with the CB TEL NO field a specific time of day including the hour or hour and minute is required."
+    ],
+    "usageNotes": [
+        "Required when the first position of the REQTYP   type is “M” or “L” the ACT field is “N” “C” or “D”   and routing and/or translation change requires   coordination.",
+        "Prohibited when ACT field is “R”.",
+        "Required when the CB TEL NO is populated.",
+        "Otherwise optional."
+    ],
+    "fieldNotes": [
+        "Types of changes that require coordination are CIC   redirects switch conversions mutual trunking   arrangement point code changes traffic   rehome/reroutes call through testing requests   cut over etc."
+    ],
+    "exampleNotes": []
+}

@@ -1,0 +1,21 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-07T17:14:57.145Z",
+    "form": "ASR",
+    "section": "CONTACT",
+    "name": " Telephone Number (MTCE)",
+    "title": "TEL NO MTCE",
+    "fieldNumber": "120",
+    "minimumLength": "",
+    "maximumLength": "10",
+    "characteristics": "Numeric",
+    "usage": "Conditional",
+    "definition": " Identifies the telephone number of the maintenance contact. ",
+    "validEntry": [],
+    "validEntryNotes": [],
+    "usageNotes": [
+        "Required when the MTCE field is populated   otherwise prohibited."
+    ],
+    "fieldNotes": [],
+    "exampleNotes": []
+}

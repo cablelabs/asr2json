@@ -1,0 +1,35 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-07T17:14:57.101Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": " Intrastate IntraLATA Usage Percentage",
+    "title": "LUP",
+    "fieldNumber": "19",
+    "minimumLength": "",
+    "maximumLength": "3",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "definition": " Identifies the percent Intrastate IntraLATA usage for use with IntraLATA competition.  ",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "1 to 100 "
+        },
+        {
+            "value": "LOF",
+            "description": "Letter on File"
+        }
+    ],
+    "validEntryNotes": [],
+    "usageNotes": [
+        "Prohibited when the PIU field is not populated or is   “100”.",
+        "Prohibited when the first position of the REQTYP   field is “R”.",
+        "Prohibited when the ACT field is “D”.",
+        "Otherwise optional."
+    ],
+    "fieldNotes": [
+        "This field may apply whenever PIU is less than 100."
+    ],
+    "exampleNotes": []
+}

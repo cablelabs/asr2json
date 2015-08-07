@@ -1,0 +1,38 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-07T17:14:57.108Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": " Ethernet Virtual Connection Indicator",
+    "title": "EVCI",
+    "fieldNumber": "27",
+    "minimumLength": "",
+    "maximumLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "definition": " Identifies that an Ethernet Virtual Connection (EVC) Form is associated with this service request.  ",
+    "validEntry": [
+        {
+            "value": "A",
+            "description": "Stand Alone EVC"
+        },
+        {
+            "value": "B",
+            "description": "Combination EVC"
+        }
+    ],
+    "validEntryNotes": [
+        "An entry of “A” indicates that the request is a Stand Alone EVC. The Transport End User Special Access  and Switched Ethernet Services forms are prohibited.",
+        "An Entry of “A” is applicable only when the first position of the REQTYP is “S”.",
+        "An Entry of “B” indicates that the request is a Combination EVC or OVC which includes one UNI or ENNI physical port and the EVC or OVC.  An EVC Form must be accompanied by a Transport End User Special Access or Switched Ethernet Services form.",
+        "Changes to this field that are prohibited on Firm Orders and require a cancellation of the original request and a new request to be submitted are as follows:  xChanging from a stand alone EVC/OVC to a  combination   xChanging from a combination to a stand alone EVC/OVC  xChanging from a UNI/ENNI to a stand alone EVC/OVC   xChanging from a UNI/ENNI to a combination xChanging from a stand alone EVC/OVC to a  UNI/ENNI",
+        "",
+        "A change to this field that is allowed on Firm Orders and does not require a cancellation of the original request is as follows:  xChanging from a combination to a UNI/ENNI",
+        "A change to this field that is allowed at the time of submission from Service Request Confirmation (REQTYP “EB” or “SB”) to Firm Order (REQTYP “EC” or “SC”) and does not require a cancellation of  the original request is as follows:  xChanging from a UNI/ENNI to a combination"
+    ],
+    "usageNotes": [
+        "Optional when the first position of the REQTYP   field is “S” or “E” otherwise prohibited."
+    ],
+    "fieldNotes": [],
+    "exampleNotes": []
+}

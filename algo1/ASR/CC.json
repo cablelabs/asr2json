@@ -1,0 +1,36 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-07T17:14:57.096Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": " Company Code",
+    "title": "CC",
+    "fieldNumber": "7",
+    "minimumLength": "",
+    "maximumLength": "4",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "definition": " Identifies the Exchange Carrier requesting local services. ",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "A four alpha/numeric character code structure for all"
+        },
+        {
+            "value": "",
+            "description": "Exchange Carriers in North America and certain U.S."
+        },
+        {
+            "value": "",
+            "description": "territories maintained by NECA."
+        }
+    ],
+    "validEntryNotes": [],
+    "usageNotes": [
+        "Required when ordering local interconnection   services or unbundled network elements otherwise   prohibited."
+    ],
+    "fieldNotes": [
+        "The format and structure of this field is defined by   ANSI in document T1.251 Identification of   Telecommunications Service Provider Codes for the   North American Telecommunications System."
+    ],
+    "exampleNotes": []
+}

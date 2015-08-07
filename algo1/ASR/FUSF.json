@@ -1,0 +1,43 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-07T17:14:57.134Z",
+    "form": "ASR",
+    "section": "BILL",
+    "name": "Federal Universal Service Fee",
+    "title": "FUSF",
+    "fieldNumber": "85",
+    "minimumLength": "",
+    "maximumLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "definition": " Indicates the service being ordered on this request should be either assessed or exempted from the Federal Universal Service Fee (FUSF). ",
+    "validEntry": [
+        {
+            "value": "E",
+            "description": "Exempt Federal Universal Service Fee"
+        },
+        {
+            "value": "N",
+            "description": "Non–Exempt (Assessed)Federal Universal Service"
+        },
+        {
+            "value": "",
+            "description": "Fee"
+        }
+    ],
+    "validEntryNotes": [
+        "Exempt indicates the customer is both (a) reselling  the Special Access as a telecommunications service and (b) contributing directly into the Federal Universal Service Fund for the service being  ordered. For a valid entry of “E” both conditions must be met.",
+        "Non-Exempt (Assess) indicates the customer is (a) not reselling the Special Access as a telecommunications service and/or (b) not contributing directly into the Federal Universal Service Fund for the service being ordered.",
+        "An entry in this field applies to all the circuits being ordered on this service request."
+    ],
+    "usageNotes": [
+        "Required when the ACT field is “N” “C” or “T”.",
+        "",
+        "Optional when the ACT field is “R”.",
+        "Otherwise prohibited."
+    ],
+    "fieldNotes": [
+        "Services that are ordered to provide an information   service used for internal consumption or used for   administrative purposes are services that are to be   assessed a FUSF."
+    ],
+    "exampleNotes": []
+}

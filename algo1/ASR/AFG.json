@@ -1,0 +1,24 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-07T17:14:57.132Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": " Agency of the Federal Government",
+    "title": "AFG",
+    "fieldNumber": "78",
+    "minimumLength": "",
+    "maximumLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Optional",
+    "definition": " Identifies that this service is provided to an agency of the Federal Government. ",
+    "validEntry": [
+        {
+            "value": "Y",
+            "description": "Yes"
+        }
+    ],
+    "validEntryNotes": [],
+    "usageNotes": [],
+    "fieldNotes": [],
+    "exampleNotes": []
+}

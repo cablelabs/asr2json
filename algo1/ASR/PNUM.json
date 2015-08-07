@@ -1,0 +1,21 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-07T17:14:57.137Z",
+    "form": "ASR",
+    "section": "BILL",
+    "name": " Promotion Number",
+    "title": "PNUM",
+    "fieldNumber": "99",
+    "minimumLength": "",
+    "maximumLength": "20",
+    "characteristics": "AlphaNumeric",
+    "usage": "Optional",
+    "definition": " Identifies the contract tariff option for a pricing promotion plan.",
+    "validEntry": [],
+    "validEntryNotes": [],
+    "usageNotes": [],
+    "fieldNotes": [
+        "The Promotion Number will be assigned by the   provider."
+    ],
+    "exampleNotes": []
+}

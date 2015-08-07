@@ -1,0 +1,42 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-07T17:14:57.114Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": " Date of Agency Authorization",
+    "title": "DATED",
+    "fieldNumber": "40",
+    "minimumLength": "",
+    "maximumLength": "10",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "definition": " Identifies the date appearing on the agency authorization which was previously submitted to the provider.  ",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "U.S. Standard Metric Format "
+        },
+        {
+            "value": "",
+            "description": "Two Digit Month (01-12) Two Digit Century (00-99) "
+        },
+        {
+            "value": "",
+            "description": "Two Digit Day (01-31) Two Digit Year (00-99) "
+        },
+        {
+            "value": "",
+            "description": "Two Digit Century (00-99) Two Digit Month (01-12) "
+        },
+        {
+            "value": "",
+            "description": "Two Digit Year (00-99) Two Digit Day (01-31)"
+        }
+    ],
+    "validEntryNotes": [],
+    "usageNotes": [
+        "Required when the AGAUTH field is “E” or “B”   otherwise optional."
+    ],
+    "fieldNotes": [],
+    "exampleNotes": []
+}

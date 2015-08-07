@@ -1,0 +1,22 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-07T17:17:21.247Z",
+    "form": "ASR",
+    "section": "ADMINISTRATIVE",
+    "name": " Version Identification",
+    "title": "VER",
+    "fieldNumber": "3",
+    "minimumLength": "",
+    "maximumLength": "2",
+    "characteristics": "AlphaNumeric",
+    "usage": "Required",
+    "definition": " Identifies the customer’s version number.  ",
+    "validEntry": [],
+    "validEntryNotes": [],
+    "usageNotes": [],
+    "fieldNotes": [
+        "Any reissuance can use this entry to uniquely   identify the form from any other version.",
+        "The version identification does not have to agree   with the provider order supplement identification.   The customer’s order may have been supplemented   internally many times after the ASR has been   issued."
+    ],
+    "exampleNotes": []
+}

@@ -1,0 +1,19 @@
+{
+    "asogVersion": "0050",
+    "processed": "2015-08-07T17:14:57.141Z",
+    "form": "ASR",
+    "section": "CONTACT",
+    "name": " Street Address (DSGCON)",
+    "title": "STREET DSGCON",
+    "fieldNumber": "109",
+    "minimumLength": "",
+    "maximumLength": "25",
+    "characteristics": "AlphaNumeric",
+    "usage": "Optional",
+    "definition": " Identifies the street address for the design/engineering contact. ",
+    "validEntry": [],
+    "validEntryNotes": [],
+    "usageNotes": [],
+    "fieldNotes": [],
+    "exampleNotes": []
+}
