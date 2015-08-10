@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-07T19:30:14.069Z",
+    "processed": "2015-08-10T17:34:02.997Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Primary Service Location Indicator",
@@ -52,7 +52,6 @@
     "usageNotes": [
         "Required when the CC and UNE fields are   populated and the ACTL field is not populated.",
         "Required when the ACT field is “N” or “C” the first   position of the REQTYP field is “M” and the CC or   WST fields or the CC and WST fields are   populated.",
-        "",
         "Prohibited when the ACT field is “D”.",
         "Otherwise optional."
     ],

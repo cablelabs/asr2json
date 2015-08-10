@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-07T19:30:14.062Z",
+    "processed": "2015-08-10T17:34:02.997Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Translation Questionnaire Request",
@@ -105,7 +105,6 @@
         "When the first position of TQ is “A” the ASR which has the TQ Form attached will be identified in the RPON field.",
         "When the first position of TQ is “L” “M” “W” “X” or “C” entries in the CC or WST or the CC and the WST fields are required.",
         "When the first position of TQ is “A” “B” “D” “S” “T” “U” or “1-9” entries in the CC or WST or the CC and the WST fields are prohibited.",
-        "",
         "The second position of “X” indicates a Trunking Form is provided for system requirements rather than provisioning purposes.",
         "When the ACT field is “N” a second position of “N” or “X” is prohibited.",
         "When the first position of the TQ field is “E” the second position of the TQ field must be an “X”.",

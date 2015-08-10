@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-07T19:30:14.056Z",
+    "processed": "2015-08-10T17:34:02.997Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Activity Indicator",
@@ -51,7 +51,6 @@
         "An entry of “C” is valid when ordering a new trunk group.",
         "An entry of “D” is valid for a decrease in the number of trunks within an existing trunk group with no changes made to the features or translations.",
         "An entry of “E” is valid for the complete disconnect of a trunk group and the re-route of traffic as defined in the attached TQ.",
-        "",
         "An entry of “F” is valid for the complete disconnect of a trunk group (no TQ will accompany this service request)."
     ],
     "usageNotes": [

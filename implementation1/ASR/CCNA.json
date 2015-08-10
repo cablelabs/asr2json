@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-07T19:30:14.038Z",
+    "processed": "2015-08-10T17:34:02.997Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Customer Carrier Name Abbreviation",
@@ -22,12 +22,11 @@
         }
     ],
     "validEntryNotes": [
-        "Valid IAC codes are maintained by Telcordia  Technologies.",
-        ""
+        "Valid IAC codes are maintained by Telcordia  Technologies."
     ],
     "usageNotes": [],
     "fieldNotes": [
-        "The format and structure of this field is defined by   Identification of Service Providers for Information   Exchange.",
+        "The format and structure of this field is defined by   ANSI in document ATIS-0300251 Codes for   Identification of Service Providers for Information   Exchange.",
         "This code is established prior to the submission of    the ASR.",
         "For the casual customer who does not have an IAC   code this field should reflect an entry of “CUS”.   The customer name should be entered in the CUST   field on the ASR.",
         "The IAC designated in the CCNA field is the   provider’s contact for management of the access   ordering/negotiation process for the life of the   order. When using “CUS” management of this   process may be determined on an individual   provider basis.",

@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-07T19:30:14.074Z",
+    "processed": "2015-08-10T17:34:02.997Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Exchange Company Circuit ID",
@@ -15,6 +15,10 @@
         {
             "value": "",
             "description": "1. COMMON LANGUAGE Special Service Circuit Codes"
+        },
+        {
+            "value": "",
+            "description": "(CLCI S/S Codes) as defined by ANSI in ATIS-0300097:"
         },
         {
             "value": "",
@@ -35,10 +39,6 @@
         {
             "value": "",
             "description": "ASOG Practice 000 Section 2.14.3 and 2.14.4."
-        },
-        {
-            "value": "",
-            "description": ""
         }
     ],
     "validEntryNotes": [
@@ -60,8 +60,7 @@
         "Use of ranging is based on customer/provider   negotiations. Ranges should be shown within the   appropriate component of the ID by specifying the   lowest value of the component hyphen highest   value of the component e.g. trunk numbers 3500   through 3512 would be shown as 3500-3512.",
         "When disconnecting all circuits in a given account   “ALL” should be entered in this field the BAN field   populated and the ACT field should contain a “D”.",
         "The COMMON LANGUAGE Special Service Circuit    Code in this field should not reflect a value that    equates to the EVC circuit identification.",
-        "The format and structure of the field is defined by   ANSI standards.",
-        ""
+        "The format and structure of the field is defined by   ANSI standards."
     ],
     "exampleNotes": []
 }

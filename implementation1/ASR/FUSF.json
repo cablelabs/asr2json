@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-07T19:30:14.086Z",
+    "processed": "2015-08-10T17:34:02.997Z",
     "form": "ASR",
     "section": "BILL",
     "name": "Federal Universal Service Fee",
@@ -32,7 +32,6 @@
     ],
     "usageNotes": [
         "Required when the ACT field is “N” “C” or “T”.",
-        "",
         "Optional when the ACT field is “R”.",
         "Otherwise prohibited."
     ],

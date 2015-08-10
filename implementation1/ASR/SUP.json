@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-07T19:30:14.060Z",
+    "processed": "2015-08-10T17:34:02.997Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Supplement Type",
@@ -46,7 +46,6 @@
         "Provider Access Tariffs/practices define the allowable set of changes that can be accommodated on this Supplement Type.",
         "In a Multi-EC environment the use of a SUP type “3” is to be based on the status of the ASC-EC FOC. Since an OEC FOC status may not necessarily  match the ASC-EC FOC status OECs must be able to accept SUP type “3” regardless of FOC status when the ASC-EC field is populated.",
         "Used when an OEC is added to or deleted from the Multi-EC Form. Therefore when the ASC-EC field is populated with an ICSC code other than that of the receiving provider the receipt of a SUP “3” must be acceptable as the initial ASR to the added OEC.  to correct a previous request that has not already been confirmed by the provider.",
-        "",
         "Valid for Firm Orders when the ASR has not been confirmed by the provider.",
         "Valid for Service Requests (Inquiry) whether or not the ASR has been confirmed by the provider.",
         "In a Multi-EC environment the use of a SUP type “4” is to be based on the status of the ASC-EC FOC. Since an OEC FOC status may not necessarily match the ASC-EC FOC status OECs must be able to accept SUP type “4” regardless of FOC status when the ASC-EC field is populated.",

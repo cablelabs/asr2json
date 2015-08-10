@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-07T19:30:14.072Z",
+    "processed": "2015-08-10T17:34:02.997Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Local Transport",
@@ -110,10 +110,6 @@
         },
         {
             "value": "",
-            "description": ""
-        },
-        {
-            "value": "",
             "description": "2"
         },
         {
@@ -209,7 +205,6 @@
         "When ordering local transport to an access tandem the direct-trunked transport valid entries should be used for flat-rated service. Tandem-switched transport valid entries should be used for usage- rated service.",
         "When the first position is “A” the fourth position is prohibited.",
         "When the first position is “C” or “E” and EF is bein g ordered separately RPON is required.",
-        "",
         "When the first position is “N” the second third and fourth positions are prohibited.",
         "When the first position is “B” or “C” the use of the fourth position may be prohibited based on provider tariffs/practices.",
         "Use of the third and fourth positions of this field is based on customer practices.",

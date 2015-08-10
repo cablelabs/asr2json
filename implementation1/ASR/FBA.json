@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-07T19:30:14.067Z",
+    "processed": "2015-08-10T17:34:02.997Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Facility Billing Arrangement",
@@ -87,7 +87,6 @@
     ],
     "usageNotes": [
         "Required when the ACT field is “N” “C” or “T” and   the ACNA field is different from the ACNA   associated with the facility (CFA and/or SCFA) and   the UNE and CC fields are not populated.",
-        "",
         "Optional when the ACT field is “R” and the ACNA   field is different from the ACNA associated with the   facility (CFA and/or SCFA) and the UNE and CC   fields are not populated.",
         "Otherwise prohibited."
     ],

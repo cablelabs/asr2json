@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-07T19:30:14.067Z",
+    "processed": "2015-08-10T17:34:02.997Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Fiber Network Identification",
@@ -28,8 +28,7 @@
         "Required when the first position of the REQTYP   field is “R” and the UNE field is not populated.",
         "Required for DS1/DS3 within a fiber network when   the ACT field is “N” “C” “M” “T” or “R” and the   UNE field is not populated.",
         "Required for services riding a dedicated ring when   the ACT field is “N” “C” “M” “T” or “R” and the   UNE field is not populated.",
-        "Otherwise prohibited.",
-        ""
+        "Otherwise prohibited."
     ],
     "fieldNotes": [
         "The Fiber Network Identification data will be   assigned by the provider."

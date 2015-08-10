@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-07T19:30:14.085Z",
+    "processed": "2015-08-10T17:34:02.997Z",
     "form": "ASR",
     "section": "BILL",
     "name": " Access Customer Name Abbreviation",
@@ -26,7 +26,7 @@
     ],
     "usageNotes": [],
     "fieldNotes": [
-        "The format and structure of this field is defined by    Identification of Service Providers for Information   Exchange.",
+        "The format and structure of this field is defined by    ANSI in document ATIS-0300251 Codes for   Identification of Service Providers for Information   Exchange.",
         "This code is established prior to the submission of   the ASR.",
         "Billing to an end user who does not have an IAC   code is specified with an entry of “ZZZ”. When   utilizing “ZZZ” the Bill Section of the ASR Form   should be completed with the end user billing   information."
     ],

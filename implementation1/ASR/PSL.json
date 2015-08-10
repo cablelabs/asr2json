@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-07T19:30:14.068Z",
+    "processed": "2015-08-10T17:34:02.997Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Primary Service Location",
@@ -27,7 +27,7 @@
         "Otherwise optional."
     ],
     "fieldNotes": [
-        "The format and structure of this field is defined by    Identification of Location Entities for the North   American Telecommunications System or by    COMMON LANGUAGE in BR-795-100-100. A brief    summary of the format can be found in ASOG   Practice 000 Section 2.14.1."
+        "The format and structure of this field is defined by    ANSI in document T1.253 (ATIS-0325300):   Identification of Location Entities for the North   American Telecommunications System or by    COMMON LANGUAGE in BR-795-100-100. A brief    summary of the format can be found in ASOG   Practice 000 Section 2.14.1."
     ],
     "exampleNotes": []
 }

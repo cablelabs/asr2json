@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-07T19:30:14.056Z",
+    "processed": "2015-08-10T17:34:02.997Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Quantity Service Address Location Information",
@@ -22,7 +22,6 @@
         "Prohibited when the first position of the REQTYP   field is “M”.",
         "Prohibited when the first position of the REQTYP   field is “S” and the SEI field is populated.",
         "Prohibited when the NAG field is populated.",
-        "",
         "Otherwise optional."
     ],
     "fieldNotes": [

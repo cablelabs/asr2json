@@ -42,7 +42,7 @@ module.exports.jsonCon = function(fileName){
                 content = "\n";
             }
         }
-        content = "\n";
+        content = " ";
         content = decodeURIComponent(finalText);
         content = content.replace(/,/g,"");
         text = text + content;

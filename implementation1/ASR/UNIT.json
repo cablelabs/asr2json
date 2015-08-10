@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-07T19:30:14.070Z",
+    "processed": "2015-08-10T17:34:02.997Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Unit Identification",
@@ -36,7 +36,6 @@
         "Required when the first position of the REQTYP   field is “M” the ACT field is “N” “C” or “D” the   second position of the TQ field is not “N” or “X” and   the EOD USE field on the EOD Form is not “A”.",
         "Required when the first position of the REQTYP   field is “A” or “L” and the ACT field is “N” “C” or   “D”.",
         "Prohibited when the second position of the TQ field   is “N” or “X” or the EOD USE field on the EOD   Form is “A”.",
-        "",
         "Otherwise optional."
     ],
     "fieldNotes": [],

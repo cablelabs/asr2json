@@ -1,6 +1,6 @@
 {
     "asogVersion": "0050",
-    "processed": "2015-08-07T19:30:14.076Z",
+    "processed": "2015-08-10T17:34:02.997Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": " Billing Account Number",
@@ -33,8 +33,7 @@
         "If the customer wishes to have a new billing account number for this order enter “N” in this field.  The new billing account number will appear on the bill and the Confirmation Notice Form (CN).",
         "“NB” represents a non-billing provider that is involved in providing this access service when the ASC-EC field is populated.",
         "If an existing service BAN is invalid the provider will determine the appropriate BAN and return it on the Confirmation Notice Form (CN).",
-        "Use of valid entry of “E” is based on  customer/provider negotiations.",
-        ""
+        "Use of valid entry of “E” is based on  customer/provider negotiations."
     ],
     "usageNotes": [],
     "fieldNotes": [

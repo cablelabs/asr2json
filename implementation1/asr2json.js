@@ -62,6 +62,7 @@ field.fieldNumber = 0;
 var fileContent = [];       //text from the file written by consolidator
 field.keywordFlag = true;     //if the keyword is encountered
 var tillEntries = 0;    //for valid entries
+var state = 0;
 
 //read asynchronously
 //fs.readFile("parsedText", "utf8", function (error, data) {
@@ -85,6 +86,7 @@ function read(){
     readableStream.on('end',function(){
         fileContent = data.split("\n");
         clear();
+        processedAt();          //store the processing date-time
         for(var i = 0; i< fileContent.length;i++){
             parseLine(fileContent[i]);
             if(i == fileContent.length -1){ //for the last field
@@ -101,19 +103,16 @@ function read(){
 * Process the pdf, line by line.
 */
 function parseLine(lines){
-    var information = lines.split("\n");
-    state = 1; // 1. form, 2. section, 3. field
-    var i = 0;
-    while(i<information.length){
-        processedAt();          //store the processing date-time
-//        check for form if state is 1
-        state = isForm(information[i]);
-
-        state = isSection(information[i]);
-//        check for section if state is 2
-
-        isField(information[i],state);
-        i++;
+    if(state == 0){
+        isForm(lines);
+        isSection(lines);
+        isField(lines);
+    }else if(state == 1){
+        isSection(lines);
+    }else if(state == 2){
+        isField(lines);
+    }else if(state == 3){
+        getFieldInfo(lines);
     }
 }
 
@@ -125,9 +124,8 @@ function isForm(line){
     var re = /^3\./;
     if(re.exec(line) != null && line.indexOf("FORM") > -1){
         getFormInfo(line);
-        return 2;
+        state = 1;
     }
-    return 1;
 }
 
 
@@ -136,30 +134,24 @@ function isForm(line){
 */
 function isSection(line){
     var re = /^3\.\d/;
-
     if(re.exec(line) != null && line.indexOf("SECTION") > -1){
         getSectionInfo(line);
-        return 3;
+        state = 2;
     }
-    return 2;
 }
 
 
 /**
 * Check if the line indicates the start of a field.
 */
-function isField(line,state){
-    var newPage = isNewPage(line);
-    var re = /^\d\.s*[A-Z].*/;
-    if(newPage){
-        state = 5;
-    }else if(re.exec(line) != null){
+function isField(line){
+    var re = /^\d+\.\s*[A-Z].*/;
+    var titleLine = line.replace(/\s/g,"");
+    var reg = /^\d+\. [A-Z].*/
+    if(re.exec(titleLine) != null || reg.exec(titleLine) != null){
+        getFieldInfo(line);
+        state = 3;
     }
-//    console.log(newPage);
-//    if new page, check for form/section/fieldTitle
-//    isForm(line);
-//    isSection(line);
-    getFieldInfo(line);
 }
 
 
@@ -198,10 +190,11 @@ function getFieldInfo(line){
         field.content = "";
         previous = "";
     }
-    if(line.indexOf("ATIS") > -1 || line.indexOf("Issued") > -1 || line.indexOf("Implemented") > -1){   //ignore the lines
+    if(line.match(/^ATIS.*/) != null || line.indexOf("Issued") > -1 || line.indexOf("Implemented") > -1){   //ignore the lines
         previous = "";
+        getVersion(line);       //use atis for the version number
+        state = 0;              //new page, search for form, section, field
     }
-    getVersion(line);       //use atis for the version number
     var re = /^\d+(\.).*/;
     if(re.exec(line)){
         if(line.indexOf("-") > -1 || line.indexOf("–") > -1){
@@ -287,12 +280,12 @@ function processedAt(){
 */
 function getTitle(line,hyphen){
     var re = /\d+s*\.([A-Z\–\-]+)([A-Z][a-z].*)/;
-    if(re.exec(line) && (line.indexOf(hyphen) != line.lastIndexOf(hyphen))){
+    if(re.exec(line) && (line.indexOf(hyphen) != line.lastIndexOf(hyphen))){       //More than one hyphen
         var title = re.exec(line);
         field.title = title[1].substring(0,title[1].lastIndexOf(hyphen));
         field.name = title[2];
     }else{
-        var title = String(line.match(/[A-Z]+\-\–[A-Za-z]+.*/));
+        var title = String(line.match(/[A-Z]+\-\–[A-Za-z]+.*/));            //Only one hyphen
         field.title = line.substring(line.indexOf(".")+1,line.indexOf(hyphen));
         field.title = field.title.trim();
         if(line.indexOf("(") > -1 && line.indexOf(")") > -1){
@@ -359,7 +352,7 @@ function getKeyword(line){
 */
 function getDescription(line){
     var re = /^3-\d+$/;
-    if(re.exec(line) === null && line != " "){
+    if(re.exec(line) == null && line != ""){
         line = line.trim();
         switch(field.previousField){
             case "fieldNotes":
@@ -461,11 +454,14 @@ function getLength(line){
 function getLengthValues(line){
     line = line.trim();
     var values = line.split(" ");
-    if(line.indexOf("minimum") > -1){
+    if(values.length > 1 && line.indexOf("minimum") > -1){
+//        var length = parseInt(values[0]);                 //convert to int
         field.minimumLength = values[0];
-    }else{
+    }else if(values.length > 1){
+//        var length = parseInt(values[0]);
         field.maximumLength = values[0];
     }
+//    console.log(field.minimumLength + " " +field.maximumLength);
     switch(values[1]){
         case "alpha":
             field.characteristics = "Alpha";
