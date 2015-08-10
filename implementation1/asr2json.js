@@ -63,6 +63,8 @@ var fileContent = [];       //text from the file written by consolidator
 field.keywordFlag = true;     //if the keyword is encountered
 var tillEntries = 0;    //for valid entries
 var state = 0;
+field.nextForm = "";
+field.nextSection = "";
 
 //read asynchronously
 //fs.readFile("parsedText", "utf8", function (error, data) {
@@ -159,8 +161,8 @@ function isField(line){
 * Get the form name and create a directory with the name, if there is none created
 */
 function getFormInfo(line){
-    field.form = line.substring(line.indexOf("(")+1, line.indexOf(")"));
-    var directory = "./" + field.form;
+    field.nextForm = line.substring(line.indexOf("(")+1, line.indexOf(")"));
+    var directory = "./" + field.nextForm;
     if (!fs.existsSync(directory)) {
         fs.mkdirSync(directory);
     }
@@ -172,8 +174,8 @@ function getFormInfo(line){
 */
 function getSectionInfo(line){
 // Get section number and use it to find if the next 3.x is section number + 1
-    field.section = String(line.match(/[a-z.*A-Z ]+$/));
-    field.section = (field.section.split(" SECTION"))[0];
+    field.nextSection = String(line.match(/[a-z.*A-Z ]+$/));
+    field.nextSection = (field.nextSection.split(" SECTION"))[0];
 }
 
 
@@ -201,10 +203,16 @@ function getFieldInfo(line){
             hyphen = line.indexOf("-") > -1 ? "-" : "–";
             field.fieldNumber = String((line).match(/\d+/));
             if(prevFieldNumber == field.fieldNumber-1){
+                if(field.form == ""){
+                    field.form = field.nextForm;
+                    field.section = field.nextSection;
+                }
                 lineConsidered = field.fieldNumber;
                 field.fieldNumber = prevFieldNumber;
                 writeToFile();
                 clear();
+                field.form = field.nextForm;
+                field.section = field.nextSection;
                 field.fieldNumber = lineConsidered;
 //                console.log("field.fieldNumber " + field.fieldNumber);
                 getTitle(line,hyphen);
@@ -527,7 +535,7 @@ title = title.replace('/',':');
 * example is removed as the format is not right
 */
 function replacer(key, value) {
-    if ( key=="keywordFlag" || key=="previousField" || key=="content" || key == "example") {
+    if ( key=="keywordFlag" || key=="previousField" || key=="content" || key == "example" || key == "nextSection" || key == "nextForm") {
         return undefined;
     }
     return value;
