@@ -26,9 +26,7 @@ git clone https://github.com/cablelabs/asr2json.git
 ```
 cd asr2json
 ```
-```
-node asr2json.js
-```
+
 * This is the command to run. Replace fileName with the name of the pdf containing the spec. Replace startingPage and endingPage with the pages from the pdf which you want to be converted. 
 ```
 node asr2json.js fileName startingPage endingPage
