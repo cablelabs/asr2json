@@ -15,13 +15,13 @@ var child = exec("python pdfsplit.py " + fileName + " " + startPage + " " + endP
     else {
         // CONVERTING THE PDF TO JSON
         child = exec("pdf2json -f " + fileName.split("/")[1].split(".pdf")[0] + "." + startPage + "_" + endPage + ".pdf -s", {maxBuffer: 1024 * 500}, function (error, stdout, stderr) {
-                if (error !== null) {
-                   console.log('exec error: ' + error);
-                }
-                else {
-                    jsonConsolidator.jsonConsol(fileName.split("/")[1].split(".pdf")[0] + "." + startPage + "_" + endPage + ".json");
-                    parse();
-                }
+            if (error !== null) {
+               console.log('exec error: ' + error);
+            }
+            else {
+                jsonConsolidator.jsonConsol(fileName.split("/")[1].split(".pdf")[0] + "." + startPage + "_" + endPage + ".json");
+                parse();
+            }
         });
     }
 });
@@ -32,13 +32,14 @@ var formNumber = "3";
 var field = {"asogVersion": "", "processed": "", "form": "", "section": "", "name": "", "title": "", "fieldNumber": "", "minimumLength": "", "maximumLength": "", "characteristics": "", "usage": "", "example": "", "definition": "", "validEntry": "", "validEntryNotes": "", "usageNotes": "", "fieldNotes": "", "exampleNotes": ""};
 field.breakValue = "EXAMPLE";
 field.asogVersion = "50";
+field.nextForm = "";
+field.nextSection = "";
 field.processed = new Date();
 var line = "";
 var i=0;
 var contents ="";
 
 function parse() {
-
     fs.readFile("textalone", "utf8", function (error, contents) {
         if(error){
             console.log(error);
@@ -80,15 +81,19 @@ function parse() {
         function checkIfForm() {
             var regex = new RegExp("^" + formNumber + "\.[^0-9]");
             if ( regex.exec(line) && line.indexOf("FORM")>-1) {
-                field.form = (line.split("(")[1]).split(")")[0];
+//                field.nextForm = (field.nextForm == "") ? (line.split("(")[1]).split(")")[0] : field.form;
+//                field.form = (line.split("(")[1]).split(")")[0];
+                field.nextForm = (line.split("(")[1]).split(")")[0];
             }
         }
 
         function checkIfSection() {
             var regex = /^3\.[0-9]/;
             if ( regex.exec(line) && line.indexOf("SECTION")>-1) {
-                field.section = String(line.match(/[a-zA-Z ]+$/));
-                field.section = (field.section.split(" SECTION"))[0];
+//                field.prevSection = (field.prevSection == "") ? String(line.match(/[a-zA-Z ]+$/)).split(" SECTION")[0] : field.section;
+//                field.section = String(line.match(/[a-zA-Z ]+$/));
+//                field.section = (field.section.split(" SECTION"))[0];
+                field.nextSection = String(line.match(/[a-zA-Z ]+$/)).split(" SECTION")[0];
             }
         }
 
@@ -98,10 +103,16 @@ function parse() {
 
             // CHECKING END OF FIELD
             if ( prevFieldNumber!=0 && prevFieldNumber!=currentFieldNumber ) {
+                if( field.form == "") {
+                    field.form = field.nextForm;
+                    field.section = field.prevSection;
+                }
                 filterDefinitions();
                 writeOutput(prevFieldNumber);
                 clearFieldProperties();
                 field.fieldNumber = currentFieldNumber;
+                field.form = field.nextForm;
+                field.section = field.nextSection;
             }
 
             if( line.indexOf("continued") == -1) { // FOR NEW FIELD
@@ -141,7 +152,7 @@ function parse() {
                     case "DATA CHARACTERISTICS":
                         var info = (getFieldInfo().trim());
                         if ( info.indexOf("minimum") == -1 ) {
-                            field.maximumLength = info[0];
+                            field.maximumLength = info.trim().split(" ")[0];
                         }
                         else {
                             field.minimumLength = info.split("and")[0].trim().split(" ")[0].trim();
@@ -188,6 +199,7 @@ function parse() {
         function getFieldInfo() {
             var pageNumberRegex = /^3-[0-9]+$/;
             var fieldInfo = "";
+            // Added condition to include the word "NOTE" in the notes
             if ( field.breakValue == "FIELD NOTES" || field.breakValue == "VALID ENTRY NOTES" || field.breakValue == "USAGE NOTES" || field.breakValue == "EXAMPLE NOTES" ) {
                 fieldInfo = " " + contents[i].trim() + "\n";
             }
@@ -200,7 +212,7 @@ function parse() {
                 }
 
                 // Checking if valid entries are present after valid entry notes
-                var validEntriesRegex = /^[A-Z0-9 ]+=.*/;
+                var validEntriesRegex = /^[A-Z0-9\- ]+=.*/;
                 if ( line.match(validEntriesRegex) && field.breakValue == "VALID ENTRY NOTES" ) {
                     i--;
                     field.breakValue = "VALID ENTRIES";
@@ -301,7 +313,7 @@ function parse() {
         }
 
         function replacer(key, value) {
-            if ( key=="breakValue" ) {
+            if ( key=="breakValue" || key=="nextSection" || key=="nextForm") {
                 return undefined;
             }
             else if ( key=="example" ) {
@@ -312,7 +324,7 @@ function parse() {
 
         function clearFieldProperties() {
             for ( var key in field ) {
-                if ( key!="breakValue" && key!="asogVersion" && key!="processed" && key!="form" && key!="section") {
+                if ( key!="breakValue" && key!="asogVersion" && key!="processed" && key!="form" && key!="section" && key!="nextForm" && key!="nextSection") {
                     delete field[key];
                     field[key] = "";
                 }

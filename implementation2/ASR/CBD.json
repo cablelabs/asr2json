@@ -1,6 +1,6 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T18:51:34.631Z",
+    "processed": "2015-08-10T17:22:32.891Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Call Before Dispatch",
@@ -20,10 +20,14 @@
         {
             "value": "A",
             "description": "Unstaffed Service Delivery Location"
+        },
+        {
+            "value": "01-99",
+            "description": "Hours"
         }
     ],
     "validEntryNotes": [
-        "Defines the service delivery location as “Unstaffed” requiring coordination with LCON prior to technician dispatch. 2nd and 3rd Character 01-99 = Hours",
+        "Defines the service delivery location as “Unstaffed” requiring coordination with LCON prior to technician dispatch. 2nd and 3rd Character ",
         "The desired number of hours prior to dispatch to facilitate access for the service technician. "
     ],
     "usageNotes": [
