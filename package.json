@@ -1,0 +1,29 @@
+{
+  "name": "asr2json",
+  "version": "1.0.0",
+  "description": "ASR to JSON converter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cablelabs/asr2json.git"
+  },
+  "author": "Rajat Ashok and Willison Lopes",
+  "contributors": [
+    {
+      "name": "Rajat Ashok",
+      "email": "rajatashok@gmail.com"
+    },
+    {
+      "name": "Willison Lopes",
+      "email": "willison.lopes@gmail.com"
+    }
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cablelabs/asr2json/issues"
+  },
+  "homepage": "https://github.com/cablelabs/asr2json#readme"
+}
