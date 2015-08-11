@@ -1,0 +1,40 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "ADMINISTRATIVE",
+    "name": "Billing Account Number",
+    "title": "BAN",
+    "fieldNumber": "26",
+    "minimumLength": "",
+    "maximumLength": "12",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the billing account to which the recurring and non- recurring charges for this request will be billed.",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "Valid Billing Account Number"
+        },
+        {
+            "value": "NB",
+            "description": "Multi-EC Non-billing Provider"
+        }
+    ],
+    "validEntryNotes": [
+        "“NB” represents a non-billing provider that is involved in providing this access service.",
+        "When the customer has populated an “E” in the BAN field on the ASR Form, the provider returns a BAN on the Confirmation Notice Form (CN). If the customer determines the BAN is incorrect it is the customer’s responsibility to coordinate the correct BAN assignment. "
+    ],
+    "usageNotes": [
+        "Required when the ACT field on the ASR Form is “N”, “C”, “D”, “M” or “T” and the RT field is “F”, otherwise optional."
+    ],
+    "fieldNotes": [
+        "The precise format will be defined by each provider in accordance with their individual billing procedures and provided to the customers.",
+        "If the customer wished to have a new billing account number for this order, an “N” would have been entered in the BAN field on the ASR Form.",
+        "BAN on a confirmation for a Hi-Cap facility becomes HBAN on subsequent requests utilizing the Hi-Cap facility."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

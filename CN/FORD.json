@@ -1,0 +1,30 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "ADMINISTRATIVE",
+    "name": "Facility Order Number",
+    "title": "FORD",
+    "fieldNumber": "57",
+    "minimumLength": "",
+    "maximumLength": "17",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the provider service order number for the trunk facility.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the ACT field on the ASR Form is “N” or “D”, the FCKT field is populated and the RT field is “F”.",
+        "Prohibited when the RT field is “B” or “S”.",
+        "Otherwise optional."
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

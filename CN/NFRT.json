@@ -1,0 +1,57 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "ADMINISTRATIVE",
+    "name": "Network Facility Requirement Type",
+    "title": "NFRT",
+    "fieldNumber": "24",
+    "minimumLength": "",
+    "maximumLength": "2",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Indicates the type of provider requirement needed when the customer’s desired due date cannot be met.",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "1st character"
+        },
+        {
+            "value": "1",
+            "description": "Outside Plant (OSP) Build"
+        },
+        {
+            "value": "2",
+            "description": "Interoffice Facility (IOF) Build"
+        },
+        {
+            "value": "3",
+            "description": "Both OSP and IOF Build"
+        },
+        {
+            "value": "",
+            "description": "2nd character"
+        },
+        {
+            "value": "A",
+            "description": "Minor Build"
+        },
+        {
+            "value": "B",
+            "description": "Major Build"
+        }
+    ],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Optional when the NFR field is populated, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

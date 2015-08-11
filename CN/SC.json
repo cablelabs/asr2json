@@ -1,0 +1,33 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "ADMINISTRATIVE",
+    "name": "Special Construction Requirement",
+    "title": "SC",
+    "fieldNumber": "28",
+    "minimumLength": "",
+    "maximumLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Indicates that special construction is required to fill the request.",
+    "validEntry": [
+        {
+            "value": "Y",
+            "description": "Required"
+        }
+    ],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Prohibited when the RT field is “B”, otherwise optional."
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

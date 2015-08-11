@@ -1,0 +1,28 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "ADMINISTRATIVE",
+    "name": "Special Action Indicator",
+    "title": "SPA",
+    "fieldNumber": "5",
+    "minimumLength": "",
+    "maximumLength": "1",
+    "characteristics": "AlphaNumeric",
+    "usage": "Optional",
+    "example": "",
+    "definition": "An indicator used by the customer to identify an order being sampled for quality control purposes.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

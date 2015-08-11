@@ -1,0 +1,49 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T17:00:15.655Z",
+    "form": "CNR",
+    "section": "NR DETAIL",
+    "name": "Customer Response Due Date",
+    "title": "CRDD",
+    "fieldNumber": "15",
+    "minimumLength": "",
+    "maximumLength": "10",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the date on which the provider expects a response from the customer regarding this Clarification/Notification Request.",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "U.S. Standard Metric Format"
+        },
+        {
+            "value": "",
+            "description": "Two Digit Month (01-12) Two Digit Century (00-99)"
+        },
+        {
+            "value": "",
+            "description": "Two Digit Day (01-31) Two Digit Year (00-99)"
+        },
+        {
+            "value": "",
+            "description": "Two Digit Century (00-99) Two Digit Month (01-12)"
+        },
+        {
+            "value": "",
+            "description": "Two Digit Year (00-99) Two Digit Day (01-31)"
+        }
+    ],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the SUPR field is populated, otherwise optional."
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

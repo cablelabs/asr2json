@@ -1,0 +1,28 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "ADMINISTRATIVE",
+    "name": "Route Index",
+    "title": "RTI",
+    "fieldNumber": "38",
+    "minimumLength": "",
+    "maximumLength": "6",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the routing index to be used by the provider’s switching equipment to forward/port the provider’s telephone number to the customer’s non-RCF trunk group.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the TRFTYP field on the Trunking Form is “RI” or “PN”, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        "The route index ID is used on the LSR for the customer to direct INP traffic."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

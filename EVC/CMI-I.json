@@ -1,0 +1,39 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:25:30.079Z",
+    "form": "EVC",
+    "section": "UNI MAPPING DETAIL",
+    "name": "Color Mode Identifier (Ingress)",
+    "title": "CMI-I",
+    "fieldNumber": "45",
+    "minimumLength": "",
+    "maximumLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies when the provider configuration will use the specific customer Class of Service (CoS) markings when applying the Bandwidth Profile CIR/EIR.",
+    "validEntry": [
+        {
+            "value": "E",
+            "description": "Enable color-aware"
+        },
+        {
+            "value": "D",
+            "description": "Disable color-aware (change to color-blind mode)"
+        }
+    ],
+    "validEntryNotes": [
+        "When this field is blank and the ACT field on the ASR Form is “N”, color-blind will be utilized.",
+        "When this field is blank and the ACT field on the ASR Form is “C”, the existing value will be retained. "
+    ],
+    "usageNotes": [
+        "Optional when the ACT field on the ASR Form is “N” or “C”, the associated LREF field is populated and the LOSACT field is not “D”, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        "MEF color-aware mode indicates the provider is using customer CIR/EIR markings.",
+        "MEF color-blind mode indicates the provider ignores customer CIR/EIR markings."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

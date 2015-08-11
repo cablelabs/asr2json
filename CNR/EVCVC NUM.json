@@ -1,0 +1,28 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T17:00:15.655Z",
+    "form": "CNR",
+    "section": "ERROR DETAIL",
+    "name": "Ethernet Virtual Connection/Virtual",
+    "title": "EVC/VC NUM",
+    "fieldNumber": "24",
+    "minimumLength": "",
+    "maximumLength": "4",
+    "characteristics": "Numeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Connection Number Identifies the unique number assigned to a specific Ethernet virtual connection or a specific virtual circuit for which an error has been identified.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the REF NUM and the UREF fields are both blank and the associated ERROR TAG field is populated, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

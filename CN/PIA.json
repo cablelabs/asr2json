@@ -1,0 +1,45 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "ADMINISTRATIVE",
+    "name": "Provider Initiated Activity",
+    "title": "PIA",
+    "fieldNumber": "13",
+    "minimumLength": "",
+    "maximumLength": "1",
+    "characteristics": "Numeric",
+    "usage": "Optional",
+    "example": "",
+    "definition": "Indicates a provider initiated confirmation that is not in response to a customer Access Service Request supplement.",
+    "validEntry": [
+        {
+            "value": "1",
+            "description": "Provider Initiated ECCKT(s) Change"
+        },
+        {
+            "value": "2",
+            "description": "Provider Initiated Due Date Change"
+        },
+        {
+            "value": "3",
+            "description": "ECCKT and Due Date Change"
+        },
+        {
+            "value": "4",
+            "description": "Other (Clarify in Remarks)"
+        }
+    ],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        "This may signal to the customer that additional investigation is needed to determine internal process impacts."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

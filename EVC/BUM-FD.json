@@ -1,0 +1,44 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:25:30.079Z",
+    "form": "EVC",
+    "section": "UNI MAPPING DETAIL",
+    "name": "Broadcast, Unicast and Multicast Frame Delivery",
+    "title": "BUM-FD",
+    "fieldNumber": "21",
+    "minimumLength": "",
+    "maximumLength": "3",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "(continued)",
+    "validEntry": [
+        {
+            "value": "C",
+            "description": "Conditional"
+        },
+        {
+            "value": "D",
+            "description": "Discard"
+        },
+        {
+            "value": "U",
+            "description": "Unconditional"
+        }
+    ],
+    "validEntryNotes": [
+        "Valid entry of “C” indicates the Broadcast, Unicast and/or Multicast service frames that will be delivered if certain product descriptions and/or provider specific conditions are met.",
+        "Valid entry of “D” indicates the Broadcast, Unicast and/or Multicast service frames that will be discarded.",
+        "Valid entry of “U” indicates the Broadcast, Unicast and/or Multicast service frames that will be delivered unconditionally.",
+        "All positions are optional and an entry in one position does not require an entry in any other position. "
+    ],
+    "usageNotes": [
+        "Optional when the ACT field on the ASR Form is “N” or “C”, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        "More information regarding this field can be found in the Metro Ethernet Forum (MEF)Technical Specification MEF 10.3."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

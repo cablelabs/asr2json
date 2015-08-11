@@ -1,0 +1,33 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "VIRTUAL CIRCUIT",
+    "name": "User Network Interface (UNI) Reference Number",
+    "title": "UREF",
+    "fieldNumber": "71",
+    "minimumLength": "",
+    "maximumLength": "2",
+    "characteristics": "Numeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the reference number associated to the UNI port on which EVC mapping requirements will be applied.",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "01 – 20"
+        }
+    ],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the EVCI field on the ASR Form is populated and the associated CE-VLAN field is supplied by the provider, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

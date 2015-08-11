@@ -1,0 +1,33 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:25:30.079Z",
+    "form": "EVC",
+    "section": "UNI MAPPING DETAIL",
+    "name": "Virtual Private Network Identifier",
+    "title": "VPN-ID",
+    "fieldNumber": "30",
+    "minimumLength": "",
+    "maximumLength": "10",
+    "characteristics": "Numeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Indicates a unique identifier for the virtual private network that creates a secure network connection over a public network.",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "1-9999999999"
+        }
+    ],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Optional when the associated ASN field is populated and all of the associated S-VLAN fields are not populated, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        "When this field is populated, if the provider cannot accommodate the requested value(s), it may be further negotiated between provider and customer."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

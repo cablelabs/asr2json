@@ -1,0 +1,30 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:25:30.079Z",
+    "form": "EVC",
+    "section": "UNI MAPPING DETAIL",
+    "name": "Related Purchase Order Number",
+    "title": "RPON",
+    "fieldNumber": "18",
+    "minimumLength": "",
+    "maximumLength": "16",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the PON of a related Access Service Request.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the associated UREF field is populated and the associated RUID and the associated AUNT fields are not populated.",
+        "Prohibited when the associated AUNT field is populated.",
+        "Otherwise optional."
+    ],
+    "fieldNotes": [
+        "The RPON specified in this field identifies the PON which is establishing the physical connection (UNI) for this end of the EVC."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

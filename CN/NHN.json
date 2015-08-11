@@ -1,0 +1,33 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "ADMINISTRATIVE",
+    "name": "Non-Hunting Number",
+    "title": "NHN",
+    "fieldNumber": "46",
+    "minimumLength": "",
+    "maximumLength": "7",
+    "characteristics": "Numeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies non-hunt telephone numbers in ESS multi-line groups.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the RT field is “F”, the ACT field on the ASR Form is “N” or “C”, the first position of the REQTYP field on the ASR Form is “A” or “W”, and the NHNI field on the FGA or WAL Form is populated.",
+        "Prohibited when the RT field is “B”.",
+        "Otherwise optional."
+    ],
+    "fieldNotes": [
+        "Only valid for FGA and WAL service.",
+        "A multi-line hunt group may contain one or more lines which do not hunt when dialed directly.",
+        "When more than one number is provided use the additional ECCKT Sections of the form.",
+        "When the customer populates the NHNI field, the provider will provide the non-hunt telephone number."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

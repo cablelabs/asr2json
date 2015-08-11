@@ -1,0 +1,37 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "ADMINISTRATIVE",
+    "name": "Facility Circuit Identification",
+    "title": "FCKT",
+    "fieldNumber": "48",
+    "minimumLength": "",
+    "maximumLength": "53",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the Facility ID, which has been assigned to the digital interface being designed to accommodate the request for switched access lines or trunks.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the NC1 field on the FGA or Trunking Form is populated, and the RT field is “F”.",
+        "Prohibited when the first position of the LTP field on the ASR Form is “A”, “G”, “H”, “I”, “J” or “K”.",
+        "Prohibited when the LTP field on the ASR Form is not populated.",
+        "Prohibited when the RT field is “B”.",
+        "Otherwise optional."
+    ],
+    "fieldNotes": [
+        "The format of this field is defined COMMON LANGUAGE standards.",
+        "Multiple facilities are identified with a series or range of facility designations.",
+        "Facility designation series are separated with a comma.",
+        "Facility designation range, upper and lower limits are separated by a hyphen."
+    ],
+    "exampleNotes": [
+        "This example indicates a single facility. 1 01,103,105/T1/ MI L WW I AUW01/MILWWI13 C G O",
+        "This example indicates multiple facilities – non- sequential entry. 1 01-105/T1/MILWWI A UW 0 1/MILWWI13 C  G O",
+        "This example indicates multiple facilities - range entry."
+    ]
+}

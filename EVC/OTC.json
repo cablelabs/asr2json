@@ -1,0 +1,66 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:25:30.079Z",
+    "form": "EVC",
+    "section": "UNI MAPPING DETAIL",
+    "name": "Other Exchange Company (Terminating) (EVC)",
+    "title": "OTC",
+    "fieldNumber": "27",
+    "minimumLength": "",
+    "maximumLength": "4",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "(continued)",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "COMMON LANGUAGE EC Code – A four alpha character"
+        },
+        {
+            "value": "",
+            "description": "code, which identifies providers in North America,"
+        },
+        {
+            "value": "",
+            "description": "maintained by Telcordia Technologies."
+        },
+        {
+            "value": "",
+            "description": "COMMON LANGUAGE EC Code –A two alpha character"
+        },
+        {
+            "value": "",
+            "description": "code, which identifies the former Bell companies maintained"
+        },
+        {
+            "value": "",
+            "description": "by Telcordia Technologies."
+        },
+        {
+            "value": "",
+            "description": "Company Code –A four alpha/numeric character code"
+        },
+        {
+            "value": "",
+            "description": "structure assigned and maintained by NECA for North"
+        },
+        {
+            "value": "",
+            "description": "America and certain U.S. territories."
+        }
+    ],
+    "validEntryNotes": [
+        "Valid EC codes are outlined in Telcordia Technologies practice BR 751-100-112.",
+        "Valid Company Codes are available from NECA. "
+    ],
+    "usageNotes": [
+        "Required when the associated EVCMPID field is populated, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        "The format and structure of this field is defined by ANSI in document T1.251, Identification of Telecommunications Service Provider Codes for the North American Telecommunications System."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

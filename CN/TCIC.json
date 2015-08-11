@@ -1,0 +1,28 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "ADMINISTRATIVE",
+    "name": "Trunk Circuit Identification Code",
+    "title": "TCIC",
+    "fieldNumber": "55",
+    "minimumLength": "",
+    "maximumLength": "11",
+    "characteristics": "Numeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies a specific trunk for which CCS is being performed as assigned by the customer.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the RT field is “F” and the TCIC field on the Trunking and/or ACI Form is populated, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        "This entry must be identical to the TCIC entry on the Trunking and/or ACI Form."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

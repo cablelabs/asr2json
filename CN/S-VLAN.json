@@ -1,0 +1,33 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "VIRTUAL CIRCUIT",
+    "name": "Service Virtual Local Area Network",
+    "title": "S-VLAN",
+    "fieldNumber": "72",
+    "minimumLength": "",
+    "maximumLength": "9",
+    "characteristics": "Numeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "An identifier found within the service tag (commonly referred to in MEF 26.1 as S-TAG) which is typically associated with OVC end points at an ENNI.",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "0001 - 4095"
+        }
+    ],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the associated NCI field on the EVC Form specifies an S-VLAN based map, and the S- VLAN is assigned by the provider, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

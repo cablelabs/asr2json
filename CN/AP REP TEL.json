@@ -1,0 +1,28 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "ADMINISTRATIVE",
+    "name": "Provider Contact Telephone Number",
+    "title": "AP REP TEL",
+    "fieldNumber": "11",
+    "minimumLength": "",
+    "maximumLength": "14",
+    "characteristics": "Numeric",
+    "usage": "Required",
+    "example": "",
+    "definition": "Identifies the telephone number of the provider employee handling this request.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

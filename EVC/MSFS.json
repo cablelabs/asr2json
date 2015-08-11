@@ -1,0 +1,38 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:25:30.079Z",
+    "form": "EVC",
+    "section": "ETHERNET VIRTUAL CONNECTION DETAIL",
+    "name": "Maximum Service Frame Size",
+    "title": "MSFS",
+    "fieldNumber": "10",
+    "minimumLength": "",
+    "maximumLength": "5",
+    "characteristics": "Numeric",
+    "usage": "Optional",
+    "example": "",
+    "definition": "Identifies the Maximum Service Frame Size allowed (in bytes) for the EVC.",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "EVC Maximum Frame Size Value (numeric value expressed in"
+        },
+        {
+            "value": "",
+            "description": "bytes)"
+        }
+    ],
+    "validEntryNotes": [
+        "The value of the EVC Maximum Service Frame Size must be less than or equal to the smallest of the UNI Maximum Service Frame Sizes. "
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        "This attribute may be specified by the provider as part of their product offering.",
+        "More information regarding this field can be found in the Metro Ethernet Forum (MEF) Technical Specification MEF 10.3."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

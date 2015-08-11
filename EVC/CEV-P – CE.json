@@ -1,0 +1,39 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:25:30.079Z",
+    "form": "EVC",
+    "section": "ETHERNET VIRTUAL CONNECTION DETAIL",
+    "name": "VLAN Identification Preservation",
+    "title": "CEV-P – CE",
+    "fieldNumber": "11",
+    "minimumLength": "",
+    "maximumLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Optional",
+    "example": "",
+    "definition": "Identifies if the VLAN ID portion of the Customer Edge VLAN Tag is preserved.",
+    "validEntry": [
+        {
+            "value": "E",
+            "description": "Enabled"
+        },
+        {
+            "value": "D",
+            "description": "Disabled"
+        }
+    ],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        "A Service Frame is defined to have its CE-VLAN Identification preserved when the relationship between the ingress Service Frame and its corresponding egress Service Frame(s)is as described in the table below: Ingress Service Frame Egress Service Frame(s) Untagged Service Frame Untagged Service Frame Tagged Service Frame Tagged Service Frame with VLAN ID equal to the VLAN ID of the Tag on the ingress Service Frame",
+        "More information regarding this field can be found in the Metro Ethernet Forum (MEF)Technical Specification MEF 10.3.",
+        "This attribute may be specified by the provider as part of their product offering."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

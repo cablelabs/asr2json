@@ -1,0 +1,28 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "VIRTUAL CIRCUIT",
+    "name": "Ethernet Virtual Connection Order Number",
+    "title": "EVCORD",
+    "fieldNumber": "65",
+    "minimumLength": "",
+    "maximumLength": "17",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the provider service order number for the Ethernet Virtual Connection requested service.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the EVCI field on the ASR Form is populated, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

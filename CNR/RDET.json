@@ -1,0 +1,30 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T17:00:15.655Z",
+    "form": "CNR",
+    "section": "NR DETAIL",
+    "name": "Reason Code Detail",
+    "title": "RDET",
+    "fieldNumber": "21",
+    "minimumLength": "",
+    "maximumLength": "60",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Provides a detailed description associated with the reason code.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the RCODE field is “1P”.",
+        "Optional when the RCODE field is populated with a value other than “1P”.",
+        "Otherwise prohibited."
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

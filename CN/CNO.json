@@ -1,0 +1,28 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "ADMINISTRATIVE",
+    "name": "Case Number",
+    "title": "CNO",
+    "fieldNumber": "16",
+    "minimumLength": "",
+    "maximumLength": "12",
+    "characteristics": "AlphaNumeric",
+    "usage": "Optional",
+    "example": "",
+    "definition": "Identifies the quotation tracking number assigned by the provider in response to a provisioning arrangement inquiry, e.g., diversity.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

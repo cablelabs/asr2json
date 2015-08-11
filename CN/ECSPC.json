@@ -1,0 +1,30 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "ADMINISTRATIVE",
+    "name": "Exchange Company Signaling Point Code",
+    "title": "ECSPC",
+    "fieldNumber": "36",
+    "minimumLength": "",
+    "maximumLength": "11",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the provider's signaling point in a CCS network.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the first position of the REQTYP field on the ASR Form is “L”.",
+        "Required for CCS trunk requests when the second position of the TQ field on the ASR Form is not “N” or “X”.",
+        "Otherwise prohibited."
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:25:30.079Z",
+    "form": "EVC",
+    "section": "UNI MAPPING DETAIL",
+    "name": "Bandwidth",
+    "title": "BDW",
+    "fieldNumber": "38",
+    "minimumLength": "",
+    "maximumLength": "7",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the average rate in bits per second of ingress service frames up to which the network delivers service frames and meets the performance objectives defined by the LOS service attribute.",
+    "validEntry": [
+        {
+            "value": "Bandwidth specified at the EVC or LOS levels",
+            "description": "numeric value"
+        },
+        {
+            "value": "",
+            "description": "followed by kilobits (K), megabits (M) or gigabits (G)."
+        },
+        {
+            "value": "Bandwidth specified at the UNI level",
+            "description": "“UNI”."
+        }
+    ],
+    "validEntryNotes": [
+        "Use of “UNI” in this field is contingent upon customer/provider negotiations. "
+    ],
+    "usageNotes": [
+        "Required when the associated LOSACT field is “C” or “N”, otherwise optional."
+    ],
+    "fieldNotes": [
+        "When the bandwidth specification is not “UNI”, the last character of this entry is always expressed in kilobits (K), megabits (M) or gigabits (G)."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

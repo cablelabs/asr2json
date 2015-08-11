@@ -1,0 +1,41 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:25:30.079Z",
+    "form": "EVC",
+    "section": "UNI MAPPING DETAIL",
+    "name": "Excess Information Rate (Ingress)",
+    "title": "EIR-I",
+    "fieldNumber": "43",
+    "minimumLength": "",
+    "maximumLength": "7",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the average rate (bits per second) up to which service frames may be delivered but will not be guaranteed per the provider’s service level specification.",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "Valid EIR expressed as a numeric value followed by “K”, “M” or"
+        },
+        {
+            "value": "",
+            "description": "“G” representing Kilobits, Megabits or Gigabits per second"
+        },
+        {
+            "value": "",
+            "description": "respectively."
+        }
+    ],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Optional when the associated LREF field is populated and the LOSACT field is not “D”, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        "EIR-I is not tracked for frame loss by the MEF Ethernet OAM Protocol, unlike CIR."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

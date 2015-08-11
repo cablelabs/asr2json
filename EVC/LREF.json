@@ -1,0 +1,36 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:25:30.079Z",
+    "form": "EVC",
+    "section": "UNI MAPPING DETAIL",
+    "name": "Level of Service Reference Number",
+    "title": "LREF",
+    "fieldNumber": "33",
+    "minimumLength": "",
+    "maximumLength": "1",
+    "characteristics": "Numeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the reference number associated to the level of service mapping configuration being requested.",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "1-5"
+        }
+    ],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the associated UACT field is “C” or “N”.",
+        "Optional when the associated UACT field is “K”.",
+        "Otherwise prohibited."
+    ],
+    "fieldNotes": [
+        "On the initial transmittal of this ASR request, the LREF is a consecutively assigned customer value beginning with “1”.",
+        "On a supplemental transmittal of this ASR request, the LREF can be reassigned if previously cancelled. If the LREF has not been previously cancelled, it must retain the original value for the life of the ASR request."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

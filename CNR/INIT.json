@@ -1,0 +1,28 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T17:00:15.655Z",
+    "form": "CNR",
+    "section": "ADMINISTRATIVE",
+    "name": "Initiator",
+    "title": "INIT",
+    "fieldNumber": "7",
+    "minimumLength": "",
+    "maximumLength": "15",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the initiator as specified on the ASR Form by the customer.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the INIT field on the ASR Form is populated, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        "The INIT field entry must be identical to the INIT field entry on the ASR Form."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

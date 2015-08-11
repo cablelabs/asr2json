@@ -1,0 +1,33 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:25:30.079Z",
+    "form": "EVC",
+    "section": "UNI MAPPING DETAIL",
+    "name": "Autonomous System Number",
+    "title": "ASN",
+    "fieldNumber": "28",
+    "minimumLength": "",
+    "maximumLength": "5",
+    "characteristics": "Numeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Indicates the unique number identifying the customer Internet network ordering the Border Gateway Protocol (BGP) service.",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "A valid ASN"
+        }
+    ],
+    "validEntryNotes": [
+        "An entry in this field must comply with the Internet Engineering Task Force (IETF)standards for an ASN. The ASN is provided by the Internet Assigned Numbers Authority (IANA). "
+    ],
+    "usageNotes": [
+        "Required when ordering BGP, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        "An ASN is assigned to each network on the Internet."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

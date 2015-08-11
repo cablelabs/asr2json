@@ -1,0 +1,36 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:25:30.079Z",
+    "form": "EVC",
+    "section": "UNI MAPPING DETAIL",
+    "name": "EVC Meet Point ID",
+    "title": "EVCMPID",
+    "fieldNumber": "26",
+    "minimumLength": "",
+    "maximumLength": "42",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Specifies the physical facility ID interconnecting the two service providers in an EVC meet point configuration.",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "CLFI Code"
+        }
+    ],
+    "validEntryNotes": [
+        "The facility type code and CLLI codes used in the location elements of the CLFI code are maintained by Telcordia Technologies. "
+    ],
+    "usageNotes": [
+        "Optional when the ASC-EC field on the ASR form is populated, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        "MEF 26 defines the basic architecture of Metro Ethernet Services that cross more than one service provider domain. However, it assumes that the EVC customer interacts with only one provider who in turn places “access” orders (ENNI for the physical interconnect and OVCs for the virtual service instance) to all other providers in the path. The EVC customer receives a single circuit ID. Also in the MEF 26 model, this “EVC Meet Point” would actually be an ENNI and the EVC customer would have no visibility to it. The EVC Meet Point ID field supports an alternative, pre-MEF 26 model whereby the EVC customer places the EVC order simultaneously to both service providers in the end to end path and refers to the physical interconnection point between the two providers.",
+        "Established during pre-order negotiations outside of the ASR process.",
+        "The interconnecting facility requires that an Ethernet port be dedicated to it in order to carry Ethernet service, when the EVC involves the territories of more than one provider.",
+        "The format and structure of this field is defined by ANSI in document ATIS-0300097 Structure for the Identification of Telecommunications Connections for the North American Telecommunications System or by COMMON LANGUAGE in BR-795- 450-100. A brief summary of the format can be found in ATIS-0404000 Section 2.14.5."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

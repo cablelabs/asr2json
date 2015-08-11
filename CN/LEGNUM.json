@@ -1,0 +1,28 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "ADMINISTRATIVE",
+    "name": "Multipoint Leg Number",
+    "title": "LEGNUM",
+    "fieldNumber": "53",
+    "minimumLength": "",
+    "maximumLength": "6",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the number assigned by the customer to this leg (segment) of a multipoint circuit.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the LEGNUM field on the MSL Form is populated and the RT field is not “B”, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        "This example illustrates a numeric value but is left justified since it is treated as text."
+    ]
+}

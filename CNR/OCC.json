@@ -1,0 +1,28 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T17:00:15.655Z",
+    "form": "CNR",
+    "section": "ERROR DETAIL",
+    "name": "Occurrence",
+    "title": "OCC",
+    "fieldNumber": "28",
+    "minimumLength": "",
+    "maximumLength": "3",
+    "characteristics": "Numeric",
+    "usage": "Optional",
+    "example": "",
+    "definition": "Identifies the specific instance of a field when there is more than one occurrence of that field.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        "An entry in this field must match the specific instance of the pre printed index numbering on the related form."
+    ],
+    "exampleNotes": [
+        "This example illustrates a numeric value but is left justified since it is treated as text."
+    ]
+}

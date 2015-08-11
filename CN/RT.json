@@ -1,0 +1,89 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "ADMINISTRATIVE",
+    "name": "Response Type",
+    "title": "RT",
+    "fieldNumber": "6",
+    "minimumLength": "",
+    "maximumLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Required",
+    "example": "",
+    "definition": "Identifies the type of response issued by the provider.",
+    "validEntry": [
+        {
+            "value": "B",
+            "description": "Billing Account Number Correction (BANC)"
+        },
+        {
+            "value": "",
+            "description": "A BANC is issued by a provider to update BAN and/or"
+        },
+        {
+            "value": "",
+            "description": "ASG information."
+        },
+        {
+            "value": "F",
+            "description": "Firm Order Confirmation (FOC)"
+        },
+        {
+            "value": "",
+            "description": "A Firm Order Confirmation is issued in response to a"
+        },
+        {
+            "value": "",
+            "description": "Firm Order ASR.  This form provides the customer with"
+        },
+        {
+            "value": "",
+            "description": "non-design information such as critical dates and"
+        },
+        {
+            "value": "",
+            "description": "circuit identification. Design information may be"
+        },
+        {
+            "value": "",
+            "description": "provided on the Design Layout Report (DLR)when"
+        },
+        {
+            "value": "",
+            "description": "requested by the customer."
+        },
+        {
+            "value": "S",
+            "description": "Service Request Confirmation (SRC)"
+        },
+        {
+            "value": "",
+            "description": "A Service Request Confirmation identifies or provides a"
+        },
+        {
+            "value": "",
+            "description": "series of responses to the customer's request such as"
+        },
+        {
+            "value": "",
+            "description": "provisioning interval, estimated charges or BHMCs"
+        },
+        {
+            "value": "",
+            "description": "converted to a quantity of circuits."
+        }
+    ],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T17:00:15.655Z",
+    "form": "CNR",
+    "section": "NR DETAIL",
+    "name": "SUP Requested",
+    "title": "SUPR",
+    "fieldNumber": "14",
+    "minimumLength": "",
+    "maximumLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies that the provider expects a supplement ASR in response to this C/NR.",
+    "validEntry": [
+        {
+            "value": "Y",
+            "description": "Yes"
+        }
+    ],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when one or more SUPI fields are populated, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

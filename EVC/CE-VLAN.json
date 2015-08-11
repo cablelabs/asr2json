@@ -1,0 +1,36 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:25:30.079Z",
+    "form": "EVC",
+    "section": "UNI MAPPING DETAIL",
+    "name": "Customer Edge Virtual Local Area Network",
+    "title": "CE-VLAN",
+    "fieldNumber": "32",
+    "minimumLength": "",
+    "maximumLength": "9",
+    "characteristics": "Numeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "(continued)",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "0001-4095"
+        }
+    ],
+    "validEntryNotes": [
+        "For a VLAN based map with many to one bundling, multiple four numeric CE-VLANs are allowed to describe a list and/or ranges. Each UNI termination point must contain the same set of CE- VLAN values.",
+        "Only one four numeric CE-VLAN entry is allowed for all other VLAN based map types.",
+        "Based on customer/provider negotiations, if a provider does not require a reiteration of all existing CE-VLANs that are to be retained, the existing CE-VLANs are retained by default when not provided. "
+    ],
+    "usageNotes": [
+        "Prohibited when the associated NCI code specifies anything other than a VLAN based map, otherwise optional."
+    ],
+    "fieldNotes": [
+        "This is usually provider assigned but may be negotiated between provider and customer."
+    ],
+    "exampleNotes": [
+        "This example depicts a single CE-VLAN entry. Multiple single entries may be populated to comprise a list of non-contiguous CE-VLANs. 0 750-0759",
+        "This example depicts a range of CE-VLANs."
+    ]
+}

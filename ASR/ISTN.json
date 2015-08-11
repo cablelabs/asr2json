@@ -1,19 +1,26 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T17:35:31.050Z",
+    "processed": "2015-08-11T17:53:37.051Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Interconnection Screening Telephone Number",
     "title": "ISTN",
     "fieldNumber": "68",
-    "fieldLength": "10",
+    "minimumLength": "",
+    "maximumLength": "10",
     "characteristics": "Numeric",
     "usage": "Conditional",
     "example": "",
     "definition": "Identifies the telephone number used for billing or translation purposes.",
     "validEntry": [
-        "Telephone number format",
-        "NPA-NXX-XXXX"
+        {
+            "value": "",
+            "description": "Telephone number format"
+        },
+        {
+            "value": "",
+            "description": "NPA-NXX-XXXX"
+        }
     ],
     "validEntryNotes": [
         "This telephone number would be customer owned and identified during customer/provider pre- negotiations. "

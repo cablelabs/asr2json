@@ -1,0 +1,28 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T17:00:15.655Z",
+    "form": "CNR",
+    "section": "ADMINISTRATIVE",
+    "name": "Provider Contact",
+    "title": "AP REP",
+    "fieldNumber": "9",
+    "minimumLength": "",
+    "maximumLength": "15",
+    "characteristics": "AlphaNumeric",
+    "usage": "Required",
+    "example": "",
+    "definition": "Identifies the provider employee handling this service request.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

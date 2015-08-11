@@ -1,0 +1,35 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:25:30.079Z",
+    "form": "EVC",
+    "section": "UNI MAPPING DETAIL",
+    "name": "Network Channel Interface Code",
+    "title": "NCI",
+    "fieldNumber": "19",
+    "minimumLength": "7",
+    "maximumLength": "2",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the interface characteristics on the circuit at the ACTL/Primary Location.",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "NCI Code"
+        }
+    ],
+    "validEntryNotes": [
+        "Valid NCI codes are maintained by Telcordia Technologies. "
+    ],
+    "usageNotes": [
+        "Required when the associated UACT field is “N”, “C” or “R”, otherwise optional."
+    ],
+    "fieldNotes": [
+        "Identifies the mapping conditions between the EVC and UNI/ENNI at each EVC termination location.",
+        "The format and structure of this field is defined by ANSI in document T1.223, Structure and Representation of Network Channel (NC) and Network Channel Interface (NCI)Codes for the North American Telecommunications System or by COMMON LANGUAGE in BR-795-403-100. A brief summary of the format can be found in ATIS- 0404000 Section 2.14.7.",
+        "For Ethernet Virtual Services the seven character minimum includes the first delimiter and one protocol option."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

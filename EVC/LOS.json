@@ -1,0 +1,32 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:25:30.079Z",
+    "form": "EVC",
+    "section": "UNI MAPPING DETAIL",
+    "name": "Level of Service Name",
+    "title": "LOS",
+    "fieldNumber": "35",
+    "minimumLength": "",
+    "maximumLength": "20",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies a name for a provider defined level of service performance associated with the Ethernet product offering.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the associated LREF field is populated and the associated SPEC field is not populated, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        "This field is analogous to the Class of Service (COS) attribute as defined by the Metro Ethernet Forum as outlined in Technical Specification MEF 23.1.",
+        "Examples of Ethernet LOS names are Gold, Silver, Premium, Best Effort, A, B, C etc.",
+        "Technical parameters for a given LOS name are defined by the provider tariffs.",
+        "This is an alternative identifier for the level of service performance.",
+        "Unique entries are required per UREF."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

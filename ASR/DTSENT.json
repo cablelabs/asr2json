@@ -1,25 +1,50 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T17:35:31.050Z",
+    "processed": "2015-08-11T17:53:37.051Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Date and Time Sent",
     "title": "D/TSENT",
     "fieldNumber": "9",
-    "fieldLength": "17",
+    "minimumLength": "",
+    "maximumLength": "17",
     "characteristics": "AlphaNumeric",
     "usage": "Required",
     "example": "",
     "definition": "Identifies the date and time that the Access Service Request is sent by the customer.",
     "validEntry": [
-        "U.S. Standard Metric Format",
-        "Two Digit Month (01-12) Two Digit Century (00-99)",
-        "Two Digit Day (01-31) Two Digit Year (00-99)",
-        "Two Digit Century (00-99) Two Digit Month (01-12)",
-        "Two Digit Year (00-99) Two Digit Day (01-31)",
-        "Two Digit Hour (01-12) Two Digit Hour (01-12)",
-        "Two Digit Minute (00-59) Two Digit Minute (00-59)",
-        "AM or PM AM or PM"
+        {
+            "value": "",
+            "description": "U.S. Standard Metric Format"
+        },
+        {
+            "value": "",
+            "description": "Two Digit Month (01-12) Two Digit Century (00-99)"
+        },
+        {
+            "value": "",
+            "description": "Two Digit Day (01-31) Two Digit Year (00-99)"
+        },
+        {
+            "value": "",
+            "description": "Two Digit Century (00-99) Two Digit Month (01-12)"
+        },
+        {
+            "value": "",
+            "description": "Two Digit Year (00-99) Two Digit Day (01-31)"
+        },
+        {
+            "value": "",
+            "description": "Two Digit Hour (01-12) Two Digit Hour (01-12)"
+        },
+        {
+            "value": "",
+            "description": "Two Digit Minute (00-59) Two Digit Minute (00-59)"
+        },
+        {
+            "value": "",
+            "description": "AM or PM AM or PM"
+        }
     ],
     "validEntryNotes": [
         ""

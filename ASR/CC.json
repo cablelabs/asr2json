@@ -1,20 +1,30 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T17:35:31.050Z",
+    "processed": "2015-08-11T17:53:37.051Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Company Code",
     "title": "CC",
     "fieldNumber": "7",
-    "fieldLength": "4",
+    "minimumLength": "",
+    "maximumLength": "4",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
     "example": "",
     "definition": "Identifies the Exchange Carrier requesting local services.",
     "validEntry": [
-        "A four alpha/numeric character code structure for all",
-        "Exchange Carriers in North America and certain U.S.",
-        "territories maintained by NECA."
+        {
+            "value": "",
+            "description": "A four alpha/numeric character code structure for all"
+        },
+        {
+            "value": "",
+            "description": "Exchange Carriers in North America and certain U.S."
+        },
+        {
+            "value": "",
+            "description": "territories maintained by NECA."
+        }
     ],
     "validEntryNotes": [
         ""

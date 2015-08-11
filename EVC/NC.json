@@ -1,0 +1,34 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:25:30.079Z",
+    "form": "EVC",
+    "section": "ETHERNET VIRTUAL CONNECTION DETAIL",
+    "name": "Network Channel Code",
+    "title": "NC",
+    "fieldNumber": "6",
+    "minimumLength": "",
+    "maximumLength": "4",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the network channel code for the circuit(s) involved. The NC code describes the channel provided by the provider.",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "NC Code"
+        }
+    ],
+    "validEntryNotes": [
+        "Valid NC codes are maintained by Telcordia Technologies. "
+    ],
+    "usageNotes": [
+        "Required when the ACT field on the ASR Form is “N”, “C” or “R”, otherwise optional."
+    ],
+    "fieldNotes": [
+        "The NC code on the EVC Form is used specifically for the ordering of the Ethernet virtual connections. The NC code will specify options such as EVC Type (point to point (E-Line), or multi-point (E-LAN), etc.).",
+        "The format and structure of this field is defined by ANSI in document T1.223, Structure and Representation of Network Channel (NC) and Network Channel Interface (NCI) Codes for the North American Telecommunications System or by COMMON LANGUAGE in BR-795-403-100. A brief summary of the format can be found in ATIS- 0404000 Section 2.14.6."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

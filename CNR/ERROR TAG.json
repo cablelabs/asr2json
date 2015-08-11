@@ -1,0 +1,43 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T17:00:15.655Z",
+    "form": "CNR",
+    "section": "ERROR DETAIL",
+    "name": "Error Tag",
+    "title": "ERROR TAG",
+    "fieldNumber": "27",
+    "minimumLength": "",
+    "maximumLength": "12",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies a specific field or unique identification scheme for the error message provided in the ERROR MESSAGE field.",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "ASOG data element"
+        },
+        {
+            "value": "",
+            "description": "Unique error code"
+        },
+        {
+            "value": "SVC-ADDR",
+            "description": "Service Address"
+        }
+    ],
+    "validEntryNotes": [
+        "The valid entry “SVC-ADDR” indicates one or more data elements associated with the service address on the SALI Form is in error. In lieu of “SVC- ADDR”, the specific ASOG data element may be used (e.g., CITY) as stated in Note 2.",
+        "Identifies the name of the field (e.g., NCI) in error as shown in the ASOG.",
+        "Identifies an error condition that cannot be mapped to a specific ASOG data element. "
+    ],
+    "usageNotes": [
+        "Required when the CNT field is “E” or “F”, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

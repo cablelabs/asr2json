@@ -1,0 +1,33 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:25:30.079Z",
+    "form": "EVC",
+    "section": "ETHERNET VIRTUAL CONNECTION DETAIL",
+    "name": "SVLAN ID Preservation",
+    "title": "SVP",
+    "fieldNumber": "9",
+    "minimumLength": "",
+    "maximumLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies that the customer is requesting S-VLAN ID preservation on a requested OVC.",
+    "validEntry": [
+        {
+            "value": "Y",
+            "description": "Preservation is being requested"
+        }
+    ],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Optional when all RUIDs indicate an ENNI, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        "Preservation means that the S-VLAN values provided to an OVC at the ingress ENNI will be retained and the same values will be handed off from the OVC at the egress ENNI."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

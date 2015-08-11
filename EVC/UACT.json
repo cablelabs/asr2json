@@ -1,0 +1,50 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:25:30.079Z",
+    "form": "EVC",
+    "section": "UNI MAPPING DETAIL",
+    "name": "User Network Interface (UNI) Activity Indicator",
+    "title": "UACT",
+    "fieldNumber": "17",
+    "minimumLength": "",
+    "maximumLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the activity that is taking place at this UNI/ENNI termination point.",
+    "validEntry": [
+        {
+            "value": "C",
+            "description": "Change"
+        },
+        {
+            "value": "D",
+            "description": "Disconnect"
+        },
+        {
+            "value": "K",
+            "description": "Cancel"
+        },
+        {
+            "value": "N",
+            "description": "New"
+        },
+        {
+            "value": "R",
+            "description": "Record Activity"
+        }
+    ],
+    "validEntryNotes": [
+        "Valid entry of “K” is not permitted on initial issuance of request. An entry of “K” will indicate that all LOS activity associated with this UNI/ENNI termination is also cancelled.",
+        "Use of “C” versus “D” and “N” activity is based on provider/tariffs/contracts/negotiations. "
+    ],
+    "usageNotes": [
+        "Required when the associated UREF field is populated, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

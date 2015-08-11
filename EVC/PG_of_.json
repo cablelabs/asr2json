@@ -1,0 +1,28 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:25:30.079Z",
+    "form": "EVC",
+    "section": "UNI MAPPING DETAIL",
+    "name": "Page_of_",
+    "title": "PG_of_",
+    "fieldNumber": "48",
+    "minimumLength": "",
+    "maximumLength": "6",
+    "characteristics": "Numeric",
+    "usage": "Required",
+    "example": "",
+    "definition": "Identifies the page number and total number of pages contained in this transaction.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

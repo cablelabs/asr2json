@@ -1,0 +1,31 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "VIRTUAL CIRCUIT",
+    "name": "Ethernet Virtual Connection/Virtual Connection",
+    "title": "EVC/VC NUM",
+    "fieldNumber": "67",
+    "minimumLength": "",
+    "maximumLength": "4",
+    "characteristics": "Numeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Number Identifies each EVC/VC as a unique number.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the first position of the REQTYP field on the ASR Form is “V” or “X” and the VC NUM on the VC Form is populated.",
+        "Required when the EVCI field on the ASR Form is populated.",
+        "Otherwise prohibited."
+    ],
+    "fieldNotes": [
+        "Once EVC/VC NUM is generated, it cannot be changed and is retained through completion of the request.",
+        "The values are to be assigned consecutively beginning with “0001” and incrementing by one for each additional VC."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

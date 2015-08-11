@@ -1,0 +1,28 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "RELATED CIRCUIT",
+    "name": "Related Exchange Company Circuit Identification",
+    "title": "RECCKT",
+    "fieldNumber": "74",
+    "minimumLength": "",
+    "maximumLength": "53",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the related provider physical circuit ID against which the VC activity is requested.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the RECCKT field on the VC Form is not populated, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

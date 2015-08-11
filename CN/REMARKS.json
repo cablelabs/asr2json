@@ -1,0 +1,28 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "ADMINISTRATIVE",
+    "name": "Remarks",
+    "title": "REMARKS",
+    "fieldNumber": "44",
+    "minimumLength": "",
+    "maximumLength": "124",
+    "characteristics": "AlphaNumeric",
+    "usage": "Optional",
+    "example": "",
+    "definition": "Identifies a free flowing field, which can be used to expand upon and clarify other data on this form.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

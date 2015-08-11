@@ -1,0 +1,29 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T17:00:15.655Z",
+    "form": "CNR",
+    "section": "NR DETAIL",
+    "name": "Remarks (Continued)",
+    "title": "REMARKS",
+    "fieldNumber": "22",
+    "minimumLength": "",
+    "maximumLength": "225",
+    "characteristics": "AlphaNumeric",
+    "usage": "Optional",
+    "example": "",
+    "definition": "Identifies a free flowing field that can be used to send a detailed message to the customer or to expand upon and clarify other data on the C/NR Form.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        "This field should not be used in lieu of any existing error process.",
+        "This field will be limited to one per ASR transmission.  The entire ASR should be reviewed to ensure that all discrepancies have been included on the request."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

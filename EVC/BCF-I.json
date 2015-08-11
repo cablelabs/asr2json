@@ -1,0 +1,39 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:25:30.079Z",
+    "form": "EVC",
+    "section": "UNI MAPPING DETAIL",
+    "name": "Bandwidth Coupling Flag (Ingress)",
+    "title": "BCF-I",
+    "fieldNumber": "46",
+    "minimumLength": "",
+    "maximumLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies when color-aware markings for customer marked service frames EIR traffic should use available CIR Bandwidth.",
+    "validEntry": [
+        {
+            "value": "E",
+            "description": "Enabled"
+        },
+        {
+            "value": "D",
+            "description": "Disabled"
+        }
+    ],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Optional when the ACT field on the ASR Form is “N”, the associated LREF field is populated, and the CMI-I field is “E”.",
+        "Optional when the ACT field on the ASR Form is “C”, the associated LREF field is populated, the LOSACT field is not “D” and the CMI-I field is “E” or blank.",
+        "Otherwise prohibited."
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

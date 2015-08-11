@@ -32,7 +32,6 @@ var formNumber = "3";
 var field = {"asogVersion": "", "processed": "", "form": "", "section": "", "name": "", "title": "", "fieldNumber": "", "minimumLength": "", "maximumLength": "", "characteristics": "", "usage": "", "example": "", "definition": "", "validEntry": "", "validEntryNotes": "", "usageNotes": "", "fieldNotes": "", "exampleNotes": ""};
 field.breakValue = "EXAMPLE";
 field.asogVersion = "50";
-field.nextForm = "";
 field.nextSection = "";
 field.processed = new Date();
 var line = "";
@@ -50,16 +49,20 @@ function parse() {
         for ( i=0; i < contents.length; i++) {
             line = contents[i];
             var regex = /^[0-9]+\./;
-            if ( regex.exec(line) && (line.indexOf("-")>-1 || line.indexOf("–")>-1) && line.indexOf("continued") == -1) {
-                getFieldNameandTitle(line);
-                if( hashMap[field.title] == undefined ) {
-                    hashMap[field.title] = 1;
+            if ( regex.exec(line) && (line.indexOf("-")>-1 || line.indexOf("–")>-1) && line.indexOf("continued") == -1 && contents[i+1].indexOf("continued") == -1) {
+                if ( getFieldNameandTitle(line) == 0 ) {
+                    continue;
+                }
+                if( hashMap[field.title.trim()] == undefined ) {
+                    hashMap[field.title.trim()] = 1;
                 }
                 else {
-                    hashMap[field.title] = hashMap[field.title] + 1;
+//                    console.log(line);
+                    hashMap[field.title.trim()] = hashMap[field.title.trim()] + 1;
                 }
             }
         }
+//        console.log(hashMap);
         clearFieldProperties();
 
         // READING CONTENTS LINE BY LINE
@@ -83,7 +86,7 @@ function parse() {
             if ( regex.exec(line) && line.indexOf("FORM")>-1) {
 //                field.nextForm = (field.nextForm == "") ? (line.split("(")[1]).split(")")[0] : field.form;
 //                field.form = (line.split("(")[1]).split(")")[0];
-                field.nextForm = (line.split("(")[1]).split(")")[0];
+                field.form = (line.split("(")[1]).split(")")[0].replace("/","");
             }
         }
 
@@ -101,17 +104,22 @@ function parse() {
             var currentFieldNumber = line.split(".")[0];
             var prevFieldNumber = field.fieldNumber;
 
+//            console.log("\nLine= " + line);
+//            console.log("prevFieldnum= " + prevFieldNumber);
+//            console.log("currentFieldnum= " + currentFieldNumber);
+
+
             // CHECKING END OF FIELD
             if ( prevFieldNumber!=0 && prevFieldNumber!=currentFieldNumber ) {
                 if( field.form == "") {
-                    field.form = field.nextForm;
-                    field.section = field.prevSection;
+//                    field.form = field.nextForm;
+                    field.section = field.nextSection;
                 }
                 filterDefinitions();
                 writeOutput(prevFieldNumber);
                 clearFieldProperties();
                 field.fieldNumber = currentFieldNumber;
-                field.form = field.nextForm;
+//                field.form = field.nextForm;
                 field.section = field.nextSection;
             }
 
@@ -127,8 +135,8 @@ function parse() {
                 checkKeyWord(line);
             }
 
-            var pageNumberRegex = /^3-[0-9]+$/;
-            while ( i+1 != contents.length && !pageNumberRegex.exec(contents[i+1]) ) {
+            var pageNumberRegex = /^3[\-\-][0-9]+$/;
+            while ( i+1 != contents.length && !pageNumberRegex.exec(contents[i+1].trim()) ) {
                 switch(field.breakValue) {
                     case "DEFINITION":
                         field.definition = getFieldInfo().replace(/\n/g," ").trim();
@@ -155,9 +163,15 @@ function parse() {
                             field.maximumLength = info.trim().split(" ")[0];
                         }
                         else {
-                            field.minimumLength = info.split("and")[0].trim().split(" ")[0].trim();
-                            field.maximumLength = info.split("and")[1].trim().split(" ")[0].trim();
+                            var re1 = new RegExp( "([0-9])+[^0-9]+([0-9])+", "g" );
+                            var result = re1.exec(info);
+                            field.minimumLength = result[1].trim();
+                            field.maximumLength = result[2].trim();
+
+//                            field.minimumLength = info.split("and")[0].trim().split(" ")[0].trim();
+//                            field.maximumLength = info.split("and")[1].trim().split(" ")[0].trim();
                         }
+//                        console.log("info= " + info);
                         field.characteristics = (info.split(" ")[1].indexOf("alpha") > -1) ? ((info.split(" ")[1].indexOf("numeric") > -1) ? "AlphaNumeric" : "Alpha" ) : "Numeric";
                         break;
                     case "EXAMPLE" || "EXAMPLES":
@@ -181,31 +195,45 @@ function parse() {
                 field.title = result[1].trim();
                 field.name = result[2].trim();
             }
-            else if ( line.match(/^[0-9]+\.[A-Z]+[\-\–]/)) { // Condition when there are no spaces in title, name line (E.g. 85.FUSF-Federal...)
-                var re1 = new RegExp( "[0-9]+\.([A-Z\-\–]+)([A-Z][a-z].*)", "g" );
+            else if ( line.match(/^[0-9]+\.[A-Z\-\–]+[ ][\-\–][ ]/)) { // Condition when there are no spaces in title, name line (E.g. 85.FUSF-Federal...)
+                var re1 = new RegExp( "[0-9]+\.([A-Z\-\–]+)[ ][\-\–][ ]([A-Z][a-z].*)", "g" );
+//                console.log("CASE 2= " + line);
                 var result1 = re1.exec(line);
                 field.title = result1[1].replace(/[\-\–]$/,"").trim();
                 field.name = result1[2].trim();
 
             }
-            else {
+            else if ( line.match(/^[0-9]+\.[A-Z]+[\-\–]/)) { // Condition when there are no spaces in title, name line (E.g. 85.ASC-EC-...)
+                var re1 = new RegExp( "[0-9]+\.([A-Z\-\–]+)([A-Z][a-z].*)", "g" );
+//                console.log("CASE 3= " + line);
+                var result1 = re1.exec(line);
+                field.title = result1[1].replace(/[\-\–]$/,"").trim();
+                field.name = result1[2].trim();
+
+            }
+            else if ( line.match(/[0-9]+\.([ A-Z/\-\–]+?)[\-\–][ ]([A-Z][a-z].*)/)) {
                 var re1 = new RegExp( "[0-9]+\.([ A-Z/\-\–]+?)[\-\–][ ]([A-Z][a-z].*)", "g" ); // Condition when there are spaces in title, name line (E.g. 1. CCNA - Customer...)
+//                console.log("CASE 4= " + line);
                 var result = re1.exec(line);
                 field.title = result[1].trim();
                 field.name = result[2].trim();
             }
+            else {
+                return 0;
+            }
         }
 
         function getFieldInfo() {
-            var pageNumberRegex = /^3-[0-9]+$/;
+            var pageNumberRegex = /^3[\-\-][0-9]+$/;
             var fieldInfo = "";
             // Added condition to include the word "NOTE" in the notes
             if ( field.breakValue == "FIELD NOTES" || field.breakValue == "VALID ENTRY NOTES" || field.breakValue == "USAGE NOTES" || field.breakValue == "EXAMPLE NOTES" ) {
                 fieldInfo = " " + contents[i].trim() + "\n";
             }
-            while ( i+1 != contents.length && !pageNumberRegex.exec(contents[i+1])) {
+            while ( i+1 != contents.length && !pageNumberRegex.exec(contents[i+1].trim())) {
+//                console.log(contents[i+1]);
                 line = contents[++i].trim() + "\n";
-
+//                console.log("Line= " + line);
                 // Check if keyword is present
                 if( checkKeyWord(line) == 1 ) {
                     return fieldInfo;
@@ -241,6 +269,10 @@ function parse() {
                         else if ( field.breakValue == "DEFINITION" ) {
                             field.breakValue = "FIELD NOTES";
                         }
+                        else if ( field.breakValue == "DATA CHARACTERISTICS" ) {
+//                            console.log("DATA CHAR" + line);
+                            field.breakValue = "FIELD NOTES";
+                        }
                         else if ( field.breakValue == "VALID ENTRIES" ) {
                             field.breakValue = "VALID ENTRY NOTES";
                         }
@@ -254,6 +286,7 @@ function parse() {
                     else {
                         field.breakValue = keyWords[index];
                     }
+//                    console.log(field.breakValue);
                     return 1;
                 }
             }
@@ -289,6 +322,7 @@ function parse() {
         }
 
         function writeOutput(prevFieldNumber) {
+//            console.log("Field.form= " + field.form);
             var dir = "./" + field.form;
 
             // CREATE NEW DIRECTORY IF IT DOES NOT EXIST
@@ -298,6 +332,7 @@ function parse() {
 
             // CHECKING IF FIELD HAS DUPLICATE TITLE
             if(hashMap[field.title] > 1) {
+//                console.log(field.title);
                 outputFileName = field.form + "/" + field.title.replace("/","") + " " + field.name.split("(")[1].split(")")[0] + ".json";
             }
             else {

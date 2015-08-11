@@ -1,0 +1,51 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "ADMINISTRATIVE",
+    "name": "Plant Test Date",
+    "title": "PTD",
+    "fieldNumber": "21",
+    "minimumLength": "",
+    "maximumLength": "10",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the date the provider schedules the overall testing of the requested service to start.",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "U.S. Standard Metric Format"
+        },
+        {
+            "value": "",
+            "description": "Two Digit Month (01-12) Two Digit Century (00-99)"
+        },
+        {
+            "value": "",
+            "description": "Two Digit Day (01-31) Two Digit Year (00-99)"
+        },
+        {
+            "value": "",
+            "description": "Two Digit Century (00-99) Two Digit Month (01-12)"
+        },
+        {
+            "value": "",
+            "description": "Two Digit Year (00-99) Two Digit Day (01-31)"
+        }
+    ],
+    "validEntryNotes": [
+        "When this field is populated and the PPTD field on the ASR Form is populated, those entries must be the same. "
+    ],
+    "usageNotes": [
+        "Required when the PPTD field on the ASR Form is populated.",
+        "Prohibited when the RT field is “B” or “S”.",
+        "Otherwise optional."
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

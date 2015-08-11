@@ -1,0 +1,117 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T17:00:15.655Z",
+    "form": "CNR",
+    "section": "NR DETAIL",
+    "name": "Reason Code (Continued)",
+    "title": "RCODE",
+    "fieldNumber": "20",
+    "minimumLength": "",
+    "maximumLength": "2",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "",
+    "validEntry": [
+        {
+            "value": "1A",
+            "description": "Inter Office Facility Shortage"
+        },
+        {
+            "value": "1B",
+            "description": "Scheduling/Work Load"
+        },
+        {
+            "value": "1C",
+            "description": "Customer Not Ready"
+        },
+        {
+            "value": "1D",
+            "description": "No Loop Available"
+        },
+        {
+            "value": "1E",
+            "description": "End User Not Ready"
+        },
+        {
+            "value": "1F",
+            "description": "Provider Missed Appointment"
+        },
+        {
+            "value": "1G",
+            "description": "No Access to End User Premise"
+        },
+        {
+            "value": "1H",
+            "description": "Central Office Freeze"
+        },
+        {
+            "value": "1J",
+            "description": "Special Construction"
+        },
+        {
+            "value": "1K",
+            "description": "Natural Disaster (Flood, etc.)"
+        },
+        {
+            "value": "1L",
+            "description": "Frame Due Time Cannot Be Met"
+        },
+        {
+            "value": "1M",
+            "description": "Due Date Cannot Be Met"
+        },
+        {
+            "value": "1N",
+            "description": "Due Date and Frame Due Time Cannot Be Met"
+        },
+        {
+            "value": "1P",
+            "description": "Other"
+        },
+        {
+            "value": "1Q",
+            "description": "Assignment Problem"
+        },
+        {
+            "value": "1R",
+            "description": "Customer Could Not Be Reached"
+        },
+        {
+            "value": "1S",
+            "description": "Building Not Ready, Customer Will Advise"
+        },
+        {
+            "value": "1T",
+            "description": "Pole At Site Not Set"
+        },
+        {
+            "value": "1W",
+            "description": "Entrance Facilities Required"
+        },
+        {
+            "value": "1X",
+            "description": "Not Technically Feasible"
+        },
+        {
+            "value": "1Y",
+            "description": "No Central Office Equipment Available"
+        },
+        {
+            "value": "1Z",
+            "description": "Other Exchange Company Not Ready"
+        }
+    ],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the CNT field is “B” or “F”, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        "This indicates the ASR (PON) has a condition that impacts the critical date(s) and is only applicable after the ASR has been confirmed."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

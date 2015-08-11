@@ -1,0 +1,30 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:25:30.079Z",
+    "form": "EVC",
+    "section": "UNI MAPPING DETAIL",
+    "name": "Type of Service",
+    "title": "TOS",
+    "fieldNumber": "40",
+    "minimumLength": "",
+    "maximumLength": "8",
+    "characteristics": "Numeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the quality of service desired.",
+    "validEntry": [],
+    "validEntryNotes": [
+        "TOS is an 8 position field but positions 7 and 8 are reserved for future use.",
+        "When populated the first six positions must contain a “0” or a “1”. "
+    ],
+    "usageNotes": [
+        "Optional when the associated LREF field is populated and the associated DSCP field is not populated, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        "The TOS provides an indication of the abstract parameters which characterize the service choices provided in the network.",
+        "The TOS and DSCP fields are mutually exclusive as they utilize the same byte position in the Internet Protocol header."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

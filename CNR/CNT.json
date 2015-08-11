@@ -1,0 +1,63 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T17:00:15.655Z",
+    "form": "CNR",
+    "section": "NR DETAIL",
+    "name": "Clarification/Notification Type",
+    "title": "CNT",
+    "fieldNumber": "12",
+    "minimumLength": "",
+    "maximumLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Required",
+    "example": "",
+    "definition": "Identifies the type of clarification/notification being sent to the customer.",
+    "validEntry": [
+        {
+            "value": "A",
+            "description": "ASR (PON) Completion"
+        },
+        {
+            "value": "B",
+            "description": "Jeopardy"
+        },
+        {
+            "value": "C",
+            "description": "Previous C/NR Clear"
+        },
+        {
+            "value": "D",
+            "description": "Remarks"
+        },
+        {
+            "value": "E",
+            "description": "Errors"
+        },
+        {
+            "value": "F",
+            "description": "Jeopardy with errors"
+        },
+        {
+            "value": "K",
+            "description": "Provider Initiated Cancellation"
+        }
+    ],
+    "validEntryNotes": [
+        "An entry of “A” indicates the following: xASR (PON) has been marked as completed by the provider, service has been activated and billing may commence. xThe ASC-EC defined common completion date should be used by all EC’s involved in a MULTI-EC ordering scenario. xIn a MULTI-EC ordering scenario, all EC’s involved should follow the completion coordination process defined in ATIS- 0404120 Multiple Exchange Carriers Ordering and Design (MECOD); ASSUMPTIONS and COMPLETION sections.",
+        "An entry of “B” indicates the ASR (PON) has a condition which impacts the critical date(s).  The use of “B” is only applicable after the ASR has been confirmed. ",
+        "An entry of “C” indicates that all the conditions that would have required clarification from the customer have been satisfied. This could have occurred as the result of a SUP being received or through verbal negotiations between the customer and provider that determined a SUP is not required.  The use of “C” is only applicable after a previous C/NR has been issued with an entry in the SUPR field.",
+        "An entry of “D” indicates that the C/NR is informational only and no response is required.",
+        "An entry of “E” indicates that one or more ERROR TAG fields are populated on the C/NR.",
+        "An entry of “F” indicates the combination of “B” and “E” conditions.",
+        "An entry of “K” indicates the ASR has been cancelled by the provider based on no response to a previously issued C/NR. When a MULTI-EC ordering scenario exists, the EC’s involved should follow the coordination process defined in ATIS- 0404120 MECOD; ASSUMPTIONS and COMPLETION sections and synchronize the order status with the ASC-EC. "
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

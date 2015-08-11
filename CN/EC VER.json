@@ -1,0 +1,28 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "ADMINISTRATIVE",
+    "name": "Exchange Carrier Version",
+    "title": "EC VER",
+    "fieldNumber": "29",
+    "minimumLength": "",
+    "maximumLength": "2",
+    "characteristics": "Numeric",
+    "usage": "Required",
+    "example": "",
+    "definition": "Identifies the provider's version.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        "For corrections and SUPs, the entry will increment. For resends, the entry will not increment."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

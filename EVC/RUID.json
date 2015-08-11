@@ -1,0 +1,30 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:25:30.079Z",
+    "form": "EVC",
+    "section": "UNI MAPPING DETAIL",
+    "name": "Related UNI Identifier",
+    "title": "RUID",
+    "fieldNumber": "22",
+    "minimumLength": "",
+    "maximumLength": "28",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the provider’s related circuit ID for a UNI or ENNI (circuit or Link Aggregation Group) against which the EVC activity is requested.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the associated UREF field is populated and the associated RPON field and the associated AUNT field are not populated.",
+        "Prohibited when the associated AUNT field is populated and the ACT field on the ASR Form is “N”.",
+        "Otherwise optional."
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

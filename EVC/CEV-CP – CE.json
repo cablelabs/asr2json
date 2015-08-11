@@ -1,0 +1,38 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:25:30.079Z",
+    "form": "EVC",
+    "section": "ETHERNET VIRTUAL CONNECTION DETAIL",
+    "name": "VLAN Class of Service Preservation",
+    "title": "CEV-CP – CE",
+    "fieldNumber": "12",
+    "minimumLength": "",
+    "maximumLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Optional",
+    "example": "",
+    "definition": "Identifies if the VLAN Class of Service (CoS)portion of the Customer Edge VLAN Tag is preserved.",
+    "validEntry": [
+        {
+            "value": "E",
+            "description": "Enabled"
+        },
+        {
+            "value": "D",
+            "description": "Disabled"
+        }
+    ],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        "More information regarding this field can be found in the Metro Ethernet Forum (MEF)Technical Specification MEF 10.3.",
+        "This attribute may be specified by the provider as part of their product offering."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

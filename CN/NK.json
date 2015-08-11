@@ -1,0 +1,48 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "ADMINISTRATIVE",
+    "name": "Network Configuration",
+    "title": "NK",
+    "fieldNumber": "50",
+    "minimumLength": "",
+    "maximumLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Optional",
+    "example": "",
+    "definition": "Identifies that the request was provided in an on-net or off-net configuration.",
+    "validEntry": [
+        {
+            "value": "A",
+            "description": "On-net Configuration"
+        },
+        {
+            "value": "B",
+            "description": "Off-net Configuration"
+        },
+        {
+            "value": "C",
+            "description": "On-net SECLOC/On-net SWC (Single)"
+        },
+        {
+            "value": "D",
+            "description": "On-net SECLOC/On-net SWC (Diverse)"
+        }
+    ],
+    "validEntryNotes": [
+        "A valid entry of “A” (on-net) indicates a survivable node at the SWC of the service termination point, and may be applicable during the FOC process.",
+        "A valid entry of “B” (off-net) indicates a non- survivable node at the SWC of the service termination point, and may be applicable during the FOC process.",
+        "A valid entry of “C” (On-net SECLOC/On-net SWC) (Single) indicates a survived SECLOC, with path diversity, with no SWC diversity.",
+        "A valid entry of “D” (On-net SECLOC/On-net SWC) (Diverse) indicates a survived SECLOC and survived SWC with Ring diversity. "
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

@@ -1,0 +1,189 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:25:30.079Z",
+    "form": "EVC",
+    "section": "ETHERNET VIRTUAL CONNECTION DETAIL",
+    "name": "Ethernet Virtual Connection Identifier",
+    "title": "EVCID",
+    "fieldNumber": "7",
+    "minimumLength": "",
+    "maximumLength": "28",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the provider assigned Ethernet virtual connection identifier.",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "1. COMMON LANGUAGE Special Service Circuit Codes (CLCI"
+        },
+        {
+            "value": "",
+            "description": "S/S Codes) – Serial Number Format. This format is"
+        },
+        {
+            "value": "",
+            "description": "defined in ANSI T1.266, Structure for the Identification of"
+        },
+        {
+            "value": "",
+            "description": "Telecommunications Circuits for the North American"
+        },
+        {
+            "value": "",
+            "description": "Telecommunications System and consists of the following"
+        },
+        {
+            "value": "",
+            "description": "elements:"
+        },
+        {
+            "value": "",
+            "description": "1. Prefix - A non-standard code populated according to"
+        },
+        {
+            "value": "",
+            "description": "the special services circuit coding methodology of each"
+        },
+        {
+            "value": "",
+            "description": "carrier or network operator assigning the circuit"
+        },
+        {
+            "value": "",
+            "description": "identification (1-2 alpha/numeric characters)."
+        },
+        {
+            "value": "",
+            "description": "tariff offering that requires special services circuit"
+        },
+        {
+            "value": "",
+            "description": "provisioning. Valid entries are outlined in Telcordia"
+        },
+        {
+            "value": "",
+            "description": "Technologies practice BR 795-402-100 (2"
+        },
+        {
+            "value": "",
+            "description": "alpha/numeric characters)."
+        },
+        {
+            "value": "",
+            "description": "3. Service Code Modifier- A standardized code that"
+        },
+        {
+            "value": "",
+            "description": "designates the jurisdiction, networking application, and"
+        },
+        {
+            "value": "",
+            "description": "additional technical information of the service identified"
+        },
+        {
+            "value": "",
+            "description": "in the service code. Valid entries are outlined in"
+        },
+        {
+            "value": "",
+            "description": "Telcordia Technologies practice BR 795-402-100 (2"
+        },
+        {
+            "value": "",
+            "description": "alpha/numeric characters)."
+        },
+        {
+            "value": "",
+            "description": "4. Serial Number- A serial number type code that"
+        },
+        {
+            "value": "",
+            "description": "uniquely identifies a special services circuit having the"
+        },
+        {
+            "value": "",
+            "description": "same prefix, service code, and service code modifier"
+        },
+        {
+            "value": "",
+            "description": "within a network operator or carrier assigning the"
+        },
+        {
+            "value": "",
+            "description": "circuit identification (1-6 numeric characters)."
+        },
+        {
+            "value": "",
+            "description": "5. Suffix - A serial number type code that relates a group"
+        },
+        {
+            "value": "",
+            "description": "of special services circuits having the same service code"
+        },
+        {
+            "value": "",
+            "description": "for the same customer, and with similar termination"
+        },
+        {
+            "value": "",
+            "description": "equipment at each end (1-3 numeric characters)."
+        },
+        {
+            "value": "",
+            "description": "6. Assigning Company ID- A standardized code that"
+        },
+        {
+            "value": "",
+            "description": "uniquely identifies the network operator or carrier"
+        },
+        {
+            "value": "",
+            "description": "assigning the circuit identification. Valid entries are"
+        },
+        {
+            "value": "",
+            "description": "outlined in Telcordia Technologies practice BR 751-"
+        },
+        {
+            "value": "",
+            "description": "100-112 (2-4 alpha characters)."
+        },
+        {
+            "value": "",
+            "description": "7. Segment Number- A serial number type code that"
+        },
+        {
+            "value": "",
+            "description": "uniquely identifies each termination point of a special"
+        },
+        {
+            "value": "",
+            "description": "services circuit, when the circuit has more than two"
+        },
+        {
+            "value": "",
+            "description": "termination points, i.e. multi-point circuit (1 - 3"
+        },
+        {
+            "value": "",
+            "description": "alpha/numeric characters)."
+        }
+    ],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the ACT field on the ASR Form is “C”, “D” or “R”, otherwise optional."
+    ],
+    "fieldNotes": [
+        "The provider assigning this EVCID determines the content of this field in accordance with COMMON LANGUAGE standards maintained by Telcordia Technologies.",
+        "When a component within the format is purposely omitted, the component should still be delimited and compressed to eliminate any spaces.",
+        "All components within the EVCID should be delimited by either virgules or periods.",
+        "If all positions in a component within the EVCID are not populated, the component should be compressed to eliminate any spaces.",
+        "The format and structure of the field is defined by ANSI standards."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

@@ -1,0 +1,45 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:25:30.079Z",
+    "form": "EVC",
+    "section": "UNI MAPPING DETAIL",
+    "name": "Level of Service Activity Indicator",
+    "title": "LOSACT",
+    "fieldNumber": "34",
+    "minimumLength": "",
+    "maximumLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the activity for the level of service at this UNI termination occurrence.",
+    "validEntry": [
+        {
+            "value": "C",
+            "description": "Change"
+        },
+        {
+            "value": "D",
+            "description": "Disconnect"
+        },
+        {
+            "value": "K",
+            "description": "Cancel"
+        },
+        {
+            "value": "N",
+            "description": "New"
+        }
+    ],
+    "validEntryNotes": [
+        "Valid entry of “K” is not permitted on initial issuance of request. "
+    ],
+    "usageNotes": [
+        "Required when the associated LREF field is populated, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

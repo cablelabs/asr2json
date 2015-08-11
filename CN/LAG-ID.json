@@ -1,0 +1,37 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "ADMINISTRATIVE",
+    "name": "Link Aggregation Group ID",
+    "title": "LAG-ID",
+    "fieldNumber": "43",
+    "minimumLength": "",
+    "maximumLength": "24",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the provider assigned circuit ID for a Link Aggregation Group.",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "COMMON LANGUAGE Special Service Circuit Codes (CLCI S/S"
+        },
+        {
+            "value": "",
+            "description": "Codes) – Serial Number Format"
+        }
+    ],
+    "validEntryNotes": [
+        "This format is defined in ANSI T1.266 (ATIS- 0326600.2005), Structure for the Identification of Telecommunications Circuits for the North American Telecommunications System. "
+    ],
+    "usageNotes": [
+        "Required when the LAG field on the ASR Form is “N”, otherwise optional."
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

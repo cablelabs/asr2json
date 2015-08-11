@@ -1,0 +1,28 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "ADMINISTRATIVE",
+    "name": "Electronic Mail Address",
+    "title": "EMAIL",
+    "fieldNumber": "12",
+    "minimumLength": "",
+    "maximumLength": "60",
+    "characteristics": "AlphaNumeric",
+    "usage": "Optional",
+    "example": "",
+    "definition": "Identifies the electronic mail address of the provider rep contact.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        "Z JONES@NOTES.BE L L COM P ANY. C OM"
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:25:30.079Z",
+    "form": "EVC",
+    "section": "ETHERNET VIRTUAL CONNECTION DETAIL",
+    "name": "Number of UNI/ENNI Terminations",
+    "title": "NUT",
+    "fieldNumber": "8",
+    "minimumLength": "",
+    "maximumLength": "2",
+    "characteristics": "Numeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Reflects the number of UNI/ENNI termination occurrences being affected by the service request.",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "01-20"
+        }
+    ],
+    "validEntryNotes": [
+        "When the EVCI field on the ASR form is “B” the quantity of “01” is not valid. "
+    ],
+    "usageNotes": [
+        "Optional when the ACT field on the ASR Form is “D”, otherwise required."
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

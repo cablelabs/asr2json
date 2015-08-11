@@ -1,0 +1,33 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T17:00:15.655Z",
+    "form": "CNR",
+    "section": "NR DETAIL",
+    "name": "Clarification/Notification Version",
+    "title": "C/NR VER",
+    "fieldNumber": "13",
+    "minimumLength": "",
+    "maximumLength": "2",
+    "characteristics": "Numeric",
+    "usage": "Required",
+    "example": "",
+    "definition": "Identifies the provider’s C/NR version number.",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "01 - 99"
+        }
+    ],
+    "validEntryNotes": [
+        "The initial C/NR VER for an ASR (PON) will be 01 and increments as subsequent C/NRs are generated. "
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

@@ -1,0 +1,563 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "ADMINISTRATIVE",
+    "name": "Exchange Company Circuit ID",
+    "title": "ECCKT",
+    "fieldNumber": "45",
+    "minimumLength": "",
+    "maximumLength": "53",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies a provider circuit ID or multiple circuit IDs.",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "1. COMMON LANGUAGE Special Service Circuit Codes"
+        },
+        {
+            "value": "",
+            "description": "(CLCI S/S Codes) – Telephone Number Format. This"
+        },
+        {
+            "value": "",
+            "description": "format is defined in ANSI T1.266, Structure for the"
+        },
+        {
+            "value": "",
+            "description": "Identification of Telecommunications Circuits for the"
+        },
+        {
+            "value": "",
+            "description": "North American Telecommunications System and"
+        },
+        {
+            "value": "",
+            "description": "consists of the following elements:"
+        },
+        {
+            "value": "",
+            "description": "1. Prefix - A non-standard code populated according to"
+        },
+        {
+            "value": "",
+            "description": "the special services circuit coding methodology of each"
+        },
+        {
+            "value": "",
+            "description": "carrier or network operator assigning the circuit"
+        },
+        {
+            "value": "",
+            "description": "identification (1-2 alpha/numeric characters)."
+        },
+        {
+            "value": "",
+            "description": "2. Service Code - A standardized code that represents a"
+        },
+        {
+            "value": "",
+            "description": "tariff offering that requires special services circuit"
+        },
+        {
+            "value": "",
+            "description": "provisioning. Valid entries are outlined in Telcordia"
+        },
+        {
+            "value": "",
+            "description": "Technologies practice BR 795-402-100 (2"
+        },
+        {
+            "value": "",
+            "description": "alpha/numeric characters)."
+        },
+        {
+            "value": "",
+            "description": "3. Service Code Modifier - A standardized code that"
+        },
+        {
+            "value": "",
+            "description": "designates the jurisdiction, networking application, and"
+        },
+        {
+            "value": "",
+            "description": "additional technical information of the service identified"
+        },
+        {
+            "value": "",
+            "description": "in the service code. Valid entries are outlined in"
+        },
+        {
+            "value": "",
+            "description": "Telcordia Technologies practice BR 795-402-100 (2"
+        },
+        {
+            "value": "",
+            "description": "alpha/numeric characters)."
+        },
+        {
+            "value": "",
+            "description": "4. NPA Code - A standardized code that identifies the NPA"
+        },
+        {
+            "value": "",
+            "description": "associated with the telephone number of a special"
+        },
+        {
+            "value": "",
+            "description": "services circuit (3 numeric characters)."
+        },
+        {
+            "value": "",
+            "description": "5. CO Unit Code - A standardized code that identifies the"
+        },
+        {
+            "value": "",
+            "description": "CO number associated with the telephone number of a"
+        },
+        {
+            "value": "",
+            "description": "special services circuit (3 numeric characters)."
+        },
+        {
+            "value": "",
+            "description": "6. Line Number Code - A standardized code that"
+        },
+        {
+            "value": "",
+            "description": "identifies the line number associated with the"
+        },
+        {
+            "value": "",
+            "description": "telephone number of a special services circuit (4"
+        },
+        {
+            "value": "",
+            "description": "numeric characters)."
+        },
+        {
+            "value": "",
+            "description": "7. Extension Number/Trunk Code - A non-standard"
+        },
+        {
+            "value": "",
+            "description": "code used to record extension numbers/trunk codes"
+        },
+        {
+            "value": "",
+            "description": "associated with the telephone number of a special"
+        },
+        {
+            "value": "",
+            "description": "services circuit (5 alpha/numeric characters)."
+        },
+        {
+            "value": "",
+            "description": "8. Segment Number- A serial number type code that"
+        },
+        {
+            "value": "",
+            "description": "uniquely identifies each termination point of a special"
+        },
+        {
+            "value": "",
+            "description": "services circuit, when the circuit has more than two"
+        },
+        {
+            "value": "",
+            "description": "termination points, i.e. multi-point circuit (1 - 3"
+        },
+        {
+            "value": "",
+            "description": "alpha/numeric characters)."
+        },
+        {
+            "value": "",
+            "description": "2. COMMON LANGUAGE Special Service Circuit Codes"
+        },
+        {
+            "value": "",
+            "description": "(CLCI S/S Codes) - Serial Number Format.  This format is"
+        },
+        {
+            "value": "",
+            "description": "defined in ANSI T1.266, Structure for the Identification of"
+        },
+        {
+            "value": "",
+            "description": "Telecommunications Circuits for the North American"
+        },
+        {
+            "value": "",
+            "description": "Telecommunications System and consists of the following"
+        },
+        {
+            "value": "",
+            "description": "elements:"
+        },
+        {
+            "value": "",
+            "description": "1. Prefix - A non-standard code populated according to"
+        },
+        {
+            "value": "",
+            "description": "the special services circuit coding methodology of each"
+        },
+        {
+            "value": "",
+            "description": "carrier or network operator assigning the circuit"
+        },
+        {
+            "value": "",
+            "description": "identification (1-2 alpha/numeric characters)."
+        },
+        {
+            "value": "",
+            "description": "2. Service Code - A standardized code that represents a"
+        },
+        {
+            "value": "",
+            "description": "tariff offering that requires special services circuit"
+        },
+        {
+            "value": "",
+            "description": "provisioning. Valid entries are outlined in Telcordia"
+        },
+        {
+            "value": "",
+            "description": "Technologies practice BR 795-402-100 (2"
+        },
+        {
+            "value": "",
+            "description": "alpha/numeric characters)."
+        },
+        {
+            "value": "",
+            "description": "3. Service Code Modifier - A standardized code that"
+        },
+        {
+            "value": "",
+            "description": "designates the jurisdiction, networking application, and"
+        },
+        {
+            "value": "",
+            "description": "additional technical information of the service identified"
+        },
+        {
+            "value": "",
+            "description": "in the service code. Valid entries are outlined in"
+        },
+        {
+            "value": "",
+            "description": "Telcordia Technologies practice BR 795-402-100 (2"
+        },
+        {
+            "value": "",
+            "description": "alpha/numeric characters)."
+        },
+        {
+            "value": "",
+            "description": "4. Serial Number - A serial number type code that"
+        },
+        {
+            "value": "",
+            "description": "uniquely identifies a special services circuit having the"
+        },
+        {
+            "value": "",
+            "description": "same prefix, service code, and service code modifier"
+        },
+        {
+            "value": "",
+            "description": "within a network operator or carrier assigning the"
+        },
+        {
+            "value": "",
+            "description": "circuit identification (1-6 numeric characters)."
+        },
+        {
+            "value": "",
+            "description": "5. Suffix - A serial number type code that relates a group"
+        },
+        {
+            "value": "",
+            "description": "of special services circuits having the same service code"
+        },
+        {
+            "value": "",
+            "description": "for the same customer, and with similar termination"
+        },
+        {
+            "value": "",
+            "description": "equipment at each end (1-3 numeric characters)."
+        },
+        {
+            "value": "",
+            "description": "6. Assigning Company ID - A standardized code that"
+        },
+        {
+            "value": "",
+            "description": "uniquely Identifies the network operator or carrier"
+        },
+        {
+            "value": "",
+            "description": "assigning the circuit identification. Valid entries are"
+        },
+        {
+            "value": "",
+            "description": "outlined in Telcordia Technologies practice BR 751-"
+        },
+        {
+            "value": "",
+            "description": "100-112 (2-4 alpha characters)."
+        },
+        {
+            "value": "",
+            "description": "7. Segment Number- A serial number type code that"
+        },
+        {
+            "value": "",
+            "description": "uniquely identifies each termination point of a special"
+        },
+        {
+            "value": "",
+            "description": "services circuit, when the circuit has more than two"
+        },
+        {
+            "value": "",
+            "description": "termination points, i.e. multi-point circuit (1-3"
+        },
+        {
+            "value": "",
+            "description": "alpha/numeric characters)."
+        },
+        {
+            "value": "",
+            "description": "4. Traffic Use Code - A standardized code that designates"
+        },
+        {
+            "value": "",
+            "description": "the type of traffic offered to the trunk group, e.g., inter-"
+        },
+        {
+            "value": "",
+            "description": "end office, tandem access, directory assistance. Valid"
+        },
+        {
+            "value": "",
+            "description": "entries are outlined in Telcordia Technologies practice"
+        },
+        {
+            "value": "",
+            "description": "BR 795-400-100 (2 alpha characters)."
+        },
+        {
+            "value": "",
+            "description": "5. Trunk Type Modifier- A standardized code that"
+        },
+        {
+            "value": "",
+            "description": "indicates specialized use of the trunk or trunk group,"
+        },
+        {
+            "value": "",
+            "description": "Valid entries are outlined in Telcordia Technologies"
+        },
+        {
+            "value": "",
+            "description": "practice BR 795-400-100 (1-7 alpha/numeric"
+        },
+        {
+            "value": "",
+            "description": "characters)."
+        },
+        {
+            "value": "",
+            "description": "6. Location A - A standardized code that uniquely"
+        },
+        {
+            "value": "",
+            "description": "identifies the location of facility terminal A. Valid"
+        },
+        {
+            "value": "",
+            "description": "entries are outlined in Telcordia Technologies practice"
+        },
+        {
+            "value": "",
+            "description": "BR 795-(100-186)-100 (11 alpha/numeric characters)."
+        },
+        {
+            "value": "",
+            "description": "7. Address Signaling - A standardized code that uniquely"
+        },
+        {
+            "value": "",
+            "description": "identifies the type of signals used to direct a call to its"
+        },
+        {
+            "value": "",
+            "description": "destination. Valid entries are outlined in Telcordia"
+        },
+        {
+            "value": "",
+            "description": "Technologies practice BR 795-400-100 (2"
+        },
+        {
+            "value": "",
+            "description": "alpha/numeric characters)."
+        },
+        {
+            "value": "",
+            "description": "8. Location Z – A standardized code that uniquely"
+        },
+        {
+            "value": "",
+            "description": "identifies the location of facility terminal Z. Valid"
+        },
+        {
+            "value": "",
+            "description": "entries are outlined in Telcordia Technologies practice"
+        },
+        {
+            "value": "",
+            "description": "BR 795-(100-186)-100 (11 alpha/numeric characters)."
+        },
+        {
+            "value": "",
+            "description": "4. COMMON LANGUAGE Facility Codes – (CLFI Codes)  This"
+        },
+        {
+            "value": "",
+            "description": "format is defined in ANSI T1.238, Structure for the"
+        },
+        {
+            "value": "",
+            "description": "Identification of Telecommunications Facilities for the"
+        },
+        {
+            "value": "",
+            "description": "North American Telecommunications System and"
+        },
+        {
+            "value": "",
+            "description": "consists of the following elements:"
+        },
+        {
+            "value": "",
+            "description": "1. Facility Designation - A code that, for a specific type"
+        },
+        {
+            "value": "",
+            "description": "of facility, uniquely identifies a path between two"
+        },
+        {
+            "value": "",
+            "description": "network nodes (1-5 alpha/numeric characters)."
+        },
+        {
+            "value": "",
+            "description": "2. Facility Type - A code that describes a type of facility"
+        },
+        {
+            "value": "",
+            "description": "when it is other than a single baseband channel on"
+        },
+        {
+            "value": "",
+            "description": "cable. Valid entries are outlined in Telcordia"
+        },
+        {
+            "value": "",
+            "description": "Technologies practice BR 795-450-100 (1-6"
+        },
+        {
+            "value": "",
+            "description": "alpha/numeric characters)."
+        },
+        {
+            "value": "",
+            "description": "3. Channel/Pair/Time Slot- A code that identifies a"
+        },
+        {
+            "value": "",
+            "description": "specific assignable portion of a facility (1-5"
+        },
+        {
+            "value": "",
+            "description": "alpha/numeric characters)."
+        },
+        {
+            "value": "",
+            "description": "4. Location A- A standardized code that uniquely"
+        },
+        {
+            "value": "",
+            "description": "identifies the location of facility terminal A, which has"
+        },
+        {
+            "value": "",
+            "description": "the lower in alpha/numeric sequence of the two facility"
+        },
+        {
+            "value": "",
+            "description": "location codes. Valid entries are outlined in Telcordia"
+        },
+        {
+            "value": "",
+            "description": "Technologies practice BR 795-(100-186)-100 (8 or 11"
+        },
+        {
+            "value": "",
+            "description": "alpha/numeric characters)."
+        },
+        {
+            "value": "",
+            "description": "5. Location Z- A standardized code that uniquely"
+        },
+        {
+            "value": "",
+            "description": "identifies the location of facility terminal Z, which has"
+        },
+        {
+            "value": "",
+            "description": "the higher in alpha/numeric sequence of the two"
+        },
+        {
+            "value": "",
+            "description": "facility location codes. Valid entries are outlined in"
+        },
+        {
+            "value": "",
+            "description": "Telcordia Technologies practice BR 795-(100-186)-100"
+        },
+        {
+            "value": "",
+            "description": "(8 or 11 alpha/numeric characters)."
+        }
+    ],
+    "validEntryNotes": [
+        "Either Location A or Z must be 11 characters. "
+    ],
+    "usageNotes": [
+        "Required when the RT field is “F”, the ACT field on the ASR Form is “N”, “C”, “D”, “M” or “T”, and the first position of the TQ field on the ASR Form is not “S”.",
+        "Prohibited when the RT field is “B”.",
+        "Prohibited when EVCI field on the ASR Form is “A”.",
+        "Otherwise optional."
+    ],
+    "fieldNotes": [
+        "The provider assigning this circuit identifier determines the content of this field in accordance with COMMON LANGUAGE standards maintained by Telcordia Technologies.",
+        "When the UNE field on the ASR form is populated, and the customer is ordering an unbundled multiplexer, the COMMON LANGUAGE Format of the transport facility for the high speed and low speed sides may be different.",
+        "When a component within the format is purposely omitted, the component should still be delimited and compressed to eliminate any spaces.",
+        "All components within the ECCKT should be delimited by either virgules or periods.",
+        "If all positions in a component within the ECCKT are not populated, the component should be compressed to eliminate any spaces.",
+        "Use of ranging is based on customer/provider negotiations. Ranges should be shown within the appropriate component of the ID by specifying the lowest value of the component, hyphen, and highest value of the component, e.g., trunk numbers 3500 through 3512 would be shown as 3500-3512.",
+        "The format and structure of the field is defined by ANSI standards."
+    ],
+    "exampleNotes": [
+        "For identification of a High Capacity facility to a HUB location.",
+        "Refer to the CFA field for a description of the components that comprise a facility ID."
+    ]
+}

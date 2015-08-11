@@ -1,0 +1,35 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:25:30.079Z",
+    "form": "EVC",
+    "section": "UNI MAPPING DETAIL",
+    "name": "User Network Interface (UNI) Reference Number",
+    "title": "UREF",
+    "fieldNumber": "14",
+    "minimumLength": "",
+    "maximumLength": "2",
+    "characteristics": "Numeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the reference number associated to the UNI port or ENNI termination point to which EVC mapping requirements will be applied.",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "01 – 20"
+        }
+    ],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Optional when the ACT field on the ASR Form is “D”, otherwise required."
+    ],
+    "fieldNotes": [
+        "On the initial transmittal of this ASR request, the UREF is a consecutively assigned customer value beginning with “01”.",
+        "On a supplemental transmittal of this ASR request, the UREF can be reassigned if previously cancelled. If the UREF has not been previously cancelled, it must retain the original value for the life of the ASR request.",
+        "The total number of UREFs must equal the value specified in the Number of UNI Terminations (NUT) field."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

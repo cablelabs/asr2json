@@ -1,0 +1,30 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "VIRTUAL CIRCUIT",
+    "name": "Virtual Circuit Identifier",
+    "title": "VCI",
+    "fieldNumber": "70",
+    "minimumLength": "",
+    "maximumLength": "5",
+    "characteristics": "Numeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the logical connection address between the provider switch and the circuit for the virtual circuit requested.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the first position of the REQTYP field on the ASR Form is “V” or “X”, the BSC field on the Transport or EUSA Form is “C”, the VST field on the VC Form is “A”, “C” or blank, the VCACT field on the VC Form is “D”, “N” or “R” and the CTYP field on the VC Form is not “P”.",
+        "Optional when the first position of the REQTYP field on the ASR Form is “V” or “X”, the BSC field on the Transport or EUSA Form is “C” the VST field on the VC Form is “A”, “C” or blank, the VCACT field on the VC Form is “K” and the CTYP field on the VC Form is not “P”.",
+        "Otherwise prohibited."
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        "This example illustrates a numeric value but is left justified since it is treated as text. 6 3011"
+    ]
+}

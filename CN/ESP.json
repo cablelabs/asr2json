@@ -1,0 +1,37 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "ADMINISTRATIVE",
+    "name": "Ethernet Service Point",
+    "title": "ESP",
+    "fieldNumber": "39",
+    "minimumLength": "",
+    "maximumLength": "8",
+    "characteristics": "Numeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the Ethernet switching point, terminating equipment or terminating location, in CLLI code format, at the UNI/ENNI termination.",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "CLLI Code"
+        }
+    ],
+    "validEntryNotes": [
+        "Valid CLLI Codes are outlined in Telcordia Technologies practice BR 795-(100-186)-100.",
+        "The ESP field may not be supported by all providers.",
+        "The use of an 8 character CLLI code is based on customer provider negotiations. "
+    ],
+    "usageNotes": [
+        "Prohibited when the SEI field on the ASR form is not populated.",
+        "Required when the ACT field on the ASR Form is “N”, the SEI field on the ASR Form is populated and an ESP CLLI code has been assigned by the provider.",
+        "Otherwise optional."
+    ],
+    "fieldNotes": [
+        "The format and structure of this field is defined by ANSI in document T1.253, Identification of Location Entities for the North American Telecommunications System. The CLLI Code consists of the following elements: 1. Geographical Code – Positions 1 through 4 describe the designation for a single geographical locality within a state, province, territory, country, or distinct region of the world (e.g., municipality) (4 alpha characters). 2. Geopolitical Code– Positions 5 and 6 describe the designation of a state or territory of the United States, a province or territory of Canada, another country having a national federal government, or a unique designation (2 alpha characters). 3. Network Site Code – Positions 7 and 8 describe the designation of a site of an existing or proposed structure within a geographical location where there is a need to identify one or more telecommunications equipment entities, facility terminations, nodal locations, or administrative operations (2 alpha or 2 numeric characters). 4. Network Entity Code – Positions 9 through 11 describe the functional category of equipment or work center that is contained in a structure. Equipment categories, including central office switching and ancillary equipment or non-switching or access terminations, are associated with a building or network site for purposes of maintaining equipment inventories and for identifying facility and circuit terminations and nodal locations  (3 alpha/numeric characters)."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

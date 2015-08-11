@@ -1,0 +1,31 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "ADMINISTRATIVE",
+    "name": "Trunk Quantity",
+    "title": "TRKQTY",
+    "fieldNumber": "62",
+    "minimumLength": "",
+    "maximumLength": "5",
+    "characteristics": "Numeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the number of trunks provided to the customer for service ordered in trunks or busy hour minutes of capacity.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the RT field is “F”, the ACT field on the ASR Form is “N”, “C”, “D” or “M”, the UNIT field on the ASR Form is populated and the first position of the REQTYP field on the ASR Form is “M”.",
+        "Prohibited when the RT field is “B”.",
+        "Prohibited when the UNIT field on the ASR Form is not populated.",
+        "Otherwise optional."
+    ],
+    "fieldNotes": [
+        "The total of all TRKQTY entries must equal the entry in the QTY field on the ASR Form when that entry is in trunks."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

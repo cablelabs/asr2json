@@ -1,0 +1,41 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:25:30.079Z",
+    "form": "EVC",
+    "section": "UNI MAPPING DETAIL",
+    "name": "Committed Information Rate (Ingress)",
+    "title": "CIR-I",
+    "fieldNumber": "41",
+    "minimumLength": "",
+    "maximumLength": "7",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the average rate (bits per second) up to which service frames are delivered as defined in the provider’s service level specification.",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "Valid CIR expressed as a numeric value followed by “K”, “M” or"
+        },
+        {
+            "value": "",
+            "description": "“G” representing Kilobits, Megabits or Gigabits per second"
+        },
+        {
+            "value": "",
+            "description": "respectively."
+        }
+    ],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Optional when the associated LREF field is populated and the LOSACT is not “D”, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        "CIR is tracked for frame loss by the MEF Ethernet Operations, Administration, and Maintenance (OAM) Protocol, unlike EIR."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

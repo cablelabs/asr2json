@@ -1,0 +1,33 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T17:00:15.655Z",
+    "form": "CNR",
+    "section": "NR DETAIL",
+    "name": "SUP Indicator",
+    "title": "SUPI",
+    "fieldNumber": "19",
+    "minimumLength": "",
+    "maximumLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies that the provider expects a supplement ASR to correct the condition identified at the line level on the C/NR.",
+    "validEntry": [
+        {
+            "value": "Y",
+            "description": "Yes"
+        }
+    ],
+    "validEntryNotes": [
+        "If this field is blank, the clarification/notification for this line item is informational only. "
+    ],
+    "usageNotes": [
+        "Optional when the CNT field is “B”, “E” or “F”, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

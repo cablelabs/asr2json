@@ -1,0 +1,28 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "ADMINISTRATIVE",
+    "name": "Access Service Group",
+    "title": "ASG",
+    "fieldNumber": "59",
+    "minimumLength": "",
+    "maximumLength": "6",
+    "characteristics": "AlphaNumeric",
+    "usage": "Optional",
+    "example": "",
+    "definition": "Identifies the access service group assigned to a particular circuit or group of circuits.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        "This number appears on the Customer Service Record (the billing service charge details) which is forwarded to the customer."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

@@ -1,0 +1,61 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T17:00:15.655Z",
+    "form": "CNR",
+    "section": "ADMINISTRATIVE",
+    "name": "Clarification/Notification Date and Time Sent",
+    "title": "D/TSENT",
+    "fieldNumber": "6",
+    "minimumLength": "",
+    "maximumLength": "17",
+    "characteristics": "AlphaNumeric",
+    "usage": "Required",
+    "example": "",
+    "definition": "Identifies the date and time that the Clarification/Notification Request Form is sent by the provider.",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "U.S. Standard Metric Format"
+        },
+        {
+            "value": "",
+            "description": "Two Digit Month (01-12) Two Digit Century (00-99)"
+        },
+        {
+            "value": "",
+            "description": "Two Digit Day (01-31) Two Digit Year (00-99)"
+        },
+        {
+            "value": "",
+            "description": "Two Digit Century (00-99) Two Digit Month (01-12)"
+        },
+        {
+            "value": "",
+            "description": "Two Digit Year (00-99) Two Digit Day (01-31)"
+        },
+        {
+            "value": "",
+            "description": "Two Digit Hour (01-12) Two Digit Hour (01-12)"
+        },
+        {
+            "value": "",
+            "description": "Two Digit Minute (00-59) Two Digit Minute (00-59)"
+        },
+        {
+            "value": "",
+            "description": "AM or PM AM or PM"
+        }
+    ],
+    "validEntryNotes": [
+        "Metric date format may be used based on provider/customer negotiations. "
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

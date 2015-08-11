@@ -1,0 +1,41 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:25:30.079Z",
+    "form": "EVC",
+    "section": "UNI MAPPING DETAIL",
+    "name": "Service Virtual Local Area Network",
+    "title": "S-VLAN",
+    "fieldNumber": "25",
+    "minimumLength": "",
+    "maximumLength": "9",
+    "characteristics": "Numeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "The identifier found within the service tag (commonly referred to in MEF as S-Tag) which is typically associated with OVC end points at an ENNI.",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "0001-4095"
+        }
+    ],
+    "validEntryNotes": [
+        "A single value may be entered or multiple four numeric S-VLANs are allowed to describe a non- contiguous list and/or ranges.",
+        "Based on customer/provider negotiations, if a provider does not require a reiteration of all existing S-VLANs that are to be retained, the existing S-VLANs are retained by default when not provided. "
+    ],
+    "usageNotes": [
+        "Prohibited when the associated NCI code specifies anything other than an S-VLAN based map.",
+        "Prohibited when the associated VPN-ID field is populated.",
+        "Required when the associated UACT field is “C” and the associated NCI code specifies an S-VLAN based map.",
+        "Otherwise optional."
+    ],
+    "fieldNotes": [
+        "This is the top tag in the stacked or Q in Q arrangement, or may be the sole identifier when customer frames are untagged (no underlying CE- VLAN).",
+        "This is usually provider assigned but may be negotiated between provider and customer.",
+        "When this field is populated, if the provider can not accommodate the requested value (s), it may be further negotiated between provider and customer.",
+        "When this field is blank and the associated NCI code specifies an S-VLAN based map, the value will be assigned by the provider.",
+        "When allowed by the provider product definition, S-VLANs may be specified in a range."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

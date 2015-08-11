@@ -1,0 +1,28 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T17:00:15.655Z",
+    "form": "CNR",
+    "section": "ADMINISTRATIVE",
+    "name": "Provider Contact Electronic Mail Address",
+    "title": "AP REP EMAIL",
+    "fieldNumber": "11",
+    "minimumLength": "",
+    "maximumLength": "60",
+    "characteristics": "AlphaNumeric",
+    "usage": "Optional",
+    "example": "",
+    "definition": "Identifies the electronic mail address of the provider rep contact.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        "Z JONES@NOTES.BE L L COM P ANY. C OM"
+    ]
+}

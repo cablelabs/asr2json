@@ -1,0 +1,28 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "ADMINISTRATIVE",
+    "name": "InterexchangeCustomer Service Center",
+    "title": "ICSC",
+    "fieldNumber": "8",
+    "minimumLength": "",
+    "maximumLength": "4",
+    "characteristics": "AlphaNumeric",
+    "usage": "Required",
+    "example": "",
+    "definition": "Identifies the provider service center issuing the confirmation to the customer.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        "The first two characters identify the provider.  The third and fourth characters are a unique number within the region identifying the specific ICSC.  The allowable range is 00 to 99.  The ICSC code will be supplied and periodically updated by the providers to the customers. The provider will also supply guidelines for choosing the appropriate ICSC code."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

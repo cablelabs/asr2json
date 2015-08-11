@@ -1,0 +1,33 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:25:30.079Z",
+    "form": "EVC",
+    "section": "UNI MAPPING DETAIL",
+    "name": "Associated UNI/ENNI Termination",
+    "title": "AUNT",
+    "fieldNumber": "16",
+    "minimumLength": "",
+    "maximumLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the UREF termination point associated with the physical port being requested on the ASR.",
+    "validEntry": [
+        {
+            "value": "A",
+            "description": "Associated"
+        }
+    ],
+    "validEntryNotes": [
+        "Only one UREF can be designated as the Associated Termination Point. "
+    ],
+    "usageNotes": [
+        "Required when the EVCI field on the ASR Form is “B”, the associated UREF field is populated and it is the termination point associated with this UNI/ENNI, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

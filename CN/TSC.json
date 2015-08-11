@@ -1,0 +1,30 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "ADMINISTRATIVE",
+    "name": "Two Six Code",
+    "title": "TSC",
+    "fieldNumber": "61",
+    "minimumLength": "",
+    "maximumLength": "8",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies a code assigned to a trunk group or CCS Link Set.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the ACT field on the ASR Form is “N”, the first position of the REQTYP field on the ASR Form is “M” and the RT field is “F”.",
+        "Prohibited when the RT field is “B”.",
+        "Otherwise optional."
+    ],
+    "fieldNotes": [
+        "The code is unique to each established trunk group or CCS Link Set."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

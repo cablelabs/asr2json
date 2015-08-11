@@ -1,0 +1,45 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:25:30.079Z",
+    "form": "EVC",
+    "section": "UNI MAPPING DETAIL",
+    "name": "Customer Edge Virtual Local Area Network Activity",
+    "title": "VACT",
+    "fieldNumber": "31",
+    "minimumLength": "",
+    "maximumLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Indicator (continued)",
+    "validEntry": [
+        {
+            "value": "N",
+            "description": "New"
+        },
+        {
+            "value": "D",
+            "description": "Disconnect"
+        },
+        {
+            "value": "E",
+            "description": "Retain Existing"
+        }
+    ],
+    "validEntryNotes": [
+        "Use of this field is based on customer provider negotiations.",
+        "Entry of “N” shall be used when adding a new CE- VLAN. An entry of “N” is not valid when UACT is “D”.",
+        "Entry of “D” shall be used when removing an existing CE-VLAN. An entry of “D” is not valid when the UACT is “N”.",
+        "Entry of “E” shall be used for those providers that require a reiteration of all existing CE-VLANs that will be retained, otherwise existing CE-VLANs are retained by default. An entry of “E” is not valid when the UACT is “N” or “D”.",
+        "When changing a CE-VLAN from one value to another, an entry of “N” shall be used for the CE- VLAN to be added and an entry of “D” shall be used for the CE-VLAN to be removed. "
+    ],
+    "usageNotes": [
+        "Optional when the associated CE-VLAN field is populated, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

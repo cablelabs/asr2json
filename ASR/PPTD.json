@@ -1,22 +1,38 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T17:35:31.050Z",
+    "processed": "2015-08-11T17:53:37.051Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Project Plant Test Date",
     "title": "PPTD",
     "fieldNumber": "17",
-    "fieldLength": "10",
+    "minimumLength": "",
+    "maximumLength": "10",
     "characteristics": "AlphaNumeric",
     "usage": "Conditional",
     "example": "",
     "definition": "Identifies the pre negotiated plant test date for the start of overall testing of the service requested on this ASR.",
     "validEntry": [
-        "U.S. Standard Metric Format",
-        "Two Digit Month (01-12) Two Digit Century (00-99)",
-        "Two Digit Day (01-31) Two Digit Year (00-99)",
-        "Two Digit Century (00-99) Two Digit Month (01-12)",
-        "Two Digit Year (00-99) Two Digit Day (01-31)"
+        {
+            "value": "",
+            "description": "U.S. Standard Metric Format"
+        },
+        {
+            "value": "",
+            "description": "Two Digit Month (01-12) Two Digit Century (00-99)"
+        },
+        {
+            "value": "",
+            "description": "Two Digit Day (01-31) Two Digit Year (00-99)"
+        },
+        {
+            "value": "",
+            "description": "Two Digit Century (00-99) Two Digit Month (01-12)"
+        },
+        {
+            "value": "",
+            "description": "Two Digit Year (00-99) Two Digit Day (01-31)"
+        }
     ],
     "validEntryNotes": [
         ""

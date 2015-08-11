@@ -1,0 +1,31 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "ADMINISTRATIVE",
+    "name": "Reference Number",
+    "title": "REF NUM",
+    "fieldNumber": "47",
+    "minimumLength": "",
+    "maximumLength": "4",
+    "characteristics": "Numeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "This field is used to identify a circuit or circuits segment on a request for multiple circuits.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the RT field is “F”, and the second position of the TQ field on the ASR Form is not “N” or “X”.",
+        "Prohibited when the RT field is “B”.",
+        "Otherwise optional."
+    ],
+    "fieldNotes": [
+        "REF NUM may be used by the customer and the provider for control and tracking purposes during the provisioning process.",
+        "For each circuit segment the REF NUM must be unique beginning with “0001” and incrementing by one for each additional circuit segment."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

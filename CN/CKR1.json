@@ -1,0 +1,28 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "ADMINISTRATIVE",
+    "name": "Customer Circuit Reference (T1)",
+    "title": "CKR1",
+    "fieldNumber": "52",
+    "minimumLength": "",
+    "maximumLength": "40",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the circuit number or range of circuit numbers used by the customer for the T1 Transport involved.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the CKR1 field on the FGA Form or Trunking and ACI Forms are populated, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        "CKR1 is used by the customer as a cross reference to the provider circuit ID(s) and in many cases to identify the customer’s end-to-end service."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

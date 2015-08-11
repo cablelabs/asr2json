@@ -1,0 +1,49 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T17:00:15.655Z",
+    "form": "CNR",
+    "section": "NR DETAIL",
+    "name": "Completion Date",
+    "title": "CD",
+    "fieldNumber": "17",
+    "minimumLength": "",
+    "maximumLength": "10",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the date on which the ASR (PON) was completed by the provider, service was activated and billing may commence.",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "U.S. Standard Metric Format"
+        },
+        {
+            "value": "",
+            "description": "Two Digit Month (01-12) Two Digit Century (00-99)"
+        },
+        {
+            "value": "",
+            "description": "Two Digit Day (01-31) Two Digit Year (00-99)"
+        },
+        {
+            "value": "",
+            "description": "Two Digit Century (00-99) Two Digit Month (01-12)"
+        },
+        {
+            "value": "",
+            "description": "Two Digit Year (00-99) Two Digit Day (01-31)"
+        }
+    ],
+    "validEntryNotes": [
+        "Metric date format may be used based on customer/provider negotiations. "
+    ],
+    "usageNotes": [
+        "Required when the CNT field is “A”, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

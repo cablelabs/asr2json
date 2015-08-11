@@ -1,0 +1,43 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:25:30.079Z",
+    "form": "EVC",
+    "section": "UNI MAPPING DETAIL",
+    "name": "Virtual Private Network Identifier Activity",
+    "title": "VPN-ACT",
+    "fieldNumber": "29",
+    "minimumLength": "",
+    "maximumLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the activity requested for the VPN-ID.",
+    "validEntry": [
+        {
+            "value": "N",
+            "description": "New"
+        },
+        {
+            "value": "D",
+            "description": "Disconnect"
+        },
+        {
+            "value": "E",
+            "description": "Retain Existing"
+        }
+    ],
+    "validEntryNotes": [
+        "Entry of “N” shall be used when adding a new VPN-ID. An entry of “N” is not valid when UACT is “D”.",
+        "Entry of “D” shall be used when removing an existing VPN-ID. An entry of “D” is not valid when the UACT is “N”.",
+        "Entry of “E” shall be used for those providers that require a reiteration of the VPN-ID that will be retained, otherwise existing VPN-ID is retained by default. An entry of “E” is not valid when the UACT is “N” or “D”. "
+    ],
+    "usageNotes": [
+        "Required when the associated VPN-ID field is populated, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

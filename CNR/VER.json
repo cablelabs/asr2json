@@ -1,0 +1,28 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T17:00:15.655Z",
+    "form": "CNR",
+    "section": "ADMINISTRATIVE",
+    "name": "Version Identification",
+    "title": "VER",
+    "fieldNumber": "3",
+    "minimumLength": "",
+    "maximumLength": "2",
+    "characteristics": "AlphaNumeric",
+    "usage": "Required",
+    "example": "",
+    "definition": "Identifies the customer version number.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        "The VER field entry must be identical to the VER field entry on the ASR Form."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

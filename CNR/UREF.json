@@ -1,0 +1,33 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T17:00:15.655Z",
+    "form": "CNR",
+    "section": "ERROR DETAIL",
+    "name": "User Network Interface (UNI) Reference Number",
+    "title": "UREF",
+    "fieldNumber": "25",
+    "minimumLength": "",
+    "maximumLength": "2",
+    "characteristics": "Numeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies a unique number assignment to a specific UNI port for which an error has been identified.",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "01 – 20"
+        }
+    ],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the REF NUM and the EVC/VC NUM fields are both blank and the associated ERROR TAG field is populated, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

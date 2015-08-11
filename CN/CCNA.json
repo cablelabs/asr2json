@@ -1,0 +1,38 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "",
+    "name": "Customer Carrier Name Abbreviation",
+    "title": "CCNA",
+    "fieldNumber": "1",
+    "minimumLength": "",
+    "maximumLength": "3",
+    "characteristics": "Alpha",
+    "usage": "Required",
+    "example": "",
+    "definition": "Identifies the COMMON LANGUAGE IAC code for the customer submitting the ASR and receiving the Confirmation Notice Form (CN).",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "IAC Code"
+        },
+        {
+            "value": "CUS",
+            "description": "Casual customer or end user billing"
+        }
+    ],
+    "validEntryNotes": [
+        "Valid IAC codes are maintained by Telcordia Technologies. "
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        "The format and structure of this field is defined by ANSI in document ATIS-0300251 Codes for Identification of Service Providers for Information Exchange.",
+        "This entry must be identical to the CCNA field entry on the ASR Form."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

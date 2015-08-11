@@ -1,0 +1,40 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:25:30.079Z",
+    "form": "EVC",
+    "section": "UNI MAPPING DETAIL",
+    "name": "Root/Leaf",
+    "title": "R/L",
+    "fieldNumber": "23",
+    "minimumLength": "",
+    "maximumLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Indicates that the UNI is either a root or a leaf in a rooted multipoint EVC.",
+    "validEntry": [
+        {
+            "value": "L",
+            "description": "Leaf UNI"
+        },
+        {
+            "value": "R",
+            "description": "Root UNI"
+        }
+    ],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required for a rooted multipoint EVC as designated by the NC Code when the ACT field on the ASR Form is “N”.",
+        "Optional for rooted multipoint EVC as designated by the NC Code when the ACT field on the ASR Form is “C”, “D”, or “R”.",
+        "Otherwise prohibited."
+    ],
+    "fieldNotes": [
+        "At least one UNI must be designated as a Root.",
+        "More than one Root is allowed per EVC."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

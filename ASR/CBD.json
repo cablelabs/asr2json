@@ -1,12 +1,13 @@
 {
     "asogVersion": "50",
-    "processed": "2015-08-07T17:35:31.050Z",
+    "processed": "2015-08-11T17:53:37.051Z",
     "form": "ASR",
     "section": "ADMINISTRATIVE",
     "name": "Call Before Dispatch",
     "title": "CBD",
     "fieldNumber": "11",
-    "fieldLength": "3",
+    "minimumLength": "",
+    "maximumLength": "3",
     "characteristics": "AlphaNumeric",
     "usage": "Optional",
     "example": "",
@@ -19,10 +20,14 @@
         {
             "value": "A",
             "description": "Unstaffed Service Delivery Location"
+        },
+        {
+            "value": "01-99",
+            "description": "Hours"
         }
     ],
     "validEntryNotes": [
-        "Defines the service delivery location as “Unstaffed” requiring coordination with LCON prior to technician dispatch. 2nd and 3rd Character 01-99 = Hours",
+        "Defines the service delivery location as “Unstaffed” requiring coordination with LCON prior to technician dispatch. 2nd and 3rd Character ",
         "The desired number of hours prior to dispatch to facilitate access for the service technician. "
     ],
     "usageNotes": [

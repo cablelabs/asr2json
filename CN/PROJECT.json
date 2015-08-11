@@ -1,0 +1,29 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "ADMINISTRATIVE",
+    "name": "Project Identification",
+    "title": "PROJECT",
+    "fieldNumber": "15",
+    "minimumLength": "",
+    "maximumLength": "16",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the project number associated with this request.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Prohibited when RT field is “B”, otherwise optional."
+    ],
+    "fieldNotes": [
+        "Use of this field includes: relating multiple ASR's, previously negotiated orders, etc.",
+        "The provider may initiate the project identification and provide this to the customer who will populate the field when submitting additional and/or supplement ASR Forms associated with this project."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

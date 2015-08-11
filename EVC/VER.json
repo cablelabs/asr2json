@@ -1,0 +1,28 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:25:30.079Z",
+    "form": "EVC",
+    "section": "ADMINISTRATIVE",
+    "name": "Version Identification",
+    "title": "VER",
+    "fieldNumber": "3",
+    "minimumLength": "",
+    "maximumLength": "2",
+    "characteristics": "AlphaNumeric",
+    "usage": "Required",
+    "example": "",
+    "definition": "Identifies the customer version number.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        "This entry must be identical to the VER field entry on the ASR Form."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

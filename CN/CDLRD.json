@@ -1,0 +1,53 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "ADMINISTRATIVE",
+    "name": "Confirming Design Layout Report Date",
+    "title": "CDLRD",
+    "fieldNumber": "20",
+    "minimumLength": "",
+    "maximumLength": "10",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the date that the Confirming Design Layout Report (CDLR) is to be received at the provider design control office.",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "U.S. Standard Metric Format"
+        },
+        {
+            "value": "",
+            "description": "Two Digit Month (01-12) Two Digit Century (00-99)"
+        },
+        {
+            "value": "",
+            "description": "Two Digit Day (01-31) Two Digit Year (00-99)"
+        },
+        {
+            "value": "",
+            "description": "Two Digit Century (00-99) Two Digit Month (01-12)"
+        },
+        {
+            "value": "",
+            "description": "Two Digit Year (00-99) Two Digit Day (01-31)"
+        }
+    ],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the RT field is “F”, the ACT field on the ASR Form is “N”, “C”, “D”, “M” or “T”, the second position of the TQ field on the ASR Form is not “N” or “X” and the RTR field on the ASR Form is “1-10.”",
+        "Prohibited when the RT field is “B” or “S”.",
+        "Prohibited when the ACT field on the ASR Form is “R”.",
+        "Prohibited when the second position of the TQ field on the ASR Form is “N” or “X”.",
+        "Otherwise optional."
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

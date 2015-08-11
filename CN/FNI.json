@@ -1,0 +1,33 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "ADMINISTRATIVE",
+    "name": "Fiber Network Identification",
+    "title": "FNI",
+    "fieldNumber": "37",
+    "minimumLength": "",
+    "maximumLength": "13",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies all services associated with a particular fiber based network.",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "Valid FNI"
+        }
+    ],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the FNI field on the ASR Form is “N”, otherwise optional."
+    ],
+    "fieldNotes": [
+        "The Fiber Network Identification data will be assigned by the provider."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

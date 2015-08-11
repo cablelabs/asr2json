@@ -1,0 +1,40 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "ADMINISTRATIVE",
+    "name": "High Capacity ChannelBilling Account Number",
+    "title": "HBAN",
+    "fieldNumber": "49",
+    "minimumLength": "",
+    "maximumLength": "12",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "(continued)",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "Valid Billing Account Number"
+        },
+        {
+            "value": "NB",
+            "description": "Multi-EC Non-billing provider"
+        }
+    ],
+    "validEntryNotes": [
+        "“NB” represents a non-billing provider that is involved in providing this access service.",
+        "When the customer has populated an “E” in the HBAN field on the ASR Form, the provider returns a HBAN on the Confirmation Notice Form (CN). If the customer determines the HBAN is incorrect it is the customer’s responsibility to coordinate the correct HBAN assignment. "
+    ],
+    "usageNotes": [
+        "Required when the HBAN is different than the HBAN provided on the request or is not populated with “E”, and the ASC-EC field on the ASR Form is blank.",
+        "Optional when the ASC-EC field on the ASR Form is populated and the UNE field on the ASR Form is not populated.",
+        "Otherwise prohibited."
+    ],
+    "fieldNotes": [
+        "The precise format will be defined by each provider in accordance with their individual billing procedures and provided to the customers."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

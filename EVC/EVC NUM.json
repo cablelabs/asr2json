@@ -1,0 +1,33 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:25:30.079Z",
+    "form": "EVC",
+    "section": "ETHERNET VIRTUAL CONNECTION DETAIL",
+    "name": "Ethernet Virtual Connection Reference Number",
+    "title": "EVC NUM",
+    "fieldNumber": "5",
+    "minimumLength": "",
+    "maximumLength": "4",
+    "characteristics": "Numeric",
+    "usage": "Required",
+    "example": "",
+    "definition": "Identifies a unique number associated with the Ethernet Virtual Connection.",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "0001"
+        }
+    ],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        ""
+    ],
+    "fieldNotes": [
+        "The EVC NUM is customer assigned and is returned on the confirmation notice to the ordering customer."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

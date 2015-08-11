@@ -1,0 +1,33 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "ADMINISTRATIVE",
+    "name": "Network Facility Requirement",
+    "title": "NFR",
+    "fieldNumber": "23",
+    "minimumLength": "",
+    "maximumLength": "1",
+    "characteristics": "Alpha",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Indicates that the customer’s desired due date cannot be met because additional provider facilities are required to fulfill the request.",
+    "validEntry": [
+        {
+            "value": "Y",
+            "description": "Required"
+        }
+    ],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required on the initial confirmation notice when a need for additional facilities is identified and will cause the DD to be greater than the DDD field on the ASR Form, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        "Examples of provider facilities may include fiber builds, card installation, etc."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:37:39.055Z",
+    "form": "CN",
+    "section": "ADMINISTRATIVE",
+    "name": "Provisioning Interval",
+    "title": "PROVINT",
+    "fieldNumber": "14",
+    "minimumLength": "",
+    "maximumLength": "3",
+    "characteristics": "Numeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the number of work days which could be required to complete this request (contingent upon facility and work force availability) if this request were a firm order as of today's date.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the ACT field on the ASR Form is “N”, “C”, “D”, “M” or “T”, the RT field is “S” and the second position of the TQ field on the ASR Form is not “N” or “X”.",
+        "Prohibited when the second position of the TQ field on the ASR Form is “N”.",
+        "Otherwise optional."
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

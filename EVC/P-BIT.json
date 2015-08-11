@@ -1,0 +1,34 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:25:30.079Z",
+    "form": "EVC",
+    "section": "UNI MAPPING DETAIL",
+    "name": "Priority Bit",
+    "title": "P-BIT",
+    "fieldNumber": "37",
+    "minimumLength": "",
+    "maximumLength": "8",
+    "characteristics": "Numeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "An optional parameter within the Ethernet frame to specify priority. In this application it will be used to map certain traffic to a given level of service on an EVC when the provider supports multiple levels of service per EVC.",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "0-7"
+        }
+    ],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the associated LREF field is populated and the NCI code specifies a P-Bit based map, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        ""
+    ],
+    "exampleNotes": [
+        "Single values are typical but multiple P-Bit values may be associated to a single level of service. 4 567",
+        "The above example shows the proper format when requesting a range of P-Bit values."
+    ]
+}

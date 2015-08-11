@@ -1,0 +1,37 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:25:30.079Z",
+    "form": "EVC",
+    "section": "UNI MAPPING DETAIL",
+    "name": "Excess Burst Size (Ingress)",
+    "title": "EBS-I",
+    "fieldNumber": "44",
+    "minimumLength": "",
+    "maximumLength": "7",
+    "characteristics": "Numeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the Bandwidth Profile parameter that limits the maximum number of bytes available for a burst of Service Frames associated with the EIR-I sent at the UNI/ENNI that will be delivered by the service provider based on the level of service performance.",
+    "validEntry": [
+        {
+            "value": "",
+            "description": "Maximum Excess Burst Size Value (numeric value expressed"
+        },
+        {
+            "value": "",
+            "description": "in bytes)"
+        }
+    ],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Optional when the associated LREF field is populated and the LOSACT field is not “D”, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        "Level of service performance will be identified in either the SPEC field or the LOS field."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

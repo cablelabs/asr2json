@@ -1,0 +1,28 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T17:00:15.655Z",
+    "form": "CNR",
+    "section": "ADMINISTRATIVE",
+    "name": "Telephone Number",
+    "title": "TEL NO",
+    "fieldNumber": "8",
+    "minimumLength": "",
+    "maximumLength": "17",
+    "characteristics": "Numeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies the telephone number of the initiator as specified on the ASR Form by the customer.",
+    "validEntry": [],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the INIT field is populated, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        "The TEL NO field entry must be identical to the TEL NO (INIT) field entry on the ASR Form."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "asogVersion": "50",
+    "processed": "2015-08-11T15:25:30.079Z",
+    "form": "EVC",
+    "section": "UNI MAPPING DETAIL",
+    "name": "Service and Product Enhancement Code",
+    "title": "SPEC",
+    "fieldNumber": "36",
+    "minimumLength": "5",
+    "maximumLength": "7",
+    "characteristics": "AlphaNumeric",
+    "usage": "Conditional",
+    "example": "",
+    "definition": "Identifies a specific product or service offering.",
+    "validEntry": [
+        {
+            "value": "Positions 1-7",
+            "description": "Any alpha character except “I” or any"
+        },
+        {
+            "value": "",
+            "description": "numeric character except “0”."
+        }
+    ],
+    "validEntryNotes": [
+        ""
+    ],
+    "usageNotes": [
+        "Required when the associated LREF field is populated and the associated LOS field is not populated, otherwise prohibited."
+    ],
+    "fieldNotes": [
+        "SPEC may be applicable for virtual service level features and options other than those already identified by the Network Channel (NC) and Network Channel Interface (NCI) codes.",
+        "Telcordia Technologies, Inc. is the intellectual property owner and administrator of SPEC. The SPEC code structure and use are outlined in Telcordia Technologies special report SR-2491.",
+        "This is an alternative identifier for the level of service performance.",
+        "Unique entries are required per UREF."
+    ],
+    "exampleNotes": [
+        ""
+    ]
+}
