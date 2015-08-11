@@ -10,24 +10,19 @@ asr2json is a converter that takes in the ASR PDF Spec and produces JSON.
 For instructions:
 * https://nodejs.org/download/
 
+* To check if nodejs has been installed correctly:
 ```
 node -v
 ```
 * This command will give the version of Node js installed.
 
-###Install pdf2json module
-* https://github.com/modesty/pdf2json
-
-* To install pdf2json
-```
-npm install pdf2json
-```
-* To install globally
+###Install pdf2json module globally
 
 ```
 sudo npm install pdf2json -g
 ```
 
+* For more information about pdf2json module: https://github.com/modesty/pdf2json
 
 ###Clone the repository
 Open the terminal. Use the "cd" command to navigate to the desired directory. Clone the git repository (git required)
