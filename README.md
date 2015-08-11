@@ -8,7 +8,7 @@ asr2json is a converter that takes in the ASR PDF Spec and produces JSON.
 ###Install Node.js
 
 For instructions:
-* https://nodejs.org/download/
+* https://nodejs.org/
 
 * To check if nodejs has been installed correctly:
 ```
