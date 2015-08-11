@@ -21,6 +21,11 @@ node -v
 ```
 sudo npm install pdf2json -g
 ```
+* To check if pdf2json has been installed correctly:
+```
+pdf2json -v
+```
+
 
 * For more information about pdf2json module: https://github.com/modesty/pdf2json
 
