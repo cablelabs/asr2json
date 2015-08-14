@@ -233,15 +233,15 @@ function getFieldInfo(line){
         getKeyword(line);
     }else if(field.previousField != "field"  && previous === field.previousField){
         if(field.previousField != "valid entry" && field.previousField != "validEntryNotes"){
-            field.content = field.content + " \n " + line;
+            field.content = field.content + "  " + line;
         }else if(reg.exec(line) != null && field.previousField === "validEntryNotes"){
             if(line.indexOf("=") > -1){
                 processValidEntry(line);
             }else{
-                field.content = field.content + " \n " + line;
+                field.content = field.content + " " + line;
             }
         }else{
-            field.content = field.content + "\n" + line;
+            field.content = field.content + " " + line;
         }
     }else if(field.previousField === "field" && lineConsidered != 1){
         getDefinition(line);
