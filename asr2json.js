@@ -57,12 +57,10 @@ function parse() {
                     hashMap[field.title.trim()] = 1;
                 }
                 else {
-//                    console.log(line);
                     hashMap[field.title.trim()] = hashMap[field.title.trim()] + 1;
                 }
             }
         }
-//        console.log(hashMap);
         clearFieldProperties();
 
         // READING CONTENTS LINE BY LINE
@@ -84,8 +82,6 @@ function parse() {
         function checkIfForm() {
             var regex = new RegExp("^" + formNumber + "\.[^0-9]");
             if ( regex.exec(line) && line.indexOf("FORM")>-1) {
-//                field.nextForm = (field.nextForm == "") ? (line.split("(")[1]).split(")")[0] : field.form;
-//                field.form = (line.split("(")[1]).split(")")[0];
                 field.form = (line.split("(")[1]).split(")")[0].replace("/","");
             }
         }
@@ -93,9 +89,6 @@ function parse() {
         function checkIfSection() {
             var regex = /^3\.[0-9]/;
             if ( regex.exec(line) && line.indexOf("SECTION")>-1) {
-//                field.prevSection = (field.prevSection == "") ? String(line.match(/[a-zA-Z ]+$/)).split(" SECTION")[0] : field.section;
-//                field.section = String(line.match(/[a-zA-Z ]+$/));
-//                field.section = (field.section.split(" SECTION"))[0];
                 field.nextSection = String(line.match(/[a-zA-Z ]+$/)).split(" SECTION")[0];
             }
         }
@@ -104,22 +97,15 @@ function parse() {
             var currentFieldNumber = line.split(".")[0];
             var prevFieldNumber = field.fieldNumber;
 
-//            console.log("\nLine= " + line);
-//            console.log("prevFieldnum= " + prevFieldNumber);
-//            console.log("currentFieldnum= " + currentFieldNumber);
-
-
             // CHECKING END OF FIELD
             if ( prevFieldNumber!=0 && prevFieldNumber!=currentFieldNumber ) {
                 if( field.form == "") {
-//                    field.form = field.nextForm;
                     field.section = field.nextSection;
                 }
                 filterDefinitions();
                 writeOutput(prevFieldNumber);
                 clearFieldProperties();
                 field.fieldNumber = currentFieldNumber;
-//                field.form = field.nextForm;
                 field.section = field.nextSection;
             }
 
@@ -167,11 +153,7 @@ function parse() {
                             var result = re1.exec(info);
                             field.minimumLength = result[1].trim();
                             field.maximumLength = result[2].trim();
-
-//                            field.minimumLength = info.split("and")[0].trim().split(" ")[0].trim();
-//                            field.maximumLength = info.split("and")[1].trim().split(" ")[0].trim();
                         }
-//                        console.log("info= " + info);
                         field.characteristics = (info.split(" ")[1].indexOf("alpha") > -1) ? ((info.split(" ")[1].indexOf("numeric") > -1) ? "AlphaNumeric" : "Alpha" ) : "Numeric";
                         break;
                     case "EXAMPLE" || "EXAMPLES":
@@ -197,7 +179,6 @@ function parse() {
             }
             else if ( line.match(/^[0-9]+\.[A-Z\-\–]+[ ][\-\–][ ]/)) { // Condition when there are no spaces in title, name line (E.g. 85.FUSF-Federal...)
                 var re1 = new RegExp( "[0-9]+\.([A-Z\-\–]+)[ ][\-\–][ ]([A-Z][a-z].*)", "g" );
-//                console.log("CASE 2= " + line);
                 var result1 = re1.exec(line);
                 field.title = result1[1].replace(/[\-\–]$/,"").trim();
                 field.name = result1[2].trim();
@@ -205,7 +186,6 @@ function parse() {
             }
             else if ( line.match(/^[0-9]+\.[A-Z]+[\-\–]/)) { // Condition when there are no spaces in title, name line (E.g. 85.ASC-EC-...)
                 var re1 = new RegExp( "[0-9]+\.([A-Z\-\–]+)([A-Z][a-z].*)", "g" );
-//                console.log("CASE 3= " + line);
                 var result1 = re1.exec(line);
                 field.title = result1[1].replace(/[\-\–]$/,"").trim();
                 field.name = result1[2].trim();
@@ -213,7 +193,6 @@ function parse() {
             }
             else if ( line.match(/[0-9]+\.([ A-Z/\-\–]+?)[\-\–][ ]([A-Z][a-z].*)/)) {
                 var re1 = new RegExp( "[0-9]+\.([ A-Z/\-\–]+?)[\-\–][ ]([A-Z][a-z].*)", "g" ); // Condition when there are spaces in title, name line (E.g. 1. CCNA - Customer...)
-//                console.log("CASE 4= " + line);
                 var result = re1.exec(line);
                 field.title = result[1].trim();
                 field.name = result[2].trim();
@@ -231,9 +210,7 @@ function parse() {
                 fieldInfo = " " + contents[i].trim() + "\n";
             }
             while ( i+1 != contents.length && !pageNumberRegex.exec(contents[i+1].trim())) {
-//                console.log(contents[i+1]);
                 line = contents[++i].trim() + "\n";
-//                console.log("Line= " + line);
                 // Check if keyword is present
                 if( checkKeyWord(line) == 1 ) {
                     return fieldInfo;
@@ -270,7 +247,6 @@ function parse() {
                             field.breakValue = "FIELD NOTES";
                         }
                         else if ( field.breakValue == "DATA CHARACTERISTICS" ) {
-//                            console.log("DATA CHAR" + line);
                             field.breakValue = "FIELD NOTES";
                         }
                         else if ( field.breakValue == "VALID ENTRIES" ) {
@@ -286,7 +262,6 @@ function parse() {
                     else {
                         field.breakValue = keyWords[index];
                     }
-//                    console.log(field.breakValue);
                     return 1;
                 }
             }
@@ -322,7 +297,6 @@ function parse() {
         }
 
         function writeOutput(prevFieldNumber) {
-//            console.log("Field.form= " + field.form);
             var dir = "./" + field.form;
 
             // CREATE NEW DIRECTORY IF IT DOES NOT EXIST
@@ -332,7 +306,6 @@ function parse() {
 
             // CHECKING IF FIELD HAS DUPLICATE TITLE
             if(hashMap[field.title] > 1) {
-//                console.log(field.title);
                 outputFileName = field.form + "/" + field.title.replace("/","") + " " + field.name.split("(")[1].split(")")[0] + ".json";
             }
             else {

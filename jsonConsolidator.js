@@ -3,12 +3,8 @@ var exports = module.exports = {};
 
 exports.jsonConsol = function(fileName) {
 
-//    fs.readFile(fileName, "utf8", function (error, contents) {
-        //    var json = JSON.parse(fs.readFileSync('a50bk.371_533.json', 'utf8'));
-        //    var json = JSON.parse(fs.readFileSync('asrpdf.json', 'utf8'));
         var json = JSON.parse(fs.readFileSync(fileName, 'utf8'));
 
-//        var json = JSON.parse(contents, 'utf8');
         var text="";
         for( var i = 0; i<json.formImage["Pages"].length; i++) {
             var texts = json.formImage["Pages"][i]["Texts"];
