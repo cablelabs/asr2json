@@ -44,3 +44,18 @@ node index.js path-to-asr.pdf path-to-output-directory start-page stop-page
 This is the command to run. Replace fileName with the name of the pdf containing the spec. Replace start-page and end-page with the pages from the pdf which you want to be converted.  A directory matching the form name will be created in the output directory specified, and that form directory will contain json files matching the field names.
 
 
+##Require
+asr2json isn't published to npm, so to require it in an npm module, you will need to clone the repo inside of your node_modules directory
+
+from within you project:
+```
+cd node_modules
+git clone https://github.com/cablelabs/asr2json.git
+```
+
+in your nodejs file
+```
+var asr2json = require('./node_modules/index.js');
+
+asr2json('path-to-asr.pdf', 'path-to-output-directory', start-page, stop-page);
+```
