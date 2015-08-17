@@ -1,62 +1,19 @@
 //var pdfConverter = require('/Users/wlopes/IdeaProjects/node_modules/pdf2json');
+
+/**********************************
+    Require
+**********************************/
 var fs = require('fs');
-var fileName = "";
-var startPageNo = "" ;
-var endPageNo = "";
+var path = require('path');
 var execute = require('child_process').exec;
 var jsonConsolidator = require("./jsonConsolidator.js");
+// var PDFParser = require("../node_modules/pdf2json/pdfparser");
+// var pdfParser = new PDFParser();
 
-process.argv.forEach(function(val, index, array){
-    switch(index){
-        case 2:
-            fileName = val;
-            break;
-        case 3:
-            startPageNo = val;
-            break;
-        case 4:
-            endPageNo = val;
-            break;
-        default:
-            break;
-    }
-});
 
-/**
-* Split the pdf based on page number
-*/
-var command = 'python splitPDF.py ' + fileName + ' ' + startPageNo + ' ' +endPageNo;
-child = execute(command, function (error, stdout, stderr) {
-    if (error !== null) {
-      console.log('exec error: ' + error);
-    }else{
-
-    /**
-    * Convert the pdf to json
-    */
-        fileName = fileName.substring(0,fileName.indexOf("."));
-        child = execute('pdf2json -f ' + fileName + '.' + startPageNo + '_' +endPageNo + '.pdf -s',{maxBuffer: 2056 * 500},function (error, stdout, stderr) {
-            if (error !== null) {
-                console.log('exec error: ' + error);
-            }else{
-                fileName = fileName + '.' + startPageNo + '_' +endPageNo + '.json';
-                consolidate(fileName);
-            }
-        });
-    }
-});
-
-/**
-* Consolidator for lines based on y-coordinate, written to a text file
-*/
-function consolidate(fileName){
-    var jsonConsolidator = require("./jsonConsolidator.js");
-    jsonConsolidator.jsonCon(fileName);
-    read();
-}
-
-//TODO formNumber( if applicable)
-
+/**********************************
+    Global Variables
+**********************************/
 var field = {"asogVersion": "", "processed": "", "form": "", "section": "", "name": "", "title": "", "fieldNumber": "", "minimumLength": "", "maximumLength": "", "characteristics": "", "usage": "", "example": "", "definition": "", "validEntry": "", "validEntryNotes": "", "usageNotes": "", "fieldNotes": "", "exampleNotes": ""};
 field.fieldNumber = 0;
 var fileContent = [];       //text from the file written by consolidator
@@ -65,6 +22,76 @@ var tillEntries = 0;    //for valid entries
 var state = 0;
 field.nextForm = "";
 field.nextSection = "";
+var outputDir = '';
+
+
+module.exports = function (pathToPDF, outputPath, startPageNo, endPageNo) {
+    var args = Array.prototype.slice.call(arguments);
+    var missingParams = ['pathToPDF', 'outputPath', 'startPageNo', 'endPageNo'].filter(function (param, i) {
+        return (typeof args[i] === 'undefined');
+    });
+    if (missingParams.length) {
+        throw new Error([
+            'asr2json is missing parameter' + (missingParams.length > 1 ? 's' : ''),
+            ' ' + missingParams.join(', ')
+            ].join(''));
+    }
+    outputDir = outputPath;
+    var tmpDirPath = __dirname+'/../tmp';
+    fs.exists(tmpDirPath, function (exists) {
+        if (!exists) {
+            return fs.mkdir(tmpDirPath, function (err) {
+                if (err) throw err;
+                runAsr2Json.apply(null, args);
+            });
+        }
+        runAsr2Json.apply(null, args);
+    });
+};
+
+
+function runAsr2Json(pathToPDF, outputPath, startPageNo, endPageNo) {
+
+    var fileName = pathToPDF;
+
+    /**
+    * Split the pdf based on page number
+    */
+    var pyPath = path.join(__dirname, '..', 'lib', 'splitPDF.py');
+
+    var tmp = {
+        dir: path.join(__dirname, '..', 'tmp'),
+        pdf: path.join(__dirname, '..', 'tmp', 'asr.pdf')
+    };
+
+    var command = ['python', pyPath, pathToPDF, tmp.pdf, startPageNo, endPageNo].join(' ');
+
+    child = execute(command, function (error, stdout, stderr) {
+
+        if (error) { return console.log('exec error: ' + error); }
+
+        command = 'pdf2json -f ' + tmp.pdf + ' -o '+ tmp.dir;
+
+        child = execute(command, {maxBuffer: 2056 * 500}, function (error, stdout, stderr) {
+            if (error !== null) {
+                console.log('we found an error');
+                console.log('exec error: ' + error);
+            }else{
+                consolidate(tmp.dir+'/asr.json');
+            }
+        });
+    });
+}
+
+/**
+* Consolidator for lines based on y-coordinate, written to a text file
+*/
+function consolidate(fileName){
+    jsonConsolidator.jsonCon(fileName);
+    read();
+}
+
+//TODO formNumber( if applicable)
 
 //read asynchronously
 //fs.readFile("parsedText", "utf8", function (error, data) {
@@ -164,10 +191,6 @@ function isField(line){
 function getFormInfo(line){
     field.nextForm = line.substring(line.indexOf("(")+1, line.indexOf(")"));
     field.nextForm = field.nextForm.replace("/",":");
-    var directory = "./" + field.nextForm;
-    if (!fs.existsSync(directory)) {
-        fs.mkdirSync(directory);
-    }
 }
 
 
@@ -528,20 +551,32 @@ function clear(){
 }
 
 
+function makeFormDir(path, callback) {
+    if (!fs.existsSync(path)) {
+        fs.mkdirSync(path);
+    }
+}
+
+
 /**
 * Write the output to the file
 */
 function writeToFile() {
 var title = field.title;
 title = title.replace('/',':');
-    if(field.fieldNumber != 0){
-//        console.log(JSON.stringify(field, replacer, 4));
-        outputFileName =  field.form + "/" + title + ".json";
-        fs.writeFile(outputFileName, JSON.stringify(field, replacer, 4), function(err) {
-        if (err) {
-            return console.log(err);
-        }
-        })
+    if(parseInt(field.fieldNumber,10) !== 0){
+        //console.log(JSON.stringify(field, replacer, 4));
+        var formPath = path.join(outputDir, field.form);
+
+        makeFormDir(formPath);
+
+        var fieldPath = formPath + '/' + title + ".json";
+
+        fs.writeFile(fieldPath, JSON.stringify(field, replacer, 4), function(err) {
+            if (err) {
+                return console.log(err);
+            }
+        });
     }
 }
 

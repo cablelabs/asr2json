@@ -1,6 +1,7 @@
 .idea
 .DS_Store
 node_modules
+tmp
 algorithm/a50bk.371_533.json
 algorithm/a50bk.1602_1661.json
 algorithm/a50bk.1531_1583.json

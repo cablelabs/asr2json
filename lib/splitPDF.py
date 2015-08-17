@@ -46,6 +46,8 @@ else:
     CGPDFDocumentCreateWithProvider(\
     CGDataProviderCreateWithFilename(inputFN))
 
+  outputFN = sys.argv[2];
+
   if inputDoc:
     maxPages = inputDoc.getNumberOfPages()
     print '%s has %d pages' % (inputFN, maxPages)
@@ -53,7 +55,7 @@ else:
     sys.exit(2)
 
   try:
-    splitPageNums = map(int,  sys.argv[2:])
+    splitPageNums = map(int,  sys.argv[3:])
   except:
     print 'Error: invalid split page number(s).'
 
@@ -66,7 +68,7 @@ else:
       print 'Error: split page numbers must be increasing.'
       sys.exit(4)
 
-baseFN = os.path.splitext(os.path.basename(inputFN))[0]
+#baseFN = os.path.splitext(os.path.basename(inputFN))[0]
 pageRect = CGRectMake (0, 0, 612, 792)
 
 if splitPageNums[-1] < maxPages:
@@ -80,8 +82,8 @@ for i, splitPageNum in enumerate(splitPageNums):
   # outputFN = '%s.part%d.%d_%d.pdf' % \
   #            (baseFN, i + 1, startPageNum, splitPageNum)
 
-  outputFN = '%s.%d_%d.pdf' % \
-            (baseFN, startPageNum, endPageNum)
+  #outputFN = '%s.%d_%d.pdf' % \
+  #          (baseFN, startPageNum, endPageNum)
 
   print i
   writeContext = CGPDFContextCreateWithFilename(outputFN, pageRect)
