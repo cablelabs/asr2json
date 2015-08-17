@@ -1,9 +1,9 @@
 # asr2json
 asr2json is a converter that takes in the ATIS ASOG PDF Spec and produces JSON.
 
-For more information about the converter: https://github.com/cablelabs/asr2json/wiki
-
 > **IMPORTANT**: This project is in pre-release development. Please expect frequent changes and updates while we converge on our initial release.
+
+For more information about the converter: https://github.com/cablelabs/asr2json/wiki
 
 ##Setup
 
