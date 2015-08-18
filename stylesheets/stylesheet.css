@@ -459,7 +459,7 @@ header h1 {
   width: 540px;
   margin-top: 0;
   margin-bottom: 0.2em;
-  font-size: 72px;
+  font-size: 48px;
   font-weight: normal;
   line-height: 1;
   color: #fff;
@@ -514,6 +514,13 @@ aside#sidebar p.repo-owner a {
 
 #downloads {
   margin-bottom: 40px;
+}
+
+header a.home {
+  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+  font-size: 15px;
+  padding-left: 10px;
+  color: #fff;
 }
 
 a.button {
@@ -785,7 +792,7 @@ footer a:hover {
     width: 340px;
   }
   header h1 {
-    font-size: 60px;
+    font-size: 48px;
   }
   header h2 {
     font-size: 30px;
