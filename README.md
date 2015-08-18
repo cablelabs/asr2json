@@ -47,7 +47,7 @@ More specifically, asr2json converts Access Service Request (ASR) Form Preparati
 
 asr2json is meant to convert valid copies of the [Access Service Ordering Guidelines (ASOG)](http://www.atis.org/obf/download.asp) that have been properly purchased from ATIS.
 
-For more information about the converter, please visit the [asr2json wiki](https://github.com/cablelabs/asr2json/wiki)
+For more information about the converter, please visit the [asr2json wiki](https://github.com/cablelabs/asr2json/wiki).
 
 ##Setup
 
