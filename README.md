@@ -45,7 +45,7 @@ This is the command to run. Replace fileName with the name of the pdf containing
 
 
 ##Require
-asr2json isn't published to npm, so to require it in an npm module, you will need to clone the repo inside of your node_modules directory
+asr2json isn't published to npm, so to require it in node, you will need to clone the repo inside of your node_modules directory
 
 from within you project:
 ```
@@ -55,7 +55,7 @@ git clone https://github.com/cablelabs/asr2json.git
 
 in your nodejs file
 ```
-var asr2json = require('./node_modules/index.js');
+var asr2json = require('./node_modules/asr2json/index.js');
 
 asr2json('path-to-asr.pdf', 'path-to-output-directory', start-page, stop-page);
 ```
