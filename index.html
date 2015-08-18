@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>asr2json by cablelabs</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>asr2json</h1>
+        <h2>A converter that takes in ASR PDF Spec and produces JSON.</h2>
+        <a href="https://github.com/cablelabs/asr2json" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="asr2json" class="anchor" href="#asr2json" aria-hidden="true"><span class="octicon octicon-link"></span></a>asr2json</h1>
+
+<blockquote>
+<p><strong>IMPORTANT</strong>: This project is in pre-release development. Please expect frequent changes and updates while we converge on our initial release.</p>
+</blockquote>
+
+<p>asr2json is a converter that takes in the <a href="http://www.atis.org/">ATIS</a> Access Service Ordering Guildlines (ASOG) PDF specification and produces JSON.</p>
+
+<p>More specifically, asr2json converts Access Service Request (ASR) Form Preparation Guides in PDF format to JSON, similar to the following (represents a single field):</p>
+
+<pre><code>{
+  "asogVersion": "50",
+  "processed": "2015-07-14T18:25:43.511Z",
+  "form": "FORM",
+  "section": "SECTION",
+  "name": "Example Field Name",
+  "title": "EFN",
+  "fieldNumber": "001",
+  "fieldLength": "3",
+  "characteristics": "Alpha",
+  "usage": "Required",
+  "example": "ABC",
+  "definition": "An exmaple field that serves as an example for this example.",
+  "validEntry": [
+    {
+      "value": "ABC",
+      "description": "One example."
+    },
+    {
+      "value": "XYZ",
+      "description": "Another example."
+    }
+  ],
+  "validEntryNotes": [
+    "Any three character alpha string."
+  ],
+  "usageNotes": [
+    "A usage note."
+  ],
+  "fieldNotes": [
+    "A general field note.",
+    "Another field note about how this field relates to another field.",
+    "One last field note."
+  ],
+  "errors": []
+}
+</code></pre>
+
+<p>asr2json is meant to convert valid copies of the <a href="http://www.atis.org/obf/download.asp">Access Service Ordering Guidelines (ASOG)</a> that have been properly purchased from ATIS.</p>
+
+<p>For more information about the converter, please visit the <a href="https://github.com/cablelabs/asr2json/wiki">asr2json wiki</a>.</p>
+
+<h2>
+<a id="setup" class="anchor" href="#setup" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setup</h2>
+
+<h3>
+<a id="install-nodejs" class="anchor" href="#install-nodejs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install Node.js</h3>
+
+<p>To check if Node.js is already installed or to check if it has been installed correctly:</p>
+
+<pre><code>node -v
+</code></pre>
+
+<p>If you're installing Node.js for the first time, please see: <a href="https://nodejs.org/">https://nodejs.org/</a></p>
+
+<h3>
+<a id="install-pdf2json-module" class="anchor" href="#install-pdf2json-module" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install pdf2json module</h3>
+
+<p>At this time, you need to install the <a href="https://github.com/modesty/pdf2json">pdf2json</a> module globally. This step should be shortlived as we plan to update asr2json to simply import the pdf2json moduled. For now, please use this command to install pdf2json globally:</p>
+
+<pre><code>sudo npm install pdf2json -g
+</code></pre>
+
+<p>To check if pdf2json has been installed correctly:</p>
+
+<pre><code>pdf2json -v
+</code></pre>
+
+<h3>
+<a id="clone-the-repository" class="anchor" href="#clone-the-repository" aria-hidden="true"><span class="octicon octicon-link"></span></a>Clone the repository</h3>
+
+<p>Use the <code>cd</code> command to navigate to the desired directory. Clone the git repository (git required):</p>
+
+<pre><code>git clone https://github.com/cablelabs/asr2json.git
+</code></pre>
+
+<h2>
+<a id="run" class="anchor" href="#run" aria-hidden="true"><span class="octicon octicon-link"></span></a>Run</h2>
+
+<pre><code>cd asr2json
+node index.js path-to-asr.pdf path-to-output-directory start-page stop-page 
+</code></pre>
+
+<p>This is the command to run asr2json from the terminal. Replace fileName with the name of the pdf containing the spec. Replace start-page and end-page with the pages from the pdf which you want to be converted.  A directory matching the form name will be created in the output directory specified, and that form directory will contain json files matching the field names.  The output directory will be created if it doesn't exist.</p>
+
+<h2>
+<a id="require" class="anchor" href="#require" aria-hidden="true"><span class="octicon octicon-link"></span></a>Require</h2>
+
+<p>asr2json isn't published to npm, so to require it in node, you will need to clone the repo inside of your node_modules directory</p>
+
+<p>from within your project:</p>
+
+<pre><code>cd node_modules
+git clone https://github.com/cablelabs/asr2json.git
+</code></pre>
+
+<p>in your nodejs file</p>
+
+<pre><code>var asr2json = require('./node_modules/asr2json/index.js');
+
+asr2json('path-to-asr.pdf', 'path-to-output-directory', startPage, stopPage);
+</code></pre>
+
+<h2>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributing</h2>
+
+<p>asr2json was originally built by <a href="http://cablelabs.com/">CableLabs</a>, but we could use your help! Check out our <a href="CONTRIBUTING.md">contributing guidelines</a> to get started.</p>
+
+<h2>
+<a id="other-important-stuff" class="anchor" href="#other-important-stuff" aria-hidden="true"><span class="octicon octicon-link"></span></a>Other important stuff</h2>
+
+<p>We use an <a href="https://github.com/cablelabs/asr2json/blob/master/LICENSE.md">MIT License</a>.</p>
+
+<p>Questions? Just send us an email at <a href="mailto:btech@cablelabs.com">btech@cablelabs.com</a>.</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/cablelabs/asr2json/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/cablelabs/asr2json/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/cablelabs/asr2json"></a> is maintained by <a href="https://github.com/cablelabs">cablelabs</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-54294114-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
