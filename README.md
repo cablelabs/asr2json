@@ -58,11 +58,11 @@ var asr2json = require('./node_modules/asr2json/index.js');
 asr2json('path-to-asr.pdf', 'path-to-output-directory', startPage, stopPage);
 ```
 
-### Contribute
+## Contribute
 
 If you want to contribute, just [fork](https://help.github.com/articles/fork-a-repo/) this repo and then send us a [pull request](https://help.github.com/articles/using-pull-requests/) when your contribution is complete.
 
-### Other important stuff
+## Other important stuff
 
 We use an [MIT License](https://github.com/cablelabs/asr2json/blob/master/LICENSE.md).
 
