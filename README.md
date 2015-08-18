@@ -88,7 +88,7 @@ This is the command to run asr2json from the terminal. Replace fileName with the
 ##Require
 asr2json isn't published to npm, so to require it in node, you will need to clone the repo inside of your node_modules directory
 
-from within you project:
+from within your project:
 ```
 cd node_modules
 git clone https://github.com/cablelabs/asr2json.git
