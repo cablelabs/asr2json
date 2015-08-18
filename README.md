@@ -57,5 +57,5 @@ in your nodejs file
 ```
 var asr2json = require('./node_modules/asr2json/index.js');
 
-asr2json('path-to-asr.pdf', 'path-to-output-directory', start-page, stop-page);
+asr2json('path-to-asr.pdf', 'path-to-output-directory', startPage, stopPage);
 ```
