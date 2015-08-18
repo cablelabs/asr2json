@@ -47,7 +47,7 @@ module.exports.jsonCon = function(fileName){
         content = content.replace(/,/g,"");
         text = text + content;
     }
-    var writablestream = fs.createWriteStream('parsedText');
+    var writablestream = fs.createWriteStream('tmp/parsedText');
     writablestream.write(text);
     writablestream.end();
 //    fs.writeFile('parsedText.txt',text, function (err){

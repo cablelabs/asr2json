@@ -1,8 +1,0 @@
-TODO
-
-put generated files in separate directory
-put python and pdf to json code into modules
-restructure code so 'is' functions return booleans
-avoid global field var
-remove extra space from output
-put start/stop pages in config file

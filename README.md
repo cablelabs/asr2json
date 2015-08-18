@@ -41,7 +41,7 @@ cd asr2json
 node index.js path-to-asr.pdf path-to-output-directory start-page stop-page 
 ```
 
-This is the command to run. Replace fileName with the name of the pdf containing the spec. Replace start-page and end-page with the pages from the pdf which you want to be converted.  A directory matching the form name will be created in the output directory specified, and that form directory will contain json files matching the field names.
+This is the command to run. Replace fileName with the name of the pdf containing the spec. Replace start-page and end-page with the pages from the pdf which you want to be converted.  A directory matching the form name will be created in the output directory specified, and that form directory will contain json files matching the field names.  The output directory will be created if it does'nt exist.
 
 
 ##Require

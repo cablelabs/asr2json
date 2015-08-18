@@ -7,9 +7,6 @@ var fs = require('fs');
 var path = require('path');
 var execute = require('child_process').exec;
 var jsonConsolidator = require("./jsonConsolidator.js");
-// var PDFParser = require("../node_modules/pdf2json/pdfparser");
-// var pdfParser = new PDFParser();
-
 
 /**********************************
     Global Variables
@@ -25,6 +22,13 @@ field.nextSection = "";
 var outputDir = '';
 
 
+function mkdir(path) {
+    if (!fs.existsSync(path)) {
+        fs.mkdirSync(path);
+    }
+}
+
+
 module.exports = function (pathToPDF, outputPath, startPageNo, endPageNo) {
     var args = Array.prototype.slice.call(arguments);
     var missingParams = ['pathToPDF', 'outputPath', 'startPageNo', 'endPageNo'].filter(function (param, i) {
@@ -36,17 +40,14 @@ module.exports = function (pathToPDF, outputPath, startPageNo, endPageNo) {
             ' ' + missingParams.join(', ')
             ].join(''));
     }
+
     outputDir = outputPath;
     var tmpDirPath = __dirname+'/../tmp';
-    fs.exists(tmpDirPath, function (exists) {
-        if (!exists) {
-            return fs.mkdir(tmpDirPath, function (err) {
-                if (err) throw err;
-                runAsr2Json.apply(null, args);
-            });
-        }
-        runAsr2Json.apply(null, args);
-    });
+
+    mkdir(outputPath);
+    mkdir(tmpDirPath);
+    
+    runAsr2Json.apply(null, args);
 };
 
 
@@ -106,7 +107,7 @@ function consolidate(fileName){
 * Read the stream
 */
 function read(){
-    var readableStream = fs.createReadStream('parsedText');
+    var readableStream = fs.createReadStream('tmp/parsedText');
     var data = ' ';
     readableStream.setEncoding('utf8');
     readableStream.on('data',function(chunk){
@@ -551,13 +552,6 @@ function clear(){
 }
 
 
-function makeFormDir(path, callback) {
-    if (!fs.existsSync(path)) {
-        fs.mkdirSync(path);
-    }
-}
-
-
 /**
 * Write the output to the file
 */
@@ -568,7 +562,7 @@ title = title.replace('/',':');
         //console.log(JSON.stringify(field, replacer, 4));
         var formPath = path.join(outputDir, field.form);
 
-        makeFormDir(formPath);
+        mkdir(formPath);
 
         var fieldPath = formPath + '/' + title + ".json";
 
