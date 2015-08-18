@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/cablelabs/asr2json/issues"
   },
-  "homepage": "https://github.com/cablelabs/asr2json#readme"
+  "homepage": "https://github.com/cablelabs/asr2json#readme",
+  "dependencies": {
+    "pdf2json": "^0.7.1"
+  }
 }
