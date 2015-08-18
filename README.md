@@ -1,9 +1,53 @@
 # asr2json
-asr2json is a converter that takes in the ATIS ASOG PDF Spec and produces JSON.
 
 > **IMPORTANT**: This project is in pre-release development. Please expect frequent changes and updates while we converge on our initial release.
 
-For more information about the converter: https://github.com/cablelabs/asr2json/wiki
+asr2json is a converter that takes in the [ATIS](http://www.atis.org/) Access Service Ordering Guildlines (ASOG) PDF specification and produces JSON.
+
+More specifically, asr2json converts Access Service Request (ASR) Form Preparation Guides in PDF format to JSON, similar to the following (represents a single field):
+
+```
+{
+  "asogVersion": "50",
+  "processed": "2015-07-14T18:25:43.511Z",
+  "form": "FORM",
+  "section": "SECTION",
+  "name": "Example Field Name",
+  "title": "EFN",
+  "fieldNumber": "001",
+  "fieldLength": "3",
+  "characteristics": "Alpha",
+  "usage": "Required",
+  "example": "ABC",
+  "definition": "An exmaple field that serves as an example for this example.",
+  "validEntry": [
+    {
+      "value": "ABC",
+      "description": "One example."
+    },
+    {
+      "value": "XYZ",
+      "description": "Another example."
+    }
+  ],
+  "validEntryNotes": [
+    "Any three character alpha string."
+  ],
+  "usageNotes": [
+    "A usage note."
+  ],
+  "fieldNotes": [
+    "A general field note.",
+    "Another field note about how this field relates to another field.",
+    "One last field note."
+  ],
+  "errors": []
+}
+```
+
+asr2json is meant to convert valid copies of the [Access Service Ordering Guidelines (ASOG)](http://www.atis.org/obf/download.asp) that have been properly purchased from ATIS.
+
+For more information about the converter, please visit the [asr2json wiki](https://github.com/cablelabs/asr2json/wiki)
 
 ##Setup
 
@@ -13,11 +57,11 @@ To check if Node.js is already installed or to check if it has been installed co
 ```
 node -v
 ```
-If you're installing Node.js for the firest time, please see: https://nodejs.org/
+If you're installing Node.js for the first time, please see: https://nodejs.org/
 
 ###Install pdf2json module
 
-Install pdf2json module globally
+At this time, you need to install the [pdf2json](https://github.com/modesty/pdf2json) module globally. This step should be shortlived, as we plan to update asr2json to simply import the pdf2json moduled. For now, please use this command to install pdf2json globally:
 ```
 sudo npm install pdf2json -g
 ```
@@ -25,10 +69,9 @@ To check if pdf2json has been installed correctly:
 ```
 pdf2json -v
 ```
-For more information about pdf2json module: https://github.com/modesty/pdf2json
 
 ###Clone the repository
-Open the terminal. Use the "cd" command to navigate to the desired directory. Clone the git repository (git required)
+Open the terminal. Use the `cd` command to navigate to the desired directory. Clone the git repository (git required):
 
 ```
 git clone https://github.com/cablelabs/asr2json.git
