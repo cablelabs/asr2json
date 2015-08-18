@@ -103,7 +103,7 @@ asr2json('path-to-asr.pdf', 'path-to-output-directory', startPage, stopPage);
 
 ## Contributing
 
-If you want to contribute, just [fork](https://help.github.com/articles/fork-a-repo/) this repo and then send us a [pull request](https://help.github.com/articles/using-pull-requests/) when your contribution is complete.
+asr2json was originally built by [CableLabs](http://cablelabs.com/), but we could use your help! Check out our [contributing guidelines](CONTRIBUTING.md) to get started.
 
 ## Other important stuff
 
