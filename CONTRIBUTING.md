@@ -10,14 +10,14 @@ We're happy you want to contribute! You can help us in different ways:
 To submit a pull request, fork the [asr2json repository][2] and then clone your fork:
 
 ````
-git clone git@github.com:<your-name>/asr2json.git
+git clone https://github.com/<your-name>/asr2json.git
 ````
 
 [2]: https://github.com/cablelabs/asr2json
 
 Make your suggested changes, `git push` and then [submit a pull request][3].
 
-[3]: https://github.com/cablelabs/asr2json/pulls
+[3]: https://github.com/cablelabs/asr2json/compare
 
 ## Resources
 
