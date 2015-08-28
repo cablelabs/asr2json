@@ -10,7 +10,7 @@ We're happy you want to contribute! You can help us in different ways:
 To submit a pull request, fork the [asr2json repository][2] and then clone your fork:
 
 ````
-git clone https://github.com/<your-name>/asr2json.git
+git clone https://github.com/YOUR-GITHUB-USERNAME/asr2json.git
 ````
 
 [2]: https://github.com/cablelabs/asr2json
