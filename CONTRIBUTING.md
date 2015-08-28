@@ -7,8 +7,6 @@ We're happy you want to contribute! You can help us in different ways:
 
 [1]: https://github.com/cablelabs/asr2json/issues
 
-In order to contribute issues and pull requests, please sign CableLabs' [Contributor License Agreement](https://docs.google.com/forms/d/1cgE4H9z65boTzmzWl_jxXiVCrRmnjWJzFCBc7Jkg0rM/viewform).
-
 To submit a pull request, fork the [asr2json repository][2] and then clone your fork:
 
 ````
