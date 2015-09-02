@@ -15,7 +15,7 @@ git clone https://github.com/YOUR-GITHUB-USERNAME/asr2json.git
 
 [2]: https://github.com/cablelabs/asr2json
 
-Make your suggested changes, `git push` and then [submit a pull request][3].
+Make your suggested changes, `git commit`, `git push` and then [submit a pull request][3].
 
 [3]: https://github.com/cablelabs/asr2json/compare
 
