@@ -61,7 +61,15 @@ If you're installing Node.js for the first time, please see: https://nodejs.org/
 
 ###Install pdftotextjs module
 
-At this time, you need to install the [pdftotextjs](https://github.com/fagbokforlaget/pdftotextjs) module globally.
+At this time, you need to install poppler-utils which pdfttotextjs module utilizes.To do so please see the below commands,
+
+```
+Ubuntu/Debian : sudo apt-get install poppler-utils.
+MacOSX : sudo port install poppler or brew install xpdf.
+Windows : Download and install Xpdf.
+```
+
+Now you need to install the [pdftotextjs](https://github.com/fagbokforlaget/pdftotextjs) module globally.
 ```
 sudo npm install pdftotextjs -g
 ```

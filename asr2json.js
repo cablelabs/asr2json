@@ -41,6 +41,7 @@ var asyncPdf = '';
 
 runAsr2Json.apply(null, process.argv.slice(2));
 
+// Retrieve data from pdf with layout for further processing.
 function runAsr2Json(pathToPDF, outputPath, startPageNo, endPageNo) {
     var args = Array.prototype.slice.call(arguments);
     var missingParams = ['pathToPDF', 'outputPath', 'startPageNo', 'endPageNo'].filter(function (param, i) {
