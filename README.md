@@ -59,15 +59,19 @@ node -v
 ```
 If you're installing Node.js for the first time, please see: https://nodejs.org/
 
-###Install pdf2json module
+###Install pdftotextjs module
 
-At this time, you need to install the [pdf2json](https://github.com/modesty/pdf2json) module globally. This step should be shortlived as we plan to update asr2json to simply import the pdf2json moduled. For now, please use this command to install pdf2json globally:
+At this time, you need to install poppler-utils which pdfttotextjs module utilizes.To do so please see the below commands,
+
 ```
-sudo npm install pdf2json -g
+Ubuntu/Debian : sudo apt-get install poppler-utils.
+MacOSX : sudo port install poppler or brew install xpdf.
+Windows : Download and install Xpdf.
 ```
-To check if pdf2json has been installed correctly:
+
+Now you need to install the [pdftotextjs](https://github.com/fagbokforlaget/pdftotextjs) module globally.
 ```
-pdf2json -v
+sudo npm install pdftotextjs -g
 ```
 
 ###Clone the repository
@@ -80,7 +84,7 @@ git clone https://github.com/cablelabs/asr2json.git
 ##Run
 ```
 cd asr2json
-node index.js path-to-asr.pdf path-to-output-directory start-page stop-page 
+node asr2json.js path-to-asr.pdf path-to-output-directory start-page stop-page 
 ```
 
 This is the command to run asr2json from the terminal. Replace fileName with the name of the pdf containing the spec. Replace start-page and end-page with the pages from the pdf which you want to be converted.  A directory matching the form name will be created in the output directory specified, and that form directory will contain json files matching the field names.  The output directory will be created if it doesn't exist.
@@ -92,13 +96,6 @@ from within your project:
 ```
 cd node_modules
 git clone https://github.com/cablelabs/asr2json.git
-```
-
-in your nodejs file
-```
-var asr2json = require('./node_modules/asr2json/index.js');
-
-asr2json('path-to-asr.pdf', 'path-to-output-directory', startPage, stopPage);
 ```
 
 ## Contributing
