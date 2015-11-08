@@ -4,3 +4,6 @@ node_modules
 tmp
 asr2json.iml
 *.pdf
+temp/asyncAsrOutputTxt
+
+finalTemp.js
